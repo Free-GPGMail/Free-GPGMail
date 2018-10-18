@@ -853,8 +853,10 @@ static BOOL gpgMailWorks = NO;
 }
 
 - (BOOL)hasActiveContract {
-    NSDictionary *contractInformation = [self contractInformation];
-    return [contractInformation[@"Active"] boolValue];
+//    NSDictionary *contractInformation = [self contractInformation];
+//    return [contractInformation[@"Active"] boolValue];
+// Removed checking for Active Contract and always return true
+    return true;
 }
 
 - (NSNumber *)remainingTrialDays {

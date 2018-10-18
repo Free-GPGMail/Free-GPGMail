@@ -1,0 +1,131 @@
+
+GetPassphraseDescription = "Du benötigst ein Passwort, um den geheimen Schlüssel von Benutzer \"%@\", ID %@ zu entsperren.";
+GetPassphraseDescription_Subkey = "Du benötigst ein Passwort, um den geheimen Schlüssel von Benutzer \"%@\", ID %@, (Hauptschlüssel ID %@) zu entsperren.";
+PassphraseLabel = "Passwort:";
+
+
+
+
+/* For Key-Status */
+"Invalid" = "Ungültig";
+"Revoked" = "Widerrufen";
+"Expired" = "Abgelaufen";
+"Disabled" = "Deaktiviert";
+"Unknown" = "Unbekannt";
+"Never" = "Never";
+"Marginal" = "Marginal";
+"Full" = "Vollständig";
+"Ultimate" = "Absolut";
+
+
+/* For Undo and Redo */
+Undo_NewKey = "Schlüssel erstellen";
+Undo_Delete = "Löschen";
+Undo_CleanKey = "Säubern";
+Undo_MinimizeKey = "Minimieren";
+Undo_RevokeKey = "Schlüssel widerrufen";
+Undo_ChangeExpirationDate = "Verfallsdatum ändern";
+Undo_ChangePassphrase = "Passwort ändern";
+Undo_AlgorithmPreferences = "Bevorzugten Algorithmus ändern";
+Undo_Import = "Importieren";
+Undo_AddSignature = "Beglaubigen";
+Undo_RemoveSignature = "Beglaubigung entfernen";
+Undo_RevokeSignature = "Beglaubigung widerrufen";
+Undo_AddSubkey = "Unterschlüssel hinzufügen";
+Undo_RemoveSubkey = "Unterschlüssel entfernen";
+Undo_RevokeSubkey = "Unterschlüssel widerrufen";
+Undo_AddUserID = "Benutzer-ID hinzufügen";
+Undo_RemoveUserID = "Benutzer-ID entfernen";
+Undo_RevokeUserID = "Benutzer-ID widerrufen";
+Undo_PrimaryUserID = "Primäre Benutzer-ID";
+Undo_AddPhoto = "Foto hinzufügen";
+Undo_RefreshFromServer = " Von Server aktualisieren";
+Undo_ReceiveFromServer = "Von Server abfragen";
+
+
+
+/* Algorithm names */
+CIPHER_ALGO_NONE = "Keine";
+CIPHER_ALGO_IDEA = "IDEA";
+CIPHER_ALGO_3DES = "3DES";
+CIPHER_ALGO_CAST5 = "CAST5";
+CIPHER_ALGO_BLOWFISH = "BLOWFISH";
+CIPHER_ALGO_AES = "AES";
+CIPHER_ALGO_AES192 = "AES192";
+CIPHER_ALGO_AES256 = "AES256";
+CIPHER_ALGO_TWOFISH = "TWOFISH";
+CIPHER_ALGO_CAMELLIA128 = "CAMELLIA128";
+CIPHER_ALGO_CAMELLIA192 = "CAMELLIA192";
+CIPHER_ALGO_CAMELLIA256 = "CAMELLIA256";
+DIGEST_ALGO_MD5 = "MD5";
+DIGEST_ALGO_SHA1 = "SHA1";
+DIGEST_ALGO_RMD160 = "RMD160";
+DIGEST_ALGO_SHA256 = "SHA256";
+DIGEST_ALGO_SHA384 = "SHA384";
+DIGEST_ALGO_SHA512 = "SHA512";
+DIGEST_ALGO_SHA224 = "SHA224";
+COMPRESS_ALGO_NONE = "Keine";
+COMPRESS_ALGO_ZIP = "ZIP";
+COMPRESS_ALGO_ZLIB = "ZLIB";
+COMPRESS_ALGO_BZIP2 = "BZIP2";
+
+GPG_RSAAlgorithm = "RSA";
+GPG_RSAEncryptOnlyAlgorithm = "RSA-E";
+GPG_RSASignOnlyAlgorithm = "RSA-S";
+GPG_ElgamalEncryptOnlyAlgorithm = "ELG-E";
+GPG_DSAAlgorithm = "DSA";
+GPG_ECDHAlgorithm = "ECDH";
+GPG_ECDSAAlgorithm = "ECDSA";
+GPG_ElgamalAlgorithm = "ELG";
+GPG_DiffieHellmanAlgorithm = "DiffieHellman";
+GPG_EdDSAAlgorithm = "EdDSA";
+"Algorithm_%i" = "Algorithmus_%i";
+
+/* GPGSignature humanReadableDescription */
+"Signed" = "Signiert";
+"Signature expired" = "Signatur abgelaufen";
+"Key expired" = "Schlüssel abgelaufen";
+"Bad signature" = "Signatur und Daten passen nicht zusammen. Eventuell wurden die Daten verändert.";
+"Signature revoked" = "Signatur widerrufen";
+"Signature error" = "Fehler mit der Signatur";
+"Unverifiable signature" = "Signatur kann nicht verifiziert werden.";
+"Signed by stranger" = "Signatur kann nicht verifiziert werden, weil der entsprechende öffentliche Schlüssel fehlt.";
+
+
+/* Key Descriptions */
+KeyDescriptionAndMore = "and %lu more";
+
+
+/* Key Expiry Warning */
+KeyExpiryWarning_Title = "Warning: Your key is about to expire";
+KeyExpiryWarning_Msg = "Your key will expire on %1$@:\n\n%2$@\n\nExpired keys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this key.\n\nIf you choose to extend your key, it will be valid for two more years.\n\nDo you want to extend your key?";
+KeyExpiryWarning_Yes = "Extend Key";
+KeyExpiryWarning_No = "Cancel";
+KeyExpiryWarning_Suppress = "Do Not Ask Again";
+
+SubkeyExpiryWarning_Title = "Warning: Your subkey is about to expire";
+SubkeyExpiryWarning_Msg = "Your subkey will expire on %1$@:\n\n%2$@\n\nExpired subkeys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this subkey.\n\nIf you choose to extend your subkey, it will be valid for two more years.\n\nDo you want to extend your subkey?";
+SubkeyExpiryWarning_Yes = "Extend Subkey";
+SubkeyExpiryWarning_No = "Cancel";
+SubkeyExpiryWarning_Suppress = "Do Not Ask Again";
+
+WrongPasswordTryAgain_Title = "You entered the wrong password";
+WrongPasswordTryAgain_Msg = "Do you want to try it again?";
+WrongPasswordTryAgain_Yes = "Try Again";
+WrongPasswordTryAgain_No = "Cancel";
+
+KeyExpiryFailed_Title = "Failed to extend your key!";
+KeyExpiryFailed_Msg = "The key\n%1$@\ncould not be extened.\n\nError: %2$@";
+
+KeyExtendedWantToUpload_Title = "Your key was extended successfully";
+KeyExtendedWantToUpload_Msg = "In order for others to be able to see the new expiration date, it is necessary for them to import your updated key. Therefore it is recommended to upload your updated public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please consider attaching your public key to your signed and encrypted emails.\n\nDo you want to upload your public key?";
+KeyExtendedWantToUpload_Yes = "Upload Public Key";
+KeyExtendedWantToUpload_No = "No, Thanks!";
+
+UploadFailed_Title = "Failed to upload the key!";
+UploadFailed_Msg = "The key could not be uploaded to the keyserver.\n\nError: %@";
+
+
+UpdaterNotWorking_Title = " Der GPG Suite Updater funktioniert nicht wie erwartet!";
+UpdaterNotWorking_Msg = "Bitte lade GPG Suite von https://gpgtools.org herunter und führe eine erneute Installation durch.";
+

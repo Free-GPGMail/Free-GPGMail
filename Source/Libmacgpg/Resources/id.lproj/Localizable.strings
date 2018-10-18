@@ -1,0 +1,131 @@
+
+GetPassphraseDescription = "Anda perlu suatu kata sandi untuk membuka kunci rahasia bagi pengguna: \"%@\", ID %@";
+GetPassphraseDescription_Subkey = "Anda perlu suatu kata sandi untuk membuka kunci rahasia bagi pengguna: \"%@\", ID %@, (ID kunci utama %@)";
+PassphraseLabel = "Kata sandi:";
+
+
+
+
+/* For Key-Status */
+"Invalid" = "Tidak valid";
+"Revoked" = "Dicabut";
+"Expired" = "Kedaluarsa";
+"Disabled" = "Dinonaktifkan";
+"Unknown" = "Tak diketahui";
+"Never" = "Never";
+"Marginal" = "Terbatas";
+"Full" = "Penuh";
+"Ultimate" = "Tertinggi";
+
+
+/* For Undo and Redo */
+Undo_NewKey = "Kunci Baru";
+Undo_Delete = "Hapus";
+Undo_CleanKey = "Bersih";
+Undo_MinimizeKey = "Minimalkan";
+Undo_RevokeKey = "Cabut Kunci";
+Undo_ChangeExpirationDate = "Ubah Tanggal Kedaluarsa";
+Undo_ChangePassphrase = "Ubah Kata Sandi";
+Undo_AlgorithmPreferences = "Ubah Preferensi Algoritma";
+Undo_Import = "Impor";
+Undo_AddSignature = "Tambah Tanda Tangan";
+Undo_RemoveSignature = "Buang Tanda Tangan";
+Undo_RevokeSignature = "Cabut Tanda Tangan";
+Undo_AddSubkey = "Tambah Sub Kunci";
+Undo_RemoveSubkey = "Buang Sub Kunci";
+Undo_RevokeSubkey = "Cabut Sub Kunci";
+Undo_AddUserID = "Tambah UserID";
+Undo_RemoveUserID = "Buang UserID";
+Undo_RevokeUserID = "Cabut UserID";
+Undo_PrimaryUserID = "UserID Primer";
+Undo_AddPhoto = "Tambah Foto";
+Undo_RefreshFromServer = "Segarkan dari server";
+Undo_ReceiveFromServer = "Terima dari server";
+
+
+
+/* Algorithm names */
+CIPHER_ALGO_NONE = "Nihil";
+CIPHER_ALGO_IDEA = "IDEA";
+CIPHER_ALGO_3DES = "3DES";
+CIPHER_ALGO_CAST5 = "CAST5";
+CIPHER_ALGO_BLOWFISH = "BLOWFISH";
+CIPHER_ALGO_AES = "AES";
+CIPHER_ALGO_AES192 = "AES192";
+CIPHER_ALGO_AES256 = "AES256";
+CIPHER_ALGO_TWOFISH = "TWOFISH";
+CIPHER_ALGO_CAMELLIA128 = "CAMELLIA128";
+CIPHER_ALGO_CAMELLIA192 = "CAMELLIA192";
+CIPHER_ALGO_CAMELLIA256 = "CAMELLIA256";
+DIGEST_ALGO_MD5 = "MD5";
+DIGEST_ALGO_SHA1 = "SHA1";
+DIGEST_ALGO_RMD160 = "RMD160";
+DIGEST_ALGO_SHA256 = "SHA256";
+DIGEST_ALGO_SHA384 = "SHA384";
+DIGEST_ALGO_SHA512 = "SHA512";
+DIGEST_ALGO_SHA224 = "SHA224";
+COMPRESS_ALGO_NONE = "Nihil";
+COMPRESS_ALGO_ZIP = "ZIP";
+COMPRESS_ALGO_ZLIB = "ZLIB";
+COMPRESS_ALGO_BZIP2 = "BZIP2";
+
+GPG_RSAAlgorithm = "RSA";
+GPG_RSAEncryptOnlyAlgorithm = "RSA-E";
+GPG_RSASignOnlyAlgorithm = "RSA-S";
+GPG_ElgamalEncryptOnlyAlgorithm = "ELG-E";
+GPG_DSAAlgorithm = "DSA";
+GPG_ECDHAlgorithm = "ECDH";
+GPG_ECDSAAlgorithm = "ECDSA";
+GPG_ElgamalAlgorithm = "ELG";
+GPG_DiffieHellmanAlgorithm = "DiffieHellman";
+GPG_EdDSAAlgorithm = "EdDSA";
+"Algorithm_%i" = "Algoritma_%i";
+
+/* GPGSignature humanReadableDescription */
+"Signed" = "Ditandatangani";
+"Signature expired" = "Tanda tangan kedaluarsa";
+"Key expired" = "Kunci kedaluarsa";
+"Bad signature" = "Tanda tangan dan data tidak cocok. Ini bisa berarti bahwa data telah dirusak.";
+"Signature revoked" = "Tanda tangan dicabut";
+"Signature error" = "Kesalahan tanda tangan";
+"Unverifiable signature" = "Tanda tangan tidak bisa diverifikasi.";
+"Signed by stranger" = "Tanda tangan tidak bisa diverifikasi, karena kunci publik yang berhubungan hilang.";
+
+
+/* Key Descriptions */
+KeyDescriptionAndMore = "and %lu more";
+
+
+/* Key Expiry Warning */
+KeyExpiryWarning_Title = "Warning: Your key is about to expire";
+KeyExpiryWarning_Msg = "Your key will expire on %1$@:\n\n%2$@\n\nExpired keys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this key.\n\nIf you choose to extend your key, it will be valid for two more years.\n\nDo you want to extend your key?";
+KeyExpiryWarning_Yes = "Extend Key";
+KeyExpiryWarning_No = "Cancel";
+KeyExpiryWarning_Suppress = "Do Not Ask Again";
+
+SubkeyExpiryWarning_Title = "Warning: Your subkey is about to expire";
+SubkeyExpiryWarning_Msg = "Your subkey will expire on %1$@:\n\n%2$@\n\nExpired subkeys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this subkey.\n\nIf you choose to extend your subkey, it will be valid for two more years.\n\nDo you want to extend your subkey?";
+SubkeyExpiryWarning_Yes = "Extend Subkey";
+SubkeyExpiryWarning_No = "Cancel";
+SubkeyExpiryWarning_Suppress = "Do Not Ask Again";
+
+WrongPasswordTryAgain_Title = "You entered the wrong password";
+WrongPasswordTryAgain_Msg = "Do you want to try it again?";
+WrongPasswordTryAgain_Yes = "Try Again";
+WrongPasswordTryAgain_No = "Cancel";
+
+KeyExpiryFailed_Title = "Failed to extend your key!";
+KeyExpiryFailed_Msg = "The key\n%1$@\ncould not be extened.\n\nError: %2$@";
+
+KeyExtendedWantToUpload_Title = "Your key was extended successfully";
+KeyExtendedWantToUpload_Msg = "In order for others to be able to see the new expiration date, it is necessary for them to import your updated key. Therefore it is recommended to upload your updated public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please consider attaching your public key to your signed and encrypted emails.\n\nDo you want to upload your public key?";
+KeyExtendedWantToUpload_Yes = "Upload Public Key";
+KeyExtendedWantToUpload_No = "No, Thanks!";
+
+UploadFailed_Title = "Failed to upload the key!";
+UploadFailed_Msg = "The key could not be uploaded to the keyserver.\n\nError: %@";
+
+
+UpdaterNotWorking_Title = "Pemutakhir Keluarga GPG tak bekerja seperti yang diharapkan!";
+UpdaterNotWorking_Msg = "Harap unduh dan pasang ulang Keluarga GPG dari https://gpgtools.org";
+

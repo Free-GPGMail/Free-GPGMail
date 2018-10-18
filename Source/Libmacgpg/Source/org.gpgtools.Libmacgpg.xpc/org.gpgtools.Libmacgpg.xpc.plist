@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>KeepAlive</key>
+	<false/>
+	<key>EnableTransactions</key>
+	<true/>
+	<key>Label</key>
+	<string>org.gpgtools.Libmacgpg.xpc</string>
+	<key>MachServices</key>
+	<dict>
+		<key>JAILFREE_XPC_NAME</key>
+		<string>Something-will-be-replaced</string>
+	</dict>
+	<key>ProgramArguments</key>
+	<array>
+		<string>JAILFREE_PATH</string>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+One line of text. Two newlines.
+
+
+-----BEGIN PGP SIGNATURE-----
+Comment: GPGTools - https://gpgtools.org
+
+iQEcBAEBCgAGBQJVrLgWAAoJEFJrCfEKo9qCIGUIAISmsNnY9IjDW5CFqyDY7dwe
+2SYt6IYi3knbrfh1a8kznwNAr3hTpD2BFe6jAxWCRQ1kyER/6zHhRDNj7uhy+MgZ
+weVCd59D+gnpXRQ9B2HBXK9oyY2u1qCDNFZHibezqBHBTjwVnBSSyQkSfsgtGgSA
+M01lyYna74JziLKSo/ffXhXYrc/kGsJf91pMZ+jCYXAN4Pf+vIhgGge6Ua+IV3g9
+VIcVloZ3zRtpm7iwCwYpMH83sDIWblY8nV8t1KSqb71eNqDCaTm+oLVYpdwN9ex6
+UiMuO22WHuRKM47OsZTsipVHqG/O92wu0SVOUVHqA16GhD63l0qJrb+QfcUxOIk=
+=zz0M
+-----END PGP SIGNATURE-----

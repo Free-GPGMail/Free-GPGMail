@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "验证签名失败。";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "用于验证此附件的公钥不在您的钥匙链中\n\n请使用 GPG Keychain 下载对应的公钥：%@";
+"DECRYPT_ERROR_GENERAL_TITLE" = "加密附件失败。";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "解密该附件的私钥不在您的密钥链中。";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "附件被成功加密。";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "双击消息查看按钮可打开附件。";

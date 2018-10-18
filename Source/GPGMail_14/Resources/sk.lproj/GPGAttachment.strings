@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "Overovanie podpisu zlyhalo.";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "Verejný kľúč na overenie podpisu tejto prílohy nie je vo vašej GPG databáze.\n\nStiahnite, prosím, predmetný verejný kľúč %@ pomocou programu GPG Keychain.";
+"DECRYPT_ERROR_GENERAL_TITLE" = "Dešifrovanie prílohy zlyhalo.";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "Tajný kľúč na dešifrovanie tejto prílohy nie je vo vašej GPG databáze.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "Príloha bola úspešne dešifrovaná.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "Dvojklikom otvorte prílohu v zobrazení správy.";

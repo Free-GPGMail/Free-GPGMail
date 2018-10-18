@@ -1,0 +1,14 @@
+Keys and Subkeys
+
+- Each subkey is a new key pair - public key / secret key
+- To encrypt or sign a message you need at least one valid key
+- either subkey or the primary key
+- Subkey are used to build something similar to a certificate tree
+- if a node is invalidated, the nodes under it are invalidated as well.
+- not necessary to consider them in gpg mail
+- Each key has at least one subkey which is automatically created when a new key is created
+
+UIDS
+
+- Each uid is an identity for a key
+- A uid allows the key to set a different name or a different email address or similar

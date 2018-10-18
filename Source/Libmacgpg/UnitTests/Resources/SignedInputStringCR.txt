@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Thequickbrownfox....
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG/MacGPG2 v2.0.17 (Darwin)
+Comment: GPGTools - http://gpgtools.org
+
+iQEcBAEBAgAGBQJPa8pVAAoJEFJrCfEKo9qCcesH/31pEzov8rgYb6g6cBHKprhO
+maVm7GV6+pAukSk3gTd6oYaFzhW2/DYp+ccfma1WrEMpF76uELE1feY8j0kowdA3
+7lkud3dYwNHafYMkYwxjhjpi4Cnz16XEStXyop5oNsZdJX0Cx9H7TaproBEo7wCH
+25yecnBDVjGMWjJ/IDE9iBgG0BuNnVzv+sSCSkaXcqSTabkjQfOS/PD2Egv4PkVJ
+sA2AWCTFFJKeAmP6UW0KuI6EgpoBMF3PNvQKlId9DmUhrOqDWSKlz8r7Y88rmNAt
+kNLecUam+3alP8ToMsZovjIlufVA/6wQDc+TRmg3R86SSj4Y1TBC9zorDRO3BwQ=
+=V3dW
+-----END PGP SIGNATURE-----

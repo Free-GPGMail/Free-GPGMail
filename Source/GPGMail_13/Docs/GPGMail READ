@@ -1,0 +1,43 @@
+-- Path to Library Message
+ExpandingSplitView -> MessageViewingPane -> controller: MessageViewingPaneController -> MessagesTableView -> _MessageContentTableRowView -> MessageContentController -> LibraryMessage
+
+- All Header evtl. interessant um zu checken ob GPG Message oder nicht
+
+MessageFlags ->
+    42140681 - Not Encrypted / Not Signed
+    42204169 - Encrypted & Signed
+    42204161 - Signed only
+    33815561 - Encrypted only
+    
+10000000111111110000001001
+-- 
+00000000000000000000000100 True
+---------------------------------
+00000000000000000000001000
+  100000000000000000000000 False
+  
+  
+42204169
+
+100000111111110000001001
+000000110000010000000001
+
+
+33752064
+
+000000110000010000000001
+
+4194312
+
+
+010000000000000000001000
+000000000000000000001000
+
+
+000000110000010000000001
+010000000000000000001000
+010000110000010000001001
+
+000000110000000000000000
+010000000000000000001000
+

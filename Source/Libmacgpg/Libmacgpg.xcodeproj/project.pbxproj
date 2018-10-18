@@ -1,0 +1,1969 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B0E27102153EFF600BF3DC0 /* GSPaddle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0E270F2153EFC200BF3DC0 /* GSPaddle.framework */; };
+		1B0E27122153F01600BF3DC0 /* GSPaddle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1B0E270F2153EFC200BF3DC0 /* GSPaddle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1B0E27192153F0DA00BF3DC0 /* Paddle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0E27182153F0C900BF3DC0 /* Paddle.framework */; };
+		1B0E271A2153F0DC00BF3DC0 /* Paddle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1B0E27182153F0C900BF3DC0 /* Paddle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1B16DD21179C83F000BC1366 /* GPGTypesRW.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B16DD20179C83F000BC1366 /* GPGTypesRW.h */; };
+		1B2F2D77214FF12B00740DD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2F2D76214FF12B00740DD3 /* main.m */; };
+		1B2F2D83214FF41300740DD3 /* Libmacgpg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* Libmacgpg.framework */; };
+		1B3D657A1565C60100D93BBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3D64DF1565BC6600D93BBE /* Foundation.framework */; };
+		1B72F741157AE89600101194 /* NSPipe+NoSigPipe.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B72F73F157AE89600101194 /* NSPipe+NoSigPipe.h */; };
+		1B72F742157AE89600101194 /* NSPipe+NoSigPipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B72F740157AE89600101194 /* NSPipe+NoSigPipe.m */; };
+		1B84028717296EA4009A40E6 /* GPGUserDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B84028517296EA4009A40E6 /* GPGUserDefaults.h */; };
+		1B84028817296EA4009A40E6 /* GPGUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B84028617296EA4009A40E6 /* GPGUserDefaults.m */; };
+		1B89B68E1726F8FD004863FC /* PLWeakCompatibilityStubs.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B89B68C1726F8FD004863FC /* PLWeakCompatibilityStubs.h */; };
+		1B9DB26A15784DB700488353 /* GPGTaskHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B9DB26815784DB700488353 /* GPGTaskHelper.h */; };
+		1B9DB26B15784DB700488353 /* GPGTaskHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9DB26915784DB700488353 /* GPGTaskHelper.m */; };
+		1B9FF21017257A69004FB017 /* GPGTaskHelperXPC.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B9FF20E17257A69004FB017 /* GPGTaskHelperXPC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B9FF21117257A69004FB017 /* GPGTaskHelperXPC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9FF20F17257A69004FB017 /* GPGTaskHelperXPC.m */; };
+		1B9FF21517261470004FB017 /* JailfreeProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B9FF21417261470004FB017 /* JailfreeProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BCE0CD11617A3DF0026DCFF /* NSBundle+Sandbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BCE0CCF1617A3DF0026DCFF /* NSBundle+Sandbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BCE0CD21617A3DF0026DCFF /* NSBundle+Sandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE0CD01617A3DF0026DCFF /* NSBundle+Sandbox.m */; };
+		1BD78BA01726B2830005F251 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		1BD78BA61726B2830005F251 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BD78BA41726B2830005F251 /* InfoPlist.strings */; };
+		1BD78BA81726B2830005F251 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD78BA71726B2830005F251 /* main.m */; };
+		1BD78BAC1726B2830005F251 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1BD78BAA1726B2830005F251 /* Credits.rtf */; };
+		1BD78BAF1726B2830005F251 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD78BAE1726B2830005F251 /* AppDelegate.m */; };
+		1BD78BB21726B2830005F251 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BD78BB01726B2830005F251 /* MainMenu.xib */; };
+		1BD78BBA1726B6060005F251 /* Libmacgpg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* Libmacgpg.framework */; };
+		1BD78BBC1726B6230005F251 /* Libmacgpg.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* Libmacgpg.framework */; };
+		1BDCBDC0214FFC24003919E5 /* org.gpgtools.Libmacgpg.xpc.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1BDCBDBD214FFB7D003919E5 /* org.gpgtools.Libmacgpg.xpc.plist */; };
+		1BDCBDC121500FF5003919E5 /* JailfreeTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2F2D7D214FF17500740DD3 /* JailfreeTask.m */; };
+		300F3DB51B4AC2CE00E36AAA /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 300F3DB31B4AC2CE00E36AAA /* libbz2.dylib */; };
+		300F3DB61B4AC2CE00E36AAA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 300F3DB41B4AC2CE00E36AAA /* libz.dylib */; };
+		301A265720BE96680059010D /* LiteralAfterCustomEncrypted.gpg in Copy Decrypt Test-Cases */ = {isa = PBXBuildFile; fileRef = 301A264C20BE94110059010D /* LiteralAfterCustomEncrypted.gpg */; };
+		301A265820BE96680059010D /* LiteralAfterCustomEncrypted.res in Copy Decrypt Test-Cases */ = {isa = PBXBuildFile; fileRef = 301A264F20BE94110059010D /* LiteralAfterCustomEncrypted.res */; };
+		301A265920BE96680059010D /* LiteralAfterEmptyEncrypted.gpg in Copy Decrypt Test-Cases */ = {isa = PBXBuildFile; fileRef = 301A264B20BE94110059010D /* LiteralAfterEmptyEncrypted.gpg */; };
+		301A265A20BE96680059010D /* LiteralAfterEmptyEncrypted.res in Copy Decrypt Test-Cases */ = {isa = PBXBuildFile; fileRef = 301A264D20BE94110059010D /* LiteralAfterEmptyEncrypted.res */; };
+		301A265B20BE96680059010D /* Normal.gpg in Copy Decrypt Test-Cases */ = {isa = PBXBuildFile; fileRef = 301A264E20BE94110059010D /* Normal.gpg */; };
+		301A265C20BE96680059010D /* Normal.res in Copy Decrypt Test-Cases */ = {isa = PBXBuildFile; fileRef = 301A264A20BE94110059010D /* Normal.res */; };
+		301A265F20BE9ED10059010D /* GPGStatusLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 301A265D20BE9ED10059010D /* GPGStatusLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		301A266020BE9ED10059010D /* GPGStatusLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 301A265E20BE9ED10059010D /* GPGStatusLine.m */; };
+		301A44CD1B436405002A38E4 /* GPGUnArmor.h in Headers */ = {isa = PBXBuildFile; fileRef = 301A44CB1B436405002A38E4 /* GPGUnArmor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		301A44CE1B436405002A38E4 /* GPGUnArmor.m in Sources */ = {isa = PBXBuildFile; fileRef = 301A44CC1B436405002A38E4 /* GPGUnArmor.m */; };
+		301D291D1B4BE4F500599BE8 /* GPGPacketParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 301D291B1B4BE4F500599BE8 /* GPGPacketParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		301D291E1B4BE4F500599BE8 /* GPGPacketParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 301D291C1B4BE4F500599BE8 /* GPGPacketParser.m */; };
+		301D29211B4BFD9800599BE8 /* GPGPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 301D291F1B4BFD9800599BE8 /* GPGPacket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		301D29221B4BFD9800599BE8 /* GPGPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 301D29201B4BFD9800599BE8 /* GPGPacket.m */; };
+		301D29261B4C032D00599BE8 /* GPGPublicKeyEncryptedSessionKeyPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 301D29241B4C032D00599BE8 /* GPGPublicKeyEncryptedSessionKeyPacket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		301D29271B4C032D00599BE8 /* GPGPublicKeyEncryptedSessionKeyPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 301D29251B4C032D00599BE8 /* GPGPublicKeyEncryptedSessionKeyPacket.m */; };
+		301D5D9F178C9871003026E7 /* GPGKeyserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 301D5D9D178C9871003026E7 /* GPGKeyserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		301D5DA0178C9871003026E7 /* GPGKeyserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 301D5D9E178C9871003026E7 /* GPGKeyserver.m */; };
+		302481D61B5CF46800C86A07 /* Unarmor_ClearsignComplicated.clear in Resources */ = {isa = PBXBuildFile; fileRef = 302481CA1B5CF46800C86A07 /* Unarmor_ClearsignComplicated.clear */; };
+		302481D71B5CF46800C86A07 /* Unarmor_ClearsignComplicated.res in Resources */ = {isa = PBXBuildFile; fileRef = 302481CB1B5CF46800C86A07 /* Unarmor_ClearsignComplicated.res */; };
+		302481D81B5CF46800C86A07 /* Unarmor_ClearsignComplicated.txt in Resources */ = {isa = PBXBuildFile; fileRef = 302481CC1B5CF46800C86A07 /* Unarmor_ClearsignComplicated.txt */; };
+		302481D91B5CF46800C86A07 /* Unarmor_ClearsignNoLF.clear in Resources */ = {isa = PBXBuildFile; fileRef = 302481CD1B5CF46800C86A07 /* Unarmor_ClearsignNoLF.clear */; };
+		302481DA1B5CF46800C86A07 /* Unarmor_ClearsignNoLF.res in Resources */ = {isa = PBXBuildFile; fileRef = 302481CE1B5CF46800C86A07 /* Unarmor_ClearsignNoLF.res */; };
+		302481DB1B5CF46800C86A07 /* Unarmor_ClearsignNoLF.txt in Resources */ = {isa = PBXBuildFile; fileRef = 302481CF1B5CF46800C86A07 /* Unarmor_ClearsignNoLF.txt */; };
+		302481DC1B5CF46800C86A07 /* Unarmor_ClearsignOneLF.clear in Resources */ = {isa = PBXBuildFile; fileRef = 302481D01B5CF46800C86A07 /* Unarmor_ClearsignOneLF.clear */; };
+		302481DD1B5CF46800C86A07 /* Unarmor_ClearsignOneLF.res in Resources */ = {isa = PBXBuildFile; fileRef = 302481D11B5CF46800C86A07 /* Unarmor_ClearsignOneLF.res */; };
+		302481DE1B5CF46800C86A07 /* Unarmor_ClearsignOneLF.txt in Resources */ = {isa = PBXBuildFile; fileRef = 302481D21B5CF46800C86A07 /* Unarmor_ClearsignOneLF.txt */; };
+		302481DF1B5CF46800C86A07 /* Unarmor_ClearsignTwoLF.clear in Resources */ = {isa = PBXBuildFile; fileRef = 302481D31B5CF46800C86A07 /* Unarmor_ClearsignTwoLF.clear */; };
+		302481E01B5CF46800C86A07 /* Unarmor_ClearsignTwoLF.res in Resources */ = {isa = PBXBuildFile; fileRef = 302481D41B5CF46800C86A07 /* Unarmor_ClearsignTwoLF.res */; };
+		302481E11B5CF46800C86A07 /* Unarmor_ClearsignTwoLF.txt in Resources */ = {isa = PBXBuildFile; fileRef = 302481D51B5CF46800C86A07 /* Unarmor_ClearsignTwoLF.txt */; };
+		3026F4AF13A203A000F3CA02 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3026F4AE13A203A000F3CA02 /* Security.framework */; };
+		3044A92C20CA744000712FBD /* NoSecKey.gpg in Resources */ = {isa = PBXBuildFile; fileRef = 3044A92B20CA744000712FBD /* NoSecKey.gpg */; };
+		3048830B1462B11700F2E5F4 /* DirectoryWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 304883091462B11700F2E5F4 /* DirectoryWatcher.h */; };
+		3048830C1462B11700F2E5F4 /* DirectoryWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3048830A1462B11700F2E5F4 /* DirectoryWatcher.m */; };
+		3048830F1462B22000F2E5F4 /* GPGWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 3048830D1462B22000F2E5F4 /* GPGWatcher.h */; };
+		304883101462B22000F2E5F4 /* GPGWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3048830E1462B22000F2E5F4 /* GPGWatcher.m */; };
+		304C69FE2069125000D89F65 /* Unarmor_2Messages.res in Resources */ = {isa = PBXBuildFile; fileRef = 304C69FC2069124F00D89F65 /* Unarmor_2Messages.res */; };
+		304C69FF2069125000D89F65 /* Unarmor_2Messages.txt in Resources */ = {isa = PBXBuildFile; fileRef = 304C69FD2069125000D89F65 /* Unarmor_2Messages.txt */; };
+		304FDC8C210872D80022B0B3 /* GPGUTF8Argument.h in Headers */ = {isa = PBXBuildFile; fileRef = 304FDC8A210872D80022B0B3 /* GPGUTF8Argument.h */; };
+		304FDC8D210872D80022B0B3 /* GPGUTF8Argument.m in Sources */ = {isa = PBXBuildFile; fileRef = 304FDC8B210872D80022B0B3 /* GPGUTF8Argument.m */; };
+		30516558142281270038AAF0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30516556142281270038AAF0 /* Localizable.strings */; };
+		30691AA4136AECC4004AA469 /* GPGOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 30691AA2136AECC4004AA469 /* GPGOptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30691AA5136AECC4004AA469 /* GPGOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 30691AA3136AECC4004AA469 /* GPGOptions.m */; };
+		3075ADD61B566D0900A5F89A /* GPGPacketTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3075ADD51B566D0900A5F89A /* GPGPacketTest.m */; };
+		3075ADDB1B5675D200A5F89A /* key1.gpg in Resources */ = {isa = PBXBuildFile; fileRef = 3075ADDA1B5675B500A5F89A /* key1.gpg */; };
+		3075ADDD1B56760F00A5F89A /* compressed1.gpg in Resources */ = {isa = PBXBuildFile; fileRef = 3075ADDC1B56760F00A5F89A /* compressed1.gpg */; };
+		307698C81B56B61500566B20 /* GPGConfReaderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4591C4C914F85AA3007F6D47 /* GPGConfReaderTest.m */; };
+		307698C91B56B61500566B20 /* GPGStdSettingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4547646514FBC8A900A37306 /* GPGStdSettingTest.m */; };
+		307698CA1B56B61500566B20 /* GPGLinesSettingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 45156A2314FB310300129FE7 /* GPGLinesSettingTest.m */; };
+		307698CB1B56B61500566B20 /* GPGArraySettingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 45156A2C14FB506E00129FE7 /* GPGArraySettingTest.m */; };
+		307698CC1B56B61500566B20 /* GPGDictSettingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 45156A2614FB35DC00129FE7 /* GPGDictSettingTest.m */; };
+		307698CD1B56B61500566B20 /* GPGOptionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 455B17B915143D9A00FAD47D /* GPGOptionsTest.m */; };
+		307698CE1B56B61500566B20 /* GPGTestVerify.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C0BC02151B65C700AA8BF6 /* GPGTestVerify.m */; };
+		307698CF1B56B61500566B20 /* GPGSocketCloseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE88B3D1B47D7F900A812B6 /* GPGSocketCloseTest.m */; };
+		307698D01B56B61500566B20 /* GPGUnarmorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A218221B5543A500D01E37 /* GPGUnarmorTest.m */; };
+		307FDE421B4E636A00462E4E /* GPGCompressedDataPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 307FDE401B4E636A00462E4E /* GPGCompressedDataPacket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		307FDE431B4E636A00462E4E /* GPGCompressedDataPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 307FDE411B4E636A00462E4E /* GPGCompressedDataPacket.m */; };
+		309A18D013E3812E0069DC0F /* GPGTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 309A18CE13E3812E0069DC0F /* GPGTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		309A18D113E3812E0069DC0F /* GPGTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 309A18CF13E3812E0069DC0F /* GPGTransformer.m */; };
+		309D8A121B87469B00D945BA /* GPGKeyFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 309D8A101B87469B00D945BA /* GPGKeyFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		309D8A131B87469B00D945BA /* GPGKeyFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 309D8A111B87469B00D945BA /* GPGKeyFetcher.m */; };
+		30A058391799E2DC00E1AD20 /* GPGKeyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 30A058371799E2DC00E1AD20 /* GPGKeyManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30A0583A1799E2DC00E1AD20 /* GPGKeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A058381799E2DC00E1AD20 /* GPGKeyManager.m */; };
+		30A2186B1B5579A200D01E37 /* Unarmor_DoubleNewline.res in Resources */ = {isa = PBXBuildFile; fileRef = 30A2185B1B5579A200D01E37 /* Unarmor_DoubleNewline.res */; };
+		30A2186C1B5579A200D01E37 /* Unarmor_DoubleNewline.txt in Resources */ = {isa = PBXBuildFile; fileRef = 30A2185C1B5579A200D01E37 /* Unarmor_DoubleNewline.txt */; };
+		30A2186D1B5579A200D01E37 /* Unarmor_InvalidComment.res in Resources */ = {isa = PBXBuildFile; fileRef = 30A2185D1B5579A200D01E37 /* Unarmor_InvalidComment.res */; };
+		30A2186E1B5579A200D01E37 /* Unarmor_InvalidComment.txt in Resources */ = {isa = PBXBuildFile; fileRef = 30A2185E1B5579A200D01E37 /* Unarmor_InvalidComment.txt */; };
+		30A2186F1B5579A200D01E37 /* Unarmor_InvalidVersion.res in Resources */ = {isa = PBXBuildFile; fileRef = 30A2185F1B5579A200D01E37 /* Unarmor_InvalidVersion.res */; };
+		30A218701B5579A200D01E37 /* Unarmor_InvalidVersion.txt in Resources */ = {isa = PBXBuildFile; fileRef = 30A218601B5579A200D01E37 /* Unarmor_InvalidVersion.txt */; };
+		30A218711B5579A200D01E37 /* Unarmor_MissingNewline.res in Resources */ = {isa = PBXBuildFile; fileRef = 30A218611B5579A200D01E37 /* Unarmor_MissingNewline.res */; };
+		30A218721B5579A200D01E37 /* Unarmor_MissingNewline.txt in Resources */ = {isa = PBXBuildFile; fileRef = 30A218621B5579A200D01E37 /* Unarmor_MissingNewline.txt */; };
+		30A218731B5579A200D01E37 /* Unarmor_NoNewline.res in Resources */ = {isa = PBXBuildFile; fileRef = 30A218631B5579A200D01E37 /* Unarmor_NoNewline.res */; };
+		30A218741B5579A200D01E37 /* Unarmor_NoNewline.txt in Resources */ = {isa = PBXBuildFile; fileRef = 30A218641B5579A200D01E37 /* Unarmor_NoNewline.txt */; };
+		30A218751B5579A200D01E37 /* Unarmor_Normal.res in Resources */ = {isa = PBXBuildFile; fileRef = 30A218651B5579A200D01E37 /* Unarmor_Normal.res */; };
+		30A218761B5579A200D01E37 /* Unarmor_Normal.txt in Resources */ = {isa = PBXBuildFile; fileRef = 30A218661B5579A200D01E37 /* Unarmor_Normal.txt */; };
+		30A218771B5579A200D01E37 /* Unarmor_Version.res in Resources */ = {isa = PBXBuildFile; fileRef = 30A218671B5579A200D01E37 /* Unarmor_Version.res */; };
+		30A218781B5579A200D01E37 /* Unarmor_Version.txt in Resources */ = {isa = PBXBuildFile; fileRef = 30A218681B5579A200D01E37 /* Unarmor_Version.txt */; };
+		30A218791B5579A200D01E37 /* Unarmor_VersionOnline.res in Resources */ = {isa = PBXBuildFile; fileRef = 30A218691B5579A200D01E37 /* Unarmor_VersionOnline.res */; };
+		30A2187A1B5579A200D01E37 /* Unarmor_VersionOnline.txt in Resources */ = {isa = PBXBuildFile; fileRef = 30A2186A1B5579A200D01E37 /* Unarmor_VersionOnline.txt */; };
+		30A48E8E1B4C1344006AD363 /* GPGSignaturePacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 30A48E8C1B4C1344006AD363 /* GPGSignaturePacket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30A48E8F1B4C1344006AD363 /* GPGSignaturePacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A48E8D1B4C1344006AD363 /* GPGSignaturePacket.m */; };
+		30A70EE513EF328000EE9CD9 /* GPGException.h in Headers */ = {isa = PBXBuildFile; fileRef = 30A70EE313EF328000EE9CD9 /* GPGException.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30A70EE613EF328000EE9CD9 /* GPGException.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A70EE413EF328000EE9CD9 /* GPGException.m */; };
+		30B11EE120C91643006D333D /* NoMDC.gpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B11EDF20C91642006D333D /* NoMDC.gpg */; };
+		30B570931C6E250700F68EEB /* sks-keyservers.netCA.der in Resources */ = {isa = PBXBuildFile; fileRef = 30B570921C6E250700F68EEB /* sks-keyservers.netCA.der */; };
+		30B586F5141E255C000373F1 /* Keyservers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30B586F4141E255C000373F1 /* Keyservers.plist */; };
+		30B7CE161EAE0F640050B9C5 /* GPGControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B7CE151EAE0F640050B9C5 /* GPGControllerTest.m */; };
+		30B7CE181EAE195B0050B9C5 /* Encrypted.gpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B7CE171EAE193F0050B9C5 /* Encrypted.gpg */; };
+		30BA88F2138FE593005982D9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30BA88F1138FE593005982D9 /* SystemConfiguration.framework */; };
+		30BB7C681B4D2742006A1E47 /* GPGSymmetricEncryptedSessionKeyPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 30BB7C661B4D2742006A1E47 /* GPGSymmetricEncryptedSessionKeyPacket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30BB7C691B4D2742006A1E47 /* GPGSymmetricEncryptedSessionKeyPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BB7C671B4D2742006A1E47 /* GPGSymmetricEncryptedSessionKeyPacket.m */; };
+		30BB7C6C1B4D2E38006A1E47 /* GPGOnePassSignaturePacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 30BB7C6A1B4D2E38006A1E47 /* GPGOnePassSignaturePacket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30BB7C6D1B4D2E38006A1E47 /* GPGOnePassSignaturePacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BB7C6B1B4D2E38006A1E47 /* GPGOnePassSignaturePacket.m */; };
+		30BB7C701B4D3244006A1E47 /* GPGKeyMaterialPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 30BB7C6E1B4D3244006A1E47 /* GPGKeyMaterialPacket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30BB7C711B4D3244006A1E47 /* GPGKeyMaterialPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BB7C6F1B4D3244006A1E47 /* GPGKeyMaterialPacket.m */; };
+		30BB7C781B4D3F24006A1E47 /* GPGIgnoredPackets.h in Headers */ = {isa = PBXBuildFile; fileRef = 30BB7C761B4D3F24006A1E47 /* GPGIgnoredPackets.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30BB7C791B4D3F24006A1E47 /* GPGIgnoredPackets.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BB7C771B4D3F24006A1E47 /* GPGIgnoredPackets.m */; };
+		30BB7C7C1B4D4146006A1E47 /* GPGLiteralDataPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 30BB7C7A1B4D4146006A1E47 /* GPGLiteralDataPacket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30BB7C7D1B4D4146006A1E47 /* GPGLiteralDataPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BB7C7B1B4D4146006A1E47 /* GPGLiteralDataPacket.m */; };
+		30BB7C801B4D4A59006A1E47 /* GPGUserIDPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 30BB7C7E1B4D4A59006A1E47 /* GPGUserIDPacket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30BB7C811B4D4A59006A1E47 /* GPGUserIDPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BB7C7F1B4D4A59006A1E47 /* GPGUserIDPacket.m */; };
+		30BB7C841B4D4BF8006A1E47 /* GPGUserAttributePacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 30BB7C821B4D4BF8006A1E47 /* GPGUserAttributePacket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30BB7C851B4D4BF8006A1E47 /* GPGUserAttributePacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BB7C831B4D4BF8006A1E47 /* GPGUserAttributePacket.m */; };
+		30BE73C41B54015C001A2137 /* Libmacgpg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* Libmacgpg.framework */; };
+		30BE73DD1B541039001A2137 /* OpenPGP.asc in Resources */ = {isa = PBXBuildFile; fileRef = 45B9A7F5151C9A6D00DAD67A /* OpenPGP.asc */; };
+		30BE73DE1B541039001A2137 /* SignedInputStringCR.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45891A40151BA1EC002D7410 /* SignedInputStringCR.txt */; };
+		30BE73DF1B541039001A2137 /* SignedInputStringCRLF.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45891A3C151BA1C9002D7410 /* SignedInputStringCRLF.txt */; };
+		30BE73E01B541039001A2137 /* SignedInputStringLF.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45891A3D151BA1C9002D7410 /* SignedInputStringLF.txt */; };
+		30BE73EA1B541F5B001A2137 /* GPGUnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BE73E91B541F5B001A2137 /* GPGUnitTest.m */; };
+		30C045931B4FDB9800080903 /* GPGCompressedDataPacket_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 30C045921B4FDB9800080903 /* GPGCompressedDataPacket_Private.h */; };
+		30C60EEF12FF3321006BB8DA /* Libmacgpg.h in Headers */ = {isa = PBXBuildFile; fileRef = 30C60EEE12FF3321006BB8DA /* Libmacgpg.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30D42DB120EE085D00FBCE5C /* GPGKeyMonitoring.h in Headers */ = {isa = PBXBuildFile; fileRef = 30D42DAF20EE085D00FBCE5C /* GPGKeyMonitoring.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30D42DB220EE085D00FBCE5C /* GPGKeyMonitoring.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D42DB020EE085D00FBCE5C /* GPGKeyMonitoring.m */; };
+		30D5E2A41483A0F700F31454 /* GPGConf.h in Headers */ = {isa = PBXBuildFile; fileRef = 30D5E2A21483A0F700F31454 /* GPGConf.h */; };
+		30D5E2A51483A0F700F31454 /* GPGConf.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D5E2A31483A0F700F31454 /* GPGConf.m */; };
+		30D68BC51B4FF5D500F7865C /* COPYING.pgpdump in Resources */ = {isa = PBXBuildFile; fileRef = 30D68BC41B4FF5D500F7865C /* COPYING.pgpdump */; };
+		30E38DCB1E448655001AC933 /* NSBundle+GPGLocalization.h in Headers */ = {isa = PBXBuildFile; fileRef = 30E38DC91E448655001AC933 /* NSBundle+GPGLocalization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30E38DCC1E448655001AC933 /* NSBundle+GPGLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E38DCA1E448655001AC933 /* NSBundle+GPGLocalization.m */; };
+		30ECA9591FBF4AE100C00279 /* Unarmor_UnicodeDashes.res in Resources */ = {isa = PBXBuildFile; fileRef = 30ECA9571FBF4AE100C00279 /* Unarmor_UnicodeDashes.res */; };
+		30ECA95A1FBF4AE100C00279 /* Unarmor_UnicodeDashes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 30ECA9581FBF4AE100C00279 /* Unarmor_UnicodeDashes.txt */; };
+		30F45A8C1CE0B5F600D2B42D /* GPGUpdateController.h in Headers */ = {isa = PBXBuildFile; fileRef = 30F45A8A1CE0B5F600D2B42D /* GPGUpdateController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30F45A8D1CE0B5F600D2B42D /* GPGUpdateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F45A8B1CE0B5F600D2B42D /* GPGUpdateController.m */; };
+		30FF413712FAC6CD00F39832 /* GPGController.h in Headers */ = {isa = PBXBuildFile; fileRef = 30FF411D12FAC6CD00F39832 /* GPGController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30FF413812FAC6CD00F39832 /* GPGController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FF411E12FAC6CD00F39832 /* GPGController.m */; };
+		30FF413B12FAC6CD00F39832 /* GPGGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = 30FF412112FAC6CD00F39832 /* GPGGlobals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30FF413C12FAC6CD00F39832 /* GPGGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FF412212FAC6CD00F39832 /* GPGGlobals.m */; };
+		30FF413D12FAC6CD00F39832 /* GPGKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 30FF412312FAC6CD00F39832 /* GPGKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30FF413E12FAC6CD00F39832 /* GPGKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FF412412FAC6CD00F39832 /* GPGKey.m */; };
+		30FF413F12FAC6CD00F39832 /* GPGUserIDSignature.h in Headers */ = {isa = PBXBuildFile; fileRef = 30FF412512FAC6CD00F39832 /* GPGUserIDSignature.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30FF414012FAC6CD00F39832 /* GPGUserIDSignature.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FF412612FAC6CD00F39832 /* GPGUserIDSignature.m */; };
+		30FF414312FAC6CD00F39832 /* GPGRemoteKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 30FF412912FAC6CD00F39832 /* GPGRemoteKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30FF414412FAC6CD00F39832 /* GPGRemoteKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FF412A12FAC6CD00F39832 /* GPGRemoteKey.m */; };
+		30FF414512FAC6CD00F39832 /* GPGRemoteUserID.h in Headers */ = {isa = PBXBuildFile; fileRef = 30FF412B12FAC6CD00F39832 /* GPGRemoteUserID.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30FF414612FAC6CD00F39832 /* GPGRemoteUserID.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FF412C12FAC6CD00F39832 /* GPGRemoteUserID.m */; };
+		30FF414712FAC6CD00F39832 /* GPGSignature.h in Headers */ = {isa = PBXBuildFile; fileRef = 30FF412D12FAC6CD00F39832 /* GPGSignature.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30FF414812FAC6CD00F39832 /* GPGSignature.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FF412E12FAC6CD00F39832 /* GPGSignature.m */; };
+		30FF414B12FAC6CD00F39832 /* GPGTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 30FF413112FAC6CD00F39832 /* GPGTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30FF414C12FAC6CD00F39832 /* GPGTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FF413212FAC6CD00F39832 /* GPGTask.m */; };
+		30FF414D12FAC6CD00F39832 /* GPGTaskOrder.h in Headers */ = {isa = PBXBuildFile; fileRef = 30FF413312FAC6CD00F39832 /* GPGTaskOrder.h */; };
+		30FF414E12FAC6CD00F39832 /* GPGTaskOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FF413412FAC6CD00F39832 /* GPGTaskOrder.m */; };
+		30FF414F12FAC6CD00F39832 /* GPGUserID.h in Headers */ = {isa = PBXBuildFile; fileRef = 30FF413512FAC6CD00F39832 /* GPGUserID.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30FF415012FAC6CD00F39832 /* GPGUserID.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FF413612FAC6CD00F39832 /* GPGUserID.m */; };
+		45156A1C14FB1B1200129FE7 /* GPGLinesSetting.h in Headers */ = {isa = PBXBuildFile; fileRef = 45156A1A14FB1B1200129FE7 /* GPGLinesSetting.h */; };
+		45156A1D14FB1B1200129FE7 /* GPGLinesSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 45156A1B14FB1B1200129FE7 /* GPGLinesSetting.m */; };
+		45156A2014FB1D7D00129FE7 /* GPGDictSetting.h in Headers */ = {isa = PBXBuildFile; fileRef = 45156A1E14FB1D7D00129FE7 /* GPGDictSetting.h */; };
+		45156A2114FB1D7D00129FE7 /* GPGDictSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 45156A1F14FB1D7D00129FE7 /* GPGDictSetting.m */; };
+		45156A2A14FB3EF700129FE7 /* GPGArraySetting.h in Headers */ = {isa = PBXBuildFile; fileRef = 45156A2814FB3EF700129FE7 /* GPGArraySetting.h */; };
+		45156A2B14FB3EF700129FE7 /* GPGArraySetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 45156A2914FB3EF700129FE7 /* GPGArraySetting.m */; };
+		451932F514F8061100D1F727 /* GPGStdSetting.h in Headers */ = {isa = PBXBuildFile; fileRef = 451932F314F8061100D1F727 /* GPGStdSetting.h */; };
+		451932F614F8061100D1F727 /* GPGStdSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 451932F414F8061100D1F727 /* GPGStdSetting.m */; };
+		451D8829156A7AD900A0B890 /* GPGStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 451D8827156A7AD900A0B890 /* GPGStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		451D882A156A7AD900A0B890 /* GPGStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 451D8828156A7AD900A0B890 /* GPGStream.m */; };
+		451D882D156A7CA300A0B890 /* GPGMemoryStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 451D882B156A7CA300A0B890 /* GPGMemoryStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		451D882E156A7CA300A0B890 /* GPGMemoryStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 451D882C156A7CA300A0B890 /* GPGMemoryStream.m */; };
+		451D8831156A7E4900A0B890 /* GPGFileStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 451D882F156A7E4900A0B890 /* GPGFileStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		451D8832156A7E4900A0B890 /* GPGFileStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 451D8830156A7E4900A0B890 /* GPGFileStream.m */; };
+		4570876614FAA7C90030AAE6 /* GPGConfReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 4570876414FAA7C90030AAE6 /* GPGConfReader.h */; };
+		4570876714FAA7C90030AAE6 /* GPGConfReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570876514FAA7C90030AAE6 /* GPGConfReader.m */; };
+		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1BD78BB81726B5190005F251 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = Libmacgpg;
+		};
+		30BE73C51B54015C001A2137 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = Libmacgpg;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1B0E27112153F00800BF3DC0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1B0E27122153F01600BF3DC0 /* GSPaddle.framework in CopyFiles */,
+				1B0E271A2153F0DC00BF3DC0 /* Paddle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD78BBB1726B6150005F251 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1BD78BBC1726B6230005F251 /* Libmacgpg.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BDCBDBF214FFC0F003919E5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				1BDCBDC0214FFC24003919E5 /* org.gpgtools.Libmacgpg.xpc.plist in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		301A265620BE964C0059010D /* Copy Decrypt Test-Cases */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Decrypt;
+			dstSubfolderSpec = 7;
+			files = (
+				301A265720BE96680059010D /* LiteralAfterCustomEncrypted.gpg in Copy Decrypt Test-Cases */,
+				301A265820BE96680059010D /* LiteralAfterCustomEncrypted.res in Copy Decrypt Test-Cases */,
+				301A265920BE96680059010D /* LiteralAfterEmptyEncrypted.gpg in Copy Decrypt Test-Cases */,
+				301A265A20BE96680059010D /* LiteralAfterEmptyEncrypted.res in Copy Decrypt Test-Cases */,
+				301A265B20BE96680059010D /* Normal.gpg in Copy Decrypt Test-Cases */,
+				301A265C20BE96680059010D /* Normal.res in Copy Decrypt Test-Cases */,
+			);
+			name = "Copy Decrypt Test-Cases";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1B0E270F2153EFC200BF3DC0 /* GSPaddle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GSPaddle.framework; sourceTree = "<group>"; };
+		1B0E27182153F0C900BF3DC0 /* Paddle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Paddle.framework; sourceTree = "<group>"; };
+		1B16DD20179C83F000BC1366 /* GPGTypesRW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGTypesRW.h; sourceTree = "<group>"; };
+		1B2F2D70214FF12A00740DD3 /* org.gpgtools.Libmacgpg.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = org.gpgtools.Libmacgpg.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B2F2D76214FF12B00740DD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1B2F2D78214FF12B00740DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B2F2D7C214FF17200740DD3 /* JailfreeTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JailfreeTask.h; sourceTree = "<group>"; };
+		1B2F2D7D214FF17500740DD3 /* JailfreeTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JailfreeTask.m; sourceTree = "<group>"; };
+		1B3D64DF1565BC6600D93BBE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1B72F73F157AE89600101194 /* NSPipe+NoSigPipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPipe+NoSigPipe.h"; sourceTree = "<group>"; };
+		1B72F740157AE89600101194 /* NSPipe+NoSigPipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPipe+NoSigPipe.m"; sourceTree = "<group>"; };
+		1B84028517296EA4009A40E6 /* GPGUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGUserDefaults.h; sourceTree = "<group>"; };
+		1B84028617296EA4009A40E6 /* GPGUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGUserDefaults.m; sourceTree = "<group>"; };
+		1B89B68C1726F8FD004863FC /* PLWeakCompatibilityStubs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLWeakCompatibilityStubs.h; sourceTree = "<group>"; };
+		1B89B68D1726F8FD004863FC /* PLWeakCompatibilityStubs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLWeakCompatibilityStubs.m; sourceTree = "<group>"; };
+		1B9DB26815784DB700488353 /* GPGTaskHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGTaskHelper.h; sourceTree = "<group>"; };
+		1B9DB26915784DB700488353 /* GPGTaskHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGTaskHelper.m; sourceTree = "<group>"; };
+		1B9FF20E17257A69004FB017 /* GPGTaskHelperXPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGTaskHelperXPC.h; sourceTree = "<group>"; };
+		1B9FF20F17257A69004FB017 /* GPGTaskHelperXPC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGTaskHelperXPC.m; sourceTree = "<group>"; };
+		1B9FF21417261470004FB017 /* JailfreeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JailfreeProtocol.h; path = Source/JailfreeProtocol.h; sourceTree = "<group>"; };
+		1BCE0CCF1617A3DF0026DCFF /* NSBundle+Sandbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Sandbox.h"; sourceTree = "<group>"; };
+		1BCE0CD01617A3DF0026DCFF /* NSBundle+Sandbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Sandbox.m"; sourceTree = "<group>"; };
+		1BD78B9F1726B2820005F251 /* LeakFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeakFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BD78BA31726B2830005F251 /* LeakFinder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LeakFinder-Info.plist"; sourceTree = "<group>"; };
+		1BD78BA51726B2830005F251 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1BD78BA71726B2830005F251 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1BD78BA91726B2830005F251 /* LeakFinder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LeakFinder-Prefix.pch"; sourceTree = "<group>"; };
+		1BD78BAB1726B2830005F251 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		1BD78BAD1726B2830005F251 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1BD78BAE1726B2830005F251 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1BD78BB11726B2830005F251 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1BDCBDBD214FFB7D003919E5 /* org.gpgtools.Libmacgpg.xpc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = org.gpgtools.Libmacgpg.xpc.plist; path = Source/org.gpgtools.Libmacgpg.xpc/org.gpgtools.Libmacgpg.xpc.plist; sourceTree = SOURCE_ROOT; };
+		1BE88B3D1B47D7F900A812B6 /* GPGSocketCloseTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GPGSocketCloseTest.m; path = ../NewUnitTests/GPGSocketCloseTest.m; sourceTree = "<group>"; };
+		3002C04316EE388B00D57C1E /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
+		3002C04516EE389100D57C1E /* libxar.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxar.dylib; path = usr/lib/libxar.dylib; sourceTree = SDKROOT; };
+		300F3DB31B4AC2CE00E36AAA /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
+		300F3DB41B4AC2CE00E36AAA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		301A264A20BE94110059010D /* Normal.res */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Normal.res; sourceTree = "<group>"; };
+		301A264B20BE94110059010D /* LiteralAfterEmptyEncrypted.gpg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LiteralAfterEmptyEncrypted.gpg; sourceTree = "<group>"; };
+		301A264C20BE94110059010D /* LiteralAfterCustomEncrypted.gpg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LiteralAfterCustomEncrypted.gpg; sourceTree = "<group>"; };
+		301A264D20BE94110059010D /* LiteralAfterEmptyEncrypted.res */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LiteralAfterEmptyEncrypted.res; sourceTree = "<group>"; };
+		301A264E20BE94110059010D /* Normal.gpg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Normal.gpg; sourceTree = "<group>"; };
+		301A264F20BE94110059010D /* LiteralAfterCustomEncrypted.res */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LiteralAfterCustomEncrypted.res; sourceTree = "<group>"; };
+		301A265D20BE9ED10059010D /* GPGStatusLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPGStatusLine.h; sourceTree = "<group>"; };
+		301A265E20BE9ED10059010D /* GPGStatusLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPGStatusLine.m; sourceTree = "<group>"; };
+		301A44CB1B436405002A38E4 /* GPGUnArmor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGUnArmor.h; sourceTree = "<group>"; };
+		301A44CC1B436405002A38E4 /* GPGUnArmor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGUnArmor.m; sourceTree = "<group>"; };
+		301D291B1B4BE4F500599BE8 /* GPGPacketParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPGPacketParser.h; path = GPGPacket/GPGPacketParser.h; sourceTree = "<group>"; };
+		301D291C1B4BE4F500599BE8 /* GPGPacketParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPGPacketParser.m; path = GPGPacket/GPGPacketParser.m; sourceTree = "<group>"; };
+		301D291F1B4BFD9800599BE8 /* GPGPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPGPacket.h; path = GPGPacket/GPGPacket.h; sourceTree = "<group>"; };
+		301D29201B4BFD9800599BE8 /* GPGPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPGPacket.m; path = GPGPacket/GPGPacket.m; sourceTree = "<group>"; };
+		301D29231B4BFDCE00599BE8 /* GPGPacket_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GPGPacket_Private.h; path = GPGPacket/GPGPacket_Private.h; sourceTree = "<group>"; };
+		301D29241B4C032D00599BE8 /* GPGPublicKeyEncryptedSessionKeyPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPGPublicKeyEncryptedSessionKeyPacket.h; path = GPGPacket/GPGPublicKeyEncryptedSessionKeyPacket.h; sourceTree = "<group>"; };
+		301D29251B4C032D00599BE8 /* GPGPublicKeyEncryptedSessionKeyPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GPGPublicKeyEncryptedSessionKeyPacket.m; path = GPGPacket/GPGPublicKeyEncryptedSessionKeyPacket.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		301D29281B4C049C00599BE8 /* GPGPacketParser_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GPGPacketParser_Private.h; path = GPGPacket/GPGPacketParser_Private.h; sourceTree = "<group>"; };
+		301D5D9D178C9871003026E7 /* GPGKeyserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGKeyserver.h; sourceTree = "<group>"; };
+		301D5D9E178C9871003026E7 /* GPGKeyserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGKeyserver.m; sourceTree = "<group>"; };
+		302481CA1B5CF46800C86A07 /* Unarmor_ClearsignComplicated.clear */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Unarmor_ClearsignComplicated.clear; sourceTree = "<group>"; };
+		302481CB1B5CF46800C86A07 /* Unarmor_ClearsignComplicated.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unarmor_ClearsignComplicated.res; sourceTree = "<group>"; };
+		302481CC1B5CF46800C86A07 /* Unarmor_ClearsignComplicated.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Unarmor_ClearsignComplicated.txt; sourceTree = "<group>"; };
+		302481CD1B5CF46800C86A07 /* Unarmor_ClearsignNoLF.clear */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Unarmor_ClearsignNoLF.clear; sourceTree = "<group>"; };
+		302481CE1B5CF46800C86A07 /* Unarmor_ClearsignNoLF.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unarmor_ClearsignNoLF.res; sourceTree = "<group>"; };
+		302481CF1B5CF46800C86A07 /* Unarmor_ClearsignNoLF.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Unarmor_ClearsignNoLF.txt; sourceTree = "<group>"; };
+		302481D01B5CF46800C86A07 /* Unarmor_ClearsignOneLF.clear */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Unarmor_ClearsignOneLF.clear; sourceTree = "<group>"; };
+		302481D11B5CF46800C86A07 /* Unarmor_ClearsignOneLF.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unarmor_ClearsignOneLF.res; sourceTree = "<group>"; };
+		302481D21B5CF46800C86A07 /* Unarmor_ClearsignOneLF.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Unarmor_ClearsignOneLF.txt; sourceTree = "<group>"; };
+		302481D31B5CF46800C86A07 /* Unarmor_ClearsignTwoLF.clear */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Unarmor_ClearsignTwoLF.clear; sourceTree = "<group>"; };
+		302481D41B5CF46800C86A07 /* Unarmor_ClearsignTwoLF.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unarmor_ClearsignTwoLF.res; sourceTree = "<group>"; };
+		302481D51B5CF46800C86A07 /* Unarmor_ClearsignTwoLF.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Unarmor_ClearsignTwoLF.txt; sourceTree = "<group>"; };
+		3026F4AE13A203A000F3CA02 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3034E5CA2065433E00E40A8E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		30444C331A65E0590052CB94 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3044A92B20CA744000712FBD /* NoSecKey.gpg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NoSecKey.gpg; sourceTree = "<group>"; };
+		304883091462B11700F2E5F4 /* DirectoryWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryWatcher.h; sourceTree = "<group>"; };
+		3048830A1462B11700F2E5F4 /* DirectoryWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryWatcher.m; sourceTree = "<group>"; };
+		3048830D1462B22000F2E5F4 /* GPGWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGWatcher.h; sourceTree = "<group>"; };
+		3048830E1462B22000F2E5F4 /* GPGWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGWatcher.m; sourceTree = "<group>"; };
+		304BF3871E449C9300CF4C4F /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
+		304BF3881E449C9800CF4C4F /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
+		304BF3891E449C9C00CF4C4F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		304BF38A1E449CA000CF4C4F /* fa_IR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fa_IR; path = fa_IR.lproj/Localizable.strings; sourceTree = "<group>"; };
+		304BF38B1E449CA400CF4C4F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		304BF38C1E449CA800CF4C4F /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
+		304BF38D1E449CAD00CF4C4F /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		304BF38E1E449CB000CF4C4F /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		304BF38F1E449CB400CF4C4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		304BF3901E449CB800CF4C4F /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		304C69FC2069124F00D89F65 /* Unarmor_2Messages.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unarmor_2Messages.res; sourceTree = "<group>"; };
+		304C69FD2069125000D89F65 /* Unarmor_2Messages.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Unarmor_2Messages.txt; sourceTree = "<group>"; };
+		304FDC8A210872D80022B0B3 /* GPGUTF8Argument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPGUTF8Argument.h; sourceTree = "<group>"; };
+		304FDC8B210872D80022B0B3 /* GPGUTF8Argument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPGUTF8Argument.m; sourceTree = "<group>"; };
+		305165591422812B0038AAF0 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3059AF1014239FAB00AD5B30 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		30691AA2136AECC4004AA469 /* GPGOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGOptions.h; sourceTree = "<group>"; };
+		30691AA3136AECC4004AA469 /* GPGOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGOptions.m; sourceTree = "<group>"; };
+		3075ADD51B566D0900A5F89A /* GPGPacketTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGPacketTest.m; sourceTree = "<group>"; };
+		3075ADDA1B5675B500A5F89A /* key1.gpg */ = {isa = PBXFileReference; lastKnownFileType = file; path = key1.gpg; sourceTree = "<group>"; };
+		3075ADDC1B56760F00A5F89A /* compressed1.gpg */ = {isa = PBXFileReference; lastKnownFileType = file; path = compressed1.gpg; sourceTree = "<group>"; };
+		3077AE881A6547D2001EC508 /* SecurityFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityFoundation.framework; path = System/Library/Frameworks/SecurityFoundation.framework; sourceTree = SDKROOT; };
+		307FDE401B4E636A00462E4E /* GPGCompressedDataPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPGCompressedDataPacket.h; path = GPGPacket/GPGCompressedDataPacket.h; sourceTree = "<group>"; };
+		307FDE411B4E636A00462E4E /* GPGCompressedDataPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GPGCompressedDataPacket.m; path = GPGPacket/GPGCompressedDataPacket.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		3080B0C61F603EA9009FF08F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3080B0C71F603EB3009FF08F /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		30895CBD20D03AF6008D1BE0 /* GPGTask_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPGTask_Private.h; sourceTree = "<group>"; };
+		3097C07F214F9E4A00797F47 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3097C080214F9E5100797F47 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3097C081214F9E5A00797F47 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
+		309A18CE13E3812E0069DC0F /* GPGTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGTransformer.h; sourceTree = "<group>"; };
+		309A18CF13E3812E0069DC0F /* GPGTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGTransformer.m; sourceTree = "<group>"; };
+		309D8A101B87469B00D945BA /* GPGKeyFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGKeyFetcher.h; sourceTree = "<group>"; };
+		309D8A111B87469B00D945BA /* GPGKeyFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGKeyFetcher.m; sourceTree = "<group>"; };
+		30A058371799E2DC00E1AD20 /* GPGKeyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGKeyManager.h; sourceTree = "<group>"; };
+		30A058381799E2DC00E1AD20 /* GPGKeyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGKeyManager.m; sourceTree = "<group>"; };
+		30A218221B5543A500D01E37 /* GPGUnarmorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGUnarmorTest.m; sourceTree = "<group>"; };
+		30A2185B1B5579A200D01E37 /* Unarmor_DoubleNewline.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unarmor_DoubleNewline.res; sourceTree = "<group>"; };
+		30A2185C1B5579A200D01E37 /* Unarmor_DoubleNewline.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Unarmor_DoubleNewline.txt; sourceTree = "<group>"; };
+		30A2185D1B5579A200D01E37 /* Unarmor_InvalidComment.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unarmor_InvalidComment.res; sourceTree = "<group>"; };
+		30A2185E1B5579A200D01E37 /* Unarmor_InvalidComment.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Unarmor_InvalidComment.txt; sourceTree = "<group>"; };
+		30A2185F1B5579A200D01E37 /* Unarmor_InvalidVersion.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unarmor_InvalidVersion.res; sourceTree = "<group>"; };
+		30A218601B5579A200D01E37 /* Unarmor_InvalidVersion.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Unarmor_InvalidVersion.txt; sourceTree = "<group>"; };
+		30A218611B5579A200D01E37 /* Unarmor_MissingNewline.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unarmor_MissingNewline.res; sourceTree = "<group>"; };
+		30A218621B5579A200D01E37 /* Unarmor_MissingNewline.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Unarmor_MissingNewline.txt; sourceTree = "<group>"; };
+		30A218631B5579A200D01E37 /* Unarmor_NoNewline.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unarmor_NoNewline.res; sourceTree = "<group>"; };
+		30A218641B5579A200D01E37 /* Unarmor_NoNewline.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Unarmor_NoNewline.txt; sourceTree = "<group>"; };
+		30A218651B5579A200D01E37 /* Unarmor_Normal.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unarmor_Normal.res; sourceTree = "<group>"; };
+		30A218661B5579A200D01E37 /* Unarmor_Normal.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Unarmor_Normal.txt; sourceTree = "<group>"; };
+		30A218671B5579A200D01E37 /* Unarmor_Version.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unarmor_Version.res; sourceTree = "<group>"; };
+		30A218681B5579A200D01E37 /* Unarmor_Version.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Unarmor_Version.txt; sourceTree = "<group>"; };
+		30A218691B5579A200D01E37 /* Unarmor_VersionOnline.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unarmor_VersionOnline.res; sourceTree = "<group>"; };
+		30A2186A1B5579A200D01E37 /* Unarmor_VersionOnline.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Unarmor_VersionOnline.txt; sourceTree = "<group>"; };
+		30A48E8C1B4C1344006AD363 /* GPGSignaturePacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPGSignaturePacket.h; path = GPGPacket/GPGSignaturePacket.h; sourceTree = "<group>"; };
+		30A48E8D1B4C1344006AD363 /* GPGSignaturePacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GPGSignaturePacket.m; path = GPGPacket/GPGSignaturePacket.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		30A70EE313EF328000EE9CD9 /* GPGException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGException.h; sourceTree = "<group>"; };
+		30A70EE413EF328000EE9CD9 /* GPGException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGException.m; sourceTree = "<group>"; };
+		30B11EDF20C91642006D333D /* NoMDC.gpg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NoMDC.gpg; sourceTree = "<group>"; };
+		30B570921C6E250700F68EEB /* sks-keyservers.netCA.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sks-keyservers.netCA.der"; sourceTree = "<group>"; };
+		30B586F4141E255C000373F1 /* Keyservers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keyservers.plist; sourceTree = "<group>"; };
+		30B7CE151EAE0F640050B9C5 /* GPGControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGControllerTest.m; sourceTree = "<group>"; };
+		30B7CE171EAE193F0050B9C5 /* Encrypted.gpg */ = {isa = PBXFileReference; lastKnownFileType = file; path = Encrypted.gpg; sourceTree = "<group>"; };
+		30BA88F1138FE593005982D9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		30BB7C661B4D2742006A1E47 /* GPGSymmetricEncryptedSessionKeyPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPGSymmetricEncryptedSessionKeyPacket.h; path = GPGPacket/GPGSymmetricEncryptedSessionKeyPacket.h; sourceTree = "<group>"; };
+		30BB7C671B4D2742006A1E47 /* GPGSymmetricEncryptedSessionKeyPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GPGSymmetricEncryptedSessionKeyPacket.m; path = GPGPacket/GPGSymmetricEncryptedSessionKeyPacket.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		30BB7C6A1B4D2E38006A1E47 /* GPGOnePassSignaturePacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPGOnePassSignaturePacket.h; path = GPGPacket/GPGOnePassSignaturePacket.h; sourceTree = "<group>"; };
+		30BB7C6B1B4D2E38006A1E47 /* GPGOnePassSignaturePacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GPGOnePassSignaturePacket.m; path = GPGPacket/GPGOnePassSignaturePacket.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		30BB7C6E1B4D3244006A1E47 /* GPGKeyMaterialPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPGKeyMaterialPacket.h; path = GPGPacket/GPGKeyMaterialPacket.h; sourceTree = "<group>"; };
+		30BB7C6F1B4D3244006A1E47 /* GPGKeyMaterialPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GPGKeyMaterialPacket.m; path = GPGPacket/GPGKeyMaterialPacket.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		30BB7C761B4D3F24006A1E47 /* GPGIgnoredPackets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPGIgnoredPackets.h; path = GPGPacket/GPGIgnoredPackets.h; sourceTree = "<group>"; };
+		30BB7C771B4D3F24006A1E47 /* GPGIgnoredPackets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GPGIgnoredPackets.m; path = GPGPacket/GPGIgnoredPackets.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		30BB7C7A1B4D4146006A1E47 /* GPGLiteralDataPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPGLiteralDataPacket.h; path = GPGPacket/GPGLiteralDataPacket.h; sourceTree = "<group>"; };
+		30BB7C7B1B4D4146006A1E47 /* GPGLiteralDataPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GPGLiteralDataPacket.m; path = GPGPacket/GPGLiteralDataPacket.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		30BB7C7E1B4D4A59006A1E47 /* GPGUserIDPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPGUserIDPacket.h; path = GPGPacket/GPGUserIDPacket.h; sourceTree = "<group>"; };
+		30BB7C7F1B4D4A59006A1E47 /* GPGUserIDPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GPGUserIDPacket.m; path = GPGPacket/GPGUserIDPacket.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		30BB7C821B4D4BF8006A1E47 /* GPGUserAttributePacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPGUserAttributePacket.h; path = GPGPacket/GPGUserAttributePacket.h; sourceTree = "<group>"; };
+		30BB7C831B4D4BF8006A1E47 /* GPGUserAttributePacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GPGUserAttributePacket.m; path = GPGPacket/GPGUserAttributePacket.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		30BE73BE1B54015C001A2137 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30BE73C11B54015C001A2137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30BE73E81B541F5B001A2137 /* GPGUnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGUnitTest.h; sourceTree = "<group>"; };
+		30BE73E91B541F5B001A2137 /* GPGUnitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGUnitTest.m; sourceTree = "<group>"; };
+		30C045921B4FDB9800080903 /* GPGCompressedDataPacket_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPGCompressedDataPacket_Private.h; path = GPGPacket/GPGCompressedDataPacket_Private.h; sourceTree = "<group>"; };
+		30C60EEE12FF3321006BB8DA /* Libmacgpg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Libmacgpg.h; sourceTree = "<group>"; };
+		30D42DAF20EE085D00FBCE5C /* GPGKeyMonitoring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPGKeyMonitoring.h; sourceTree = "<group>"; };
+		30D42DB020EE085D00FBCE5C /* GPGKeyMonitoring.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPGKeyMonitoring.m; sourceTree = "<group>"; };
+		30D5E2A21483A0F700F31454 /* GPGConf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GPGConf.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		30D5E2A31483A0F700F31454 /* GPGConf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGConf.m; sourceTree = "<group>"; };
+		30D68BC41B4FF5D500F7865C /* COPYING.pgpdump */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = COPYING.pgpdump; path = Source/GPGPacket/COPYING.pgpdump; sourceTree = SOURCE_ROOT; };
+		30E38DC91E448655001AC933 /* NSBundle+GPGLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+GPGLocalization.h"; sourceTree = "<group>"; };
+		30E38DCA1E448655001AC933 /* NSBundle+GPGLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+GPGLocalization.m"; sourceTree = "<group>"; };
+		30ECA9571FBF4AE100C00279 /* Unarmor_UnicodeDashes.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unarmor_UnicodeDashes.res; sourceTree = "<group>"; };
+		30ECA9581FBF4AE100C00279 /* Unarmor_UnicodeDashes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Unarmor_UnicodeDashes.txt; sourceTree = "<group>"; };
+		30F45A8A1CE0B5F600D2B42D /* GPGUpdateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGUpdateController.h; sourceTree = "<group>"; };
+		30F45A8B1CE0B5F600D2B42D /* GPGUpdateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGUpdateController.m; sourceTree = "<group>"; };
+		30FF411D12FAC6CD00F39832 /* GPGController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGController.h; sourceTree = "<group>"; };
+		30FF411E12FAC6CD00F39832 /* GPGController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGController.m; sourceTree = "<group>"; };
+		30FF412112FAC6CD00F39832 /* GPGGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGGlobals.h; sourceTree = "<group>"; };
+		30FF412212FAC6CD00F39832 /* GPGGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGGlobals.m; sourceTree = "<group>"; };
+		30FF412312FAC6CD00F39832 /* GPGKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGKey.h; sourceTree = "<group>"; };
+		30FF412412FAC6CD00F39832 /* GPGKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGKey.m; sourceTree = "<group>"; };
+		30FF412512FAC6CD00F39832 /* GPGUserIDSignature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGUserIDSignature.h; sourceTree = "<group>"; };
+		30FF412612FAC6CD00F39832 /* GPGUserIDSignature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGUserIDSignature.m; sourceTree = "<group>"; };
+		30FF412912FAC6CD00F39832 /* GPGRemoteKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGRemoteKey.h; sourceTree = "<group>"; };
+		30FF412A12FAC6CD00F39832 /* GPGRemoteKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGRemoteKey.m; sourceTree = "<group>"; };
+		30FF412B12FAC6CD00F39832 /* GPGRemoteUserID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGRemoteUserID.h; sourceTree = "<group>"; };
+		30FF412C12FAC6CD00F39832 /* GPGRemoteUserID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGRemoteUserID.m; sourceTree = "<group>"; };
+		30FF412D12FAC6CD00F39832 /* GPGSignature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGSignature.h; sourceTree = "<group>"; };
+		30FF412E12FAC6CD00F39832 /* GPGSignature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGSignature.m; sourceTree = "<group>"; };
+		30FF413112FAC6CD00F39832 /* GPGTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGTask.h; sourceTree = "<group>"; };
+		30FF413212FAC6CD00F39832 /* GPGTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGTask.m; sourceTree = "<group>"; };
+		30FF413312FAC6CD00F39832 /* GPGTaskOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGTaskOrder.h; sourceTree = "<group>"; };
+		30FF413412FAC6CD00F39832 /* GPGTaskOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGTaskOrder.m; sourceTree = "<group>"; };
+		30FF413512FAC6CD00F39832 /* GPGUserID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGUserID.h; sourceTree = "<group>"; };
+		30FF413612FAC6CD00F39832 /* GPGUserID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGUserID.m; sourceTree = "<group>"; };
+		32DBCF5E0370ADEE00C91783 /* Libmacgpg_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Libmacgpg_Prefix.pch; sourceTree = "<group>"; };
+		45156A1A14FB1B1200129FE7 /* GPGLinesSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGLinesSetting.h; sourceTree = "<group>"; };
+		45156A1B14FB1B1200129FE7 /* GPGLinesSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGLinesSetting.m; sourceTree = "<group>"; };
+		45156A1E14FB1D7D00129FE7 /* GPGDictSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGDictSetting.h; sourceTree = "<group>"; };
+		45156A1F14FB1D7D00129FE7 /* GPGDictSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGDictSetting.m; sourceTree = "<group>"; };
+		45156A2314FB310300129FE7 /* GPGLinesSettingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPGLinesSettingTest.m; path = ../UnitTests/GPGLinesSettingTest.m; sourceTree = "<group>"; };
+		45156A2614FB35DC00129FE7 /* GPGDictSettingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPGDictSettingTest.m; path = ../UnitTests/GPGDictSettingTest.m; sourceTree = "<group>"; };
+		45156A2814FB3EF700129FE7 /* GPGArraySetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGArraySetting.h; sourceTree = "<group>"; };
+		45156A2914FB3EF700129FE7 /* GPGArraySetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGArraySetting.m; sourceTree = "<group>"; };
+		45156A2C14FB506E00129FE7 /* GPGArraySettingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPGArraySettingTest.m; path = ../UnitTests/GPGArraySettingTest.m; sourceTree = "<group>"; };
+		451932F314F8061100D1F727 /* GPGStdSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GPGStdSetting.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		451932F414F8061100D1F727 /* GPGStdSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GPGStdSetting.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		451D8827156A7AD900A0B890 /* GPGStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGStream.h; sourceTree = "<group>"; };
+		451D8828156A7AD900A0B890 /* GPGStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGStream.m; sourceTree = "<group>"; };
+		451D882B156A7CA300A0B890 /* GPGMemoryStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGMemoryStream.h; sourceTree = "<group>"; };
+		451D882C156A7CA300A0B890 /* GPGMemoryStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGMemoryStream.m; sourceTree = "<group>"; };
+		451D882F156A7E4900A0B890 /* GPGFileStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGFileStream.h; sourceTree = "<group>"; };
+		451D8830156A7E4900A0B890 /* GPGFileStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGFileStream.m; sourceTree = "<group>"; };
+		4547646514FBC8A900A37306 /* GPGStdSettingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPGStdSettingTest.m; path = ../UnitTests/GPGStdSettingTest.m; sourceTree = "<group>"; };
+		455B17B915143D9A00FAD47D /* GPGOptionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPGOptionsTest.m; path = ../UnitTests/GPGOptionsTest.m; sourceTree = "<group>"; };
+		4570876414FAA7C90030AAE6 /* GPGConfReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GPGConfReader.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4570876514FAA7C90030AAE6 /* GPGConfReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GPGConfReader.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		45891A3C151BA1C9002D7410 /* SignedInputStringCRLF.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SignedInputStringCRLF.txt; sourceTree = "<group>"; };
+		45891A3D151BA1C9002D7410 /* SignedInputStringLF.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SignedInputStringLF.txt; sourceTree = "<group>"; };
+		45891A40151BA1EC002D7410 /* SignedInputStringCR.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SignedInputStringCR.txt; sourceTree = "<group>"; };
+		4591C4C914F85AA3007F6D47 /* GPGConfReaderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GPGConfReaderTest.m; path = ../UnitTests/GPGConfReaderTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4591C4D314F86D38007F6D47 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4591C4D414F86D38007F6D47 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4591C4D514F86D38007F6D47 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		45B9A7F5151C9A6D00DAD67A /* OpenPGP.asc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OpenPGP.asc; sourceTree = "<group>"; };
+		45C0BC02151B65C700AA8BF6 /* GPGTestVerify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPGTestVerify.m; path = ../UnitTests/GPGTestVerify.m; sourceTree = "<group>"; };
+		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DC2EF5B0486A6940098B216 /* Libmacgpg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Libmacgpg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B2F2D6D214FF12A00740DD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B2F2D83214FF41300740DD3 /* Libmacgpg.framework in Frameworks */,
+				1B0E27102153EFF600BF3DC0 /* GSPaddle.framework in Frameworks */,
+				1B0E27192153F0DA00BF3DC0 /* Paddle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD78B9C1726B2820005F251 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BD78BBA1726B6060005F251 /* Libmacgpg.framework in Frameworks */,
+				1BD78BA01726B2830005F251 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30BE73BB1B54015C001A2137 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30BE73C41B54015C001A2137 /* Libmacgpg.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC2EF560486A6940098B216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				300F3DB51B4AC2CE00E36AAA /* libbz2.dylib in Frameworks */,
+				300F3DB61B4AC2CE00E36AAA /* libz.dylib in Frameworks */,
+				1B3D657A1565C60100D93BBE /* Foundation.framework in Frameworks */,
+				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
+				30BA88F2138FE593005982D9 /* SystemConfiguration.framework in Frameworks */,
+				3026F4AF13A203A000F3CA02 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5B0486A6940098B216 /* Libmacgpg.framework */,
+				1BD78B9F1726B2820005F251 /* LeakFinder.app */,
+				30BE73BE1B54015C001A2137 /* UnitTests.xctest */,
+				1B2F2D70214FF12A00740DD3 /* org.gpgtools.Libmacgpg.xpc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* Libmacgpg */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				1B53AB201615254D00F4ECB2 /* Interfaces */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				1BD78BA11726B2830005F251 /* LeakFinder */,
+				30BE73BF1B54015C001A2137 /* UnitTests */,
+				1B2F2D71214FF12B00740DD3 /* org.gpgtools.Libmacgpg.xpc */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = Libmacgpg;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				300F3DB31B4AC2CE00E36AAA /* libbz2.dylib */,
+				300F3DB41B4AC2CE00E36AAA /* libz.dylib */,
+				3077AE881A6547D2001EC508 /* SecurityFoundation.framework */,
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+				30BA88F1138FE593005982D9 /* SystemConfiguration.framework */,
+				3026F4AE13A203A000F3CA02 /* Security.framework */,
+				3002C04516EE389100D57C1E /* libxar.dylib */,
+				3002C04316EE388B00D57C1E /* libcrypto.dylib */,
+				1B3D64DF1565BC6600D93BBE /* Foundation.framework */,
+				30444C331A65E0590052CB94 /* XCTest.framework */,
+				4591C4D214F86D38007F6D47 /* Other Frameworks */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				30516556142281270038AAF0 /* Localizable.strings */,
+				30B586F4141E255C000373F1 /* Keyservers.plist */,
+				8DC2EF5A0486A6940098B216 /* Info.plist */,
+				30D68BC41B4FF5D500F7865C /* COPYING.pgpdump */,
+				30B570921C6E250700F68EEB /* sks-keyservers.netCA.der */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1B72F73E157AE85B00101194 /* Additions */,
+				302AA377133605FE0022A371 /* GPGKey */,
+				307FAABB13F26BB4003FA99B /* GPGOptions */,
+				301D291A1B4BE47100599BE8 /* GPGPacket */,
+				306C73821B45B0F200A34730 /* GPGStream */,
+				30BE73D51B5405B7001A2137 /* GPGTask */,
+				30C60EEE12FF3321006BB8DA /* Libmacgpg.h */,
+				30FF411D12FAC6CD00F39832 /* GPGController.h */,
+				30FF411E12FAC6CD00F39832 /* GPGController.m */,
+				30A058371799E2DC00E1AD20 /* GPGKeyManager.h */,
+				30A058381799E2DC00E1AD20 /* GPGKeyManager.m */,
+				30D42DAF20EE085D00FBCE5C /* GPGKeyMonitoring.h */,
+				30D42DB020EE085D00FBCE5C /* GPGKeyMonitoring.m */,
+				30A70EE313EF328000EE9CD9 /* GPGException.h */,
+				30A70EE413EF328000EE9CD9 /* GPGException.m */,
+				30FF412112FAC6CD00F39832 /* GPGGlobals.h */,
+				30FF412212FAC6CD00F39832 /* GPGGlobals.m */,
+				301A44CB1B436405002A38E4 /* GPGUnArmor.h */,
+				301A44CC1B436405002A38E4 /* GPGUnArmor.m */,
+				309A18CE13E3812E0069DC0F /* GPGTransformer.h */,
+				309A18CF13E3812E0069DC0F /* GPGTransformer.m */,
+				3048830D1462B22000F2E5F4 /* GPGWatcher.h */,
+				3048830E1462B22000F2E5F4 /* GPGWatcher.m */,
+				304883091462B11700F2E5F4 /* DirectoryWatcher.h */,
+				3048830A1462B11700F2E5F4 /* DirectoryWatcher.m */,
+				301D5D9D178C9871003026E7 /* GPGKeyserver.h */,
+				301D5D9E178C9871003026E7 /* GPGKeyserver.m */,
+				309D8A101B87469B00D945BA /* GPGKeyFetcher.h */,
+				309D8A111B87469B00D945BA /* GPGKeyFetcher.m */,
+				30F45A8A1CE0B5F600D2B42D /* GPGUpdateController.h */,
+				30F45A8B1CE0B5F600D2B42D /* GPGUpdateController.m */,
+				30E38DC91E448655001AC933 /* NSBundle+GPGLocalization.h */,
+				30E38DCA1E448655001AC933 /* NSBundle+GPGLocalization.m */,
+				301A265D20BE9ED10059010D /* GPGStatusLine.h */,
+				301A265E20BE9ED10059010D /* GPGStatusLine.m */,
+			);
+			name = Classes;
+			path = Source;
+			sourceTree = "<group>";
+		};
+		1B0E27072153EB6700BF3DC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B0E27182153F0C900BF3DC0 /* Paddle.framework */,
+				1B0E270F2153EFC200BF3DC0 /* GSPaddle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1B2F2D71214FF12B00740DD3 /* org.gpgtools.Libmacgpg.xpc */ = {
+			isa = PBXGroup;
+			children = (
+				1B0E27072153EB6700BF3DC0 /* Frameworks */,
+				1BDCBDBC214FFB5F003919E5 /* LaunchAgents */,
+				1B2F2D7C214FF17200740DD3 /* JailfreeTask.h */,
+				1B2F2D7D214FF17500740DD3 /* JailfreeTask.m */,
+				1B2F2D76214FF12B00740DD3 /* main.m */,
+				1B2F2D78214FF12B00740DD3 /* Info.plist */,
+			);
+			name = org.gpgtools.Libmacgpg.xpc;
+			path = Source/org.gpgtools.Libmacgpg.xpc;
+			sourceTree = "<group>";
+		};
+		1B53AB201615254D00F4ECB2 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				1B9FF21417261470004FB017 /* JailfreeProtocol.h */,
+			);
+			name = Interfaces;
+			sourceTree = "<group>";
+		};
+		1B72F73E157AE85B00101194 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				1B89B68C1726F8FD004863FC /* PLWeakCompatibilityStubs.h */,
+				1B89B68D1726F8FD004863FC /* PLWeakCompatibilityStubs.m */,
+				1B72F73F157AE89600101194 /* NSPipe+NoSigPipe.h */,
+				1B72F740157AE89600101194 /* NSPipe+NoSigPipe.m */,
+				1BCE0CCF1617A3DF0026DCFF /* NSBundle+Sandbox.h */,
+				1BCE0CD01617A3DF0026DCFF /* NSBundle+Sandbox.m */,
+			);
+			name = Additions;
+			sourceTree = "<group>";
+		};
+		1BD78BA11726B2830005F251 /* LeakFinder */ = {
+			isa = PBXGroup;
+			children = (
+				1BD78BAD1726B2830005F251 /* AppDelegate.h */,
+				1BD78BAE1726B2830005F251 /* AppDelegate.m */,
+				1BD78BB01726B2830005F251 /* MainMenu.xib */,
+				1BD78BA21726B2830005F251 /* Supporting Files */,
+			);
+			path = LeakFinder;
+			sourceTree = "<group>";
+		};
+		1BD78BA21726B2830005F251 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1BD78BA31726B2830005F251 /* LeakFinder-Info.plist */,
+				1BD78BA41726B2830005F251 /* InfoPlist.strings */,
+				1BD78BA71726B2830005F251 /* main.m */,
+				1BD78BA91726B2830005F251 /* LeakFinder-Prefix.pch */,
+				1BD78BAA1726B2830005F251 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1BDCBDBC214FFB5F003919E5 /* LaunchAgents */ = {
+			isa = PBXGroup;
+			children = (
+				1BDCBDBD214FFB7D003919E5 /* org.gpgtools.Libmacgpg.xpc.plist */,
+			);
+			name = LaunchAgents;
+			sourceTree = "<group>";
+		};
+		301A264920BE925C0059010D /* Decrypt */ = {
+			isa = PBXGroup;
+			children = (
+				301A264C20BE94110059010D /* LiteralAfterCustomEncrypted.gpg */,
+				301A264F20BE94110059010D /* LiteralAfterCustomEncrypted.res */,
+				301A264B20BE94110059010D /* LiteralAfterEmptyEncrypted.gpg */,
+				301A264D20BE94110059010D /* LiteralAfterEmptyEncrypted.res */,
+				301A264E20BE94110059010D /* Normal.gpg */,
+				301A264A20BE94110059010D /* Normal.res */,
+			);
+			path = Decrypt;
+			sourceTree = "<group>";
+		};
+		301D291A1B4BE47100599BE8 /* GPGPacket */ = {
+			isa = PBXGroup;
+			children = (
+				301D291B1B4BE4F500599BE8 /* GPGPacketParser.h */,
+				301D29281B4C049C00599BE8 /* GPGPacketParser_Private.h */,
+				301D291C1B4BE4F500599BE8 /* GPGPacketParser.m */,
+				301D291F1B4BFD9800599BE8 /* GPGPacket.h */,
+				301D29231B4BFDCE00599BE8 /* GPGPacket_Private.h */,
+				301D29201B4BFD9800599BE8 /* GPGPacket.m */,
+				301D29241B4C032D00599BE8 /* GPGPublicKeyEncryptedSessionKeyPacket.h */,
+				301D29251B4C032D00599BE8 /* GPGPublicKeyEncryptedSessionKeyPacket.m */,
+				30A48E8C1B4C1344006AD363 /* GPGSignaturePacket.h */,
+				30A48E8D1B4C1344006AD363 /* GPGSignaturePacket.m */,
+				30BB7C661B4D2742006A1E47 /* GPGSymmetricEncryptedSessionKeyPacket.h */,
+				30BB7C671B4D2742006A1E47 /* GPGSymmetricEncryptedSessionKeyPacket.m */,
+				30BB7C6A1B4D2E38006A1E47 /* GPGOnePassSignaturePacket.h */,
+				30BB7C6B1B4D2E38006A1E47 /* GPGOnePassSignaturePacket.m */,
+				30BB7C6E1B4D3244006A1E47 /* GPGKeyMaterialPacket.h */,
+				30BB7C6F1B4D3244006A1E47 /* GPGKeyMaterialPacket.m */,
+				30BB7C761B4D3F24006A1E47 /* GPGIgnoredPackets.h */,
+				30BB7C771B4D3F24006A1E47 /* GPGIgnoredPackets.m */,
+				30BB7C7A1B4D4146006A1E47 /* GPGLiteralDataPacket.h */,
+				30BB7C7B1B4D4146006A1E47 /* GPGLiteralDataPacket.m */,
+				30BB7C7E1B4D4A59006A1E47 /* GPGUserIDPacket.h */,
+				30BB7C7F1B4D4A59006A1E47 /* GPGUserIDPacket.m */,
+				30BB7C821B4D4BF8006A1E47 /* GPGUserAttributePacket.h */,
+				30BB7C831B4D4BF8006A1E47 /* GPGUserAttributePacket.m */,
+				307FDE401B4E636A00462E4E /* GPGCompressedDataPacket.h */,
+				30C045921B4FDB9800080903 /* GPGCompressedDataPacket_Private.h */,
+				307FDE411B4E636A00462E4E /* GPGCompressedDataPacket.m */,
+			);
+			name = GPGPacket;
+			sourceTree = "<group>";
+		};
+		302AA377133605FE0022A371 /* GPGKey */ = {
+			isa = PBXGroup;
+			children = (
+				30FF412312FAC6CD00F39832 /* GPGKey.h */,
+				30FF412412FAC6CD00F39832 /* GPGKey.m */,
+				30FF412512FAC6CD00F39832 /* GPGUserIDSignature.h */,
+				30FF412612FAC6CD00F39832 /* GPGUserIDSignature.m */,
+				30FF412912FAC6CD00F39832 /* GPGRemoteKey.h */,
+				30FF412A12FAC6CD00F39832 /* GPGRemoteKey.m */,
+				30FF412B12FAC6CD00F39832 /* GPGRemoteUserID.h */,
+				30FF412C12FAC6CD00F39832 /* GPGRemoteUserID.m */,
+				30FF412D12FAC6CD00F39832 /* GPGSignature.h */,
+				30FF412E12FAC6CD00F39832 /* GPGSignature.m */,
+				30FF413512FAC6CD00F39832 /* GPGUserID.h */,
+				30FF413612FAC6CD00F39832 /* GPGUserID.m */,
+				1B16DD20179C83F000BC1366 /* GPGTypesRW.h */,
+			);
+			name = GPGKey;
+			sourceTree = "<group>";
+		};
+		306C73821B45B0F200A34730 /* GPGStream */ = {
+			isa = PBXGroup;
+			children = (
+				451D8827156A7AD900A0B890 /* GPGStream.h */,
+				451D8828156A7AD900A0B890 /* GPGStream.m */,
+				451D882B156A7CA300A0B890 /* GPGMemoryStream.h */,
+				451D882C156A7CA300A0B890 /* GPGMemoryStream.m */,
+				451D882F156A7E4900A0B890 /* GPGFileStream.h */,
+				451D8830156A7E4900A0B890 /* GPGFileStream.m */,
+			);
+			name = GPGStream;
+			sourceTree = "<group>";
+		};
+		3075ADD71B566E9A00A5F89A /* GPGPacket */ = {
+			isa = PBXGroup;
+			children = (
+				3075ADDA1B5675B500A5F89A /* key1.gpg */,
+				3075ADDC1B56760F00A5F89A /* compressed1.gpg */,
+			);
+			path = GPGPacket;
+			sourceTree = "<group>";
+		};
+		307FAABB13F26BB4003FA99B /* GPGOptions */ = {
+			isa = PBXGroup;
+			children = (
+				30D5E2A21483A0F700F31454 /* GPGConf.h */,
+				30D5E2A31483A0F700F31454 /* GPGConf.m */,
+				451932F314F8061100D1F727 /* GPGStdSetting.h */,
+				451932F414F8061100D1F727 /* GPGStdSetting.m */,
+				45156A1A14FB1B1200129FE7 /* GPGLinesSetting.h */,
+				45156A1B14FB1B1200129FE7 /* GPGLinesSetting.m */,
+				45156A1E14FB1D7D00129FE7 /* GPGDictSetting.h */,
+				45156A1F14FB1D7D00129FE7 /* GPGDictSetting.m */,
+				45156A2814FB3EF700129FE7 /* GPGArraySetting.h */,
+				45156A2914FB3EF700129FE7 /* GPGArraySetting.m */,
+				4570876414FAA7C90030AAE6 /* GPGConfReader.h */,
+				4570876514FAA7C90030AAE6 /* GPGConfReader.m */,
+				30691AA2136AECC4004AA469 /* GPGOptions.h */,
+				30691AA3136AECC4004AA469 /* GPGOptions.m */,
+				1B84028517296EA4009A40E6 /* GPGUserDefaults.h */,
+				1B84028617296EA4009A40E6 /* GPGUserDefaults.m */,
+			);
+			name = GPGOptions;
+			sourceTree = "<group>";
+		};
+		30A2183A1B55753100D01E37 /* Unarmor */ = {
+			isa = PBXGroup;
+			children = (
+				304C69FC2069124F00D89F65 /* Unarmor_2Messages.res */,
+				304C69FD2069125000D89F65 /* Unarmor_2Messages.txt */,
+				302481CA1B5CF46800C86A07 /* Unarmor_ClearsignComplicated.clear */,
+				302481CB1B5CF46800C86A07 /* Unarmor_ClearsignComplicated.res */,
+				302481CC1B5CF46800C86A07 /* Unarmor_ClearsignComplicated.txt */,
+				302481CD1B5CF46800C86A07 /* Unarmor_ClearsignNoLF.clear */,
+				302481CE1B5CF46800C86A07 /* Unarmor_ClearsignNoLF.res */,
+				302481CF1B5CF46800C86A07 /* Unarmor_ClearsignNoLF.txt */,
+				302481D01B5CF46800C86A07 /* Unarmor_ClearsignOneLF.clear */,
+				302481D11B5CF46800C86A07 /* Unarmor_ClearsignOneLF.res */,
+				302481D21B5CF46800C86A07 /* Unarmor_ClearsignOneLF.txt */,
+				302481D31B5CF46800C86A07 /* Unarmor_ClearsignTwoLF.clear */,
+				302481D41B5CF46800C86A07 /* Unarmor_ClearsignTwoLF.res */,
+				302481D51B5CF46800C86A07 /* Unarmor_ClearsignTwoLF.txt */,
+				30A2185B1B5579A200D01E37 /* Unarmor_DoubleNewline.res */,
+				30A2185C1B5579A200D01E37 /* Unarmor_DoubleNewline.txt */,
+				30A2185D1B5579A200D01E37 /* Unarmor_InvalidComment.res */,
+				30A2185E1B5579A200D01E37 /* Unarmor_InvalidComment.txt */,
+				30A2185F1B5579A200D01E37 /* Unarmor_InvalidVersion.res */,
+				30A218601B5579A200D01E37 /* Unarmor_InvalidVersion.txt */,
+				30A218611B5579A200D01E37 /* Unarmor_MissingNewline.res */,
+				30A218621B5579A200D01E37 /* Unarmor_MissingNewline.txt */,
+				30A218631B5579A200D01E37 /* Unarmor_NoNewline.res */,
+				30A218641B5579A200D01E37 /* Unarmor_NoNewline.txt */,
+				30A218651B5579A200D01E37 /* Unarmor_Normal.res */,
+				30A218661B5579A200D01E37 /* Unarmor_Normal.txt */,
+				30ECA9571FBF4AE100C00279 /* Unarmor_UnicodeDashes.res */,
+				30ECA9581FBF4AE100C00279 /* Unarmor_UnicodeDashes.txt */,
+				30A218671B5579A200D01E37 /* Unarmor_Version.res */,
+				30A218681B5579A200D01E37 /* Unarmor_Version.txt */,
+				30A218691B5579A200D01E37 /* Unarmor_VersionOnline.res */,
+				30A2186A1B5579A200D01E37 /* Unarmor_VersionOnline.txt */,
+			);
+			path = Unarmor;
+			sourceTree = "<group>";
+		};
+		30BE73BF1B54015C001A2137 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				30BE73E81B541F5B001A2137 /* GPGUnitTest.h */,
+				30BE73E91B541F5B001A2137 /* GPGUnitTest.m */,
+				4591C4C914F85AA3007F6D47 /* GPGConfReaderTest.m */,
+				4547646514FBC8A900A37306 /* GPGStdSettingTest.m */,
+				45156A2314FB310300129FE7 /* GPGLinesSettingTest.m */,
+				45156A2C14FB506E00129FE7 /* GPGArraySettingTest.m */,
+				45156A2614FB35DC00129FE7 /* GPGDictSettingTest.m */,
+				455B17B915143D9A00FAD47D /* GPGOptionsTest.m */,
+				3075ADD51B566D0900A5F89A /* GPGPacketTest.m */,
+				45C0BC02151B65C700AA8BF6 /* GPGTestVerify.m */,
+				1BE88B3D1B47D7F900A812B6 /* GPGSocketCloseTest.m */,
+				30A218221B5543A500D01E37 /* GPGUnarmorTest.m */,
+				30B7CE151EAE0F640050B9C5 /* GPGControllerTest.m */,
+				45C0BC13151B664D00AA8BF6 /* Resources */,
+				30BE73C01B54015C001A2137 /* Supporting Files */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		30BE73C01B54015C001A2137 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				30BE73C11B54015C001A2137 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		30BE73D51B5405B7001A2137 /* GPGTask */ = {
+			isa = PBXGroup;
+			children = (
+				30FF413112FAC6CD00F39832 /* GPGTask.h */,
+				30FF413212FAC6CD00F39832 /* GPGTask.m */,
+				30895CBD20D03AF6008D1BE0 /* GPGTask_Private.h */,
+				1B9DB26815784DB700488353 /* GPGTaskHelper.h */,
+				1B9DB26915784DB700488353 /* GPGTaskHelper.m */,
+				30FF413312FAC6CD00F39832 /* GPGTaskOrder.h */,
+				30FF413412FAC6CD00F39832 /* GPGTaskOrder.m */,
+				1B9FF20E17257A69004FB017 /* GPGTaskHelperXPC.h */,
+				1B9FF20F17257A69004FB017 /* GPGTaskHelperXPC.m */,
+				304FDC8A210872D80022B0B3 /* GPGUTF8Argument.h */,
+				304FDC8B210872D80022B0B3 /* GPGUTF8Argument.m */,
+			);
+			name = GPGTask;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF5E0370ADEE00C91783 /* Libmacgpg_Prefix.pch */,
+			);
+			name = "Other Sources";
+			path = Source;
+			sourceTree = "<group>";
+		};
+		4591C4D214F86D38007F6D47 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4591C4D314F86D38007F6D47 /* AppKit.framework */,
+				4591C4D414F86D38007F6D47 /* CoreData.framework */,
+				4591C4D514F86D38007F6D47 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		45C0BC13151B664D00AA8BF6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				30B11EDF20C91642006D333D /* NoMDC.gpg */,
+				30B7CE171EAE193F0050B9C5 /* Encrypted.gpg */,
+				3044A92B20CA744000712FBD /* NoSecKey.gpg */,
+				45B9A7F5151C9A6D00DAD67A /* OpenPGP.asc */,
+				45891A40151BA1EC002D7410 /* SignedInputStringCR.txt */,
+				45891A3C151BA1C9002D7410 /* SignedInputStringCRLF.txt */,
+				45891A3D151BA1C9002D7410 /* SignedInputStringLF.txt */,
+				30A2183A1B55753100D01E37 /* Unarmor */,
+				3075ADD71B566E9A00A5F89A /* GPGPacket */,
+				301A264920BE925C0059010D /* Decrypt */,
+			);
+			name = Resources;
+			path = ../UnitTests/Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8DC2EF500486A6940098B216 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30C60EEF12FF3321006BB8DA /* Libmacgpg.h in Headers */,
+				30FF413712FAC6CD00F39832 /* GPGController.h in Headers */,
+				30FF413B12FAC6CD00F39832 /* GPGGlobals.h in Headers */,
+				30FF413D12FAC6CD00F39832 /* GPGKey.h in Headers */,
+				30FF413F12FAC6CD00F39832 /* GPGUserIDSignature.h in Headers */,
+				30FF414312FAC6CD00F39832 /* GPGRemoteKey.h in Headers */,
+				30FF414512FAC6CD00F39832 /* GPGRemoteUserID.h in Headers */,
+				30FF414B12FAC6CD00F39832 /* GPGTask.h in Headers */,
+				30FF414712FAC6CD00F39832 /* GPGSignature.h in Headers */,
+				30FF414F12FAC6CD00F39832 /* GPGUserID.h in Headers */,
+				30691AA4136AECC4004AA469 /* GPGOptions.h in Headers */,
+				309A18D013E3812E0069DC0F /* GPGTransformer.h in Headers */,
+				30A70EE513EF328000EE9CD9 /* GPGException.h in Headers */,
+				301D291D1B4BE4F500599BE8 /* GPGPacketParser.h in Headers */,
+				307FDE421B4E636A00462E4E /* GPGCompressedDataPacket.h in Headers */,
+				301D29211B4BFD9800599BE8 /* GPGPacket.h in Headers */,
+				301D29261B4C032D00599BE8 /* GPGPublicKeyEncryptedSessionKeyPacket.h in Headers */,
+				30BB7C841B4D4BF8006A1E47 /* GPGUserAttributePacket.h in Headers */,
+				30BB7C7C1B4D4146006A1E47 /* GPGLiteralDataPacket.h in Headers */,
+				30BB7C6C1B4D2E38006A1E47 /* GPGOnePassSignaturePacket.h in Headers */,
+				30BB7C701B4D3244006A1E47 /* GPGKeyMaterialPacket.h in Headers */,
+				30A48E8E1B4C1344006AD363 /* GPGSignaturePacket.h in Headers */,
+				30BB7C801B4D4A59006A1E47 /* GPGUserIDPacket.h in Headers */,
+				304FDC8C210872D80022B0B3 /* GPGUTF8Argument.h in Headers */,
+				30BB7C681B4D2742006A1E47 /* GPGSymmetricEncryptedSessionKeyPacket.h in Headers */,
+				451D8829156A7AD900A0B890 /* GPGStream.h in Headers */,
+				30C045931B4FDB9800080903 /* GPGCompressedDataPacket_Private.h in Headers */,
+				30A058391799E2DC00E1AD20 /* GPGKeyManager.h in Headers */,
+				451D882D156A7CA300A0B890 /* GPGMemoryStream.h in Headers */,
+				30BB7C781B4D3F24006A1E47 /* GPGIgnoredPackets.h in Headers */,
+				309D8A121B87469B00D945BA /* GPGKeyFetcher.h in Headers */,
+				451D8831156A7E4900A0B890 /* GPGFileStream.h in Headers */,
+				30F45A8C1CE0B5F600D2B42D /* GPGUpdateController.h in Headers */,
+				301D5D9F178C9871003026E7 /* GPGKeyserver.h in Headers */,
+				30E38DCB1E448655001AC933 /* NSBundle+GPGLocalization.h in Headers */,
+				1BCE0CD11617A3DF0026DCFF /* NSBundle+Sandbox.h in Headers */,
+				30D42DB120EE085D00FBCE5C /* GPGKeyMonitoring.h in Headers */,
+				1B9FF21017257A69004FB017 /* GPGTaskHelperXPC.h in Headers */,
+				1B9FF21517261470004FB017 /* JailfreeProtocol.h in Headers */,
+				301A265F20BE9ED10059010D /* GPGStatusLine.h in Headers */,
+				301A44CD1B436405002A38E4 /* GPGUnArmor.h in Headers */,
+				1B16DD21179C83F000BC1366 /* GPGTypesRW.h in Headers */,
+				30FF414D12FAC6CD00F39832 /* GPGTaskOrder.h in Headers */,
+				30D5E2A41483A0F700F31454 /* GPGConf.h in Headers */,
+				3048830B1462B11700F2E5F4 /* DirectoryWatcher.h in Headers */,
+				451932F514F8061100D1F727 /* GPGStdSetting.h in Headers */,
+				4570876614FAA7C90030AAE6 /* GPGConfReader.h in Headers */,
+				45156A1C14FB1B1200129FE7 /* GPGLinesSetting.h in Headers */,
+				45156A2014FB1D7D00129FE7 /* GPGDictSetting.h in Headers */,
+				45156A2A14FB3EF700129FE7 /* GPGArraySetting.h in Headers */,
+				1B9DB26A15784DB700488353 /* GPGTaskHelper.h in Headers */,
+				1B72F741157AE89600101194 /* NSPipe+NoSigPipe.h in Headers */,
+				3048830F1462B22000F2E5F4 /* GPGWatcher.h in Headers */,
+				1B89B68E1726F8FD004863FC /* PLWeakCompatibilityStubs.h in Headers */,
+				1B84028717296EA4009A40E6 /* GPGUserDefaults.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1B2F2D6F214FF12A00740DD3 /* org.gpgtools.Libmacgpg.xpc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B2F2D79214FF12B00740DD3 /* Build configuration list for PBXNativeTarget "org.gpgtools.Libmacgpg.xpc" */;
+			buildPhases = (
+				1B2F2D6C214FF12A00740DD3 /* Sources */,
+				1B2F2D6D214FF12A00740DD3 /* Frameworks */,
+				1B2F2D6E214FF12A00740DD3 /* Resources */,
+				1BDCBDBF214FFC0F003919E5 /* CopyFiles */,
+				1B2F2D85214FF45F00740DD3 /* Prepare XPC Launchd.plist for the Packager */,
+				1B2F2D86214FF48000740DD3 /* Install XPC Launchd and Insert Mach Name */,
+				1B2F2D87214FF49500740DD3 /* Install XPC Helper and launchd plist */,
+				1B0E27112153F00800BF3DC0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = org.gpgtools.Libmacgpg.xpc;
+			productName = "Libmacgpg-meta";
+			productReference = 1B2F2D70214FF12A00740DD3 /* org.gpgtools.Libmacgpg.xpc */;
+			productType = "com.apple.product-type.xpc-service";
+		};
+		1BD78B9E1726B2820005F251 /* LeakFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BD78BB51726B2830005F251 /* Build configuration list for PBXNativeTarget "LeakFinder" */;
+			buildPhases = (
+				1BD78B9B1726B2820005F251 /* Sources */,
+				1BD78B9C1726B2820005F251 /* Frameworks */,
+				1BD78B9D1726B2820005F251 /* Resources */,
+				1BD78BBB1726B6150005F251 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BD78BB91726B5190005F251 /* PBXTargetDependency */,
+			);
+			name = LeakFinder;
+			productName = LeakFinder;
+			productReference = 1BD78B9F1726B2820005F251 /* LeakFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		30BE73BD1B54015C001A2137 /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30BE73C71B54015C001A2137 /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				30BE73BA1B54015C001A2137 /* Sources */,
+				30BE73BB1B54015C001A2137 /* Frameworks */,
+				30BE73BC1B54015C001A2137 /* Resources */,
+				301A265620BE964C0059010D /* Copy Decrypt Test-Cases */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30BE73C61B54015C001A2137 /* PBXTargetDependency */,
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = 30BE73BE1B54015C001A2137 /* UnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8DC2EF4F0486A6940098B216 /* Libmacgpg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "Libmacgpg" */;
+			buildPhases = (
+				8DC2EF500486A6940098B216 /* Headers */,
+				8DC2EF520486A6940098B216 /* Resources */,
+				8DC2EF540486A6940098B216 /* Sources */,
+				8DC2EF560486A6940098B216 /* Frameworks */,
+				30C2960E16775037006EF09C /* Fill Info.plist */,
+				1B49BC6B1A97A8D6000440E9 /* Copy "How to get the source code" into Resources */,
+				1BC07F34174660F3004263BB /* Link Libmacgpg into ~/Library/Frameworks */,
+				30A8B42C1B17452E002F88BB /* Copy "How to get the source code" into Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Libmacgpg;
+			productInstallPath = "$(HOME)/Library/Frameworks";
+			productName = Libmacgpg;
+			productReference = 8DC2EF5B0486A6940098B216 /* Libmacgpg.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				TargetAttributes = {
+					1B2F2D6F214FF12A00740DD3 = {
+						ProvisioningStyle = Manual;
+					};
+					30BE73BD1B54015C001A2137 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					8DC2EF4F0486A6940098B216 = {
+						DevelopmentTeam = PKV8ZPD836;
+					};
+				};
+			};
+			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "Libmacgpg" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+				de,
+				Base,
+				ca,
+				el,
+				es,
+				fa_IR,
+				fr,
+				id,
+				nl,
+				pt,
+				ru,
+				sv,
+				it,
+				nb,
+				cs,
+				da,
+				th,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* Libmacgpg */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DC2EF4F0486A6940098B216 /* Libmacgpg */,
+				30BE73BD1B54015C001A2137 /* UnitTests */,
+				1BD78B9E1726B2820005F251 /* LeakFinder */,
+				1B2F2D6F214FF12A00740DD3 /* org.gpgtools.Libmacgpg.xpc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B2F2D6E214FF12A00740DD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD78B9D1726B2820005F251 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BD78BA61726B2830005F251 /* InfoPlist.strings in Resources */,
+				1BD78BAC1726B2830005F251 /* Credits.rtf in Resources */,
+				1BD78BB21726B2830005F251 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30BE73BC1B54015C001A2137 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30B7CE181EAE195B0050B9C5 /* Encrypted.gpg in Resources */,
+				302481DE1B5CF46800C86A07 /* Unarmor_ClearsignOneLF.txt in Resources */,
+				302481DA1B5CF46800C86A07 /* Unarmor_ClearsignNoLF.res in Resources */,
+				30A2186B1B5579A200D01E37 /* Unarmor_DoubleNewline.res in Resources */,
+				30A2186C1B5579A200D01E37 /* Unarmor_DoubleNewline.txt in Resources */,
+				30A218781B5579A200D01E37 /* Unarmor_Version.txt in Resources */,
+				3075ADDD1B56760F00A5F89A /* compressed1.gpg in Resources */,
+				302481DB1B5CF46800C86A07 /* Unarmor_ClearsignNoLF.txt in Resources */,
+				30A218701B5579A200D01E37 /* Unarmor_InvalidVersion.txt in Resources */,
+				30A218721B5579A200D01E37 /* Unarmor_MissingNewline.txt in Resources */,
+				30A2187A1B5579A200D01E37 /* Unarmor_VersionOnline.txt in Resources */,
+				302481E01B5CF46800C86A07 /* Unarmor_ClearsignTwoLF.res in Resources */,
+				302481DD1B5CF46800C86A07 /* Unarmor_ClearsignOneLF.res in Resources */,
+				30ECA95A1FBF4AE100C00279 /* Unarmor_UnicodeDashes.txt in Resources */,
+				302481D81B5CF46800C86A07 /* Unarmor_ClearsignComplicated.txt in Resources */,
+				302481D91B5CF46800C86A07 /* Unarmor_ClearsignNoLF.clear in Resources */,
+				30BE73DD1B541039001A2137 /* OpenPGP.asc in Resources */,
+				302481DC1B5CF46800C86A07 /* Unarmor_ClearsignOneLF.clear in Resources */,
+				30A218731B5579A200D01E37 /* Unarmor_NoNewline.res in Resources */,
+				302481D61B5CF46800C86A07 /* Unarmor_ClearsignComplicated.clear in Resources */,
+				30ECA9591FBF4AE100C00279 /* Unarmor_UnicodeDashes.res in Resources */,
+				3044A92C20CA744000712FBD /* NoSecKey.gpg in Resources */,
+				30A218711B5579A200D01E37 /* Unarmor_MissingNewline.res in Resources */,
+				30B11EE120C91643006D333D /* NoMDC.gpg in Resources */,
+				304C69FF2069125000D89F65 /* Unarmor_2Messages.txt in Resources */,
+				30BE73DE1B541039001A2137 /* SignedInputStringCR.txt in Resources */,
+				30A218791B5579A200D01E37 /* Unarmor_VersionOnline.res in Resources */,
+				30A218751B5579A200D01E37 /* Unarmor_Normal.res in Resources */,
+				30BE73DF1B541039001A2137 /* SignedInputStringCRLF.txt in Resources */,
+				30A2186F1B5579A200D01E37 /* Unarmor_InvalidVersion.res in Resources */,
+				302481D71B5CF46800C86A07 /* Unarmor_ClearsignComplicated.res in Resources */,
+				304C69FE2069125000D89F65 /* Unarmor_2Messages.res in Resources */,
+				302481DF1B5CF46800C86A07 /* Unarmor_ClearsignTwoLF.clear in Resources */,
+				30A2186E1B5579A200D01E37 /* Unarmor_InvalidComment.txt in Resources */,
+				30A218761B5579A200D01E37 /* Unarmor_Normal.txt in Resources */,
+				30A218741B5579A200D01E37 /* Unarmor_NoNewline.txt in Resources */,
+				30A218771B5579A200D01E37 /* Unarmor_Version.res in Resources */,
+				30BE73E01B541039001A2137 /* SignedInputStringLF.txt in Resources */,
+				30A2186D1B5579A200D01E37 /* Unarmor_InvalidComment.res in Resources */,
+				3075ADDB1B5675D200A5F89A /* key1.gpg in Resources */,
+				302481E11B5CF46800C86A07 /* Unarmor_ClearsignTwoLF.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC2EF520486A6940098B216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30B586F5141E255C000373F1 /* Keyservers.plist in Resources */,
+				30D68BC51B4FF5D500F7865C /* COPYING.pgpdump in Resources */,
+				30516558142281270038AAF0 /* Localizable.strings in Resources */,
+				30B570931C6E250700F68EEB /* sks-keyservers.netCA.der in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B2F2D85214FF45F00740DD3 /* Prepare XPC Launchd.plist for the Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Prepare XPC Launchd.plist for the Packager";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "JAILFREE_PLIST=\"${EXECUTABLE_NAME}.xpc.plist\"\nBUILD_LAUNCHAGENT_PATH=\"${BUILD_DIR}/${JAILFREE_PLIST}\"\nif [[ -z \"${XPC_INSTALLATION_DIR}\" || \"CONFIGURATION\" != \"Debug\" ]]; then\n    XPC_INSTALLATION_DIR=\"/Library/Application\\ Support/GPGTools\"\nfi\nXPC_INSTALLATION_PATH=\"${XPC_INSTALLATION_DIR}/${EXECUTABLE_NAME}.xpc/Contents/MacOS/${EXECUTABLE_NAME}\"\n\nXPC_NAME=$(\n    for x in $GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS; do\n        echo $x | while IFS=\"=\" read name value; do\n            if [ \"$name\" == \"JAILFREE_XPC_NAME\" ]; then\n                echo $value | sed \"s/\\\"//g\" | sed \"s/@//g\"\n                break\n            fi\n        done\n    done\n)\n\n\ncp \"${PROJECT_DIR}/Source/${EXECUTABLE_NAME}.xpc/${JAILFREE_PLIST}\" \"${BUILD_LAUNCHAGENT_PATH}\"\ncat \"${BUILD_LAUNCHAGENT_PATH}\"\n/usr/libexec/PlistBuddy -c \"Delete :MachServices\" \"${BUILD_LAUNCHAGENT_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :MachServices:$XPC_NAME bool true\" \"${BUILD_LAUNCHAGENT_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :ProgramArguments:0 \\\"${XPC_INSTALLATION_PATH}\\\"\" \"${BUILD_LAUNCHAGENT_PATH}\"\n# Uncomment if you want to test the XPC itself. Otherwise it will bring Mail to a halt...\n#if [[ \"$CONFIGURATION\" == \"Debug\" ]]; then\n#/usr/libexec/PlistBuddy -c \"Add :WaitForDebugger bool true\" \"${BUILD_LAUNCHAGENT_PATH}\"\n#fi";
+		};
+		1B2F2D86214FF48000740DD3 /* Install XPC Launchd and Insert Mach Name */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Install XPC Launchd and Insert Mach Name";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "[[ \"$CONFIGURATION\" == \"Debug\" ]] || exit 0\nUSER_LIBRARY=\"$HOME/Library\"\nJAILFREE_PLIST=\"${EXECUTABLE_NAME}.xpc.plist\"\nLAUNCHAGENT_PATH=\"${USER_LIBRARY}/LaunchAgents/${JAILFREE_PLIST}\"\nJAILFREE_PATH=\"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_NAME}.xpc/Contents/MacOS/${EXECUTABLE_NAME}\"\nBUILD_LAUNCHAGENT_PATH=\"${BUILD_DIR}/${JAILFREE_PLIST}\"\n\nif [ -d \"${USER_LIBRARY}/LaunchAgents\" ] && [ -w \"${USER_LIBRARY}/LaunchAgents\" ] && [ -x \"${USER_LIBRARY}/LaunchAgents\" ]; then\n    cp \"${BUILD_LAUNCHAGENT_PATH}\" \"${LAUNCHAGENT_PATH}\"\n    /usr/libexec/PlistBuddy -c \"Set :ProgramArguments:0 \\\"${JAILFREE_PATH}\\\"\" \"${LAUNCHAGENT_PATH}\"\nfi";
+		};
+		1B2F2D87214FF49500740DD3 /* Install XPC Helper and launchd plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Install XPC Helper and launchd plist";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "[[ \"$CONFIGURATION\" == \"Debug\" ]] || exit 0\nUSER_LIBRARY=\"$HOME/Library\"\nmkdir -p \"$USER_LIBRARY/Application Support/GPGTools\"\nif [ -d \"$USER_LIBRARY/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc\" ]; then\n rm -rf \"$USER_LIBRARY/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc\"\nfi\ncp -R \"${BUILT_PRODUCTS_DIR}/org.gpgtools.Libmacgpg.xpc\" \"$USER_LIBRARY/Application Support/GPGTools\"\n# Reload the launchd.plist\nif [ -f \"/Library/LaunchAgents/org.gpgtools.Libmacgpg.xpc.plist\" ]; then\n    launchctl unload /Library/LaunchAgents/org.gpgtools.Libmacgpg.xpc.plist\nfi\nif [ -f \"$USER_LIBRARY/LaunchAgents/org.gpgtools.Libmacgpg.xpc.plist\" ]; then\n launchctl unload \"$USER_LIBRARY/LaunchAgents/org.gpgtools.Libmacgpg.xpc.plist\"\n    sleep 3\n launchctl load \"$USER_LIBRARY/LaunchAgents/org.gpgtools.Libmacgpg.xpc.plist\"\nfi";
+		};
+		1B49BC6B1A97A8D6000440E9 /* Copy "How to get the source code" into Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy \"How to get the source code\" into Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "[[ -d \"$DEPLOY_RESOURCES_DIR\" ]] || exit 0\n \n HOWTO_PATH=\"$DEPLOY_RESOURCES_DIR/resources/How to get the source code\"\n cp \"$HOWTO_PATH\" \"$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BC07F34174660F3004263BB /* Link Libmacgpg into ~/Library/Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Link Libmacgpg into ~/Library/Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "[[ \"$CONFIGURATION\" == \"Debug\" ]] || exit 0\n# Copy the Framework into ~/Library for testing with other libs.\nFRAMEWORKS_DIR=\"$HOME/Library/Frameworks\"\nFRAMEWORK_NAME=\"Libmacgpg.framework\"\n\n# ~/Library/Frameworks doesn't exist in most cases, create it.\nif [ ! -d \"$FRAMEWORKS_DIR\" ]; then\n   mkdir -p \"$FRAMEWORKS_DIR\"\nfi\n\nln -Fs \"$BUILT_PRODUCTS_DIR/$FRAMEWORK_NAME\" \"$FRAMEWORKS_DIR/\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30A8B42C1B17452E002F88BB /* Copy "How to get the source code" into Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy \"How to get the source code\" into Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "[[ -d \"$DEPLOY_RESOURCES_DIR\" ]] || exit 0\n \n HOWTO_PATH=\"$DEPLOY_RESOURCES_DIR/resources/How to get the source code\"\n cp \"$HOWTO_PATH\" \"$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/\"";
+		};
+		30C2960E16775037006EF09C /* Fill Info.plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Fill Info.plist";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -d \"$DEPLOY_RESOURCES_DIR\" ]] ;then\n    source \"$DEPLOY_RESOURCES_DIR/config/versioning.sh\"\nelse\n    source \"$SRCROOT/Version.config\"\nfi\n[[ -n \"$VERSION\" ]] || { echo \"Missing Version!\"; exit 1; }\n\n\n/usr/libexec/PlistBuddy \\\n  -c \"Set CommitHash '${COMMIT_HASH:--}'\" \\\n  -c \"Set BuildNumber '${BUILD_NUMBER:-0}'\" \\\n  -c \"Set CFBundleVersion '${BUILD_VERSION:-0n}'\" \\\n  -c \"Set CFBundleShortVersionString '$VERSION'\" \\\n  \"$BUILT_PRODUCTS_DIR/$INFOPLIST_PATH\" || exit 2\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B2F2D6C214FF12A00740DD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BDCBDC121500FF5003919E5 /* JailfreeTask.m in Sources */,
+				1B2F2D77214FF12B00740DD3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD78B9B1726B2820005F251 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BD78BA81726B2830005F251 /* main.m in Sources */,
+				1BD78BAF1726B2830005F251 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30BE73BA1B54015C001A2137 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30B7CE161EAE0F640050B9C5 /* GPGControllerTest.m in Sources */,
+				30BE73EA1B541F5B001A2137 /* GPGUnitTest.m in Sources */,
+				307698C81B56B61500566B20 /* GPGConfReaderTest.m in Sources */,
+				307698C91B56B61500566B20 /* GPGStdSettingTest.m in Sources */,
+				307698CA1B56B61500566B20 /* GPGLinesSettingTest.m in Sources */,
+				307698CB1B56B61500566B20 /* GPGArraySettingTest.m in Sources */,
+				307698CC1B56B61500566B20 /* GPGDictSettingTest.m in Sources */,
+				307698CD1B56B61500566B20 /* GPGOptionsTest.m in Sources */,
+				3075ADD61B566D0900A5F89A /* GPGPacketTest.m in Sources */,
+				307698CE1B56B61500566B20 /* GPGTestVerify.m in Sources */,
+				307698CF1B56B61500566B20 /* GPGSocketCloseTest.m in Sources */,
+				307698D01B56B61500566B20 /* GPGUnarmorTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC2EF540486A6940098B216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30A48E8F1B4C1344006AD363 /* GPGSignaturePacket.m in Sources */,
+				30FF413812FAC6CD00F39832 /* GPGController.m in Sources */,
+				30FF413C12FAC6CD00F39832 /* GPGGlobals.m in Sources */,
+				30FF413E12FAC6CD00F39832 /* GPGKey.m in Sources */,
+				30FF414012FAC6CD00F39832 /* GPGUserIDSignature.m in Sources */,
+				30FF414412FAC6CD00F39832 /* GPGRemoteKey.m in Sources */,
+				30FF414612FAC6CD00F39832 /* GPGRemoteUserID.m in Sources */,
+				301D291E1B4BE4F500599BE8 /* GPGPacketParser.m in Sources */,
+				30FF414812FAC6CD00F39832 /* GPGSignature.m in Sources */,
+				30BB7C711B4D3244006A1E47 /* GPGKeyMaterialPacket.m in Sources */,
+				30A0583A1799E2DC00E1AD20 /* GPGKeyManager.m in Sources */,
+				301D29221B4BFD9800599BE8 /* GPGPacket.m in Sources */,
+				304FDC8D210872D80022B0B3 /* GPGUTF8Argument.m in Sources */,
+				30FF414C12FAC6CD00F39832 /* GPGTask.m in Sources */,
+				30FF414E12FAC6CD00F39832 /* GPGTaskOrder.m in Sources */,
+				30F45A8D1CE0B5F600D2B42D /* GPGUpdateController.m in Sources */,
+				30BB7C6D1B4D2E38006A1E47 /* GPGOnePassSignaturePacket.m in Sources */,
+				30FF415012FAC6CD00F39832 /* GPGUserID.m in Sources */,
+				30691AA5136AECC4004AA469 /* GPGOptions.m in Sources */,
+				309A18D113E3812E0069DC0F /* GPGTransformer.m in Sources */,
+				301A44CE1B436405002A38E4 /* GPGUnArmor.m in Sources */,
+				301A266020BE9ED10059010D /* GPGStatusLine.m in Sources */,
+				309D8A131B87469B00D945BA /* GPGKeyFetcher.m in Sources */,
+				307FDE431B4E636A00462E4E /* GPGCompressedDataPacket.m in Sources */,
+				30A70EE613EF328000EE9CD9 /* GPGException.m in Sources */,
+				3048830C1462B11700F2E5F4 /* DirectoryWatcher.m in Sources */,
+				304883101462B22000F2E5F4 /* GPGWatcher.m in Sources */,
+				30D5E2A51483A0F700F31454 /* GPGConf.m in Sources */,
+				451932F614F8061100D1F727 /* GPGStdSetting.m in Sources */,
+				30BB7C7D1B4D4146006A1E47 /* GPGLiteralDataPacket.m in Sources */,
+				301D5DA0178C9871003026E7 /* GPGKeyserver.m in Sources */,
+				4570876714FAA7C90030AAE6 /* GPGConfReader.m in Sources */,
+				45156A1D14FB1B1200129FE7 /* GPGLinesSetting.m in Sources */,
+				30BB7C791B4D3F24006A1E47 /* GPGIgnoredPackets.m in Sources */,
+				30BB7C851B4D4BF8006A1E47 /* GPGUserAttributePacket.m in Sources */,
+				45156A2114FB1D7D00129FE7 /* GPGDictSetting.m in Sources */,
+				30D42DB220EE085D00FBCE5C /* GPGKeyMonitoring.m in Sources */,
+				30E38DCC1E448655001AC933 /* NSBundle+GPGLocalization.m in Sources */,
+				45156A2B14FB3EF700129FE7 /* GPGArraySetting.m in Sources */,
+				451D882A156A7AD900A0B890 /* GPGStream.m in Sources */,
+				451D882E156A7CA300A0B890 /* GPGMemoryStream.m in Sources */,
+				301D29271B4C032D00599BE8 /* GPGPublicKeyEncryptedSessionKeyPacket.m in Sources */,
+				451D8832156A7E4900A0B890 /* GPGFileStream.m in Sources */,
+				1B9DB26B15784DB700488353 /* GPGTaskHelper.m in Sources */,
+				1B72F742157AE89600101194 /* NSPipe+NoSigPipe.m in Sources */,
+				1BCE0CD21617A3DF0026DCFF /* NSBundle+Sandbox.m in Sources */,
+				30BB7C811B4D4A59006A1E47 /* GPGUserIDPacket.m in Sources */,
+				30BB7C691B4D2742006A1E47 /* GPGSymmetricEncryptedSessionKeyPacket.m in Sources */,
+				1B9FF21117257A69004FB017 /* GPGTaskHelperXPC.m in Sources */,
+				1B84028817296EA4009A40E6 /* GPGUserDefaults.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1BD78BB91726B5190005F251 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DC2EF4F0486A6940098B216 /* Libmacgpg */;
+			targetProxy = 1BD78BB81726B5190005F251 /* PBXContainerItemProxy */;
+		};
+		30BE73C61B54015C001A2137 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DC2EF4F0486A6940098B216 /* Libmacgpg */;
+			targetProxy = 30BE73C51B54015C001A2137 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1BD78BA41726B2830005F251 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BD78BA51726B2830005F251 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1BD78BAA1726B2830005F251 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BD78BAB1726B2830005F251 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		1BD78BB01726B2830005F251 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BD78BB11726B2830005F251 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		30516556142281270038AAF0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				305165591422812B0038AAF0 /* de */,
+				3059AF1014239FAB00AD5B30 /* en */,
+				304BF3871E449C9300CF4C4F /* ca */,
+				304BF3881E449C9800CF4C4F /* el */,
+				304BF3891E449C9C00CF4C4F /* es */,
+				304BF38A1E449CA000CF4C4F /* fa_IR */,
+				304BF38B1E449CA400CF4C4F /* fr */,
+				304BF38C1E449CA800CF4C4F /* id */,
+				304BF38D1E449CAD00CF4C4F /* nl */,
+				304BF38E1E449CB000CF4C4F /* pt */,
+				304BF38F1E449CB400CF4C4F /* ru */,
+				304BF3901E449CB800CF4C4F /* sv */,
+				3080B0C61F603EA9009FF08F /* it */,
+				3080B0C71F603EB3009FF08F /* nb */,
+				3034E5CA2065433E00E40A8E /* ja */,
+				3097C07F214F9E4A00797F47 /* cs */,
+				3097C080214F9E5100797F47 /* da */,
+				3097C081214F9E5A00797F47 /* th */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1B2F2D7A214FF12B00740DD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				EXECUTABLE_EXTENSION = xpc;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Source/org.gpgtools.Libmacgpg.xpc",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Source/org.gpgtools.Libmacgpg.xpc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks $(BUILT_PRODUCTS_DIR) $(HOME)/Library/Frameworks /Library/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.gpgtools.Libmacgpg.xpc;
+				PRODUCT_NAME = org.gpgtools.Libmacgpg;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = xpc;
+			};
+			name = Debug;
+		};
+		1B2F2D7B214FF12B00740DD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				EXECUTABLE_EXTENSION = xpc;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Source/org.gpgtools.Libmacgpg.xpc",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Source/org.gpgtools.Libmacgpg.xpc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks /Library/Frameworks $(HOME)/Library/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = org.gpgtools.Libmacgpg.xpc;
+				PRODUCT_NAME = org.gpgtools.Libmacgpg;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = xpc;
+			};
+			name = Release;
+		};
+		1BD78BB31726B2830005F251 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/build/Debug\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LeakFinder/LeakFinder-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"USE_XPCSERVICE=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "LeakFinder/LeakFinder-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks /Library/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				New_Setting = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = x86_64;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1BD78BB41726B2830005F251 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/build/Debug\"";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LeakFinder/LeakFinder-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "USE_XPCSERVICE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "LeakFinder/LeakFinder-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks /Library/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				New_Setting = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = x86_64;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1DEB91AE08733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = PKV8ZPD836;
+				DYLIB_COMPATIBILITY_VERSION = 2;
+				DYLIB_CURRENT_VERSION = 2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				FRAMEWORK_VERSION = B;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/Libmacgpg_Prefix.pch;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/Dependencies/XPCKit\"",
+					/usr/include,
+				);
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "@loader_path/../Frameworks";
+				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PATH)";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Frameworks";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = Libmacgpg;
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		1DEB91AF08733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = PKV8ZPD836;
+				DYLIB_COMPATIBILITY_VERSION = 2;
+				DYLIB_CURRENT_VERSION = 2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				FRAMEWORK_VERSION = B;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/Libmacgpg_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/Dependencies/XPCKit\"",
+					/usr/include,
+				);
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = /Library/Frameworks;
+				LD_DYLIB_INSTALL_NAME = "/Library/Frameworks/$(EXECUTABLE_PATH)";
+				LD_RUNPATH_SEARCH_PATHS = /Library/Frameworks;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = Libmacgpg;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		1DEB91B208733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEPLOY_RESOURCES_DIR = "$(SRCROOT)/Dependencies/DeployResources";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUGGING;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "JAILFREE_XPC_NAME=\"@\\\"org.gpgtools.Libmacgpg.xpc_OpenStep\\\"\"";
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-Xclang",
+					"-fobjc-runtime-has-weak",
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1DEB91B308733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEPLOY_RESOURCES_DIR = "$(SRCROOT)/Dependencies/DeployResources";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "JAILFREE_XPC_NAME=\"@\\\"org.gpgtools.Libmacgpg.xpc_OpenStep\\\"\"";
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CFLAGS = (
+					"-Xclang",
+					"-fobjc-runtime-has-weak",
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		30BE73C81B54015C001A2137 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		30BE73C91B54015C001A2137 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B2F2D79214FF12B00740DD3 /* Build configuration list for PBXNativeTarget "org.gpgtools.Libmacgpg.xpc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B2F2D7A214FF12B00740DD3 /* Debug */,
+				1B2F2D7B214FF12B00740DD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BD78BB51726B2830005F251 /* Build configuration list for PBXNativeTarget "LeakFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BD78BB31726B2830005F251 /* Debug */,
+				1BD78BB41726B2830005F251 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "Libmacgpg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91AE08733DA50010E9CD /* Debug */,
+				1DEB91AF08733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "Libmacgpg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91B208733DA50010E9CD /* Debug */,
+				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30BE73C71B54015C001A2137 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30BE73C81B54015C001A2137 /* Debug */,
+				30BE73C91B54015C001A2137 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

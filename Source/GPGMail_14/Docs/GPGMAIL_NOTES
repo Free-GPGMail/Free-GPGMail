@@ -1,0 +1,11 @@
+- _updateSecurityStateInBackgroundForRecipients:sender: calls inside itself
+    1.) canSignFromAddress:
+    2.) canEncryptFromAddress:
+
+
+- updateSecurityControls seems to call _updateSecurityStateInBackgroundForRecipients:sender: with
+  an NSInvocation
+  
+  
+ Might be interesting
+- (id)missingCertificatesMessageForRecipients:(id)arg1 uponDelivery:(BOOL)arg2;

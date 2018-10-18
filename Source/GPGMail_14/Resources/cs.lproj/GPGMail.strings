@@ -1,0 +1,263 @@
+/* Description of version prefixed with <Version:> */
+"VERSION: %@" = "Verze: %@";
+
+/* PGP preferences panel name */
+"PGP_PREFERENCES" = "GPGMail";
+
+/* Message Error Banner messages. */
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_TITLE" = "Nelze dešifrovat PGP zprávu.";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_MESSAGE" = "Vyskytnul se problém při dešifrování této zprávy. Ověřte že máte platný klíš ve vaši GPG klíčence.";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_TITLE" = "Nelze ověřit PGP podpis zprávy.";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_MESSAGE" = "Vyskytnul se problém při čtení PGP podpisu této zprávy";
+"MESSAGE_BANNER_PGP_VERIFY_NOT_IN_KEYCHAIN_ERROR_TITLE" = "PGP klíč pro zprávu není ve vaši Klíčence.";
+"MESSAGE_BANNER_PGP_VERIFY_NOT_IN_KEYCHAIN_ERROR_MESSAGE" = "Zpráva obsahuje platný podpis PGP, ale PGP klíč nen ve vaší Klíčence. Přidejte ho pomocí GPG Keychain.";
+"MESSAGE_ERROR_ALERT_PGP_VERIFY_NOT_IN_KEYCHAIN_TITLE" = "Pro tento PGP klíč nejsou dostupné žádné informace.";
+"MESSAGE_ERROR_ALERT_PGP_VERIFY_NOT_IN_KEYCHAIN_MESSAGE" = "Žádné další informace o PGP klíči nejsou známy, protože naní ve vaši Klíčence. Přidejte ho pomocí GPG Keychain.";
+
+"MESSAGE_BANNER_PGP_DECRYPT_SECKEY_ERROR_TITLE" = "Tajný klíč k dešifrování zprávy chybí.";
+"MESSAGE_BANNER_PGP_DECRYPT_SECKEY_ERROR_MESSAGE" = "Žádný z následujících tajných klíčů nebyl nalezen ve vaši klíčence (%@). K dešifrování této zprávy je tajný klíč nezbytný.\n\nOvěřte, prosím, u odesílatele, že použili váš správný veřejný klíč.\n\nOvěřte, jestli se ve vašich záložních kopíích nenalézá tento tajný klíč a pokuste se ho naimportovat.";
+
+"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_TITLE" = "Dešifrování zprávy selhalo z důvodu výskytu neznámé chyby.";
+"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Vyskytla se neznámá chyba při dešifrování zprávy.\n\nObraťte se prosím na https://gpgtools.tenderapp.com";
+
+"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_TITLE" = "Dešifrování zprávy selhalo z důvodu výskytu neznámé chyby.";
+"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "Vyskytla se neznámá chyba při dešifrování zprávy.\n\nGPG chybová zpráva:\n%@\nObraťte se prosím na nás https://gpgtools.tenderapp.com a do e-mailu vložte GPG chybovou zprávu.";
+
+"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "Pro zašifrování zprávy byl použit nesprávný klíč.";
+"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Zprávu nelze dešifrovat dokud k jenímu dešifrováni bude používán nesprávný klíč.\n\nObraťte se prosím na https://gpgtools.tenderapp.com";
+
+"MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "Zašifrovaná zpráva je poškozena.";
+"MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "Zašifrovaná zpráva je poškozená a nelze ji dešifrovat.\n\nObraťte se prosím na odesilatele, aby vám poslal novou kopii.";
+
+"MESSAGE_BANNER_PGP_VERIFY_REVOKED_CERTIFICATE_ERROR_TITLE" = "Klíč podpisu byl zneplatněn.";
+"MESSAGE_BANNER_PGP_VERIFY_REVOKED_CERTIFICATE_ERROR_MESSAGE" = "VÝSTRAHA: Klíč, který byl použit k podepsání této zprávy byl zneplatněn.\n\nMěl byste obnovit klíč ID %@ v GPG Keychain, pravděpodobně bude existovat nová verze. Jestliže nový klíč bude i nadále neplatný obraťte se na odesilatele.";
+"MESSAGE_BANNER_PGP_VERIFY_NO_PUBKEY_ERROR_TITLE" = "Klíč k tomuto podpisu zprávy není ještě v GPG Klíčence.";
+"MESSAGE_BANNER_PGP_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "Zprávu nelze ověřit, dokud klíč, který byl použit k jejímu podpisu není ve vaši GPG Klíčence.\n\nNajděte klíč s ID %@ v GPG Keychain a naimportujte ho.";
+
+"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_TITLE" = "Podpis zprávy byl vytvořen nepodporovaným algoritmem.";
+"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Tuto zprávu nelze ověřit, dokud nebude podpis vytvořen některým z podporovaných algoritmů.\n\nObraťte se prosím na https://gpgtools.tenderapp.com";
+
+"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "VÝSTRAHA: Podpis zprávy je neplatný!";
+"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "VÝSTRAHA: Zpráva mohla být změněna poté co byla podepsána.\n\nObraťte se na odesilatele abyste se ujistil zda se obsah zprávy shoduje s originálem.\n\nObraťte se prosím na https://gpgtools.tenderapp.com, pokud jste si skutečně jist, že zpráva nebyla změněna.";
+
+"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_TITLE" = "Ověřování podpisu zprávy selhalo z důvodu výskytu neznámé chyby!";
+"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_MESSAGE" = "Vyskytla se neznámá chyba při ověřování podpisu zprávy.\n\nObraťte se prosím na https://gpgtools.tenderapp.com";
+
+"MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "Chyba dat podpisu zprávy!";
+"MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Podpis zprávy je neplatný a nelze ověřit.\n\nObraťte se prosím na https://gpgtools.tenderapp.com";
+
+"MESSAGE_BANNER_PGP_VERIFY_KEY_EXPIRED_ERROR_TITLE" = "Platnost klíče podpisu zprávy vypršela.";
+"MESSAGE_BANNER_PGP_VERIFY_KEY_EXPIRED_ERROR_MESSAGE" = "Výstraha: Platnost klíče, který byl použit k podpisu této zprávy, vypršela.\nMůžete zkusit znovu načíst klíč ID %@ v GPG Keychain a dotázat se odesilatele proč platnost jeho klíče vypršela.";
+
+"MESSAGE_BANNER_PGP_VERIFY_SIGNATURE_EXPIRED_ERROR_TITLE" = "Platnost podpis zprávy vypršela.";
+"MESSAGE_BANNER_PGP_VERIFY_SIGNATURE_EXPIRED_ERROR_MESSAGE" = "Platnost podpisu vypršela a nelze ověřit.\n\nZeptejte se odesilatele proč platnost jeho podpisu vypršela.";
+
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_NO_GPG_TITLE" = "MacGPG není nainstalováno";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_NO_GPG_MESSAGE" = "Dešifrování se nezdařilo, protože MacGPG není nainstalován.\n\nZkopírujte si jej a nainstalujte GPG Suite z tohoto umístění: https://gpgtools.org";
+
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_NO_GPG_TITLE" = "MacGPG není nainstalováno";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_NO_GPG_MESSAGE" = "Ověření selhalo, protože MacGPG není nainstalován.\n\nZkopírujte si jej a nainstalujte GPG Suite z tohoto umístění: https://gpgtools.org";
+
+"MESSAGE_BANNER_PGP_ATTACHMENTS_DECRYPT_VERIFY_ERROR_TITLE" = "Dešifrování nebo ověření příloh %d selhalo.";
+"MESSAGE_BANNER_PGP_ATTACHMENTS_DECRYPT_VERIFY_ERROR_MESSAGE" = "Pro zobrazení podrobností klepněte prosím na ikonu přílohy v hlavičce zabezpečení zprávy.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENTS_VERIFY_ERROR_TITLE" = "Ověření příloh %d selhalo.";
+"MESSAGE_BANNER_PGP_ATTACHMENTS_VERIFY_ERROR_MESSAGE" = "Pro zobrazení podrobností klepněte prosím na ikonu přílohy v hlavičce zabezpečení zprávy.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENTS_DECRYPT_ERROR_TITLE" = "Dešifrování příloh %d selhalo.";
+"MESSAGE_BANNER_PGP_ATTACHMENTS_DECRYPT_ERROR_MESSAGE" = "Pro zobrazení podrobností klepněte prosím na ikonu přílohy v hlavičce zabezpečení zprávy.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_TITLE" = "Ověřování přílohy %d selhalo.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_MESSAGE" = "Pro zobrazení podrobností klepněte prosím na ikonu přílohy v hlavičce zabezpečení zprávy.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_TITLE" = "Dešifrování přílohy %d selhalo.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_MESSAGE" = "Pro zobrazení podrobností klepněte prosím na ikonu přílohy v hlavičce zabezpečení zprávy.";
+
+/* Message Error Banner Attachment messages. */
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SECKEY_ERROR_TITLE" = "Tajný klíč pro dešifrování přílohy chybí.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SECKEY_ERROR_MESSAGE" = "Žádný z následujících tajných klíčů nebyl nalezen ve vaši klíčence (%@). K dešifrování této přílohy je tajný klíč nezbytný.\n\nOvěřte, prosím, u odesílatele, že použili váš správný veřejný klíč.\n\nOvěřte, jestli se ve vašich záložních kopíích nenalézá tento tajný klíč a pokuste se ho naimportovat.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_TITLE" = "Dešifrování selhalo z důvodu výskytu neznámé chyby!";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Vyskytla se neznámá chyba při dešifrování přílohy.\n\nObraťte se prosím na https://gpgtools.tenderapp.com";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_TITLE" = "Dešifrování selhalo z důvodu výskytu neznámé chyby!";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_MESSAGE" = "Vyskytla se neznámá chyba při dešifrování přílohy.\n\nGPG chybová zpráva:\n%@\nObraťte se prosím na nás https://gpgtools.tenderapp.com a do e-mailu vložte GPG chybovou zprávu.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "K zašifrování přílohy byl použit chybný klíč.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Přílohu nelze dešifrovat, dokud je k jejímu dešifrování používán nesprávný veřejný klíč.\n\nObraťte se na https://gpgtools.tenderapp.com";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "Zašifovaná příloha je poškozena.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "Zašifrovaná příloha je poškozena a nelze ji dešifrovat.\n\nObraťte se na odesilatele aby vám zprávu poslal znovu.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_REVOKED_CERTIFICATE_ERROR_TITLE" = "Klíč podpisu byl zneplatněn.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_REVOKED_CERTIFICATE_ERROR_MESSAGE" = "Klíč, který byl použit k podepsání této přílohy byl zneplatněn.\n\nMěl byste obnovit klíč ID %@ v GPG Keychain, pravděpodobně bude existovat nová verze. Jestliže nový klíč bude i nadále neplatný obraťte se na odesilatele.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_NO_PUBKEY_ERROR_TITLE" = "Klíč podpisu není ve vaši GPG Klíčence.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "Přílohu nelze ověřit, dokud klíč, který byl použit k jejímu podpisu není ve vaši GPG Klíčence.\n\nNajděte klíč s ID %@ v GPG Keychain a naimportujte ho.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_TITLE" = "Podpis přílohy byl vytvořen nepodporovaným algoritmem.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Přílohu nelze ověřit, dokud nebude podpis vytvořen některým z podporovaných algoritmů.\n\nObraťte se prosím na https://gpgtools.tenderapp.com";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "VÝSTRAHA: Podpis přílohy je neplatný!";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "VÝSTRAHA: Příloha mohla být změněna poté co byla podepsána.\n\nObraťte se na odesilatele abyste se ujistil zda se obsah přílohy shoduje s originálem.\n\nObraťte se prosím na https://gpgtools.tenderapp.com, pokud jste si skutečně jist, že příloha nebyla změněna.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_TITLE" = "Ověřování podpisu se nezdařilo z důvodu výskytu neznámé chyby!";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_MESSAGE" = "Vyskytla se neznámá chyba při ověřování podpisu přílohy.\n\nObraťte se prosím na https://gpgtools.tenderapp.com";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "Chyba dat v podpisu!";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Podpis přílohy není platný a nelze ho ověřit.\n\nObraťte se prosím na https://gpgtools.tenderapp.com";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_KEY_EXPIRED_ERROR_TITLE" = "Platnost klíče podpisu vypršela.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_KEY_EXPIRED_ERROR_MESSAGE" = "VÝSTRAHA: Platnost klíče, který byl použit podpisu této přílohy vypršela.\n\nMůžete zkusit obnovit klíč s ID %@ v GPG Keychain a obrátit se na odesilatele, proč platnost jeho klíče vypršela.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SIGNATURE_EXPIRED_ERROR_TITLE" = "Platnost podpisu přílohy vypršela.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SIGNATURE_EXPIRED_ERROR_MESSAGE" = "Platnost podpisu přílohy vypršela a nelze ho ověřit.\n\nObraťte se na odesilatele, proč platnost jeho podpisu vypršela.";
+
+"MESSAGE_IS_PGP_PARTLY_ENCRYPTED" = "Částečně zašifrováno";
+"MESSAGE_IS_PGP_PARTLY_SIGNED" = "Částečně podepsáno";
+"MESSAGE_IS_PGP_ENCRYPTED" = "Zašifrováno";
+"MESSAGE_IS_PGP_SIGNED" = "Podepsáno";
+"MESSAGE_IS_PGP_SIGNED_INVALID" = "Chybný podpis";
+
+/* Security Header signature related. */
+"MESSAGE_SECURITY_HEADER_SIGNATURE_NO_PUBLIC_KEY_TITLE" = "Podepsáno neznámým klíčem";
+"MESSAGE_SECURITY_HEADER_SIGNATURE_REVOKED_TITLE" = "Podepsáno zneplatněným klíčem";
+"MESSAGE_SECURITY_HEADER_SIGNATURE_BAD_TITLE" = "Chybný podpis";
+"MESSAGE_SECURITY_HEADER_SIGNATURE_TITLE" = "Podepsáno";
+"MESSAGE_SECURITY_HEADER_NO_SIGNATURE_TITLE" = "Nebyl nalezen žádný podpis";
+
+/* Security header attachments related. */
+"MESSAGE_SECURITY_HEADER_ATTACHMENT_SIGNED_ENCRYPTED_TITLE" = "zašifrovaná/podepsaná příloha";
+"MESSAGE_SECURITY_HEADER_ATTACHMENTS_SIGNED_ENCRYPTED_TITLE" = "zašifrované/podepsané přílohy";
+"MESSAGE_SECURITY_HEADER_ATTACHMENT_ENCRYPTED_TITLE" = "zašifrovaná příloha";
+"MESSAGE_SECURITY_HEADER_ATTACHMENTS_ENCRYPTED_TITLE" = "zašifrované přílohy";
+"MESSAGE_SECURITY_HEADER_ATTACHMENT_SIGNED_TITLE" = "podepsaná příloha";
+"MESSAGE_SECURITY_HEADER_ATTACHMENTS_SIGNED_TITLE" = "podepsané přílohy";
+
+/* Compose Window encrypt/sign button tooltips. */
+"COMPOSE_WINDOW_TOOLTIP_CAN_NOT_PGP_SIGN" = "Zprávu nelze podepsat, dokud nebude dostupný soukromý klíč pro %@.\n\nUjistěte se prosím, že soukromý klíč pro tuto adresu existuje v Klíčence GPG. Pokud je to nutné, přidejte nové UID k existujícímu klíči pro tuto adresu nebo vytvořte pro tuto adresu nový klíč.\n\nJestliže klíč pro tuto adresu existuje, přesvědčte se, že adresa v aplikaci Mail.app > Předvolby > Účty je správná a přesně odpovídá adrese ve vašem klíči.";
+"COMPOSE_WINDOW_TOOLTIP_CAN_NOT_PGP_ENCRYPT" = "Zprávu nelze zašifrovat, dokud nebude dostupný veřejný klíč pro následující adresy: %@.\n\nPoužijte prosím GPG Keychain pro vyhledání a import klíčů pro tyto adresy.";
+"COMPOSE_WINDOW_TOOLTIP_CAN_NOT_PGP_ENCRYPT_NO_RECIPIENTS" = "Zprávu nelze zašifrovat. Musíte nejprve zadat nejméně jednoho příjemce.";
+
+/* Message view pgp part. */
+"MESSAGE_VIEW_PGP_PART_ENCRYPTED" = "Zašifrováno";
+"MESSAGE_VIEW_PGP_PART_SIGNED" = "Podepsáno";
+"MESSAGE_VIEW_PGP_PART" = "PGP část";
+
+/* GPGMail Preferences strings. */
+"GPG_STATUS_NO_ERROR_TITLE" = "GPGMail ready";
+"GPG_STATUS_NOT_FOUND_TITLE" = "MacGPG not found, reinstall GPG Suite";
+"GPG_STATUS_NOT_FOUND_TOOLTIP" = "Click indicator bubble for further information";
+"GPG_STATUS_OTHER_ERROR_TITLE" = "Problems found, click indicator bubble for more info";
+"GPG_STATUS_OTHER_ERROR_TOOLTIP" = "Click indicator bubble for further information";
+
+"DISABLE_ENCRYPT_DRAFTS_TITLE" = "Varování: Deaktivace této možnosti by mohla vést k úniku citlivých informací při psaní zprávy";
+"DISABLE_ENCRYPT_DRAFTS_MESSAGE" = "Pokud je na vašem účtě zapnuta volba „Uložit koncepty na serveru“, aplikace macOS Mail.app automaticky ukládá vaše koncepty na poštovní server během vytváření zprávy.\nZakázáním funkce „Šifrování konceptů“ budou koncepty uloženy v prostém textu (nešifrované), a může je číst každý, kdo má přístup k poštovnímu serveru.\n\nPovolením funkce „Šifrování konceptů“, budou vaše koncepty zašifrovány předtím, než budou uloženy na poštovní server a budete je moci číst pouze vy.\n\nPřesto si přejete deaktivovat funkci „Šifrování konceptů“?";
+"DISABLE_ENCRYPT_DRAFTS_CONFIRM" = "Vypnout šifrování";
+"DISABLE_ENCRYPT_DRAFTS_CANCEL" = "Zrušit";
+
+
+/* Multiple GPGMail installations. */
+"GPGMAIL_MULTIPLE_INSTALLATIONS_TITLE" = "Nalezeno více instalací GPGMail!";
+"GPGMAIL_MULTIPLE_INSTALLATIONS_MESSAGE" = "Bylo nalezeno více instalací GPGMail na následujících místech, což může vést k nepředvídatelným selháním a pádům:\n\n%@\n\nOdstraňte prosím GPGMail.mailbundle z některých umístění a znovu spusťte aplikaci Mail.\n";
+"GPGMAIL_MULTIPLE_INSTALLATIONS_BUTTON" = "Ukončit Mail";
+
+/* No Libmacgpg. */
+"LIBMACGPG_NOT_FOUND_TITLE" = "Knihovna Libmacgpg nebyla nalezena";
+"LIBMACGPG_NOT_FOUND_MESSAGE" = "Komponenta Libmacgpg nebyla nalezena ve vašem systému. Zkopírujte si ji a nainstalujte GPG Suite z tohoto umístění https://www.gpgtools.org.";
+
+/* Code signature invalid */
+CODE_SIGN_ERROR_TITLE = "Někdo manipuloval s instalací GPGMail!";
+CODE_SIGN_ERROR_MESSAGE = "Z důvodu bezpečnosti nebyl GPGMail načten. \n\nNainstalujte si prosím GPG Suite z našeho důvěryhodného zdroje https://gpgtools.org.";
+
+/* GPGMailGPGMailBundle.defaults can't be loaded */
+NO_DEFAULTS_TITLE = "Nelze načíst výchozí nastavení GPGMail!";
+NO_DEFAULTS_MESSAGE = "GPGMail nepracuje podle očekávání.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na https://gpgtools.tenderapp.com/ ";
+
+/* Errors while trying to sign a message. */
+"MESSAGE_SIGNING_ERROR_NO_PINENTRY_TITLE" = "Podepisování Vaši zprávy selhalo z důvodu selhání komponenty pinentry!";
+"MESSAGE_SIGNING_ERROR_NO_PINENTRY_DESCRIPTION" = "Pinentry – nástroj odpovědný za vyžádání vašeho hesla je pravděpodobně poškozen.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://gpgtools.org.";
+
+"MESSAGE_SIGNING_ERROR_NO_AGENT_TITLE" = "Podepisování vaši zprávy selhalo z důvodu chyby agenta GPG!";
+"MESSAGE_SIGNING_ERROR_NO_AGENT_DESCRIPTION" = "Klíčová komponenta GPG agent je pravděpodobně poškozena.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://gpgtools.org.";
+
+"MESSAGE_SIGNING_ERROR_AGENT_ERROR_TITLE" = "Podepisování vaši zprávy selhalo z důvodu chyby v komunikaci s agentem GPG!";
+"MESSAGE_SIGNING_ERROR_AGENT_ERROR_DESCRIPTION" = "Komunikace s komponentou GPG agent selhala.\n\nPro vyřešnení problému přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.";
+
+"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_TITLE" = "Podepisování vaši zprávy selhalo z důvodu výskytu neznámé chyby!";
+"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Naneštěstí se nyní nelze z této chyby zotavit.";
+
+"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_TITLE" = "Šifrování vaši zprávy selhalo z důvodu výskytu neznámé chyby.";
+"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Naneštěstí GPGMail se nyní nedokáže z této chyby zotavit.";
+
+"MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_TITLE" = "Zadal jste několikrát chybné heslo.";
+"MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_DESCRIPTION" = "Podepisování vaši zprávy bylo přerušeno, protože jste třikrát chybně zadal své heslo.";
+
+"CONTACT_GPGTOOLS_WITH_INFO_MESSAGE" = "\n\nPokud bude problém přetrvávat, obraťte se prosím na podporu https://gpgtools.tenderapp.com/ s následujícím popisem chyby:\n\n%@";
+
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_TITLE" = "Přerušil jste dešifrování zprávy.";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "Zprávu nelze dešifrovat, protože jste přerušil zadávání hesla.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_TITLE" = "Přerušil jste dešifrování přílohy.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "Přílohu zprávy nelze dešifrovat, protože jste přerušil zadávání hesla.";
+
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite nepracuje podle očekávání";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Dešifrování zprávy selhalo.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na  https://gpgtools.tenderapp.com/ a přiložte informaci o tom, že služba XPC nepracuje správně.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite nepracuje podle očekávání";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Dešifrování přílohy zprávy selhalo.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na  https://gpgtools.tenderapp.com/ a přiložte informaci o tom, že služba XPC nepracuje správně.";
+
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite nepracuje podle očekávání";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Ověřování zprávy selhalo.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na  https://gpgtools.tenderapp.com/ a přiložte informaci o tom, že služba XPC nepracuje správně.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite nepracuje podle očekávání";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Ověřování přílohy zprávy selhalo.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na  https://gpgtools.tenderapp.com/ a přiložte informaci o tom, že služba XPC nepracuje správně.";
+
+"MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_TITLE" = "Podepisování vaši zprávy selhalo z důvodu problému během zadání hesla.";
+"MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "Pinentry – nástroj odpovědný za vyžádání vašeho hesla nepracuje správně.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://gpgtools.org.";
+
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Podepisování vaši zprávy selhalo z důvodu chybné instalace GPGMail!";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Pro vyřešení tohoto problému, prosím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na  https://gpgtools.tenderapp.com/ a přiložte informaci o tom, že služba XPC nepracuje správně.";
+
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Dešifrování zprávy selhalo z důvodu selhání komponenty pinentry.";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "Pinentry – nástroj odpovědný za vyžádání vašeho hesla je pravděpodobně poškozen.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://gpgtools.org.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Dešifrování přílohy zprávy selhalo z důvodu selhání komponenty pinentry.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "Pinentry – nástroj odpovědný za vyžádání vašeho hesla je pravděpodobně poškozen.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://gpgtools.org.";
+
+"UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_TITLE" = "Upozornění: Chystáte se odeslat nezabezpečeně odpověď na zabezpečenou zprávu!";
+"UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_MISSING_KEYS_SINGULAR" = "Nelze zašifrovat vaši odpověď, protože veřejný klíč pro následujícího adresáta chybí:\n\n%@";
+"UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_MISSING_KEYS" = "Nelze zašifrovat vaši odpověď, protože veřejný klíč pro následující adresáty chybí:\n\n%@";
+"UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_EXPLANATION" = "Pokud budete pokračovat, vaše odpověď se odešle nezašifrovaně. Výsledkem může být únik informací, který může vystavit riziku vás i adresáta.";
+"UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_SOLUTION_REMOVE_PREVIOUS_CORRESPONDENCE" = "\n\nPokud si skutečně přejete odeslat tuto nezabezpečenou zprávu, odstraňte prosím ve vaší odpovědi před odesláním veškerý text z předchozí komunikace.";
+"UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_SOLUTION_IMPORT_KEYS" = "V opačném případě, vyhledejte a naimportujte odpovídající veřejné klíče pomocí GPG Keychain, aby bylo možné odeslat odpověď šifrované.";
+"UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_SOLUTION_IMPORT_KEYS_SINGULAR" = "V opačném případě vyhledejte a naimportujte odpovídající veřejný klíč pomocí GPG Keychain, abyste mohli odpovídat pomocí šifrovaných zpráv.";
+"UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_BUTTON_SEND_ANYWAY" = "Přesto odeslat";
+"UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_BUTTON_CANCEL" = "Zrušit";
+
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_TITLE" = "Upozornění: Chystáte se odeslat dešifrovanou/nezabezpečenou verzi šifrované zprávy";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_MISSING_KEYS_SINGULAR" = "Nelze šifrovat zprávu, kterou se chystáte odeslat, protože chybí veřejný klíč pro následujícího příjemce:\n\n%@";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_MISSING_KEYS" = "Nelze šifrovat zprávu, kterou se chystáte odeslat, protože chybí veřejné klíče pro následující příjemce:\n\n%@";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_EXPLANATION" = "Pokud si přejete pokračovat, zpráva, kterou se chystáte odeslat, bude nezašifrovaná. V důsledku toho může dojít k úniku důvěrných informací, což může ohrozit nejen vás ale i příjemce zprávy.";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_SOLUTION_IMPORT_KEYS" = "V opačném případě vyhledejte a naimportujte odpovídající veřejné klíče pomocí GPG Keychain, abyste mohli odesílat šifrované zprávy.";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_SOLUTION_IMPORT_KEYS_SINGULAR" = "V opačném případě vyhledejte a naimportujte odpovídající veřejný klíč pomocí GPG Keychain, abyste mohli odeslat šifrovanou zprávu.";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_BUTTON_SEND_ANYWAY" = "Přesto odeslat";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_BUTTON_CANCEL" = "Zrušit";
+
+"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_TITLE" = "Decryption of the message was aborted";
+"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_MESSAGE" = "The modification detection code (MDC) for this encrypted message is missing or has been modified.\n\nThis could mean that an attacker has been trying to modify the contents within the encrypted message.\n\nPlease have the message re-sent to you and tell the sender, that their encrypted message didn't include a modification detection code.";
+
+"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_TITLE" = "Attention: Opening this website could leak the contents of this message";
+"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_MESSAGE" = "Due to a problem in the implementation of S/MIME encryption, it is possible for an attacker to modify a message without your knowledge.\n\nYou are about to open the following website:\n\n%@\n\nAre you sure you want to continue?";
+"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_BUTTON_YES" = "Ano";
+"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_BUTTON_CANCEL" = "Zrušit";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_TITLE" = "Decryption of the attachment was aborted";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_MESSAGE" = "The modification detection code (MDC) for this encrypted attachment is missing or has been modified.\n\nThis could mean that an attacker has been trying to modify the contents within the encrypted attachment.\n\nPlease have the attachment re-sent to you and tell the sender, that their encrypted attachment didn't include a modification detection code.";
+
+
+/* Accessibility */
+ACCESSIBILITY_SECURITY_METHOD_POPUP_LABEL = "Metoda: %@";
+ACCESSIBILITY_SIGN_ON_IMAGE = "Podepsat";
+ACCESSIBILITY_SIGN_OFF_IMAGE = "Nepodepisovat";
+

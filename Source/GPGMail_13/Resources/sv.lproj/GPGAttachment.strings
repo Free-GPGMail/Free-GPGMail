@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "Det gick inte att verifiera signaturen.";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "Den publika nyckeln som behövs för att verifiera bilagans signatur finns inte i din nyckelring. \n\nHämta den publika nyckeln %@ med GPG Keychain.";
+"DECRYPT_ERROR_GENERAL_TITLE" = "Det gick inte att dekryptera bilagan.";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "Den privata nyckel som behövs för att dekryptera denna bilaga finns inte i din nyckelring.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "Bilagan dekrypterades.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "Öppna en bilaga i meddelandet genom att dubbelklicka.";

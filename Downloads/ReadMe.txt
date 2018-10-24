@@ -1,8 +1,8 @@
-Downloads of GPG Suite 2018.4 September 21st, 2018.
+Downloads of GPG Suite 2018.5 October 23rd, 2018.
 
-Binaries: https://releases.gpgtools.org/GPG_Suite-2018.4_2.dmg
-Source: https://releases.gpgtools.org/GPG_Suite-2018.4_2.txz
+Binaries: https://releases.gpgtools.org/GPG_Suite-2018.5.dmg
+Source: https://releases.gpgtools.org/GPG_Suite-2018.5.txz
 
 
-GPG_Suite-2018.4_2.dmg  MD5: f8e929c92171b631a81a5cbb5b2ecb05
-GPG_Suite-2018.4_2.txz  MD5: 8b08bfb81d25871359041d82062aea2f
+GPG_Suite-2018.5.dmg  MD5: 85dea3885c9cc26c6860caf530ce73dc
+GPG_Suite-2018.5.txz  MD5: d2accc3cfb97530d936eba96b287d278

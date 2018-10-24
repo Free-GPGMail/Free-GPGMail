@@ -241,6 +241,11 @@
 }
 
 - (id)MA_displayStringForSecurityKey {
+    if(![[GPGMailBundle sharedInstance] hasActiveContractOrActiveTrial]) {
+		// MA_displayStringForSecurityKey no longer exists on High Sierra or Mojave,
+		// so return nil instead.
+		return nil;
+    }
     GM_CAST_CLASS(MCMessage *, id) message = (Message_GPGMail *)[(ConversationMember *)[(HeaderViewController *)self representedObject] originalMessage];
     
     GMMessageSecurityFeatures *securityProperties = [message securityFeatures];

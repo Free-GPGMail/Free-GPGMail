@@ -17,3 +17,14 @@ FOUNDATION_EXPORT const unsigned char GSPaddleVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <GSPaddle/PublicHeader.h>
 #import <Paddle/Paddle.h>
 #import <GSPaddle/Paddle+CustomBundleIdentifier.h>
+#import <GSPaddle/GSPaddleErrorCodes.h>
+#import <GSPaddle/PADApi+GSPaddle.h>
+
+// Recereate missing headers for PaddleAnalytics to disable Analytics.
+
+@interface PaddleAnalyticsKit : NSObject
+
++ (void)disableTracking;
++ (BOOL)isOptedIn;
+
+@end

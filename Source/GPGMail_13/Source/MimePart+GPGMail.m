@@ -388,6 +388,10 @@ NSString * const kMimePartAllowPGPProcessingKey = @"MimePartAllowPGPProcessingKe
 }
 
 - (void)GMTransformMimeTreeForPGPPartitionedIfNecessary {
+    if([[GPGMailBundle sharedInstance] shouldNotConvertPGPPartitionedMessages]) {
+        return;
+    }
+
     __block MCMimePart *PGPExchPart = nil;
     [self enumerateSubpartsWithBlock:^(MCMimePart *currentPart) {
         if([[[MAIL_SELF(currentPart) attachmentFilename] lowercaseString] isEqualToString:@"pgpexch.htm.pgp"] ||
@@ -439,7 +443,14 @@ NSString * const kMimePartAllowPGPProcessingKey = @"MimePartAllowPGPProcessingKe
                 // in which case the multipart type is changed in addition to changing the type of the
                 // PGPExchPart to text/html.
                 MCMimePart *parentPart = [PGPExchPart parentPart];
-                if([[parentPart parentPart] isType:@"multipart" subtype:@"mixed"]) {
+                // Bug #1012: Support more strange PGP-Partitioned structures.
+                // There's yet another version, where there is only a single multipart/mixed part, which
+                // should be a multipart/alternative part instead, with a text/plain and an attachment part.
+                // The attachment part should be the text/html part.
+                if([parentPart isType:@"multipart" subtype:@"mixed"] && [[parentPart subparts] count] == 2 && ![parentPart parentPart] && ([[PGPExchPart nextSiblingPart] isType:@"text" subtype:@"plain"] || [[(MimePart_GPGMail *)PGPExchPart GMPreviousSiblingPart] isType:@"text" subtype:@"plain"])) {
+                    [parentPart setSubtype:@"alternative"];
+                }
+                else if([[parentPart parentPart] isType:@"multipart" subtype:@"mixed"]) {
                     [parentPart setSubtype:@"alternative"];
                 }
                 else {
@@ -1914,6 +1925,9 @@ NSString * const kMimePartAllowPGPProcessingKey = @"MimePartAllowPGPProcessingKe
     // first part following. So the rule is, if any parent is multipart/mixed
     // and this is a multipart/signed part which is not the first child part,
     // don't verify.
+    if(![[GPGMailBundle sharedInstance] hasActiveContractOrActiveTrial]) {
+        return;
+    }
     if([self GMAnyParentMatchesType:@"multipart" subtype:nil]) {
         if([[MAIL_SELF(self) parentPart] firstChildPart] != MAIL_SELF(self)) {
             return;

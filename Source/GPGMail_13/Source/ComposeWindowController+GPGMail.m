@@ -38,6 +38,7 @@
 #import "ComposeViewController.h"
 #import "ComposeTabViewItem.h"
 #import "ComposeWindow.h"
+#import "GPGMailBundle.h"
 
 #define mailself ((ComposeWindowController *)self)
 
@@ -51,6 +52,9 @@ extern const NSString *kFullScreenWindowControllerCloseModalWindowNotYet;
 #pragma mark Security Indicator in Toolbar
 
 - (id)MAToolbarDefaultItemIdentifiers:(id)toolbar {
+    if(![[GPGMailBundle sharedInstance] hasActiveContractOrActiveTrial]) {
+        return [self MAToolbarDefaultItemIdentifiers:toolbar];
+    }
 	id defaultItemIdentifiers = [self MAToolbarDefaultItemIdentifiers:toolbar];
 	
 	// Appending the security method identifier to toggle between OpenPGP and S/MIME.
@@ -61,6 +65,9 @@ extern const NSString *kFullScreenWindowControllerCloseModalWindowNotYet;
 }
 
 - (id)MAToolbar:(id)toolbar itemForItemIdentifier:(id)itemIdentifier willBeInsertedIntoToolbar:(BOOL)willBeInsertedIntoToolbar {
+    if(![[GPGMailBundle sharedInstance] hasActiveContractOrActiveTrial]) {
+        return [self MAToolbar:toolbar itemForItemIdentifier:itemIdentifier willBeInsertedIntoToolbar:willBeInsertedIntoToolbar];
+    }
 	if(![itemIdentifier isEqualToString:@"toggleSecurityMethod:"]) {
 		return [self MAToolbar:toolbar itemForItemIdentifier:itemIdentifier willBeInsertedIntoToolbar:willBeInsertedIntoToolbar];
 	}

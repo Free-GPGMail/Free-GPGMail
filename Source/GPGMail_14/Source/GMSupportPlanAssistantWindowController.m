@@ -12,6 +12,12 @@
 
 #import "GPGMailBundle.h"
 
+typedef enum {
+    GMSupportPlanPaddleErrorCodeNetworkError = 99,
+    GMSupportPlanPaddleErrorCodeActivationCodeNotFound = 100,
+    GMSupportPlanPaddleErrorCodeActivationCodeAlreadyUsed = 104
+} GMSupportPlanPaddleErrorCodes;
+
 @interface GMSupportPlanAssistantViewController ()
 
 @property (nonatomic, weak) IBOutlet NSTextField *headerTextField;
@@ -88,10 +94,10 @@
 }
 
 - (void)activationDidCompleteWithSuccess {
-    [(GMSupportPlanAssistantViewController *)[[self window] contentViewController] setState:GMSupportPlanViewControllerStateActivating];
+    [(GMSupportPlanAssistantViewController *)[[self window] contentViewController] setState:GMSupportPlanViewControllerStateBuy];
     NSAlert *alert = [NSAlert new];
     alert.messageText = @"Support Plan Activation";
-    alert.informativeText = @"Thank you for your support!\n\nWe hope you enjoy using GPG Mail. Should you have any questions, don't hesitate to contact us via \"Report a Problem\" in Mail -> Preferences -> GPGMail";
+    alert.informativeText = @"Thank you for your support!\n\nWe hope you enjoy using GPG Mail. Should you have any questions, don't hesitate to contact us via \"Report Problem\" in Mail -> Preferences -> GPGMail";
     alert.icon = [NSImage imageNamed:@"GPGMail"];
     [alert beginSheetModalForWindow:[self window] completionHandler:^(NSModalResponse returnCode) {
         [[self delegate] closeSupportPlanAssistant:self];
@@ -99,9 +105,22 @@
 }
 
 - (void)activationDidFailWithError:(NSError *)error {
-    [(GMSupportPlanAssistantViewController *)[[self window] contentViewController] setState:GMSupportPlanViewControllerStateActivating];
+    [(GMSupportPlanAssistantViewController *)[[self window] contentViewController] setState:GMSupportPlanViewControllerStateBuy];
     NSAlert *alert = [NSAlert new];
-    alert.informativeText = @"The entered activation code is either invalid or might have been used already.\nPlease contact us at business@gpgtools.org if you are sure that you have entered your code correctly.";
+    
+    if(error.code == GMSupportPlanPaddleErrorCodeNetworkError) {
+        alert.informativeText = @"We were unable to connect to the paddle.com API to verify your activation code.\nIf you are using any macOS firewall product (buil-in firewall, Little Snitch, etc.), please allow connections to paddle.com for the activation to complete. You can block any connections again once the activation is completed.\n\nPlease contact us at business@gpgtools.org if the problem persists.";
+    }
+    else if(error.code == GMSupportPlanPaddleErrorCodeActivationCodeNotFound) {
+        alert.informativeText = @"The entered activation code is invalid.\nPlease contact us at business@gpgtools.org if you are sure that you have entered your code correctly.";
+    }
+    else if(error.code == GMSupportPlanPaddleErrorCodeActivationCodeAlreadyUsed) {
+        alert.informativeText = @"We are very sorry to inform you that you have exceeded the allowed number of activations.\nPlease contact us at business@gpgtools.org, if you believe that you should still have activations left.";
+    }
+    else {
+        alert.informativeText = @"Unfortunately an unknown error has occured. Please retry later or use 'System Preferences › GPG Suite › Report Problem' to contact us";
+    }
+    
     alert.messageText = @"Support Plan Activation Failed";
     alert.icon = [NSImage imageNamed:@"GPGMail"];
     [alert beginSheetModalForWindow:[self window] completionHandler:^(NSModalResponse returnCode) {
@@ -148,7 +167,7 @@
         trialStarted = NO;
     }
     
-    if(trialStarted && remainingTrialDays <= 0) {
+    if(trialStarted && [remainingTrialDays integerValue] <= 0) {
         self.subHeaderTextField.stringValue = [NSString stringWithFormat:@"Your free trial of GPG Mail has expired.\nPlease purchase our support plan to continue."];
     }
     else {
@@ -231,6 +250,13 @@
         [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://gpgtools.org/buy-support-plan"]];
     }
     else {
+        if(self.email && self.emailTextField.stringValue != self.email) {
+            self.emailTextField.stringValue = self.email;
+        }
+        if(self.activationCode && self.licenseTextField.stringValue != self.activationCode) {
+            self.licenseTextField.stringValue = self.activationCode;
+        }
+        
         if(![self validateActivationInformation]) {
             [(GMSupportPlanAssistantWindowController *)[[[self view] window] windowController] showActivationError];
         }
@@ -251,8 +277,23 @@
 }
 
 - (IBAction)cancel:(id)sender {
-    [[self delegate] supportPlanAssistantShouldStartTrial:[[[self view] window] windowController]];
-    [[self delegate] closeSupportPlanAssistant:[[[self view] window] windowController]];
+    NSDictionary *supportPlanInformation = [[self delegate] contractInformation];
+    NSNumber *remainingTrialDays = [supportPlanInformation valueForKey:@"ActivationRemainingTrialDays"];
+    // Take into consideration that no information about remaining trial days is available, the trial
+    // hasn't been started yet.
+    if(remainingTrialDays && [remainingTrialDays integerValue] <= 0) {
+        NSAlert *alert = [NSAlert new];
+        alert.messageText = @"GPG Mail Trial Expired";
+        alert.informativeText = @"Without an active GPG Mail Support Plan you will still be able to read any of your encrypted emails. However, you will no longer be able to sign, encrypt or verify emails.";
+        alert.icon = [NSImage imageNamed:@"GPGMail"];
+        [alert beginSheetModalForWindow:[[self view] window] completionHandler:^(NSModalResponse returnCode) {
+            [[self delegate] closeSupportPlanAssistant:[[[self view] window] windowController]];
+        }];
+    }
+    else {
+        [[self delegate] supportPlanAssistantShouldStartTrial:[[[self view] window] windowController]];
+        [[self delegate] closeSupportPlanAssistant:[[[self view] window] windowController]];
+    }
 }
 
 @end

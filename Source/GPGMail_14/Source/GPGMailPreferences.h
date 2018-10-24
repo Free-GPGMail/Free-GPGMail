@@ -33,6 +33,12 @@
 
 @class GPGMailBundle, GPGOptions, GMSpecialBox;
 
+typedef enum : NSUInteger {
+    GPGMailPreferencesSupportPlanStateUninitializedState,
+    GPGMailPreferencesSupportPlanStateTrialState,
+    GPGMailPreferencesSupportPlanStateActiveState,
+} GPGMailPreferencesSupportPlanState;
+
 @interface GPGMailPreferences : NSPreferencesModule {}
 
 - (IBAction)openSupport:(id)sender;
@@ -50,6 +56,8 @@
 @property (weak, readonly) NSImage *gpgStatusImage;
 @property (weak, readonly) GPGOptions *options;
 @property BOOL encryptDrafts;
+
+@property (assign, nonatomic) GPGMailPreferencesSupportPlanState state;
 
 @end
 

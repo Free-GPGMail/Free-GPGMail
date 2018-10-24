@@ -61,6 +61,9 @@ extern const NSString *kComposeWindowControllerAllowWindowTearDown;
 }
 
 - (void)configureSecurityMethodAccessoryViewForNormalMode {
+    if(![[GPGMailBundle sharedInstance] hasActiveContractOrActiveTrial]) {
+        return;
+    }
 	GMSecurityMethodAccessoryView *accessoryView = [self securityMethodAccessoryView]; //[self getIvar:@"SecurityMethodHintAccessoryView"];
     [accessoryView configureForWindow:[self valueForKey:@"_window"]];
 }
@@ -96,6 +99,10 @@ extern const NSString *kComposeWindowControllerAllowWindowTearDown;
 }
 
 - (void)MABackEndDidLoadInitialContent:(id)content {
+    if(![[GPGMailBundle sharedInstance] hasActiveContractOrActiveTrial]) {
+        [self MABackEndDidLoadInitialContent:content];
+        return;
+    }
 	if(![GPGMailBundle isElCapitan]) {
 		[(NSNotificationCenter *)[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didExitFullScreen:) name:@"NSWindowDidExitFullScreenNotification" object:nil];
 	}
@@ -114,7 +121,10 @@ extern const NSString *kComposeWindowControllerAllowWindowTearDown;
 	// On El Capitan there's no more space on top of the title bar, so
 	// the security method accessory view is inserted as toolbar item in
 	// -[ComposeViewController toolbar:itemForItemIdentifier:willBeInsertedIntoToolbar:]
-	GMSecurityMethodAccessoryView *accessoryView = nil;
+    if(![[GPGMailBundle sharedInstance] hasActiveContractOrActiveTrial]) {
+        return;
+    }
+    GMSecurityMethodAccessoryView *accessoryView = nil;
 	accessoryView = [self securityMethodAccessoryView];
 	accessoryView.delegate = self;
 }
@@ -286,6 +296,10 @@ extern const NSString *kComposeWindowControllerAllowWindowTearDown;
 }
 
 - (void)MABackEnd:(id)backEnd didCancelMessageDeliveryForEncryptionError:(NSError *)error {
+    if(![[GPGMailBundle sharedInstance] hasActiveContractOrActiveTrial]) {
+        [self MABackEnd:backEnd didCancelMessageDeliveryForEncryptionError:error];
+        return;
+    }
 	if([self backEnd:backEnd handleDeliveryError:error])
 		[self MABackEnd:backEnd didCancelMessageDeliveryForEncryptionError:error];
 	
@@ -294,6 +308,10 @@ extern const NSString *kComposeWindowControllerAllowWindowTearDown;
 }
 
 - (void)MABackEnd:(id)backEnd didCancelMessageDeliveryForError:(NSError *)error {
+    if(![[GPGMailBundle sharedInstance] hasActiveContractOrActiveTrial]) {
+        [self MABackEnd:backEnd didCancelMessageDeliveryForError:error];
+        return;
+    }
 	if([self backEnd:backEnd handleDeliveryError:error])
 		[self MABackEnd:backEnd didCancelMessageDeliveryForEncryptionError:error];
 

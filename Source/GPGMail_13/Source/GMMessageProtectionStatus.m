@@ -27,6 +27,7 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#import "NSObject+LPDynamicIvars.h"
 #import "GMMessageProtectionStatus.h"
 #import "MimePart+GPGMail.h"
 
@@ -167,7 +168,7 @@
     }
     
     MCMimePart *encryptedPart = [self.encryptedParts objectAtIndex:0];
-    if([self.signedParts count] && self.signedParts[0] != encryptedPart || [self.signedParts count] > 1) {
+    if(([self.signedParts count] && self.signedParts[0] != encryptedPart) || [self.signedParts count] > 1) {
         return NO;
     }
     
@@ -186,8 +187,12 @@
     // In the case of only one part being displayed and the part being text/plain
     // it's ok to say the entire message is encrypted, if this is a multipart/alternative
     // message.
+    // Bug #1012: PGP-Partitioned messages fun again
+    //
+    // In case of a PGP-Partitioned message with a single text/plain and a single text/html part
+    // wrapped in a multipart/alternative part, it is ok to say that the entire message is encrypted.
     MCMimePart *parentPart = [encryptedPart parentPart];
-    if([encryptedPart isType:@"text" subtype:@"plain"] && [parentPart isType:@"multipart" subtype:@"alternative"] && ![parentPart parentPart]) {
+    if(([encryptedPart isType:@"text" subtype:@"plain"] || [encryptedPart getIvar:@"MimePartIsPGPPartitionedEncodingReplacedHTMLPart"]) && [parentPart isType:@"multipart" subtype:@"alternative"] && ![parentPart parentPart]) {
         return YES;
     }
     

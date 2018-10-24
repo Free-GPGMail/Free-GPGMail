@@ -233,6 +233,8 @@ static NSString * const kDirmngrConfKVKey = @"dirmngrConf";
 		
 		[self setValueInGPGAgentConf:defaultCacheTtl forKey:@"default-cache-ttl"];
 		[self setValueInGPGAgentConf:maxCacheTtl forKey:@"max-cache-ttl"];
+		[self setValueInGPGAgentConf:defaultCacheTtl forKey:@"default-cache-ttl-ssh"];
+		[self setValueInGPGAgentConf:maxCacheTtl forKey:@"max-cache-ttl-ssh"];
 	} else if ([key isEqualToString:@"keyserver"]) {
 		self.keyserver = value;
 	}
@@ -819,6 +821,9 @@ void SystemConfigurationDidChange(SCPreferencesRef prefs, SCPreferencesNotificat
 			affectingKey = @"trust-model";
 		} else if ([key isEqualToString:@"PassphraseCacheTime"]) {
 			affectingKey = @"default-cache-ttl";
+			affectingKey = @"default-cache-ttl-ssh";
+			affectingKey = @"max-cache-ttl";
+			affectingKey = @"max-cache-ttl-ssh";
 		}
 	}
 	if (affectingKey) {

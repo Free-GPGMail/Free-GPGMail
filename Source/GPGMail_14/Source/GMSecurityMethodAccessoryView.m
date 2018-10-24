@@ -36,6 +36,14 @@
 #import "GMSecurityMethodAccessoryView.h"
 #import "GPGMailBundle.h"
 
+
+
+@interface NSAppearance(bestMatchFromAppearancesWithNames)
+- (NSAppearanceName)bestMatchFromAppearancesWithNames:(NSArray<NSAppearanceName> *)appearances;
+@end
+
+
+
 @interface GMSecurityMethodAccessoryView ()
 @property (nonatomic, assign) BOOL fullscreen;
 @property (nonatomic, assign) NSRect nonFullScreenFrame;
@@ -332,7 +340,20 @@
     NSUInteger blueStart = 240.0f;
     NSUInteger redStep, greenStep, blueStep;
     redStep = greenStep = blueStep = 18.0f;
-    
+	
+	if (@available(macOS 10.14, *)) {
+		NSAppearance *appearance = NSAppearance.currentAppearance;
+		NSAppearanceName appearanceName = [appearance bestMatchFromAppearancesWithNames:@[NSAppearanceNameAqua, @"NSAppearanceNameDarkAqua"]];
+		if ([appearanceName isEqualToString:@"NSAppearanceNameDarkAqua"]) {
+			redStart = 0;
+			greenStart *= 0.5;
+			greenStartAlt *= 0.5;
+			redStep = 0;
+			greenStep *= 0.5;
+		}
+	}
+
+	
     if(!self.fullscreen) {
         gradient = [[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithDeviceRed:redStart/255.0f green:greenStart/255.0f blue:blueStart/255.0f alpha:1.0], 0.0f,
                     [NSColor colorWithDeviceRed:(redStart + (redStep * 1))/255.0f green:(greenStart + (greenStep * 1))/255.0f blue:blueStart/255.0f alpha:1.0], 0.13f,
@@ -341,7 +362,7 @@
                     [NSColor colorWithDeviceRed:(redStart + (redStep * 3))/255.0f green:(greenStart + (greenStep * 3))/255.0f blue:blueStart/255.0f alpha:1.0], 1.0f, nil];
     }
     else {
-        redStep = greenStep = blueStep = 8.0f;
+        redStep = greenStep = blueStep *= 0.44;
         gradient = [[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithDeviceRed:(redStart + (redStep * 2))/255.0f green:(greenStartAlt + (greenStep * 2))/255.0f blue:(blueStart + (blueStep * 1))/255.0f alpha:1.0], 0.0f,
                     [NSColor colorWithDeviceRed:(redStart + (redStep * 3))/255.0f green:(greenStartAlt + (greenStep * 3))/255.0f blue:(blueStart + (blueStep * 1))/255.0f alpha:1.0], 0.13f,
                     [NSColor colorWithDeviceRed:(redStart + (redStep * 4))/255.0f green:(greenStartAlt + (greenStep * 4))/255.0f blue:(blueStart + (blueStep * 1))/255.0f alpha:1.0], 0.27f,
@@ -359,7 +380,16 @@
     
     NSUInteger greenStart = 128.0f;
     NSUInteger greenStep = 18.0f;
-    
+	
+	if (@available(macOS 10.14, *)) {
+		NSAppearance *appearance = NSAppearance.currentAppearance;
+		NSAppearanceName appearanceName = [appearance bestMatchFromAppearancesWithNames:@[NSAppearanceNameAqua, @"NSAppearanceNameDarkAqua"]];
+		if ([appearanceName isEqualToString:@"NSAppearanceNameDarkAqua"]) {
+			greenStart *= 0.5;
+		}
+	}
+
+	
     if(!self.fullscreen) {
         gradient = [[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithDeviceRed:0/255.0f green:greenStart/255.0f blue:0/255.0f alpha:1.0], 0.0f,
                     [NSColor colorWithDeviceRed:0/255.0f green:(greenStart + (greenStep * 1))/255.0f blue:0/255.0f alpha:1.0], 0.13f,
@@ -387,9 +417,19 @@
     NSUInteger greyStart = 146.0f;
     NSUInteger greyStep = 18.0f;
     NSUInteger strokeGrey = 219.0f;
-    
+	
+	
+	if (@available(macOS 10.14, *)) {
+		NSAppearance *appearance = NSAppearance.currentAppearance;
+		NSAppearanceName appearanceName = [appearance bestMatchFromAppearancesWithNames:@[NSAppearanceNameAqua, @"NSAppearanceNameDarkAqua"]];
+		if ([appearanceName isEqualToString:@"NSAppearanceNameDarkAqua"]) {
+			greyStart *= 0.15;
+			strokeGrey *= 0.15;
+		}
+	}
+	
     if(!self.fullscreen) {
-        gradient = [[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithDeviceRed:greyStart/255.0f green:128.0f/255.0f blue:128.0f/255.0f alpha:1.0], 0.0f,
+        gradient = [[NSGradient alloc] initWithColorsAndLocations:[NSColor colorWithDeviceRed:greyStart/255.0f green:greyStart/255.0f blue:greyStart/255.0f alpha:1.0], 0.0f,
                     [NSColor colorWithDeviceRed:(greyStart + (greyStep * 1))/255.0f green:(greyStart + (greyStep * 1))/255.0f blue:(greyStart + (greyStep * 1))/255.0f alpha:1.0], 0.13f,
                     [NSColor colorWithDeviceRed:(greyStart + (greyStep * 1))/255.0f green:(greyStart + (greyStep * 1))/255.0f blue:(greyStart + (greyStep * 1))/255.0f alpha:1.0], 0.27f,
                     [NSColor colorWithDeviceRed:(greyStart + (greyStep * 2))/255.0f green:(greyStart + (greyStep * 2))/255.0f blue:(greyStart + (greyStep * 2))/255.0f alpha:1.0], 0.61f,

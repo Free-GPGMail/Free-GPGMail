@@ -42,6 +42,8 @@
 
 #import "MimePart+GPGMail.h"
 
+#import "GPGMailBundle.h"
+
 #define mailself ((MCMessageGenerator *)self)
 
 @class GPGKey;
@@ -61,6 +63,9 @@ const static NSString *kMCMessageGeneratorSigningKeyKey = @"MCMessageGeneratorSi
 	// message.
 	
 	NSData *newData = [self MA_newDataForMimePart:mimePart withPartData:partData];
+    if(![[GPGMailBundle sharedInstance] hasActiveContractOrActiveTrial]) {
+        return newData;
+    }
 	// If MailTags is not installed, let's get out of here.
 	if(NSClassFromString(@"MailTagsBundle") == nil)
 		return newData;
@@ -105,6 +110,9 @@ const static NSString *kMCMessageGeneratorSigningKeyKey = @"MCMessageGeneratorSi
 }
 
 - (id)MA_newOutgoingMessageFromTopLevelMimePart:(MCMimePart *)topLevelPart topLevelHeaders:(MCMutableMessageHeaders *)topLevelHeaders withPartData:(NSMapTable *)partData {
+    if(![[GPGMailBundle sharedInstance] hasActiveContractOrActiveTrial]) {
+        return [self MA_newOutgoingMessageFromTopLevelMimePart:topLevelPart topLevelHeaders:topLevelHeaders withPartData:partData];
+    }
     if(!topLevelHeaders) {
         topLevelHeaders = [MCMutableMessageHeaders new];
     }

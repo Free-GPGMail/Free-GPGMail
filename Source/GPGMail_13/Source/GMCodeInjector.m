@@ -555,7 +555,9 @@
                      },
              @"ConversationMember": @{
                     @"selectors": @[
-                            @"setWebDocument:"
+                            @"setWebDocument:",
+                            @"hasBlockedRemoteContent",
+                            @"remoteContentBlockingReason"
                       ]
                      },
              @"MUIWebDocument": @{
@@ -585,7 +587,8 @@
                              @"wantsDisplay",
                              @"setWantsDisplay:",
                              @"updateBannerContents",
-                             @"_hasBlockedRemoteContentDidChange:"]
+                             @"_hasBlockedRemoteContentDidChange:",
+                             @"hasBlockedRemoteContent"]
                      },
              @"JunkMailBannerViewController": @{
                      @"selectors": @[
@@ -607,8 +610,26 @@
              @"MCMessageHeaders": @{
                      @"selectors": @[
                              @"headersForKey:"]
+                     },
+             @"MailApp": @{
+                     @"selectors": @[
+                             @"tabView:didSelectTabViewItem:"
+                             ]
                      }
      };
+}
+
++ (NSDictionary *)hookChangesForMojave {
+    return @{
+             @"ConversationMember": @{
+                     @"selectors": @{
+                             @"added": @[
+                                     @"messageContentBlockingReason",
+                                     @"hasBlockedMessageContent"
+                                     ]
+                             }
+                     }
+             };
 }
 
 + (NSDictionary *)hooks {
@@ -636,6 +657,9 @@
         if([GPGMailBundle isHighSierra]) {
             [self applyHookChangesForVersion:@"10.13" toHooks:hooks];
         }
+        if([GPGMailBundle isMojave]) {
+            [self applyHookChangesForVersion:@"10.14" toHooks:hooks];
+        }
         
 		_hooks = [NSDictionary dictionaryWithDictionary:hooks];
 	});
@@ -655,6 +679,9 @@
         hookChanges = [self hookChangesForSierra];
 	else if([osxVersion isEqualToString:@"10.13"])
         hookChanges = [self hookChangesForHighSierra];
+    else if([osxVersion isEqualToString:@"10.14"]) {
+        hookChanges = [self hookChangesForMojave];
+    }
 	for(NSString *class in hookChanges) {
 		NSDictionary *hook = hookChanges[class];
         // class seems to be a protected identifier in lldb.

@@ -93,62 +93,6 @@
 
 @end
 
-#import "LoadRemoteContentBannerViewController.h"
-
-@interface LoadRemoteContentBannerViewController_GPGMail : NSObject
-@end
-
-
-@implementation LoadRemoteContentBannerViewController_GPGMail
-
-- (BOOL)MAWantsDisplay {
-    BOOL wantsDisplay = [self MAWantsDisplay];
-    if(![self isMemberOfClass:NSClassFromString(@"LoadRemoteContentBannerViewController")]) {
-        return wantsDisplay;
-    }
-    if([(MUIWebDocument *)[(LoadRemoteContentBannerViewController *)self webDocument] isEncrypted]) {
-        return NO;
-    }
-    return wantsDisplay;
-}
-
-- (void)MA_hasBlockedRemoteContentDidChange:(BOOL)arg1 {
-    if([(MUIWebDocument *)[(LoadRemoteContentBannerViewController *)self webDocument] isEncrypted]) {
-        if([self respondsToSelector:@selector(loadRemoteContentButton)]) {
-            NSButton *loadRemoteContentButton = [(LoadRemoteContentBannerViewController *)self loadRemoteContentButton];
-            [loadRemoteContentButton setHidden:YES];
-            [loadRemoteContentButton setEnabled:NO];
-        }
-    }
-    else {
-        [self MA_hasBlockedRemoteContentDidChange:arg1];
-    }
-}
-
-@end
-
-#import "JunkMailBannerViewController.h"
-
-@interface JunkMailBannerViewController_GPGMail : NSObject
-@end
-
-@implementation JunkMailBannerViewController_GPGMail
-
-- (void)MAUpdateBannerContents {
-    [self MAUpdateBannerContents];
-    if(![self isMemberOfClass:NSClassFromString(@"JunkMailBannerViewController")]) {
-        return;
-    }
-    if([(MUIWebDocument *)[(LoadRemoteContentBannerViewController *)self webDocument] isEncrypted]) {
-        [[(LoadRemoteContentBannerViewController *)self loadRemoteContentButton] setHidden:YES];
-    }
-}
-
-@end
-
-
-
-
 @interface MUIWKWebViewController_GPGMail : NSObject
 
 - (id)representedObject;
@@ -258,7 +202,6 @@ decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
 
 @end
 
-
 @interface MessageViewer_GPGMail : NSObject
 
 @end
@@ -314,9 +257,24 @@ decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
 
 @end
 
-#import "GMSupportPlanAssistantWindowController.h"
+@interface MailApp_GPGMail : NSObject
 
-NSString * const kGMED = @"1$5$3$7:4:7-3-6§0§0";
+- (void)MATabView:(id)tabView didSelectTabViewItem:(nullable NSTabViewItem *)tabViewItem;
+
+@end
+
+@implementation MailApp_GPGMail
+
+- (void)MATabView:(id)tabView didSelectTabViewItem:(nullable NSTabViewItem *)tabViewItem {
+    [self MATabView:tabView didSelectTabViewItem:tabViewItem];
+    if([[[tabViewItem viewController] representedObject] isKindOfClass:[GPGMailPreferences class]]) {
+        [[[tabViewItem viewController] representedObject] willBeDisplayed];
+    }
+}
+
+@end
+
+#import "GMSupportPlanAssistantWindowController.h"
 
 @interface GPGMailBundle ()
 
@@ -336,6 +294,7 @@ NSString *gpgErrorIdentifier = @"^~::gpgmail-error-code::~^";
 static NSString * const kExpiredCheckKey = @"__gme3__";
 
 NSString * const kGMAllowDecryptionOfDangerousMessagesMissingMDCKey = @"GMAllowDecryptionOfDangerousMessagesMissingMDC";
+NSString * const kGMShouldNotConvertPGPPartitionedMessagesKey = @"GMShouldNotConvertPGPPartitionedMessagesKey";
 
 int GPGMailLoggingLevel = 0;
 static BOOL gpgMailWorks = NO;
@@ -467,7 +426,7 @@ static BOOL gpgMailWorks = NO;
         _messageRulesApplier = [[GMMessageRulesApplier alloc] init];
         
         [self setAllowDecryptionOfPotentiallyDangerousMessagesWithoutMDC:[[[GPGOptions sharedOptions] valueForKey:@"AllowDecryptionOfPotentiallyDangerousMessagesWithoutMDC"] boolValue]];
-        
+        [self setShouldNotConvertPGPPartitionedMessages:[[[GPGOptions sharedOptions] valueForKey:@"ShouldNotConvertPGPPartitionedMessages"] boolValue]];
         // Start the GPG checker.
         [self startGPGChecker];
         
@@ -493,6 +452,14 @@ static BOOL gpgMailWorks = NO;
 
 - (BOOL)allowDecryptionOfPotentiallyDangerousMessagesWithoutMDC {
     return [[self getIvar:kGMAllowDecryptionOfDangerousMessagesMissingMDCKey] boolValue];
+}
+
+- (void)setShouldNotConvertPGPPartitionedMessages:(BOOL)shouldConvertPGPPartitionedMessages {
+    [self setIvar:kGMShouldNotConvertPGPPartitionedMessagesKey value:@(shouldConvertPGPPartitionedMessages)];
+}
+
+- (BOOL)shouldNotConvertPGPPartitionedMessages {
+    return [[self getIvar:kGMShouldNotConvertPGPPartitionedMessagesKey] boolValue];
 }
 
 - (void)dealloc {
@@ -786,6 +753,14 @@ static BOOL gpgMailWorks = NO;
     return [info isOperatingSystemAtLeastVersion:requiredVersion];
 }
 
++ (BOOL)isMojave {
+    NSProcessInfo *info = [NSProcessInfo processInfo];
+    if(![info respondsToSelector:@selector(isOperatingSystemAtLeastVersion:)])
+        return NO;
+
+    NSOperatingSystemVersion requiredVersion = {10,14,0};
+    return [info isOperatingSystemAtLeastVersion:requiredVersion];
+}
 
 + (BOOL)hasPreferencesPanel {
     // LEOPARD Invoked on +initialize. Else, invoked from +registerBundle.
@@ -847,16 +822,18 @@ static BOOL gpgMailWorks = NO;
     GPGTaskHelperXPC *xpc = [[GPGTaskHelperXPC alloc] init];
     NSDictionary __autoreleasing *activationInfo = nil;
     BOOL hasSupportContract = [xpc validSupportContractAvailableForProduct:@"GPGMail" activationInfo:&activationInfo];
-    NSLog(@"[GPGMail %@]: Support contract is valid? %@", [(GPGMailBundle *)[GPGMailBundle sharedInstance] version], hasSupportContract ? @"YES" : @"NO");
-    NSLog(@"[GPGMail %@]: Activation info: %@", [(GPGMailBundle *)[GPGMailBundle sharedInstance] version], activationInfo);
+//    NSLog(@"[GPGMail %@]: Support contract is valid? %@", [(GPGMailBundle *)[GPGMailBundle sharedInstance] version], hasSupportContract ? @"YES" : @"NO");
+//    NSLog(@"[GPGMail %@]: Activation info: %@", [(GPGMailBundle *)[GPGMailBundle sharedInstance] version], activationInfo);
     return activationInfo;
 }
 
 - (BOOL)hasActiveContract {
-//    NSDictionary *contractInformation = [self contractInformation];
-//    return [contractInformation[@"Active"] boolValue];
-// Removed checking for Active Contract and always return true
-    return true;
+    NSDictionary *contractInformation = [self contractInformation];
+    return [contractInformation[@"Active"] boolValue];
+}
+
+- (BOOL)hasActiveContractOrActiveTrial {
+    return [self hasActiveContract] || [[self remainingTrialDays] integerValue] > 0;
 }
 
 - (NSNumber *)remainingTrialDays {
@@ -874,16 +851,59 @@ static BOOL gpgMailWorks = NO;
     GMSupportPlanAssistantWindowController *supportPlanAssistantWindowController = [[GMSupportPlanAssistantWindowController alloc] initWithSupportPlanActivationInformation:[self contractInformation]];
     supportPlanAssistantWindowController.delegate = self;
     supportPlanAssistantWindowController.contentViewController = supportPlanAssistantViewController;
-    
-    [[[NSApplication sharedApplication] windows][0] beginSheet:[supportPlanAssistantWindowController window]
-                                              completionHandler:^(NSModalResponse returnCode) {}];
+    [[supportPlanAssistantWindowController window] setTitle:@"GPG Mail Support Plan"];
+    [supportPlanAssistantWindowController showWindow:nil];
 
     [self setIvar:@"Window" value:supportPlanAssistantWindowController];
     [self setIvar:@"View" value:supportPlanAssistantViewController];
 }
 
+- (BOOL)shouldShowSupportPlanActivationDialog {
+    if(![self hasActiveContractOrActiveTrial]) {
+        [self saveDateActivationDialogWasLastShown];
+        return YES;
+    }
+    NSDictionary *contractInfo = [self contractInformation];
+    // Trial has never been started?
+    if(![contractInfo valueForKey:@"ActivationRemainingTrialDays"]) {
+        [self saveDateActivationDialogWasLastShown];
+        return YES;
+    }
+    NSDate *date = [[NSUserDefaults standardUserDefaults] objectForKey:@"__gme3_spd_last_shown_date"];
+    if(!date) {
+        [self saveDateActivationDialogWasLastShown];
+        return YES;
+    }
+    // Check if between date now and date last are 3 days.
+
+    NSDate *fromDateTime = date;
+    NSDate *toDateTime = [NSDate date];
+
+    NSDate *fromDate;
+    NSDate *toDate;
+
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+
+    [calendar rangeOfUnit:NSCalendarUnitDay startDate:&fromDate
+                 interval:NULL forDate:fromDateTime];
+    [calendar rangeOfUnit:NSCalendarUnitDay startDate:&toDate
+                 interval:NULL forDate:toDateTime];
+    
+    NSDateComponents *difference = [calendar components:NSCalendarUnitDay
+                                               fromDate:fromDate toDate:toDate options:0];
+    if([difference day] >= 3) {
+        [self saveDateActivationDialogWasLastShown];
+        return YES;
+    }
+    return NO;
+}
+
+- (void)saveDateActivationDialogWasLastShown {
+    [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"__gme3_spd_last_shown_date"];
+}
+
 - (void)checkSupportContractAndStartWizardIfNecessary {
-    if(![self hasActiveContract]) {
+    if(![self hasActiveContract] && [self shouldShowSupportPlanActivationDialog]) {
         [self startSupportContractWizard];
     }
 }
@@ -901,7 +921,10 @@ static BOOL gpgMailWorks = NO;
                 [(GMSupportPlanAssistantWindowController *)windowController activationDidCompleteWithSuccess];
                 NSMutableDictionary *activationInfo = [NSMutableDictionary dictionaryWithDictionary:_activationInfo];
                 [activationInfo setObject:@(YES) forKey:@"Active"];
+                [activationInfo setObject:activationCode forKey:@"ActivationCode"];
+                [activationInfo setObject:email forKey:@"ActivationEmail"];
                 _activationInfo = (NSDictionary *)activationInfo;
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"GMSupportPlanStateChangeNotification" object:self];
             }
             else {
                 [(GMSupportPlanAssistantWindowController *)windowController activationDidFailWithError:finalError];
@@ -921,7 +944,7 @@ static BOOL gpgMailWorks = NO;
 }
 
 - (void)closeSupportPlanAssistant:(NSWindowController *)windowController {
-    [[[NSApplication sharedApplication] windows][0] endSheet:[windowController window]];
+    [windowController close];
 }
 
 

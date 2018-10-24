@@ -402,9 +402,76 @@ BOOL gpgConfigReaded = NO;
     return retVal;
 }
 
+- (GPGMemoryStream *)packetWithSignature:(GPGStream *)signature clearText:(NSData *)clearText {
+	GPGPacketParser *parser = [[[GPGPacketParser alloc] initWithStream:signature] autorelease];
+	GPGSignaturePacket *packet = (GPGSignaturePacket *)[parser nextPacket];
+	
+	if (packet.tag != GPGSignaturePacketTag) {
+		return nil;
+	}
+	
+	uint8 onePassSig[15];
+	onePassSig[0] = 0x90; // One-Pass Signature Packet. Tag 4.
+	onePassSig[1] = 0x0D; // Length.
+	onePassSig[2] = 0x03; // Version 3.
+	onePassSig[3] = (uint8)packet.type;
+	onePassSig[4] = (uint8)packet.hashAlgorithm;
+	onePassSig[5] = (uint8)packet.publicAlgorithm;
+	const char *keyID = packet.keyID.UTF8String;
+	onePassSig[6] = (uint8)hexToByte(keyID);
+	onePassSig[7] = (uint8)hexToByte(keyID+2);
+	onePassSig[8] = (uint8)hexToByte(keyID+4);
+	onePassSig[9] = (uint8)hexToByte(keyID+6);
+	onePassSig[10] = (uint8)hexToByte(keyID+8);
+	onePassSig[11] = (uint8)hexToByte(keyID+10);
+	onePassSig[12] = (uint8)hexToByte(keyID+12);
+	onePassSig[13] = (uint8)hexToByte(keyID+14);
+	onePassSig[14] = 1; // Last of this type.
+	
+	
+	uint8 literal[12];
+	NSUInteger length = clearText.length + 6;
+	literal[0] = 0xCB; // Literal Data Packet. Tag 11.
+	literal[1] = 0xFF; // Length encoded with 4 bytes.
+	literal[2] = (length >> 24) & 0xFF;
+	literal[3] = (length >> 16) & 0xFF;
+	literal[4] = (length >> 8) & 0xFF;
+	literal[5] = length & 0xFF;
+	literal[6] = packet.type == 1 ? 't' : 'b'; // Binary or text.
+	literal[7] = 0; // No filename.
+	literal[8] = 0; // No Date (4 bytes).
+	literal[9] = 0;
+	literal[10] = 0;
+	literal[11] = 0;
+	
+	
+	NSMutableData *packetData = [NSMutableData data];
+	[packetData appendBytes:onePassSig length:15];
+	[packetData appendBytes:literal length:12];
+	[packetData appendData:clearText];
+	[packetData appendData:signature.readAllData];
+	
+	return [GPGMemoryStream memoryStreamForReading:packetData];
+}
+
 - (void)decryptTo:(GPGStream *)output data:(GPGStream *)input {
 	@try {
-		input = [GPGUnArmor unArmor:input];
+		NSData *clearText = nil;
+		input = [GPGUnArmor unArmor:input clearText:&clearText];
+		
+		if (clearText != nil) {
+			// Build a new package for the clear-signed message.
+			// Other possible solutions:
+			// a. Do not unarmor clear-sigend messages. Drawback: Malformed messages can't be nadled.
+			// b. Call verify and set clearText as decrypted content. Verify if this is secure!
+			// c. Use this solution.
+			
+			GPGStream *packet = [self packetWithSignature:input clearText:clearText];
+			if (packet) {
+				input = packet;
+			}
+		}
+		
 		
 		self.gpgTask = [GPGTask gpgTask];
 		[self addArgumentsForOptions];
@@ -721,6 +788,20 @@ BOOL gpgConfigReaded = NO;
 			[cmdText appendFormat:@"Subkey-Length: %i\n", subkeyLength];
 			if(keyType == GPG_RSAAlgorithm || keyType == GPG_ElgamalEncryptOnlyAlgorithm) {
 				[cmdText appendFormat:@"Subkey-Usage: %@\n", @"encrypt"];
+			}
+		}
+		
+		if (comment.length == 0 && name.length > 1) {
+			NSRange firstBracket = [name rangeOfString:@"("];
+			NSRange lastBracket = [name rangeOfString:@")" options:NSBackwardsSearch];
+			
+			if (firstBracket.location != NSNotFound && lastBracket.location != NSNotFound && firstBracket.location < lastBracket.location) {
+				// The Name contains a part between brackets. Append an empty comment so the brackets are not treated as a comment.
+				NSString *append = @"()";
+				if ([name characterAtIndex:name.length - 1] != ' ') {
+					append = @" ()";
+				}
+				name = [name stringByAppendingString:append];
 			}
 		}
 		

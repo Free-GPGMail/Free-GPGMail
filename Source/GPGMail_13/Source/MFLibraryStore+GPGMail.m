@@ -83,7 +83,7 @@ NSString * const kMFLibraryStoreMessageFetchLockMap = @"MFLibraryStoreMessageFet
     // the attachment data from already downloaded attachments, or by re-downloading the complete message.
     BOOL wantsCompleteBodyData = ([[[[NSThread currentThread] threadDictionary] valueForKey:kLibraryMimeBodyReturnCompleteBodyDataKey] boolValue] &&
                                   [[[NSThread currentThread] threadDictionary] valueForKey:kLibraryMimeBodyReturnCompleteBodyDataForMessageKey] == currentMessage) || [[[[NSThread currentThread] threadDictionary] valueForKey:kLibraryMimeBodyReturnCompleteBodyDataForComposeBackendKey] boolValue];
-    BOOL messageIsBeingForceFetched = [[[[NSThread currentThread] threadDictionary] valueForKey:kLibraryMessageDataIsBeingForceFetched] boolValue] && [[currentMessage valueForKey:kLibraryMessageDataIsBeingForceFetched] boolValue];
+    BOOL messageIsBeingForceFetched = [[[[NSThread currentThread] threadDictionary] valueForKey:kLibraryMessageDataIsBeingForceFetched] boolValue] && [[currentMessage getIvar:kLibraryMessageDataIsBeingForceFetched] boolValue];
     // If either wantsCompleteBodyData is not set, or body is NULL, so the Mail call is not interested in
     // the message body data, call the original Mail method.
     // Bug #977: Crash due to endless loop when fetching the raw message from server.

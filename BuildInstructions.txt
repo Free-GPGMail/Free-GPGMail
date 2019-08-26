@@ -11,7 +11,7 @@ make
 3) Build each version of GPGMail
 Change directory to GPGMail_13 and run 
 make
-Rename GPGMail_13/build/Release/GPGMail.mailbundle to GPGMail_14.mailbundle
+Rename GPGMail_13/build/Release/GPGMail.mailbundle to GPGMail_13.mailbundle
 
 Repeat for GPGMail_14
 

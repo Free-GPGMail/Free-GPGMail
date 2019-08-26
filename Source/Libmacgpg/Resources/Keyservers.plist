@@ -2,9 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>hkps://hkps.pool.sks-keyservers.net</string>
-	<string>hkps://keys.gnupg.net</string>
-	<string>hkps://pgp.mit.edu</string>
-	<string>hkp://pgp.uni-mainz.de</string>
+	<string>hkps://keys.openpgp.org</string>
 </array>
 </plist>

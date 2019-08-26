@@ -40,7 +40,7 @@
 	if (self = [super init]) {
 		NSArray *splitedLine = [listing componentsSeparatedByString:@":"];
 		
-		if (splitedLine.count < 2) {
+		if (splitedLine.count < 2 || ![splitedLine[0] isEqualToString:@"uid"]) {
 			[self release];
 			return nil;
 		}

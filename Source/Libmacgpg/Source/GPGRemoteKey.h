@@ -20,30 +20,25 @@
 #import <Libmacgpg/GPGGlobals.h>
 
 
-@interface GPGRemoteKey : NSObject {
-	NSString *fingerprint;
-	GPGPublicKeyAlgorithm algorithm;
-	NSUInteger length;
-	NSDate *creationDate;
-	NSDate *expirationDate;
-	BOOL expired;
-	BOOL revoked;
-	NSArray *userIDs;
-}
+@interface GPGRemoteKey : NSObject
 
 @property (nonatomic, readonly) GPGPublicKeyAlgorithm algorithm;
 @property (nonatomic, readonly) NSUInteger length;
 @property (nonatomic, readonly) BOOL expired;
 @property (nonatomic, readonly) BOOL revoked;
-@property (nonatomic, readonly, retain) NSString *fingerprint;
-@property (nonatomic, readonly, retain) NSString *keyID;
-@property (nonatomic, readonly, retain) NSDate *creationDate;
-@property (nonatomic, readonly, retain) NSDate *expirationDate;
-@property (nonatomic, readonly, retain) NSArray *userIDs;
+@property (nonatomic, readonly) BOOL fromVKS;
+@property (nonatomic, readonly, strong) NSString *fingerprint;
+@property (nonatomic, readonly, strong) NSString *keyID;
+@property (nonatomic, readonly, strong) NSDate *creationDate;
+@property (nonatomic, readonly, strong) NSDate *expirationDate;
+@property (nonatomic, readonly, strong) NSArray *userIDs;
 
 
-+ (NSArray <GPGRemoteKey *> *)keysWithListing:(NSString *)listing;
++ (NSArray<GPGRemoteKey *> *)keysWithListing:(NSString *)listing fromVKS:(BOOL)fromVKS;
++ (NSArray<GPGRemoteKey *> *)keysWithListing:(NSString *)listing;
++ (id)keyWithListing:(NSArray *)listing fromVKS:(BOOL)fromVKS;
 + (id)keyWithListing:(NSArray *)listing;
+- (id)initWithListing:(NSArray *)listing fromVKS:(BOOL)fromVKS;
 - (id)initWithListing:(NSArray *)listing;
 
 @end

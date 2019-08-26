@@ -296,6 +296,12 @@ static NSString * const kExpiredCheckKey = @"__gme3__";
 NSString * const kGMAllowDecryptionOfDangerousMessagesMissingMDCKey = @"GMAllowDecryptionOfDangerousMessagesMissingMDC";
 NSString * const kGMShouldNotConvertPGPPartitionedMessagesKey = @"GMShouldNotConvertPGPPartitionedMessagesKey";
 
+NSString * const kGMSupportPlanAutomaticActivationActivationCodeKey = @"SupportPlanActivationCode";
+NSString * const kGMSupportPlanAutomaticActivationActivationEmailKey = @"SupportPlanActivationEmail";
+
+NSString * const kGMSupportPlanInformationActivationCodeKey = @"ActivationCode";
+NSString * const kGMSupportPlanInformationActivationEmailKey = @"ActivationEmail";
+
 int GPGMailLoggingLevel = 0;
 static BOOL gpgMailWorks = NO;
 
@@ -633,14 +639,21 @@ static BOOL gpgMailWorks = NO;
 #pragma mark Localization Helper
 
 + (NSString *)localizedStringForKey:(NSString *)key {
-    NSBundle *gmBundle = [GPGMailBundle bundle];
-    NSString *localizedString = NSLocalizedStringFromTableInBundle(key, @"GPGMail", gmBundle, @"");
-    // Translation found, out of here.
-    if(![localizedString isEqualToString:key])
-        return localizedString;
+    static dispatch_once_t onceToken;
+    static NSBundle *gmBundle = nil, *englishBundle = nil;
+    dispatch_once(&onceToken, ^{
+        gmBundle = [GPGMailBundle bundle];
+        englishBundle = [NSBundle bundleWithPath:[gmBundle pathForResource:@"en" ofType:@"lproj"]];
+    });
     
-    NSBundle *englishLanguageBundle = [NSBundle bundleWithPath:[gmBundle pathForResource:@"en" ofType:@"lproj"]];
-    return [englishLanguageBundle localizedStringForKey:key value:@"" table:@"GPGMail"];
+    NSString *notFoundValue = @"~#*?*#~";
+    NSString *localizedString = [gmBundle localizedStringForKey:key value:notFoundValue table:@"GPGMail"];
+    if (localizedString == notFoundValue) {
+        // No translation found. Use the english string.
+        localizedString = [englishBundle localizedStringForKey:key value:nil table:@"GPGMail"];
+    }
+
+    return localizedString;
 }
 
 #pragma mark General Infos
@@ -819,6 +832,13 @@ static BOOL gpgMailWorks = NO;
 }
 
 - (NSDictionary *)fetchContractInformation {
+    BOOL simulateExpiredTrial = [[[GPGOptions sharedOptions] valueForKey:@"SimulateExpiredTrial"] boolValue];
+    if(simulateExpiredTrial) {
+        return @{
+                 @"Active": @(NO),
+                 @"ActivationRemainingTrialDays": @(0)
+        };
+    }
     GPGTaskHelperXPC *xpc = [[GPGTaskHelperXPC alloc] init];
     NSDictionary __autoreleasing *activationInfo = nil;
     BOOL hasSupportContract = [xpc validSupportContractAvailableForProduct:@"GPGMail" activationInfo:&activationInfo];
@@ -828,10 +848,8 @@ static BOOL gpgMailWorks = NO;
 }
 
 - (BOOL)hasActiveContract {
-//    NSDictionary *contractInformation = [self contractInformation];
-//    return [contractInformation[@"Active"] boolValue];
-// Removed checking for Active Contract and always return true
-    return true;
+    NSDictionary *contractInformation = [self contractInformation];
+    return [contractInformation[@"Active"] boolValue];
 }
 
 - (BOOL)hasActiveContractOrActiveTrial {
@@ -858,6 +876,11 @@ static BOOL gpgMailWorks = NO;
 
     [self setIvar:@"Window" value:supportPlanAssistantWindowController];
     [self setIvar:@"View" value:supportPlanAssistantViewController];
+
+    if([self hasActivationCodeForAutomaticActivation]) {
+        NSDictionary *supportPlanActivationInformation = [self supportPlanInformationForAutomaticActivation];
+        [supportPlanAssistantWindowController performAutomaticSupportPlanActivationWithActivationCode:supportPlanActivationInformation[kGMSupportPlanInformationActivationCodeKey] email:supportPlanActivationInformation[kGMSupportPlanInformationActivationEmailKey]];
+    }
 }
 
 - (BOOL)shouldShowSupportPlanActivationDialog {
@@ -905,11 +928,37 @@ static BOOL gpgMailWorks = NO;
 }
 
 - (void)checkSupportContractAndStartWizardIfNecessary {
-    if(![self hasActiveContract] && [self shouldShowSupportPlanActivationDialog]) {
-        [self startSupportContractWizard];
+    if(![self hasActiveContract]) {
+        if([self hasActivationCodeForAutomaticActivation] || [self shouldShowSupportPlanActivationDialog]) {
+            [self startSupportContractWizard];
+        }
     }
 }
-             
+
+- (BOOL)hasActivationCodeForAutomaticActivation {
+    return [self supportPlanInformationForAutomaticActivation] != nil;
+}
+
+- (NSDictionary *)supportPlanInformationForAutomaticActivation {
+    NSMutableDictionary *activationInformation = [NSMutableDictionary new];
+    NSString *activationCode = [[GPGOptions sharedOptions] valueForKey:kGMSupportPlanAutomaticActivationActivationCodeKey];
+    NSString *activationEmail = [[GPGOptions sharedOptions] valueForKey:kGMSupportPlanAutomaticActivationActivationEmailKey];
+    if(![activationCode length] || ![activationEmail length]) {
+        return nil;
+    }
+
+    activationInformation[kGMSupportPlanInformationActivationCodeKey] = activationCode;
+    activationInformation[kGMSupportPlanInformationActivationEmailKey] = activationEmail;
+
+    return activationInformation;
+}
+
+- (void *)removeSupportPlanInformationForAutomaticActivation {
+    [[GPGOptions sharedOptions] setValue:nil forKey:kGMSupportPlanAutomaticActivationActivationCodeKey];
+    [[GPGOptions sharedOptions] setValue:nil forKey:kGMSupportPlanAutomaticActivationActivationCodeKey];
+}
+
+
 #pragma mark -
 
 - (void)supportPlanAssistant:(NSWindowController *)windowController email:(NSString *)email activationCode:(NSString *)activationCode {
@@ -927,6 +976,11 @@ static BOOL gpgMailWorks = NO;
                 [activationInfo setObject:email forKey:@"ActivationEmail"];
                 _activationInfo = (NSDictionary *)activationInfo;
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"GMSupportPlanStateChangeNotification" object:self];
+
+                // Remove the info for automatic activation.
+                if([self hasActivationCodeForAutomaticActivation]) {
+                    [self removeSupportPlanInformationForAutomaticActivation];
+                }
             }
             else {
                 [(GMSupportPlanAssistantWindowController *)windowController activationDidFailWithError:finalError];

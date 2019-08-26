@@ -12,7 +12,7 @@ PassphraseLabel = "Пароль:";
 "Expired" = "Истёкший";
 "Disabled" = "Отключенный";
 "Unknown" = "Неизвестный";
-"Never" = "Never";
+"Never" = "Никогда";
 "Marginal" = "Маргинальный";
 "Full" = "Полный";
 "Ultimate" = "Конечный";
@@ -93,39 +93,46 @@ GPG_EdDSAAlgorithm = "EdDSA";
 
 
 /* Key Descriptions */
-KeyDescriptionAndMore = "and %lu more";
+KeyDescriptionAndMore = "и %lu более";
 
 
 /* Key Expiry Warning */
-KeyExpiryWarning_Title = "Warning: Your key is about to expire";
-KeyExpiryWarning_Msg = "Your key will expire on %1$@:\n\n%2$@\n\nExpired keys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this key.\n\nIf you choose to extend your key, it will be valid for two more years.\n\nDo you want to extend your key?";
-KeyExpiryWarning_Yes = "Extend Key";
-KeyExpiryWarning_No = "Cancel";
-KeyExpiryWarning_Suppress = "Do Not Ask Again";
+KeyExpiryWarning_Title = "Внимание: срок действия ключа истекает";
+KeyExpiryWarning_Msg = "Ваш ключ истечёт %1$@:\n\n%2$@\n\nИстекшие ключи не могут использоваться для шифрования или подписывания новых сообщений. Расшифровка будет продолжать работать. С помощью этого ключа ваши друзья не смогут отправлять зашифрованные сообщения.\n\nЕсли вы решите продлить свой ключ, он будет действовать ещё два года.\n\nВы хотите продлить свой ключ?";
+KeyExpiryWarning_Yes = "Продлить ключ";
+KeyExpiryWarning_No = "Отмена";
+KeyExpiryWarning_Suppress = "Не спрашивать снова";
 
-SubkeyExpiryWarning_Title = "Warning: Your subkey is about to expire";
-SubkeyExpiryWarning_Msg = "Your subkey will expire on %1$@:\n\n%2$@\n\nExpired subkeys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this subkey.\n\nIf you choose to extend your subkey, it will be valid for two more years.\n\nDo you want to extend your subkey?";
-SubkeyExpiryWarning_Yes = "Extend Subkey";
-SubkeyExpiryWarning_No = "Cancel";
-SubkeyExpiryWarning_Suppress = "Do Not Ask Again";
+SubkeyExpiryWarning_Title = "Внимание: срок действия subkey истекает";
+SubkeyExpiryWarning_Msg = "Ваш subkey истечёт %1$@:\n\n%2$@\n\nИстекшие subkey не могут использоваться для шифрования или подписывания новых сообщений. Расшифровка будет продолжать работать. С помощью этого subkey ваши друзья не смогут отправлять зашифрованные сообщения.\n\nЕсли вы решите продлить свой subkey, он будет действовать ещё два года.\n\nВы хотите продлить свой subkey?";
+SubkeyExpiryWarning_Yes = "Продлить subkey";
+SubkeyExpiryWarning_No = "Отмена";
+SubkeyExpiryWarning_Suppress = "Не спрашивать снова";
 
-WrongPasswordTryAgain_Title = "You entered the wrong password";
-WrongPasswordTryAgain_Msg = "Do you want to try it again?";
-WrongPasswordTryAgain_Yes = "Try Again";
-WrongPasswordTryAgain_No = "Cancel";
+WrongPasswordTryAgain_Title = "Вы ввели неверный пароль";
+WrongPasswordTryAgain_Msg = "Вы хотите попробовать ещё раз?";
+WrongPasswordTryAgain_Yes = "Попробовать снова";
+WrongPasswordTryAgain_No = "Отмена";
 
-KeyExpiryFailed_Title = "Failed to extend your key!";
-KeyExpiryFailed_Msg = "The key\n%1$@\ncould not be extened.\n\nError: %2$@";
+KeyExpiryFailed_Title = "Не удалось продлить ваш ключ!";
+KeyExpiryFailed_Msg = "Ключ\n%1$@\nне может быть продлён.\nОшибка: %2$@";
 
-KeyExtendedWantToUpload_Title = "Your key was extended successfully";
-KeyExtendedWantToUpload_Msg = "In order for others to be able to see the new expiration date, it is necessary for them to import your updated key. Therefore it is recommended to upload your updated public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please consider attaching your public key to your signed and encrypted emails.\n\nDo you want to upload your public key?";
-KeyExtendedWantToUpload_Yes = "Upload Public Key";
-KeyExtendedWantToUpload_No = "No, Thanks!";
+KeyExtendedWantToUpload_Title = "Ваш ключ был успешно продлён";
+KeyExtendedWantToUpload_Msg = "Для того, чтобы другие могли видеть новую дату истечения срока действия, им необходимо импортировать обновлённый ключ. Поэтому рекомендуется выгружать обновлённый открытый ключ на серверы ключей.\n\nВнимание: серверы ключей являются общедоступными, поэтому имя и адрес электронной почты, которые вы используете в своем ключе, будут общедоступны. Ключи не могут быть удалены с серверов ключей. Они могут быть отозваны, но не удалены.\n\nЕсли вы предпочитаете не использовать серверы ключей, то рассмотрите возможность добавления открытого ключа в подписанные и зашифрованные электронные письма.\n\nВы хотите выгрузить свой открытый ключ?";
+KeyExtendedWantToUpload_Yes = "Выгрузить открытый ключ";
+KeyExtendedWantToUpload_No = "Нет, спасибо!";
 
-UploadFailed_Title = "Failed to upload the key!";
-UploadFailed_Msg = "The key could not be uploaded to the keyserver.\n\nError: %@";
+UploadFailed_Title = "Не удалось выгрузить ключ!";
+UploadFailed_Msg = "Ключ нельзя выгрузить на сервер ключей.\n\nОшибка: %@";
 
 
 UpdaterNotWorking_Title = "GPG Suite Updater не работает должным образом!";
 UpdaterNotWorking_Msg = "Пожалуйста, скачайте и переустановите GPG Suite с https://gpgtools.org";
+
+
+SwitchToOldKeyserver_Title = "Предупреждение. Вы собираетесь переключить сервер ключей.";
+SwitchToOldKeyserver_Msg = "Переключение на старые серверы ключей приведёт к снижению качества результатов поиска. Хотя keys.openpgp.org позволяет проверять адрес электронной почты и только тогда будет показывать электронную почту в результатах поиска, старые серверы ключей не поддерживают этот механизм.\n\nМы рекомендуем продолжать использовать keys.openpgp.org\n\nВы действительно хотите переключить сервер ключей?";
+SwitchToOldKeyserver_No = "Отмена";
+SwitchToOldKeyserver_Yes = "Переключиться на старый сервер ключей";
+
 

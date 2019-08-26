@@ -245,6 +245,10 @@ static id syncRoot = nil;
         filesToWatch = [[NSDictionary alloc] initWithObjectsAndKeys:
                         GPGKeysChangedNotification, @"pubring.gpg", 
                         GPGKeysChangedNotification, @"secring.gpg",
+						GPGKeysChangedNotification, @"pubring.kbx",
+						GPGKeysChangedNotification, @"private-keys-v1.d",
+						GPGKeysChangedNotification, @"trustdb.gpg",
+						GPGKeysChangedNotification, @"tofu.db",
                         GPGConfigurationModifiedNotification, @"gpg.conf",
 						GPGConfigurationModifiedNotification, @"gpg-agent.conf",
 						GPGConfigurationModifiedNotification, @"dirmngr.conf",

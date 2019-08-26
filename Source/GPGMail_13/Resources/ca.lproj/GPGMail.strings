@@ -2,7 +2,7 @@
 "VERSION: %@" = "Versió: %@";
 
 /* PGP preferences panel name */
-"PGP_PREFERENCES" = "GPGMail";
+"PGP_PREFERENCES" = "GPG Mail";
 
 /* Message Error Banner messages. */
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_TITLE" = "No s'ha pogut desxifrar el missatge PGP.";
@@ -144,8 +144,8 @@
 "MESSAGE_VIEW_PGP_PART_SIGNED" = "Signat";
 "MESSAGE_VIEW_PGP_PART" = "Part de PGP";
 
-/* GPGMail Preferences strings. */
-"GPG_STATUS_NO_ERROR_TITLE" = "GPGMail ready";
+/* GPG Mail Preferences strings. */
+"GPG_STATUS_NO_ERROR_TITLE" = "El GPG Mail està llest.";
 "GPG_STATUS_NOT_FOUND_TITLE" = "MacGPG not found, reinstall GPG Suite";
 "GPG_STATUS_NOT_FOUND_TOOLTIP" = "Click indicator bubble for further information";
 "GPG_STATUS_OTHER_ERROR_TITLE" = "Problems found, click indicator bubble for more info";
@@ -157,9 +157,9 @@
 "DISABLE_ENCRYPT_DRAFTS_CANCEL" = "Cancel·la";
 
 
-/* Multiple GPGMail installations. */
-"GPGMAIL_MULTIPLE_INSTALLATIONS_TITLE" = "S'han trobat diverses instal·lacions del GPGMail!";
-"GPGMAIL_MULTIPLE_INSTALLATIONS_MESSAGE" = "El GPGMail ha detectat diverses instal·lacions en les ubicacions següents, que donarà lloc a un error de manera immediata:\n\n%@\n\nSuprimiu el GPGMail.mailbundle d'una de les ubicacions i reinicieu el Mail.";
+/* Multiple GPG Mail installations. */
+"GPGMAIL_MULTIPLE_INSTALLATIONS_TITLE" = "S'han trobat diverses instal·lacions del GPG Mail!";
+"GPGMAIL_MULTIPLE_INSTALLATIONS_MESSAGE" = "El GPG Mail ha detectat diverses instal·lacions en les ubicacions següents, que donarà lloc a un error de manera immediata:\n\n%@\n\nSuprimiu el GPGMail.mailbundle d'una de les ubicacions i reinicieu el Mail.";
 "GPGMAIL_MULTIPLE_INSTALLATIONS_BUTTON" = "Tanca el Mail";
 
 /* No Libmacgpg. */
@@ -167,12 +167,12 @@
 "LIBMACGPG_NOT_FOUND_MESSAGE" = "No s'ha trobat el Libmacgpg al vostre sistema. Baixeu i instal·leu el GPG Suite des de https://www.gpgtools.org.";
 
 /* Code signature invalid */
-CODE_SIGN_ERROR_TITLE = "Algú ha manipulat la instal·lació de GPGMail!";
-CODE_SIGN_ERROR_MESSAGE = "Per a mantenir-vos segur, el GPGMail no es carregarà!\n\nReinstal·leu el GPG Suite des de https://gpgtools.org per assegurar-vos que teniu una versió original nostra!";
+CODE_SIGN_ERROR_TITLE = "Algú ha manipulat la instal·lació de GPG Mail!";
+CODE_SIGN_ERROR_MESSAGE = "Per a mantenir-vos segur, el GPG Mail no es carregarà!\n\nReinstal·leu el GPG Suite des de https://gpgtools.org per assegurar-vos que teniu una versió original nostra!";
 
 /* GPGMailGPGMailBundle.defaults can't be loaded */
-NO_DEFAULTS_TITLE = "No s'ha carregat la configuració predeterminada de GPGMail!";
-NO_DEFAULTS_MESSAGE = "El GPG Suite no funciona com deuria.\n\nBaixeu i reinstal·leu GPG Suite des de https://gpgtools.org\n\nSi el problema continua, contacteu amb nosaltres a https://gpgtools.tenderapp.com/.";
+NO_DEFAULTS_TITLE = "No s'ha carregat la configuració predeterminada de GPG Mail!";
+NO_DEFAULTS_MESSAGE = "El GPG Mail no funciona com deuria.\n\nBaixeu i reinstal·leu GPG Suite des de https://gpgtools.org\n\nSi el problema continua, contacteu amb nosaltres a https://gpgtools.tenderapp.com/.";
 
 /* Errors while trying to sign a message. */
 "MESSAGE_SIGNING_ERROR_NO_PINENTRY_TITLE" = "La signatura del missatge ha fallat perquè un pinentry s'ha fet malbé!";
@@ -185,10 +185,10 @@ NO_DEFAULTS_MESSAGE = "El GPG Suite no funciona com deuria.\n\nBaixeu i reinstal
 "MESSAGE_SIGNING_ERROR_AGENT_ERROR_DESCRIPTION" = "És impossible contactar amb l'agent GPG per a sol·licitar la contrasenya.\n\nPer a corregir el problema, reinstal·leu GPG Suite des de https://gpgtools.org.";
 
 "MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_TITLE" = "El missatge no s'ha signat perquè ha ocorregut un error desconegut";
-"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Malauradament, no podem gestionar l'error en aquest punt.";
+"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Malauradament, el GPG Mail no pot gestionar l'error en aquest punt.";
 
 "MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_TITLE" = "El xifratge del missatge ha fallat perquè hi hagut un error desconegut";
-"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Malauradament, el GPGMail no pot gestionar l'error en aquest punt.";
+"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Malauradament, el GPG Mail no pot gestionar l'error en aquest punt.";
 
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_TITLE" = "Heu introduït incorrectament la contrasenya massa vegades.";
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_DESCRIPTION" = "La signatura del missatge s'ha avortat perquè heu introduït incorrectament la contrasenya 3 vegades.";
@@ -216,7 +216,7 @@ NO_DEFAULTS_MESSAGE = "El GPG Suite no funciona com deuria.\n\nBaixeu i reinstal
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_TITLE" = "Ha fallat la signatura del missatge per un problema durant la sol·licitud de contrasenya";
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "El pinentry, l'eina responsable de demanar la contrasenya, sembla que s'ha fet malbé.\n\nPer a corregir el problema, reinstal·leu el GPG Suite des de https://gpgtools.org.";
 
-"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "La signatura del missatges ha fallat perquè hi ha un problema en la instal·lació del GPGMail.";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "La signatura del missatges ha fallat perquè hi ha un problema en la instal·lació del GPG Mail.";
 "MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Per a corregir el problema, reinstal·leu el GPG Suite des de https://gpgtools.org.\n\nSi el problema persisteix, contacteu amb nosaltres a https://gpgtools.tenderapp.com/ i inclogueu la informació relacionada amb el mal funcionament del servei xpc.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Ha fallat el desxifratge del missatge perquè un pinentry no funciona";
@@ -260,4 +260,39 @@ NO_DEFAULTS_MESSAGE = "El GPG Suite no funciona com deuria.\n\nBaixeu i reinstal
 ACCESSIBILITY_SECURITY_METHOD_POPUP_LABEL = "Mètode de seguretat: %@";
 ACCESSIBILITY_SIGN_ON_IMAGE = "Signa";
 ACCESSIBILITY_SIGN_OFF_IMAGE = "No ho signes";
+
+
+
+/* Support Plan */
+"SUPPORT_PLAN_ACTIVATION_SUCCESS_TITLE" = "Support Plan Activated";
+"SUPPORT_PLAN_ACTIVATION_SUCCESS_MESSAGE" = "Thank you for your support!\n\nWe hope you enjoy using GPG Mail. Should you have any questions, don't hesitate to contact us via \"Report Problem\" in Mail › Preferences › GPG Mail";
+"SUPPORT_PLAN_ACTIVATION_FAILED_TITLE" = "Support Plan Activation Failed";
+"SUPPORT_PLAN_ACTIVATION_FAILED_INPUT_INVALID" = "The entered activation code is invalid. Please check the entered information and try again.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_CONNECTTION_ERROR" = "We were unable to connect to the paddle.com API to verify your activation code.\nIf you are using any macOS firewall product (buil-in firewall, Little Snitch, etc.), please allow connections to paddle.com for the activation to complete. You can block any connections again once the activation is completed.\n\nPlease contact us at business@gpgtools.org if the problem persists.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_CODE_INVALID" = "The entered activation code is invalid.\nPlease contact us at business@gpgtools.org if you are sure that you have entered your code correctly.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS" = "We are very sorry to inform you that you have exceeded the allowed number of activations.\nPlease contact us at business@gpgtools.org, if you believe that you should still have activations left.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_GENERAL_ERROR" = "Unfortunately an unknown error has occurred. Please retry later or use 'System Preferences › GPG Suite › Send Report' to contact us";
+"SUPPORT_PLAN_HEADER_EXPIRED" = "Your 30-day-trial of GPG Mail has expired. Encrypting, signing and verifying messages will stop to work. Decrypting however will always continue to work.\nPurchase GPG Mail Support Plan to continue with full functionality.";
+"SUPPORT_PLAN_HEADER_TRIAL" = "You can test GPG Mail free for %@ days.\nSecure your emails now!";
+"SUPPORT_PLAN_HEADER_TRIAL_MORE" = "You can test GPG Mail free for %@ more days.\nSecure your emails now!";
+"SUPPORT_PLAN_DETAILS_MESSAGE" = "If you have already purchased a support plan, activate it now and enjoy GPG Mail!";
+"SUPPORT_PLAN_DETAILS_MESSAGE_HYPERLINK_PART" = "support plan";
+"SUPPORT_PLAN_BUY" = "Buy Now";
+"SUPPORT_PLAN_CLOSE" = "Continue";
+"SUPPORT_PLAN_CONTINUE_TRIAL"= "Continue Trial";
+"SUPPORT_PLAN_START_TRIAL" = "Start Trial";
+"SUPPORT_PLAN_BUY" = "Buy Now";
+"SUPPORT_PLAN_ACTIVATE" = "Activate";
+"SUPPORT_PLAN_TRIAL_EXPIRED_TITLE" = "GPG Mail Trial Expired";
+"SUPPORT_PLAN_TRIAL_EXPIRED_MESSAGE" = "Without an active GPG Mail Support Plan you will still be able to read any of your encrypted emails. However, you will no longer be able to sign, encrypt or verify emails.";
+"SUPPORT_PLAN_HEADER_WELCOME" = "Welcome to GPG Mail";
+"SUPPORT_PLAN_EMAIL_LABEL" = "Email";
+"SUPPORT_PLAN_LICENSE_LABEL" = "Activation Code";
+"SUPPORT_PLAN_GRAY_INFO" = "Your activation code can be found in the email you receive after completing your purchase.";
+"SUPPORT_PLAN_PROGRESS_LABEL" = "Activating your copy of GPG Mail";
+
+
+
+
+
 

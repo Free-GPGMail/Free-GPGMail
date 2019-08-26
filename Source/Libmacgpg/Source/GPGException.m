@@ -1,5 +1,6 @@
 #import "GPGException.h"
 #import "GPGTask.h"
+#import "GPGGlobals.h"
 #import <dlfcn.h>
 
 @interface GPGException ()

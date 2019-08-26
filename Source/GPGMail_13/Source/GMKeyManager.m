@@ -93,18 +93,48 @@ publicKeyMap = _publicKeyMap, groups = _groups, allSecretKeys = _allSecretKeys, 
 	
 	// The best match would be the public key of on of our secret keys, with address
 	// as UID.
-    if(address) {
+    NSMutableArray *keys = [NSMutableArray new];
+    if([address length] != 0) {
         for(key in [self publicKeyListForAddresses:@[address]]) {
-            if(key.secret)
-                break;
+            if(key.secret && key.canAnyEncrypt) {
+                [keys addObject:key];
+            }
         }
     }
+
+    // If more than one key has been found, check if the preferred key for signing
+    // is defined and if it matches one of the keys in the list, use that key.
+    GPGKey *preferredKey = [[GPGMailBundle sharedInstance] preferredGPGKeyForSigning];
+    if([keys count] > 0) {
+        for(key in keys) {
+            if([key isEqualTo:preferredKey]) {
+                break;
+            }
+        }
+
+        // Preferred key not in the list, pick the first matching key.
+        if(![preferredKey isEqualTo:key]) {
+            key = keys[0];
+        }
+    }
+
+    // No key was found, check if the preferred key is usable.
+	if(!key) {
+        if(preferredKey.canAnyEncrypt) {
+            key = preferredKey;
+        }
+    }
+
+    // If we don't find a key, any of our secret public key's will do.
+    if(!key) {
+        key = [[self secretKeys] anyObject];
+    }
+
+    if(key.canAnyEncrypt) {
+        return key.primaryKey;
+    }
 	
-	// If we don't find a key, any of our secret public key's will do.
-	if(!key)
-		key = [[self secretKeys] anyObject];
-	
-	return key.primaryKey;
+	return nil;
 }
 
 - (BOOL)secretKeyExistsForAddress:(NSString *)address {

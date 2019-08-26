@@ -12,7 +12,7 @@ PassphraseLabel = "Senha:";
 "Expired" = "Vencida";
 "Disabled" = "Desativada";
 "Unknown" = "Desconhecida";
-"Never" = "Never";
+"Never" = "Nunca";
 "Marginal" = "Questionável";
 "Full" = "Total";
 "Ultimate" = "Fundamental";
@@ -93,39 +93,46 @@ GPG_EdDSAAlgorithm = "EdDSA";
 
 
 /* Key Descriptions */
-KeyDescriptionAndMore = "and %lu more";
+KeyDescriptionAndMore = "e mais %lu";
 
 
 /* Key Expiry Warning */
-KeyExpiryWarning_Title = "Warning: Your key is about to expire";
-KeyExpiryWarning_Msg = "Your key will expire on %1$@:\n\n%2$@\n\nExpired keys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this key.\n\nIf you choose to extend your key, it will be valid for two more years.\n\nDo you want to extend your key?";
-KeyExpiryWarning_Yes = "Extend Key";
-KeyExpiryWarning_No = "Cancel";
-KeyExpiryWarning_Suppress = "Do Not Ask Again";
+KeyExpiryWarning_Title = "Aviso: sua chave está prestes a expirar";
+KeyExpiryWarning_Msg = "A chave expirará em %1$@:\n\n%2$@\n\nChaves expiradas não podem ser usadas para criptografar ou assinar novas mensagens. A descriptografia continuará funcionando. Seus amigos não poderão mais usar esta chave para enviar mensagens criptografadas.\n\nCaso opte por prorrogar a chave, ela será válida por mais dois anos.\n\nDeseja prorrogar a chave?";
+KeyExpiryWarning_Yes = "Prorrogar Chave";
+KeyExpiryWarning_No = "Cancelar";
+KeyExpiryWarning_Suppress = "Não Perguntar Novamente";
 
-SubkeyExpiryWarning_Title = "Warning: Your subkey is about to expire";
-SubkeyExpiryWarning_Msg = "Your subkey will expire on %1$@:\n\n%2$@\n\nExpired subkeys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this subkey.\n\nIf you choose to extend your subkey, it will be valid for two more years.\n\nDo you want to extend your subkey?";
-SubkeyExpiryWarning_Yes = "Extend Subkey";
-SubkeyExpiryWarning_No = "Cancel";
-SubkeyExpiryWarning_Suppress = "Do Not Ask Again";
+SubkeyExpiryWarning_Title = "Aviso: sua subchave está prestes a expirar";
+SubkeyExpiryWarning_Msg = "A subchave expirará em %1$@:\n\n%2$@\n\nSubchaves expiradas não podem ser usadas para criptografar ou assinar novas mensagens. A descriptografia continuará funcionando. Seus amigos não poderão mais usar esta subchave para enviar mensagens criptografadas.\n\nCaso opte por prorrogar a subchave, ela será válida por mais dois anos.\n\nDeseja prorrogar a subchave?";
+SubkeyExpiryWarning_Yes = "Prorrogar Subchave";
+SubkeyExpiryWarning_No = "Cancelar";
+SubkeyExpiryWarning_Suppress = "Não Perguntar Novamente";
 
-WrongPasswordTryAgain_Title = "You entered the wrong password";
-WrongPasswordTryAgain_Msg = "Do you want to try it again?";
-WrongPasswordTryAgain_Yes = "Try Again";
-WrongPasswordTryAgain_No = "Cancel";
+WrongPasswordTryAgain_Title = "Você digitou a senha errada";
+WrongPasswordTryAgain_Msg = "Deseja tentar novamente?";
+WrongPasswordTryAgain_Yes = "Tentar Novamente";
+WrongPasswordTryAgain_No = "Cancelar";
 
-KeyExpiryFailed_Title = "Failed to extend your key!";
-KeyExpiryFailed_Msg = "The key\n%1$@\ncould not be extened.\n\nError: %2$@";
+KeyExpiryFailed_Title = "Falha ao prorrogar a chave";
+KeyExpiryFailed_Msg = "A chave\n%1$@\nnão pôde ser prorrogada.\n\nErro: %2$@";
 
-KeyExtendedWantToUpload_Title = "Your key was extended successfully";
-KeyExtendedWantToUpload_Msg = "In order for others to be able to see the new expiration date, it is necessary for them to import your updated key. Therefore it is recommended to upload your updated public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please consider attaching your public key to your signed and encrypted emails.\n\nDo you want to upload your public key?";
-KeyExtendedWantToUpload_Yes = "Upload Public Key";
-KeyExtendedWantToUpload_No = "No, Thanks!";
+KeyExtendedWantToUpload_Title = "A chave foi prorrogada corretamente";
+KeyExtendedWantToUpload_Msg = "Para que outras pessoas possam ver o vencimento novo, é preciso que elas importem a sua chave atualizada. Para isso, é recomendável enviar a sua chave pública atualizada aos servidores.\n\nAviso: pelos servidores serem públicos, o nome e o e-mail usados na chave poderão ser vistos publicamente. As chaves não poderão ser apagadas dos servidores de chaves, pois embora possam ser revogadas, elas não podem ser removidas.\n\nCaso prefira não usar servidores de chaves, anexe a sua chave pública ao enviar e-mails assinados e criptografados.\n\nDeseja enviar a chave pública atualizada?";
+KeyExtendedWantToUpload_Yes = "Enviar Chave Pública";
+KeyExtendedWantToUpload_No = "Não Enviar";
 
-UploadFailed_Title = "Failed to upload the key!";
-UploadFailed_Msg = "The key could not be uploaded to the keyserver.\n\nError: %@";
+UploadFailed_Title = "Falha ao enviar a chave";
+UploadFailed_Msg = "A chave não pôde ser enviada para o servidor.\n\nErro: %@";
 
 
 UpdaterNotWorking_Title = "O atualizador da GPG Suite não está funcionando devidamente!";
 UpdaterNotWorking_Msg = "Transfira e reinstale a GPG Suite de https://gpgtools.org.";
+
+
+SwitchToOldKeyserver_Title = "Aviso: você está prestes a mudar o servidor de chaves";
+SwitchToOldKeyserver_Msg = "A qualidade dos resultados da busca será reduzida ao mudar para o servidor de chaves antigo. Enquanto “keys.openpgpg.org” permite a verificação do endereço de e‑mail para somente depois mostrar o e‑mail nos resultados da busca, os servidores antigos não são compatíveis com esse mecanismo.\n\nÉ recomendável continuar usando “keys.openpgpg.org”\n\nDeseja realmente mudar o servidor de chaves?";
+SwitchToOldKeyserver_No = "Cancelar";
+SwitchToOldKeyserver_Yes = "Mudar para Servidor Antigo";
+
 

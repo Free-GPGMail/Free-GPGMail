@@ -37,22 +37,12 @@
 
 + (GPGMAIL_SECURITY_METHOD)defaultSecurityMethod;
 
-- (GMSecurityOptions *)bestSecurityOptionsForSender:(NSString *)sender recipients:(NSArray *)recipients signFlags:(GPGMAIL_SIGN_FLAG)signFlags 
-                                     encryptFlags:(GPGMAIL_ENCRYPT_FLAG)encryptFlags;
+- (GMSecurityOptions *)securityOptionsFromDefaults;
+
+- (GMSecurityOptions *)bestSecurityOptionsForSignFlags:(GPGMAIL_SIGN_FLAG)signFlags
+                                          encryptFlags:(GPGMAIL_ENCRYPT_FLAG)encryptFlags;
 - (GMSecurityOptions *)bestSecurityOptionsForReplyToMessage:(MCMessage *)message signFlags:(GPGMAIL_SIGN_FLAG)signFlags
                                                encryptFlags:(GPGMAIL_ENCRYPT_FLAG)encryptFlags;
-- (GMSecurityOptions *)bestSecurityOptionsForMessageDraft:(MCMessage *)message signFlags:(GPGMAIL_SIGN_FLAG)signFlags
-											 encryptFlags:(GPGMAIL_ENCRYPT_FLAG)encryptFlags;
-- (GMSecurityOptions *)bestSecurityOptionsForSender:(NSString *)sender recipients:(NSArray *)recipients securityMethod:(GPGMAIL_SECURITY_METHOD)securityMethod
-                                            canSign:(BOOL)canSign canEncrypt:(BOOL)canEncrypt;
-
-- (GMSecurityOptions *)_getSignAndEncryptOptionsForSender:(NSString *)sender recipients:(NSSet *)recipients securityMethod:(GPGMAIL_SECURITY_METHOD)securityMethod 
-                                                  canSign:(BOOL)canSign canEncrypt:(BOOL)canEncrypt;
-
-+ (NSSet *)_uniqueRecipients:(NSArray *)recipients;
-
-+ (void)addEntryForSender:(NSString *)sender recipients:(NSArray *)recipients securityMethod:(GPGMAIL_SECURITY_METHOD)securityMethod
-                  didSign:(BOOL)didSign didEncrypt:(BOOL)didEncrypt;
 
 @end
 
@@ -68,19 +58,5 @@
 @property (nonatomic, assign, readonly) GPGMAIL_SECURITY_METHOD securityMethod;
 @property (nonatomic, assign, readonly) BOOL shouldSign;
 @property (nonatomic, assign, readonly) BOOL shouldEncrypt;
-
-@end
-
-@interface GMSecurityHistoryStore : NSObject {
-    NSDictionary *_securityOptionsHistory;
-    NSString *_storePath;
-}
-
-- (id)initWithHistoryFile:(NSString *)historyFile;
-- (void)openHistoryStoreAtPath:(NSString *)historyFile;
-- (void)saveHistory:(NSDictionary *)history;
-+ (GMSecurityHistoryStore *)sharedInstance;
-
-@property (nonatomic, strong, readonly) NSDictionary *securityOptionsHistory;
 
 @end

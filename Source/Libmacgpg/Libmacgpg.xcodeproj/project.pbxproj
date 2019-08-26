@@ -122,6 +122,8 @@
 		30A48E8F1B4C1344006AD363 /* GPGSignaturePacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A48E8D1B4C1344006AD363 /* GPGSignaturePacket.m */; };
 		30A70EE513EF328000EE9CD9 /* GPGException.h in Headers */ = {isa = PBXBuildFile; fileRef = 30A70EE313EF328000EE9CD9 /* GPGException.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30A70EE613EF328000EE9CD9 /* GPGException.m in Sources */ = {isa = PBXBuildFile; fileRef = 30A70EE413EF328000EE9CD9 /* GPGException.m */; };
+		30AC724022C0FBA7009CE792 /* GPGVerifyingKeyserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 30AC723E22C0FBA7009CE792 /* GPGVerifyingKeyserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30AC724122C0FBA7009CE792 /* GPGVerifyingKeyserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AC723F22C0FBA7009CE792 /* GPGVerifyingKeyserver.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		30B11EE120C91643006D333D /* NoMDC.gpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B11EDF20C91642006D333D /* NoMDC.gpg */; };
 		30B570931C6E250700F68EEB /* sks-keyservers.netCA.der in Resources */ = {isa = PBXBuildFile; fileRef = 30B570921C6E250700F68EEB /* sks-keyservers.netCA.der */; };
 		30B586F5141E255C000373F1 /* Keyservers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30B586F4141E255C000373F1 /* Keyservers.plist */; };
@@ -161,6 +163,7 @@
 		30ECA95A1FBF4AE100C00279 /* Unarmor_UnicodeDashes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 30ECA9581FBF4AE100C00279 /* Unarmor_UnicodeDashes.txt */; };
 		30F45A8C1CE0B5F600D2B42D /* GPGUpdateController.h in Headers */ = {isa = PBXBuildFile; fileRef = 30F45A8A1CE0B5F600D2B42D /* GPGUpdateController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30F45A8D1CE0B5F600D2B42D /* GPGUpdateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F45A8B1CE0B5F600D2B42D /* GPGUpdateController.m */; };
+		30F5B79F22F195440029FFEB /* sks-keyservers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30F5B79E22F195440029FFEB /* sks-keyservers.plist */; };
 		30FF413712FAC6CD00F39832 /* GPGController.h in Headers */ = {isa = PBXBuildFile; fileRef = 30FF411D12FAC6CD00F39832 /* GPGController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30FF413812FAC6CD00F39832 /* GPGController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FF411E12FAC6CD00F39832 /* GPGController.m */; };
 		30FF413B12FAC6CD00F39832 /* GPGGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = 30FF412112FAC6CD00F39832 /* GPGGlobals.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -170,7 +173,7 @@
 		30FF413F12FAC6CD00F39832 /* GPGUserIDSignature.h in Headers */ = {isa = PBXBuildFile; fileRef = 30FF412512FAC6CD00F39832 /* GPGUserIDSignature.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30FF414012FAC6CD00F39832 /* GPGUserIDSignature.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FF412612FAC6CD00F39832 /* GPGUserIDSignature.m */; };
 		30FF414312FAC6CD00F39832 /* GPGRemoteKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 30FF412912FAC6CD00F39832 /* GPGRemoteKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		30FF414412FAC6CD00F39832 /* GPGRemoteKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FF412A12FAC6CD00F39832 /* GPGRemoteKey.m */; };
+		30FF414412FAC6CD00F39832 /* GPGRemoteKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FF412A12FAC6CD00F39832 /* GPGRemoteKey.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		30FF414512FAC6CD00F39832 /* GPGRemoteUserID.h in Headers */ = {isa = PBXBuildFile; fileRef = 30FF412B12FAC6CD00F39832 /* GPGRemoteUserID.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30FF414612FAC6CD00F39832 /* GPGRemoteUserID.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FF412C12FAC6CD00F39832 /* GPGRemoteUserID.m */; };
 		30FF414712FAC6CD00F39832 /* GPGSignature.h in Headers */ = {isa = PBXBuildFile; fileRef = 30FF412D12FAC6CD00F39832 /* GPGSignature.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -403,6 +406,8 @@
 		30A48E8D1B4C1344006AD363 /* GPGSignaturePacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = GPGSignaturePacket.m; path = GPGPacket/GPGSignaturePacket.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		30A70EE313EF328000EE9CD9 /* GPGException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGException.h; sourceTree = "<group>"; };
 		30A70EE413EF328000EE9CD9 /* GPGException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGException.m; sourceTree = "<group>"; };
+		30AC723E22C0FBA7009CE792 /* GPGVerifyingKeyserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPGVerifyingKeyserver.h; sourceTree = "<group>"; };
+		30AC723F22C0FBA7009CE792 /* GPGVerifyingKeyserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPGVerifyingKeyserver.m; sourceTree = "<group>"; };
 		30B11EDF20C91642006D333D /* NoMDC.gpg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NoMDC.gpg; sourceTree = "<group>"; };
 		30B570921C6E250700F68EEB /* sks-keyservers.netCA.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sks-keyservers.netCA.der"; sourceTree = "<group>"; };
 		30B586F4141E255C000373F1 /* Keyservers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keyservers.plist; sourceTree = "<group>"; };
@@ -440,6 +445,7 @@
 		30ECA9581FBF4AE100C00279 /* Unarmor_UnicodeDashes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Unarmor_UnicodeDashes.txt; sourceTree = "<group>"; };
 		30F45A8A1CE0B5F600D2B42D /* GPGUpdateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGUpdateController.h; sourceTree = "<group>"; };
 		30F45A8B1CE0B5F600D2B42D /* GPGUpdateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGUpdateController.m; sourceTree = "<group>"; };
+		30F5B79E22F195440029FFEB /* sks-keyservers.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sks-keyservers.plist"; sourceTree = "<group>"; };
 		30FF411D12FAC6CD00F39832 /* GPGController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGController.h; sourceTree = "<group>"; };
 		30FF411E12FAC6CD00F39832 /* GPGController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGController.m; sourceTree = "<group>"; };
 		30FF412112FAC6CD00F39832 /* GPGGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGGlobals.h; sourceTree = "<group>"; };
@@ -589,6 +595,7 @@
 			children = (
 				30516556142281270038AAF0 /* Localizable.strings */,
 				30B586F4141E255C000373F1 /* Keyservers.plist */,
+				30F5B79E22F195440029FFEB /* sks-keyservers.plist */,
 				8DC2EF5A0486A6940098B216 /* Info.plist */,
 				30D68BC41B4FF5D500F7865C /* COPYING.pgpdump */,
 				30B570921C6E250700F68EEB /* sks-keyservers.netCA.der */,
@@ -605,6 +612,7 @@
 				301D291A1B4BE47100599BE8 /* GPGPacket */,
 				306C73821B45B0F200A34730 /* GPGStream */,
 				30BE73D51B5405B7001A2137 /* GPGTask */,
+				30E7EAC4230A9AFF009DA1D5 /* Keyserver */,
 				30C60EEE12FF3321006BB8DA /* Libmacgpg.h */,
 				30FF411D12FAC6CD00F39832 /* GPGController.h */,
 				30FF411E12FAC6CD00F39832 /* GPGController.m */,
@@ -624,10 +632,6 @@
 				3048830E1462B22000F2E5F4 /* GPGWatcher.m */,
 				304883091462B11700F2E5F4 /* DirectoryWatcher.h */,
 				3048830A1462B11700F2E5F4 /* DirectoryWatcher.m */,
-				301D5D9D178C9871003026E7 /* GPGKeyserver.h */,
-				301D5D9E178C9871003026E7 /* GPGKeyserver.m */,
-				309D8A101B87469B00D945BA /* GPGKeyFetcher.h */,
-				309D8A111B87469B00D945BA /* GPGKeyFetcher.m */,
 				30F45A8A1CE0B5F600D2B42D /* GPGUpdateController.h */,
 				30F45A8B1CE0B5F600D2B42D /* GPGUpdateController.m */,
 				30E38DC91E448655001AC933 /* NSBundle+GPGLocalization.h */,
@@ -913,6 +917,19 @@
 			name = GPGTask;
 			sourceTree = "<group>";
 		};
+		30E7EAC4230A9AFF009DA1D5 /* Keyserver */ = {
+			isa = PBXGroup;
+			children = (
+				301D5D9D178C9871003026E7 /* GPGKeyserver.h */,
+				301D5D9E178C9871003026E7 /* GPGKeyserver.m */,
+				30AC723E22C0FBA7009CE792 /* GPGVerifyingKeyserver.h */,
+				30AC723F22C0FBA7009CE792 /* GPGVerifyingKeyserver.m */,
+				309D8A101B87469B00D945BA /* GPGKeyFetcher.h */,
+				309D8A111B87469B00D945BA /* GPGKeyFetcher.m */,
+			);
+			name = Keyserver;
+			sourceTree = "<group>";
+		};
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -992,6 +1009,7 @@
 				30F45A8C1CE0B5F600D2B42D /* GPGUpdateController.h in Headers */,
 				301D5D9F178C9871003026E7 /* GPGKeyserver.h in Headers */,
 				30E38DCB1E448655001AC933 /* NSBundle+GPGLocalization.h in Headers */,
+				30AC724022C0FBA7009CE792 /* GPGVerifyingKeyserver.h in Headers */,
 				1BCE0CD11617A3DF0026DCFF /* NSBundle+Sandbox.h in Headers */,
 				30D42DB120EE085D00FBCE5C /* GPGKeyMonitoring.h in Headers */,
 				1B9FF21017257A69004FB017 /* GPGTaskHelperXPC.h in Headers */,
@@ -1107,10 +1125,22 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1010;
 				TargetAttributes = {
 					1B2F2D6F214FF12A00740DD3 = {
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.HardenedRuntime = {
+								enabled = 1;
+							};
+						};
+					};
+					1BD78B9E1726B2820005F251 = {
+						SystemCapabilities = {
+							com.apple.HardenedRuntime = {
+								enabled = 1;
+							};
+						};
 					};
 					30BE73BD1B54015C001A2137 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -1231,6 +1261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30F5B79F22F195440029FFEB /* sks-keyservers.plist in Resources */,
 				30B586F5141E255C000373F1 /* Keyservers.plist in Resources */,
 				30D68BC51B4FF5D500F7865C /* COPYING.pgpdump in Resources */,
 				30516558142281270038AAF0 /* Localizable.strings in Resources */,
@@ -1407,6 +1438,7 @@
 				30691AA5136AECC4004AA469 /* GPGOptions.m in Sources */,
 				309A18D113E3812E0069DC0F /* GPGTransformer.m in Sources */,
 				301A44CE1B436405002A38E4 /* GPGUnArmor.m in Sources */,
+				30AC724122C0FBA7009CE792 /* GPGVerifyingKeyserver.m in Sources */,
 				301A266020BE9ED10059010D /* GPGStatusLine.m in Sources */,
 				309D8A131B87469B00D945BA /* GPGKeyFetcher.m in Sources */,
 				307FDE431B4E636A00462E4E /* GPGCompressedDataPacket.m in Sources */,
@@ -1536,6 +1568,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
 				EXECUTABLE_EXTENSION = xpc;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1591,6 +1624,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				EXECUTABLE_EXTENSION = xpc;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1627,6 +1661,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/build/Debug\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -1666,6 +1701,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/build/Debug\"";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_OBJC_GC = unsupported;
@@ -1775,6 +1811,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEPLOY_RESOURCES_DIR = "$(SRCROOT)/Dependencies/DeployResources";
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1816,6 +1853,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEPLOY_RESOURCES_DIR = "$(SRCROOT)/Dependencies/DeployResources";
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;

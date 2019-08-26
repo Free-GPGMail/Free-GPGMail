@@ -241,7 +241,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button toolTip="If you've any other question." verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lO8-KU-tpl">
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lO8-KU-tpl">
                         <rect key="frame" x="188" y="31" width="135" height="32"/>
                         <buttonCell key="cell" type="push" title="Activate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1at-HI-cYf">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -251,7 +251,7 @@
                             <action selector="activateSupportPlan:" target="-2" id="lNy-8a-Dfv"/>
                         </connections>
                     </button>
-                    <button toolTip="If you've any other question." verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dW7-T8-3kz">
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dW7-T8-3kz">
                         <rect key="frame" x="323" y="31" width="164" height="32"/>
                         <buttonCell key="cell" type="push" title="Learn More" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Yjx-OU-Oxq">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>

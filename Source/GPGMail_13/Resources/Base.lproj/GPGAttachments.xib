@@ -39,7 +39,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <clipView key="contentView" id="xsO-2H-3pL">
                                     <rect key="frame" x="1" y="1" width="453" height="65"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="14" id="27">
                                             <rect key="frame" x="0.0" y="0.0" width="453" height="65"/>
@@ -144,7 +144,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <clipView key="contentView" id="qJe-YU-5Gz">
                                     <rect key="frame" x="1" y="1" width="453" height="224"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <customView misplaced="YES" id="100" userLabel="ScrollContentView" customClass="GPGFlippedView">
                                             <rect key="frame" x="0.0" y="28" width="453" height="224"/>
@@ -294,7 +294,7 @@ Please download the key using GPG Keychain.</string>
                 <textField verticalHuggingPriority="750" id="LdO-Uh-lup">
                     <rect key="frame" x="87" y="186" width="361" height="17"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="name" id="e2W-4w-Zis">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="###name" id="e2W-4w-Zis">
                         <font key="font" metaFont="systemBold"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -326,7 +326,7 @@ Please download the key using GPG Keychain.</string>
                 <textField verticalHuggingPriority="750" id="NYb-ad-Iic">
                     <rect key="frame" x="87" y="166" width="322" height="14"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="email" id="Gei-q9-4xZ">
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="###email" id="Gei-q9-4xZ">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

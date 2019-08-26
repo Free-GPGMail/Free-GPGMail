@@ -1,4 +1,3 @@
-#import <Libmacgpg/GPGGlobals.h>
 
 typedef enum { 
     GPGErrorNoError = 0, 
@@ -557,6 +556,8 @@ typedef enum {
 	GPGErrorParseError
 } GPGErrorCode;
 
+
+@class GPGTask;
 
 @interface GPGException : NSException {
 	GPGTask *gpgTask;

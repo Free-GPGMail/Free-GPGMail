@@ -154,6 +154,11 @@
 	reply([GPGTaskHelper isPassphraseInGPGAgentCache:key]);
 }
 
+- (void)showGPGSuitePreferencesWithArguments:(NSDictionary *)arguments reply:(void (^)(BOOL result))reply {
+	reply([GPGTaskHelper showGPGSuitePreferencesWithArguments:arguments]);
+}
+
+
 #pragma mark - Paddle Helper Methods
 
 - (void)validSupportContractAvailableForProduct:(NSString *)identifier reply:(void (^)(BOOL, NSDictionary *))reply {
@@ -184,6 +189,13 @@
         NSError *realError = [[self paddleInstance] activationErrorForActivationCode:activationCode];
         error = realError != nil ? realError : error;
         reply(activated, error);
+    }];
+}
+
+- (void)deactivateSupportPlanWithCompletion:(void (^)(BOOL, NSError *))reply {
+    [self paddleInstance];
+    [[self paddleProduct] deactivateWithCompletion:^(BOOL deactivated, NSError * _Nullable error) {
+        reply(deactivated, error);
     }];
 }
 

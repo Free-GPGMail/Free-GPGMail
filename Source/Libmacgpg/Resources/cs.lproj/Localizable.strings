@@ -12,7 +12,7 @@ PassphraseLabel = "Heslo:";
 "Expired" = "Platnost vypršela";
 "Disabled" = "Zakázáno";
 "Unknown" = "Neznámý";
-"Never" = "Never";
+"Never" = "Nikdy";
 "Marginal" = "Okrajový";
 "Full" = "Plný";
 "Ultimate" = "Ultimátní";
@@ -93,39 +93,46 @@ GPG_EdDSAAlgorithm = "EdDSA";
 
 
 /* Key Descriptions */
-KeyDescriptionAndMore = "and %lu more";
+KeyDescriptionAndMore = "a %lu více";
 
 
 /* Key Expiry Warning */
-KeyExpiryWarning_Title = "Warning: Your key is about to expire";
-KeyExpiryWarning_Msg = "Your key will expire on %1$@:\n\n%2$@\n\nExpired keys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this key.\n\nIf you choose to extend your key, it will be valid for two more years.\n\nDo you want to extend your key?";
-KeyExpiryWarning_Yes = "Extend Key";
-KeyExpiryWarning_No = "Cancel";
-KeyExpiryWarning_Suppress = "Do Not Ask Again";
+KeyExpiryWarning_Title = "Upozornění: Brzo vyprší platnost vašeho klíče";
+KeyExpiryWarning_Msg = "Platnost vašeho klíče vyprší %1$@:\n\n%2$@\n\nNeplatné klíče nelze použít pro šifrování a podepisování nových zpráv. Dešifrování zpráv bude i nadále fungovat. Vaši přátelé vám nebudou moci posílat zprávy podepsané tímto klíčem.\n\nPokud zvolíte prodloužení platnosti vašeho klíče, budete ho moci používat další dva roky.\n\nPřejete si prodloužit platnost vašeho klíče?";
+KeyExpiryWarning_Yes = "Prodloužit platnost klíče";
+KeyExpiryWarning_No = "Zrušit";
+KeyExpiryWarning_Suppress = "Příště se neptat";
 
-SubkeyExpiryWarning_Title = "Warning: Your subkey is about to expire";
-SubkeyExpiryWarning_Msg = "Your subkey will expire on %1$@:\n\n%2$@\n\nExpired subkeys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this subkey.\n\nIf you choose to extend your subkey, it will be valid for two more years.\n\nDo you want to extend your subkey?";
-SubkeyExpiryWarning_Yes = "Extend Subkey";
-SubkeyExpiryWarning_No = "Cancel";
-SubkeyExpiryWarning_Suppress = "Do Not Ask Again";
+SubkeyExpiryWarning_Title = "Upozornění: Brzo vyprší platnost vašeho podklíče";
+SubkeyExpiryWarning_Msg = "Platnost vašeho podklíče vyprší %1$@:\n\n%2$@\n\nNeplatné podklíče nelze použít pro šifrování a podepisování nových zpráv. Dešifrování zpráv bude i nadále fungovat. Vaši přátelé vám nebudou moci posílat zprávy podepsané tímto podklíčem.\n\nPokud zvolíte prodloužení platnosti vašeho podklíče, budete ho moci používat další dva roky.\n\nPřejete si prodloužit platnost vašeho podklíče?";
+SubkeyExpiryWarning_Yes = "Prodloužit platnost podklíče";
+SubkeyExpiryWarning_No = "Zrušit";
+SubkeyExpiryWarning_Suppress = "Příště se neptat";
 
-WrongPasswordTryAgain_Title = "You entered the wrong password";
-WrongPasswordTryAgain_Msg = "Do you want to try it again?";
-WrongPasswordTryAgain_Yes = "Try Again";
-WrongPasswordTryAgain_No = "Cancel";
+WrongPasswordTryAgain_Title = "Zadal jste nesprávné heslo";
+WrongPasswordTryAgain_Msg = "Přejete si zkusit to znovu?";
+WrongPasswordTryAgain_Yes = "Zkusit znovu";
+WrongPasswordTryAgain_No = "Zrušit";
 
-KeyExpiryFailed_Title = "Failed to extend your key!";
-KeyExpiryFailed_Msg = "The key\n%1$@\ncould not be extened.\n\nError: %2$@";
+KeyExpiryFailed_Title = "Prodloužení platnosti klíče se nezdařilo!";
+KeyExpiryFailed_Msg = "Klíči\n%1$@\nnelze prodloužit platnost.\n\nChyba: %2$@";
 
-KeyExtendedWantToUpload_Title = "Your key was extended successfully";
-KeyExtendedWantToUpload_Msg = "In order for others to be able to see the new expiration date, it is necessary for them to import your updated key. Therefore it is recommended to upload your updated public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please consider attaching your public key to your signed and encrypted emails.\n\nDo you want to upload your public key?";
-KeyExtendedWantToUpload_Yes = "Upload Public Key";
-KeyExtendedWantToUpload_No = "No, Thanks!";
+KeyExtendedWantToUpload_Title = "Platnost klíče byla prodloužena úspěšně";
+KeyExtendedWantToUpload_Msg = "Aby ostatní mohli vidět nové prodloužené datum platnosti, je nutné, aby importovali váš aktualizovaný klíč. Proto doporučujeme zkopírovat aktualizovaný veřejný klíč na klíčové servery.\n\nUpozornění: Klíčové servery jsou veřejné, takže jméno a e-mail, který používáte ve vašem klíči, budou veřejně viditelné. Klíče na klíčových serverech mohou být zneplatněny, ale nelze je smazat.\n\nPokud raději nepoužíváte klíčové servery, zvažte připojení veřejného klíče k podepsaným a šifrovaným e-mailům\n\nChcete zkopírovat váš veřejný klíč?";
+KeyExtendedWantToUpload_Yes = "Zkopírovat veřejný klíč";
+KeyExtendedWantToUpload_No = "Ne, děkuji!";
 
-UploadFailed_Title = "Failed to upload the key!";
-UploadFailed_Msg = "The key could not be uploaded to the keyserver.\n\nError: %@";
+UploadFailed_Title = "Kopírování klíče se nezdařilo!";
+UploadFailed_Msg = "Klíč nelze zkopírovat na klíčový server.\n\nChyba: %@";
 
 
 UpdaterNotWorking_Title = "Aktualizační systém GPG Suite nepracuje správně!";
 UpdaterNotWorking_Msg = "Zkopírujte a nainstalujte prosím nejnovější verzi GPG Suite z umístění https://gpgtools.org";
+
+
+SwitchToOldKeyserver_Title = "Warning: You are about to switch the key server";
+SwitchToOldKeyserver_Msg = "Switching to the old key servers will lower the quality of search results. While keys.openpgp.org allows verification of the email address and only then will show the email in search results, the old key servers do not support that mechanism.\n\nWe recommend to keep using keys.openpgp.org\n\nDo you really want to switch the key server?";
+SwitchToOldKeyserver_No = "Zrušit";
+SwitchToOldKeyserver_Yes = "Switch to old Key Server";
+
 

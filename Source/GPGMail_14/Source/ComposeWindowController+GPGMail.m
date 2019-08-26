@@ -40,6 +40,8 @@
 #import "ComposeWindow.h"
 #import "GPGMailBundle.h"
 
+#import "MailDocumentEditor+GPGMail.h"
+
 #define mailself ((ComposeWindowController *)self)
 
 const NSString *kComposeWindowControllerAllowWindowTearDown = @"ComposeWindowControllerAllowWindowTearDown";
@@ -94,157 +96,41 @@ extern const NSString *kFullScreenWindowControllerCloseModalWindowNotYet;
 	return item;
 }
 
-// TODO: RE-implement again for High Sierra (for FUCKS SAKE APPLE!!!)
-//#pragma mark Allow restoration of Compose Window on send failures
-//// Since El Capitan, Mail has no longer been able to properly restore the compose
-//// window if message creation or sending fails for some reason, for example, if
-//// the user cancels out of signing a message (S/MIME and OpenPGP) is affected.
-////
-//// On El Capitan the message was simply lost, not even saved in drafts. Sierra
-//// "optimized" the behavior by at least saving the message in drafts.
-////
-//// The following methods restore this functionality:
-////   -[ComposeWindowController _performSendAnimationWithCompletion:] -> this method is called
-////     within -[ComposeViewController sendMessageAfterChecking:] and is responsible for setting
-////     up and displaying the fly up animation of the window. In addition it's also responsible
-////     for tearing down the a tab representing the current message (in fullscreen mode only) and the
-////     compose window associated with the current message.
-////
-////   -[ComposeWindowController saveWindowPositionBeforeAnimation] -> this is GPGMail's method
-////     which is called *before* _performSendAnimationWithCompletion: is run, in order to store
-////     the current position of the window, as well as the content view controller responsible for
-////     the message being sent, in order to be able to restore the window position and - in fullscreen mode -
-////     re-select the appropriate tab, if sending the message fails.
-////
-////   -[ComposeWindowController restorePositionBeforeAnimation] -> this is GPGMail's method
-////     which is called in order to restore the position of the window after the animation and
-////     to re-select the appropriate tab, in case the sending of the message has failed.
-////     This method is called from -[ComposeViewController restoreComposerView]
-////
-////   -[ComposeViewController restoreComposerView] -> this is GPGMail's method which is responsible
-////     for starting the restoration process in case of a send failure. It is called from
-////     -[ComposeBackEnd backEnd:didCancelMessageDeliveryForEncryptionError:] and
-////     -[ComposeBackEnd backEnd:didCancelMessageDeliveryForError:]
-////
-////   -[ComposeWindowController composeViewControllerDidSend:] -> is responsible for cleaning up the view controller,
-////     remove the current tab item from the tab view and tearing down the compose window controller.
-////     In order to be able to restore the compose window however, it's necessary to postpone that work.
-////
-////   -[ComposeViewController backEndDidAppendMessageToOutbox:result:] -> this is the ultimate method that
-////     tells whether or not the message has been sent successfully. If result is 3 it means that no errors have occured.
-////     In that case it's clear that the window or tab can now be torn down and properly closed. In order to do that,
-////     -[ComposeWindowController composeViewControllerDidSend:] is called, which a special ivar set, telling
-////     the method that it's now ok, to clean up.
-////
-////   -[FullScreenWindowController _closeModalWindow:] -> this method is called from -[ComposeWindowController _performSendAnimationWithCompletion:]
-////     in order to close the modal window. If only one tab is available, it's necesary to postpone this call,
-////     *until* it's invoked by GPGMail within composeViewControllerDidSend:. If more than one tab is available,
-////     it's alright to call it immediately.
-////     (Not sure why yet, but it is.)
-//
-//- (void)saveWindowPositionBeforeAnimation {
-//    // Store the the current frame position, to restore it in case of an error.
-//    ComposeWindowController *originalComposeWindowController = (ComposeWindowController *)[[mailself contentViewController] delegate];
-//    if(!originalComposeWindowController) {
-//        originalComposeWindowController = mailself;
-//    }
-//    // When the window is modal, the correct frame is *not* on `self` but on `composeWindowController`
-//    NSPoint currentOrigin = [[originalComposeWindowController window] frame].origin;
-//    [originalComposeWindowController setIvar:kComposeWindowControllerWindowFrameOriginBeforeAnimation value:@{@"X": @(currentOrigin.x), @"Y": @(currentOrigin.y)}];
-//    // It is necessary to store the current content view controller to be able to select the correct
-//    // tab if the window is "revived" in case of an error during sending.
-//    [originalComposeWindowController setIvar:kComposeWindowControllerLastComposeViewController value:[mailself contentViewController]];
-//}
-//
-//- (void)MA_performSendAnimationWithCompletion:(void (^)(void))completion {
-//    // For modal compose windows which allow the user to have multiple tabs,
-//    // it is necessary to distinguish between the controller which is represented
-//    // by `self` and the "original" controller which keeps the different tabs.
-//    // Because it appears that in the case more than one tab is available,
-//    // a new ComposeWindowController is created upon send, which is then
-//    // used for the animation(?), which only has the current tab view installed
-//    // which was active when sending the message.
-//    // In order for "invisible" windows not to build up (there shadows are still visible at the very top of the screen)
-//    // the "original" compose window controller has to be checked for the number
-//    // of tabs currently available.
-//    // If however only one tab view is currently available, it is for some reason necessary
-//    // to keep the window from being closed to soon, in order to revive it, when
-//    // an error occurs during sending.
-//    [self saveWindowPositionBeforeAnimation];
-//    ComposeWindowController *originalComposeWindowController = (ComposeWindowController *)[[mailself contentViewController] delegate];
-//    if(!originalComposeWindowController) {
-//        originalComposeWindowController = mailself;
-//    }
-//
-//    if([(FullScreenModalCapableWindow *)[originalComposeWindowController window] isModal]) {
-//        // It seems to make a difference, whether or not more than one
-//        // tab bar view item is currently available.
-//        // In the case only one is available, the window is not closed when it
-//        // would normally be, but only after -[self composeViewControllerDidSend:] is called.
-//        if([[[originalComposeWindowController tabBarView] tabBarViewItems] count] <= 1) {
-//            [[originalComposeWindowController window] setIvar:kFullScreenWindowControllerCloseModalWindowNotYet value:@YES];
-//        }
-//    }
-//    [self MA_performSendAnimationWithCompletion:completion];
-//}
-//
-//- (void)restorePositionBeforeAnimation {
-//    ComposeWindowController *originalComposeWindowController = (ComposeWindowController *)[[mailself contentViewController] delegate];
-//    if(!originalComposeWindowController) {
-//        originalComposeWindowController = mailself;
-//    }
-//    // Restore the previous window position.
-//    NSDictionary *originBeforeAnimation = [originalComposeWindowController getIvar:kComposeWindowControllerWindowFrameOriginBeforeAnimation];
-//    if(!originBeforeAnimation)
-//        return;
-//    [originalComposeWindowController removeIvar:kComposeWindowControllerWindowFrameOriginBeforeAnimation];
-//    [[originalComposeWindowController window] setFrameOrigin:NSMakePoint([originBeforeAnimation[@"X"] floatValue], [originBeforeAnimation[@"Y"] floatValue])];
-//    // Select the tab last selected.
-//    ComposeTabViewItem *tabBarViewItem = nil;
-//    for(ComposeTabViewItem *currentTabBarViewItem in [[originalComposeWindowController tabBarView] tabBarViewItems]) {
-//        if([currentTabBarViewItem viewController] == [originalComposeWindowController getIvar:kComposeWindowControllerLastComposeViewController]) {
-//            tabBarViewItem = currentTabBarViewItem;
-//        }
-//    }
-//    if(tabBarViewItem) {
-//        [originalComposeWindowController tabBarView:[originalComposeWindowController tabBarView] selectTabBarViewItem:tabBarViewItem];
-//        [originalComposeWindowController removeIvar:kComposeWindowControllerLastComposeViewController];
-//    }
-//    [[originalComposeWindowController window] makeKeyAndOrderFront:0];
-//
-//    return;
-//}
-//
-//- (void)MAComposeViewControllerDidSend:(id)composeViewController {
-//    // -[ComposeWindowController composeViewControllerDidSend] is called from
-//    // -[ComposeViewController sendMessageAfterChecking:] and is among other things
-//    // responsible for tearing down the compose view controller.
-//    // Unfortunately this happens too early at the moment, giving GPGMail no opportunity
-//    // to recover the message being sent if an error occurs.
-//    // To circumvent that, GPGMail postpones this call till after the message
-//    // was successfully sent.
-//    // If an error occurs, the window is simply restored as if nothing has happened,
-//    // and displays an error message if necessary.
-//    //
-//    // -[ComposeViewController backEndDidAppendMessageToOutbox:result:] is called, once the message
-//    // is ready to be sent. At that point GPGMail knows whether or not signing and encrypting
-//    // the message has succeeded and is ready to tear down the compose view controller.
-//    // In order to start the tear down process, composeViewControllDidSend is then called,
-//    // with the ivar GMAllowReleaseOfTabBarViewItem set.
-//    if([[composeViewController getIvar:kComposeWindowControllerAllowWindowTearDown] boolValue]) {
-//        BOOL isModal = [(FullScreenModalCapableWindow *)[mailself window] isModal];
-//        FullScreenWindowController *fullScreenWindowController = (FullScreenWindowController *)[(MessageViewer *)[[[mailself window] parentWindow] delegate] fullScreenWindowController];
-//
-//        if(isModal) {
-//            [[mailself window] removeIvar:kFullScreenWindowControllerCloseModalWindowNotYet];
-//            if([[[mailself tabBarView] tabBarViewItems] count] <= 1) {
-//                [fullScreenWindowController _closeModalWindow:[(id)self window]];
-//            }
-//        }
-//        [self MAComposeViewControllerDidSend:composeViewController];
-//        [composeViewController removeIvar:kComposeWindowControllerAllowWindowTearDown];
-//    }
-//}
+#pragma mark Allow restoration of Compose Window on send failures
+
+- (void)MAComposeViewControllerDidSend:(id __unused)composeViewController {
+    if(![[GPGMailBundle sharedInstance] hasActiveContractOrActiveTrial]) {
+        [self MAComposeViewControllerDidSend:composeViewController];
+        return;
+    }
+    // Bug #998: Canceling a pinentry request might result in losing a message
+    //
+    // Fixes also: #814, #716, #867
+    //
+    // As soon as the user presses the send button, `-[ComposeWindowController composeViewControllerDidSend:]`
+    // is called in order to tear down the compose view controller.
+    // Internally `-[ComposeWindowController composeViewControllerDidSend:]` calls `-[ComposeViewController forceClose]`
+    // for the tear down.
+    //
+    // This however leads to the problem, that if an error occurs during the send operation,
+    // the compose view controller cannot properly recover the message being sent, since it is already
+    // partially torn down. Among other things, auto-save will no longer work, the window can no longer
+    // be properly closed, etc.
+    //
+    // To avoid this dirty state, GPG Mail tries to postpone the tear down until *after* the
+    // send operation is completed and `-[ComposeViewController backEndDidAppendMessageToOutbox:result:]`
+    // is called with the `result` variable indicating whether or not an error has occurred.
+    //
+    // If the result is 3 (successfully sent), `-[ComposeViewController forceClose]` is invoked by GPG Mail
+    // from `-[ComposeViewController backEndDidAppendMessageToOutbox:result:]`
+
+    // Check if the tear down should be postponed. If not, immediately call the original implementation
+    // in order to avoid breaking more than necessary.
+    if(![(MailDocumentEditor_GPGMail *)composeViewController GMShouldPostponeTearDown]) {
+        [self MAComposeViewControllerDidSend:composeViewController];
+    }
+    return;
+}
 
 @end
 

@@ -9,13 +9,13 @@ PassphraseLabel = "Lösenord:";
 /* For Key-Status */
 "Invalid" = "Ogiltig";
 "Revoked" = "Återkallad";
-"Expired" = "Utgått";
+"Expired" = "Utgången";
 "Disabled" = "Avaktiverad";
 "Unknown" = "Okänd";
-"Never" = "Never";
+"Never" = "Aldrig";
 "Marginal" = "Marginell";
 "Full" = "Komplett";
-"Ultimate" = "Ultimat";
+"Ultimate" = "Fullständig";
 
 
 /* For Undo and Redo */
@@ -93,39 +93,46 @@ GPG_EdDSAAlgorithm = "EdDSA";
 
 
 /* Key Descriptions */
-KeyDescriptionAndMore = "and %lu more";
+KeyDescriptionAndMore = "och %lu mer";
 
 
 /* Key Expiry Warning */
-KeyExpiryWarning_Title = "Warning: Your key is about to expire";
-KeyExpiryWarning_Msg = "Your key will expire on %1$@:\n\n%2$@\n\nExpired keys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this key.\n\nIf you choose to extend your key, it will be valid for two more years.\n\nDo you want to extend your key?";
-KeyExpiryWarning_Yes = "Extend Key";
-KeyExpiryWarning_No = "Cancel";
-KeyExpiryWarning_Suppress = "Do Not Ask Again";
+KeyExpiryWarning_Title = "Varning: Din nyckel håller på att gå ut";
+KeyExpiryWarning_Msg = "Din nyckel kommer att gå ut den %1$@:\n\n%2$@\n\nUtgångna nycklar kan inte användas för att kryptera eller signera nya meddelanden. Dekryptering kommer att fortsätta att fungera. Dina vänner kommer inte att kunna skicka krypterade meddelanden med denna nyckel.\n\nOm du väljer att förlänga giltigheten för din nyckel så kommer den att gälla i ytterligare två år.\n\nVill du förlänga giltigheten för din nyckel?";
+KeyExpiryWarning_Yes = "Förläng nyckel";
+KeyExpiryWarning_No = "Avbryt";
+KeyExpiryWarning_Suppress = "Fråga inte igen";
 
-SubkeyExpiryWarning_Title = "Warning: Your subkey is about to expire";
-SubkeyExpiryWarning_Msg = "Your subkey will expire on %1$@:\n\n%2$@\n\nExpired subkeys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this subkey.\n\nIf you choose to extend your subkey, it will be valid for two more years.\n\nDo you want to extend your subkey?";
-SubkeyExpiryWarning_Yes = "Extend Subkey";
-SubkeyExpiryWarning_No = "Cancel";
-SubkeyExpiryWarning_Suppress = "Do Not Ask Again";
+SubkeyExpiryWarning_Title = "Varning: Din undernyckel håller på att gå ut";
+SubkeyExpiryWarning_Msg = "Din undernyckel kommer att gå ut den %1$@:\n\n%2$@\n\nUtgångna undernycklar kan inte användas för att kryptera eller signera nya meddelanden. Dekryptering kommer att fortsätta att fungera. Dina vänner kommer inte att kunna skicka krypterade meddelanden med denna undernyckel.\n\nOm du väljer att förlänga giltigheten för din undernyckel så kommer den att gälla i ytterligare två år.\n\nVill du förlänga giltigheten för din undernyckel?";
+SubkeyExpiryWarning_Yes = "Förläng undernyckel";
+SubkeyExpiryWarning_No = "Avbryt";
+SubkeyExpiryWarning_Suppress = "Fråga inte igen";
 
-WrongPasswordTryAgain_Title = "You entered the wrong password";
-WrongPasswordTryAgain_Msg = "Do you want to try it again?";
-WrongPasswordTryAgain_Yes = "Try Again";
-WrongPasswordTryAgain_No = "Cancel";
+WrongPasswordTryAgain_Title = "Du angav fel lösenord";
+WrongPasswordTryAgain_Msg = "Vill du försöka igen?";
+WrongPasswordTryAgain_Yes = "Försök igen";
+WrongPasswordTryAgain_No = "Avbryt";
 
-KeyExpiryFailed_Title = "Failed to extend your key!";
-KeyExpiryFailed_Msg = "The key\n%1$@\ncould not be extened.\n\nError: %2$@";
+KeyExpiryFailed_Title = "Misslyckades att förlänga din nyckel!";
+KeyExpiryFailed_Msg = "Nyckeln\n%1$@\nkunde inte förlängas.\n\nFel: %2$@";
 
-KeyExtendedWantToUpload_Title = "Your key was extended successfully";
-KeyExtendedWantToUpload_Msg = "In order for others to be able to see the new expiration date, it is necessary for them to import your updated key. Therefore it is recommended to upload your updated public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please consider attaching your public key to your signed and encrypted emails.\n\nDo you want to upload your public key?";
-KeyExtendedWantToUpload_Yes = "Upload Public Key";
-KeyExtendedWantToUpload_No = "No, Thanks!";
+KeyExtendedWantToUpload_Title = "Din nyckel förlängdes";
+KeyExtendedWantToUpload_Msg = "För att andra ska kunna se det nya slutdatumet måste de importera din nya nyckel. Vi rekommenderar dig därför att ladda upp din uppdaterade publika nyckel till nyckelservrarna.\n\nVarning: Nyckelservrar är publika, vilket innebär att det namn och den epostadress du använder i din nyckel kommer att vara publikt tillgängliga. Det är inte möjligt att radera nycklar från nyckelservrarna. De kan återkallas, men inte raderas.\n\nOm du föredrar att inte använda nyckelservrarna bör du fundera på att bifoga din publika nyckel till dina signerade och krypterade epostmeddelanden.\n\nVill du ladda upp din publika nyckel?";
+KeyExtendedWantToUpload_Yes = "Ladda upp publik nyckel";
+KeyExtendedWantToUpload_No = "Nej, tack!";
 
-UploadFailed_Title = "Failed to upload the key!";
-UploadFailed_Msg = "The key could not be uploaded to the keyserver.\n\nError: %@";
+UploadFailed_Title = "Misslyckades att ladda upp nyckeln!";
+UploadFailed_Msg = "Nyckeln kunde inte laddas upp till nyckelservern.\n\nFelmeddelande: %@";
 
 
 UpdaterNotWorking_Title = "GPG Suite-uppdateraren fungerar inte som förväntat!";
 UpdaterNotWorking_Msg = "Hämta och installera om GPG Suite från https://gpgtools.org";
+
+
+SwitchToOldKeyserver_Title = "Warning: You are about to switch the key server";
+SwitchToOldKeyserver_Msg = "Switching to the old key servers will lower the quality of search results. While keys.openpgp.org allows verification of the email address and only then will show the email in search results, the old key servers do not support that mechanism.\n\nWe recommend to keep using keys.openpgp.org\n\nDo you really want to switch the key server?";
+SwitchToOldKeyserver_No = "Avbryt";
+SwitchToOldKeyserver_Yes = "Switch to old Key Server";
+
 

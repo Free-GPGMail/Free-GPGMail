@@ -33,6 +33,8 @@
 #import "MCMessageGenerator.h"
 #import "MCMimePart.h"
 #import "NSObject+LPDynamicIvars.h"
+#import "GPGConstants.h"
+#import "GMComposeMessagePreferredSecurityProperties.h"
 
 //#import "GPGKey.h"
 #import "EAEmailAddressParser.h"
@@ -49,6 +51,7 @@
 @class GPGKey;
 
 const static NSString *kMCMessageGeneratorSigningKeyKey = @"MCMessageGeneratorSigningKey";
+NSString * const kMCMessageGeneratorSecurityMethodKey = @"kMCMessageGeneratorSecurityMethod";
 
 @implementation MCMessageGenerator_GPGMail
 
@@ -110,39 +113,33 @@ const static NSString *kMCMessageGeneratorSigningKeyKey = @"MCMessageGeneratorSi
 }
 
 - (id)MA_newOutgoingMessageFromTopLevelMimePart:(MCMimePart *)topLevelPart topLevelHeaders:(MCMutableMessageHeaders *)topLevelHeaders withPartData:(NSMapTable *)partData {
-    if(![[GPGMailBundle sharedInstance] hasActiveContractOrActiveTrial]) {
+    // This method is already used when a received message is also used
+    // from +[Library_GPGMail GMLocalMessageDataForMessage:topLevelPart:error].
+    // In that case `securityMethod` is not set on the writer and the native Mail
+    // method can be called.
+    if(![[GPGMailBundle sharedInstance] hasActiveContractOrActiveTrial] || ![self ivarExists:kMCMessageGeneratorSecurityMethodKey]) {
         return [self MA_newOutgoingMessageFromTopLevelMimePart:topLevelPart topLevelHeaders:topLevelHeaders withPartData:partData];
     }
     if(!topLevelHeaders) {
         topLevelHeaders = [MCMutableMessageHeaders new];
     }
-    // If neither signingIdentity nor encryptionCertificates contain any GPGKey instance
-    // the message is either not to cryptographically protected or it should be cryptographically protected
-    // using S/MIME.
-    // In either case, the original mail method is invoked.
-    NSArray *encryptionCertificates = [mailself encryptionCertificates];
-    id signingIdentity = [mailself getIvar:kMCMessageGeneratorSigningKeyKey];
-    
-    BOOL messageShouldBeProtectedUsingPGP = NO;
-    if([signingIdentity isKindOfClass:[GPGKey class]]) {
-        messageShouldBeProtectedUsingPGP = YES;
-    }
-    for(id certificate in encryptionCertificates) {
-        if([certificate isKindOfClass:[NSArray class]]) {
-            for(id element in certificate) {
-                if([element isKindOfClass:[GPGKey class]]) {
-                    messageShouldBeProtectedUsingPGP = YES;
-                }
-            }
+    GPGMAIL_SECURITY_METHOD securityMethod = (GPGMAIL_SECURITY_METHOD)[[self getIvar:kMCMessageGeneratorSecurityMethodKey] unsignedIntegerValue];
+    NSMutableArray *encryptionCertificates = [mailself.encryptionCertificates count] != 0 ? [NSMutableArray new] : nil;
+    // Remove the reply-to dummy keys.
+    for(id key in mailself.encryptionCertificates) {
+        if([key isKindOfClass:[GMComposeMessageReplyToDummyKey class]]) {
+            continue;
         }
-        else if([certificate isKindOfClass:[GPGKey class]]) {
-            messageShouldBeProtectedUsingPGP = YES;
-        }
+        [encryptionCertificates addObject:key];
     }
-    if(!messageShouldBeProtectedUsingPGP) {
+    mailself.encryptionCertificates = encryptionCertificates;
+
+    if(securityMethod != GPGMAIL_SECURITY_METHOD_OPENPGP) {
         return [self MA_newOutgoingMessageFromTopLevelMimePart:topLevelPart topLevelHeaders:topLevelHeaders withPartData:partData];
     }
-    
+
+    id signingIdentity = [mailself getIvar:kMCMessageGeneratorSigningKeyKey];
+
     // Since the message is supposed to be protected using PGP, the first step is to sign it.
     MCActivityMonitor *activityMonitor = [MCActivityMonitor currentMonitor];
     if([activityMonitor shouldCancel]) {

@@ -2,7 +2,7 @@
 "VERSION: %@" = "Versi: %@";
 
 /* PGP preferences panel name */
-"PGP_PREFERENCES" = "GPGMail";
+"PGP_PREFERENCES" = "GPG Mail";
 
 /* Message Error Banner messages. */
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_TITLE" = "Tak bisa mendekripsi pesan PGP.";
@@ -144,12 +144,12 @@
 "MESSAGE_VIEW_PGP_PART_SIGNED" = "Ditandatangani";
 "MESSAGE_VIEW_PGP_PART" = "Bagian PGP";
 
-/* GPGMail Preferences strings. */
-"GPG_STATUS_NO_ERROR_TITLE" = "GPGMail ready";
-"GPG_STATUS_NOT_FOUND_TITLE" = "MacGPG not found, reinstall GPG Suite";
-"GPG_STATUS_NOT_FOUND_TOOLTIP" = "Click indicator bubble for further information";
-"GPG_STATUS_OTHER_ERROR_TITLE" = "Problems found, click indicator bubble for more info";
-"GPG_STATUS_OTHER_ERROR_TOOLTIP" = "Click indicator bubble for further information";
+/* GPG Mail Preferences strings. */
+"GPG_STATUS_NO_ERROR_TITLE" = "GPG Mail siap";
+"GPG_STATUS_NOT_FOUND_TITLE" = "Tidak ditemukan MacGPG, pasang ulang GPG Suite";
+"GPG_STATUS_NOT_FOUND_TOOLTIP" = "Klik gelembung indikator untuk informasi lebih lanjut";
+"GPG_STATUS_OTHER_ERROR_TITLE" = "Masalah ditemukan, klik gelembung indikator untuk info lebih lanjut";
+"GPG_STATUS_OTHER_ERROR_TOOLTIP" = "Klik gelembung indikator untuk informasi lebih lanjut";
 
 "DISABLE_ENCRYPT_DRAFTS_TITLE" = "Peringatan: Mematikan opsi ini mungkin mengarah ke kebocoran informasi sensitif ketika menyusun suatu pesan";
 "DISABLE_ENCRYPT_DRAFTS_MESSAGE" = "Bila opsi \"Simpan draf pada server\" difungsikan bagi akun Anda, macOS Mail secara otomatis menyimpan draf Anda pada server surel Anda ketika Anda sedang menyusun pesan.\nDengan menonaktifkan \"Enkripsikan draf\", draf Anda akan disimpan dalam teks polos (tidak terenkripsi) sehingga siapapun yang punya akses ke server surel dapat membaca mereka.\n\nBila Anda tetap memfungsikan \"Enkripsikan draf\", draf Anda akan dienkripsi sebelum mereka disimpan pada server surel dan hanya Anda yang akan dapat membaca mereka.\n\nApakah Anda masih ingin menonaktifkan \"Enkripsikan draf\"?";
@@ -157,9 +157,9 @@
 "DISABLE_ENCRYPT_DRAFTS_CANCEL" = "Batal";
 
 
-/* Multiple GPGMail installations. */
-"GPGMAIL_MULTIPLE_INSTALLATIONS_TITLE" = "Menemukan instalasi berganda dari GPGMail!";
-"GPGMAIL_MULTIPLE_INSTALLATIONS_MESSAGE" = "GPGMail mendeteksi instalasi berganda dalam lokasi-lokasi berikut yang akan mengarah ke crash seketika:\n\n%@\n\nHarap hapus GPGMail.mailbundle dalam satu dari lokasi-lokasi tersebut dan mulai ulang Mail.\n";
+/* Multiple GPG Mail installations. */
+"GPGMAIL_MULTIPLE_INSTALLATIONS_TITLE" = "Menemukan instalasi berganda dari GPG Mail!";
+"GPGMAIL_MULTIPLE_INSTALLATIONS_MESSAGE" = "GPG Mail mendeteksi instalasi berganda dalam lokasi-lokasi berikut yang akan mengarah ke crash seketika:\n\n%@\n\nHarap hapus GPGMail.mailbundle dalam satu dari lokasi-lokasi tersebut dan mulai ulang Mail.\n";
 "GPGMAIL_MULTIPLE_INSTALLATIONS_BUTTON" = "Keluar Mail";
 
 /* No Libmacgpg. */
@@ -167,12 +167,12 @@
 "LIBMACGPG_NOT_FOUND_MESSAGE" = "Libmacgpg tidak ditemukan pada sistem Anda. Harap unduh dan pasang GPG Suite dari https://www.gpgtools.org.";
 
 /* Code signature invalid */
-CODE_SIGN_ERROR_TITLE = "Seseorang meretas instalasi GPGMail Anda!";
-CODE_SIGN_ERROR_MESSAGE = "Agar Anda tetap aman, GPGMail tidak akan dimuat!\n\nHarap pasang ulang GPG Suite dari https://gpgtools.org agar yakin bahwa Anda punya versi asli dari kami!";
+CODE_SIGN_ERROR_TITLE = "Seseorang meretas instalasi GPG Mail Anda!";
+CODE_SIGN_ERROR_MESSAGE = "Agar Anda tetap aman, GPG Mail tidak akan dimuat!\n\nHarap pasang ulang GPG Suite dari https://gpgtools.org agar yakin bahwa Anda punya versi asli dari kami!";
 
 /* GPGMailGPGMailBundle.defaults can't be loaded */
-NO_DEFAULTS_TITLE = "Tidak bisa memuat parameter baku GPGMail!";
-NO_DEFAULTS_MESSAGE = "GPGMail tidak bekerja seperti yang diharapkan.\n\nHarap unduh dan pasang ulang GPG Suite dari https://gpgtools.org\n\nApabila masalah ini tetap ada, harap hubungi kami di https://gpgtools.tenderapp.com/.";
+NO_DEFAULTS_TITLE = "Tidak bisa memuat parameter baku GPG Mail!";
+NO_DEFAULTS_MESSAGE = "GPG Mail tidak bekerja seperti yang diharapkan.\n\nHarap unduh dan pasang ulang GPG Suite dari https://gpgtools.org\n\nApabila masalah ini tetap ada, harap hubungi kami di https://gpgtools.tenderapp.com/.";
 
 /* Errors while trying to sign a message. */
 "MESSAGE_SIGNING_ERROR_NO_PINENTRY_TITLE" = "Menandatangani pesan Anda gagal karena pinentry yang rusak!";
@@ -185,10 +185,10 @@ NO_DEFAULTS_MESSAGE = "GPGMail tidak bekerja seperti yang diharapkan.\n\nHarap u
 "MESSAGE_SIGNING_ERROR_AGENT_ERROR_DESCRIPTION" = "Tidak mungkin berbicara dengan agen GPG untuk meminta kata sandi Anda.\n\nUntuk memperbaiki masalah ini, pasang ulang GPG Suite dari https://gpgtools.org.";
 
 "MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_TITLE" = "Penandatanganan pesan Anda gagal karena galat yang tak dikenal telah terjadi";
-"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Sayang sekali kami tak bisa menangani galat pada titik ini.";
+"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Sayang sekali GPG Mail tak bisa menangani galat pada titik ini.";
 
 "MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_TITLE" = "Penyandian pesan Anda gagal karena kesalahan yang tak dikenal telah terjadi";
-"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Sayang sekali GPGMail tak bisa menangani galat pada titik ini.";
+"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Sayang sekali GPG Mail tak bisa menangani galat pada titik ini.";
 
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_TITLE" = "Anda terlalu banyak memasukkan frasa sandi yang salah.";
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_DESCRIPTION" = "Penandatanganan pesan Anda digugurkan karena Anda memasukkan sandi yang salah 3 kali.";
@@ -216,7 +216,7 @@ NO_DEFAULTS_MESSAGE = "GPGMail tidak bekerja seperti yang diharapkan.\n\nHarap u
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_TITLE" = "Menandatangani pesan Anda gagal karena masalah selama permintaan kata sandi";
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "pinentry, alat yang bertanggung jawab meminta kata sandi Anda, tidak bekerja dengan benar.\n\nUntuk memperbaiki masalah ini, harap pasang ulang GPG Suite dari https://gpgtools.org.";
 
-"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Menandatangani pesan Anda gagal karena masalah dalam instalasi GPGMail Anda.";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Menandatangani pesan Anda gagal karena masalah dalam instalasi GPG Mail Anda.";
 "MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Untuk memperbaiki masalah ini, harap pasang ulang GPG Suite dari https://gpgtools.org\n\nApabila masalah ini tetap ada, harap hubungi kami di https://gpgtools.tenderapp.com/ dan sertakan informasi bahwa layanan xpc tidak bekerja dengan benar.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Dekripsi pesan gagal karena pinentry yang rusak!";
@@ -244,20 +244,55 @@ NO_DEFAULTS_MESSAGE = "GPGMail tidak bekerja seperti yang diharapkan.\n\nHarap u
 "UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_BUTTON_SEND_ANYWAY" = "Teruskan Saja";
 "UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_BUTTON_CANCEL" = "Batal";
 
-"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_TITLE" = "Decryption of the message was aborted";
-"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_MESSAGE" = "The modification detection code (MDC) for this encrypted message is missing or has been modified.\n\nThis could mean that an attacker has been trying to modify the contents within the encrypted message.\n\nPlease have the message re-sent to you and tell the sender, that their encrypted message didn't include a modification detection code.";
+"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_TITLE" = "Dekripsi pesan dibatalkan";
+"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_MESSAGE" = "Kode deteksi modifikasi (modification detection code, MDC) untuk pesan terenkripsi ini hilang atau telah berubah.\n\nIni bisa berarti bahwa seorang penyerang telah mencoba mengubah isi pesan terenkripsi.\n\nHarap minta kirim ulang pesan dan beritahu pengirim, bahwa pesan terenkripsi mereka tidak memuat suatu kode deteksi modifikasi.";
 
-"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_TITLE" = "Attention: Opening this website could leak the contents of this message";
-"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_MESSAGE" = "Due to a problem in the implementation of S/MIME encryption, it is possible for an attacker to modify a message without your knowledge.\n\nYou are about to open the following website:\n\n%@\n\nAre you sure you want to continue?";
-"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_BUTTON_YES" = "Yes";
+"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_TITLE" = "Perhatian: Membuka situs web ini mungkin dapat membocorkan konten dari pesan ini";
+"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_MESSAGE" = "Karena suatu masalah dalam implementasi enkripsi S/MIME, mungkin bagi seorang penyerang untuk mengubah suatu pesan tanpa sepengetahuan Anda.\n\nAnda akan membuka situs web berikut:\n\n%@\n\nAnda yakin hendak melanjutkan?";
+"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_BUTTON_YES" = "Ya";
 "NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_BUTTON_CANCEL" = "Batal";
 
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_TITLE" = "Decryption of the attachment was aborted";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_MESSAGE" = "The modification detection code (MDC) for this encrypted attachment is missing or has been modified.\n\nThis could mean that an attacker has been trying to modify the contents within the encrypted attachment.\n\nPlease have the attachment re-sent to you and tell the sender, that their encrypted attachment didn't include a modification detection code.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_TITLE" = "Dekripsi lampiran dibatalkan";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_MESSAGE" = "Kode deteksi modifikasi (modification detection code, MDC) untuk lampiran terenkripsi ini hilang atau telah berubah.\n\nIni bisa berarti bahwa seorang penyerang telah mencoba mengubah isi lampiran terenkripsi.\n\nHarap minta kirim ulang lampiran dan beritahu pengirim, bahwa lampiran terenkripsi mereka tidak memuat suatu kode deteksi modifikasi.";
 
 
 /* Accessibility */
 ACCESSIBILITY_SECURITY_METHOD_POPUP_LABEL = "Metoda keamanan: %@";
 ACCESSIBILITY_SIGN_ON_IMAGE = "Tandatangani";
 ACCESSIBILITY_SIGN_OFF_IMAGE = "Jangan tandatangani";
+
+
+
+/* Support Plan */
+"SUPPORT_PLAN_ACTIVATION_SUCCESS_TITLE" = "Langganan Dukungan Diaktifkan";
+"SUPPORT_PLAN_ACTIVATION_SUCCESS_MESSAGE" = "Terima kasih atas dukungan Anda\n\nKami berharap Anda menikmati memakai GPG Mail. Bila Anda punya pertanyaan, jangan ragu-ragu menghubungi kami melalui \"Laporkan Masalah\" dalam Surat > Preferensi > GPG Mail";
+"SUPPORT_PLAN_ACTIVATION_FAILED_TITLE" = "Aktivasi Langganan Dukungan Gagal";
+"SUPPORT_PLAN_ACTIVATION_FAILED_INPUT_INVALID" = "Kode aktivasi yang dimasukkan tidak valid. Harap periksa informasi yang dimasukkan dan coba lagi.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_CONNECTTION_ERROR" = "Kami tidak bisa menyambung ke API paddle.com untuk memverifikasi kode aktivasi Anda.\nBila Anda memakai sebarang produk firewall macOS (firewall bawaan, Little Snitch, dsb.), harap izinkan koneksi ke paddle.com agar aktivasi bisa diselesaikan. Anda bisa memblokir sebarang koneksi lagi setelah aktivasi selesai.\n\nHarap hubungi kami pada business@gpgtools.org bila masalah tetap muncul.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_CODE_INVALID" = "Kode aktivasi yang dimasukkan tidak valid.\nHarap hubungi kami di business@gpgtools.org bila Anda yakin bahwa Anda telah memasukkan kode Anda secara benar.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS" = "Kami menyesal mesti memberitahu Anda bahwa Anda telah melampaui cacah aktivasi yang diizinkan.\nHarap hubungi kami pada business@gpgtools.org, bila Anda percaya bahwa Anda mestinya masih punya sisa aktivasi.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_GENERAL_ERROR" = "Sayang sekali telah terjadi kesalahan yang tidak dikenal. Harap coba lagi nanti atau pakai 'Preferensi Sistem > Keluarga GPG > Kirim Laporan' untuk menghubungi kami";
+"SUPPORT_PLAN_HEADER_EXPIRED" = "Uji pakai 30 hari GPG Mail Anda telah berakhir. Mengenkripsi, menandatangani, dan memverifikasi pesan tidak akan bisa dilakukan lagi. Namun mendekripsi akan selalu bisa dipakai.\nBelilah Rencana Dukungan GPG Mail untuk melanjutkan dengan fungsionalitas penuh.";
+"SUPPORT_PLAN_HEADER_TRIAL" = "Anda dapat mencoba GPG Mail secara bebas selama %@hari.\nAmankan surel Anda sekarang!";
+"SUPPORT_PLAN_HEADER_TRIAL_MORE" = "Anda bebas mencoba GPG Mail selama %@ hari lagi.\nAmankan surel Anda sekarang!";
+"SUPPORT_PLAN_DETAILS_MESSAGE" = "Bila Anda telah membeli langganan dukungan, aktifkan itu sekarang dan nikmati GPG Mail!";
+"SUPPORT_PLAN_DETAILS_MESSAGE_HYPERLINK_PART" = "langganan dukungan";
+"SUPPORT_PLAN_BUY" = "Beli Sekarang";
+"SUPPORT_PLAN_CLOSE" = "Lanjutkan";
+"SUPPORT_PLAN_CONTINUE_TRIAL"= "Lanjutkan Uji Pakai";
+"SUPPORT_PLAN_START_TRIAL" = "Mulai Uji Pakai";
+"SUPPORT_PLAN_BUY" = "Beli Sekarang";
+"SUPPORT_PLAN_ACTIVATE" = "Aktifkan";
+"SUPPORT_PLAN_TRIAL_EXPIRED_TITLE" = "Uji Pakai GPG Mail Telah Berakhir";
+"SUPPORT_PLAN_TRIAL_EXPIRED_MESSAGE" = "Tanpa Langganan Dukungan GPG Mail Anda masih akan bisa membaca sebarang surel Anda yang terenkripsi. Namun, Anda tidak bisa lagi menandatangani, mengenkripsi, atau memverifikasi surel.";
+"SUPPORT_PLAN_HEADER_WELCOME" = "Selamat Datang ke GPG Mail";
+"SUPPORT_PLAN_EMAIL_LABEL" = "Surel";
+"SUPPORT_PLAN_LICENSE_LABEL" = "Kode Aktivasi";
+"SUPPORT_PLAN_GRAY_INFO" = "Kode aktivasi Anda dapat ditemukan dalam surel yang Anda terima setelah menyelesaikan pembelian.";
+"SUPPORT_PLAN_PROGRESS_LABEL" = "Mengaktifkan salinan GPG Mail Anda";
+
+
+
+
+
 

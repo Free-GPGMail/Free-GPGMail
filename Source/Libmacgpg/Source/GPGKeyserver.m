@@ -7,8 +7,9 @@
 //
 
 #import "GPGKeyserver.h"
-#import "GPGOptions.h"
 #import "GPGException.h"
+#import "GPGGlobals.h"
+
 
 @interface GPGKeyserver ()
 @property (retain, nonatomic) NSURLConnection *connection;
@@ -195,7 +196,7 @@
 		return;
 	}
 		
-	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:0 timeoutInterval:self.timeout];
+	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:self.timeout];
 	if (!request) {
 		[self failedWithError:[NSError errorWithDomain:LibmacgpgErrorDomain
 												  code:GPGErrorKeyServerError
@@ -225,9 +226,11 @@
 - (void)failedWithError:(NSError *)e {
 	self.error = e;
 	
-	if (finishedHandler) {
-		finishedHandler(self);
-	}
+	dispatch_once(&_finishedHandlerOnceToken, ^{
+		if (finishedHandler) {
+			finishedHandler(self);
+		}
+	});
 }
 
 
@@ -268,9 +271,11 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-	if (finishedHandler) {
-		finishedHandler(self);
-	}
+	dispatch_once(&_finishedHandlerOnceToken, ^{
+		if (finishedHandler) {
+			finishedHandler(self);
+		}
+	});
 	
 	self.connection = nil;
 }
@@ -326,7 +331,7 @@
 	}
 	
 	self.finishedHandler = handler;
-	self.keyserver = [[GPGOptions sharedOptions] keyserver];
+	self.keyserver = @"hkps://hkps.pool.sks-keyservers.net";
 	receivedData = [[NSMutableData alloc] init];
 	self.timeout = 20;
 	

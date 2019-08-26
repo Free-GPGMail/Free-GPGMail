@@ -2,7 +2,7 @@
 "VERSION: %@" = "Версия: %@";
 
 /* PGP preferences panel name */
-"PGP_PREFERENCES" = "GPGMail";
+"PGP_PREFERENCES" = "GPG Mail";
 
 /* Message Error Banner messages. */
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_TITLE" = "Невозможно расшифровать PGP сообщение.";
@@ -144,12 +144,12 @@
 "MESSAGE_VIEW_PGP_PART_SIGNED" = "Подписано";
 "MESSAGE_VIEW_PGP_PART" = "Элемент PGP";
 
-/* GPGMail Preferences strings. */
-"GPG_STATUS_NO_ERROR_TITLE" = "GPGMail ready";
-"GPG_STATUS_NOT_FOUND_TITLE" = "MacGPG not found, reinstall GPG Suite";
-"GPG_STATUS_NOT_FOUND_TOOLTIP" = "Click indicator bubble for further information";
-"GPG_STATUS_OTHER_ERROR_TITLE" = "Problems found, click indicator bubble for more info";
-"GPG_STATUS_OTHER_ERROR_TOOLTIP" = "Click indicator bubble for further information";
+/* GPG Mail Preferences strings. */
+"GPG_STATUS_NO_ERROR_TITLE" = "GPG Mail готов";
+"GPG_STATUS_NOT_FOUND_TITLE" = "MacGPG не найден, переустановите GPG Suite";
+"GPG_STATUS_NOT_FOUND_TOOLTIP" = "Нажмите индикатор-пузырёк для получения дополнительной информации";
+"GPG_STATUS_OTHER_ERROR_TITLE" = "Найдены проблемы, нажмите индикатор-пузырёк для получения дополнительной информации";
+"GPG_STATUS_OTHER_ERROR_TOOLTIP" = "Нажмите индикатор-пузырёк для получения дополнительной информации";
 
 "DISABLE_ENCRYPT_DRAFTS_TITLE" = "Предупреждение: Отключение этой опции может привести к утечке конфиденциальной информации при создании сообщения";
 "DISABLE_ENCRYPT_DRAFTS_MESSAGE" = "Если для ваших учётных записей включена опция «Сохранить черновики на сервере», macOS Mail автоматически сохраняет ваши черновики на вашем почтовом сервере во время составления сообщения.\nОтключив «Шифровать черновики», ваши черновики будут сохранены в виде обычного текста (не зашифрованы), чтобы каждый, кто имеет доступ к почтовому серверу, мог их прочитать.\n\nЕсли вы включите «Шифровать черновики», ваши черновики будут зашифрованы до того, как они будут сохранены на почтовом сервере, и вы сможете их прочитать.\n\nВы всё еще хотите отключить «Шифровать черновики»?";
@@ -157,9 +157,9 @@
 "DISABLE_ENCRYPT_DRAFTS_CANCEL" = "Отмена";
 
 
-/* Multiple GPGMail installations. */
-"GPGMAIL_MULTIPLE_INSTALLATIONS_TITLE" = "Найдено несколько установок GPGMail!";
-"GPGMAIL_MULTIPLE_INSTALLATIONS_MESSAGE" = "GPGMail обнаружил несколько установок в следующих местах, которые приведут к аварийному завершению:\n\n%@\n\nПожалуйста, удалите GPGMail.mailbundle в одном из мест и перезапустить Mail.";
+/* Multiple GPG Mail installations. */
+"GPGMAIL_MULTIPLE_INSTALLATIONS_TITLE" = "Найдено несколько установок GPG Mail!";
+"GPGMAIL_MULTIPLE_INSTALLATIONS_MESSAGE" = "GPG Mail обнаружил несколько установок в следующих местах, которые приведут к аварийному завершению:\n\n%@\n\nПожалуйста, удалите GPGMail.mailbundle в одном из мест и перезапустить Mail.";
 "GPGMAIL_MULTIPLE_INSTALLATIONS_BUTTON" = "Выход из почты";
 
 /* No Libmacgpg. */
@@ -167,12 +167,12 @@
 "LIBMACGPG_NOT_FOUND_MESSAGE" = "Libmacgpg не найдена в вашей системе. Пожалуйста, загрузите и установите GPG Suite с сайта  https://www.gpgtools.org.";
 
 /* Code signature invalid */
-CODE_SIGN_ERROR_TITLE = "Кто-то вмешался в вашу установку GPGMail!";
-CODE_SIGN_ERROR_MESSAGE = "Для вашей защиты GPGMail не будет загружен!\n\nПожалуйста переустановите GPG Suite из https://gpgtools.org, чтобы бы была оригинальная версия то нас! ";
+CODE_SIGN_ERROR_TITLE = "Кто-то вмешался в вашу установку GPG Mail!";
+CODE_SIGN_ERROR_MESSAGE = "Для вашей защиты GPG Mail не будет загружен!\n\nПожалуйста переустановите GPG Suite из https://gpgtools.org, чтобы бы была оригинальная версия то нас! ";
 
 /* GPGMailGPGMailBundle.defaults can't be loaded */
-NO_DEFAULTS_TITLE = "Невозможно загрузить стандартные настройки GPGMail!";
-NO_DEFAULTS_MESSAGE = "GPGMail не работает, как ожидалось.\n\nПожалуйста, скачайте и установите GPG Suite с https://gpgtools.org\n\nЕсли эта проблема не устранена, пожалуйста, свяжитесь с нами https://gpgtools.tenderapp.com/.";
+NO_DEFAULTS_TITLE = "Невозможно загрузить стандартные настройки GPG Mail!";
+NO_DEFAULTS_MESSAGE = "GPG Mail не работает, как ожидалось.\n\nПожалуйста, скачайте и установите GPG Suite с https://gpgtools.org\n\nЕсли эта проблема не устранена, пожалуйста, свяжитесь с нами https://gpgtools.tenderapp.com/.";
 
 /* Errors while trying to sign a message. */
 "MESSAGE_SIGNING_ERROR_NO_PINENTRY_TITLE" = "Подписка вашего сообщения не удалась из-за повреждённого кода";
@@ -185,10 +185,10 @@ NO_DEFAULTS_MESSAGE = "GPGMail не работает, как ожидалось.
 "MESSAGE_SIGNING_ERROR_AGENT_ERROR_DESCRIPTION" = "Не возможно связаться с агентом GPG, чтобы запросить ваш пароль.\n\nЧтобы исправить эту проблему, переустановите GPG Suite с сайта https://gpgtools.org.";
 
 "MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_TITLE" = "Не удалось подписать ваше сообщение, потому что произошла неизвестная ошибка";
-"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "К сожалению, мы не можем обработать ошибку в этой точке.";
+"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "К сожалению, GPG Mail не может обработать ошибку в этой точке.";
 
 "MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_TITLE" = "Не удалось зашифровать сообщение, потому что произошла неизвестная ошибка";
-"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "К сожалению, GPGMail не может обработать ошибку в этой точке.";
+"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "К сожалению, GPG Mail не может обработать ошибку в этой точке.";
 
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_TITLE" = "Вы ввели неправильный пароль слишком много раз.";
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_DESCRIPTION" = "Подписка вашего сообщения была остановлена, так как вы 3 раза ввели неправильный пароль.";
@@ -216,7 +216,7 @@ NO_DEFAULTS_MESSAGE = "GPGMail не работает, как ожидалось.
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_TITLE" = "Подписка вашего сообщения не удалась из-за возникшей во время запроса пароля проблемы ";
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "Pinentry, инструмент ответственный за запрос вашего пароля, кажется, работает не в штатном режиме.\n\nЧтобы исправить эту проблему, переустановите GPG Suite с сайта https://gpgtools.org.";
 
-"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Невозможно подписать сообщение из-за проблем с установкой GPGMail.";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Невозможно подписать сообщение из-за проблем с установкой GPG Mail.";
 "MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Чтобы исправить эту неполадку, переустановите GPG Suite с сайта https://gpgtools.org.\n\nЕсли эта проблема останется, свяжитесь с нами через сайт https://gpgtools.tenderapp.com/ прикрепя информацию, что xpc-сервис не работает как надо.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Расшифровка прикреплённого файла не удалась из-за повреждённого кода";
@@ -244,20 +244,55 @@ NO_DEFAULTS_MESSAGE = "GPGMail не работает, как ожидалось.
 "UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_BUTTON_SEND_ANYWAY" = "Отправить в любом случае";
 "UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_BUTTON_CANCEL" = "Отмена";
 
-"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_TITLE" = "Decryption of the message was aborted";
-"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_MESSAGE" = "The modification detection code (MDC) for this encrypted message is missing or has been modified.\n\nThis could mean that an attacker has been trying to modify the contents within the encrypted message.\n\nPlease have the message re-sent to you and tell the sender, that their encrypted message didn't include a modification detection code.";
+"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_TITLE" = "Расшифровка сообщения была прервана";
+"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_MESSAGE" = "Код обнаружения модификации (MDC) для этого зашифрованного сообщения отсутствует или был изменён.\n\nЭто может означать, что злоумышленник пытается изменить содержимое в зашифрованном сообщении.\n\nПовторите отправку сообщения и сообщите отправителю, что их зашифрованное сообщение не содержит код обнаружения модификации.";
 
-"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_TITLE" = "Attention: Opening this website could leak the contents of this message";
-"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_MESSAGE" = "Due to a problem in the implementation of S/MIME encryption, it is possible for an attacker to modify a message without your knowledge.\n\nYou are about to open the following website:\n\n%@\n\nAre you sure you want to continue?";
+"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_TITLE" = "Внимание: открытие этого веб-сайта может привести к утечке содержимого этого сообщения";
+"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_MESSAGE" = "Из-за проблемы в реализации S/MIME-шифрования злоумышленник может изменять сообщение без вашего ведома.\n\nВы собираетесь открыть следующий веб-сайт:\n\n%@\n\nВы уверены что хотите продолжить?";
 "NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_BUTTON_YES" = "Yes";
 "NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_BUTTON_CANCEL" = "Отмена";
 
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_TITLE" = "Decryption of the attachment was aborted";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_MESSAGE" = "The modification detection code (MDC) for this encrypted attachment is missing or has been modified.\n\nThis could mean that an attacker has been trying to modify the contents within the encrypted attachment.\n\nPlease have the attachment re-sent to you and tell the sender, that their encrypted attachment didn't include a modification detection code.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_TITLE" = "Расшифровка вложения была прервана";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_MESSAGE" = "Код обнаружения модификации (MDC) для этого зашифрованного вложения отсутствует или был изменён.\n\nЭто может означать, что злоумышленник пытается изменить содержимое в зашифрованном вложении.\n\nПовторите отправку вложения и сообщите отправителю, что их зашифрованное вложение не содержит код обнаружения модификации.";
 
 
 /* Accessibility */
 ACCESSIBILITY_SECURITY_METHOD_POPUP_LABEL = "метод защиты: %@";
 ACCESSIBILITY_SIGN_ON_IMAGE = "подписать";
 ACCESSIBILITY_SIGN_OFF_IMAGE = "не подписывать";
+
+
+
+/* Support Plan */
+"SUPPORT_PLAN_ACTIVATION_SUCCESS_TITLE" = "План поддержки активирован";
+"SUPPORT_PLAN_ACTIVATION_SUCCESS_MESSAGE" = "Спасибо за поддержку!\n\nМы надеемся, что вам понравится использование GPG Mail. Если у вас есть какие-либо вопросы, не стесняйтесь обращаться к нам через «Сообщить о проблеме» в Почта › Настройки › GPG Mail";
+"SUPPORT_PLAN_ACTIVATION_FAILED_TITLE" = "Ошибка активации плана поддержки";
+"SUPPORT_PLAN_ACTIVATION_FAILED_INPUT_INVALID" = "Введённый код активации недействителен. Пожалуйста, проверьте введённую информацию и попробуйте снова.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_CONNECTTION_ERROR" = "Нам не удалось подключиться к API paddle.com для проверки вашего кода активации.\nЕсли вы используете какой-либо продукт брандмауэра macOS (встроенный брандмауэр, Little Snitch и т. д.), то разрешите подключение к paddle.com для завершения активации. Вы можете заблокировать любые соединения снова после завершения активации.\n\nПожалуйста, свяжитесь с нами по business@gpgtools.org, если проблема не устранена.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_CODE_INVALID" = "Введённый код активации недействителен.\nПожалуйста, свяжитесь с нами по адресу business@gpgtools.org, если вы уверены, что правильно ввели свой код.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS" = "Мы очень сожалеем, но вы превысили допустимое количество активаций.\nПожалуйста, свяжитесь с нами по адресу business@gpgtools.org, если вы считаете, что у вас всё ещё должны остаться активации.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_GENERAL_ERROR" = "К сожалению, произошла неизвестная ошибка. Повторите попытку позже или используйте «Системные настройки › GPG Suite › Отправить отчёт», чтобы связаться с нами.";
+"SUPPORT_PLAN_HEADER_EXPIRED" = "Срок действия вашей 30-дневной пробной версии GPG Mail истёк. Шифрование, подписывание и проверка сообщений перестанут работать. Однако расшифровка всегда будет работать.\nДля продолжения работы с полной функциональностью приобретите план поддержки GPG Mail.";
+"SUPPORT_PLAN_HEADER_TRIAL" = "Вы можете протестировать GPG Mail бесплатно в течение %@ дней.\nЗащитите свою электронную почту сейчас!";
+"SUPPORT_PLAN_HEADER_TRIAL_MORE" = "Вы можете протестировать GPG Mail бесплатно в течение более %@ дней.\nЗащитите свою электронную почту сейчас!";
+"SUPPORT_PLAN_DETAILS_MESSAGE" = "Если вы уже приобрели план поддержки, активируйте его сейчас и наслаждайтесь GPG Mail!";
+"SUPPORT_PLAN_DETAILS_MESSAGE_HYPERLINK_PART" = "план поддержки";
+"SUPPORT_PLAN_BUY" = "Купить сейчас";
+"SUPPORT_PLAN_CLOSE" = "Продолжить";
+"SUPPORT_PLAN_CONTINUE_TRIAL"= "Продолжить пробный период";
+"SUPPORT_PLAN_START_TRIAL" = "Начать пробный период";
+"SUPPORT_PLAN_BUY" = "Купить сейчас";
+"SUPPORT_PLAN_ACTIVATE" = "Активировать";
+"SUPPORT_PLAN_TRIAL_EXPIRED_TITLE" = "Пробный период GPG Mail истёк";
+"SUPPORT_PLAN_TRIAL_EXPIRED_MESSAGE" = "Без активного плана поддержки GPG Mail вы всё равно сможете читать любые зашифрованные письма. Однако вы больше не сможете подписывать, шифровать или проверять электронную почту.";
+"SUPPORT_PLAN_HEADER_WELCOME" = "Добро пожаловать в GPG Mail";
+"SUPPORT_PLAN_EMAIL_LABEL" = "Почта";
+"SUPPORT_PLAN_LICENSE_LABEL" = "Код активации";
+"SUPPORT_PLAN_GRAY_INFO" = "Ваш код активации можно найти в электронном письме, которое вы получите после совершения покупки.";
+"SUPPORT_PLAN_PROGRESS_LABEL" = "Активация вашей копии GPG Mail";
+
+
+
+
+
 

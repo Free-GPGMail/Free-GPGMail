@@ -21,6 +21,10 @@
 
 @class GPGConf;
 
+extern NSString * const GPGKeysFromVerifyingKeyserverKey;
+extern NSString * const GPGUseSKSKeyserverAsBackupKey;
+
+
 typedef enum {
 	GPGDomain_standard = 0,
 	GPGDomain_common = 1,
@@ -58,6 +62,21 @@ typedef enum {
 @property (nonatomic, retain) NSString *standardDomain;
 @property (nonatomic, readonly) BOOL debugLog;
 @property (nonatomic, readonly) NSString *pinentryPath;
+
+/*
+ * Returns YES if the current keyserver supports the Verifying Keyserver Interface.
+ * Currently only YES for keys.openpgp.org
+ */
+@property (nonatomic, readonly) BOOL isVerifyingKeyserver;
++ (BOOL)isVerifyingKeyserver:(NSString *)keyserver;
+
+
+/*
+ * Returns YES if the current keyserver is one of the old SKS keyservers.
+ */
+@property (nonatomic, readonly) BOOL isSKSKeyserver;
+- (BOOL)isSKSKeyserver:(NSString *)keyserver;
+
 
 
 + (BOOL)debugLog;

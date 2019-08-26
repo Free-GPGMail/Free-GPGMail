@@ -12,17 +12,17 @@ PassphraseLabel = "パスワード:";
 "Expired" = "期限切れ";
 "Disabled" = "無効";
 "Unknown" = "不明";
-"Never" = "Never";
-"Marginal" = "Marginal";
-"Full" = "Full";
-"Ultimate" = "Ultimate";
+"Never" = "不信";
+"Marginal" = "一部";
+"Full" = "完全";
+"Ultimate" = "究極";
 
 
 /* For Undo and Redo */
 Undo_NewKey = "新しい鍵";
 Undo_Delete = "削除";
 Undo_CleanKey = "クリーン";
-Undo_MinimizeKey = "Minimize";
+Undo_MinimizeKey = "最小化";
 Undo_RevokeKey = "鍵を無効化";
 Undo_ChangeExpirationDate = "有効期限を変更";
 Undo_ChangePassphrase = "パスワードを変更";
@@ -31,7 +31,7 @@ Undo_Import = "インポート";
 Undo_AddSignature = "署名を追加";
 Undo_RemoveSignature = "署名を削除";
 Undo_RevokeSignature = "署名を失効";
-Undo_AddSubkey = "Add Subkey";
+Undo_AddSubkey = "副鍵を追加";
 Undo_RemoveSubkey = "Remove Subkey";
 Undo_RevokeSubkey = "Revoke Subkey";
 Undo_AddUserID = "Add UserID";
@@ -100,26 +100,26 @@ KeyDescriptionAndMore = "and %lu more";
 KeyExpiryWarning_Title = "Warning: Your key is about to expire";
 KeyExpiryWarning_Msg = "Your key will expire on %1$@:\n\n%2$@\n\nExpired keys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this key.\n\nIf you choose to extend your key, it will be valid for two more years.\n\nDo you want to extend your key?";
 KeyExpiryWarning_Yes = "Extend Key";
-KeyExpiryWarning_No = "Cancel";
+KeyExpiryWarning_No = "キャンセル";
 KeyExpiryWarning_Suppress = "Do Not Ask Again";
 
 SubkeyExpiryWarning_Title = "Warning: Your subkey is about to expire";
 SubkeyExpiryWarning_Msg = "Your subkey will expire on %1$@:\n\n%2$@\n\nExpired subkeys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this subkey.\n\nIf you choose to extend your subkey, it will be valid for two more years.\n\nDo you want to extend your subkey?";
 SubkeyExpiryWarning_Yes = "Extend Subkey";
-SubkeyExpiryWarning_No = "Cancel";
+SubkeyExpiryWarning_No = "キャンセル";
 SubkeyExpiryWarning_Suppress = "Do Not Ask Again";
 
 WrongPasswordTryAgain_Title = "You entered the wrong password";
 WrongPasswordTryAgain_Msg = "Do you want to try it again?";
 WrongPasswordTryAgain_Yes = "Try Again";
-WrongPasswordTryAgain_No = "Cancel";
+WrongPasswordTryAgain_No = "キャンセル";
 
 KeyExpiryFailed_Title = "Failed to extend your key!";
 KeyExpiryFailed_Msg = "The key\n%1$@\ncould not be extened.\n\nError: %2$@";
 
 KeyExtendedWantToUpload_Title = "Your key was extended successfully";
 KeyExtendedWantToUpload_Msg = "In order for others to be able to see the new expiration date, it is necessary for them to import your updated key. Therefore it is recommended to upload your updated public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please consider attaching your public key to your signed and encrypted emails.\n\nDo you want to upload your public key?";
-KeyExtendedWantToUpload_Yes = "Upload Public Key";
+KeyExtendedWantToUpload_Yes = "公開鍵をアップロード";
 KeyExtendedWantToUpload_No = "No, Thanks!";
 
 UploadFailed_Title = "Failed to upload the key!";
@@ -128,4 +128,11 @@ UploadFailed_Msg = "The key could not be uploaded to the keyserver.\n\nError: %@
 
 UpdaterNotWorking_Title = "The GPG Suite Updater doesn't work as expected!";
 UpdaterNotWorking_Msg = "https://gpgtools.org から GPG Suiteをダウンロードして再インストールしてください。";
+
+
+SwitchToOldKeyserver_Title = "Warning: You are about to switch the key server";
+SwitchToOldKeyserver_Msg = "Switching to the old key servers will lower the quality of search results. While keys.openpgp.org allows verification of the email address and only then will show the email in search results, the old key servers do not support that mechanism.\n\nWe recommend to keep using keys.openpgp.org\n\nDo you really want to switch the key server?";
+SwitchToOldKeyserver_No = "キャンセル";
+SwitchToOldKeyserver_Yes = "Switch to old Key Server";
+
 

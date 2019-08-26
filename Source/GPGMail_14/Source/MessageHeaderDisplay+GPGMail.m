@@ -370,7 +370,17 @@
     NSMutableAttributedString *securityHeaderAttachmentsPart = [[NSMutableAttributedString alloc] init];
     NSTextAttachment *textAttachment = [[NSTextAttachment alloc] init];
     [textAttachment setIvar:@"ShowAttachmentPanel" value:@YES];
-    [securityHeaderAttachmentsPart appendAttributedString:[NSAttributedString attributedStringWithAttachment:textAttachment image:[NSImage imageNamed:@"attachment_header"] link:[GPGMailBundle isMavericks] ? nil : @"gpgmail://show-attachments" offset:-3.0]];
+    NSImage *attachmentIcon = [NSImage imageNamed:@"attachment_header"];
+    float iconOffset = -3.0;
+
+    // On macOS Mojave 10.14.6 attachment_header no longer exists. Instead
+    // the icon is now called MessageListAttachmentTemplate.
+    if(!attachmentIcon) {
+        attachmentIcon = [NSImage imageNamed:@"MessageListAttachmentTemplate"];
+        iconOffset = -1.0;
+    }
+
+    [securityHeaderAttachmentsPart appendAttributedString:[NSAttributedString attributedStringWithAttachment:textAttachment image:attachmentIcon link:[GPGMailBundle isMavericks] ? nil : @"gpgmail://show-attachments" offset:iconOffset]];
 
     for(MimePart_GPGMail *attachment in [securityFeatures PGPAttachments]) {
         hasEncryptedAttachments |= [attachment PGPEncrypted];
@@ -396,6 +406,10 @@
     }
 
     NSString *encryptionString = [NSString stringWithFormat:@"%li %@", (long)[securityFeatures numberOfPGPAttachments], attachmentPart];
+    if(![NSImage imageNamed:@"attachment_header"]) {
+        encryptionString = [@" " stringByAppendingString:encryptionString];
+    }
+    
     if([GPGMailBundle isMavericks])
         [securityHeaderAttachmentsPart appendAttributedString:[NSAttributedString attributedStringWithString:encryptionString]];
     else

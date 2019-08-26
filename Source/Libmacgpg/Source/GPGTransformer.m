@@ -285,3 +285,40 @@
 }
 
 @end
+
+
+@implementation NSNumber (GPGValidityCompare)
+- (NSComparisonResult)compareGPGValidity:(NSNumber *)otherNumber {
+	int aValue = self.intValue;
+	int bValue = otherNumber.intValue;
+	int mask = 7;
+	int aFlags = aValue & ~mask;
+	int bFlags = bValue & ~mask;
+	aValue = aValue & mask;
+	bValue = bValue & mask;
+	
+	// Never is lower than unkown.
+	if (aValue == GPGValidityNever) {
+		aValue = -1;
+	}
+	if (bValue == GPGValidityNever) {
+		bValue = -1;
+	}
+	
+	// Substract the invalidity flags to get a negativ number for invalid keys.
+	aValue -= aFlags;
+	bValue -= bFlags;
+	
+	if (aValue > bValue) {
+		return NSOrderedDescending;
+	} else if (aValue < bValue) {
+		return NSOrderedAscending;
+	} else {
+		return NSOrderedSame;
+	}
+}
+@end
+
+
+
+

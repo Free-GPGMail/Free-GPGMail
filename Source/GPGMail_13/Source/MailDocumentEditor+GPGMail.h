@@ -96,6 +96,12 @@
 
 @property (nonatomic, retain) GMSecurityMethodAccessoryView	*securityMethodAccessoryView;
 
+/**
+ Property indicating whether or not the compose view controller is allowed
+ to tear down immediately. See #998 for details.
+ */
+- (BOOL)GMShouldPostponeTearDown;
+
 @end
 
 @interface MailDocumentEditor_GPGMail (NotImplemented)

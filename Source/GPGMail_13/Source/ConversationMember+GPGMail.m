@@ -186,8 +186,13 @@
         return 1;
     }
 
-    DebugLog(@"Content blocking reason: %lld", [self MAMessageContentBlockingReason]);
-    return [self MARemoteContentBlockingReason];
+    // Bug #1040: Infinite loop.
+    //
+    // Called MAMessageContentBlockingReason before, which resulted in
+    // and infinite loop.
+    long long reason = [self MARemoteContentBlockingReason];
+    DebugLog(@"Content blocking reason: %lld", reason);
+    return reason;
 }
 
 - (BOOL)MAHasBlockedRemoteContent {

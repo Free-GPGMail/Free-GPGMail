@@ -2,7 +2,7 @@
 "VERSION: %@" = "Version: %@";
 
 /* PGP preferences panel name */
-"PGP_PREFERENCES" = "GPGMail";
+"PGP_PREFERENCES" = "GPG Mail";
 
 /* Message Error Banner messages. */
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_TITLE" = "PGP Nachricht konnte nicht entschlüsselt werden.";
@@ -18,13 +18,13 @@
 "MESSAGE_BANNER_PGP_DECRYPT_SECKEY_ERROR_MESSAGE" = "Keiner der folgenden geheimen Schlüssel konnte in deinem Schlüsselbund gefunden werden (%@). Der geheime Schlüssel wird zum Entschlüsseln dieser Nachricht benötigt.\n\nÜberprüfe, ob der Absender den richtigen öffentlichen Schlüssel verwendet hat.\nVersuche den fehlenden geheimen Schlüssel in einem Backup zu finden und importiere ihn von dort.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_TITLE" = "Unbekannter Fehler beim Entschlüsseln.";
-"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Beim Entschlüsseln der Nachricht ist ein unbekannter Fehler aufgetreten.\n\nBitte kontaktieren Sie uns unter https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Beim Entschlüsseln der Nachricht ist ein unbekannter Fehler aufgetreten.\n\nBitte kontaktiere uns unter https://gpgtools.tenderapp.com";
 
 "MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_TITLE" = "Unbekannter Fehler beim Entschlüsseln.";
-"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "Beim Entschlüsseln der Nachricht ist ein unbekannter Fehler aufgetreten.\n\nGPG Fehlermeldung:\n%@\nBitte kontaktieren Sie uns mit der GPG Fehlermeldung unter https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "Beim Entschlüsseln der Nachricht ist ein unbekannter Fehler aufgetreten.\n\nGPG Fehlermeldung:\n%@\nBitte kontaktiere uns mit der GPG Fehlermeldung unter https://gpgtools.tenderapp.com";
 
 "MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "Falscher Schlüssel zum Verschlüsseln der Nachricht verwendet.";
-"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Diese Nachricht konnte nicht entschlüsselt werden, weil ein falscher öffentlicher Schlüssel zum Verschlüsseln verwendet wurde.\n\nBitte kontaktieren Sie uns unter https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Diese Nachricht konnte nicht entschlüsselt werden, weil ein falscher öffentlicher Schlüssel zum Verschlüsseln verwendet wurde.\n\nBitte kontaktiere uns unter https://gpgtools.tenderapp.com";
 
 "MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "Die verschlüsselte Nachricht ist beschädigt.";
 "MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "Diese verschlüsselte Nachricht ist beschädigt und konnte nicht entschlüsselt werden.\n\nBitte den Absender die Nachricht erneut zu senden.";
@@ -144,12 +144,12 @@
 "MESSAGE_VIEW_PGP_PART_SIGNED" = "Signierter";
 "MESSAGE_VIEW_PGP_PART" = "PGP-Teil";
 
-/* GPGMail Preferences strings. */
-"GPG_STATUS_NO_ERROR_TITLE" = "GPGMail ready";
-"GPG_STATUS_NOT_FOUND_TITLE" = "MacGPG not found, reinstall GPG Suite";
-"GPG_STATUS_NOT_FOUND_TOOLTIP" = "Click indicator bubble for further information";
-"GPG_STATUS_OTHER_ERROR_TITLE" = "Problems found, click indicator bubble for more info";
-"GPG_STATUS_OTHER_ERROR_TOOLTIP" = "Click indicator bubble for further information";
+/* GPG Mail Preferences strings. */
+"GPG_STATUS_NO_ERROR_TITLE" = "GPG Mail ist bereit";
+"GPG_STATUS_NOT_FOUND_TITLE" = "MacGPG nicht gefunden, GPG Suite neu installieren";
+"GPG_STATUS_NOT_FOUND_TOOLTIP" = "Klicke den Farbindikator für weitere Informationen";
+"GPG_STATUS_OTHER_ERROR_TITLE" = "Probleme gefunden, klicke den Farbindikator für weitere Informationen";
+"GPG_STATUS_OTHER_ERROR_TOOLTIP" = "Klicke den Farbindikator für weitere Informationen";
 
 "DISABLE_ENCRYPT_DRAFTS_TITLE" = "Achtung: Wenn du diese Option deaktivierst, könnten sensible Informationen preisgegeben werden, während du eine Nachricht verfasst";
 "DISABLE_ENCRYPT_DRAFTS_MESSAGE" = "Wenn die Option \"Entwürfe auf Server sichern\" für deinen Account aktiviert ist, speichert macOS Mail automatisch deine Entwürfe auf dem Mail Server, während du eine Nachricht verfasst.\nWird \"Entwürfe verschlüsseln\" deaktiviert, werden deine Entwürfe im Klartext (unverschlüsselt) gespeichert. Jeder der Zugang zum Mail Server hat, wird sie lesen können.\n\nBleibt \"Entwürfe verschlüsseln\" aktiviert, werden deine Entwürfe verschlüsselt, bevor sie auf dem Mail Server gespeichert werden, so dass nur du sie lesen kannst.\n\nWillst du dennoch \"Entwürfe verschlüsseln\" deaktivieren?";
@@ -157,9 +157,9 @@
 "DISABLE_ENCRYPT_DRAFTS_CANCEL" = "Abbrechen";
 
 
-/* Multiple GPGMail installations. */
-"GPGMAIL_MULTIPLE_INSTALLATIONS_TITLE" = "Mehrere GPGMail Installationen wurden gefunden!";
-"GPGMAIL_MULTIPLE_INSTALLATIONS_MESSAGE" = "GPGMail hat Installationen in folgenden Verzeichnissen gefunden, was einen sofortigen Absturz zur Folge hat:\n\n%@\n\nBitte lösche GPGMail.mailbundle aus einem der Verzeichnisse und starte Mail erneut.\n";
+/* Multiple GPG Mail installations. */
+"GPGMAIL_MULTIPLE_INSTALLATIONS_TITLE" = "Mehrere GPG Mail Installationen wurden gefunden!";
+"GPGMAIL_MULTIPLE_INSTALLATIONS_MESSAGE" = "GPG Mail hat Installationen in folgenden Verzeichnissen gefunden, was einen sofortigen Absturz zur Folge hat:\n\n%@\n\nBitte lösche GPGMail.mailbundle aus einem der Verzeichnisse und starte Mail erneut.\n";
 "GPGMAIL_MULTIPLE_INSTALLATIONS_BUTTON" = "Mail beenden";
 
 /* No Libmacgpg. */
@@ -167,12 +167,12 @@
 "LIBMACGPG_NOT_FOUND_MESSAGE" = "Libmacgpg wurde auf deinem System nicht gefunden. Bitte lade und installiere GPG Suite von https://www.gpgtools.org.";
 
 /* Code signature invalid */
-CODE_SIGN_ERROR_TITLE = "Jemand hat deine GPGMail-Installation manipuliert!";
-CODE_SIGN_ERROR_MESSAGE = "Um dich zu schützen, wird GPGMail nicht geladen.\n\nBitte lade und installiere GPG Suite von https://gpgtools.org, um sicherzustellen, dass du eine Originalversion von uns verwendest.";
+CODE_SIGN_ERROR_TITLE = "Jemand hat deine GPG Mail-Installation manipuliert!";
+CODE_SIGN_ERROR_MESSAGE = "Um dich zu schützen, wird GPG Mail nicht geladen.\n\nBitte lade und installiere GPG Suite von https://gpgtools.org, um sicherzustellen, dass du eine Originalversion von uns verwendest.";
 
 /* GPGMailGPGMailBundle.defaults can't be loaded */
-NO_DEFAULTS_TITLE = "GPGMail-Standardeinstellungen konnten nicht geladen werden!";
-NO_DEFAULTS_MESSAGE = "GPGMail funktioniert nicht wie erwartet.\n\nLade und installiere erneut GPG Suite von https://gpgtools.org.\n\nSollte das Problem fortbestehen, kontaktiere uns bitte unter https://gpgtools.tenderapp.com/.";
+NO_DEFAULTS_TITLE = "GPG Mail-Standardeinstellungen konnten nicht geladen werden!";
+NO_DEFAULTS_MESSAGE = "GPG Mail funktioniert nicht wie erwartet.\n\nLade und installiere erneut GPG Suite von https://gpgtools.org\n\nSollte das Problem fortbestehen, kontaktiere uns bitte unter https://gpgtools.tenderapp.com/.";
 
 /* Errors while trying to sign a message. */
 "MESSAGE_SIGNING_ERROR_NO_PINENTRY_TITLE" = "Deine Nachricht konnte nicht signiert werden, da pinentry defekt ist!";
@@ -185,10 +185,10 @@ NO_DEFAULTS_MESSAGE = "GPGMail funktioniert nicht wie erwartet.\n\nLade und inst
 "MESSAGE_SIGNING_ERROR_AGENT_ERROR_DESCRIPTION" = "Es war nicht möglich den gpg-agent nach deinem Passwort zu fragen.\n\nUm dieses Problem zu beheben, lade GPG Suite von https://gpgtools.org und installiere erneut.";
 
 "MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_TITLE" = "Deine Nachricht konnte aufgrund eines unbekannten Fehlers nicht signiert werden";
-"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Wir können den Fehler an dieser Stelle nicht behandeln.";
+"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Unglücklicherweise kann GPG Mail den Fehler an dieser Stelle nicht behandeln.";
 
 "MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_TITLE" = "Deine Nachricht konnte aufgrund eines unbekannten Fehlers nicht verschlüsselt werden";
-"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Unglücklicherweise kann GPGMail den Fehler an dieser Stelle nicht behandeln.";
+"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Unglücklicherweise kann GPG Mail den Fehler an dieser Stelle nicht behandeln.";
 
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_TITLE" = "Du hast zu oft ein falsches Passwort eingegeben.";
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_DESCRIPTION" = "Das Signieren deiner Nachricht wurde abgebrochen, da du 3 mal das falsche Passwort eingegeben hast.";
@@ -216,7 +216,7 @@ NO_DEFAULTS_MESSAGE = "GPGMail funktioniert nicht wie erwartet.\n\nLade und inst
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_TITLE" = "Deine Nachricht konnte nicht signiert werden, da es ein Problem bei der Passwortabfrage gab.";
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "pinentry, das Programm, welches für das Abfragen deines Passworts zuständig ist, scheint defekt zu sein.\n\nUm dieses Problem zu beheben lade GPG Suite von https://gpgtools.org und installiere erneut.";
 
-"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Deine Nachricht konnte nicht signiert werden, da GPGMail beschädigt ist.";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Deine Nachricht konnte nicht signiert werden, da GPG Mail beschädigt ist.";
 "MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Um dieses Problem zu beheben, lade GPG Suite von https://gpgtools.org und installiere erneut.\n\nSollte das Problem weiterhin auftreten, kontaktiere uns unter https://gpgtools.tenderapp.com/ und gib an, dass der XPC Service nicht richtig funktioniert.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Die Entschlüsselung der Nachricht ist fehlgeschlagen, da pinentry nicht funktioniert.";
@@ -244,20 +244,55 @@ NO_DEFAULTS_MESSAGE = "GPGMail funktioniert nicht wie erwartet.\n\nLade und inst
 "UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_BUTTON_SEND_ANYWAY" = "Trotzdem weiterleiten";
 "UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_BUTTON_CANCEL" = "Abbrechen";
 
-"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_TITLE" = "Decryption of the message was aborted";
-"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_MESSAGE" = "The modification detection code (MDC) for this encrypted message is missing or has been modified.\n\nThis could mean that an attacker has been trying to modify the contents within the encrypted message.\n\nPlease have the message re-sent to you and tell the sender, that their encrypted message didn't include a modification detection code.";
+"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_TITLE" = "Die Entschlüsselung der Nachricht wurde abgebrochen.";
+"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_MESSAGE" = "Der Modification Detection Code (MDC) für diese verschlüsselte Nachricht fehlt oder wurde geändert. \n\nDies könnte bedeuten, dass ein Angreifer versucht hat, den Inhalt der verschlüsselten Nachricht zu ändern. \n\nBitte lass dir die Nachricht erneut zusenden und teile dem Absender mit, dass seine verschlüsselte Nachricht keinen Modification Detection Code enthielt.";
 
-"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_TITLE" = "Attention: Opening this website could leak the contents of this message";
-"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_MESSAGE" = "Due to a problem in the implementation of S/MIME encryption, it is possible for an attacker to modify a message without your knowledge.\n\nYou are about to open the following website:\n\n%@\n\nAre you sure you want to continue?";
+"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_TITLE" = "Achtung: Das Öffnen dieser Webseite könnte den Inhalt dieser Nachricht leaken";
+"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_MESSAGE" = "Aufgrund eines Problems in der Implementierung der S/MIME-Verschlüsselung ist es für einen Angreifer möglich, eine Nachricht ohne dein Wissen zu ändern. \n\nDu bist dabei, die folgende Webseite zu öffnen: \n\n%@ \n\nBist du sicher, dass du fortfahren möchtest?";
 "NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_BUTTON_YES" = "Ja";
 "NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_BUTTON_CANCEL" = "Abbrechen";
 
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_TITLE" = "Decryption of the attachment was aborted";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_MESSAGE" = "The modification detection code (MDC) for this encrypted attachment is missing or has been modified.\n\nThis could mean that an attacker has been trying to modify the contents within the encrypted attachment.\n\nPlease have the attachment re-sent to you and tell the sender, that their encrypted attachment didn't include a modification detection code.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_TITLE" = "Die Entschlüsselung des Anhangs wurde abgebrochen.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_MESSAGE" = "Der Modification Detection Code (MDC) für diese verschlüsselte Anlage fehlt oder wurde geändert. \n\nDies könnte bedeuten, dass ein Angreifer versucht hat, den Inhalt der verschlüsselten Anlage zu ändern. \n\nBitte lass dir die Anlage erneut zusenden und teile dem Absender mit, dass seine verschlüsselte Anlage keinen Modification Detection Code enthält.";
 
 
 /* Accessibility */
 ACCESSIBILITY_SECURITY_METHOD_POPUP_LABEL = "Sicherheitstechnik: %@";
 ACCESSIBILITY_SIGN_ON_IMAGE = "Signieren";
 ACCESSIBILITY_SIGN_OFF_IMAGE = "Nicht signieren";
+
+
+
+/* Support Plan */
+"SUPPORT_PLAN_ACTIVATION_SUCCESS_TITLE" = "Support Plan aktiviert";
+"SUPPORT_PLAN_ACTIVATION_SUCCESS_MESSAGE" = "Danke für deine Unterstützung!\n\nWir hoffen du wirst Freude an GPG Mail haben. Solltest du irgendwelche Fragen haben, zögere nicht uns über den Knopf \"Problem melden\" in Mail > Einstellungen > GPG Mail zu kontaktieren.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_TITLE" = "Support Plan Aktivierung fehlgeschlagen";
+"SUPPORT_PLAN_ACTIVATION_FAILED_INPUT_INVALID" = "Der eingegebene Aktivierungscode ist ungültig. Bitte überprüfe die eingegebenen Daten und versuche es erneut.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_CONNECTTION_ERROR" = "Es war nicht möglich, eine Verbindung zur paddle.com API herzustellen, um deinen Aktivierungscode zu überprüfen.\nFalls du eine macOS Firewall Software (System-Firewall, Little Snitch, usw.) verwendest, erlaube bitte Verbindungen zu paddle.com, um die Aktivierung abzuschliessen. Du kannst die Verbindungen wieder blockieren, nachdem die Aktivierung abgeschlossen ist.\n\nKontaktiere uns via business@gpgtools.org falls das Problem fortbesteht.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_CODE_INVALID" = "Der eingegebene Aktivierungscode ist ungültig.\nBitte kontaktiere uns via business@gpgtools.org falls du sicher bist, dass du den Code korrekt eingegeben hast.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS" = "Es tut uns leid dir mitzuteilen, dass du die Anzahl der erlaubten Aktivierungen überschritten hast.\nBitte kontaktiere uns via business@gpgtools.org, falls du glaubst, dass du noch weitere Aktivierungen haben solltest.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_GENERAL_ERROR" = "Leider ist ein unbekannter Fehler aufgetreten. Bitte versuche es später erneut oder kontaktieren uns via 'Systemeinstellungen > GPG Suite > Bericht Senden.";
+"SUPPORT_PLAN_HEADER_EXPIRED" = "Dein 30-Tage-Trial von GPG Mail ist abgelaufen. Verschlüsseln, signieren und verifizieren von Nachrichten werden nun nicht mehr funktionieren. Entschlüsseln wird jedoch immer funktionieren.\nBestelle GPG Mail Support Plan um den vollen Funktionsumfang weiter zu verwenden.";
+"SUPPORT_PLAN_HEADER_TRIAL" = "Du kannst GPG Mail kostenlos für %@Tage testen.\nSichere deine E-Mail Kommunikation jetzt!";
+"SUPPORT_PLAN_HEADER_TRIAL_MORE" = "Du kannst GPG Mail kostenlos für weitere %@ Tage testen.\nSichere deine E-Mail Kommunikation jetzt!";
+"SUPPORT_PLAN_DETAILS_MESSAGE" = "Falls du bereits einen Support Plan bestellt hast, aktiviere in jetzt und geniesse GPG Mail.";
+"SUPPORT_PLAN_DETAILS_MESSAGE_HYPERLINK_PART" = "Support Plan";
+"SUPPORT_PLAN_BUY" = "Jetzt kaufen";
+"SUPPORT_PLAN_CLOSE" = "Fortfahren";
+"SUPPORT_PLAN_CONTINUE_TRIAL"= "Trial fortsetzen";
+"SUPPORT_PLAN_START_TRIAL" = "Trial beginnen";
+"SUPPORT_PLAN_BUY" = "Jetzt kaufen";
+"SUPPORT_PLAN_ACTIVATE" = "Aktivieren";
+"SUPPORT_PLAN_TRIAL_EXPIRED_TITLE" = "GPG Mail Trial Abgelaufen";
+"SUPPORT_PLAN_TRIAL_EXPIRED_MESSAGE" = "Ohne aktiven GPG Mail Support Plan wirst du weiter in der Lage sein, deine verschlüsselten E-Mails zu lesen. Allerdings wirst du E-Mails nicht mehr signieren, verschlüsseln oder verifizieren können.";
+"SUPPORT_PLAN_HEADER_WELCOME" = "Willkommen bei GPG Mail";
+"SUPPORT_PLAN_EMAIL_LABEL" = "E-Mail";
+"SUPPORT_PLAN_LICENSE_LABEL" = "Aktivierungscode";
+"SUPPORT_PLAN_GRAY_INFO" = "Deinen Aktivierungscode findest du in der E-Mail, die du nach Abschluss deiner Bestellung erhalten hast.";
+"SUPPORT_PLAN_PROGRESS_LABEL" = "Deine Kopie von GPG Mail wird aktiviert.";
+
+
+
+
+
 

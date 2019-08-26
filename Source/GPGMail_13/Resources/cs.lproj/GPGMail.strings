@@ -2,7 +2,7 @@
 "VERSION: %@" = "Verze: %@";
 
 /* PGP preferences panel name */
-"PGP_PREFERENCES" = "GPGMail";
+"PGP_PREFERENCES" = "GPG Mail";
 
 /* Message Error Banner messages. */
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_TITLE" = "Nelze dešifrovat PGP zprávu.";
@@ -144,12 +144,12 @@
 "MESSAGE_VIEW_PGP_PART_SIGNED" = "Podepsáno";
 "MESSAGE_VIEW_PGP_PART" = "PGP část";
 
-/* GPGMail Preferences strings. */
-"GPG_STATUS_NO_ERROR_TITLE" = "GPGMail ready";
-"GPG_STATUS_NOT_FOUND_TITLE" = "MacGPG not found, reinstall GPG Suite";
-"GPG_STATUS_NOT_FOUND_TOOLTIP" = "Click indicator bubble for further information";
-"GPG_STATUS_OTHER_ERROR_TITLE" = "Problems found, click indicator bubble for more info";
-"GPG_STATUS_OTHER_ERROR_TOOLTIP" = "Click indicator bubble for further information";
+/* GPG Mail Preferences strings. */
+"GPG_STATUS_NO_ERROR_TITLE" = "GPG Mail je připraven";
+"GPG_STATUS_NOT_FOUND_TITLE" = "Aplikace MacGPG nebyla nalezena, nainstalujte GPG Suite";
+"GPG_STATUS_NOT_FOUND_TOOLTIP" = "Klepnutím na bublinu získáte další informace";
+"GPG_STATUS_OTHER_ERROR_TITLE" = "Vyskytl se problém, klepnutím na bublinu získáte další informace";
+"GPG_STATUS_OTHER_ERROR_TOOLTIP" = "Klepnutím na bublinu získáte další informace";
 
 "DISABLE_ENCRYPT_DRAFTS_TITLE" = "Varování: Deaktivace této možnosti by mohla vést k úniku citlivých informací při psaní zprávy";
 "DISABLE_ENCRYPT_DRAFTS_MESSAGE" = "Pokud je na vašem účtě zapnuta volba „Uložit koncepty na serveru“, aplikace macOS Mail.app automaticky ukládá vaše koncepty na poštovní server během vytváření zprávy.\nZakázáním funkce „Šifrování konceptů“ budou koncepty uloženy v prostém textu (nešifrované), a může je číst každý, kdo má přístup k poštovnímu serveru.\n\nPovolením funkce „Šifrování konceptů“, budou vaše koncepty zašifrovány předtím, než budou uloženy na poštovní server a budete je moci číst pouze vy.\n\nPřesto si přejete deaktivovat funkci „Šifrování konceptů“?";
@@ -157,9 +157,9 @@
 "DISABLE_ENCRYPT_DRAFTS_CANCEL" = "Zrušit";
 
 
-/* Multiple GPGMail installations. */
-"GPGMAIL_MULTIPLE_INSTALLATIONS_TITLE" = "Nalezeno více instalací GPGMail!";
-"GPGMAIL_MULTIPLE_INSTALLATIONS_MESSAGE" = "Bylo nalezeno více instalací GPGMail na následujících místech, což může vést k nepředvídatelným selháním a pádům:\n\n%@\n\nOdstraňte prosím GPGMail.mailbundle z některých umístění a znovu spusťte aplikaci Mail.\n";
+/* Multiple GPG Mail installations. */
+"GPGMAIL_MULTIPLE_INSTALLATIONS_TITLE" = "Nalezeno více instalací GPG Mail!";
+"GPGMAIL_MULTIPLE_INSTALLATIONS_MESSAGE" = "Bylo nalezeno více instalací GPG Mail na následujících místech, což může vést k nepředvídatelným selháním a pádům:\n\n%@\n\nOdstraňte prosím GPGMail.mailbundle z některých umístění a znovu spusťte aplikaci Mail.\n";
 "GPGMAIL_MULTIPLE_INSTALLATIONS_BUTTON" = "Ukončit Mail";
 
 /* No Libmacgpg. */
@@ -167,12 +167,12 @@
 "LIBMACGPG_NOT_FOUND_MESSAGE" = "Komponenta Libmacgpg nebyla nalezena ve vašem systému. Zkopírujte si ji a nainstalujte GPG Suite z tohoto umístění https://www.gpgtools.org.";
 
 /* Code signature invalid */
-CODE_SIGN_ERROR_TITLE = "Někdo manipuloval s instalací GPGMail!";
-CODE_SIGN_ERROR_MESSAGE = "Z důvodu bezpečnosti nebyl GPGMail načten. \n\nNainstalujte si prosím GPG Suite z našeho důvěryhodného zdroje https://gpgtools.org.";
+CODE_SIGN_ERROR_TITLE = "Někdo manipuloval s instalací GPG Mail!";
+CODE_SIGN_ERROR_MESSAGE = "Z důvodu bezpečnosti nebyl GPG Mail načten. \n\nNainstalujte si prosím GPG Suite z našeho důvěryhodného zdroje https://gpgtools.org.";
 
 /* GPGMailGPGMailBundle.defaults can't be loaded */
-NO_DEFAULTS_TITLE = "Nelze načíst výchozí nastavení GPGMail!";
-NO_DEFAULTS_MESSAGE = "GPGMail nepracuje podle očekávání.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na https://gpgtools.tenderapp.com/ ";
+NO_DEFAULTS_TITLE = "Nelze načíst výchozí nastavení GPG Mail!";
+NO_DEFAULTS_MESSAGE = "GPG Mail nepracuje podle očekávání.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na https://gpgtools.tenderapp.com/ ";
 
 /* Errors while trying to sign a message. */
 "MESSAGE_SIGNING_ERROR_NO_PINENTRY_TITLE" = "Podepisování Vaši zprávy selhalo z důvodu selhání komponenty pinentry!";
@@ -185,10 +185,10 @@ NO_DEFAULTS_MESSAGE = "GPGMail nepracuje podle očekávání.\n\nProsím přeins
 "MESSAGE_SIGNING_ERROR_AGENT_ERROR_DESCRIPTION" = "Komunikace s komponentou GPG agent selhala.\n\nPro vyřešnení problému přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.";
 
 "MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_TITLE" = "Podepisování vaši zprávy selhalo z důvodu výskytu neznámé chyby!";
-"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Naneštěstí se nyní nelze z této chyby zotavit.";
+"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Naneštěstí GPG Mail se nyní nedokáže z této chyby zotavit.";
 
 "MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_TITLE" = "Šifrování vaši zprávy selhalo z důvodu výskytu neznámé chyby.";
-"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Naneštěstí GPGMail se nyní nedokáže z této chyby zotavit.";
+"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Naneštěstí GPG Mail se nyní nedokáže z této chyby zotavit.";
 
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_TITLE" = "Zadal jste několikrát chybné heslo.";
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_DESCRIPTION" = "Podepisování vaši zprávy bylo přerušeno, protože jste třikrát chybně zadal své heslo.";
@@ -216,7 +216,7 @@ NO_DEFAULTS_MESSAGE = "GPGMail nepracuje podle očekávání.\n\nProsím přeins
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_TITLE" = "Podepisování vaši zprávy selhalo z důvodu problému během zadání hesla.";
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "Pinentry – nástroj odpovědný za vyžádání vašeho hesla nepracuje správně.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://gpgtools.org.";
 
-"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Podepisování vaši zprávy selhalo z důvodu chybné instalace GPGMail!";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Podepisování vaši zprávy selhalo z důvodu chybné instalace GPG Mail!";
 "MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Pro vyřešení tohoto problému, prosím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na  https://gpgtools.tenderapp.com/ a přiložte informaci o tom, že služba XPC nepracuje správně.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Dešifrování zprávy selhalo z důvodu selhání komponenty pinentry.";
@@ -244,20 +244,55 @@ NO_DEFAULTS_MESSAGE = "GPGMail nepracuje podle očekávání.\n\nProsím přeins
 "UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_BUTTON_SEND_ANYWAY" = "Přesto odeslat";
 "UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_BUTTON_CANCEL" = "Zrušit";
 
-"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_TITLE" = "Decryption of the message was aborted";
-"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_MESSAGE" = "The modification detection code (MDC) for this encrypted message is missing or has been modified.\n\nThis could mean that an attacker has been trying to modify the contents within the encrypted message.\n\nPlease have the message re-sent to you and tell the sender, that their encrypted message didn't include a modification detection code.";
+"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_TITLE" = "Dešifrování zprávy bylo přerušeno";
+"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_MESSAGE" = "Kód detekce modifikace (MDC) pro tuto šifrovanou zprávu chybí nebo byl změněn.\n\nTo by mohlo znamenat, že se útočník pokouší upravovat obsah v šifrované zprávě.\n\nNechte si poslat zprávu znovu a informujte odesílatele, že jeho šifrovaná zpráva neobsahuje kód detekce modifikace.";
 
-"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_TITLE" = "Attention: Opening this website could leak the contents of this message";
-"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_MESSAGE" = "Due to a problem in the implementation of S/MIME encryption, it is possible for an attacker to modify a message without your knowledge.\n\nYou are about to open the following website:\n\n%@\n\nAre you sure you want to continue?";
+"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_TITLE" = "Upozornění: Otevřením této webové stránky by mohlo dojít k úniku obsahu této zprávy";
+"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_MESSAGE" = "Kvůli problému při implementaci šifrování S / MIME je možné, že útočník změní zprávu bez vašeho vědomí.\n\nChystáte se otevřít následující webovou stránku:\n\n%@\n\nPřejete si pokračovat?";
 "NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_BUTTON_YES" = "Ano";
 "NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_BUTTON_CANCEL" = "Zrušit";
 
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_TITLE" = "Decryption of the attachment was aborted";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_MESSAGE" = "The modification detection code (MDC) for this encrypted attachment is missing or has been modified.\n\nThis could mean that an attacker has been trying to modify the contents within the encrypted attachment.\n\nPlease have the attachment re-sent to you and tell the sender, that their encrypted attachment didn't include a modification detection code.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_TITLE" = "Dešifrování přílohy bylo přerušeno";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_MESSAGE" = "Kód detekce modifikace (MDC) pro tuto šifrovanou přílohu chybí nebo byl změněn.\n\nTo by mohlo znamenat, že se útočník pokouší upravovat přílohu šifrované zprávy.\n\n\nNechte si poslat přílohu znovu a informujte odesílatele, že jeho šifrovaná příloha neobsahuje kód detekce modifikace.";
 
 
 /* Accessibility */
 ACCESSIBILITY_SECURITY_METHOD_POPUP_LABEL = "Metoda: %@";
 ACCESSIBILITY_SIGN_ON_IMAGE = "Podepsat";
 ACCESSIBILITY_SIGN_OFF_IMAGE = "Nepodepisovat";
+
+
+
+/* Support Plan */
+"SUPPORT_PLAN_ACTIVATION_SUCCESS_TITLE" = "Support Plan Activated";
+"SUPPORT_PLAN_ACTIVATION_SUCCESS_MESSAGE" = "Thank you for your support!\n\nWe hope you enjoy using GPG Mail. Should you have any questions, don't hesitate to contact us via \"Report Problem\" in Mail › Preferences › GPG Mail";
+"SUPPORT_PLAN_ACTIVATION_FAILED_TITLE" = "Support Plan Activation Failed";
+"SUPPORT_PLAN_ACTIVATION_FAILED_INPUT_INVALID" = "The entered activation code is invalid. Please check the entered information and try again.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_CONNECTTION_ERROR" = "We were unable to connect to the paddle.com API to verify your activation code.\nIf you are using any macOS firewall product (buil-in firewall, Little Snitch, etc.), please allow connections to paddle.com for the activation to complete. You can block any connections again once the activation is completed.\n\nPlease contact us at business@gpgtools.org if the problem persists.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_CODE_INVALID" = "The entered activation code is invalid.\nPlease contact us at business@gpgtools.org if you are sure that you have entered your code correctly.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS" = "We are very sorry to inform you that you have exceeded the allowed number of activations.\nPlease contact us at business@gpgtools.org, if you believe that you should still have activations left.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_GENERAL_ERROR" = "Unfortunately an unknown error has occurred. Please retry later or use 'System Preferences › GPG Suite › Send Report' to contact us";
+"SUPPORT_PLAN_HEADER_EXPIRED" = "Your 30-day-trial of GPG Mail has expired. Encrypting, signing and verifying messages will stop to work. Decrypting however will always continue to work.\nPurchase GPG Mail Support Plan to continue with full functionality.";
+"SUPPORT_PLAN_HEADER_TRIAL" = "You can test GPG Mail free for %@ days.\nSecure your emails now!";
+"SUPPORT_PLAN_HEADER_TRIAL_MORE" = "You can test GPG Mail free for %@ more days.\nSecure your emails now!";
+"SUPPORT_PLAN_DETAILS_MESSAGE" = "If you have already purchased a support plan, activate it now and enjoy GPG Mail!";
+"SUPPORT_PLAN_DETAILS_MESSAGE_HYPERLINK_PART" = "support plan";
+"SUPPORT_PLAN_BUY" = "Buy Now";
+"SUPPORT_PLAN_CLOSE" = "Continue";
+"SUPPORT_PLAN_CONTINUE_TRIAL"= "Continue Trial";
+"SUPPORT_PLAN_START_TRIAL" = "Start Trial";
+"SUPPORT_PLAN_BUY" = "Buy Now";
+"SUPPORT_PLAN_ACTIVATE" = "Activate";
+"SUPPORT_PLAN_TRIAL_EXPIRED_TITLE" = "GPG Mail Trial Expired";
+"SUPPORT_PLAN_TRIAL_EXPIRED_MESSAGE" = "Without an active GPG Mail Support Plan you will still be able to read any of your encrypted emails. However, you will no longer be able to sign, encrypt or verify emails.";
+"SUPPORT_PLAN_HEADER_WELCOME" = "Welcome to GPG Mail";
+"SUPPORT_PLAN_EMAIL_LABEL" = "Email";
+"SUPPORT_PLAN_LICENSE_LABEL" = "Activation Code";
+"SUPPORT_PLAN_GRAY_INFO" = "Your activation code can be found in the email you receive after completing your purchase.";
+"SUPPORT_PLAN_PROGRESS_LABEL" = "Activating your copy of GPG Mail";
+
+
+
+
+
 

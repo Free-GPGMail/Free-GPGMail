@@ -28,6 +28,7 @@ typedef enum : NSUInteger {
 - (void)closeSupportPlanAssistant:(NSWindowController *)windowController;
 - (void)supportPlanAssistantShouldStartTrial:(NSWindowController *)windowController;
 - (NSDictionary *)contractInformation;
+- (NSDictionary *)supportPlanInformationForAutomaticActivationWithSupportPlanAssistant:(NSWindowController *)windowController;
 
 @end
 
@@ -38,6 +39,7 @@ typedef enum : NSUInteger {
 - (void)activationDidCompleteWithSuccess;
 - (void)activationDidFailWithError:(NSError *)error;
 - (instancetype)initWithSupportPlanActivationInformation:(NSDictionary *)supportPlanInformation;
+- (void)performAutomaticSupportPlanActivationWithActivationCode:(NSString *)activationCode email:(NSString *)email;
 
 @end
 
@@ -47,6 +49,8 @@ typedef enum : NSUInteger {
 
 @property (nonatomic) NSString *email;
 @property (nonatomic) NSString *activationCode;
+
+- (void)performAutomaticSupportPlanActivationWithActivationCode:(NSString *)activationCode email:(NSString *)email;
 
 @end
 

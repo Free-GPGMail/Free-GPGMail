@@ -62,3 +62,10 @@ DEPRECATED_ATTRIBUTE @interface SplitFormatter : NSFormatter {
 }
 @property (nonatomic) NSInteger blockSize;
 @end
+
+
+@interface NSNumber (GPGValidityCompare)
+// Compare two GPGValidity NSNumbers.
+- (NSComparisonResult)compareGPGValidity:(NSNumber *)otherNumber;
+@end
+

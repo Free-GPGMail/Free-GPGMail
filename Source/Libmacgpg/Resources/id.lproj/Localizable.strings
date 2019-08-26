@@ -9,10 +9,10 @@ PassphraseLabel = "Kata sandi:";
 /* For Key-Status */
 "Invalid" = "Tidak valid";
 "Revoked" = "Dicabut";
-"Expired" = "Kedaluarsa";
+"Expired" = "Kedaluwarsa";
 "Disabled" = "Dinonaktifkan";
 "Unknown" = "Tak diketahui";
-"Never" = "Never";
+"Never" = "Jangan Pernah";
 "Marginal" = "Terbatas";
 "Full" = "Penuh";
 "Ultimate" = "Tertinggi";
@@ -24,7 +24,7 @@ Undo_Delete = "Hapus";
 Undo_CleanKey = "Bersih";
 Undo_MinimizeKey = "Minimalkan";
 Undo_RevokeKey = "Cabut Kunci";
-Undo_ChangeExpirationDate = "Ubah Tanggal Kedaluarsa";
+Undo_ChangeExpirationDate = "Ubah Tanggal Kedaluwarsa";
 Undo_ChangePassphrase = "Ubah Kata Sandi";
 Undo_AlgorithmPreferences = "Ubah Preferensi Algoritma";
 Undo_Import = "Impor";
@@ -83,8 +83,8 @@ GPG_EdDSAAlgorithm = "EdDSA";
 
 /* GPGSignature humanReadableDescription */
 "Signed" = "Ditandatangani";
-"Signature expired" = "Tanda tangan kedaluarsa";
-"Key expired" = "Kunci kedaluarsa";
+"Signature expired" = "Tanda tangan kedaluwarsa";
+"Key expired" = "Kunci kedaluwarsa";
 "Bad signature" = "Tanda tangan dan data tidak cocok. Ini bisa berarti bahwa data telah dirusak.";
 "Signature revoked" = "Tanda tangan dicabut";
 "Signature error" = "Kesalahan tanda tangan";
@@ -93,39 +93,46 @@ GPG_EdDSAAlgorithm = "EdDSA";
 
 
 /* Key Descriptions */
-KeyDescriptionAndMore = "and %lu more";
+KeyDescriptionAndMore = "dan %lu lagi";
 
 
 /* Key Expiry Warning */
-KeyExpiryWarning_Title = "Warning: Your key is about to expire";
-KeyExpiryWarning_Msg = "Your key will expire on %1$@:\n\n%2$@\n\nExpired keys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this key.\n\nIf you choose to extend your key, it will be valid for two more years.\n\nDo you want to extend your key?";
-KeyExpiryWarning_Yes = "Extend Key";
-KeyExpiryWarning_No = "Cancel";
-KeyExpiryWarning_Suppress = "Do Not Ask Again";
+KeyExpiryWarning_Title = "Peringatan: Kunci Anda akan kedaluwarsa";
+KeyExpiryWarning_Msg = "Kunci Anda akan kedaluwarsa pada %1$@:\n\n%2$@\n\nKunci yang kedaluwarsa tidak dapat dipakai untuk mengenkripsi atau menandatangani pesan-pesan baru. Dekripsi dapat terus dilakukan. Teman-teman Anda tidak akan dapat mengirim pesan terenkripsi memakai kunci ini.\n\nBila Anda memilih untuk memperpanjang kunci, itu akan valid selama dua tahun mendatang.\n\nApakah Anda hendak memperpanjang kunci Anda?";
+KeyExpiryWarning_Yes = "Perpanjang Kunci";
+KeyExpiryWarning_No = "Batal";
+KeyExpiryWarning_Suppress = "Jangan Tanya Lagi";
 
-SubkeyExpiryWarning_Title = "Warning: Your subkey is about to expire";
-SubkeyExpiryWarning_Msg = "Your subkey will expire on %1$@:\n\n%2$@\n\nExpired subkeys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this subkey.\n\nIf you choose to extend your subkey, it will be valid for two more years.\n\nDo you want to extend your subkey?";
-SubkeyExpiryWarning_Yes = "Extend Subkey";
-SubkeyExpiryWarning_No = "Cancel";
-SubkeyExpiryWarning_Suppress = "Do Not Ask Again";
+SubkeyExpiryWarning_Title = "Peringatan: Sub kunci Anda akan kedaluwarsa";
+SubkeyExpiryWarning_Msg = "Sub kunci Anda akan kedaluwarsa pada %1$@:\n\n%2$@\n\nSub kunci yang kedaluwarsa tidak dapat dipakai untuk mengenkripsi atau menandatangani pesan-pesan baru. Dekripsi dapat terus dilakukan. Teman-teman Anda tidak akan dapat mengirim pesan terenkripsi memakai sub kunci ini.\n\nBila Anda memilih untuk memperpanjang sub kunci, itu akan valid selama dua tahun mendatang.\n\nApakah Anda hendak memperpanjang sub kunci Anda?";
+SubkeyExpiryWarning_Yes = "Perpanjang Sub Kunci";
+SubkeyExpiryWarning_No = "Batal";
+SubkeyExpiryWarning_Suppress = "Jangan Tanya Lagi";
 
-WrongPasswordTryAgain_Title = "You entered the wrong password";
-WrongPasswordTryAgain_Msg = "Do you want to try it again?";
-WrongPasswordTryAgain_Yes = "Try Again";
-WrongPasswordTryAgain_No = "Cancel";
+WrongPasswordTryAgain_Title = "Anda memasukkan kata sandi yang salah";
+WrongPasswordTryAgain_Msg = "Apakah Anda hendak mencoba lagi?";
+WrongPasswordTryAgain_Yes = "Coba Lagi";
+WrongPasswordTryAgain_No = "Batal";
 
-KeyExpiryFailed_Title = "Failed to extend your key!";
-KeyExpiryFailed_Msg = "The key\n%1$@\ncould not be extened.\n\nError: %2$@";
+KeyExpiryFailed_Title = "Gagal memperpanjang kunci Anda!";
+KeyExpiryFailed_Msg = "Kunci\n%1$@\ntidak dapat diperpanjang\n\nGalat: %2$@";
 
-KeyExtendedWantToUpload_Title = "Your key was extended successfully";
-KeyExtendedWantToUpload_Msg = "In order for others to be able to see the new expiration date, it is necessary for them to import your updated key. Therefore it is recommended to upload your updated public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please consider attaching your public key to your signed and encrypted emails.\n\nDo you want to upload your public key?";
-KeyExtendedWantToUpload_Yes = "Upload Public Key";
-KeyExtendedWantToUpload_No = "No, Thanks!";
+KeyExtendedWantToUpload_Title = "Kunci Anda sukses diperpanjang";
+KeyExtendedWantToUpload_Msg = "Agar orang lain dapat melihat tanggal kedaluwarsa baru, mereka perlu mengimpor kunci mutakhir Anda. Maka disarankan untuk mengunggah kunci publik Anda yang mutakhir ke server kunci.\n\nPeringatan: Server kunci adalah publik, sehingga nama dan surel yang Anda pakai dalam kunci Anda akan tampak secara publik. Kunci-kunci tidak dapat dihapus dari server kunci. Mereka bisa dicabut tapi tidak dihapus.\n\nBila Anda lebih suka untuk tidak memakai server kunci, harap pertimbangkan untuk melampirkan kunci publik Anda ke surel Anda yang ditandatangani dan dienkripsi.\n\nApakah Anda hendak mengunggah kunci publik Anda?";
+KeyExtendedWantToUpload_Yes = "Unggah Kunci Publik";
+KeyExtendedWantToUpload_No = "Tidak, Terima kasih!";
 
-UploadFailed_Title = "Failed to upload the key!";
-UploadFailed_Msg = "The key could not be uploaded to the keyserver.\n\nError: %@";
+UploadFailed_Title = "Gagal mengunggah kunci!";
+UploadFailed_Msg = "Kunci tidak dapat diunggah ke server kunci.\n\nGalat: %@";
 
 
 UpdaterNotWorking_Title = "Pemutakhir Keluarga GPG tak bekerja seperti yang diharapkan!";
 UpdaterNotWorking_Msg = "Harap unduh dan pasang ulang Keluarga GPG dari https://gpgtools.org";
+
+
+SwitchToOldKeyserver_Title = "Peringatan: Anda akan berganti server kunci";
+SwitchToOldKeyserver_Msg = "Bertukar ke server kunci lama akan menurunkan kualitas hasil pencarian. Walaupun keys.openpgp.org mengizinkan verifikasi alamat surel dan kemudian akan menampilkan surel dalam hasil pencarian, server kunci lama tidak mendukung mekanisme itu.\n\nKami menyarankan untuk tetap memakai keys.openpgp.org\n\nApakah Anda yakin hendak berganti server kunci?";
+SwitchToOldKeyserver_No = "Batal";
+SwitchToOldKeyserver_Yes = "Bertukar ke Server Kunci lama";
+
 

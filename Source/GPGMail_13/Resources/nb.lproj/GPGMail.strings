@@ -2,7 +2,7 @@
 "VERSION: %@" = "Versjon: %@";
 
 /* PGP preferences panel name */
-"PGP_PREFERENCES" = "GPGMail";
+"PGP_PREFERENCES" = "GPG Mail";
 
 /* Message Error Banner messages. */
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_TITLE" = "Kunne ikke dekryptere PGP-melding.";
@@ -144,8 +144,8 @@
 "MESSAGE_VIEW_PGP_PART_SIGNED" = "Signert";
 "MESSAGE_VIEW_PGP_PART" = "PGP del";
 
-/* GPGMail Preferences strings. */
-"GPG_STATUS_NO_ERROR_TITLE" = "GPGMail ready";
+/* GPG Mail Preferences strings. */
+"GPG_STATUS_NO_ERROR_TITLE" = "GPG Mail er klar.";
 "GPG_STATUS_NOT_FOUND_TITLE" = "MacGPG not found, reinstall GPG Suite";
 "GPG_STATUS_NOT_FOUND_TOOLTIP" = "Click indicator bubble for further information";
 "GPG_STATUS_OTHER_ERROR_TITLE" = "Problems found, click indicator bubble for more info";
@@ -157,9 +157,9 @@
 "DISABLE_ENCRYPT_DRAFTS_CANCEL" = "Avbryt";
 
 
-/* Multiple GPGMail installations. */
-"GPGMAIL_MULTIPLE_INSTALLATIONS_TITLE" = "Fant flere installasjoner av GPGMail!";
-"GPGMAIL_MULTIPLE_INSTALLATIONS_MESSAGE" = "GPGMail fant flere installasjoner på følgende steder som vil føre til en umiddelbar kræsj:\n\n%@\n\nVennligst fjern GPGMail.mailbundle på et av stedene og start Mail på nytt.\n";
+/* Multiple GPG Mail installations. */
+"GPGMAIL_MULTIPLE_INSTALLATIONS_TITLE" = "Fant flere installasjoner av GPG Mail!";
+"GPGMAIL_MULTIPLE_INSTALLATIONS_MESSAGE" = "GPG Mail fant flere installasjoner på følgende steder som vil føre til en umiddelbar kræsj:\n\n%@\n\nVennligst fjern GPGMail.mailbundle på et av stedene og start Mail på nytt.\n";
 "GPGMAIL_MULTIPLE_INSTALLATIONS_BUTTON" = "Avslutt Mail";
 
 /* No Libmacgpg. */
@@ -167,12 +167,12 @@
 "LIBMACGPG_NOT_FOUND_MESSAGE" = "Libmacgpg ikke funnet på ditt system. Last ned og installer GPG Suite fra https://www.gpgtools.org";
 
 /* Code signature invalid */
-CODE_SIGN_ERROR_TITLE = "Noen har tuklet med din installasjon av GPGMail!";
-CODE_SIGN_ERROR_MESSAGE = "For å beskytte deg vil ikke GPGMail lastes inn!\n\nVennligst last ned den siste versjonen av GPG Suite fra https://gpgtools.org for å forsike deg om at du har original-versjonen fra oss.";
+CODE_SIGN_ERROR_TITLE = "Noen har tuklet med din installasjon av GPG Mail!";
+CODE_SIGN_ERROR_MESSAGE = "For å beskytte deg vil ikke GPG Mail lastes inn!\n\nVennligst last ned den siste versjonen av GPG Suite fra https://gpgtools.org for å forsike deg om at du har original-versjonen fra oss.";
 
 /* GPGMailGPGMailBundle.defaults can't be loaded */
-NO_DEFAULTS_TITLE = "Kunne ikke laste standardinnstilligene for GPGMail!";
-NO_DEFAULTS_MESSAGE = "GPGMail fungerer ikke som forventet.\n\nVennligst last ned og reinstaller GPG Suite fra https://gpgtools.org\n\nOm dette probelemet ikke opphører, vennligst kontakt oss via https://gpgtools.tenderapp.com/.";
+NO_DEFAULTS_TITLE = "Kunne ikke laste standardinnstilligene for GPG Mail!";
+NO_DEFAULTS_MESSAGE = "GPG Mail fungerer ikke som forventet.\n\nVennligst last ned og reinstaller GPG Suite fra https://gpgtools.org\n\nOm dette probelemet ikke opphører, vennligst kontakt oss via https://gpgtools.tenderapp.com/.";
 
 /* Errors while trying to sign a message. */
 "MESSAGE_SIGNING_ERROR_NO_PINENTRY_TITLE" = "Signering av meldingen din feilet grunnet defekt PIN-oppføring!";
@@ -185,10 +185,10 @@ NO_DEFAULTS_MESSAGE = "GPGMail fungerer ikke som forventet.\n\nVennligst last ne
 "MESSAGE_SIGNING_ERROR_AGENT_ERROR_DESCRIPTION" = "Det var ikke mulig å få kontakt med GPG-agenten for å be om passordet ditt.\n\nFor å fikse dette problemet, installer GPG Suite på nytt fra https://gpgtools.org.";
 
 "MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_TITLE" = "Signering av meldingen din mislyktes fordi det har oppstått en ukjent feil";
-"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Uheldigvis kan vi ikke fikse denne feilen på det nåværende tidspunkt. ";
+"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Uheldigvis kan ikke GPG Mail fikse denne feilen på det nåværende tidspunkt.";
 
 "MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_TITLE" = "Kryptering av meldingen din mislyktes fordi det har oppstått en ukjent feil";
-"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Uheldigvis kan ikke GPGMail fikse denne feilen på det nåværende tidspunkt.";
+"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Uheldigvis kan ikke GPG Mail fikse denne feilen på det nåværende tidspunkt.";
 
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_TITLE" = "Du har skrevet inn feil passord for mange ganger";
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_DESCRIPTION" = "Signering av meldingen din ble avbrutt fordi du skrev feil passord 3 ganger.";
@@ -216,7 +216,7 @@ NO_DEFAULTS_MESSAGE = "GPGMail fungerer ikke som forventet.\n\nVennligst last ne
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_TITLE" = "Signering av meldingen mislyktes fordi et problem oppstod når passordfrasen ble forespurt.";
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "pinentry, programmet som er ansvarlig for å be om passordet ditt, ser ikke ut til å fungere som det skal.\n\nVennligst installer GPG Suite på nytt fra https://gpgtools.org for å fikse dette problemet.";
 
-"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Signering av meldingen din feilet grunnet et problem med din GPGMail installasjon.";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Signering av meldingen din feilet grunnet et problem med din GPG Mail installasjon.";
 "MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Vennligst installer GPG Suite på nytt fra https://gpgtools.org for å fikse dette problemet.\n\nSkulle problemet vedvare kan du kontakte oss på https://gpgtools.tenderapp.com/. Inkluder informasjon om at xpc-tjenesten ikke fungerer som den skal.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Kunne ikke dekryptere meldingen på grunn av feil i pinentry";
@@ -260,4 +260,39 @@ NO_DEFAULTS_MESSAGE = "GPGMail fungerer ikke som forventet.\n\nVennligst last ne
 ACCESSIBILITY_SECURITY_METHOD_POPUP_LABEL = "Sikkerhetsmetode: %@";
 ACCESSIBILITY_SIGN_ON_IMAGE = "Signer";
 ACCESSIBILITY_SIGN_OFF_IMAGE = "Ikke signer";
+
+
+
+/* Support Plan */
+"SUPPORT_PLAN_ACTIVATION_SUCCESS_TITLE" = "Support Plan Activated";
+"SUPPORT_PLAN_ACTIVATION_SUCCESS_MESSAGE" = "Thank you for your support!\n\nWe hope you enjoy using GPG Mail. Should you have any questions, don't hesitate to contact us via \"Report Problem\" in Mail › Preferences › GPG Mail";
+"SUPPORT_PLAN_ACTIVATION_FAILED_TITLE" = "Support Plan Activation Failed";
+"SUPPORT_PLAN_ACTIVATION_FAILED_INPUT_INVALID" = "The entered activation code is invalid. Please check the entered information and try again.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_CONNECTTION_ERROR" = "We were unable to connect to the paddle.com API to verify your activation code.\nIf you are using any macOS firewall product (buil-in firewall, Little Snitch, etc.), please allow connections to paddle.com for the activation to complete. You can block any connections again once the activation is completed.\n\nPlease contact us at business@gpgtools.org if the problem persists.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_CODE_INVALID" = "The entered activation code is invalid.\nPlease contact us at business@gpgtools.org if you are sure that you have entered your code correctly.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS" = "We are very sorry to inform you that you have exceeded the allowed number of activations.\nPlease contact us at business@gpgtools.org, if you believe that you should still have activations left.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_GENERAL_ERROR" = "Unfortunately an unknown error has occurred. Please retry later or use 'System Preferences › GPG Suite › Send Report' to contact us";
+"SUPPORT_PLAN_HEADER_EXPIRED" = "Your 30-day-trial of GPG Mail has expired. Encrypting, signing and verifying messages will stop to work. Decrypting however will always continue to work.\nPurchase GPG Mail Support Plan to continue with full functionality.";
+"SUPPORT_PLAN_HEADER_TRIAL" = "You can test GPG Mail free for %@ days.\nSecure your emails now!";
+"SUPPORT_PLAN_HEADER_TRIAL_MORE" = "You can test GPG Mail free for %@ more days.\nSecure your emails now!";
+"SUPPORT_PLAN_DETAILS_MESSAGE" = "If you have already purchased a support plan, activate it now and enjoy GPG Mail!";
+"SUPPORT_PLAN_DETAILS_MESSAGE_HYPERLINK_PART" = "support plan";
+"SUPPORT_PLAN_BUY" = "Buy Now";
+"SUPPORT_PLAN_CLOSE" = "Continue";
+"SUPPORT_PLAN_CONTINUE_TRIAL"= "Continue Trial";
+"SUPPORT_PLAN_START_TRIAL" = "Start Trial";
+"SUPPORT_PLAN_BUY" = "Buy Now";
+"SUPPORT_PLAN_ACTIVATE" = "Activate";
+"SUPPORT_PLAN_TRIAL_EXPIRED_TITLE" = "GPG Mail Trial Expired";
+"SUPPORT_PLAN_TRIAL_EXPIRED_MESSAGE" = "Without an active GPG Mail Support Plan you will still be able to read any of your encrypted emails. However, you will no longer be able to sign, encrypt or verify emails.";
+"SUPPORT_PLAN_HEADER_WELCOME" = "Welcome to GPG Mail";
+"SUPPORT_PLAN_EMAIL_LABEL" = "Email";
+"SUPPORT_PLAN_LICENSE_LABEL" = "Activation Code";
+"SUPPORT_PLAN_GRAY_INFO" = "Your activation code can be found in the email you receive after completing your purchase.";
+"SUPPORT_PLAN_PROGRESS_LABEL" = "Activating your copy of GPG Mail";
+
+
+
+
+
 

@@ -399,7 +399,8 @@
                      @"selectors": @{
                             @"added": @[
                                     @"_toggleEncryption",
-                                    @"securityControlChanged:"
+                                    @"securityControlChanged:",
+                                    @"_changeHeaderField:"
                             ],
                              @"renamed": @[
                                      @[@"updateSecurityControls",
@@ -414,7 +415,9 @@
                      @"selectors": @{
                              @"added": @[
                                      @"updateSMIMEStatus:",
-                                     @"_generateParsedMessageFromOriginalMessages"]
+                                     @"_generateParsedMessageFromOriginalMessages",
+                                     @"setIsUndeliverable:"
+                                     ]
                              }
                      },
              @"IMAPMessageDownload": @{
@@ -477,6 +480,16 @@
              @"MFLibraryMessage": @{
                      @"selectors": @[
                              @"shouldSnipAttachmentData"]
+                     },
+             @"ComposeViewController": @{
+                     @"selectors": @{
+                             @"added": @[
+                                     @"saveDocument:",
+                                     @"setIsBeingPreparedForSending:",
+                                     @"setHasUserMadeChanges:",
+                                     @"setRepresentedObject:"
+                                     ]
+                             }
                      }
              };
 }

@@ -35,6 +35,8 @@
 
 NSString * const GPGOptionsChangedNotification = @"GPGOptionsChangedNotification";
 NSString * const GPGConfigurationModifiedNotification = @"GPGConfigurationModifiedNotification";
+NSString * const GPGKeysFromVerifyingKeyserverKey = @"KeysFromVerifyingKeyserver";
+NSString * const GPGUseSKSKeyserverAsBackupKey = @"UseSKSKeyserverAsBackup";
 
 @interface GPGOptions ()
 @property (nonatomic, readonly) NSMutableDictionary *commonDefaults;
@@ -286,7 +288,9 @@ static NSString * const kDirmngrConfKVKey = @"dirmngrConf";
 - (id)valueInCommonDefaultsForKey:(NSString *)key {
 	id value = [self.commonDefaults objectForKey:key];
 	if (!value) {
-		value = [@{@"UseKeychain": @YES} valueForKey:key];
+		value = [@{@"UseKeychain": @YES,
+				   GPGUseSKSKeyserverAsBackupKey: @YES
+				   } valueForKey:key];
 	}
 	return value;
 }
@@ -555,7 +559,15 @@ static NSString * const kDirmngrConfKVKey = @"dirmngrConf";
 - (NSArray *)keyservers { // Returns a list of possible keyservers.
 	NSMutableArray *uniqueServers = [NSMutableArray array];
 	
-	NSArray *servers = [self valueInCommonDefaultsForKey:@"keyservers"];
+	NSArray *servers = self.keyserversInPlist;
+	for (NSString *server in servers) {
+		if (![uniqueServers containsObject:server]) {
+			[uniqueServers addObject:server];
+		}
+	}
+
+	
+	servers = [self valueInCommonDefaultsForKey:@"keyservers"];
 	if ([servers isKindOfClass:[NSArray class]]) {
 		for (NSString *server in servers) {
 			if (![uniqueServers containsObject:server]) {
@@ -564,12 +576,6 @@ static NSString * const kDirmngrConfKVKey = @"dirmngrConf";
 		}
 	}
 	
-	servers = self.keyserversInPlist;
-	for (NSString *server in servers) {
-		if (![uniqueServers containsObject:server]) {
-			[uniqueServers addObject:server];
-		}
-	}
 	
     return uniqueServers;
 }
@@ -586,8 +592,19 @@ static NSString * const kDirmngrConfKVKey = @"dirmngrConf";
 }
 
 
-
-
++ (BOOL)isVerifyingKeyserver:(NSString *)keyserver {
+	NSURL *keyserverURL = [NSURL URLWithString:keyserver];
+	if (!keyserverURL.host) {
+		keyserverURL = [NSURL URLWithString:[@"hkps://" stringByAppendingString:keyserver]];
+	}
+	if ([keyserverURL.host isEqualToString:@"keys.openpgp.org"]) {
+		return YES;
+	}
+	return NO;
+}
+- (BOOL)isVerifyingKeyserver {
+	return [self.class isVerifyingKeyserver:self.keyserver];
+}
 - (NSString *)keyserver {
 	return [self valueInDirmngrConfForKey:@"keyserver"];
 }
@@ -625,6 +642,70 @@ static NSString * const kDirmngrConfKVKey = @"dirmngrConf";
 			[self didChangeValueForKey:@"keyservers"];
 		}
 	}
+}
+
+
+- (NSArray *)sksKeyserversInPlist {
+	NSURL *keyserversPlistURL = [[NSBundle bundleForClass:[self class]] URLForResource:@"sks-keyservers" withExtension:@"plist"];
+	return [NSArray arrayWithContentsOfURL:keyserversPlistURL];
+}
+- (NSArray *)sksKeyservers {
+	NSMutableArray *uniqueServers = [NSMutableArray array];
+	
+	NSArray *servers = self.sksKeyserversInPlist;
+	for (NSString *server in servers) {
+		if (![uniqueServers containsObject:server]) {
+			[uniqueServers addObject:server];
+		}
+	}
+	
+	
+	servers = [self valueInCommonDefaultsForKey:@"sks-keyservers"];
+	if ([servers isKindOfClass:[NSArray class]]) {
+		for (NSString *server in servers) {
+			if (![uniqueServers containsObject:server]) {
+				[uniqueServers addObject:server];
+			}
+		}
+	}
+	
+	
+	return uniqueServers;
+}
+- (BOOL)isSKSKeyserver:(NSString *)keyserver {
+	NSURL *keyserverURL = [NSURL URLWithString:keyserver];
+	if (!keyserverURL.host) {
+		// URLWithString only works, if the scheme is given. So add it and try again.
+		keyserverURL = [NSURL URLWithString:[@"hkp://" stringByAppendingString:keyserver]];
+	}
+	NSString *host = keyserverURL.host;
+	if (!host) {
+		// Not a valid URL, can't test if it is a SKS keyserver.
+		return NO;
+	}
+	host = host.lowercaseString;
+	
+	if ([keyserverURL.host isEqualToString:@"keys.openpgp.org"]) {
+		// This check is an early return in case keys.openpgp.org is used.
+		return NO;
+	}
+
+	if ([host rangeOfString:@"sks-keyservers.net"].location != NSNotFound) {
+		// Is a pool address of sks-keyservers.net
+		return YES;
+	}
+	
+	// Now test if the server is in the list of known SKS keyserver.
+	NSArray *sksKeyservers = self.sksKeyservers;
+	if ([sksKeyservers containsObject:host]) {
+		// Yep, it is in the list.
+		return YES;
+	}
+	
+	return NO;
+}
+- (BOOL)isSKSKeyserver {
+	return [self isSKSKeyserver:self.keyserver];
 }
 
 
@@ -957,7 +1038,8 @@ void SystemConfigurationDidChange(SCPreferencesRef prefs, SCPreferencesNotificat
 
 	
     NSSet *commonKeys = [NSSet setWithObjects:@"PathToGPG", @"ShowPassphrase",
-                         @"UseKeychain", @"DebugLog", nil];
+                         @"UseKeychain", @"DisableKeychain", @"DebugLog",
+						 GPGKeysFromVerifyingKeyserverKey, GPGUseSKSKeyserverAsBackupKey, nil];
     
     NSSet *specialKeys = [NSSet setWithObjects:@"httpProxy", @"keyservers",
                           @"PassphraseCacheTime", @"TrustAllKeys", @"keyserver", nil];

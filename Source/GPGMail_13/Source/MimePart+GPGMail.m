@@ -2028,7 +2028,7 @@ NSString * const kMimePartAllowPGPProcessingKey = @"MimePartAllowPGPProcessingKe
 	// If MacGPG2 is not installed, don't flag the message as signed,
 	// since we can't know.
     // Only recognize the part as signed if signature information is available.
-    self.PGPSigned = [gpgc.error isKindOfClass:[GPGException class]] && ((GPGException *)gpgc.error).errorCode == GPGErrorNotFound ? NO : [signatures count];
+    self.PGPSigned = [gpgc.error isKindOfClass:[GPGException class]] && ((GPGException *)gpgc.error).errorCode == GPGErrorNotFound ? NO : [signatures count] != 0;
     self.PGPVerified = self.PGPError ? NO : YES;
     self.PGPSignatures = signatures;
     

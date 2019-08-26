@@ -104,7 +104,12 @@ NSString *SUScheduledCheckIntervalKey = @"SUScheduledCheckInterval";
 }
 
 - (void)updateSupportPlanSection:(NSNotification *)notification {
-    [self setState:GPGMailPreferencesSupportPlanStateActiveState];
+    // Check if the outlets are set, otherwise it means that
+    // the preferences are not currently being presented and so
+    // there's no need to change the state.
+    if(_activationCodeTextField != nil) {
+        [self setState:GPGMailPreferencesSupportPlanStateActiveState];
+    }
 }
 
 - (NSString *)registrationCode {
@@ -140,24 +145,8 @@ NSString *SUScheduledCheckIntervalKey = @"SUScheduledCheckInterval";
 
 
 - (IBAction)openSupport:(id)sender {
-	// Find gpgPrefLauncher inside of GPGPreferences.prefPane.
-	NSString *path = @"/Library/PreferencePanes/GPGPreferences.prefPane/Contents/Resources/gpgPrefLauncher";
-	if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
-		struct passwd *pw = getpwuid(getuid());
-		if (pw) {
-			NSString *home = [NSString stringWithUTF8String:pw->pw_dir];
-			path = [home stringByAppendingPathComponent:path];
-		}
-		if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
-			path = nil;
-		}
-	}
-	
-	BOOL success = NO;
-	if (path) {
-		success = [GPGTask launchGeneralTask:path withArguments:@[@"report"] wait:YES];
-	}
-	
+	BOOL success = [GPGTask showGPGSuitePreferencesTab:@"report" arguments:nil];
+
 	if (!success) {
 		// Alternative if GPGPreferences could not be launched.
 		[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://gpgtools.tenderapp.com/"]];

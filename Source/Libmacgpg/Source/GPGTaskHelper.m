@@ -52,6 +52,7 @@
 
 
 static const NSUInteger kDataBufferSize = 65536; 
+static NSString * const GPGPreferencesShowTabNotification = @"GPGPreferencesShowTabNotification";
 
 typedef void (^basic_block_t)(void);
 
@@ -1088,6 +1089,83 @@ closeInput = _closeInput;
 	}
 	return YES;
 }
+
++ (BOOL)showGPGSuitePreferencesWithArguments:(NSDictionary *)arguments {	
+	if ([GPGTask sandboxed]) {
+		// Use the xpc.
+		
+		GPGTaskHelperXPC *xpcTask = [[GPGTaskHelperXPC alloc] init];
+		
+		BOOL succeeded = NO;
+		@try {
+			succeeded = [xpcTask showGPGSuitePreferencesWithArguments:arguments];
+		} @catch (NSException *exception) {
+			return NO;
+		} @finally {
+			[xpcTask release];
+		}
+		
+		return succeeded;
+	} else {
+		// Locate GPGPreferences.prefPane
+		NSString *panePath = @"/Library/PreferencePanes/GPGPreferences.prefPane";
+		if (![[NSFileManager defaultManager] fileExistsAtPath:panePath]) {
+			// Look in the user library.
+			panePath = [NSHomeDirectory() stringByAppendingPathComponent:panePath];
+			if (![[NSFileManager defaultManager] fileExistsAtPath:panePath]) {
+				// GPGPreferences.prefPane seems not to be installed.
+				return NO;
+			}
+		}
+		
+		if (arguments.count > 0) {
+			if (![self writeGPGSuitePreferencesArguments:arguments]) {
+				return NO;
+			}
+		}
+		
+		NSURL *appURL = [[NSWorkspace sharedWorkspace] URLForApplicationWithBundleIdentifier:@"com.apple.systempreferences"];
+		NSURL *paneURL = [NSURL fileURLWithPath:panePath];
+		
+		// Open GPGPreferences.prefPane with System Preferences.app
+		NSRunningApplication *application = [[NSWorkspace sharedWorkspace] openURLs:@[paneURL] withApplicationAtURL:appURL options:0 configuration:@{} error:nil];
+		if (!application) {
+			return NO;
+		}
+		
+		if (arguments.count > 0) {
+			// Send the arguments to GPG Suite Preferences.
+			[[NSDistributedNotificationCenter defaultCenter] postNotificationName:GPGPreferencesShowTabNotification object:nil userInfo:arguments deliverImmediately:YES];
+		}
+	}
+	return YES;
+}
++ (NSString *)gpgSuitePreferencesArgumentsFilePath {
+	return [NSString stringWithFormat:@"/private/tmp/GPGPreferences.%@/arguments", NSUserName()];
+}
++ (BOOL)writeGPGSuitePreferencesArguments:(NSDictionary *)arguments {
+	// Write the arguments for GPG Suite Preferences into a temp file with a known path.
+	NSString *path = [self gpgSuitePreferencesArgumentsFilePath];
+	NSString *directory = [path stringByDeletingLastPathComponent];
+	[[NSFileManager defaultManager] createDirectoryAtPath:directory withIntermediateDirectories:NO attributes:nil error:nil];
+	
+	return [arguments writeToFile:path atomically:YES];
+}
++ (NSDictionary *)readGPGSuitePreferencesArguments {
+	// Read the arguments for GPG Suite Preferences from a temp file with a known path and remove the file afterwards.
+	NSDictionary *arguments = nil;
+	
+	NSString *path = [self gpgSuitePreferencesArgumentsFilePath];
+	NSString *directory = [path stringByDeletingLastPathComponent];
+	if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+		arguments = [NSDictionary dictionaryWithContentsOfFile:path];
+		[[NSFileManager defaultManager] removeItemAtPath:directory error:nil];
+	}
+
+	return arguments;
+}
+
+
 
 
 @end

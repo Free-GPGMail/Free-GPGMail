@@ -52,6 +52,8 @@
 static const NSString *kUnencryptedReplyToEncryptedMessage = @"unencryptedReplyToEncryptedMessage";
 extern const NSString *kComposeWindowControllerAllowWindowTearDown;
 
+NSString * const kComposeViewControllerPreventAutoSave = @"ComposeViewControllerPreventAutoSave";
+
 #define MAIL_SELF(object) ((ComposeViewController *)(object))
 
 @implementation MailDocumentEditor_GPGMail
@@ -173,8 +175,15 @@ extern const NSString *kComposeWindowControllerAllowWindowTearDown;
 
 	BOOL isReply = [(ComposeBackEnd_GPGMail *)backEnd messageIsBeingReplied];
 	BOOL isForward = [(ComposeBackEnd_GPGMail *)backEnd messageIsBeingForwarded];
-    BOOL originalMessageIsEncrypted = [[((Message_GPGMail *)[backEnd originalMessage]) securityFeatures] PGPEncrypted];
+    BOOL originalMessageIsEncrypted = securityProperties.referenceMessageIsEncrypted;
     BOOL replyShouldBeEncrypted = securityProperties.shouldEncryptMessage;
+
+    // If GPG Mail is installed but expired, the original Mail methods are called
+    // to check for encryption keys, and thus securityProperties will not properly
+    // the encryption status of the message. Instead use `-[HeadersEditor messageIsToBeEncrypted]`
+    if(![[GPGMailBundle sharedInstance] hasActiveContractOrActiveTrial]) {
+        replyShouldBeEncrypted = [[MAIL_SELF(self) headersEditor] messageIsToBeEncrypted];
+    }
 
 	// If checklist contains the unencryptedReplyToEncryptedMessage item, it means
 	// that the user decided to send the message regardless of our warning.
@@ -272,18 +281,7 @@ extern const NSString *kComposeWindowControllerAllowWindowTearDown;
 	[self MASendMessageAfterChecking:checklist];
 }
 
-- (void)restoreComposerView {
-	ComposeBackEnd *backEnd = (MAIL_SELF(self)).backEnd;
-	[backEnd setIsDeliveringMessage:NO];
-	[(ComposeWindowController_GPGMail *)[self delegate] restorePositionBeforeAnimation];
-	
-	ComposeWindowController *windowController = [self delegate];
-	ComposeViewController *viewController = (id)[windowController contentViewController];
-	HeadersEditor *editor = [viewController valueForKey:@"headersEditor"];
-	[editor setValue:viewController forKey:@"composeViewController"];
-}
-
-- (BOOL)backEnd:(id)backEnd handleDeliveryError:(NSError *)error {
+- (BOOL)backEnd:(id __unused)backEnd handleDeliveryError:(NSError *)error {
 	
 	NSNumber *errorCode = ((NSDictionary *)error.userInfo)[@"GPGErrorCode"];
 	// If the pinentry dialog was cancelled, there's no need to show any error.
@@ -302,9 +300,9 @@ extern const NSString *kComposeWindowControllerAllowWindowTearDown;
     }
 	if([self backEnd:backEnd handleDeliveryError:error])
 		[self MABackEnd:backEnd didCancelMessageDeliveryForEncryptionError:error];
-	
-//    if([GPGMailBundle isElCapitan])
-//        [self restoreComposerView];
+    else {
+        [MAIL_SELF(self) show];
+    }
 }
 
 - (void)MABackEnd:(id)backEnd didCancelMessageDeliveryForError:(NSError *)error {
@@ -314,30 +312,118 @@ extern const NSString *kComposeWindowControllerAllowWindowTearDown;
     }
 	if([self backEnd:backEnd handleDeliveryError:error])
 		[self MABackEnd:backEnd didCancelMessageDeliveryForEncryptionError:error];
-
-//    if([GPGMailBundle isElCapitan])
-//        [self restoreComposerView];
+    else {
+        [MAIL_SELF(self) show];
+    }
 }
 
 - (void)MABackEndDidAppendMessageToOutbox:(id)backEnd result:(long long)result {
-	[self MABackEndDidAppendMessageToOutbox:backEnd result:result];
-	// If result == 3 the message was successfully sent, and now it's time to really dismiss the tab,
-	// in order to free the resources, Mail wanted to free as soon as it started the send animation.
-	// Unfortunately, if let it do that at the point of the send animation, there's no way we could
-	// display an error.
-	if(result == 3) {
-        // TODO: Fix for HighSierra. Seems to crash! Timing bug!
-//        [self setIvar:kComposeWindowControllerAllowWindowTearDown value:@(YES)];
-//        [(ComposeWindowController *)[self delegate] composeViewControllerDidSend:self];
-//        [self removeIvar:kComposeWindowControllerAllowWindowTearDown];
-	}
+    [self MABackEndDidAppendMessageToOutbox:backEnd result:result];
+
+    // A result code other than 3 signals an error.
+    if(result != 3) {
+        return;
+    }
+
+    // Bug #998: Canceling a pinentry request might result in losing a message
+    //
+    // As described in the `-[ComposeWindowController composeViewControllerDidSend:` method
+    // the tear down of the compose view controller might have been postponed, to properly recover
+    // from errors that occur during sending. At this point the compose view controller
+    // can savely be torn down.
+    // `-[ComposeViewController forceClose]` needs to be called on the main thread.
+    // This is already guaranteed, since this method is always called on the main thread.
+    [MAIL_SELF(self) forceClose];
 }
 
-- (void)MASetDelegate:(id)delegate {
-	[self MASetDelegate:delegate];
-	// Store the delegate as associated object, otherwise Mail.app releases it to soon (when performing the send animation.)!
-	// Will be automatically released, when the ComposeViewController is released.
-	[self setIvar:@"GMDelegate" value:delegate];
+// Bug #998: Canceling a pinentry request might result in losing a message
+//
+// See `-[ComposeWindowController composeViewControllerDidSend:]` for further details.
+//
+// The tear down of the compose view controller is to be postponed, if the message
+// is either being encrypted or signed.
+//
+// Apple's S/MIME implementation suffers from the same bug as well,
+// this workaround will fix it for S/MIME as well.
+- (BOOL)GMShouldPostponeTearDown {
+    GMComposeMessagePreferredSecurityProperties *securityProperties = ((ComposeBackEnd_GPGMail *)[MAIL_SELF(self) backEnd]).preferredSecurityProperties;
+    return securityProperties.shouldEncryptMessage || securityProperties.shouldSignMessage;
 }
+
+#pragma mark - Bug #1031
+
+// Bug #1031: If a message fails to send, it might be replaced by its draft version prior
+//              to being sent at a later time.
+//
+//
+// Fixes also: #933
+//
+// Once a user presses the send button, the final message is created and placed in the
+// "Outbox" folder. If for some reason sending the message fails however – most likely
+// due to a failure to connect to the SMTP server – this final message might have been
+// replaced by its latest draft version, since the auto-save timer is still running
+// and overwriting the message in "Outbox".
+// If the user then chooses to "Send later", the draft version of the message is sent out
+// at a later time and based on the status of "Encrypt drafts" that version might either
+// be encrypted to sender's public key *but not* the recipient's public key or sent in plain.
+//
+// In order to prevent Mail from replacing the final message, the auto-save method
+// is suspended until the user changes the message, which indicates that they chose
+// to continue editing the message instead of sending it later automatically.
+//
+// -[ComposeViewController hasUserMadeChanges] returns if the user made any changes to the message.
+//
+// -[ComposeViewController setIsBeingPreparedForSending:] is invoked from -[ComposeViewController sendMessageAfterChecking:] after the user presses the send button. Within
+// this method a flag is set, that auto-save is no longer allowed to operate.
+//
+// -[ComposeViewController saveDocument:] is invoked by the auto-save timer. It checks the flag
+// if it is ok to save a draft version which is determined by the fact if a message is about to be sent and `-[ComposeViewController hasUserMadeChanges]`
+//
+// -[ComposeViewController setUserHasMadChanges:] is invoked whenever the user modifies the message.
+// If the prevent-auto-save-flag is set, it is removed to make sure that subsequent
+// auto-saves are allowed to go through.
+
+- (void)MASetIsBeingPreparedForSending:(BOOL)isBeingPreparedForSending {
+    [self MASetIsBeingPreparedForSending:isBeingPreparedForSending];
+    // This method is always invoked on the main thread so it is save
+    // to set the flag here.
+    [self setIvar:kComposeViewControllerPreventAutoSave value:@(YES)];
+}
+
+- (void)MASetHasUserMadeChanges:(BOOL)hasUserMadeChanges {
+    if([self ivarExists:kComposeViewControllerPreventAutoSave]) {
+        [self removeIvar:kComposeViewControllerPreventAutoSave];
+    }
+    [self MASetHasUserMadeChanges:hasUserMadeChanges];
+}
+
+- (void)MASaveDocument:(id)document {
+    // If auto-save should be prevented, make sure that there are no user made changes.
+    //
+    // NOTE: If an error occurs during sending, a new compose view controller
+    // is created, so it appears that preventing saving a draft if `hasUserMadeChanges`
+    // is still false might be enough to keep the message to be sent from being replaced.
+    // But it's probably still safer to track the status via the prevent-auto-save-flag.
+    if([[self getIvar:kComposeViewControllerPreventAutoSave] boolValue] && ![MAIL_SELF(self) hasUserMadeChanges]) {
+        return;
+    }
+    [self MASaveDocument:document];
+}
+
+#pragma mark
+
+#pragma mark - Bug #976
+
+- (void)MASetRepresentedObject:(id __unused)representedObject {
+    [self MASetRepresentedObject:representedObject];
+
+    // The security properties of the compose backed are updated with the
+    // information about the message being edited, as that might influence the decision
+    // on what security method to use, and the status of the security buttons.
+    GMComposeMessagePreferredSecurityProperties *preferredSecurityProperties = [(ComposeBackEnd_GPGMail *)[MAIL_SELF(self) backEnd] preferredSecurityProperties];
+    [preferredSecurityProperties updateWithHintsFromComposeBackEnd:[MAIL_SELF(self) backEnd]];
+}
+
+#pragma mark
 
 @end

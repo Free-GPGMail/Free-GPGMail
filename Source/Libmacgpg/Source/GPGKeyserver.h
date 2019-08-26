@@ -23,6 +23,7 @@ typedef void (^gpg_ks_finishedHandler)(GPGKeyserver *server);
 	NSMutableData *receivedData;
 	NSURLConnection *connection;
 	BOOL _cancelled;
+	dispatch_once_t _finishedHandlerOnceToken;
 }
 
 @property (retain, nonatomic) NSString *keyserver;

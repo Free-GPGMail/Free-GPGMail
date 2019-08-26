@@ -524,6 +524,34 @@ static NSLock *gpgTaskLock;
 	return [GPGTaskHelper launchGeneralTask:path withArguments:arguments wait:wait];
 }
 
++ (BOOL)showGPGSuitePreferencesTab:(NSString *)tab arguments:(NSDictionary *)arguments {
+	NSMutableDictionary *mutableArguments = [NSMutableDictionary dictionaryWithDictionary:arguments];
+	if (!arguments[@"tool"]) {
+		// Add the name tool to the arguments.
+		NSString *identifier = [NSBundle mainBundle].bundleIdentifier;
+		NSString *tool = [identifier componentsSeparatedByString:@"."].lastObject;
+		if ([tool isEqualToString:@"mail"]) {
+			// When the identifier is com.apple.mail it means GPGMail is used.
+			tool = @"gpgmail";
+		}
+		if (tool) {
+			mutableArguments[@"tool"] = tool;
+		}
+	}
+	if (tab) {
+		// Set the name of the tab.
+		mutableArguments[@"tab"] = tab;
+	}
+	arguments = [NSDictionary dictionaryWithDictionary:mutableArguments];
+	
+	return [GPGTaskHelper showGPGSuitePreferencesWithArguments:arguments];
+}
++ (NSDictionary *)readGPGSuitePreferencesArguments {
+	return [GPGTaskHelper readGPGSuitePreferencesArguments];
+}
+
+
+
 + (BOOL)sandboxed {
 	// Don't perform sandbox check on 10.6, since Mail.app wasn't sandboxed
 	// back then and it seems to be a problem, resulting in a crash when used in

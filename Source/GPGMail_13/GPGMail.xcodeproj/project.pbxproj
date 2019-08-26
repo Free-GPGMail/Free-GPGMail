@@ -4697,6 +4697,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEPLOY_RESOURCES_DIR = "$(SRCROOT)/Dependencies/DeployResources";
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/Frameworks\"",
 					"$(SRCROOT)/Dependencies/Libmacgpg/build/$(CONFIGURATION)",
@@ -4759,6 +4760,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEPLOY_RESOURCES_DIR = "$(SRCROOT)/Dependencies/DeployResources";
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/Frameworks\"",
 					"$(SRCROOT)/Dependencies/Libmacgpg/build/$(CONFIGURATION)",

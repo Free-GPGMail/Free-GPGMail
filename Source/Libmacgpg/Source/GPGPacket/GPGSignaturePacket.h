@@ -46,7 +46,8 @@ typedef NS_ENUM (NSInteger, GPGSubpacketTag) {
 	GPGReasonForRevocationTag = 29,
 	GPGFeaturesTag = 30,
 	GPGSignatureTargetTag = 31,
-	GPGEmbeddedSignatureTag = 32
+	GPGEmbeddedSignatureTag = 32,
+	GPGIssuerFingerprintTag = 33
 };
 
 

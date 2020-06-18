@@ -226,11 +226,14 @@
 - (void)failedWithError:(NSError *)e {
 	self.error = e;
 	
-	dispatch_once(&_finishedHandlerOnceToken, ^{
-		if (finishedHandler) {
-			finishedHandler(self);
+	@synchronized (self) {
+		if (!_finishedHandlerCalled) {
+			_finishedHandlerCalled = YES;
+			if (finishedHandler) {
+				finishedHandler(self);
+			}
 		}
-	});
+	}
 }
 
 
@@ -271,11 +274,14 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-	dispatch_once(&_finishedHandlerOnceToken, ^{
-		if (finishedHandler) {
-			finishedHandler(self);
+	@synchronized (self) {
+		if (!_finishedHandlerCalled) {
+			_finishedHandlerCalled = YES;
+			if (finishedHandler) {
+				finishedHandler(self);
+			}
 		}
-	});
+	}
 	
 	self.connection = nil;
 }

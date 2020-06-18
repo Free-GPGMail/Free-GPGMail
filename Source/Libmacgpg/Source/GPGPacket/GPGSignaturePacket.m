@@ -31,6 +31,7 @@
 @property (nonatomic, readwrite) UInt16 hashStart;
 @property (nonatomic, readwrite) NSUInteger creationTime;
 @property (nonatomic, copy, readwrite) NSString *keyID;
+@property (nonatomic, copy, readwrite) NSString *fingerprint;
 @property (nonatomic, copy, readwrite) NSArray *hashedSubpackets;
 @property (nonatomic, copy, readwrite) NSArray *unhashedSubpackets;
 @property (nonatomic, copy, readwrite) NSArray *subpackets;
@@ -119,6 +120,9 @@
 					case GPGIssuerTag:
 						self.keyID = subpacket[@"keyID"];
 						break;
+					case GPGIssuerFingerprintTag:
+						self.fingerprint = subpacket[@"fingerprint"];
+						break;
 					default:
 						break;
 				}
@@ -168,7 +172,7 @@
 	return [NSString stringWithFormat:@"%@ v%li: %li\nIssuer: %@\nCreation Time: %lu", self.className,
 			(long)self.version,
 			(long)self.type,
-			self.keyID,
+			self.fingerprint ? self.fingerprint : self.keyID,
 			(unsigned long)self.creationTime];
 }
 

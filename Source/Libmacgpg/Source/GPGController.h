@@ -178,6 +178,7 @@
 - (void)setExpirationDate:(NSDate *)expirationDate forSubkeys:(NSArray *)subkeys ofKey:(NSObject <KeyFingerprint> *)key;
 - (void)changePassphraseForKey:(NSObject <KeyFingerprint> *)key;
 - (NSString *)receiveKeysFromServer:(NSObject <EnumerationList> *)keys;
+- (NSString *)refreshKeysFromServer:(NSObject <EnumerationList> *)keys;
 - (NSArray <GPGRemoteKey *> *)searchKeysOnServer:(NSString *)pattern;
 - (void)sendKeysToServer:(NSObject <EnumerationList> *)keys;
 - (void)testKeyserver;

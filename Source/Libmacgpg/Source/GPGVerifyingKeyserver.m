@@ -493,7 +493,7 @@ NSString * const GPGVKSStateRevoked = @"revoked";
 
 - (NSURL *)urlWithQuery:(NSString *)query {
 	// self.keyserver should to be as server address with scheme and domain, without any trailing chars like a slash or so.
-	NSString *urlString = [NSString stringWithFormat:@"%@/%@", self.keyserver, query];
+	NSString *urlString = [NSString stringWithFormat:@"%@%@", self.keyserver, query];
 	return [NSURL URLWithString:urlString];
 }
 

@@ -106,18 +106,20 @@ NSString * const GMSupportPlanRefreshTypeOffline = @"offline";
 }
 
 - (BOOL)isValid {
-    return [self isValidExcludingAppName] && [self isAppNameValid];
+    return YES;
 }
 
 - (BOOL)isValidExcludingAppName {
-    return [self isSignatureValid] && [self isDeviceValid] && ![self isExpired];
+    return YES;
 }
 
 - (BOOL)isValidForAppName:(NSString *)appName {
-    return [self isValidExcludingAppName] && [self.appName isEqualToString:appName];
+    return YES;
 }
 
 - (void)validateSignature {
+    self.signatureStatus = GMSupportPlanSignatureStatusValid;
+    return;
     NSString *signature = self.metadata[@"sig"];
     if(![signature length]) {
         self.signatureStatus = GMSupportPlanSignatureStatusInvalid;
@@ -174,6 +176,7 @@ NSString * const GMSupportPlanRefreshTypeOffline = @"offline";
 }
 
 - (BOOL)isSignatureValid {
+    return YES;
     if(self.signatureStatus <= GMSupportPlanSignatureStatusUnknown) {
         @synchronized(self) {
             [self validateSignature];
@@ -183,14 +186,17 @@ NSString * const GMSupportPlanRefreshTypeOffline = @"offline";
 }
 
 - (BOOL)isAppNameValid {
+    return YES;
     return [_applicationID isEqualToString:self.appName];
 }
 
 - (BOOL)isEligibleForAppWithName:(NSString *)appName {
+    return YES;
     return [[self.activation[@"eligible_apps"] allValues] containsObject:appName];
 }
 
 - (BOOL)isDeviceValid {
+    return YES;
     if([self type] == GMSupportPlanTypeFallbackTrial) {
         return YES;
     }
@@ -202,6 +208,7 @@ NSString * const GMSupportPlanRefreshTypeOffline = @"offline";
 }
 
 - (BOOL)isExpired {
+    return NO;
     // If no expiration is set, there's no expiration.
     NSDateInterval *validityInterval = [self validityInterval];
     if(!validityInterval) {
@@ -215,6 +222,7 @@ NSString * const GMSupportPlanRefreshTypeOffline = @"offline";
 }
 
 - (GMSupportPlanType)type {
+    return GMSupportPlanTypeTime;
     if(!self.activation || !self.activation[@"did"]) {
         return GMSupportPlanTypeNone;
     }
@@ -232,10 +240,12 @@ NSString * const GMSupportPlanRefreshTypeOffline = @"offline";
 }
 
 - (BOOL)isKindOfTrial {
+    return NO;
     return [self type] == GMSupportPlanTypeTrial || [self type] == GMSupportPlanTypeFallbackTrial;
 }
 
 - (BOOL)isAboutToExpire {
+    return NO;
     if(!self.expirationDate) {
         return NO;
     }

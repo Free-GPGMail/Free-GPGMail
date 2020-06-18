@@ -65,7 +65,7 @@
 		NSString *cdPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"cd-bundle" ofType:@"bundle" inDirectory:nil];
 		[self loadBundleAtPath:cdPath];
 		
-		NSString *mailPath = [[TestHelpers systemRootPath] stringByAppendingString:@"/Applications/Mail.app/Contents/MacOS/Mail"];
+		NSString *mailPath = [[TestHelpers systemRootPath] stringByAppendingString:@"/System/Applications/Mail.app/Contents/MacOS/Mail"];
 		
 		CDMachOFile *file = (CDMachOFile *)[NSClassFromString(@"CDFile") fileWithContentsOfFile:mailPath searchPathState:nil];
 		CDObjectiveCProcessor *processor = [[[file processorClass] alloc] initWithMachOFile:file];

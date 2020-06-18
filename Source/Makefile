@@ -10,3 +10,7 @@ all:
 		make && \
         cp -r build/Release/GPGMail.mailbundle ../GPGMail_4.mailbundle
 
+
+clean:
+	rm -rf *mailbundle
+	rm -rf GPGMail*/build

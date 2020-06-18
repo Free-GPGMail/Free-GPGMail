@@ -1,0 +1,46 @@
+name: Build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+    if: "!contains(github.event.head_commit.message, '[no-build]')"
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build libmacgpg
+      working-directory: Source/Libmacgpg
+      run: make
+    - name: copy libmacgpg framework
+      run: |
+        cp -r Source/Libmacgpg/build/Release/Libmacgpg.framework Source/GPGMail_3/Frameworks/
+        cp -r Source/Libmacgpg/build/Release/Libmacgpg.framework Source/GPGMail_4/Frameworks/
+    - name: build GPGMail 3
+      working-directory: Source/GPGMail_3
+      run: make
+    - name: build GPGMail 4
+      working-directory: Source/GPGMail_4
+      run: make
+    - name: Upload Libmacgpg artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: org.gpgtools.Libmacgpg
+        path: Source/Libmacgpg/build/Release/org.gpgtools.Libmacgpg.xpc/Contents/MacOS/org.gpgtools.Libmacgpg
+    - name: Upload GPGMail 3 bundle
+      uses: actions/upload-artifact@v2
+      with:
+        name: GPGMail_3.mailbundle
+        path: Source/GPGMail_3/build/Release/GPGMail.mailbundle
+    - name: Upload GPGMail 4 bundle
+      uses: actions/upload-artifact@v2
+      with:
+        name: GPGMail_4.mailbundle
+        path: Source/GPGMail_4/build/Release/GPGMail.mailbundle
+
+        

@@ -178,6 +178,10 @@
     else {
         [info setValue:[product trialDaysRemaining] forKey:@"ActivationRemainingTrialDays"];
     }
+    isActivated = YES;
+    [info setValue:@(isActivated) forKey:@"Active"];
+    [info setValue:@"unknown" forKey:@"ActivationCode"];
+    [info setValue:@"unknown" forKey:@"ActivationEmail"];
     reply(isActivated, (NSDictionary *)info);
 }
 

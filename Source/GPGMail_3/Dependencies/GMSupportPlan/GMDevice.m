@@ -16,8 +16,8 @@
 #import "GMSPCommon.h"
 #import "GMDevice.h"
 
-#ifdef DEBUG
-NSString * const kGMDeviceSalt = @"UX5XSWtSRTk2VT8wai9wKGx3ey8pMD5uczx8WCU8XWJ8KS84RHZVUysrLXU7Li1hUS0lflt7e1pTUExWTTYqIg==";
+#ifndef NOOVERRIDE
+NSString * const kGMDeviceSalt = @"UX5XSWtSRTk2VT8wai9wKGx3ey8pMD5uczx8WCU8XWJ8KS84RHZVUysrLXU7Li1hUS0lflt7e1pTUExWTTYq";
 #else
 #ifdef GMDEVICE_SALT
 NSString * const kGMDeviceSalt = GMSPStringFromPreprocessor(GMDEVICE_SALT);

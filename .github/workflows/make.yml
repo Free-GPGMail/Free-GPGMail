@@ -17,20 +17,14 @@ jobs:
     - name: Build
       working-directory: Source
       run: make
-    - name: Upload Libmacgpg artifact
+    # https://github.com/actions/upload-artifact/issues/76
+    - name: zip artifacts
+      working-directory: Source
+      run: zip -r GPGMail_mailbundles.zip GPGMail_*.mailbundle
+    - name: Upload mailbundles
       uses: actions/upload-artifact@v2
       with:
-        name: org.gpgtools.Libmacgpg
-        path: Source/Libmacgpg/build/Release/org.gpgtools.Libmacgpg.xpc/Contents/MacOS/org.gpgtools.Libmacgpg
-    - name: Upload GPGMail 3 bundle
-      uses: actions/upload-artifact@v2
-      with:
-        name: GPGMail_3.mailbundle
-        path: Source/GPGMail_3/build/Release/GPGMail.mailbundle/
-    - name: Upload GPGMail 4 bundle
-      uses: actions/upload-artifact@v2
-      with:
-        name: GPGMail_4.mailbundle
-        path: Source/GPGMail_4/build/Release/GPGMail.mailbundle/
+        name: GPGMail_mailbundles.zip
+        path: Source/GPGMail_mailbundles.zip
 
         

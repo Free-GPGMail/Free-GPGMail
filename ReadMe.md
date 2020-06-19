@@ -19,33 +19,45 @@ some people, especially in the IT security world, something GPGTools should have
 considered). 
 
 Rather than building the entire GPGMail Suite and installer, this project just
-concentrates on building the GPGMail mailbundle. There are currently only two
-components in the suite that have the DRM. `GPGMail_13.mailbundle` and
-`GPGMail_14.mailbundle`.
+concentrates on building the two GPGMail mailbundle versions. `GPGMail_3.mailbundle`
+and `GPGMail_4.mailbundle`.
 
-This repository contains a copy of the original downloads from gpgtools.org as
-as well as a source tree for the modified versions of the mail bundles. Along
+This repository contains the source tree for the modified versions of the mail bundles,
+based on the original source packages from GPGTools. Along
 with instructions on how to build them.
 
-Finally this also contains compiled binaries of the updated mailbundles, along
-with a .DMG for easy installation. Note GPGSuite must be installed first and then
+We also publish a copy of the original source packages and compiled binaries of the
+updated mailbundles, along with a .DMG for easy installation.
+
+Note GPGSuite must be installed first and then
 The mailbundle binaries replaced using the .DMG.
 
-LICENSE
-=======
 
-GPGMailNoActivation
-Copyright (C) 2018-2019
+Build Instructions
+------------------
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+This build uses Xcode. Command line build tools must be installed.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+1. Go to the Source directory and run:
 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
+    make
+
+  This should produce two mailbundles: `GPGMail_3.mailbundle` and `GPGMail_4.mailbundle`
+
+
+Installation
+------------
+
+1. Install GPGSuite suite as normal. Make sure you use the correct version.
+
+2. Copy the modified mailbundle(s) to your user-specific Mail Bundle directory
+
+    mkdir -p ~/Library/Mail/Bundles/
+    cp -r GPGMail_?.mailbundle ~/Library/Mail/Bundles/
+
+3. Restart Mail.app, go to `Preferences -> General -> Manage Plugins`.
+   You should see the plugin, enable it and click Apply
+   
+4. Restart Mail.app
+
+Hopefully it's working for you now.

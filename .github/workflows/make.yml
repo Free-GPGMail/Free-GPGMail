@@ -14,18 +14,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build libmacgpg
-      working-directory: Source/Libmacgpg
-      run: make
-    - name: copy libmacgpg framework
-      run: |
-        cp -r Source/Libmacgpg/build/Release/Libmacgpg.framework Source/GPGMail_3/Frameworks/
-        cp -r Source/Libmacgpg/build/Release/Libmacgpg.framework Source/GPGMail_4/Frameworks/
-    - name: build GPGMail 3
-      working-directory: Source/GPGMail_3
-      run: make
-    - name: build GPGMail 4
-      working-directory: Source/GPGMail_4
+    - name: Build
+      working-directory: Source
       run: make
     - name: Upload Libmacgpg artifact
       uses: actions/upload-artifact@v2
@@ -36,11 +26,11 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: GPGMail_3.mailbundle
-        path: Source/GPGMail_3/build/Release/GPGMail.mailbundle
+        path: Source/GPGMail_3/build/Release/GPGMail.mailbundle/
     - name: Upload GPGMail 4 bundle
       uses: actions/upload-artifact@v2
       with:
         name: GPGMail_4.mailbundle
-        path: Source/GPGMail_4/build/Release/GPGMail.mailbundle
+        path: Source/GPGMail_4/build/Release/GPGMail.mailbundle/
 
         

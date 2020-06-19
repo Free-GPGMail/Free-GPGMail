@@ -1,16 +1,20 @@
-all:
-	cd Libmacgpg && \
-		make && \
-		cp -r build/Release/Libmacgpg.framework ../GPGMail_3/Frameworks/ && \
-		cp -r build/Release/Libmacgpg.framework ../GPGMail_4/Frameworks/
-	cd GPGMail_3 && \
-		make && \
-		cp -r build/Release/GPGMail.mailbundle ../GPGMail_3.mailbundle
-	cd GPGMail_4 && \
-		make && \
-        cp -r build/Release/GPGMail.mailbundle ../GPGMail_4.mailbundle
+GPGMAILS = GPGMail_3 GPGMail_4
 
+.PHONY: all
+all: $(GPGMAILS)
+
+.PHONY: Libmacgpg
+Libmacgpg:
+	$(MAKE) -C Libmacgpg
+
+.PHONY: $(GPGMAILS)	
+$(GPGMAILS): Libmacgpg
+	cp -r Libmacgpg/build/Release/Libmacgpg.framework $@/Frameworks
+	$(MAKE) -C $@
+	cp -r $@/build/Release/GPGMail.mailbundle $@.mailbundle
 
 clean:
-	rm -rf *mailbundle
-	rm -rf GPGMail*/build
+	rm -rf *.mailbundle
+	$(MAKE) -C Libmacgpg clean
+	$(MAKE) -C GPGMail_3 clean
+	$(MAKE) -C GPGMail_4 clean

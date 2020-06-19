@@ -1,24 +1,14 @@
 This was built with Xcode 10.0. Command line build tools must be installed.
 
-1) First build Libmacgpg Framework
-Change directory to Libmacgpg folder and run
-make
+(1) Go to the Source directory and run: make
 
-2) Copy Libmacgpg.framework (from Libmacgpg/build/Release) to framework directories of each source dir:
- GPGMail_13/Frameworks
- GPGMail_14/Frameworks
+This should produce two mailbundles in the Source directory: GPGMail_3.mailbundle and GPGMail_4.mailbundle
 
-3) Build each version of GPGMail
-Change directory to GPGMail_13 and run 
-make
-Rename GPGMail_13/build/Release/GPGMail.mailbundle to GPGMail_13.mailbundle
+(2) Copy the latest mailbundle to your user-specific Mail Bundle directory
 
-Repeat for GPGMail_14
+mkdir -p ~/Library/Mail/Bundles/
+cp -r Source/GPGMail_4.mailbundle ~/Library/Mail/Bundles/
 
-Note there does not appear to be any activation code in GPGMail_12 so there 
-Is no need to build a new version.
+(3) Restart Mail.app, go to Preferences -> General -> Manage Plugins.  You should see the plugin, enable it and click Apply and Restart Mail.
 
-When the normal GPGTools installer is run it places GPGMail_13.mailbundle and
-GPGMail_14.mailbundle in directory:
-/Library/Application\ Support/GPGTools/GPGMail/
-Replace the mailbundles with the above built versions.
+Hopefully it's working for you now.

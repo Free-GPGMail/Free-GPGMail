@@ -1125,7 +1125,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					1B2F2D6F214FF12A00740DD3 = {
 						ProvisioningStyle = Manual;
@@ -1146,7 +1146,7 @@
 						CreatedOnToolsVersion = 6.1.1;
 					};
 					8DC2EF4F0486A6940098B216 = {
-						DevelopmentTeam = PKV8ZPD836;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -1177,6 +1177,7 @@
 				cs,
 				da,
 				th,
+				ja,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* Libmacgpg */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
@@ -1283,8 +1284,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "JAILFREE_PLIST=\"${EXECUTABLE_NAME}.xpc.plist\"\nBUILD_LAUNCHAGENT_PATH=\"${BUILD_DIR}/${JAILFREE_PLIST}\"\nif [[ -z \"${XPC_INSTALLATION_DIR}\" || \"CONFIGURATION\" != \"Debug\" ]]; then\n    XPC_INSTALLATION_DIR=\"/Library/Application\\ Support/GPGTools\"\nfi\nXPC_INSTALLATION_PATH=\"${XPC_INSTALLATION_DIR}/${EXECUTABLE_NAME}.xpc/Contents/MacOS/${EXECUTABLE_NAME}\"\n\nXPC_NAME=$(\n    for x in $GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS; do\n        echo $x | while IFS=\"=\" read name value; do\n            if [ \"$name\" == \"JAILFREE_XPC_NAME\" ]; then\n                echo $value | sed \"s/\\\"//g\" | sed \"s/@//g\"\n                break\n            fi\n        done\n    done\n)\n\n\ncp \"${PROJECT_DIR}/Source/${EXECUTABLE_NAME}.xpc/${JAILFREE_PLIST}\" \"${BUILD_LAUNCHAGENT_PATH}\"\ncat \"${BUILD_LAUNCHAGENT_PATH}\"\n/usr/libexec/PlistBuddy -c \"Delete :MachServices\" \"${BUILD_LAUNCHAGENT_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :MachServices:$XPC_NAME bool true\" \"${BUILD_LAUNCHAGENT_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :ProgramArguments:0 \\\"${XPC_INSTALLATION_PATH}\\\"\" \"${BUILD_LAUNCHAGENT_PATH}\"\n# Uncomment if you want to test the XPC itself. Otherwise it will bring Mail to a halt...\n#if [[ \"$CONFIGURATION\" == \"Debug\" ]]; then\n#/usr/libexec/PlistBuddy -c \"Add :WaitForDebugger bool true\" \"${BUILD_LAUNCHAGENT_PATH}\"\n#fi";
+			shellPath = /bin/bash;
+			shellScript = "JAILFREE_PLIST=\"${EXECUTABLE_NAME}.xpc.plist\"\nBUILD_LAUNCHAGENT_PATH=\"${BUILD_DIR}/${JAILFREE_PLIST}\"\nif [[ -z \"${XPC_INSTALLATION_DIR}\" || \"CONFIGURATION\" != \"Debug\" ]]; then\n    XPC_INSTALLATION_DIR=\"/Library/Application\\ Support/GPGTools\"\nfi\nXPC_INSTALLATION_PATH=\"${XPC_INSTALLATION_DIR}/${EXECUTABLE_NAME}.xpc/Contents/MacOS/${EXECUTABLE_NAME}\"\n\nXPC_NAME=$(\n    for x in $GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS; do\n        echo $x | while IFS=\"=\" read name value; do\n            if [ \"$name\" == \"JAILFREE_XPC_NAME\" ]; then\n                echo $value | sed \"s/\\\"//g\" | sed \"s/@//g\"\n                break\n            fi\n        done\n    done\n)\n\n\ncp \"${PROJECT_DIR}/Source/${EXECUTABLE_NAME}.xpc/${JAILFREE_PLIST}\" \"${BUILD_LAUNCHAGENT_PATH}\"\ncat \"${BUILD_LAUNCHAGENT_PATH}\"\n/usr/libexec/PlistBuddy -c \"Delete :MachServices\" \"${BUILD_LAUNCHAGENT_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :MachServices:$XPC_NAME bool true\" \"${BUILD_LAUNCHAGENT_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :ProgramArguments:0 \\\"${XPC_INSTALLATION_PATH}\\\"\" \"${BUILD_LAUNCHAGENT_PATH}\"\n# Uncomment if you want to test the XPC itself. Otherwise it will bring Mail to a halt...\n#if [[ \"$CONFIGURATION\" == \"Debug\" ]]; then\n#/usr/libexec/PlistBuddy -c \"Add :WaitForDebugger bool true\" \"${BUILD_LAUNCHAGENT_PATH}\"\n#fi\n";
 		};
 		1B2F2D86214FF48000740DD3 /* Install XPC Launchd and Insert Mach Name */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1297,8 +1298,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "[[ \"$CONFIGURATION\" == \"Debug\" ]] || exit 0\nUSER_LIBRARY=\"$HOME/Library\"\nJAILFREE_PLIST=\"${EXECUTABLE_NAME}.xpc.plist\"\nLAUNCHAGENT_PATH=\"${USER_LIBRARY}/LaunchAgents/${JAILFREE_PLIST}\"\nJAILFREE_PATH=\"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_NAME}.xpc/Contents/MacOS/${EXECUTABLE_NAME}\"\nBUILD_LAUNCHAGENT_PATH=\"${BUILD_DIR}/${JAILFREE_PLIST}\"\n\nif [ -d \"${USER_LIBRARY}/LaunchAgents\" ] && [ -w \"${USER_LIBRARY}/LaunchAgents\" ] && [ -x \"${USER_LIBRARY}/LaunchAgents\" ]; then\n    cp \"${BUILD_LAUNCHAGENT_PATH}\" \"${LAUNCHAGENT_PATH}\"\n    /usr/libexec/PlistBuddy -c \"Set :ProgramArguments:0 \\\"${JAILFREE_PATH}\\\"\" \"${LAUNCHAGENT_PATH}\"\nfi";
+			shellPath = /bin/bash;
+			shellScript = "[[ \"$CONFIGURATION\" == \"Debug\" ]] || exit 0\nUSER_LIBRARY=\"$HOME/Library\"\nJAILFREE_PLIST=\"${EXECUTABLE_NAME}.xpc.plist\"\nLAUNCHAGENT_PATH=\"${USER_LIBRARY}/LaunchAgents/${JAILFREE_PLIST}\"\nJAILFREE_PATH=\"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_NAME}.xpc/Contents/MacOS/${EXECUTABLE_NAME}\"\nBUILD_LAUNCHAGENT_PATH=\"${BUILD_DIR}/${JAILFREE_PLIST}\"\n\nif [ -d \"${USER_LIBRARY}/LaunchAgents\" ] && [ -w \"${USER_LIBRARY}/LaunchAgents\" ] && [ -x \"${USER_LIBRARY}/LaunchAgents\" ]; then\n    cp \"${BUILD_LAUNCHAGENT_PATH}\" \"${LAUNCHAGENT_PATH}\"\n    /usr/libexec/PlistBuddy -c \"Set :ProgramArguments:0 \\\"${JAILFREE_PATH}\\\"\" \"${LAUNCHAGENT_PATH}\"\nfi\n";
 		};
 		1B2F2D87214FF49500740DD3 /* Install XPC Helper and launchd plist */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1311,8 +1312,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "[[ \"$CONFIGURATION\" == \"Debug\" ]] || exit 0\nUSER_LIBRARY=\"$HOME/Library\"\nmkdir -p \"$USER_LIBRARY/Application Support/GPGTools\"\nif [ -d \"$USER_LIBRARY/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc\" ]; then\n rm -rf \"$USER_LIBRARY/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc\"\nfi\ncp -R \"${BUILT_PRODUCTS_DIR}/org.gpgtools.Libmacgpg.xpc\" \"$USER_LIBRARY/Application Support/GPGTools\"\n# Reload the launchd.plist\nif [ -f \"/Library/LaunchAgents/org.gpgtools.Libmacgpg.xpc.plist\" ]; then\n    launchctl unload /Library/LaunchAgents/org.gpgtools.Libmacgpg.xpc.plist\nfi\nif [ -f \"$USER_LIBRARY/LaunchAgents/org.gpgtools.Libmacgpg.xpc.plist\" ]; then\n launchctl unload \"$USER_LIBRARY/LaunchAgents/org.gpgtools.Libmacgpg.xpc.plist\"\n    sleep 3\n launchctl load \"$USER_LIBRARY/LaunchAgents/org.gpgtools.Libmacgpg.xpc.plist\"\nfi";
+			shellPath = /bin/bash;
+			shellScript = "[[ \"$CONFIGURATION\" == \"Debug\" ]] || exit 0\nUSER_LIBRARY=\"$HOME/Library\"\nmkdir -p \"$USER_LIBRARY/Application Support/GPGTools\"\nif [ -d \"$USER_LIBRARY/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc\" ]; then\n rm -rf \"$USER_LIBRARY/Application Support/GPGTools/org.gpgtools.Libmacgpg.xpc\"\nfi\ncp -R \"${BUILT_PRODUCTS_DIR}/org.gpgtools.Libmacgpg.xpc\" \"$USER_LIBRARY/Application Support/GPGTools\"\n# Reload the launchd.plist\nif [ -f \"/Library/LaunchAgents/org.gpgtools.Libmacgpg.xpc.plist\" ]; then\n    launchctl unload /Library/LaunchAgents/org.gpgtools.Libmacgpg.xpc.plist\nfi\nif [ -f \"$USER_LIBRARY/LaunchAgents/org.gpgtools.Libmacgpg.xpc.plist\" ]; then\n launchctl unload \"$USER_LIBRARY/LaunchAgents/org.gpgtools.Libmacgpg.xpc.plist\"\n    sleep 3\n launchctl load \"$USER_LIBRARY/LaunchAgents/org.gpgtools.Libmacgpg.xpc.plist\"\nfi\n";
 		};
 		1B49BC6B1A97A8D6000440E9 /* Copy "How to get the source code" into Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1325,7 +1326,7 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
+			shellPath = /bin/bash;
 			shellScript = "[[ -d \"$DEPLOY_RESOURCES_DIR\" ]] || exit 0\n \n HOWTO_PATH=\"$DEPLOY_RESOURCES_DIR/resources/How to get the source code\"\n cp \"$HOWTO_PATH\" \"$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/\"\n";
 			showEnvVarsInLog = 0;
 		};
@@ -1340,7 +1341,7 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
+			shellPath = /bin/bash;
 			shellScript = "[[ \"$CONFIGURATION\" == \"Debug\" ]] || exit 0\n# Copy the Framework into ~/Library for testing with other libs.\nFRAMEWORKS_DIR=\"$HOME/Library/Frameworks\"\nFRAMEWORK_NAME=\"Libmacgpg.framework\"\n\n# ~/Library/Frameworks doesn't exist in most cases, create it.\nif [ ! -d \"$FRAMEWORKS_DIR\" ]; then\n   mkdir -p \"$FRAMEWORKS_DIR\"\nfi\n\nln -Fs \"$BUILT_PRODUCTS_DIR/$FRAMEWORK_NAME\" \"$FRAMEWORKS_DIR/\"\n";
 			showEnvVarsInLog = 0;
 		};
@@ -1355,8 +1356,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "[[ -d \"$DEPLOY_RESOURCES_DIR\" ]] || exit 0\n \n HOWTO_PATH=\"$DEPLOY_RESOURCES_DIR/resources/How to get the source code\"\n cp \"$HOWTO_PATH\" \"$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/\"";
+			shellPath = /bin/bash;
+			shellScript = "[[ -d \"$DEPLOY_RESOURCES_DIR\" ]] || exit 0\n \n HOWTO_PATH=\"$DEPLOY_RESOURCES_DIR/resources/How to get the source code\"\n cp \"$HOWTO_PATH\" \"$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/\"\n";
 		};
 		30C2960E16775037006EF09C /* Fill Info.plist */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1369,7 +1370,7 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
+			shellPath = /bin/bash;
 			shellScript = "if [[ -d \"$DEPLOY_RESOURCES_DIR\" ]] ;then\n    source \"$DEPLOY_RESOURCES_DIR/config/versioning.sh\"\nelse\n    source \"$SRCROOT/Version.config\"\nfi\n[[ -n \"$VERSION\" ]] || { echo \"Missing Version!\"; exit 1; }\n\n\n/usr/libexec/PlistBuddy \\\n  -c \"Set CommitHash '${COMMIT_HASH:--}'\" \\\n  -c \"Set BuildNumber '${BUILD_NUMBER:-0}'\" \\\n  -c \"Set CFBundleVersion '${BUILD_VERSION:-0n}'\" \\\n  -c \"Set CFBundleShortVersionString '$VERSION'\" \\\n  \"$BUILT_PRODUCTS_DIR/$INFOPLIST_PATH\" || exit 2\n";
 			showEnvVarsInLog = 0;
 		};
@@ -1727,9 +1728,10 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = PKV8ZPD836;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 2;
 				DYLIB_CURRENT_VERSION = 2;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1754,6 +1756,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = Libmacgpg;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -1766,9 +1769,10 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = PKV8ZPD836;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 2;
 				DYLIB_CURRENT_VERSION = 2;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1792,6 +1796,7 @@
 				LD_RUNPATH_SEARCH_PATHS = /Library/Frameworks;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = Libmacgpg;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;

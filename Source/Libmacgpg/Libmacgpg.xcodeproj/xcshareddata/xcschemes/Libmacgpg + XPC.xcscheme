@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "1130"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
-                     BlueprintIdentifier = "1B46CFCB161555DF00CF9C5F"
+                     BlueprintIdentifier = "1B2F2D6F214FF12A00740DD3"
                      BuildableName = "org.gpgtools.Libmacgpg.xpc"
                      BlueprintName = "org.gpgtools.Libmacgpg.xpc"
                      ReferencedContainer = "container:Libmacgpg.xcodeproj">
@@ -46,7 +46,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1B46CFCB161555DF00CF9C5F"
+               BlueprintIdentifier = "1B2F2D6F214FF12A00740DD3"
                BuildableName = "org.gpgtools.Libmacgpg.xpc"
                BlueprintName = "org.gpgtools.Libmacgpg.xpc"
                ReferencedContainer = "container:Libmacgpg.xcodeproj">
@@ -58,8 +58,16 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8DC2EF4F0486A6940098B216"
+            BuildableName = "Libmacgpg.framework"
+            BlueprintName = "Libmacgpg"
+            ReferencedContainer = "container:Libmacgpg.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -77,23 +85,11 @@
             </SkippedTests>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8DC2EF4F0486A6940098B216"
-            BuildableName = "Libmacgpg.framework"
-            BlueprintName = "Libmacgpg"
-            ReferencedContainer = "container:Libmacgpg.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -109,8 +105,6 @@
             ReferencedContainer = "container:Libmacgpg.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

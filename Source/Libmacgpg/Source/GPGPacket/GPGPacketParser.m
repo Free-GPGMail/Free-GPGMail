@@ -349,6 +349,19 @@ static BOOL isPartial(NSInteger c) {
 	return keyID;
 }
 
+- (NSString *)hexStringOfLength:(NSUInteger)length {
+	// Read length bytes and return as hex string.
+	
+	NSMutableString *hexString = [NSMutableString stringWithCapacity:length * 2];
+	
+	for (NSUInteger i = 0; i < length; i++) {
+		[hexString appendFormat:@"%02X", (UInt8)self.byte];
+	}
+	
+	stopOnEOF();
+	return [hexString.copy autorelease];
+}
+
 - (id)multiPrecisionInteger {
 	// Read a MPI.
 
@@ -539,6 +552,20 @@ static BOOL isPartial(NSInteger c) {
 					}
 					
 					packet[@"hash"] = [[data copy] autorelease];
+				}
+				break;
+			}
+			case GPGIssuerFingerprintTag: {
+				NSInteger keyVersion = self.byte;
+				NSString *fingerprint = nil;
+				
+				if (keyVersion == 4) {
+					fingerprint = [self hexStringOfLength:20];
+				} else if (keyVersion == 5) {
+					fingerprint = [self hexStringOfLength:32];
+				}
+				if (fingerprint) {
+					packet[@"fingerprint"] = fingerprint;
 				}
 				break;
 			}

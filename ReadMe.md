@@ -38,9 +38,10 @@ Build Instructions
 
 This build uses Xcode. Command line build tools must be installed.
 
-1. Go to the Source directory and run:
+1. Go to the Source directory and run make:
 
-    make
+        cd Source/
+        make
 
   This should produce two mailbundles: `GPGMail_3.mailbundle` and `GPGMail_4.mailbundle`
 
@@ -52,12 +53,12 @@ Installation
 
 2. Copy the modified mailbundle(s) to your user-specific Mail Bundle directory
 
-    mkdir -p ~/Library/Mail/Bundles/
-    cp -r GPGMail_?.mailbundle ~/Library/Mail/Bundles/
+        mkdir -p ~/Library/Mail/Bundles/
+        cp -r GPGMail_?.mailbundle ~/Library/Mail/Bundles/
 
 3. Restart Mail.app, go to `Preferences -> General -> Manage Plugins`.
-   You should see the plugin, enable it and click Apply
+   - Enable The GPGMail Plugin.
+   - Disable the conflicting plugin `GPGMailLoader.mailbundle`
    
-4. Restart Mail.app
+4. Restart Mail.app. Some users also report, that a reboot is necessary.
 
-Hopefully it's working for you now.

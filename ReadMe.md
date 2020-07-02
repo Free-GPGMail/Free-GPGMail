@@ -51,14 +51,19 @@ Installation
 
 1. Install GPGSuite suite as normal. Make sure you use the correct version.
 
-2. Copy the modified mailbundle(s) to your user-specific Mail Bundle directory
+2. Find the freshly installed `GPGMailLoader.mailbundle` and delete it.
+   (Look into `/Library/Mail/Bundles/`,
+   `/Library/Application Support/GPGTools/GPGMail` or the user-specific directory
+   `~/Library/Mail/Bundles/`)
+
+3. Build or download the modified mailbundle (version 3 or 4) and copy it
+   to your user-specific Mail Bundle directory
 
         mkdir -p ~/Library/Mail/Bundles/
-        cp -r GPGMail_?.mailbundle ~/Library/Mail/Bundles/
+        cp -r GPGMail_4.mailbundle ~/Library/Mail/Bundles/
 
-3. Restart Mail.app, go to `Preferences -> General -> Manage Plugins`.
+4. Restart Mail.app, go to `Preferences -> General -> Manage Plugins`.
    - Enable The GPGMail Plugin.
-   - Disable the conflicting plugin `GPGMailLoader.mailbundle`
    
-4. Restart Mail.app. Some users also report, that a reboot is necessary.
+5. Restart Mail.app. Some users also report, that a reboot is necessary.
 

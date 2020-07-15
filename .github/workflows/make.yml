@@ -2,7 +2,7 @@ name: Build
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, buildnumber ]
   pull_request:
     branches: [ master ]
 
@@ -14,11 +14,20 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Set bundle version
+      working-directory: Source
+      run: |
+        gitd="$(git describe --tags) ($(git branch --show-current))"
+        for plist in GPGMail_?/Resources/Info.plist; do
+          /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $gitd" $plist
+        done
     - name: Build
       working-directory: Source
       run: make
-    # do not use v2: https://github.com/actions/upload-artifact/issues/76
+    - name: check git repo
+      run: git status
     - name: Upload mailbundles
+      # do not use v2: https://github.com/actions/upload-artifact/issues/76    
       uses: actions/upload-artifact@v1
       with:
         name: Free-GPGMail_mailbundles

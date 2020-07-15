@@ -2,9 +2,9 @@ name: Build
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
@@ -13,13 +13,23 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[no-build]')"
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build
-      working-directory: Source
-      run: make
-    # do not use v2: https://github.com/actions/upload-artifact/issues/76
-    - name: Upload mailbundles
-      uses: actions/upload-artifact@v1
-      with:
-        name: Free-GPGMail_mailbundles
-        path: Source/bundles/
+      - uses: actions/checkout@v2
+      - name: Make
+        working-directory: Source         
+        run: |
+          export COMMIT_HASH=${GITHUB_SHA:0:7}
+          export BUILD_NUMBER=$(( $(date +"%s") / 3600 - 262968 ))
+          export BUILD_VERSION=${BUILD_NUMBER}.${GITHUB_RUN_NUMBER}
+          make
+      - name: Upload mailbundle 3
+        # do not use v2: https://github.com/actions/upload-artifact/issues/76
+        uses: actions/upload-artifact@v1
+        with:
+          name: Free-GPGMail_3.mailbundle
+          path: Source/bundles/Free-GPGMail_3.mailbundle
+      - name: Upload mailbundle 4
+        # do not use v2: https://github.com/actions/upload-artifact/issues/76
+        uses: actions/upload-artifact@v1
+        with:
+          name: Free-GPGMail_4.mailbundle
+          path: Source/bundles/Free-GPGMail_4.mailbundle          

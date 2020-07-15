@@ -2,3 +2,4 @@
 *.mailbundle
 build
 Source/bundles
+Source/GPGMail_*/Frameworks/Libmacgpg.framework/

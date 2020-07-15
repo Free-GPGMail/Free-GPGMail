@@ -27,14 +27,16 @@ based on the original source packages from GPGTools. Along
 with instructions on how to build them.
 
 We also publish a copy of the original source packages and compiled binaries of the
-updated mailbundles, ~along with a .DMG for easy installation.~
+updated mailbundles.
 
-Note GPGSuite must be installed first and then
-the mailbundle binaries replaced using the .DMG.
+Note GPGSuite must be installed first and then the mailbundle binaries can be
+replaced.
 
 
 Build Instructions
 ------------------
+
+Note: If you want to use pre-compiled mailbundles, download the latest [release](releases/).
 
 This build uses Xcode. Command line build tools must be installed.
 

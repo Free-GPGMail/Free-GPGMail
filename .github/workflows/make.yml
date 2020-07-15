@@ -17,7 +17,9 @@ jobs:
     - name: Set bundle version
       working-directory: Source
       run: |
+        git status
         gitd="$(git describe --tags) ($(git branch --show-current))"
+        echo $gitd
         for plist in GPGMail_?/Resources/Info.plist; do
           /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $gitd" $plist
         done
@@ -25,7 +27,9 @@ jobs:
       working-directory: Source
       run: make
     - name: check git repo
-      run: git status
+      run: |
+        git status
+        cat Source/GPGMail_4/Resources/Info.plist
     - name: Upload mailbundles
       # do not use v2: https://github.com/actions/upload-artifact/issues/76    
       uses: actions/upload-artifact@v1

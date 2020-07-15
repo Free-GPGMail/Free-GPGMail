@@ -17,14 +17,9 @@ jobs:
     - name: Build
       working-directory: Source
       run: make
-    # https://github.com/actions/upload-artifact/issues/76
-    - name: zip artifacts
-      working-directory: Source
-      run: zip -r GPGMail_mailbundles.zip GPGMail_*.mailbundle
+    # do not use v2: https://github.com/actions/upload-artifact/issues/76
     - name: Upload mailbundles
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v1
       with:
-        name: GPGMail_mailbundles.zip
-        path: Source/GPGMail_mailbundles.zip
-
-        
+        name: Free-GPGMail_mailbundles
+        path: Source/bundles/

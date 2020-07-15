@@ -11,7 +11,8 @@ Libmacgpg:
 $(GPGMAILS): Libmacgpg
 	cp -r Libmacgpg/build/Release/Libmacgpg.framework $@/Frameworks
 	$(MAKE) -C $@
-	cp -r $@/build/Release/GPGMail.mailbundle $@.mailbundle
+	mkdir -p bundles
+	cp -r $@/build/Release/GPGMail.mailbundle bundles/Free-$@.mailbundle
 
 clean:
 	rm -rf *.mailbundle

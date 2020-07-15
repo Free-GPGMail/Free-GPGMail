@@ -36,7 +36,7 @@ replaced.
 Build Instructions
 ------------------
 
-Note: If you want to use pre-compiled mailbundles, download the latest [release](releases/).
+Note: If you want to use pre-compiled mailbundles, download the latest [release](../../releases/).
 
 This build uses Xcode. Command line build tools must be installed.
 

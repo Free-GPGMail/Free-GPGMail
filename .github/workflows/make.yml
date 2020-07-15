@@ -23,10 +23,10 @@ jobs:
         for plist in GPGMail_?/Resources/Info.plist; do
           /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $gitd" $plist
         done
-    - name: Build
+    - name: Make
       working-directory: Source
       run: make
-    - name: check git repo
+    - name: Debug
       run: |
         git status
         cat Source/GPGMail_4/Resources/Info.plist

@@ -30,7 +30,7 @@ jobs:
         run: make
       - name: Debug
         run: |
-          find -name Info.plist -print0 | xargs -0 grep -a2 CFBundleVersion
+          find Source/ -name Info.plist -print0 | xargs -0 grep -a2 CFBundleVersion
       - name: Upload mailbundles
         # do not use v2: https://github.com/actions/upload-artifact/issues/76
         uses: actions/upload-artifact@v1

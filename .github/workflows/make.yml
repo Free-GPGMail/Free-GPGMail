@@ -21,15 +21,19 @@ jobs:
           export BUILD_NUMBER=$(( $(date +"%s") / 3600 - 262968 ))
           export BUILD_VERSION=${BUILD_NUMBER}.${GITHUB_RUN_NUMBER}
           make
+      - name: Prepare mailbundle artifacts
+        run: |
+          mkdir -p artifacts/3
+          cp -r Source/bundles/Free-GPGMail_3.mailbundle artifacts/3/
+          mkdir -p artifacts/4
+          cp -r Source/bundles/Free-GPGMail_4.mailbundle artifacts/4/
       - name: Upload mailbundle 3
-        # do not use v2: https://github.com/actions/upload-artifact/issues/76
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: Free-GPGMail_3.mailbundle
-          path: Source/bundles/Free-GPGMail_3.mailbundle
+          path: artifacts/3/
       - name: Upload mailbundle 4
-        # do not use v2: https://github.com/actions/upload-artifact/issues/76
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: Free-GPGMail_4.mailbundle
-          path: Source/bundles/Free-GPGMail_4.mailbundle          
+          path: artifacts/4/

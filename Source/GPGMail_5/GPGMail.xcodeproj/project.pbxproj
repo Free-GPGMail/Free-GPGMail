@@ -710,7 +710,7 @@
 				1B3B0F642371D63300DAFDA9 /* GMSPCommon.m */,
 			);
 			name = GMSupportPlan;
-			path = ../Dependencies/GMSupportPlan;
+			path = ../Dependencies/GMNoSupportPlan;
 			sourceTree = "<group>";
 		};
 		1B51232214093750004D0818 /* NSBezierPathAdditions */ = {

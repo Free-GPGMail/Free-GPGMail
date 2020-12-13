@@ -22,6 +22,6 @@
 
   Relevant: https://developer.apple.com/library/mac/#documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingXPCServices.html#//apple_ref/doc/uid/10000172i-SW6
 
-  XPC does work, but needs to be installed inside /Applications/Mail.app/Contents/XPCServices for now.
+  XPC does work, but needs to be installed inside /System/Applications/Mail.app/Contents/XPCServices for now.
 
   Takes kind of a long time to respond -> maybe use send_message_reply_sync?

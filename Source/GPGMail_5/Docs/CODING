@@ -54,13 +54,13 @@ could not load inserted library '@executable_path/Frameworks/libclang_rt.tsan_os
 
 This error is rather easy to fix. Follow these steps:
 
-1.) Create the Frameworks dir in /Applications/Mail.app/Contents/MacOS
+1.) Create the Frameworks dir in /System/Applications/Mail.app/Contents/MacOS
 
-sudo mkdir -p /Applications/Mail.app/Contents/MacOS/Frameworks
+sudo mkdir -p /System/Applications/Mail.app/Contents/MacOS/Frameworks
 
 2.) Copy the dylib into the newly created Frameworks dir
 
-sudo cp /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/8.0.0/lib/darwin/libclang_rt.tsan_osx_dynamic.dylib /Applications/Mail.app/Contents/MacOS/Frameworks
+sudo cp /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/8.0.0/lib/darwin/libclang_rt.tsan_osx_dynamic.dylib /System/Applications/Mail.app/Contents/MacOS/Frameworks
 
 Re-compile GPGMail and the Thread Sanitizer should kick in.
 
@@ -199,7 +199,7 @@ BUT fortunately for us, Apple has introduced an two exceptions for mach lookup n
 One can be found in the file /System/Library/Sandbox/Profiles/application.sb (which contains
 the rules which are evaluated for each available entitlement) and one can be found
 in the entitlements Mail.app is signed with directly.
-Use "codesign --display --entitlements - /Applications/Mail.app" to display the available
+Use "codesign --display --entitlements - /System/Applications/Mail.app" to display the available
 entitlements and check for "mach-lookup" to find interesting ones.
 In the application.sb file there's a mach-lookup allow rule, which allows every app to lookup
 mach services which end in _OpenStep.

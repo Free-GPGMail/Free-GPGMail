@@ -86,7 +86,7 @@
       <PathRunnable
          runnableDebuggingMode = "0"
          BundleIdentifier = "com.apple.mail"
-         FilePath = "/Applications/Mail.app">
+         FilePath = "/System/Applications/Mail.app">
       </PathRunnable>
       <MacroExpansion>
          <BuildableReference
@@ -137,7 +137,7 @@
       debugDocumentVersioning = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
-         FilePath = "/Applications/Mail.app">
+         FilePath = "/System/Applications/Mail.app">
       </PathRunnable>
    </ProfileAction>
    <AnalyzeAction

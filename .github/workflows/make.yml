@@ -8,9 +8,15 @@ on:
 
 jobs:
   build:
+    name: Build GPGMail_${{ matrix.gpgmail }}.mailbundle
+
+    if: "!contains(github.event.head_commit.message, '[no-build]')"
 
     runs-on: macos-latest
-    if: "!contains(github.event.head_commit.message, '[no-build]')"
+
+    strategy:
+      matrix:
+        gpgmail: [3, 4, 5]
 
     steps:
       - uses: actions/checkout@v2
@@ -20,20 +26,9 @@ jobs:
           export COMMIT_HASH=${GITHUB_SHA:0:7}
           export BUILD_NUMBER=$(( $(date +"%s") / 3600 - 262968 ))
           export BUILD_VERSION=${BUILD_NUMBER}.${GITHUB_RUN_NUMBER}
-          make
-      - name: Prepare mailbundle artifacts
-        run: |
-          mkdir -p artifacts/3
-          cp -r Source/bundles/Free-GPGMail_3.mailbundle artifacts/3/
-          mkdir -p artifacts/4
-          cp -r Source/bundles/Free-GPGMail_4.mailbundle artifacts/4/
-      - name: Upload mailbundle 3
+          make GPGMail_${{ matrix.gpgmail }}
+      - name: Upload mailbundle
         uses: actions/upload-artifact@v2
         with:
-          name: Free-GPGMail_3.mailbundle
-          path: artifacts/3/
-      - name: Upload mailbundle 4
-        uses: actions/upload-artifact@v2
-        with:
-          name: Free-GPGMail_4.mailbundle
-          path: artifacts/4/
+          name: Free-GPGMail_${{ matrix.gpgmail }}.mailbundle
+          path: Source/bundles/

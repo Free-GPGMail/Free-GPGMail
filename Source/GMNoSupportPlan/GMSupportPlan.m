@@ -47,6 +47,9 @@ NSString * const GMSupportPlanRefreshTypeOffline = @"offline";
         _applicationInfo = [applicationInfo copy];
         _signatureStatus = 0;
         _currentDevice = [GMDevice currentDeviceWithApplicationInfo:applicationInfo];
+        _eligibleVersions = @[ @"99.99" ];
+        _newestEligibleVersion = @"99.99";
+
 
         _offline = [_activation[@"offline"] boolValue];
     }
@@ -205,6 +208,14 @@ NSString * const GMSupportPlanRefreshTypeOffline = @"offline";
 
 - (NSString *)deviceID {
     return self.activation[@"udid"];
+}
+
+- (NSArray *)eligibleVersions {
+    return _eligibleVersions;
+}
+
+- (NSString *)newestEligibleVersion {
+    return _newestEligibleVersion;
 }
 
 - (BOOL)isExpired {

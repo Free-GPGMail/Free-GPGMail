@@ -118,6 +118,7 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
         _endpointURL = [[NSURL alloc] initWithString:kGMSupportPlanManagerAPIEndpointURL];
         _applicationID = [applicationID copy];
         _applicationInfo = [applicationInfo copy];
+        _applicationVersion = @"99.99";
         _currentDevice = [GMDevice currentDeviceWithApplicationInfo:applicationInfo];
 
         _timeEvents = @[@"sp_refresh", @"trial_expiring_warning", @"inactive_warning"];
@@ -145,6 +146,7 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
     if((self = [super init])) {
         _applicationID = [applicationID copy];
         _applicationInfo = [applicationInfo copy];
+        _applicationVersion = @"unknown/freed";
 
         self.supportPlan = [self supportPlanFromSharedAccessForAppName:applicationID];
     }
@@ -598,6 +600,10 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
     }
 
     return email;
+}
+
+- (NSString *)applicationVersion {
+    return _applicationVersion;
 }
 
 - (BOOL)shouldPromptUserForUpgrade {

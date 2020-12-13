@@ -1,0 +1,20 @@
+/* 
+ SignatureView.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 30.07.11.
+ Copyright 2011 GPGMail. All rights reserved.
+ 
+ Defines the strings used in the signature view.
+ */
+"VALIDITY_NO_TRUST" = "该签名不被信任。";
+"VALIDITY_OK" = "签名可信";
+/* Signature view key status. */
+"VALIDITY_KEY_REVOKED" = "该签名的密钥已被吊销。";
+"VALIDITY_SIGNATURE_EXPIRED" = "该签名已过期。";
+"VALIDITY_KEY_EXPIRED" = "该签名的密钥已过期。";
+"VALIDITY_KEY_REVOKED" = "该签名的密钥已被吊销。";
+"VALIDITY_UNKNOWN_ALGORITHM" = "签名被未知算法创建。";
+"VALIDITY_NO_PUBLIC_KEY" = "该签名的密钥不在您的钥匙串中。";
+"VALIDITY_UNKNOWN_ERROR" = "未知签名错误。";
+"VALIDITY_BAD_SIGNATURE" = "该签名非法。";

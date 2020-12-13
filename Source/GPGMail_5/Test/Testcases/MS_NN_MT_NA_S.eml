@@ -1,0 +1,40 @@
+Message-ID: <4E4462EA.9070603@gpgtools.org>
+Date: Fri, 12 Aug 2011 01:16:58 +0200
+From: GPGTools Test Key <test@gpgtools.org>
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:5.0) Gecko/20110624 Thunderbird/5.0
+MIME-Version: 1.0
+To: test@gpgtools.org
+Subject: MS/NN/MT/NA/S
+X-Enigmail-Version: 1.2
+Content-Type: multipart/signed; micalg=pgp-sha1;
+ protocol="application/pgp-signature";
+ boundary="------------enig2A81578011ECF54877A8D30E"
+
+This is an OpenPGP/MIME signed message (RFC 2440 and 3156)
+--------------enig2A81578011ECF54877A8D30E
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+MS/NN/MT/NA/S
+
+
+--------------enig2A81578011ECF54877A8D30E
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG/MacGPG2 v2.0.17 (Darwin)
+Comment: GPGTools - http://gpgtools.org
+Comment: Using GnuPG with Mozilla - http://enigmail.mozdev.org/
+
+iQEcBAEBAgAGBQJORGLrAAoJEFJrCfEKo9qCiUUH/iU0sEiDc0iLDYzIPb6DFt1q
++0XBGQNK+cs5EvXwYH/Nixk5QB6RjCsSwQlychYDJ1dzP5muu38Qrs3M3yAig4fT
+01glbAc62b0KbRGCMW/jKLG8MDVW1YyV/NsMUeXOHiM5dhzXJxsDp40oguVl/FVT
+TZzob4RIazd4IJYrpSV4ZDkhk1vaOuA/rTdsimWOqZXyJmS6T4p8FkzF2L+O6w6b
+vZuRL9LKrtOZmaQgylYh4jdnsxPjUjgxCtuYOiGCn1OYOM6PiprEEqcftr0TpUru
+Thy97z2eVYWjgmw4aqvIYjvyF8nlMT+hORSZDYkBw1it4XqoEMEVgs+hIY9kaG8=
+=5fa+
+-----END PGP SIGNATURE-----
+
+--------------enig2A81578011ECF54877A8D30E--

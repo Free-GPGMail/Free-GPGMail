@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDocumentTypes</key>
+	<array/>
+	<key>CFBundleExecutable</key>
+	<string>GPGMail</string>
+	<key>CFBundleIconFile</key>
+	<string>GPGMail.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.gpgtools.gpgmail5</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>GPGMail</string>
+	<key>CFBundlePackageType</key>
+	<string>GpgM</string>
+	<key>CFBundleShortVersionString</key>
+	<string>AUTOFILL</string>
+	<key>CFBundleVersion</key>
+	<string>AUTOFILL</string>
+	<key>CommitHash</key>
+	<string>AUTOFILL</string>
+	<key>BuildNumber</key>
+	<string>AUTOFILL</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © GPGTools GmbH, 2019</string>
+	<key>NSPrincipalClass</key>
+	<string>GPGMailBundle</string>
+	<key>Supported10.13PluginCompatibilityUUIDs</key>
+	<array>
+		<string>C86CD990-4660-4E36-8CDA-7454DEB2E199</string>
+	</array>
+	<key>Supported10.14PluginCompatibilityUUIDs</key>
+	<array>
+		<string>A4343FAF-AE18-40D0-8A16-DFAE481AF9C1</string>
+	</array>
+</dict>
+</plist>

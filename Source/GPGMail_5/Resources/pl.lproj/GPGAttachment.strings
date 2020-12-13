@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "Nie udało się zweryfikować podpisu.";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "Publiczny klucz służący do weryfikacji podpisu tego załącznika nie został znaleziony w Twoim pęku kluczy. \n\nPobierz klucz publiczny %@ używając GPG Keychain.";
+"DECRYPT_ERROR_GENERAL_TITLE" = "Nie udało się odszyfrować załącznika.";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "Klucz prywatny służący do weryfikacji sygnatury tego załącznika nie został znaleziony w Twoim pęku kluczy.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "Załącznik został odszyfrowany.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "Kliknij dwukrotnie, aby otworzyć załącznik w widoku wiadomości.";

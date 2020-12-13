@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "Не удалось проверить подпись.";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "Открытый ключ для проверки подписи этого вложения отсутствует в связке ключей.\n\nПожалуйста загрузите открытый ключ %@ используя GPG Keychain.";
+"DECRYPT_ERROR_GENERAL_TITLE" = "Не удалось расшифровать вложение.";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "Секретный ключ для расшифровки этого вложения отсутствует в вашей сзвязке ключей.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "Вложение было успешно расшифровано.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "Откройте вложение в письме для просмотра двойным щелчком мыши.";

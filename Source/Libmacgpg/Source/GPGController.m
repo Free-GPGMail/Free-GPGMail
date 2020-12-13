@@ -763,11 +763,29 @@ BOOL gpgConfigReaded = NO;
 							 keyType:(GPGPublicKeyAlgorithm)keyType keyLength:(int)keyLength
 						  subkeyType:(GPGPublicKeyAlgorithm)subkeyType subkeyLength:(int)subkeyLength
 						daysToExpire:(int)daysToExpire preferences:(NSString *)preferences {
+	NSDate *expirationDate = nil;
+	if (daysToExpire > 0) {
+		expirationDate = [NSDate dateWithTimeIntervalSinceNow:daysToExpire * 86400];
+	}
+	return [self generateNewKeyWithName:name
+								  email:email
+								comment:comment
+								keyType:keyType
+							  keyLength:keyLength
+							 subkeyType:subkeyType
+						   subkeyLength:subkeyLength
+						 expirationDate:expirationDate
+							preferences:preferences];
+}
+- (NSString *)generateNewKeyWithName:(NSString *)name email:(NSString *)email comment:(NSString *)comment
+							 keyType:(GPGPublicKeyAlgorithm)keyType keyLength:(int)keyLength
+						  subkeyType:(GPGPublicKeyAlgorithm)subkeyType subkeyLength:(int)subkeyLength
+						expirationDate:(NSDate *)expirationDate preferences:(NSString *)preferences {
 	if (async && !asyncStarted) {
 		asyncStarted = YES;
 		[asyncProxy generateNewKeyWithName:name email:email comment:comment 
 								   keyType:keyType keyLength:keyLength subkeyType:subkeyType subkeyLength:subkeyLength 
-							  daysToExpire:daysToExpire preferences:preferences];
+							  expirationDate:expirationDate preferences:preferences];
 		return nil;
 	}
 	NSString *fingerprint = nil;
@@ -816,7 +834,7 @@ BOOL gpgConfigReaded = NO;
 			[cmdText appendFormat:@"Name-Comment: %@\n", comment];
 		}
 		
-		[cmdText appendFormat:@"Expire-Date: %i\n", daysToExpire];
+		[cmdText appendFormat:@"Expire-Date: %@\n", [self dateToString:expirationDate]];
 		
 		if (preferences) {
 			[cmdText appendFormat:@"Preferences: %@\n", preferences];
@@ -1141,15 +1159,7 @@ BOOL gpgConfigReaded = NO;
 
 		[gpgTask addArgument:@"--quick-set-expire"];
 		[gpgTask addArgument:[key description]];
-		
-		if (expirationDate) {
-			NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
-			[formatter setDateFormat:@"yyyyMMdd'T'HHmmss"];
-			
-			[gpgTask addArgument:[formatter stringFromDate:expirationDate]];
-		} else {
-			[gpgTask addArgument:@"never"];
-		}
+		[gpgTask addArgument:[self dateToString:expirationDate]];
 		
 		
 		if (subkeys.count > 0) {
@@ -1584,11 +1594,18 @@ BOOL gpgConfigReaded = NO;
 
 
 #pragma mark Working with Signatures
-
 - (void)signUserID:(NSString *)hashID ofKey:(NSObject <KeyFingerprint> *)key signKey:(NSObject <KeyFingerprint> *)signKey type:(int)type local:(BOOL)local daysToExpire:(int)daysToExpire {
+	NSDate *expirationDate = nil;
+	if (daysToExpire > 0) {
+		expirationDate = [NSDate dateWithTimeIntervalSinceNow:daysToExpire * 86400];
+	}
+	[self signUserID:hashID ofKey:key signKey:signKey type:type local:local expirationDate:expirationDate];
+}
+
+- (void)signUserID:(NSString *)hashID ofKey:(NSObject <KeyFingerprint> *)key signKey:(NSObject <KeyFingerprint> *)signKey type:(int)type local:(BOOL)local expirationDate:(NSDate *)expirationDate {
 	if (async && !asyncStarted) {
 		asyncStarted = YES;
-		[asyncProxy signUserID:hashID ofKey:key signKey:signKey type:type local:local daysToExpire:daysToExpire];
+		[asyncProxy signUserID:hashID ofKey:key signKey:signKey type:type local:local expirationDate:(NSDate *)expirationDate];
 		return;
 	}
 	@try {
@@ -1611,7 +1628,7 @@ BOOL gpgConfigReaded = NO;
 		[order addCmd:uid prompt:@"keyedit.prompt"];
 		[order addCmd:local ? @"lsign\n" : @"sign\n" prompt:@"keyedit.prompt"];
 		[order addCmd:@"n\n" prompt:@"sign_uid.expire" optional:YES];
-		[order addCmd:[NSString stringWithFormat:@"%i\n", daysToExpire] prompt:@"siggen.valid" optional:YES];
+		[order addCmd:[self dateToString:expirationDate] prompt:@"siggen.valid" optional:YES];
 		[order addCmd:[NSString stringWithFormat:@"%i\n", type] prompt:@"sign_uid.class" optional:YES];
 		[order addCmd:@"save\n" prompt:@"keyedit.prompt"];
 		
@@ -1642,9 +1659,17 @@ BOOL gpgConfigReaded = NO;
 }
 
 - (void)signUserIDs:(NSArray <GPGUserID *> *)userIDs signerKey:(NSObject <KeyFingerprint> *)signerKey local:(BOOL)local daysToExpire:(int)daysToExpire {
+	NSDate *expirationDate = nil;
+	if (daysToExpire > 0) {
+		expirationDate = [NSDate dateWithTimeIntervalSinceNow:daysToExpire * 86400];
+	}
+	[self signUserIDs:userIDs signerKey:signerKey local:local expirationDate:expirationDate];
+}
+
+- (void)signUserIDs:(NSArray <GPGUserID *> *)userIDs signerKey:(NSObject <KeyFingerprint> *)signerKey local:(BOOL)local expirationDate:(NSDate *)expirationDate {
 	if (async && !asyncStarted) {
 		asyncStarted = YES;
-		[asyncProxy signUserIDs:userIDs signerKey:signerKey local:local daysToExpire:daysToExpire];
+		[asyncProxy signUserIDs:userIDs signerKey:signerKey local:local expirationDate:expirationDate];
 		return;
 	}
 	@try {
@@ -1663,7 +1688,7 @@ BOOL gpgConfigReaded = NO;
 		}];
 		[order addCmd:local ? @"lsign\n" : @"sign\n" prompt:@"keyedit.prompt"];
 		[order addCmd:@"n\n" prompt:@"sign_uid.expire" optional:YES];
-		[order addCmd:[NSString stringWithFormat:@"%i\n", daysToExpire] prompt:@"siggen.valid" optional:YES];
+		[order addCmd:[self dateToString:expirationDate] prompt:@"siggen.valid" optional:YES];
 		[order addCmd:@"save\n" prompt:@"keyedit.prompt"];
 		
 		
@@ -1814,9 +1839,16 @@ BOOL gpgConfigReaded = NO;
 #pragma mark Working with Subkeys
 
 - (void)addSubkeyToKey:(NSObject <KeyFingerprint> *)key type:(NSInteger)type length:(NSInteger)length daysToExpire:(NSInteger)daysToExpire {
+	NSDate *expirationDate = nil;
+	if (daysToExpire > 0) {
+		expirationDate = [NSDate dateWithTimeIntervalSinceNow:daysToExpire * 86400];
+	}
+	[self addSubkeyToKey:key type:type length:length expirationDate:expirationDate];
+}
+- (void)addSubkeyToKey:(NSObject <KeyFingerprint> *)key type:(NSInteger)type length:(NSInteger)length expirationDate:(NSDate *)expirationDate {
 	if (async && !asyncStarted) {
 		asyncStarted = YES;
-		[asyncProxy addSubkeyToKey:key type:type length:length daysToExpire:daysToExpire];
+		[asyncProxy addSubkeyToKey:key type:type length:length expirationDate:expirationDate];
 		return;
 	}
 	@try {
@@ -1827,7 +1859,7 @@ BOOL gpgConfigReaded = NO;
 		[order addCmd:@"addkey\n" prompt:@"keyedit.prompt"];
 		[order addInt:type prompt:@"keygen.algo"];
 		[order addInt:length prompt:@"keygen.size"];
-		[order addInt:daysToExpire prompt:@"keygen.valid"];
+		[order addCmd:[self dateToString:expirationDate] prompt:@"keygen.valid"];
 		[order addCmd:@"save\n" prompt:@"keyedit.prompt"];
 		
 		
@@ -3280,6 +3312,17 @@ BOOL gpgConfigReaded = NO;
 			self.lastSignature.fingerprint = fingerprint;
 		}
 	}
+}
+
+- (NSString *)dateToString:(NSDate *)date {
+	if (date) {
+		NSDateFormatter *formatter = [[NSDateFormatter new] autorelease];
+		formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+		[formatter setDateFormat:@"yyyyMMdd'T'HHmmss"];
+		return [formatter stringFromDate:date];
+	}
+
+	return @"0";
 }
 
 

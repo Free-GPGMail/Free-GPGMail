@@ -1,6 +1,0 @@
-framework module GSPaddle {
-  umbrella header "GSPaddle.h"
-
-  export *
-  module * { export * }
-}

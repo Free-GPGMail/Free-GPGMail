@@ -1,0 +1,32 @@
+{
+	/*
+	* Do not modify that file. Use the Terminal, and type:
+	* defaults write org.gpgtools.gpgmail TheDefaultName TheValue
+	*/
+
+	/* Composing */
+	UseOpenPGPToSend = YES;
+    OptionallyEncryptDrafts = YES;
+	EncryptNewEmailsByDefault = NO;
+	SignNewEmailsByDefault = YES;
+	UseOpenPGPInlineToSend = NO;
+	DefaultSecurityMethod = 1; /* OpenPGP */
+	AttachKeyToOutgoingMessages = NO;
+	AllowSymmetricEncryption = NO;
+	ShowAccountNameForKeysOfSameAddress = NO;
+	EncryptToSelf = YES;
+	
+	/* Viewing */
+	UseOpenPGPForReading = YES;
+	HideAllSignatureAttachments = NO;
+	CreatePreviewSnippets = NO;
+
+    /* Completely disable generating snippets even if the passphrase
+     * is cached.
+     */
+    NeverCreatePreviewSnippets = NO;
+	
+
+	/* Used to check if this file is loaded correctly */
+	DefaultsLoaded = YES;
+}

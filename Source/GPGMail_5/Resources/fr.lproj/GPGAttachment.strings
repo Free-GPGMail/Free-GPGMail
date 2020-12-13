@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "La vérification de la signature a échoué.";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "La clé publique nécessaire pour vérifier la signature de cette pièce jointe n'est pas dans votre trousseau.\n\nMerci de télécharger la clé publique %@ en utilisant GPG Keychain.";
+"DECRYPT_ERROR_GENERAL_TITLE" = "Le déchiffrement du fichier joint a échoué.";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "La clé secrète pour déchiffrer ce fichier joint ne fait pas partie de votre trousseau.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "Le fichier joint a été déchiffré avec succès.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "Double-cliquez sur le fichier joint pour le visualiser.";

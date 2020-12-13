@@ -1,0 +1,89 @@
+-- Decode function calls
+MimePart parsedMessageWithContext
+  MimePart GPGDecryptedMessageBodyIsEncrypted:isSigned:isEncrypted -> returns nil, then
+MimePart decodeWithContext
+    - within decodeWithContext sub method, SetDecrypted should be called (I have to do this!)
+    - after setDecrypted call decodeWithContext again, main method!
+    - our own decryptWithContext method GPGDecodeApplicationPgp_EncryptedWithContext returns
+        -> nil => decryption failed
+        -> html or plain text => decryption succeeded
+
+    
+
+- decodedContentWithContext is only called for mails with attachments,
+  doesn't really concern us
+
+
+- (id)_makeMessageWithContents:(id)arg1 isDraft:(BOOL)arg2 shouldSign:(BOOL)arg3 shouldEncrypt:(BOOL)arg4 shouldSkipSignature:(BOOL)arg5 shouldBePlainText:(BOOL)arg6;
+-> Use for encryption / signing?
+
+- If message flags is set to encrypted (in emlx file) 
+  GPGDecryptedMessageBodyIsEncrypted is called after 
+  MimeBody.parsedMessage
+  MimeBody.parsedMessageWithContext
+  - ALSO when NOT set!
+
+Decode for mime part (top level) calls decryptedMesageBody... again
+if returns nil, in case the current part contains encrypted data on to decrypting the body!
+
+- verifySignature will be used for signature
+  - is called by the signed part AFTER decryption when initializing
+    the decrypted message! 
+
+
+== hook methods for sending messages ==
+
+ComposeBackEnd
+
+- (id)_makeMessageWithContents:(id)arg1 isDraft:(BOOL)arg2 shouldSign:(BOOL)arg3 shouldEncrypt:(BOOL)arg4 shouldSkipSignature:(BOOL)arg5 shouldBePlainText:(BOOL)arg6;
+- (void)setSignIfPossible:(BOOL)arg1;
+- (void)setEncryptIfPossible:(BOOL)arg1;
+// I guess this defines, whether the sign icon can be enabled. 
+- (BOOL)canSignFromAddress:(id)arg1;
+// I guess this defines, whether the sign icon can be enabled.
+- (BOOL)canEncryptForRecipients:(id)arg1 sender:(id)arg2;
+
+MailApp
+
+- (BOOL)signOutgoingMessages;
+- (void)setSignOutgoingMessages:(BOOL)arg1;
+- (BOOL)encryptOutgoingMessages;
+- (void)setEncryptOutgoingMessages:(BOOL)arg1;
+
+MailDocumentEditor
+
+- (void)backEnd:(id)arg1 didCancelMessageDeliveryForMissingCertificatesForRecipients:(id)arg2;
+- (id)missingCertificatesMessageForRecipients:(id)arg1 uponDelivery:(BOOL)arg2;
+- (void)backEnd:(id)arg1 didCancelMessageDeliveryForEncryptionError:(id)arg2;
+- (void)_shouldDeliverMessageAlertWithoutEncryptionSheetDidDismiss:(id)arg1 returnCode:(long long)arg2 contextInfo:(void *)arg3;
+- (void)encryptionStatusDidChange;
+
+MessageWriter
+
+- (BOOL)signsOutput;
+- (void)setSignsOutput:(BOOL)arg1;
+- (BOOL)encryptsOutput;
+- (void)setEncryptsOutput:(BOOL)arg1;
++ (BOOL)canSignMessagesFromAddress:(id)arg1;
++ (BOOL)canEncryptMessagesToAddress:(id)arg1;
++ (BOOL)canEncryptMessagesToAddresses:(id)arg1 sender:(id)arg2;
+- (id)newSignedPartWithData:(id)arg1 sender:(id)arg2 signatureData:(id *)arg3;
+- (id)newEncryptedPartWithData:(id)arg1 recipients:(id)arg2 encryptedData:(id *)arg3;
+
+Raise NSAlertContentView if something might go wrong!
+
+- toggleEncryptButtonImages and toggleSignButtonImages to change the lock and sign status
+  in the compose view
+
+== Message Framework calls to create a new message ==
+
+[MessageWriter newMessageWithHtmlString:(id)arg1 plainTextAlternative:(id)arg2 otherHtmlStringsAndAttachments:(id)arg3 headers:(id)arg4]
+    Create a new outgoing message
+    -> OutgoingMessage
+        Create a new outgoing message body and set the message
+        -> _OutgoingMessageBody
+            -> setMessageBody
+    _createOutgoingMessageFromTopLevelMimePart
+        [MimePart newEncryptedPartWithData:(id)arg1 recipients:(id)arg2 encryptedData:(id *)arg3]
+
+

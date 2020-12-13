@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "No s'ha pogut verificar la signatura.";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "La clau pública per a verificar la signatura d'aquest fitxer adjunt no és al vostre clauer.\n\nBaixeu la clau pública %@ utilitzant el GPG Keychain.";
+"DECRYPT_ERROR_GENERAL_TITLE" = "No s'ha pogut desxifrar el fitxer adjunt.";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "La clau privada per desxifrar el fitxer no és al clauer.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "El fitxer adjunt s'ha desxifrat amb èxit.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "Obriu un fitxer adjunt a la vista de missatges fent doble clic.";

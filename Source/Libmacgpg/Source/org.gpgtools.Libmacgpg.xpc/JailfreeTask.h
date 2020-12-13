@@ -8,11 +8,8 @@
 #import "JailfreeProtocol.h"
 #import <Foundation/Foundation.h>
 
-@class Paddle;
-
 @interface JailfreeTask :  NSObject <Jailfree> {
 	NSXPCConnection * __weak _xpcConnection;
-    Paddle *_paddle;
 }
 
 - (void)testConnection:(void (^)(BOOL))reply;
@@ -30,7 +27,6 @@
 - (void)setUserDefaults:(NSDictionary *)domain forName:(NSString *)domainName reply:(void (^)(BOOL result))reply;
 
 - (void)isPassphraseForKeyInGPGAgentCache:(NSString *)key reply:(void (^)(BOOL))reply;
-- (void)validSupportContractAvailableForProduct:(NSString *)identifier reply:(void (^)(BOOL, NSDictionary *))reply;
 
 @property (nonatomic, weak) NSXPCConnection *xpcConnection;
 

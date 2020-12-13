@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "ไม่สามารถตรวจพิสูจน์ลายเซ็นดังกล่าวได้";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "The public key to verify the signature of this attachment is not in your keychain.\n\nPlease download the public key %@ using GPG Keychain.";
+"DECRYPT_ERROR_GENERAL_TITLE" = "ไม่สามารถถอดรหัสลับแฟ้มแนบได้";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "กุญแจลับที่ใช้ถอดรหัสลับแฟ้มแนบนี้ไม่อยู่ในพวงกุญแจของคุณ";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "แฟ้มแนบถูกถอดรหัสลับสำเร็จแล้ว";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "เปิดแฟ้มแนบในมุมมองข้อความได้ด้วยการคลิกสองครั้ง";

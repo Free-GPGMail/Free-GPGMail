@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "Allekirjoitusta ei voitu varmentaa.";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "Allekirjoituksen varmentamiseen ei löytynyt julkista avainta avainrenkaastasi.\nOle hyvä ja lataa julkinen avain %@ GPG Keychain -sovelluksella. ";
+"DECRYPT_ERROR_GENERAL_TITLE" = "Liitetiedoston salauksen purku epäonnistui.";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "Avainrenkaassasi ei ole liitetiedoston salauksen purkamiseen tarvittavaa yksityistä avainta.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "Liitetiedoston salauksen purku onnistui.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "Avaa liite viestinäkymässä kaksoisnapsauttamalla.";

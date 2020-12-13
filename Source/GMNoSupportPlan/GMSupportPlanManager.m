@@ -606,6 +606,11 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
     return _applicationVersion;
 }
 
+- (BOOL)version: (NSString *)version1 isNewerThanVersion:(NSString *)version2 {
+    NSComparisonResult result = [version1 compare:version2];
+    return ( result == NSOrderedDescending );
+}
+
 - (BOOL)shouldPromptUserForUpgrade {
     return [self upgradeState] != GMSupportPlanManagerUpgradeStateVersionSupported;
 }

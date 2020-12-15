@@ -72,40 +72,20 @@ NSString * const GMSupportPlanRefreshTypeOffline = @"offline";
 }
 
 - (nullable NSDateInterval *)validityInterval {
-    if(!self.activation[@"issued"] || !self.activation[@"expiration"]) {
-        return nil;
-    }
-    NSInteger issued = [self.activation[@"issued"] integerValue];
+    // 2020-01-01
+    NSInteger issued = 1577833200;
     NSDate *issuedDate = [NSDate dateWithTimeIntervalSince1970:issued];
-    // Add approximately a day, to extend the duration for one day.
-    // As a result, the remainingTrialDays will say 30 instead of 29.
-    NSDate *expirationDate = [NSDate dateWithTimeIntervalSince1970:[self.activation[@"expiration"] integerValue] + (24 * 60 * 60)];
 
-    if(!expirationDate || !issuedDate) {
-        return nil;
-    }
-
-    NSDate *referenceDate = [expirationDate laterDate:issuedDate];
-    // Invalid expiration date. Expiration is later than issue date.
-    if(referenceDate == issuedDate) {
-        return nil;
-    }
-
-    return [[NSDateInterval alloc] initWithStartDate:issuedDate endDate:expirationDate];
+    return [[NSDateInterval alloc] initWithStartDate:issuedDate endDate:[self expirationDate]];
 }
 
 - (NSDate *)expirationDate {
-    // Expiration date shouldn't before 2019.
-    if(!self.activation[@"expiration"] || [self.activation[@"expiration"] integerValue] <= 1567296000) {
-        return nil;
-    }
-    return [NSDate dateWithTimeIntervalSince1970:[self.activation[@"expiration"] integerValue]];
+    // 2099-01-01
+    return [NSDate dateWithTimeIntervalSince1970: 4070905200];
 }
 
 - (NSTimeInterval)remainingTimeInterval {
-    NSDateInterval *validityInterval = [self validityInterval];
-    // Check validity of the license, otherwise return nil?
-    return [[validityInterval endDate] timeIntervalSinceDate:CURRENT_DATE];
+    return 999999999;
 }
 
 - (BOOL)isValid {
@@ -123,87 +103,22 @@ NSString * const GMSupportPlanRefreshTypeOffline = @"offline";
 - (void)validateSignature {
     self.signatureStatus = GMSupportPlanSignatureStatusValid;
     return;
-    NSString *signature = self.metadata[@"sig"];
-    if(![signature length]) {
-        self.signatureStatus = GMSupportPlanSignatureStatusInvalid;
-        return;
-    }
-
-    if(!_publicCertificate) {
-        self.signatureStatus = GMSupportPlanSignatureStatusInvalid;
-        return;
-    }
-
-    NSData *signatureData = [[NSData alloc] initWithBase64EncodedString:signature options:NSDataBase64DecodingIgnoreUnknownCharacters];
-    NSString *digestBase = [self.activation GMSP_hashBaseWithSeparator:@"-"];
-    NSData *digestBaseData = [[digestBase GMSP_SHA256] dataUsingEncoding:NSUTF8StringEncoding];
-
-    CFDataRef dataRef = CFDataCreate(NULL, [_publicCertificate bytes], [_publicCertificate length]);
-    SecCertificateRef ref = SecCertificateCreateWithData(NULL, dataRef);
-    if(ref != 0) {
-        SecPolicyRef x509Ref = SecPolicyCreateBasicX509();
-        SecTrustRef trustRef;
-        if(SecTrustCreateWithCertificates(ref, x509Ref, &trustRef) == errSecSuccess) {
-            SecTrustResultType resultRef;
-
-            if(SecTrustEvaluate(trustRef, &resultRef) == errSecSuccess) {
-                SecKeyRef publicKeyRef = SecTrustCopyPublicKey(trustRef);
-
-                CFDataRef signedDataRef = CFDataCreate(NULL, [digestBaseData bytes], [digestBaseData length]);
-                CFDataRef signatureDataRef = CFDataCreate(NULL, [signatureData bytes], [signatureData length]);
-                CFErrorRef error;
-                if(SecKeyVerifySignature(publicKeyRef, kSecKeyAlgorithmRSASignatureMessagePKCS1v15SHA256, signedDataRef, signatureDataRef, &error)) {
-                    self.signatureStatus = GMSupportPlanSignatureStatusValid;
-                }
-                else {
-                    self.signatureStatus = GMSupportPlanSignatureStatusInvalid;
-                }
-
-                CFRelease(signatureDataRef);
-                CFRelease(signedDataRef);
-                CFRelease(publicKeyRef);
-            }
-
-            CFRelease(trustRef);
-        }
-
-        CFRelease(x509Ref);
-        CFRelease(ref);
-    }
-
-    CFRelease(dataRef);
-
-    if(self.signatureStatus == GMSupportPlanSignatureStatusUnknown) {
-        self.signatureStatus = GMSupportPlanSignatureStatusInvalid;
-    }
 }
 
 - (BOOL)isSignatureValid {
     return YES;
-    if(self.signatureStatus <= GMSupportPlanSignatureStatusUnknown) {
-        @synchronized(self) {
-            [self validateSignature];
-        }
-    }
-    return self.signatureStatus == GMSupportPlanSignatureStatusValid ? YES : NO;
 }
 
 - (BOOL)isAppNameValid {
     return YES;
-    return [_applicationID isEqualToString:self.appName];
 }
 
 - (BOOL)isEligibleForAppWithName:(NSString *)appName {
     return YES;
-    return [[self.activation[@"eligible_apps"] allValues] containsObject:appName];
 }
 
 - (BOOL)isDeviceValid {
     return YES;
-    if([self type] == GMSupportPlanTypeFallbackTrial) {
-        return YES;
-    }
-    return [self.activation[@"udid"] isEqualToString:[self.currentDevice deviceID]];
 }
 
 - (NSString *)deviceID {
@@ -220,12 +135,6 @@ NSString * const GMSupportPlanRefreshTypeOffline = @"offline";
 
 - (BOOL)isExpired {
     return NO;
-    // If no expiration is set, there's no expiration.
-    NSDateInterval *validityInterval = [self validityInterval];
-    if(!validityInterval) {
-        return NO;
-    }
-    return ![validityInterval containsDate:CURRENT_DATE];
 }
 
 - (NSString *)appName {
@@ -233,70 +142,27 @@ NSString * const GMSupportPlanRefreshTypeOffline = @"offline";
 }
 
 - (GMSupportPlanType)type {
-    return GMSupportPlanTypeTime;
-    if(!self.activation || !self.activation[@"did"]) {
-        return GMSupportPlanTypeNone;
-    }
-    if([self.activation[@"type"] isEqualToString:GMSupportPlanTypeValueTrial]) {
-        return GMSupportPlanTypeTrial;
-    }
-    if([self.activation[@"type"] isEqualToString:GMSupportPlanTypeValueTime]) {
-        return GMSupportPlanTypeTime;
-    }
-    if([self.activation[@"type"] isEqualToString:GMSupportPlanTypeValueFallbackTrial]) {
-        return GMSupportPlanTypeFallbackTrial;
-    }
-
     return GMSupportPlanTypeStatic;
 }
 
 - (BOOL)isKindOfTrial {
     return NO;
-    return [self type] == GMSupportPlanTypeTrial || [self type] == GMSupportPlanTypeFallbackTrial;
 }
 
 - (BOOL)isAboutToExpire {
     return NO;
-    if(!self.expirationDate) {
-        return NO;
-    }
-    NSTimeInterval remainingTimeInterval = [self remainingTimeInterval];
-    NSCalendar *currentCalendar = [NSCalendar currentCalendar];
-#ifdef DEBUG
-    NSDateComponents *difference = [currentCalendar components:NSCalendarUnitDay fromDate:CURRENT_DATE toDate:[NSDate dateWithTimeInterval:remainingTimeInterval sinceDate:CURRENT_DATE] options:0];
-#else
-    NSDateComponents *difference = [currentCalendar components:NSCalendarUnitDay fromDate:CURRENT_DATE toDate:[NSDate dateWithTimeIntervalSinceNow:remainingTimeInterval] options:0];
-#endif
-
-    return [difference day] <= 7 ? YES : NO;
 }
 
 - (NSDate *)lastUpdate {
-    if(![self.activation[@"updated"] integerValue]) {
-        return nil;
-    }
-    NSDate *lastUpdate = [NSDate dateWithTimeIntervalSince1970:[self.activation[@"updated"] integerValue]];
-    if(!lastUpdate) {
-        return nil;
-    }
-
-    return lastUpdate;
+    return nil;
 }
 
 - (NSDate *)refreshUntil {
-    if(![self.activation[@"refresh"] integerValue]) {
-        return nil;
-    }
-    NSDate *refreshUntil = [NSDate dateWithTimeIntervalSince1970:[self.activation[@"refresh"] integerValue]];
-    if(!refreshUntil) {
-        return nil;
-    }
-
-    return refreshUntil;
+    return nil;
 }
 
 - (NSString *)refreshType {
-    return _offline ? GMSupportPlanRefreshTypeOffline : GMSupportPlanRefreshTypeRegular;
+    return GMSupportPlanRefreshTypeOffline;
 }
 
 - (NSString *)activationCode {
@@ -308,14 +174,6 @@ NSString * const GMSupportPlanRefreshTypeOffline = @"offline";
 }
 
 - (BOOL)isMultiUser {
-    id volume = self.activation[@"volume"];
-    if([volume isKindOfClass:[NSNumber class]]) {
-        return [volume boolValue];
-    }
-    else if([volume isKindOfClass:[NSString class]]) {
-        return [volume isEqualToString:@"yes"] ? YES : NO;
-    }
-
     return NO;
 }
 

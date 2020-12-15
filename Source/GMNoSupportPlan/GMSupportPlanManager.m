@@ -40,7 +40,8 @@ NSString * const kGMSupportPlanManagerFallbackTrial = GMSPStringFromPreprocessor
 #if defined(DEBUG) && defined(DEBUG_ACTIVATION_SERVER)
 NSString * const kGMSupportPlanManagerAPIEndpointURL = @"http://localhost:8000/api/v1.0/support-plans";
 #else
-NSString * const kGMSupportPlanManagerAPIEndpointURL = @"https://support-plan.gpgtools.org/api/v1.0/support-plans";
+// NSString * const kGMSupportPlanManagerAPIEndpointURL = @"https://support-plan.gpgtools.org/api/v1.0/support-plans";
+NSString * const kGMSupportPlanManagerAPIEndpointURL = @"http://do-not-query-any-valid-server.org/";
 #endif
 NSString * const kGMSupportPlanManagerActivationDirectory = @"org.gpgtools.gmsp";
 NSString * const kGMSupportPlanManagerActivationFile = @".%@.gmsp";
@@ -123,20 +124,7 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
 
         _timeEvents = @[@"sp_refresh", @"trial_expiring_warning", @"inactive_warning"];
 
-        self.supportPlan = [self supportPlanWithActivationFilePath:[[self activationFileURL] path]];
-        // On launch, synchronize the shared access data.
-        if(self.supportPlan) {
-            [self saveActivationForSharedAccess:self.supportPlan appName:nil];
-        }
-        // Install a support plan if one is passed. In case one already exists,
-        // deactivate that one and install a new one.
-        [self installSupportPlanFromProcessArgumentsIfNecessary];
-
-        // Based on the params passed to Mail, delete the keep and never ask keys.
-        [self resetForceVersionLoadingDefaultsIfNecessary];
-
-        [self refreshSupportPlanIfNecessary];
-
+        self.supportPlan = [self supportPlanFreePlan];
     }
     return self;
 }
@@ -148,11 +136,25 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
         _applicationInfo = [applicationInfo copy];
         _applicationVersion = @"unknown/freed";
 
-        self.supportPlan = [self supportPlanFromSharedAccessForAppName:applicationID];
+        self.supportPlan = [self supportPlanFreePlan];
     }
     return self;
 }
 
+- (GMSupportPlan *)supportPlanFreePlan {
+    NSDictionary *freeplandict = @{
+        @"activation": @{
+            @"email": @"nomail",
+            @"offline": @YES,
+            @"udid": @"noudid",
+            @"app": _applicationID,
+            @"activation_code": @"no-code-for-FreeGPGMail",
+            @"activation_id": @"no-id-for-FreeGPGMail"
+        },
+        @"meta": @"noactivationforfree"
+    };
+    return [self supportPlanWithDictionary:freeplandict];
+}
 
 - (GMSupportPlan *)supportPlanFromData:(NSData *)data {
     if([data length]) {
@@ -173,11 +175,6 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
 
 - (GMSupportPlan *)supportPlanWithDictionary:(NSDictionary *)dictionary {
     GMSupportPlan *supportPlan = [[GMSupportPlan alloc] initWithDictionary:dictionary applicationID:_applicationID applicationInfo:_applicationInfo publicCertificate:kGMSupportPlanManagerPublicCertificate];
-    // Reject any support plan that doesn't have a valid signature.
-    if(![supportPlan isSignatureValid]) {
-        return nil;
-    }
-
     return supportPlan;
 }
 
@@ -279,158 +276,27 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
 }
 
 - (void)startTrialWithCompletionHandler:(gmsp_api_handler_t __nullable)completionHandler {
-    NSDictionary *payload = [self requestPayloadForTrial];
-
-    [self runAPICallWithURL:@"/trial" data:payload completionHandler:^(NSDictionary *response, NSError *error) {
-        GMSupportPlan *supportPlan = nil;
-        if([response[@"success"] boolValue] && response[@"data"]) {
-            supportPlan = [self supportPlanWithDictionary:response[@"data"]];
-            // A support plan can be expired which would result in a
-            // non valid return value. It's still fine to install however.
-            if([supportPlan isSignatureValid]) {
-                [self saveActivation:supportPlan];
-            }
-            else {
-                NSLog(@"[GPGMail]: Received invalid support plan data from server");
-                error = [NSError errorWithDomain:@"org.gpgtools.gpgmail" code:GMSupportPlanAPIErrorServerError userInfo:nil];
-                supportPlan = nil;
-            }
-        }
-        else {
-            if([[error domain] isEqualToString:NSURLErrorDomain]) {
-                error = [NSError errorWithDomain:@"org.gpgtools.gpgmail" code:GMSupportPlanAPIErrorNetworkError userInfo:@{@"is_trial": @(YES)}];
-            }
-            else {
-                error = [NSError errorWithDomain:@"org.gpgtools.gpgmail" code:GMSupportPlanAPIErrorServerError userInfo:@{@"is_trial": @(YES)}];
-            }
-            // TODO: install fallback trial activation.
-        }
-        if(completionHandler != NULL) {
-            completionHandler(supportPlan, response, error);
-        }
-    }];
+    GMSupportPlan *supportPlan = nil;
+    supportPlan = [self supportPlanFreePlan];
+    [self saveActivation:supportPlan];
 }
 
 - (void)activateSupportPlanWithActivationCode:(NSString *)activationCode email:(NSString *)email completionHandler:(gmsp_api_handler_t)completionHandler {
-    NSDictionary *payload = [self requestPayloadForActivationCode:activationCode email:email];
-
-    [self runAPICallWithURL:@"/activate" data:payload completionHandler:^(NSDictionary *response, NSError *error) {
-        GMSupportPlan *supportPlan = nil;
-        if([response[@"success"] boolValue] && response[@"data"]) {
-            supportPlan = [self supportPlanWithDictionary:response[@"data"]];
-            // A support plan can be valid for other versions of GPG Mail,
-            // thus the app name is not considered.
-            if([supportPlan isValidExcludingAppName]) {
-                [self saveActivation:supportPlan];
-            }
-            else {
-                NSLog(@"[GPGMail]: Received invalid support plan data from server");
-            }
-        }
-        else {
-            if([[error domain] isEqualToString:NSURLErrorDomain]) {
-                error = [NSError errorWithDomain:@"org.gpgtools.gpgmail" code:GMSupportPlanAPIErrorNetworkError userInfo:nil];
-            }
-            else {
-                error = [NSError errorWithDomain:@"org.gpgtools.gpgmail" code:[response[@"code"] integerValue] userInfo:nil];
-                //error = [NSError errorWithDomain:@"org.gpgtools.gpgmail" code:GMSupportPlanAPIErrorServerError userInfo:nil];
-            }
-        }
-        if(completionHandler) {
-            completionHandler(supportPlan, response, error);
-        }
-    }];
+    GMSupportPlan *supportPlan = nil;
+    supportPlan = [self supportPlanFreePlan];
+    [self saveActivation:supportPlan];
 }
 
 - (void)deactivateWithCompletionHandler:(gmsp_api_handler_t)completionHandler {
-    if(!self.supportPlan) {
-        // Do nothing...
-        return;
-    }
-
-    // Always remove the activation file, regardless of whether or not the deactivation succeeds.
-    NSDictionary *payload = [self requestPayloadForSupportPlan:self.supportPlan];
-    [self saveActivation:nil];
-
-    BOOL isV3 = [_applicationID isEqualToString:@"org.gpgtools.gpgmail"];
-    [self runAPICallWithURL:@"/deactivate" data:payload completionHandler:^(NSDictionary *response, NSError *error) {
-        GMSupportPlan *supportPlan = nil;
-        if(![response[@"success"] boolValue]) {
-            error = [NSError errorWithDomain:@"org.gpgtools.gpgmail" code:[response[@"code"] integerValue] userInfo:nil];
-        }
-        else {
-            // Receive a trial activation.
-            if(response[@"data"] && !isV3) {
-                supportPlan = [self supportPlanWithDictionary:response[@"data"]];
-                if([supportPlan isSignatureValid]) {
-                    [self saveActivation:supportPlan];
-                }
-            }
-        }
-        NSLog(@"Reponse: %@", response);
-        if(completionHandler) {
-            completionHandler(self.supportPlan, response, error);
-        }
-    }];
+    return;
 }
 
 - (void)refresh {
-    if(!self.supportPlan) {
-        // No need to refresh anything...
-        return;
-    }
-
-    NSDictionary *payload = [self requestPayloadForSupportPlan:self.supportPlan];
-
-    [self runAPICallWithURL:@"/refresh" data:payload completionHandler:^(NSDictionary *response, NSError *error) {
-        // Error - don't react at the moment.
-        if(![response[@"success"] boolValue] || !response[@"data"]) {
-            return;
-        }
-        GMSupportPlan *supportPlan = [self supportPlanWithDictionary:response[@"data"]];
-        if([supportPlan isSignatureValid]) {
-            [self saveActivation:supportPlan];
-        }
-    }];
+    return;
 }
 
 - (void)migratePaddleActivationWithCompletionHandler:(gmsp_api_handler_t)completionHandler {
-    NSDictionary *contractInformation = [self legacySupportPlanInformation];
-    NSDictionary *payload = nil;
-
-    // The Paddle activation has already been migrated. In that case and existing support
-    // plan should be available for v3.
-    GMSupportPlan *olderSupportPlan = [self supportPlanForPreviousVersion];
-    if([(NSString *)contractInformation[@"ActivationCode"] length]) {
-        payload = @{@"meta": [self.currentDevice dictionaryRepresentationWithMAC],
-                                  @"activation": @{
-                                          @"email": contractInformation[@"ActivationEmail"],
-                                          @"activation_code": contractInformation[@"ActivationCode"],
-                                          @"activation_id":  contractInformation[@"ActivationID"]
-                                          }
-                                  };
-    }
-    else if([olderSupportPlan isValidForAppName:@"org.gpgtools.gpgmail"]) {
-        payload = [self requestPayloadForSupportPlan:olderSupportPlan];
-    }
-
-    [self runAPICallWithURL:@"/migrate" data:payload completionHandler:^(NSDictionary *response, NSError *error) {
-        GMSupportPlan *supportPlan = nil;
-        if([response[@"success"] boolValue] && response[@"data"]) {
-            supportPlan = [self supportPlanWithDictionary:response[@"data"]];
-            if([supportPlan isSignatureValid]) {
-                [self saveActivation:supportPlan];
-                [self removeLegacySupportInformation];
-            }
-        }
-        else {
-            error = [NSError errorWithDomain:@"org.gpgtools.gpgmail" code:[response[@"code"] integerValue] userInfo:nil];
-        }
-
-        if(completionHandler) {
-            completionHandler(supportPlan, response, error);
-        }
-    }];
+    return;
 }
 
 - (void)fetchUpgradeURLWithCompletionHandler:(gmsp_api_handler_t)completionHandler {
@@ -502,40 +368,8 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
 - (BOOL)saveActivation:(GMSupportPlan * __nullable)supportPlan {
     @synchronized(self) {
         BOOL setCurrent = YES;
-        // Only replace the information of the current support plan, if this
-        // is a valid support plan for V4. Otherwise if we have a trial, don't
-        // set it. Except if the running GPG Mail is V3.
-        BOOL isV3 = [_applicationID isEqualToString:@"org.gpgtools.gpgmail"];
-        if(!isV3 && ![supportPlan isKindOfTrial] && [supportPlan isValidForAppName:@"org.gpgtools.gpgmail"]) {
-            setCurrent = NO;
-        }
         NSString *currentAppName = [[self.supportPlan appName] copy];
-        if(setCurrent) {
-            self.supportPlan = supportPlan;
-        }
-        NSError *error = nil;
-        if(supportPlan) {
-            NSURL *activationURL = [self activationFileURLForApplicationID:[supportPlan appName]];
-            [supportPlan saveToURL:activationURL error:&error];
-            [self saveActivationForSharedAccess:supportPlan appName:nil];
-        }
-        else {
-            // Reset the keep information so next time the user launches GPG Mail,
-            // GPG Mail 4 is launched.
-            if([_applicationID isEqualToString:@"org.gpgtools.gpgmail"]) {
-                [GMSupportPlanManager setAlwaysLoadVersion:nil];
-            }
-            // This is necessary to make sure that refreshes will happen again.
-            [self resetLastDateOfAllEvents];
-            [[NSFileManager defaultManager] removeItemAtPath:[[self activationURL] path] error:&error];
-            [self saveActivationForSharedAccess:nil appName:currentAppName];
-            // If an old support plan also exists, remove that one as well.
-            GMSupportPlan *olderSupportPlan = [self supportPlanForPreviousVersion];
-            if(olderSupportPlan != nil) {
-                [[NSFileManager defaultManager] removeItemAtPath:[[self activationFileURLForApplicationID:[olderSupportPlan appName]] path] error:&error];
-                [self saveActivationForSharedAccess:nil appName:[olderSupportPlan appName]];
-            }
-        }
+        self.supportPlan = supportPlan;
         return YES;
     }
 }
@@ -545,18 +379,7 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
 }
 
 - (BOOL)supportPlanIsActive {
-    BOOL isActive = NO;
-#ifdef DEBUG
-    if([[self simulatedOptionForKey:@"SupportPlan"] boolValue] && [self simulatedOptionForKey:@"SupportPlanActive"]) {
-        isActive = [[self simulatedOptionForKey:@"SupportPlanActive"] boolValue];
-    }
-#endif
-    // Is active might be set to YES already from the debug section.
-    if(!isActive) {
-        isActive = self.supportPlan && [self.supportPlan isValid];
-    }
-
-    return isActive;
+    return YES;
 }
 
 - (NSNumber *)remainingTrialDays {
@@ -576,30 +399,11 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
 }
 
 - (NSString *)currentActivationCode {
-    NSString *activationCode = nil;
-#ifdef DEBUG
-    if([[self simulatedOptionForKey:@"SupportPlan"] boolValue]) {
-        activationCode = [self simulatedOptionForKey:@"SupportPlanActivationCode"];
-    }
-#endif
-    if(!activationCode) {
-        activationCode = [self.supportPlan activationCode];
-    }
-    return activationCode;
+    return @"No code for Free-GPGMail";
 }
 
 - (NSString *)currentEmail {
-    NSString *email = nil;
-#ifdef DEBUG
-    if([[self simulatedOptionForKey:@"SupportPlan"] boolValue]) {
-        email = [self simulatedOptionForKey:@"SupportPlanActivationEmail"];
-    }
-#endif
-    if(!email) {
-        email = [self.supportPlan email];
-    }
-
-    return email;
+    return nil;
 }
 
 - (NSString *)applicationVersion {
@@ -612,42 +416,10 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
 }
 
 - (BOOL)shouldPromptUserForUpgrade {
-    return [self upgradeState] != GMSupportPlanManagerUpgradeStateVersionSupported;
+    return NO;
 }
 
 - (GMSupportPlanManagerUpgradeState)upgradeState {
-    // If this is version three, there's never a need to display the upgrade dialog,
-    // since that only gets loaded if the user chose to keep GPG Mail 3.
-    if([_applicationID isEqualToString:@"org.gpgtools.gpgmail"]) {
-        return GMSupportPlanManagerUpgradeStateVersionSupported;
-    }
-
-    if([self supportPlanIsActive] && ![[self supportPlan] isKindOfTrial]) {
-        return GMSupportPlanManagerUpgradeStateVersionSupported;
-    }
-
-    GMSupportPlan *olderSupportPlan = [self supportPlanForPreviousVersion];
-    BOOL activationForOlderVersionAvailable = [self isLegacySupportPlanActive] || [olderSupportPlan isValidForAppName:@"org.gpgtools.gpgmail"];
-
-    // Check if either an old paddle support plan is available for V3, or
-    // if the activation has already been migrated but is only valid for V3.
-    if(!activationForOlderVersionAvailable) {
-        return GMSupportPlanManagerUpgradeStateVersionSupported;
-    }
-
-    BOOL supportsGPGMail4Only = [[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10,15,0}];
-#ifdef DEBUG
-    if(!supportsGPGMail4Only && [[[GPGOptions sharedOptions] valueForKey:@"SimulateSupportsGPGMail4Only"] boolValue]) {
-        supportsGPGMail4Only = YES;
-    }
-#endif
-    if(supportsGPGMail4Only) {
-        return GMSupportPlanManagerUpgradeStateUpgradeFromVersion3ToVersion4;
-    }
-    else {
-        return GMSupportPlanManagerUpgradeStateUpgradeOrKeepVersion3;
-    }
-
     return GMSupportPlanManagerUpgradeStateVersionSupported;
 }
 
@@ -730,75 +502,19 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
 }
 
 - (BOOL)isEligibleForApp:(NSString *)app {
-    // If no support plan information is available, there's no need to perform
-    // further checks.
-    if(![self supportPlanIsActive]) {
-        return NO;
-    }
-
-    return [[self.supportPlan appName] isEqualToString:app];
+    return YES;
 }
 
 - (GMSupportPlanState)supportPlanState {
-    GMSupportPlanType supportPlanType = self.supportPlan != nil ? [self.supportPlan type] : GMSupportPlanTypeNone;
-
-    if(!self.supportPlan) {
-        return GMSupportPlanStateInactive;
-    }
-
-    // Non-expired trial or valid activation.
-    if([self supportPlanIsActive]) {
-        return [self.supportPlan isKindOfTrial] ? GMSupportPlanStateTrial : GMSupportPlanStateActive;
-    }
-
-    if([self.supportPlan isKindOfTrial]) {
-        return [self.supportPlan isExpired] ? GMSupportPlanStateTrialExpired : GMSupportPlanStateInactive;
-    }
-
-    if(supportPlanType == GMSupportPlanTypeTime) {
-        return [self.supportPlan isExpired] ? GMSupportPlanStateTimedExpired : GMSupportPlanStateInactive;
-    }
-
-    return GMSupportPlanStateInactive;
+    return GMSupportPlanStateActive;
 }
 
 - (BOOL)installFallbackTrial {
-    if(self.supportPlan) {
-        return NO;
-    }
-    NSData *trialData = [[kGMSupportPlanManagerFallbackTrial GMSP_base64Decode] dataUsingEncoding:NSUTF8StringEncoding];
-    if(!trialData) {
-        return NO;
-    }
-
-    id supportPlanDictionary = [NSJSONSerialization JSONObjectWithData:trialData options:NSJSONReadingMutableContainers error:nil];
-    if(!supportPlanDictionary) {
-        return NO;
-    }
-    GMSupportPlan *supportPlan = [self supportPlanWithDictionary:supportPlanDictionary];
-    if([supportPlan isSignatureValid] && [supportPlan isAppNameValid]) {
-        [self saveActivation:supportPlan];
-        return YES;
-    }
     return NO;
 }
 
 - (BOOL)shouldPresentActivationDialog {
-    // Active support plan -> show never
-    // Active trial -> only show if about to expire. Every 2nd day.
-    if([self supportPlanIsActive]) {
-        if([[self supportPlan] isAboutToExpire] && [self lastDateOfEvent:@"trial_expiring_warning" olderThan:3]) {
-            return YES;
-        }
-        return NO;
-    }
-
-    // Support plan is not active, show the activation dialog every 7 days.
-    if([self upgradeState] != GMSupportPlanManagerUpgradeStateVersionSupported) {
-        return [self lastDateOfEvent:@"inactive_warning" olderThan:3];
-    }
-
-    return [self lastDateOfEvent:@"inactive_warning" olderThan:7];
+    return NO;
 }
 
 - (BOOL)lastDateOfEvent:(NSString *)eventName olderThan:(NSInteger)days {
@@ -896,27 +612,6 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
 }
 
 - (BOOL)saveActivationForSharedAccess:(GMSupportPlan *)supportPlan appName:(NSString *)appName {
-    NSString *supportPlanData = nil;
-    if(supportPlan) {
-        supportPlanData = [[supportPlan asData] base64EncodedStringWithOptions:0];
-    }
-    GPGOptions *options = [[self class] GPGOptions];
-
-    NSMutableDictionary *supportPlans = [[options valueForKey:kGMSupportPlanManagerGSMPActivationForSharedAccessKey] mutableCopy];
-    if(!supportPlans) {
-        supportPlans = [NSMutableDictionary new];
-    }
-    appName = appName == nil ? [supportPlan appName] : appName;
-    if(supportPlan == nil) {
-        if(appName != nil) {
-            [supportPlans removeObjectForKey:appName];
-        }
-    }
-    else {
-        [supportPlans setValue:supportPlanData forKey:appName];
-    }
-
-    [options setValue:supportPlans forKey:kGMSupportPlanManagerGSMPActivationForSharedAccessKey];
     return YES;
 }
 

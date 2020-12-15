@@ -27,7 +27,7 @@
 	<key>BuildNumber</key>
 	<string>AUTOFILL</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © GPGTools GmbH, 2019</string>
+	<string>Copyright © GPGTools GmbH, 2019, Free-GPGMail 2020</string>
 	<key>NSPrincipalClass</key>
 	<string>GPGMailBundle</string>
 	<key>Supported10.13PluginCompatibilityUUIDs</key>
@@ -38,5 +38,13 @@
 	<array>
 		<string>A4343FAF-AE18-40D0-8A16-DFAE481AF9C1</string>
 	</array>
+    <key>Supported10.15PluginCompatibilityUUIDs</key>
+    <array>
+        <string>6EEA38FB-1A0B-469B-BB35-4C2E0EEA9053</string>
+    </array>
+    <key>Supported11.0PluginCompatibilityUUIDs</key>
+    <array>
+      <string>D985F0E4-3BBC-4B95-BBA1-12056AC4A531</string>
+    </array>
 </dict>
 </plist>

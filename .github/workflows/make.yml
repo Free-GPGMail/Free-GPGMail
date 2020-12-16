@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Build Free-GPGMail_${{ matrix.gpgmail }}.mailbundle
+    name: ${{ matrix.gpgmail }} bundle
 
     if: "!contains(github.event.head_commit.message, '[no-build]')"
 

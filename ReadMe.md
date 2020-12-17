@@ -1,7 +1,7 @@
 Free GPGMail
 ============
 
-GPGMail (part of GPGTools now GPGSuite) has been an open source free product for
+*GPG Mail* (part of *GPGTools* now *GPG Suite*) has been a free product for
 many years. Right up until version 3. In a surprise move the team at
 GPGTools changed the product to require a license key and online activation.
 While they are perfectly in their rights to do so, it did catch a lot of people
@@ -9,28 +9,29 @@ off by surprise, especially as it came as just a regular update.
 
 So while they are in their rights to charge and place DRM into their product, it
 is still a GPL licensed product which requires the source code to be available.
-This repository and project uses the open source source code with the DRM code
-replaced so the product can be used without a license key, support plan or any
+
+This repository and project uses the open source code with the DRM code
+replaced so the product can be used without a license key, support plan or
 online activation.
 
-Rather than building the entire GPGMail Suite and installer, this project just
-concentrates on building the GPGMail mailbundles. Depending on supported macOS
-versions, there are different versions of GPGMail available:
+Rather than building the entire GPG Suite and installer, this project just
+concentrates on building the GPG Mail mailbundles. Depending on supported macOS
+versions, there are different versions of GPG Mail available:
 
 - `Free-GPGMail_3.mailbundle`
 - `Free-GPGMail_4.mailbundle`
 - `Free-GPGMail_5.mailbundle`
 
-Refer to the GPGSuite documentation for a list of supported macOS versions.
+Refer to the GPG Suite documentation for a list of supported macOS versions.
 
 This repository contains the source tree for the modified versions of the mail
-bundles, based on the original source packages from GPGSuite. Along with
+bundles, based on the original source packages from GPG Suite. Along with
 instructions on how to build them.
 
 We also publish a copy of the original source packages and compiled binaries of the
 updated mailbundles.
 
-Note GPGSuite must be installed first and then the mailbundle binaries can be
+Note GPG Suite must be installed first and then the mailbundle binaries can be
 replaced.
 
 
@@ -54,7 +55,7 @@ This build uses Xcode. Command line build tools must be installed.
 Installation
 ------------
 
-1. Install GPGSuite suite as normal. Make sure you use the correct version.
+1. Install GPG Suite suite as normal. Make sure you use the correct version.
 
 2. Find the freshly installed `GPGMailLoader.mailbundle` and delete it.
    (Look into `/Library/Mail/Bundles/`,
@@ -69,6 +70,14 @@ Installation
 
 4. Restart Mail.app, go to `Preferences -> General -> Manage Plugins`.
    - Enable the Free GPGMail Plugin.
+   
+5. Restart Mail.app. Some users also report that a reboot is necessary.
 
-5. Restart Mail.app. Some users also report, that a reboot is necessary.
 
+Bug Reports and User Support
+----------------------------
+
+This project is run by volunteers in the free and open source spirit. Contributions
+are welcome. Problems with building or installing Free-GPGMail should be posted
+in the Github issue tracker. If you need help with the program itself, consider
+buying the commercial product at GPGTools and make them work for their money.

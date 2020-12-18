@@ -91,7 +91,7 @@ typedef enum {
 
 - (void)windowDidLoad {
     [super windowDidLoad];
-    
+
     [[self window] setDelegate:self];
 }
 
@@ -125,7 +125,7 @@ typedef enum {
     alert.messageText = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_TITLE"]; // "Support Plan Activation Failed"
     alert.icon = [NSImage imageNamed:@"GPGMail"];
     [alert beginSheetModalForWindow:[self window] completionHandler:^(NSModalResponse returnCode) {
-        
+
     }];
 }
 
@@ -317,7 +317,7 @@ typedef enum {
     if(state == GMSupportPlanViewControllerStateBuy) {
         NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
                                     [NSColor linkColor], NSForegroundColorAttributeName,
-                                    [NSURL URLWithString:@"https://gpgtools.org/buy-support-plan?v4=1"], NSLinkAttributeName,
+                                    [NSURL URLWithString:@"https://github.com/Free-GPGMail/Free-GPGMail"], NSLinkAttributeName,
                                     nil];
 
         self.grayInfoTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_LOCATE_ACTIVATION_CODE"];
@@ -424,7 +424,7 @@ typedef enum {
         GMSupportPlanState supportPlanState = [supportPlanManager supportPlanState];
 
         self.headerTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_HEADER_WELCOME_4"];
-        
+
         if(upgradeState == GMSupportPlanManagerUpgradeStateUpgradeFromVersion3ToVersion4) {
             self.headerTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_HEADER_WELCOME_4"];
             self.subHeaderTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_SUBHEADER"];
@@ -646,7 +646,7 @@ typedef enum {
 - (void)setShowDontAskAgain:(BOOL)showDontAskAgain {
 	if (_showDontAskAgain != showDontAskAgain) {
 		_showDontAskAgain = showDontAskAgain;
-		
+
 //        if (showDontAskAgain && _state == GMSupportPlanViewControllerStateInfo) {
 //            [_subStackView setVisibilityPriority:NSStackViewVisibilityPriorityMustHold forView:_dontAskAgainView];
 //        } else {
@@ -657,7 +657,7 @@ typedef enum {
 
 - (void)setEmail:(NSString *)email {
     if(![email length]) {
-        
+
     }
     if(_email != email) {
         _email = email;
@@ -667,7 +667,7 @@ typedef enum {
 
 - (void)setActivationCode:(NSString *)activationCode {
     if(![activationCode length]) {
-        
+
     }
     if(_activationCode != activationCode) {
         _activationCode = activationCode;
@@ -720,7 +720,7 @@ typedef enum {
         }];
     }
     else if([(NSButton *)sender tag] == GMSupportPlanAssistantBuyActivateButtonStateBuy) {
-        [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://gpgtools.org/buy-support-plan?v4=1"]];
+        [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/Free-GPGMail/Free-GPGMail"]];
     }
     else {
         if(self.email && self.emailTextField.stringValue != self.email) {
@@ -729,7 +729,7 @@ typedef enum {
         if(self.activationCode && self.licenseTextField.stringValue != self.activationCode) {
             self.licenseTextField.stringValue = self.activationCode;
         }
-        
+
         if(![self validateActivationInformation]) {
             [(GMSupportPlanAssistantWindowController *)[[[self view] window] windowController] showActivationError];
         }

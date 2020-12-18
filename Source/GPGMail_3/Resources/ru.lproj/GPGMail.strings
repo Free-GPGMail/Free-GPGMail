@@ -18,13 +18,13 @@
 "MESSAGE_BANNER_PGP_DECRYPT_SECKEY_ERROR_MESSAGE" = "Ни один из следующих ключей не найден в вашей связке (%@). Секретный ключ нужен для расшифровки этого сообщения. \n\nПожалуйста, уточните у отправителя, что он использовал правильный открытый ключ для шифрования.\nПроверьте резервные копии связки, возможно нужный ключ был ранее удалён и его нужно восстановить.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_TITLE" = "Невозможно расшифровать. Неизвестная ошибка!";
-"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "При расшифровке этого сообщения произошла неизвестная ошибка.\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "При расшифровке этого сообщения произошла неизвестная ошибка.\n\nПожалуйста свяжитесь с нами https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_TITLE" = "Невозможно расшифровать. Неизвестная ошибка!";
-"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "При расшифровке этого сообщения произошла неизвестная ошибка.\n\nСообщение ошибки GPG:\n%@\nПожалуйста свяжитесь с нами, приложив сообщение ошибки GPG на https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "При расшифровке этого сообщения произошла неизвестная ошибка.\n\nСообщение ошибки GPG:\n%@\nПожалуйста свяжитесь с нами, приложив сообщение ошибки GPG на https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "Зашифровано неправильным ключом.";
-"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Это сообщение не может быть расшифровано, так как использовался неправильный открытый ключ для его шифрования.\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Это сообщение не может быть расшифровано, так как использовался неправильный открытый ключ для его шифрования.\n\nПожалуйста свяжитесь с нами https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "Зашифрованное сообщение повреждено.";
 "MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "Это зашифрованное сообщение повреждено и не может быть расшифровано.\n\nПопросите отправителя повторить отправку.";
@@ -35,16 +35,16 @@
 "MESSAGE_BANNER_PGP_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "Сообщение не может быть проверено, так как ключ, который использовался для подписи этого сообщения, отсутствует в вашем GPG Keychain.\n\nНайдите ключ с ID %@ в GPG Keychain и импортируйте его, чтобы проверить сообщение.";
 
 "MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_TITLE" = "Подпись к сообщению создана неподдерживаемым алгоритмом.";
-"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Это сообщение не может быть проверено, так как подпись была создана с помощью алгоритма, который не поддерживается.\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Это сообщение не может быть проверено, так как подпись была создана с помощью алгоритма, который не поддерживается.\n\nПожалуйста свяжитесь с нами https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "ВНИМАНИЕ: Подпись сообщения не верна!";
-"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "Это сообщение может быть изменено после того, как подпись была создана.\n\nПожалуйста, обратитесь к отправителю, чтобы убедиться, что содержание сообщения соответствует оригиналу.\n\nПожалуйста свяжитесь с нами\nhttps://gpgtools.tenderapp.com/\nесли вы уверены, что сообщение не было изменено.";
+"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "Это сообщение может быть изменено после того, как подпись была создана.\n\nПожалуйста, обратитесь к отправителю, чтобы убедиться, что содержание сообщения соответствует оригиналу.\n\nПожалуйста свяжитесь с нами\nhttps://github.com/Free-GPGMail/Free-GPGMail/issues/\nесли вы уверены, что сообщение не было изменено.";
 
 "MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_TITLE" = "Неизвестная ошибка! Проверка сообщения невозможна!";
-"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_MESSAGE" = "Произошла неизвестная ошибка при проверке подписи этого сообщения.\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_MESSAGE" = "Произошла неизвестная ошибка при проверке подписи этого сообщения.\n\nПожалуйста свяжитесь с нами https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "Ошибка цифровой подписи!";
-"MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Подпись этого сообщения недействительна и не может быть проверена.\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Подпись этого сообщения недействительна и не может быть проверена.\n\nПожалуйста свяжитесь с нами https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_KEY_EXPIRED_ERROR_TITLE" = "Ключ подписи просрочен..";
 "MESSAGE_BANNER_PGP_VERIFY_KEY_EXPIRED_ERROR_MESSAGE" = "Срок действия ключа, который использовался для подписи этого сообщения, истек.\n\nВы можете попробовать обновить ключ с ID %@ в GPG Keychain и узнайте у отправителя, почему срок действия ключа истек.";
@@ -78,13 +78,13 @@
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SECKEY_ERROR_MESSAGE" = "Ни один из следующих ключей не найден в вашей связке (%@). Секретный ключ нужен для расшифровки этого вложения. \n\nПожалуйста, уточните у отправителя, что он использовал правильный открытый ключ.\nПроверьте резервные копии связки, если нужный ключ был удалён, что бы восстановить его.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_TITLE" = "Неизвестная ошибка! Расшифровка невозможна.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_MESSAGE" = "При расшифровке этого вложения произошла неизвестная ошибка.\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_MESSAGE" = "При расшифровке этого вложения произошла неизвестная ошибка.\n\nПожалуйста свяжитесь с нами https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_TITLE" = "Неизвестная ошибка! Расшифровка невозможна.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_MESSAGE" = "При расшифровке этого сообщения произошла неизвестная ошибка.\n\nСообщение ошибки GPG:\n%@\nПожалуйста свяжитесь с нами, приложив сообщение ошибки GPG на https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_MESSAGE" = "При расшифровке этого сообщения произошла неизвестная ошибка.\n\nСообщение ошибки GPG:\n%@\nПожалуйста свяжитесь с нами, приложив сообщение ошибки GPG на https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "Неверный ключ использован для шифрования вложения.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Это вложение не может быть расшифровано, так как для его шифрования был использован неправильный открытый ключ .\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Это вложение не может быть расшифровано, так как для его шифрования был использован неправильный открытый ключ .\n\nПожалуйста свяжитесь с нами https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "Зашифрованное вложение повреждено.";
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "Зашифрованное вложение было повреждено и не может быть расшифровано.\n\nСвяжитесь с отправителем, что бы получить сообщение ещё раз.";
@@ -96,16 +96,16 @@
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "Подпись вложения не может быть проверена, поскольку ключ, который использовался при подписании, не найден в вашем GPG Keychain.\n\nНайдите и импортируйте ключ с ID %@ в GPG Keychain для проверки вложения.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_TITLE" = "Подпись вложения создана неподдерживаемым алгоритмом..";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Это вложение не может быть проверено, так как подпись была создана с помощью алгоритма, который не поддерживается.\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Это вложение не может быть проверено, так как подпись была создана с помощью алгоритма, который не поддерживается.\n\nПожалуйста свяжитесь с нами https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "ВНИМАНИЕ: Неверная подпись вложения!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "Это вложение может быть изменено после того, как подпись была создана.\n\nПожалуйста, обратитесь к отправителю, чтобы убедиться, что содержимое вложения соответствует оригиналу.\n\nПожалуйста свяжитесь с нами\nhttps://gpgtools.tenderapp.com/\nесли вы уверены, что вложение не было изменено.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "Это вложение может быть изменено после того, как подпись была создана.\n\nПожалуйста, обратитесь к отправителю, чтобы убедиться, что содержимое вложения соответствует оригиналу.\n\nПожалуйста свяжитесь с нами\nhttps://github.com/Free-GPGMail/Free-GPGMail/issues/\nесли вы уверены, что вложение не было изменено.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_TITLE" = "Неизвестная ошибка! Проверка подписи не удалась.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_MESSAGE" = "При проверке подлинности подписи этого вложения произошла неизвестная ошибка.\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_MESSAGE" = "При проверке подлинности подписи этого вложения произошла неизвестная ошибка.\n\nПожалуйста свяжитесь с нами https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "Ошибка данных подписи!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Подпись этого вложения недействительна и не может быть проверена.\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Подпись этого вложения недействительна и не может быть проверена.\n\nПожалуйста свяжитесь с нами https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_KEY_EXPIRED_ERROR_TITLE" = "Ключ подписи просрочен.";
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_KEY_EXPIRED_ERROR_MESSAGE" = "Срок действия ключа, который использовался для подписи этого вложения, истек.\n\nВы можете попробовать обновить ключ с ID %@ в GPG Keychain и узнайте у отправителя, почему срок действия ключа истек.";
@@ -172,7 +172,7 @@ CODE_SIGN_ERROR_MESSAGE = "Для вашей защиты Free-GPGMail не бу
 
 /* GPGMailGPGMailBundle.defaults can't be loaded */
 NO_DEFAULTS_TITLE = "Невозможно загрузить стандартные настройки Free-GPGMail!";
-NO_DEFAULTS_MESSAGE = "Free-GPGMail не работает, как ожидалось.\n\nПожалуйста, скачайте и установите GPG Suite с https://gpgtools.org\n\nЕсли эта проблема не устранена, пожалуйста, свяжитесь с нами https://gpgtools.tenderapp.com/.";
+NO_DEFAULTS_MESSAGE = "Free-GPGMail не работает, как ожидалось.\n\nПожалуйста, скачайте и установите GPG Suite с https://gpgtools.org\n\nЕсли эта проблема не устранена, пожалуйста, свяжитесь с нами https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 /* Errors while trying to sign a message. */
 "MESSAGE_SIGNING_ERROR_NO_PINENTRY_TITLE" = "Подписка вашего сообщения не удалась из-за повреждённого кода";
@@ -193,7 +193,7 @@ NO_DEFAULTS_MESSAGE = "Free-GPGMail не работает, как ожидало
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_TITLE" = "Вы ввели неправильный пароль слишком много раз.";
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_DESCRIPTION" = "Подписка вашего сообщения была остановлена, так как вы 3 раза ввели неправильный пароль.";
 
-"CONTACT_GPGTOOLS_WITH_INFO_MESSAGE" = "\n\nЕсли ваша проблема не устранена, пожалуйста, свяжитесь с нами https://gpgtools.tenderapp.com/ со следующим описанием ошибки:\n\n%@";
+"CONTACT_GPGTOOLS_WITH_INFO_MESSAGE" = "\n\nЕсли ваша проблема не устранена, пожалуйста, свяжитесь с нами https://github.com/Free-GPGMail/Free-GPGMail/issues со следующим описанием ошибки:\n\n%@";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_TITLE" = "Вы прервали расшифровку сообщения";
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "Сообщение не было расшифровано, так как вы сбросили запрос пароля.";
@@ -202,22 +202,22 @@ NO_DEFAULTS_MESSAGE = "Free-GPGMail не работает, как ожидало
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "Вложение не было расшифровано, так как вы сбросили запрос пароля.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite не работает, как ожидалось";
-"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Расшифровка сообщения не удалась.\n\nПожалуйста переустановите GPG Suite с сайта https://gpgtools.org.\n\nЕсли эта проблема останется, свяжитесь с нами через сайт https://gpgtools.tenderapp.com/ прикрепя информацию, что xpc-сервис не работает как надо. ";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Расшифровка сообщения не удалась.\n\nПожалуйста переустановите GPG Suite с сайта https://gpgtools.org.\n\nЕсли эта проблема останется, свяжитесь с нами через сайт https://github.com/Free-GPGMail/Free-GPGMail/issues прикрепя информацию, что xpc-сервис не работает как надо. ";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite не работает, как ожидалось";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Расшифровка вложения не удалась.\n\nПожалуйста переустановите GPG Suite с сайта https://gpgtools.org.\n\nЕсли эта проблема останется, свяжитесь с нами через сайт https://gpgtools.tenderapp.com/ прикрепя информацию, что xpc-сервис не работает как надо. ";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Расшифровка вложения не удалась.\n\nПожалуйста переустановите GPG Suite с сайта https://gpgtools.org.\n\nЕсли эта проблема останется, свяжитесь с нами через сайт https://github.com/Free-GPGMail/Free-GPGMail/issues прикрепя информацию, что xpc-сервис не работает как надо. ";
 
 "MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite не работает, как ожидалось";
-"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Проверка сообщения не удалась.\n\nПожалуйста переустановите GPG Suite с сайта https://gpgtools.org.\n\nЕсли эта проблема останется, свяжитесь с нами через сайт https://gpgtools.tenderapp.com/ прикрепя информацию, что xpc-сервис не работает как надо. ";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Проверка сообщения не удалась.\n\nПожалуйста переустановите GPG Suite с сайта https://gpgtools.org.\n\nЕсли эта проблема останется, свяжитесь с нами через сайт https://github.com/Free-GPGMail/Free-GPGMail/issues прикрепя информацию, что xpc-сервис не работает как надо. ";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite не работает, как ожидалось";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Проверка вложения не удалась.\n\nПожалуйста переустановите GPG Suite с сайта https://gpgtools.org.\n\nЕсли эта проблема останется, свяжитесь с нами через сайт https://gpgtools.tenderapp.com/ прикрепя информацию, что xpc-сервис не работает как надо. ";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Проверка вложения не удалась.\n\nПожалуйста переустановите GPG Suite с сайта https://gpgtools.org.\n\nЕсли эта проблема останется, свяжитесь с нами через сайт https://github.com/Free-GPGMail/Free-GPGMail/issues прикрепя информацию, что xpc-сервис не работает как надо. ";
 
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_TITLE" = "Подписка вашего сообщения не удалась из-за возникшей во время запроса пароля проблемы ";
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "Pinentry, инструмент ответственный за запрос вашего пароля, кажется, работает не в штатном режиме.\n\nЧтобы исправить эту проблему, переустановите GPG Suite с сайта https://gpgtools.org.";
 
 "MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Невозможно подписать сообщение из-за проблем с установкой Free-GPGMail.";
-"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Чтобы исправить эту неполадку, переустановите GPG Suite с сайта https://gpgtools.org.\n\nЕсли эта проблема останется, свяжитесь с нами через сайт https://gpgtools.tenderapp.com/ прикрепя информацию, что xpc-сервис не работает как надо.";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Чтобы исправить эту неполадку, переустановите GPG Suite с сайта https://gpgtools.org.\n\nЕсли эта проблема останется, свяжитесь с нами через сайт https://github.com/Free-GPGMail/Free-GPGMail/issues прикрепя информацию, что xpc-сервис не работает как надо.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Расшифровка прикреплённого файла не удалась из-за повреждённого кода";
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "Pinentry, инструмент ответственный за запрос вашего пароля, кажется, сломан.\n\nЧтобы исправить эту проблему, переустановите GPG Suite с сайта https://gpgtools.org.";

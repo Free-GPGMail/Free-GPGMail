@@ -18,13 +18,13 @@
 "MESSAGE_BANNER_PGP_DECRYPT_SECKEY_ERROR_MESSAGE" = "None of the following secret keys could be found in your keychain (%@). The secret key is needed to decrypt this message. \n\nPlease check with the sender that they used your correct public key.\nCheck any backup of your keychain, and try to import the secret key from there.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_TITLE" = "Giải mã thất bại và hệ thống chưa nhận định được lỗi này là gì!";
-"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Lỗi xảy ra khi giải mã tin nhắn này và hệ thống hiện chưa rõ về lỗi này.\n\nHãy liên hệ chúng tôi để được hỗ trợ tại https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Lỗi xảy ra khi giải mã tin nhắn này và hệ thống hiện chưa rõ về lỗi này.\n\nHãy liên hệ chúng tôi để được hỗ trợ tại https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_TITLE" = "Việc giải mã thất bại với lỗi mà hiện hệ thống chưa rõ!";
-"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "Đã xảy ra lỗi trong quá trình giải mã tin nhắn này.\n\nLỗi GPG:\n%@\nXin liên hệ chúng tôi, kèm theo nội dung của lỗi thông báo về GPG tại https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "Đã xảy ra lỗi trong quá trình giải mã tin nhắn này.\n\nLỗi GPG:\n%@\nXin liên hệ chúng tôi, kèm theo nội dung của lỗi thông báo về GPG tại https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "Sai mã khóa để mã hóa tin nhắn này.";
-"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Tin nhắn này không thể giải mã được, vì mã khóa công cộng được dùng để mã hóa tin nhắn này.\n\nvui lòng liên hệ chúng tôi để nhận được hỗ trợ tại https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Tin nhắn này không thể giải mã được, vì mã khóa công cộng được dùng để mã hóa tin nhắn này.\n\nvui lòng liên hệ chúng tôi để nhận được hỗ trợ tại https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "Tin nhắn mã hóa bị lỗi.";
 "MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "Tin nhắn mã hóa này đã bị lỗi hoặc không thể được giải mã.\n\nVui lòng liên hệ người gửi tin nhắn này để gửi lại tin nhắn.";
@@ -35,13 +35,13 @@
 "MESSAGE_BANNER_PGP_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "Tin nhắn không thể được xác nhận, vì khóa được dùng gắn cho tin nhắn này không tồn tại trong GPG Keychain của bạn.\n\nHãy tìm khóa với chỉ số %@ trong GPG Keychain và nhập vào khóa này để xác nhận tin nhắn.";
 
 "MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_TITLE" = "Chữ ký tin nhắn đã được tạo với dạng thuật toán hiện chưa được hỗ trợ.";
-"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Tin nhắn này không thể được xác nhận, vì chữ ký được tạo chứa thuật toán mà hiện không được hỗ trợ.\n\nXin vui lòng liên lạc nhà phát triển tại https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Tin nhắn này không thể được xác nhận, vì chữ ký được tạo chứa thuật toán mà hiện không được hỗ trợ.\n\nXin vui lòng liên lạc nhà phát triển tại https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "CHÚ Ý: Phần chữ ký của tin nhắn này không hợp lệ!";
-"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "CHÚ Ý: Tin nhắn này có thể đã được chỉnh sửa sau khi chữ ký được tạo\n\nXin vui lòng liên hệ người gửi để chắc chắn rằng nội dung của tin nhắn trùng khớp với nguyên văn.\n\nXin vui lòng liên hệ chúng tôi tại https://gpgtools.tenderapp.com nếu bạn nghĩ rằng tin nhắn này đã chắc chắn chưa được chỉnh sửa.";
+"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "CHÚ Ý: Tin nhắn này có thể đã được chỉnh sửa sau khi chữ ký được tạo\n\nXin vui lòng liên hệ người gửi để chắc chắn rằng nội dung của tin nhắn trùng khớp với nguyên văn.\n\nXin vui lòng liên hệ chúng tôi tại https://github.com/Free-GPGMail/Free-GPGMail/issues nếu bạn nghĩ rằng tin nhắn này đã chắc chắn chưa được chỉnh sửa.";
 
 "MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_TITLE" = "Xác nhận chữ ký tin nhắn thất bại với lỗi chưa rõ!";
-"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_MESSAGE" = "Một lỗi chưa rõ đã xảy ra khi xác nhận chữ ký tin nhắn.\n\nXin vui lòng liên hệ chúng tôi tại https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_MESSAGE" = "Một lỗi chưa rõ đã xảy ra khi xác nhận chữ ký tin nhắn.\n\nXin vui lòng liên hệ chúng tôi tại https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "Lỗi dữ liệu với chữ ký tin nhắn";
 "MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Chữ ký của tin nhắn này không hợp lệ do đó không thể được chứng nhận.\n\nXin vui lòng liên hệ chúng tôi tại ";
@@ -78,13 +78,13 @@
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SECKEY_ERROR_MESSAGE" = "None of the following secret keys could be found in your keychain (%@). The secret key is needed to decrypt this attachment. \n\nPlease check with the sender that they used your correct public key.\nCheck any backup of your keychain, and try to import the secret key from there.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_TITLE" = "Việc giải mã thất bại với lỗi chưa được biết đến!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Lỗi xảy ra khi giải mã phần tập tin được đính kèm này và hệ thống hiện chưa rõ về lỗi này.\n\nHãy liên hệ chúng tôi để được hỗ trợ tại https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Lỗi xảy ra khi giải mã phần tập tin được đính kèm này và hệ thống hiện chưa rõ về lỗi này.\n\nHãy liên hệ chúng tôi để được hỗ trợ tại https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_TITLE" = "Giải mã thất bại và hệ thống chưa nhận định được lỗi này là gì!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_MESSAGE" = "Đã xảy ra lỗi trong quá trình giải mã phần đính kèm này.\n\nLỗi GPG:\n%@\nXin liên hệ chúng tôi, kèm theo nội dung của lỗi thông báo về GPG tại https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_MESSAGE" = "Đã xảy ra lỗi trong quá trình giải mã phần đính kèm này.\n\nLỗi GPG:\n%@\nXin liên hệ chúng tôi, kèm theo nội dung của lỗi thông báo về GPG tại https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "Khóa dữ liệu được dùng để mã hóa phần đính kèm này đã bị lỗi.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Phần đính kèm này không thể được giải mã, vì sai khóa dữ liệu công cộng được dùng để mã hóa.\n\nXin vui lòng liên hệ chúng tôi để nhận hỗ trợ https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Phần đính kèm này không thể được giải mã, vì sai khóa dữ liệu công cộng được dùng để mã hóa.\n\nXin vui lòng liên hệ chúng tôi để nhận hỗ trợ https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "Phần mã hóa đính kèm bị lỗi.";
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "Phần mã hóa đính kèm đã bị hư hại và không thể được giải mã.\n\nHãy yêu cầu người gửi đến bạn tin nhắn này gửi lại một lần nữa.";
@@ -96,13 +96,13 @@
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "Phần chữ ký đính kèm không thể được xác nhận, vì khóa này đã được dùng để ký không nằm trong GPG Keychain của bạn.\n\nTìm kiếm chỉ số khóa %@ trong GPG Keychain và nhập dữ liệu từ khóa này để xác nhận phần đính kèm này.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_TITLE" = "Chữ ký của phần đính kèm đã đợc tạo với một thuật toán vẫn chưa được chương trình hỗ trợ.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Không thể xác nhận phần đính kèm này, vì khóa được dùng để ký đã được tạo bằng một thuật toán hiện không được chương trình hỗ trợ.\n\nVui lòng liên hệ chúng tôi để nhận hỗ trợ từ https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Không thể xác nhận phần đính kèm này, vì khóa được dùng để ký đã được tạo bằng một thuật toán hiện không được chương trình hỗ trợ.\n\nVui lòng liên hệ chúng tôi để nhận hỗ trợ từ https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "CHÚ Ý: Phần chữ ký đính kèm này không hợp lệ!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "CHÚ Ý: Phần đính kèm này có thể đã được chỉnh sửa sau khi chữ ký được tạo.\n\nXin vui lòng liên hệ người gửi để chắc chắn rằng nội dung của tập tin được đính kèm là trùng khớp với phiên bản gốc.\n\nXin vui lòng liên hệ chúng tôi tại https://gpgtools.tenderapp.com, nếu như bạn nghĩ rằng phần đính kèm này không được chỉnh sửa.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "CHÚ Ý: Phần đính kèm này có thể đã được chỉnh sửa sau khi chữ ký được tạo.\n\nXin vui lòng liên hệ người gửi để chắc chắn rằng nội dung của tập tin được đính kèm là trùng khớp với phiên bản gốc.\n\nXin vui lòng liên hệ chúng tôi tại https://github.com/Free-GPGMail/Free-GPGMail/issues, nếu như bạn nghĩ rằng phần đính kèm này không được chỉnh sửa.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_TITLE" = "Xác nhận chữ ký thất bại với lỗi chưa rõ!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_MESSAGE" = "Một lỗi chưa rõ đã xảy ra khi xác nhận chữ ký phần tập tin đính kèm.\n\nXin vui lòng liên hệ chúng tôi tại https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_MESSAGE" = "Một lỗi chưa rõ đã xảy ra khi xác nhận chữ ký phần tập tin đính kèm.\n\nXin vui lòng liên hệ chúng tôi tại https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "Dữ liệu về chữ ký bị lỗi!";
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Phần chữ ký đính kèm không hợp lệ và không thể được xác nhận.\n\nVui lòng liên hệ chúng tôi để nhận hỗ trợ tại ";
@@ -172,7 +172,7 @@ CODE_SIGN_ERROR_MESSAGE = "To keep you safe, Free-GPGMail will not be loaded!\n\
 
 /* GPGMailGPGMailBundle.defaults can't be loaded */
 NO_DEFAULTS_TITLE = "Unable to load Free-GPGMail defaults!";
-NO_DEFAULTS_MESSAGE = "Free-GPGMail is not working as expected.\n\nPlease download and re-install GPG Suite from https://gpgtools.org\n\nShould this problem persist, please contact us at https://gpgtools.tenderapp.com/.";
+NO_DEFAULTS_MESSAGE = "Free-GPGMail is not working as expected.\n\nPlease download and re-install GPG Suite from https://gpgtools.org\n\nShould this problem persist, please contact us at https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 /* Errors while trying to sign a message. */
 "MESSAGE_SIGNING_ERROR_NO_PINENTRY_TITLE" = "Signing your message failed due to a broken pinentry!";
@@ -193,7 +193,7 @@ NO_DEFAULTS_MESSAGE = "Free-GPGMail is not working as expected.\n\nPlease downlo
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_TITLE" = "You entered the wrong password too many times.";
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_DESCRIPTION" = "Signing your message was aborted because you entered the wrong password 3 times.";
 
-"CONTACT_GPGTOOLS_WITH_INFO_MESSAGE" = "\n\nXin vui lòng liên hệ chúng tôi tại https://gpgtools.tenderapp.com kèm theo mô tả về lỗi bạn gặp phải để nhận trợ giúp:\n\n%@";
+"CONTACT_GPGTOOLS_WITH_INFO_MESSAGE" = "\n\nXin vui lòng liên hệ chúng tôi tại https://github.com/Free-GPGMail/Free-GPGMail/issues kèm theo mô tả về lỗi bạn gặp phải để nhận trợ giúp:\n\n%@";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_TITLE" = "You aborted the decryption of the message";
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "The message couldn't be decrypted because you cancelled the password request.";
@@ -202,22 +202,22 @@ NO_DEFAULTS_MESSAGE = "Free-GPGMail is not working as expected.\n\nPlease downlo
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "The attachment couldn't be decrypted because you cancelled the password request.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite is not working as expected";
-"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Decrypting the message failed.\n\nPlease re-install GPG Suite from https://gpgtools.org.\n\nShould this problem persist, contact us at https://gpgtools.tenderapp.com/ and include the information that the xpc service is not working properly.";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Decrypting the message failed.\n\nPlease re-install GPG Suite from https://gpgtools.org.\n\nShould this problem persist, contact us at https://github.com/Free-GPGMail/Free-GPGMail/issues and include the information that the xpc service is not working properly.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite is not working as expected";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Decrypting the attachment failed.\n\nPlease re-install GPG Suite from https://gpgtools.org.\n\nShould this problem persist, contact us at https://gpgtools.tenderapp.com/ and include the information that the xpc service is not working properly.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Decrypting the attachment failed.\n\nPlease re-install GPG Suite from https://gpgtools.org.\n\nShould this problem persist, contact us at https://github.com/Free-GPGMail/Free-GPGMail/issues and include the information that the xpc service is not working properly.";
 
 "MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite is not working as expected";
-"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Verifying the message failed.\n\nPlease re-install GPG Suite from https://gpgtools.org.\n\nShould this problem persist, contact us at https://gpgtools.tenderapp.com/ and include the information that the xpc service is not working properly.";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Verifying the message failed.\n\nPlease re-install GPG Suite from https://gpgtools.org.\n\nShould this problem persist, contact us at https://github.com/Free-GPGMail/Free-GPGMail/issues and include the information that the xpc service is not working properly.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite is not working as expected";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Verifying the attachment failed.\n\nPlease re-install GPG Suite from https://gpgtools.org.\n\nShould this problem persist, contact us at https://gpgtools.tenderapp.com/ and include the information that the xpc service is not working properly.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Verifying the attachment failed.\n\nPlease re-install GPG Suite from https://gpgtools.org.\n\nShould this problem persist, contact us at https://github.com/Free-GPGMail/Free-GPGMail/issues and include the information that the xpc service is not working properly.";
 
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_TITLE" = "Signing your message failed due to a problem during the password request";
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "pinentry, the tool responsible for asking for your password, is not working properly.\n\nTo fix this problem, please re-install GPG Suite from https://gpgtools.org.";
 
 "MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Signing your message failed due to a problem in your Free-GPGMail installation.";
-"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "To fix this problem, please re-install GPG Suite from https://gpgtools.org.\n\nShould this problem persist, contact us at https://gpgtools.tenderapp.com/ and include the information that the xpc service is not working properly.";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "To fix this problem, please re-install GPG Suite from https://gpgtools.org.\n\nShould this problem persist, contact us at https://github.com/Free-GPGMail/Free-GPGMail/issues and include the information that the xpc service is not working properly.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Decrypting the message failed due to a broken pinentry";
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "pinentry, the tool responsible for asking for your password, seems to be broken.\n\nTo fix this problem, re-install GPG Suite from https://gpgtools.org.";

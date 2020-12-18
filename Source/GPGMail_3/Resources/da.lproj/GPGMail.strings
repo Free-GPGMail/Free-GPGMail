@@ -18,13 +18,13 @@
 "MESSAGE_BANNER_PGP_DECRYPT_SECKEY_ERROR_MESSAGE" = "Ingen af de følgende hemmelige nøgler findes i din nøglering (%@). Den hemmelige nøgle er nødvendig for at dekryptere denne besked.\n\nTjek med afsenderen, at de har brugt din rigtige offentlige nøgle.\nTjek en backup af din nøglering, og prøv at importere den hemmelige nøgle derfra.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_TITLE" = "Dekryptering mislykkedes på grund af en ukendt fejl!";
-"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "En ukendt fejl opstod, da beskeden blev forsøgt dekrypteret.\n\nKontakt os venligst på https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "En ukendt fejl opstod, da beskeden blev forsøgt dekrypteret.\n\nKontakt os venligst på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_TITLE" = "Dekryptering mislykkedes på grund af en ukendt fejl!";
-"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "En ukendt fejl opstod, da beskeden blev forsøgt dekrypteret.\n\nGPG fejlmeddelelse:\n%@\nKontakt os venligst angående denne fejl på https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "En ukendt fejl opstod, da beskeden blev forsøgt dekrypteret.\n\nGPG fejlmeddelelse:\n%@\nKontakt os venligst angående denne fejl på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "Forkert nøgle brugt til at kryptere denne besked.";
-"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Denne besked kunne ikke dekrypteres, da den forkerte offentlige nøgle blev brugt til at kryptere den.\n\nKontakt os venligst på https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Denne besked kunne ikke dekrypteres, da den forkerte offentlige nøgle blev brugt til at kryptere den.\n\nKontakt os venligst på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "Den krypterede besked er beskadiget.";
 "MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "Denne krypterede besked er beskadiget og kan ikke dekrypteres.\n\nBed afsenderen om at sende beskeden igen.";
@@ -35,16 +35,16 @@
 "MESSAGE_BANNER_PGP_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "Beskeden kunne ikke bekræftes, da nøglen brugt til at signere beskeden ikke er i din GPG Keychain.\n\nSøg efter nøglen med ID %@ i GPG Keychain og importer den for at bekræfte meddelelsen.";
 
 "MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_TITLE" = "Beskedens signatur blev lavet med en algoritme, der ikke er understøttet.";
-"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Denne besked kune ikke bekræftes, da signaturen blev lavet med en algoritme, der ikke er understøttet.\n\nKontakt os venligst på https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Denne besked kune ikke bekræftes, da signaturen blev lavet med en algoritme, der ikke er understøttet.\n\nKontakt os venligst på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "VIGTIGT: Signaturen på denne besked er ugyldig!";
-"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "Denne besked kan være blevet ændret efter signaturen blev lavet.\n\nKontakt afsenderen for at bekræfte, at beskedens indhold passer med originalen.\n\nKontakt os på\nhttps://gpgtools.tenderapp.com/\nhvis du er sikker på, at beskeden ikke er blevet ændret.";
+"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "Denne besked kan være blevet ændret efter signaturen blev lavet.\n\nKontakt afsenderen for at bekræfte, at beskedens indhold passer med originalen.\n\nKontakt os på\nhttps://github.com/Free-GPGMail/Free-GPGMail/issues/\nhvis du er sikker på, at beskeden ikke er blevet ændret.";
 
 "MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_TITLE" = "Bekræftelse af beskeden mislykkedes på grund af en ukendt fejl!";
-"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_MESSAGE" = "En ukendt fejl opstod da beskedens signatur blev forsøgt bekræftet.\n\nKontakt os på https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_MESSAGE" = "En ukendt fejl opstod da beskedens signatur blev forsøgt bekræftet.\n\nKontakt os på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "Datafejl i beskedens signatur!";
-"MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Beskedens signatur er ugyldig og kunne ikke bekræftes.\n\nKontakt os på https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Beskedens signatur er ugyldig og kunne ikke bekræftes.\n\nKontakt os på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_KEY_EXPIRED_ERROR_TITLE" = "Nøglen til beskedens signatur er udløbet.";
 "MESSAGE_BANNER_PGP_VERIFY_KEY_EXPIRED_ERROR_MESSAGE" = "VIGTIGT: Nøglen, der blev brugt til at signere denne besked, er udløbet.\n\nDu kan prøve at forny nøglen med ID %@ i GPG Keychain og spørge afsenderen, hvorfor nøglen er udløbet. ";
@@ -78,13 +78,13 @@
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SECKEY_ERROR_MESSAGE" = "Ingen af de følgende hemmelige nøgler findes i din nøglering (%@). Den hemmelige nøgle er nødvendig for at dekryptere denne vedhæftede fil.\n\nTjek med afsenderen, at de har brugt din rigtige offentlige nøgle.\nTjek en backup af din nøglering, og prøv at importere den hemmelige nøgle derfra.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_TITLE" = "Dekryptering mislykkedes på grund af en ukendt fejl!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_MESSAGE" = "En ukendt fejl opstod, da den vedhæftede fil blev forsøgt dekrypteret.\n\nKontakt os på https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_MESSAGE" = "En ukendt fejl opstod, da den vedhæftede fil blev forsøgt dekrypteret.\n\nKontakt os på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_TITLE" = "Dekryptering mislykkedes på grund af en ukendt fejl!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_MESSAGE" = "En ukendt fejl opstod da den vedhæftede fil blev forsøgt dekrypteret.\n\nGPG fejlbesked:\n%@\nKontakt os venligst angående denne fejl på https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_MESSAGE" = "En ukendt fejl opstod da den vedhæftede fil blev forsøgt dekrypteret.\n\nGPG fejlbesked:\n%@\nKontakt os venligst angående denne fejl på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "Den forkerte nøgle blev brugt til at kryptere denne vedhæftede fil.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Denne vedhæftede fil kunne ikke dekrypteres, da den forkerte offentlige nøgle blev brugt til at kryptere den.\n\nKontakt os på https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Denne vedhæftede fil kunne ikke dekrypteres, da den forkerte offentlige nøgle blev brugt til at kryptere den.\n\nKontakt os på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "Den krypterede vedhæftede fil er beskadiget.";
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "Den krypterede vedhæftede fil er beskadiget og kan ikke dekrypteres.\n\nBed afsenderen sende beskeden igen.";
@@ -96,16 +96,16 @@
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "Signaturen på den vedhæftede fil kunne ikke bekræftes, da den nøgle, som blev brugt til signering, ikke er i din GPG nøglering.\n\nSøg efter nøglen med ID %@ i GPG Keychain og importer den for at bekræfte den vedhæftede fil.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_TITLE" = "Signaturen til den vedhæftede fil blev lavet med en algoritme, der ikke understøttes.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Den vedhæftede fil kunne ikke bekræftes, da signaturens nøgle er blevet lavet med en algoritme, der ikke er understøttet.\n\nKontakt os på https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Den vedhæftede fil kunne ikke bekræftes, da signaturens nøgle er blevet lavet med en algoritme, der ikke er understøttet.\n\nKontakt os på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "VIGTIGT: Signaturen til den vedhæftede fil er ugyldig!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "Denne vedhæftede fil er blevet ændret efter signaturen blev lavet.\n\nKontakt afsenderen og tjek, at filens indhold svarer til originalen.\n\nKontakt os på\nhttps://gpgtools.tenderapp.com/\nhvis du er sikker på, at den vedhæftede fil ikke er blevet ændret.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "Denne vedhæftede fil er blevet ændret efter signaturen blev lavet.\n\nKontakt afsenderen og tjek, at filens indhold svarer til originalen.\n\nKontakt os på\nhttps://github.com/Free-GPGMail/Free-GPGMail/issues/\nhvis du er sikker på, at den vedhæftede fil ikke er blevet ændret.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_TITLE" = "Bekræftelse af beskeden mislykkedes på grund af en ukendt fejl!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_MESSAGE" = "Der opstod en ukendt fejl ved bekræftelse af signaturen for denne vedhæftede fil.\n\nKontakt os på https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_MESSAGE" = "Der opstod en ukendt fejl ved bekræftelse af signaturen for denne vedhæftede fil.\n\nKontakt os på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "Datafejl i signaturen!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Signaturen for denne vedhæftede fil er ugyldig, og kunne ikke bekræftes.\n\nKontakt os på https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Signaturen for denne vedhæftede fil er ugyldig, og kunne ikke bekræftes.\n\nKontakt os på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_KEY_EXPIRED_ERROR_TITLE" = "Signaturens nøgle er udløbet.";
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_KEY_EXPIRED_ERROR_MESSAGE" = "VIGTIGT: Den nøgle, der blev brugt til at signere denne vedhæftede fil, er udløbet.\n\nDu kan prøve at forny nøglen med ID %@ i GPG Keychain og at spørge afsenderen, hvorfor nøglen er udløbet.";
@@ -172,7 +172,7 @@ CODE_SIGN_ERROR_MESSAGE = "For at beskytte dig vil Free-GPGMail ikke blive indl�
 
 /* GPGMailGPGMailBundle.defaults can't be loaded */
 NO_DEFAULTS_TITLE = "Kunne ikke indlæse Free-GPGMail standardindstillinger!";
-NO_DEFAULTS_MESSAGE = "Free-GPGMail virker ikke som forventet.\n\nHent og gen-installer GPG Suiten fra https://gpgtools.org\n\nHvis problemet fortsætter, så kontakt os på https://gpgtools.tenderapp.com/.";
+NO_DEFAULTS_MESSAGE = "Free-GPGMail virker ikke som forventet.\n\nHent og gen-installer GPG Suiten fra https://gpgtools.org\n\nHvis problemet fortsætter, så kontakt os på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 /* Errors while trying to sign a message. */
 "MESSAGE_SIGNING_ERROR_NO_PINENTRY_TITLE" = "Underskrivning af din besked fejlede, fordi pinentry er i stykker!";
@@ -193,7 +193,7 @@ NO_DEFAULTS_MESSAGE = "Free-GPGMail virker ikke som forventet.\n\nHent og gen-in
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_TITLE" = "Du har skrevet den forkerte adgangskode for mange gange.";
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_DESCRIPTION" = "Underskrivning af din besked blev afbrudt, fordi du har skrevet den forkerte adgangskode 3 gange.";
 
-"CONTACT_GPGTOOLS_WITH_INFO_MESSAGE" = "\n\nHvis problemet fortsætter, kontakt os på https://gpgtools.tenderapp.com/ og angiv følgende fejlbeskrivelse:\n\n%@";
+"CONTACT_GPGTOOLS_WITH_INFO_MESSAGE" = "\n\nHvis problemet fortsætter, kontakt os på https://github.com/Free-GPGMail/Free-GPGMail/issues og angiv følgende fejlbeskrivelse:\n\n%@";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_TITLE" = "Du afbrød dekrypteringen af beskeden.";
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "Beskeden kunne ikke dekrypteres, fordi du afbrød anmodningen om adgangskode.";
@@ -202,22 +202,22 @@ NO_DEFAULTS_MESSAGE = "Free-GPGMail virker ikke som forventet.\n\nHent og gen-in
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "Den vedhæftede fil kunne ikke dekrypteres, fordi du afbrød anmodningen om adgangskode.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suiten virker ikke som forventet";
-"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Dekryptering af beskeden mislykkedes.\n\nGeninstaller GPG Suiten fra https://gpgtools.org.\n\nHvis problemet fortsætter, så kontakt os på https://gpgtools.tenderapp.com/, og skriv at xpc servicen ikke fungerer rigtigt.";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Dekryptering af beskeden mislykkedes.\n\nGeninstaller GPG Suiten fra https://gpgtools.org.\n\nHvis problemet fortsætter, så kontakt os på https://github.com/Free-GPGMail/Free-GPGMail/issues/, og skriv at xpc servicen ikke fungerer rigtigt.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suiten virker ikke som forventet";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Dekryptering af den vedhæftede fil mislykkedes.\n\nGeninstaller GPG Suiten fra https://gpgtools.org.\n\nHvis problemet fortsætter, så kontakt os på https://gpgtools.tenderapp.com/, og skriv at xpc servicen ikke fungerer rigtigt.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Dekryptering af den vedhæftede fil mislykkedes.\n\nGeninstaller GPG Suiten fra https://gpgtools.org.\n\nHvis problemet fortsætter, så kontakt os på https://github.com/Free-GPGMail/Free-GPGMail/issues/, og skriv at xpc servicen ikke fungerer rigtigt.";
 
 "MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suiten virker ikke som forventet";
-"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Verifikation af beskeden mislykkedes.\n\nGeninstaller GPG Suiten fra https://gpgtools.org.\n\nHvis problemet fortsætter, så kontakt os på https://gpgtools.tenderapp.com/, og skriv at xpc servicen ikke fungerer rigtigt.";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Verifikation af beskeden mislykkedes.\n\nGeninstaller GPG Suiten fra https://gpgtools.org.\n\nHvis problemet fortsætter, så kontakt os på https://github.com/Free-GPGMail/Free-GPGMail/issues/, og skriv at xpc servicen ikke fungerer rigtigt.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suiten virker ikke som forventet";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Verifikation af den vedhæftede fil mislykkedes.\n\nGeninstaller GPG Suiten fra https://gpgtools.org.\n\nHvis problemet fortsætter, så kontakt os på https://gpgtools.tenderapp.com/, og skriv at xpc servicen ikke fungerer rigtigt.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Verifikation af den vedhæftede fil mislykkedes.\n\nGeninstaller GPG Suiten fra https://gpgtools.org.\n\nHvis problemet fortsætter, så kontakt os på https://github.com/Free-GPGMail/Free-GPGMail/issues/, og skriv at xpc servicen ikke fungerer rigtigt.";
 
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_TITLE" = "Signering af din besked mislykkedes på grund af et problem ved anmodning om adgangskode";
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "pinentry, værktøjet til at spørge efter din adgangskode, virker ikke ordentligt.\n\nFor at løse dette problem skal du geninstallere GPG Suiten fra https://gpgtools.org.";
 
 "MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "SIgnering af din besked mislykkedes på grund af et problem med din Free-GPGMail installation.";
-"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "For at løse problemet skal du geninstallere GPG Suiten fra https://gpgtools.org.\n\nHvis problemet fortsætter, så kontakt os på https://gpgtools.tenderapp.com/, og skriv at xpc servicen ikke fungerer rigtigt.";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "For at løse problemet skal du geninstallere GPG Suiten fra https://gpgtools.org.\n\nHvis problemet fortsætter, så kontakt os på https://github.com/Free-GPGMail/Free-GPGMail/issues/, og skriv at xpc servicen ikke fungerer rigtigt.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Dekryptering af beskeden fejlede, fordi pinentry er i stykker";
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "pinentry, værktøjet til at spørge efter din adgangskode, lader til at være i stykker.\n\nFor at løse dette problem skal du geninstallere GPG Suiten fra https://gpgtools.org.";

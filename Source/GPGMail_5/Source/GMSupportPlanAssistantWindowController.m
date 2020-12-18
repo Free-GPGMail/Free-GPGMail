@@ -381,7 +381,7 @@ typedef enum {
     if(state == GMSupportPlanViewControllerStateBuy) {
         NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
                                     [NSColor linkColor], NSForegroundColorAttributeName,
-                                    [NSURL URLWithString:@"https://gpgtools.org/buy-support-plan"], NSLinkAttributeName,
+                                    [NSURL URLWithString:@"https://github.com/Free-GPGMail/Free-GPGMail"], NSLinkAttributeName,
                                     nil];
 
         self.grayInfoTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_LOCATE_ACTIVATION_CODE"];
@@ -745,7 +745,7 @@ typedef enum {
         }];
     }
     else if([(NSButton *)sender tag] == GMSupportPlanAssistantBuyActivateButtonStateBuy) {
-        [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://gpgtools.org/buy-support-plan"]];
+        [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/Free-GPGMail/Free-GPGMail"]];
     }
     else {
         NSString *email = [self whitespaceStripped:[self.email copy]];

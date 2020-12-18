@@ -18,13 +18,13 @@
 "MESSAGE_BANNER_PGP_DECRYPT_SECKEY_ERROR_MESSAGE" = "No s'ha pogut trobar cap d'aquestes claus secretes al vostre clauer (%@). Cal la clau secreta per a desxifrar aquest missatge.\n\nComproveu si el remitent ha utilitzat la clau pública correcta.\nComproveu qualsevol còpia de seguretat de la vostra clau, i proveu d'importar-la.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_TITLE" = "S'ha produït un error desconegut a l'hora de desxifrar!";
-"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Ha ocorregut un error desconegut al desxifrar el missatge.\n\nContacteu amb nosaltres a https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Ha ocorregut un error desconegut al desxifrar el missatge.\n\nContacteu amb nosaltres a https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_TITLE" = "Mentre es desxifrava s'ha produït un error desconegut!";
-"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "Ha ocorregut un error desconegut al desxifrar el missatge.\n\nMissatge d'error GPG:\n%@\n\nContacteu amb nosaltres i inclogueu el missatge d'error GPG a https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "Ha ocorregut un error desconegut al desxifrar el missatge.\n\nMissatge d'error GPG:\n%@\n\nContacteu amb nosaltres i inclogueu el missatge d'error GPG a https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "No heu utilitzat la clau correcta per xifrar el missatge.";
-"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "El missatge no s'ha desxifrat, perquè s'ha utilitzat una clau pública errònia per xifrar-lo.\n\nContacteu amb nosaltres a https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "El missatge no s'ha desxifrat, perquè s'ha utilitzat una clau pública errònia per xifrar-lo.\n\nContacteu amb nosaltres a https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "El missatge xifrat està danyat.";
 "MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "El missatge xifrat està danyat i no es pot desxifrar.\n\nDemaneu al remitent que us reenvie el missatge.";
@@ -35,16 +35,16 @@
 "MESSAGE_BANNER_PGP_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "El missatge no s'ha verificat, perquè la clau que s'ha utilitzat per signar-lo no és al GPG Keychain.\n\nCerqueu la clau amb identitat %@ a GPG Keychain i importeu-la per a verificar el missatge.";
 
 "MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_TITLE" = "La signatura del missatge s'ha fet amb un algoritme no compatible.";
-"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_MESSAGE" = "El missatge no s'ha verificat, perquè la signatura s'ha creat amb un algoritme no compatible.\n\nContacteu amb nosaltres a https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_MESSAGE" = "El missatge no s'ha verificat, perquè la signatura s'ha creat amb un algoritme no compatible.\n\nContacteu amb nosaltres a https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "ATENCIÓ: La signatura del missatge no és vàlida!";
-"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "El missatge podria haver sigut modificat després de crear-se la signatura.\n\nContacteu amb el remitent per assegurar-vos que el contingut del missatge coincideix amb l'original.\n\nContacteu amb nosaltres a\nhttps://gpgtools.tenderapp.com/\nsi esteu segurs que el missatge no s'ha modificat.";
+"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "El missatge podria haver sigut modificat després de crear-se la signatura.\n\nContacteu amb el remitent per assegurar-vos que el contingut del missatge coincideix amb l'original.\n\nContacteu amb nosaltres a\nhttps://github.com/Free-GPGMail/Free-GPGMail/issues/\nsi esteu segurs que el missatge no s'ha modificat.";
 
 "MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_TITLE" = "Mentre es verificava la signatura del missatge ha hagut un error desconegut!";
-"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_MESSAGE" = "Ha ocorregut un error desconegut al verificar la signatura del missatge.\n\nContacteu amb nosaltres a https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_MESSAGE" = "Ha ocorregut un error desconegut al verificar la signatura del missatge.\n\nContacteu amb nosaltres a https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "Error de dades de la signatura del missatge!";
-"MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "La signatura del missatge no és vàlida i no s'ha verificat.\n\nContacteu amb nosaltres a https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "La signatura del missatge no és vàlida i no s'ha verificat.\n\nContacteu amb nosaltres a https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_KEY_EXPIRED_ERROR_TITLE" = "La clau de signatura del missatge ha vençut.";
 "MESSAGE_BANNER_PGP_VERIFY_KEY_EXPIRED_ERROR_MESSAGE" = "La clau que s'ha utilitzat per signar el missatge ha vençut.\n\nProveu d'actualitzar la clau amb identitat %@ al GPG Keychain i pregunteu al remitent per què ha vençut la clau.";
@@ -78,13 +78,13 @@
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SECKEY_ERROR_MESSAGE" = "No s'ha trobat cap d'aquestes claus secretes al vostre clauer (%@). Cal la clau secreta per a desxifrar aquest fitxer adjunt.\n\nComproveu si el remitent ha utilitzat la clau pública correcta.\nComproveu qualsevol còpia de seguretat de la vostra clau, i proveu d'importar-la.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_TITLE" = "Mentre es desxifrava s'ha produït un error desconegut!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Ha ocorregut un error desconegut al desxifrar el fitxer adjunt.\n\nContacteu amb nosaltres a https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Ha ocorregut un error desconegut al desxifrar el fitxer adjunt.\n\nContacteu amb nosaltres a https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_TITLE" = "Mentre es desxifrava s'ha produït un error desconegut!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_MESSAGE" = "Ha ocorregut un error desconegut al desxifrar el fitxer adjunt.\n\nMissatge d'error GPG:\n%@\n\nContacteu amb nosaltres i inclogueu el missatge d'error GPG a https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_MESSAGE" = "Ha ocorregut un error desconegut al desxifrar el fitxer adjunt.\n\nMissatge d'error GPG:\n%@\n\nContacteu amb nosaltres i inclogueu el missatge d'error GPG a https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "S'ha utilitzat una clau errònia per a xifrar aquest fitxer.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "El fitxer adjunt no s'ha desxifrat, perquè s'ha utilitzat una clau pública errònia per xifrar-lo.\n\nContacteu amb nosaltres a https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "El fitxer adjunt no s'ha desxifrat, perquè s'ha utilitzat una clau pública errònia per xifrar-lo.\n\nContacteu amb nosaltres a https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "El fitxer adjunt xifrat està danyat.";
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "El fitxer adjunt xifrat està danyat i no s'ha desxifrat.\n\nDemaneu al remitent que us envie el missatge de nou.";
@@ -96,16 +96,16 @@
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "La signatura adjunta no s'ha pogut verificar, perquè la clau que s'ha usat per signar-la no és al GPG Keychain.\n\nCerqueu la clau amb la identitat %@ al GPG Keychain i importeu-la per a comprovar el fitxer adjunt.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_TITLE" = "La signatura del fitxer adjunt s'ha creat amb un algoritme no compatible.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_MESSAGE" = "El fitxer adjunt no s'ha verificat, perquè la clau de la signatura s'ha creat amb un algoritme no compatible.\n\nContacteu amb nosaltres a https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_MESSAGE" = "El fitxer adjunt no s'ha verificat, perquè la clau de la signatura s'ha creat amb un algoritme no compatible.\n\nContacteu amb nosaltres a https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "ATENCIÓ: La signatura del fitxer adjunt no és vàlida!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "El fitxer adjunt podria haver sigut modificat després de crear-se la signatura.\n\nContacteu amb el remitent i assegureu-vos que el contingut del fitxer adjunt coincideix amb l'original.\n\nContacteu amb nosaltres a\nhttps://gpgtools.tenderapp.com/\nsi esteu segur que el fitxer adjunt no s'ha modificat.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "El fitxer adjunt podria haver sigut modificat després de crear-se la signatura.\n\nContacteu amb el remitent i assegureu-vos que el contingut del fitxer adjunt coincideix amb l'original.\n\nContacteu amb nosaltres a\nhttps://github.com/Free-GPGMail/Free-GPGMail/issues/\nsi esteu segur que el fitxer adjunt no s'ha modificat.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_TITLE" = "S'ha produït un error desconegut en la verificació de la signatura!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_MESSAGE" = "Ha ocorregut un error desconegut al verificar la signatura del fitxer adjunt\n\nContacteu amb nosaltres a https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_MESSAGE" = "Ha ocorregut un error desconegut al verificar la signatura del fitxer adjunt\n\nContacteu amb nosaltres a https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "La signatura presenta dades errònies!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "La signatura d'aquest fitxer adjunt no és vàlida i no s'ha verificat.\n\nContacteu amb nosaltres a https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "La signatura d'aquest fitxer adjunt no és vàlida i no s'ha verificat.\n\nContacteu amb nosaltres a https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_KEY_EXPIRED_ERROR_TITLE" = "La clau de la signatura ha vençut.";
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_KEY_EXPIRED_ERROR_MESSAGE" = "La clau que s'ha utilitzat per signar el fitxer adjunt ha vençut.\n\nProveu d'actualitzar la clau amb identitat %@ al GPG Keychain i pregunteu al remitent per què ha vençut la clau.";
@@ -172,7 +172,7 @@ CODE_SIGN_ERROR_MESSAGE = "Per a mantenir-vos segur, el Free-GPGMail no es carre
 
 /* GPGMailGPGMailBundle.defaults can't be loaded */
 NO_DEFAULTS_TITLE = "No s'ha carregat la configuració predeterminada de Free-GPGMail!";
-NO_DEFAULTS_MESSAGE = "El Free-GPGMail no funciona com deuria.\n\nBaixeu i reinstal·leu GPG Suite des de https://gpgtools.org\n\nSi el problema continua, contacteu amb nosaltres a https://gpgtools.tenderapp.com/.";
+NO_DEFAULTS_MESSAGE = "El Free-GPGMail no funciona com deuria.\n\nBaixeu i reinstal·leu GPG Suite des de https://gpgtools.org\n\nSi el problema continua, contacteu amb nosaltres a https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 /* Errors while trying to sign a message. */
 "MESSAGE_SIGNING_ERROR_NO_PINENTRY_TITLE" = "La signatura del missatge ha fallat perquè un pinentry s'ha fet malbé!";
@@ -193,7 +193,7 @@ NO_DEFAULTS_MESSAGE = "El Free-GPGMail no funciona com deuria.\n\nBaixeu i reins
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_TITLE" = "Heu introduït incorrectament la contrasenya massa vegades.";
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_DESCRIPTION" = "La signatura del missatge s'ha avortat perquè heu introduït incorrectament la contrasenya 3 vegades.";
 
-"CONTACT_GPGTOOLS_WITH_INFO_MESSAGE" = "\n\nSi el problema persisteix, contacteu amb nosaltres a https://gpgtools.tenderapp.com amb la descripció d'error:\n\n%@";
+"CONTACT_GPGTOOLS_WITH_INFO_MESSAGE" = "\n\nSi el problema persisteix, contacteu amb nosaltres a https://github.com/Free-GPGMail/Free-GPGMail/issues amb la descripció d'error:\n\n%@";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_TITLE" = "Heu interromput el desxifrat del missatge";
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "El missatge no s'ha desxifrat perquè heu cancel·lat la sol·licitud de contrasenya.";
@@ -202,22 +202,22 @@ NO_DEFAULTS_MESSAGE = "El Free-GPGMail no funciona com deuria.\n\nBaixeu i reins
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "El fitxer adjunt no s'ha desxifrat perquè heu cancel·lat la sol·licitud de contrasenya.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "El GPG Suite no funciona com deuria";
-"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Ha fallat el procés de desxifratge del missatge.\n\nReinstal·leu el GPG Suite des de https://gpgtools.org.\n\nSi el problema persisteix, contacteu amb nosaltres a https://gpgtools.tenderapp.com/ i inclogueu la informació relacionada amb el mal funcionament del servei xpc.";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Ha fallat el procés de desxifratge del missatge.\n\nReinstal·leu el GPG Suite des de https://gpgtools.org.\n\nSi el problema persisteix, contacteu amb nosaltres a https://github.com/Free-GPGMail/Free-GPGMail/issues i inclogueu la informació relacionada amb el mal funcionament del servei xpc.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "El GPG Suite no funciona com deuria";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Ha fallat el procés de desxifratge del fitxer adjunt.\n\nReinstal·leu el GPG Suite des de https://gpgtools.org.\n\nSi el problema persisteix, contacteu amb nosaltres a https://gpgtools.tenderapp.com/ i inclogueu la informació relacionada amb el mal funcionament del servei xpc.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Ha fallat el procés de desxifratge del fitxer adjunt.\n\nReinstal·leu el GPG Suite des de https://gpgtools.org.\n\nSi el problema persisteix, contacteu amb nosaltres a https://github.com/Free-GPGMail/Free-GPGMail/issues i inclogueu la informació relacionada amb el mal funcionament del servei xpc.";
 
 "MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "El GPG Suite no funciona com deuria";
-"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "La verificació del missatge ha fallat.\n\nReinstal·leu el GPG Suite des de https://gpgtools.org.\n\nSi el problema persisteix, contacteu amb nosaltres a https://gpgtools.tenderapp.com/ i inclogueu la informació relacionada amb el mal funcionament del servei xpc.";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "La verificació del missatge ha fallat.\n\nReinstal·leu el GPG Suite des de https://gpgtools.org.\n\nSi el problema persisteix, contacteu amb nosaltres a https://github.com/Free-GPGMail/Free-GPGMail/issues i inclogueu la informació relacionada amb el mal funcionament del servei xpc.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "El GPG Suite no funciona com deuria";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "La verificació del fitxer adjunt ha fallat.\n\nReinstal·leu el GPG Suite des de https://gpgtools.org.\n\nSi el problema persisteix, contacteu amb nosaltres a https://gpgtools.tenderapp.com/ i inclogueu la informació relacionada amb el mal funcionament del servei xpc.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "La verificació del fitxer adjunt ha fallat.\n\nReinstal·leu el GPG Suite des de https://gpgtools.org.\n\nSi el problema persisteix, contacteu amb nosaltres a https://github.com/Free-GPGMail/Free-GPGMail/issues i inclogueu la informació relacionada amb el mal funcionament del servei xpc.";
 
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_TITLE" = "Ha fallat la signatura del missatge per un problema durant la sol·licitud de contrasenya";
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "El pinentry, l'eina responsable de demanar la contrasenya, sembla que s'ha fet malbé.\n\nPer a corregir el problema, reinstal·leu el GPG Suite des de https://gpgtools.org.";
 
 "MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "La signatura del missatges ha fallat perquè hi ha un problema en la instal·lació del Free-GPGMail.";
-"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Per a corregir el problema, reinstal·leu el GPG Suite des de https://gpgtools.org.\n\nSi el problema persisteix, contacteu amb nosaltres a https://gpgtools.tenderapp.com/ i inclogueu la informació relacionada amb el mal funcionament del servei xpc.";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Per a corregir el problema, reinstal·leu el GPG Suite des de https://gpgtools.org.\n\nSi el problema persisteix, contacteu amb nosaltres a https://github.com/Free-GPGMail/Free-GPGMail/issues i inclogueu la informació relacionada amb el mal funcionament del servei xpc.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Ha fallat el desxifratge del missatge perquè un pinentry no funciona";
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "El pinentry, l'eina responsable de demanar la contrasenya, sembla que s'ha fet malbé.\n\nPer a corregir el problema, reinstal·leu el GPG Suite des de https://gpgtools.org.";

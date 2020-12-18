@@ -18,13 +18,13 @@
 "MESSAGE_BANNER_PGP_DECRYPT_SECKEY_ERROR_MESSAGE" = "None of the following secret keys could be found in your keychain (%@). The secret key is needed to decrypt this message. \n\nPlease check with the sender that they used your correct public key.\nCheck any backup of your keychain, and try to import the secret key from there.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_TITLE" = "Ontsleutelen mislukt om een onbekende reden!";
-"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Er is een onbekende fout opgetreden tijdens het ontsleutelen van dit bericht.\n\nNeem contact met ons op via https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Er is een onbekende fout opgetreden tijdens het ontsleutelen van dit bericht.\n\nNeem contact met ons op via https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_TITLE" = "Ontsleutelen mislukt om een onbekende reden!";
-"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "Er is een onbekende fout opgetreden tijdens het ontsleutelen van dit bericht.\n\nGPG foutbericht:\n%@\nNeem contact met ons op via https://gpgtools.tenderapp.com en vermeld het GPG foutbericht.";
+"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "Er is een onbekende fout opgetreden tijdens het ontsleutelen van dit bericht.\n\nGPG foutbericht:\n%@\nNeem contact met ons op via https://github.com/Free-GPGMail/Free-GPGMail/issues en vermeld het GPG foutbericht.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "Een verkeerde sleutel is gebruikt om dit bericht te versleutelen.";
-"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Dit bericht kon niet ontsleuteld worden, omdat de verkeerde publieke sleutel is gebruikt om het te versleutelen.\n\nNeem contact met ons op via https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Dit bericht kon niet ontsleuteld worden, omdat de verkeerde publieke sleutel is gebruikt om het te versleutelen.\n\nNeem contact met ons op via https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "Het versleutelde bericht is beschadigd.";
 "MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "Dit versleutelde bericht is beschadigd en kon niet worden ontsleuteld.\n\nVraag de afzender om het bericht nogmaals te versturen.";
@@ -35,16 +35,16 @@
 "MESSAGE_BANNER_PGP_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "The message could not be verified. The public key required to verify this signature is not in GPG Keychain.\n\nSearch the key server for fingerprint %@ or ask your contact for their public key. You can retry to verify the signature after adding their public key to GPG Keychain.";
 
 "MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_TITLE" = "De handtekening van het bericht is met een niet-ondersteund algoritme gemaakt.";
-"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Het bericht kon niet worden geverifiëerd, omdat de ondertekening is gemaakt met een algoritme dat niet ondersteund wordt.\n\nNeem contact met ons op via https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Het bericht kon niet worden geverifiëerd, omdat de ondertekening is gemaakt met een algoritme dat niet ondersteund wordt.\n\nNeem contact met ons op via https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "LET OP: De handtekening van dit bericht is ongeldig!";
-"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "LET OP: Het bericht is mogelijk gewijzigd nadat de ondertekening is gemaakt.\n\nNeem contact op met de afzender om er zeker van te zijn dat de inhoud overeenkomt met het origineel.\n\nNeem contact met ons op via https://gpgtools.tenderapp.com als u er zeker van bent dat het bericht niet gewijzigd is.";
+"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "LET OP: Het bericht is mogelijk gewijzigd nadat de ondertekening is gemaakt.\n\nNeem contact op met de afzender om er zeker van te zijn dat de inhoud overeenkomt met het origineel.\n\nNeem contact met ons op via https://github.com/Free-GPGMail/Free-GPGMail/issues als u er zeker van bent dat het bericht niet gewijzigd is.";
 
 "MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_TITLE" = "Verification of signature failed with unknown error.";
-"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_MESSAGE" = "Een onbekende fout is opgetreden bij de verificatie van de handtekening van deze bijlage.\n\nNeem contact met ons op via https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_MESSAGE" = "Een onbekende fout is opgetreden bij de verificatie van de handtekening van deze bijlage.\n\nNeem contact met ons op via https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "Gegevensfout in de handtekening van het bericht!";
-"MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "De ondertekening van dit bericht is ongeldig en kan niet worden geverifiëerd.\n\nNeem contact met ons op via https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "De ondertekening van dit bericht is ongeldig en kan niet worden geverifiëerd.\n\nNeem contact met ons op via https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_KEY_EXPIRED_ERROR_TITLE" = "Sleutel voor handtekening van het bericht is verlopen";
 "MESSAGE_BANNER_PGP_VERIFY_KEY_EXPIRED_ERROR_MESSAGE" = "LET OP: De sleutel die gebruikt is voor de handtekening van dit bericht, is verlopen.\n\nJe kunt proberen om de sleutel met ID %@ te verversen in GPG Keychain en de afzender te vragen waarom de sleutel is verlopen.";
@@ -78,13 +78,13 @@
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SECKEY_ERROR_MESSAGE" = "None of the following secret keys could be found in your keychain (%@). The secret key is needed to decrypt this attachment. \n\nPlease check with the sender that they used your correct public key.\nCheck any backup of your keychain, and try to import the secret key from there.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_TITLE" = "Ontsleutelen mislukt om een onbekende reden!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Er is een onbekende fout opgetreden bij het ontsleutelen van deze bijlage.\n\nNeem contact met ons op via https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Er is een onbekende fout opgetreden bij het ontsleutelen van deze bijlage.\n\nNeem contact met ons op via https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_TITLE" = "Ontsleutelen mislukt om een onbekende reden!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_MESSAGE" = "Er is een onbekende fout opgetreden tijdens het ontsleutelen van deze bijlage.\n\nGPG foutbericht:\n%@\nNeem contact met ons op via https://gpgtools.tenderapp.com en vermeld het GPG foutbericht.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_MESSAGE" = "Er is een onbekende fout opgetreden tijdens het ontsleutelen van deze bijlage.\n\nGPG foutbericht:\n%@\nNeem contact met ons op via https://github.com/Free-GPGMail/Free-GPGMail/issues en vermeld het GPG foutbericht.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "Verkeerde sleutel gebruikt om deze bijlage te versleutelen.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Deze bijlage kon niet worden ontsleuteld, omdat de verkeerde publieke sleutel is gebruikt om haar te versleutelen.\n\nNeem contact met ons op via https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Deze bijlage kon niet worden ontsleuteld, omdat de verkeerde publieke sleutel is gebruikt om haar te versleutelen.\n\nNeem contact met ons op via https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "De versleutelde bijlage is beschadigd.";
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "Deze versleutelde bijlage is beschadigd en kan niet worden ontsleuteld.\n\nVraag de afzender om het bericht nogmaals te sturen.";
@@ -96,16 +96,16 @@
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "The attachment could not be verified. The public key required to verify this signature is not in GPG Keychain.\n\nSearch the key server for fingerprint %@ or ask your contact for their public key. You can retry to verify the signature after adding their public key to GPG Keychain.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_TITLE" = "De handtekening van de bijlage is met een niet-ondersteund algoritme gemaakt.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_MESSAGE" = "De bijlage kon niet worden geverifiëerd, omdat de handtekening is gemaakt met een algoritme dat niet ondersteund wordt.\n\nNeem contact met ons op via https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_MESSAGE" = "De bijlage kon niet worden geverifiëerd, omdat de handtekening is gemaakt met een algoritme dat niet ondersteund wordt.\n\nNeem contact met ons op via https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "LET OP: De handtekening van deze bijlage is ongeldig!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "LET OP: Deze bijlage is mogelijk gewijzigd nadat de handtekening is gemaakt.\n\nNeem contact op met de afzender om er zeker van te zijn dat de inhoud overeenkomt met het origineel.\n\nNeem contact met ons op via https://gpgtools.tenderapp.com als je er zeker van bent dat de bijlage niet gewijzigd is.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "LET OP: Deze bijlage is mogelijk gewijzigd nadat de handtekening is gemaakt.\n\nNeem contact op met de afzender om er zeker van te zijn dat de inhoud overeenkomt met het origineel.\n\nNeem contact met ons op via https://github.com/Free-GPGMail/Free-GPGMail/issues als je er zeker van bent dat de bijlage niet gewijzigd is.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_TITLE" = "Verification of signature failed with unknown error.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_MESSAGE" = "Een onbekende fout is opgetreden bij de verificatie van de handtekening van deze bijlage.\n\nNeem contact met ons op via https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_MESSAGE" = "Een onbekende fout is opgetreden bij de verificatie van de handtekening van deze bijlage.\n\nNeem contact met ons op via https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "Gegevensfout in de handtekening!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "De handtekening van deze bijlage is ongeldig en kan niet worden geverifiëerd.\n\nNeem contact met ons op via https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "De handtekening van deze bijlage is ongeldig en kan niet worden geverifiëerd.\n\nNeem contact met ons op via https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_KEY_EXPIRED_ERROR_TITLE" = "Sleutel voor handtekening is verlopen";
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_KEY_EXPIRED_ERROR_MESSAGE" = "LET OP: De sleutel die gebruikt is voor de handtekening van deze bijlage, is verlopen.\n\nJe kunt proberen om de sleutel met ID %@ te verversen in GPG Keychain en de afzender te vragen waarom de sleutel is verlopen.";
@@ -172,7 +172,7 @@ CODE_SIGN_ERROR_MESSAGE = "Uit veiligheidsredenen is Free-GPGMail niet geladen!\
 
 /* GPGMailGPGMailBundle.defaults can't be loaded */
 NO_DEFAULTS_TITLE = "Niet in staat om de standaard instellingen van Free-GPGMail te laden!";
-NO_DEFAULTS_MESSAGE = "Free-GPGMail werkt niet naar behoren.\n\nDownload en her-installeer de meest recente versie van de GPG Suite van https://gpgtools.org.\n\nMocht dat het probleem niet oplossen; neem dan contact up met https://gpgtools.tenderapp.com/.";
+NO_DEFAULTS_MESSAGE = "Free-GPGMail werkt niet naar behoren.\n\nDownload en her-installeer de meest recente versie van de GPG Suite van https://gpgtools.org.\n\nMocht dat het probleem niet oplossen; neem dan contact up met https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 /* Errors while trying to sign a message. */
 "MESSAGE_SIGNING_ERROR_NO_PINENTRY_TITLE" = "Het ondertekenen van uw bericht is mislukt als gevolg van een gebroken pinentry!";
@@ -193,7 +193,7 @@ NO_DEFAULTS_MESSAGE = "Free-GPGMail werkt niet naar behoren.\n\nDownload en her-
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_TITLE" = "Je voerde het verkeerde wachtwoord te veel keer in.";
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_DESCRIPTION" = "Het ondertekenen van het bericht is afgebroken omdat je het wachtwoord 3 keer verkeerd invoerde.";
 
-"CONTACT_GPGTOOLS_WITH_INFO_MESSAGE" = "\n\nMocht dit probleem zichzelf niet oplossen: neem dan contact op met https://gpgtools.tenderapp.com/ en geef de onderstaande foutmelding door:\n\n%@";
+"CONTACT_GPGTOOLS_WITH_INFO_MESSAGE" = "\n\nMocht dit probleem zichzelf niet oplossen: neem dan contact op met https://github.com/Free-GPGMail/Free-GPGMail/issues en geef de onderstaande foutmelding door:\n\n%@";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_TITLE" = "Het ontsleutelen van het bericht is afgebroken.";
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "Dit bericht kon niet worden ontsleuteld omdat je het opvragen van het wachtwoord afbrak.";
@@ -202,22 +202,22 @@ NO_DEFAULTS_MESSAGE = "Free-GPGMail werkt niet naar behoren.\n\nDownload en her-
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "De bijlage kan niet worden gedecodeerd, omdat u het wachtwoord verzoek annuleerde.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite werkt niet zoals verwacht";
-"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Het decoderen van het bericht is mislukt.\n\nGelieve opnieuw de GPG Suite te installeren vanaf https://gpgtools.org.\n\nMocht dit probleem blijven bestaan, neem dan contact met ons op via https://gpgtools.tenderapp.com/ en geef aan dat de XPC dienst niet naar behoren werkt.";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Het decoderen van het bericht is mislukt.\n\nGelieve opnieuw de GPG Suite te installeren vanaf https://gpgtools.org.\n\nMocht dit probleem blijven bestaan, neem dan contact met ons op via https://github.com/Free-GPGMail/Free-GPGMail/issues en geef aan dat de XPC dienst niet naar behoren werkt.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite werkt niet zoals verwacht";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Het decoderen van de bijlage is mislukt.\n\nGelieve opnieuw de GPG Suite te installeren vanaf https://gpgtools.org.\n\nMocht dit probleem blijven bestaan, neem dan contact met ons op via https://gpgtools.tenderapp.com/ en geef aan dat de XPC dienst niet naar behoren werkt.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Het decoderen van de bijlage is mislukt.\n\nGelieve opnieuw de GPG Suite te installeren vanaf https://gpgtools.org.\n\nMocht dit probleem blijven bestaan, neem dan contact met ons op via https://github.com/Free-GPGMail/Free-GPGMail/issues en geef aan dat de XPC dienst niet naar behoren werkt.";
 
 "MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite werkt niet zoals verwacht";
-"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Het verifieren van het bericht is mislukt.\n\nGelieve opnieuw de GPG Suite te installeren vanaf https://gpgtools.org.\n\nMocht dit probleem blijven bestaan, neem dan contact met ons op via https://gpgtools.tenderapp.com/ en geef aan dat de XPC dienst niet naar behoren werkt.";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Het verifieren van het bericht is mislukt.\n\nGelieve opnieuw de GPG Suite te installeren vanaf https://gpgtools.org.\n\nMocht dit probleem blijven bestaan, neem dan contact met ons op via https://github.com/Free-GPGMail/Free-GPGMail/issues en geef aan dat de XPC dienst niet naar behoren werkt.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite werkt niet zoals verwacht";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Het decoderen van de bijlage is mislukt.\n\nGelieve opnieuw de GPG Suite te installeren vanaf https://gpgtools.org.\n\nMocht dit probleem blijven bestaan, neem dan contact met ons op via https://gpgtools.tenderapp.com/ en geef aan dat de XPC dienst niet naar behoren werkt.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Het decoderen van de bijlage is mislukt.\n\nGelieve opnieuw de GPG Suite te installeren vanaf https://gpgtools.org.\n\nMocht dit probleem blijven bestaan, neem dan contact met ons op via https://github.com/Free-GPGMail/Free-GPGMail/issues en geef aan dat de XPC dienst niet naar behoren werkt.";
 
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_TITLE" = "Het ondertekenen van uw bericht is mislukt als gevolg van een probleem tijdens het wachtwoord verzoek";
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "pinentry de tool die verantwoordelijk is voor het vragen om uw wachtwoord, lijkt niet te werken.\n\nOm dit probleem op te lossen dient u de GPG Suite opnieuw te installeren vanaf https://gpgtools.org.";
 
 "MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Het ondertekenen van het bericht is niet gelukt door een probleem met de Free-GPGMail installatie.";
-"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Om dit probleem op te lossen moet u de GPG Suite opnieuw installeren vanaf https://gpgtools.org.\n\nMocht dit probleem blijven bestaan, neem dan contact met ons op via https://gpgtools.tenderapp.com/ en geef aan dat de XPC dienst niet naar behoren werkt.";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Om dit probleem op te lossen moet u de GPG Suite opnieuw installeren vanaf https://gpgtools.org.\n\nMocht dit probleem blijven bestaan, neem dan contact met ons op via https://github.com/Free-GPGMail/Free-GPGMail/issues en geef aan dat de XPC dienst niet naar behoren werkt.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Het decoderen van het bericht is mislukt als gevolg van een gebroken pinentry";
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "pinentry de tool die verantwoordelijk is voor het vragen om uw wachtwoord, lijkt niet te werken.\n\nOm dit probleem op te lossen dient u de GPG Suite opnieuw te installeren vanaf https://gpgtools.org.";

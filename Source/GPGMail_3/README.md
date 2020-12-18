@@ -1,7 +1,7 @@
 GPGMail
 =======
 
-GPGMail is a plugin for OS X's Mail.app, which let's you  
+GPGMail is a plugin for OS X's Mail.app, which let's you
 send and receive secure, OpenPGP encrypted and signed messages.
 
 Important
@@ -17,7 +17,7 @@ The latest releases of GPGMail can be found on our [official website](https://gp
 
 For the latest news and updates check our [Twitter](https://twitter.com/gpgtools).
 
-Visit our [support page](https://gpgtools.tenderapp.com) if you have questions or need help setting up your system and using GPGMail.
+Visit our [support page](https://github.com/Free-GPGMail/Free-GPGMail/issues) if you have questions or need help setting up your system and using GPGMail.
 
 Localizations are done on [Transifex](https://www.transifex.com/projects/p/GPGMail/).
 

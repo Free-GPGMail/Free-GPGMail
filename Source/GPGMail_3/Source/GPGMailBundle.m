@@ -925,7 +925,7 @@ static BOOL gpgMailWorks = NO;
     supportPlanAssistantWindowController = [[GMSupportPlanAssistantWindowController alloc] initWithSupportPlanManager:[self supportPlanManager]];
     supportPlanAssistantWindowController.delegate = self;
     supportPlanAssistantWindowController.contentViewController = supportPlanAssistantViewController;
-    [[supportPlanAssistantWindowController window] setTitle:@"GPG Mail Support Plan"];
+    [[supportPlanAssistantWindowController window] setTitle:@"Free-GPGMail"];
     [supportPlanAssistantWindowController showWindow:nil];
     [[supportPlanAssistantWindowController window] makeKeyAndOrderFront:nil];
 

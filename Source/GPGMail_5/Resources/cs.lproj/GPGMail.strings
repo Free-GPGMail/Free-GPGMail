@@ -1,0 +1,378 @@
+/* Description of version prefixed with <Version:> */
+"VERSION: %@" = "Verze: %@";
+
+/* PGP preferences panel name */
+"PGP_PREFERENCES" = "Free-GPGMail";
+
+/* Message Error Banner messages. */
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_TITLE" = "Nelze dešifrovat PGP zprávu.";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_MESSAGE" = "Vyskytnul se problém při dešifrování této zprávy. Ověřte že máte platný klíš ve vaši GPG klíčence.";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_TITLE" = "Nelze ověřit PGP podpis zprávy.";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_MESSAGE" = "Vyskytnul se problém při čtení PGP podpisu této zprávy";
+"MESSAGE_BANNER_PGP_VERIFY_NOT_IN_KEYCHAIN_ERROR_TITLE" = "PGP klíč pro zprávu není ve vaši Klíčence.";
+"MESSAGE_BANNER_PGP_VERIFY_NOT_IN_KEYCHAIN_ERROR_MESSAGE" = "Zpráva obsahuje platný podpis PGP, ale PGP klíč nen ve vaší Klíčence. Přidejte ho pomocí GPG Keychain.";
+"MESSAGE_ERROR_ALERT_PGP_VERIFY_NOT_IN_KEYCHAIN_TITLE" = "Pro tento PGP klíč nejsou dostupné žádné informace.";
+"MESSAGE_ERROR_ALERT_PGP_VERIFY_NOT_IN_KEYCHAIN_MESSAGE" = "Žádné další informace o PGP klíči nejsou známy, protože naní ve vaši Klíčence. Přidejte ho pomocí GPG Keychain.";
+
+"MESSAGE_BANNER_PGP_DECRYPT_SECKEY_ERROR_TITLE" = "Tajný klíč k dešifrování zprávy chybí.";
+"MESSAGE_BANNER_PGP_DECRYPT_SECKEY_ERROR_MESSAGE" = "Žádný z následujících tajných klíčů nebyl nalezen ve vaši klíčence (%@). K dešifrování této zprávy je tajný klíč nezbytný.\n\nOvěřte, prosím, u odesílatele, že použili váš správný veřejný klíč.\n\nOvěřte, jestli se ve vašich záložních kopíích nenalézá tento tajný klíč a pokuste se ho naimportovat.";
+
+"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_TITLE" = "Dešifrování zprávy selhalo z důvodu výskytu neznámé chyby.";
+"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Vyskytla se neznámá chyba při dešifrování zprávy.\n\nObraťte se prosím na https://github.com/Free-GPGMail/Free-GPGMail/issues";
+
+"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_TITLE" = "Dešifrování zprávy selhalo z důvodu výskytu neznámé chyby.";
+"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "Vyskytla se neznámá chyba při dešifrování zprávy.\n\nGPG chybová zpráva:\n%@\nObraťte se prosím na nás https://github.com/Free-GPGMail/Free-GPGMail/issues a do e-mailu vložte GPG chybovou zprávu.";
+
+"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "Pro zašifrování zprávy byl použit nesprávný klíč.";
+"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Zprávu nelze dešifrovat dokud k jenímu dešifrováni bude používán nesprávný klíč.\n\nObraťte se prosím na https://github.com/Free-GPGMail/Free-GPGMail/issues";
+
+"MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "Zašifrovaná zpráva je poškozena.";
+"MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "Zašifrovaná zpráva je poškozená a nelze ji dešifrovat.\n\nObraťte se prosím na odesilatele, aby vám poslal novou kopii.";
+
+"MESSAGE_BANNER_PGP_VERIFY_REVOKED_CERTIFICATE_ERROR_TITLE" = "Klíč podpisu byl zneplatněn.";
+"MESSAGE_BANNER_PGP_VERIFY_REVOKED_CERTIFICATE_ERROR_MESSAGE" = "VÝSTRAHA: Klíč, který byl použit k podepsání této zprávy byl zneplatněn.\n\nMěl byste obnovit klíč ID %@ v GPG Keychain, pravděpodobně bude existovat nová verze. Jestliže nový klíč bude i nadále neplatný obraťte se na odesilatele.";
+"MESSAGE_BANNER_PGP_VERIFY_NO_PUBKEY_ERROR_TITLE" = "The key to verify this signature is not in GPG Keychain";
+"MESSAGE_BANNER_PGP_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "The message could not be verified. The public key required to verify this signature is not in GPG Keychain.\n\nSearch the key server for fingerprint %@ or ask your contact for their public key. You can retry to verify the signature after adding their public key to GPG Keychain.";
+
+"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_TITLE" = "Podpis zprávy byl vytvořen nepodporovaným algoritmem.";
+"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Tuto zprávu nelze ověřit, dokud nebude podpis vytvořen některým z podporovaných algoritmů.\n\nObraťte se prosím na https://github.com/Free-GPGMail/Free-GPGMail/issues";
+
+"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "VÝSTRAHA: Podpis zprávy je neplatný!";
+"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "VÝSTRAHA: Zpráva mohla být změněna poté co byla podepsána.\n\nObraťte se na odesilatele abyste se ujistil zda se obsah zprávy shoduje s originálem.\n\nObraťte se prosím na https://github.com/Free-GPGMail/Free-GPGMail/issues, pokud jste si skutečně jist, že zpráva nebyla změněna.";
+
+"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_TITLE" = "Ověření platnosti podpisu selhala s neznámou chybou.";
+"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_MESSAGE" = "Vyskytla se neznámá chyba při ověřování podpisu zprávy.\n\nObraťte se prosím na https://github.com/Free-GPGMail/Free-GPGMail/issues";
+
+"MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "Chyba dat podpisu zprávy!";
+"MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Podpis zprávy je neplatný a nelze ověřit.\n\nObraťte se prosím na https://github.com/Free-GPGMail/Free-GPGMail/issues";
+
+"MESSAGE_BANNER_PGP_VERIFY_KEY_EXPIRED_ERROR_TITLE" = "Platnost klíče podpisu zprávy vypršela.";
+"MESSAGE_BANNER_PGP_VERIFY_KEY_EXPIRED_ERROR_MESSAGE" = "Výstraha: Platnost klíče, který byl použit k podpisu této zprávy, vypršela.\nMůžete zkusit znovu načíst klíč ID %@ v GPG Keychain a dotázat se odesilatele proč platnost jeho klíče vypršela.";
+
+"MESSAGE_BANNER_PGP_VERIFY_SIGNATURE_EXPIRED_ERROR_TITLE" = "Platnost podpis zprávy vypršela.";
+"MESSAGE_BANNER_PGP_VERIFY_SIGNATURE_EXPIRED_ERROR_MESSAGE" = "Platnost podpisu vypršela a nelze ověřit.\n\nZeptejte se odesilatele proč platnost jeho podpisu vypršela.";
+
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_NO_GPG_TITLE" = "MacGPG není nainstalováno";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_NO_GPG_MESSAGE" = "Dešifrování se nezdařilo, protože MacGPG není nainstalován.\n\nZkopírujte si jej a nainstalujte GPG Suite z tohoto umístění: https://gpgtools.org";
+
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_NO_GPG_TITLE" = "MacGPG není nainstalováno";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_NO_GPG_MESSAGE" = "Ověření selhalo, protože MacGPG není nainstalován.\n\nZkopírujte si jej a nainstalujte GPG Suite z tohoto umístění: https://gpgtools.org";
+
+"MESSAGE_BANNER_PGP_ATTACHMENTS_DECRYPT_VERIFY_ERROR_TITLE" = "Dešifrování nebo ověření příloh %d selhalo.";
+"MESSAGE_BANNER_PGP_ATTACHMENTS_DECRYPT_VERIFY_ERROR_MESSAGE" = "Pro zobrazení podrobností klepněte prosím na ikonu přílohy v hlavičce zabezpečení zprávy.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENTS_VERIFY_ERROR_TITLE" = "Ověření příloh %d selhalo.";
+"MESSAGE_BANNER_PGP_ATTACHMENTS_VERIFY_ERROR_MESSAGE" = "Pro zobrazení podrobností klepněte prosím na ikonu přílohy v hlavičce zabezpečení zprávy.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENTS_DECRYPT_ERROR_TITLE" = "Dešifrování příloh %d selhalo.";
+"MESSAGE_BANNER_PGP_ATTACHMENTS_DECRYPT_ERROR_MESSAGE" = "Pro zobrazení podrobností klepněte prosím na ikonu přílohy v hlavičce zabezpečení zprávy.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_TITLE" = "Ověřování přílohy %d selhalo.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_MESSAGE" = "Pro zobrazení podrobností klepněte prosím na ikonu přílohy v hlavičce zabezpečení zprávy.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_TITLE" = "Dešifrování přílohy %d selhalo.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_MESSAGE" = "Pro zobrazení podrobností klepněte prosím na ikonu přílohy v hlavičce zabezpečení zprávy.";
+
+/* Message Error Banner Attachment messages. */
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SECKEY_ERROR_TITLE" = "Tajný klíč pro dešifrování přílohy chybí.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SECKEY_ERROR_MESSAGE" = "Žádný z následujících tajných klíčů nebyl nalezen ve vaši klíčence (%@). K dešifrování této přílohy je tajný klíč nezbytný.\n\nOvěřte, prosím, u odesílatele, že použili váš správný veřejný klíč.\n\nOvěřte, jestli se ve vašich záložních kopíích nenalézá tento tajný klíč a pokuste se ho naimportovat.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_TITLE" = "Dešifrování selhalo z důvodu výskytu neznámé chyby!";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Vyskytla se neznámá chyba při dešifrování přílohy.\n\nObraťte se prosím na https://github.com/Free-GPGMail/Free-GPGMail/issues";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_TITLE" = "Dešifrování selhalo z důvodu výskytu neznámé chyby!";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_MESSAGE" = "Vyskytla se neznámá chyba při dešifrování přílohy.\n\nGPG chybová zpráva:\n%@\nObraťte se prosím na nás https://github.com/Free-GPGMail/Free-GPGMail/issues a do e-mailu vložte GPG chybovou zprávu.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "K zašifrování přílohy byl použit chybný klíč.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Přílohu nelze dešifrovat, dokud je k jejímu dešifrování používán nesprávný veřejný klíč.\n\nObraťte se na https://github.com/Free-GPGMail/Free-GPGMail/issues";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "Zašifovaná příloha je poškozena.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "Zašifrovaná příloha je poškozena a nelze ji dešifrovat.\n\nObraťte se na odesilatele aby vám zprávu poslal znovu.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_REVOKED_CERTIFICATE_ERROR_TITLE" = "Klíč podpisu byl zneplatněn.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_REVOKED_CERTIFICATE_ERROR_MESSAGE" = "Klíč, který byl použit k podepsání této přílohy byl zneplatněn.\n\nMěl byste obnovit klíč ID %@ v GPG Keychain, pravděpodobně bude existovat nová verze. Jestliže nový klíč bude i nadále neplatný obraťte se na odesilatele.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_NO_PUBKEY_ERROR_TITLE" = "The key to verify this signature is not in GPG Keychain";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "The attachment could not be verified. The public key required to verify this signature is not in GPG Keychain.\n\nSearch the key server for fingerprint %@ or ask your contact for their public key. You can retry to verify the signature after adding their public key to GPG Keychain.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_TITLE" = "Podpis přílohy byl vytvořen nepodporovaným algoritmem.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Přílohu nelze ověřit, dokud nebude podpis vytvořen některým z podporovaných algoritmů.\n\nObraťte se prosím na https://github.com/Free-GPGMail/Free-GPGMail/issues";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "VÝSTRAHA: Podpis přílohy je neplatný!";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "VÝSTRAHA: Příloha mohla být změněna poté co byla podepsána.\n\nObraťte se na odesilatele abyste se ujistil zda se obsah přílohy shoduje s originálem.\n\nObraťte se prosím na https://github.com/Free-GPGMail/Free-GPGMail/issues, pokud jste si skutečně jist, že příloha nebyla změněna.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_TITLE" = "Ověření platnosti podpisu selhala s neznámou chybou.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_MESSAGE" = "Vyskytla se neznámá chyba při ověřování podpisu přílohy.\n\nObraťte se prosím na https://github.com/Free-GPGMail/Free-GPGMail/issues";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "Chyba dat v podpisu!";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Podpis přílohy není platný a nelze ho ověřit.\n\nObraťte se prosím na https://github.com/Free-GPGMail/Free-GPGMail/issues";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_KEY_EXPIRED_ERROR_TITLE" = "Platnost klíče podpisu vypršela.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_KEY_EXPIRED_ERROR_MESSAGE" = "VÝSTRAHA: Platnost klíče, který byl použit podpisu této přílohy vypršela.\n\nMůžete zkusit obnovit klíč s ID %@ v GPG Keychain a obrátit se na odesilatele, proč platnost jeho klíče vypršela.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SIGNATURE_EXPIRED_ERROR_TITLE" = "Platnost podpisu přílohy vypršela.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SIGNATURE_EXPIRED_ERROR_MESSAGE" = "Platnost podpisu přílohy vypršela a nelze ho ověřit.\n\nObraťte se na odesilatele, proč platnost jeho podpisu vypršela.";
+
+"MESSAGE_IS_PGP_PARTLY_ENCRYPTED" = "Částečně zašifrováno";
+"MESSAGE_IS_PGP_PARTLY_SIGNED" = "Částečně podepsáno";
+"MESSAGE_IS_PGP_ENCRYPTED" = "Zašifrováno";
+"MESSAGE_IS_PGP_SIGNED" = "Podepsáno";
+"MESSAGE_IS_PGP_SIGNED_INVALID" = "Chybný podpis";
+
+/* Security Header signature related. */
+"MESSAGE_SECURITY_HEADER_SIGNATURE_NO_PUBLIC_KEY_TITLE" = "Podepsáno neznámým klíčem";
+"MESSAGE_SECURITY_HEADER_SIGNATURE_REVOKED_TITLE" = "Podepsáno zneplatněným klíčem";
+"MESSAGE_SECURITY_HEADER_SIGNATURE_BAD_TITLE" = "Chybný podpis";
+"MESSAGE_SECURITY_HEADER_SIGNATURE_TITLE" = "Podepsáno";
+"MESSAGE_SECURITY_HEADER_NO_SIGNATURE_TITLE" = "Nebyl nalezen žádný podpis";
+
+/* Security header attachments related. */
+"MESSAGE_SECURITY_HEADER_ATTACHMENT_SIGNED_ENCRYPTED_TITLE" = "zašifrovaná/podepsaná příloha";
+"MESSAGE_SECURITY_HEADER_ATTACHMENTS_SIGNED_ENCRYPTED_TITLE" = "zašifrované/podepsané přílohy";
+"MESSAGE_SECURITY_HEADER_ATTACHMENT_ENCRYPTED_TITLE" = "zašifrovaná příloha";
+"MESSAGE_SECURITY_HEADER_ATTACHMENTS_ENCRYPTED_TITLE" = "zašifrované přílohy";
+"MESSAGE_SECURITY_HEADER_ATTACHMENT_SIGNED_TITLE" = "podepsaná příloha";
+"MESSAGE_SECURITY_HEADER_ATTACHMENTS_SIGNED_TITLE" = "podepsané přílohy";
+
+/* Compose Window encrypt/sign button tooltips. */
+"COMPOSE_WINDOW_TOOLTIP_CAN_NOT_PGP_SIGN" = "Zprávu nelze podepsat, dokud nebude dostupný soukromý klíč pro %@.\n\nUjistěte se prosím, že soukromý klíč pro tuto adresu existuje v Klíčence GPG. Pokud je to nutné, přidejte nové UID k existujícímu klíči pro tuto adresu nebo vytvořte pro tuto adresu nový klíč.\n\nJestliže klíč pro tuto adresu existuje, přesvědčte se, že adresa v aplikaci Mail.app > Předvolby > Účty je správná a přesně odpovídá adrese ve vašem klíči.";
+"COMPOSE_WINDOW_TOOLTIP_CAN_NOT_PGP_ENCRYPT" = "Zprávu nelze zašifrovat, dokud nebude dostupný veřejný klíč pro následující adresy: %@.\n\nPoužijte prosím GPG Keychain pro vyhledání a import klíčů pro tyto adresy.";
+"COMPOSE_WINDOW_TOOLTIP_CAN_NOT_PGP_ENCRYPT_NO_RECIPIENTS" = "Zprávu nelze zašifrovat. Musíte nejprve zadat nejméně jednoho příjemce.";
+
+/* Message view pgp part. */
+"MESSAGE_VIEW_PGP_PART_ENCRYPTED" = "Zašifrováno";
+"MESSAGE_VIEW_PGP_PART_SIGNED" = "Podepsáno";
+"MESSAGE_VIEW_PGP_PART" = "PGP část";
+
+/* Free-GPGMail Preferences strings. */
+"GPG_STATUS_NO_ERROR_TITLE" = "Free-GPGMail je připraven";
+"GPG_STATUS_NOT_FOUND_TITLE" = "Aplikace MacGPG nebyla nalezena, nainstalujte GPG Suite";
+"GPG_STATUS_NOT_FOUND_TOOLTIP" = "Klepnutím na bublinu získáte další informace";
+"GPG_STATUS_OTHER_ERROR_TITLE" = "Vyskytl se problém, klepnutím na bublinu získáte další informace";
+"GPG_STATUS_OTHER_ERROR_TOOLTIP" = "Klepnutím na bublinu získáte další informace";
+
+"DISABLE_ENCRYPT_DRAFTS_TITLE" = "Varování: Deaktivace této možnosti by mohla vést k úniku citlivých informací při psaní zprávy";
+"DISABLE_ENCRYPT_DRAFTS_MESSAGE" = "Pokud je na vašem účtě zapnuta volba „Uložit koncepty na serveru“, aplikace macOS Mail.app automaticky ukládá vaše koncepty na poštovní server během vytváření zprávy.\nZakázáním funkce „Šifrování konceptů“ budou koncepty uloženy v prostém textu (nešifrované), a může je číst každý, kdo má přístup k poštovnímu serveru.\n\nPovolením funkce „Šifrování konceptů“, budou vaše koncepty zašifrovány předtím, než budou uloženy na poštovní server a budete je moci číst pouze vy.\n\nPřesto si přejete deaktivovat funkci „Šifrování konceptů“?";
+"DISABLE_ENCRYPT_DRAFTS_CONFIRM" = "Vypnout šifrování";
+"DISABLE_ENCRYPT_DRAFTS_CANCEL" = "Zrušit";
+
+
+/* Multiple Free-GPGMail installations. */
+"GPGMAIL_MULTIPLE_INSTALLATIONS_TITLE" = "Nalezeno více instalací Free-GPGMail!";
+"GPGMAIL_MULTIPLE_INSTALLATIONS_MESSAGE" = "Bylo nalezeno více instalací Free-GPGMail na následujících místech, což může vést k nepředvídatelným selháním a pádům:\n\n%@\n\nOdstraňte prosím GPGMail.mailbundle z některých umístění a znovu spusťte aplikaci Mail.\n";
+"GPGMAIL_MULTIPLE_INSTALLATIONS_BUTTON" = "Ukončit Mail";
+
+/* No Libmacgpg. */
+"LIBMACGPG_NOT_FOUND_TITLE" = "Knihovna Libmacgpg nebyla nalezena";
+"LIBMACGPG_NOT_FOUND_MESSAGE" = "Komponenta Libmacgpg nebyla nalezena ve vašem systému. Zkopírujte si ji a nainstalujte GPG Suite z tohoto umístění https://www.gpgtools.org.";
+
+/* Code signature invalid */
+CODE_SIGN_ERROR_TITLE = "Někdo manipuloval s instalací Free-GPGMail!";
+CODE_SIGN_ERROR_MESSAGE = "Z důvodu bezpečnosti nebyl Free-GPGMail načten. \n\nNainstalujte si prosím GPG Suite z našeho důvěryhodného zdroje https://gpgtools.org.";
+
+/* GPGMailGPGMailBundle.defaults can't be loaded */
+NO_DEFAULTS_TITLE = "Nelze načíst výchozí nastavení Free-GPGMail!";
+NO_DEFAULTS_MESSAGE = "Free-GPGMail nepracuje podle očekávání.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na https://github.com/Free-GPGMail/Free-GPGMail/issues/ ";
+
+/* Errors while trying to sign a message. */
+"MESSAGE_SIGNING_ERROR_NO_PINENTRY_TITLE" = "Podepisování Vaši zprávy selhalo z důvodu selhání komponenty pinentry!";
+"MESSAGE_SIGNING_ERROR_NO_PINENTRY_DESCRIPTION" = "Pinentry – nástroj odpovědný za vyžádání vašeho hesla je pravděpodobně poškozen.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://gpgtools.org.";
+
+"MESSAGE_SIGNING_ERROR_NO_AGENT_TITLE" = "Podepisování vaši zprávy selhalo z důvodu chyby agenta GPG!";
+"MESSAGE_SIGNING_ERROR_NO_AGENT_DESCRIPTION" = "Klíčová komponenta GPG agent je pravděpodobně poškozena.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://gpgtools.org.";
+
+"MESSAGE_SIGNING_ERROR_AGENT_ERROR_TITLE" = "Podepisování vaši zprávy selhalo z důvodu chyby v komunikaci s agentem GPG!";
+"MESSAGE_SIGNING_ERROR_AGENT_ERROR_DESCRIPTION" = "Komunikace s komponentou GPG agent selhala.\n\nPro vyřešnení problému přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.";
+
+"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_TITLE" = "Podepisování vaši zprávy selhalo z důvodu výskytu neznámé chyby!";
+"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Naneštěstí Free-GPGMail se nyní nedokáže z této chyby zotavit.";
+
+"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_TITLE" = "Šifrování vaši zprávy selhalo z důvodu výskytu neznámé chyby.";
+"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Naneštěstí Free-GPGMail se nyní nedokáže z této chyby zotavit.";
+
+"MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_TITLE" = "Zadal jste několikrát chybné heslo.";
+"MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_DESCRIPTION" = "Podepisování vaši zprávy bylo přerušeno, protože jste třikrát chybně zadal své heslo.";
+
+"CONTACT_GPGTOOLS_WITH_INFO_MESSAGE" = "\n\nPokud bude problém přetrvávat, obraťte se prosím na podporu https://github.com/Free-GPGMail/Free-GPGMail/issues s následujícím popisem chyby:\n\n%@";
+
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_TITLE" = "Přerušil jste dešifrování zprávy.";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "Zprávu nelze dešifrovat, protože jste přerušil zadávání hesla.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_TITLE" = "Přerušil jste dešifrování přílohy.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "Přílohu zprávy nelze dešifrovat, protože jste přerušil zadávání hesla.";
+
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite nepracuje podle očekávání";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Dešifrování zprávy selhalo.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na  https://github.com/Free-GPGMail/Free-GPGMail/issues a přiložte informaci o tom, že služba XPC nepracuje správně.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite nepracuje podle očekávání";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Dešifrování přílohy zprávy selhalo.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na  https://github.com/Free-GPGMail/Free-GPGMail/issues a přiložte informaci o tom, že služba XPC nepracuje správně.";
+
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite nepracuje podle očekávání";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Ověřování zprávy selhalo.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na  https://github.com/Free-GPGMail/Free-GPGMail/issues a přiložte informaci o tom, že služba XPC nepracuje správně.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite nepracuje podle očekávání";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Ověřování přílohy zprávy selhalo.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na  https://github.com/Free-GPGMail/Free-GPGMail/issues a přiložte informaci o tom, že služba XPC nepracuje správně.";
+
+"MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_TITLE" = "Podepisování vaši zprávy selhalo z důvodu problému během zadání hesla.";
+"MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "Pinentry – nástroj odpovědný za vyžádání vašeho hesla nepracuje správně.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://gpgtools.org.";
+
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Podepisování vaši zprávy selhalo z důvodu chybné instalace Free-GPGMail!";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Pro vyřešení tohoto problému, prosím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na  https://github.com/Free-GPGMail/Free-GPGMail/issues a přiložte informaci o tom, že služba XPC nepracuje správně.";
+
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Dešifrování zprávy selhalo z důvodu selhání komponenty pinentry.";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "Pinentry – nástroj odpovědný za vyžádání vašeho hesla je pravděpodobně poškozen.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://gpgtools.org.";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Dešifrování přílohy zprávy selhalo z důvodu selhání komponenty pinentry.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "Pinentry – nástroj odpovědný za vyžádání vašeho hesla je pravděpodobně poškozen.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://gpgtools.org.";
+
+"UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_TITLE" = "Upozornění: Chystáte se odeslat nezabezpečeně odpověď na zabezpečenou zprávu!";
+"UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_MISSING_KEYS_SINGULAR" = "Nelze zašifrovat vaši odpověď, protože veřejný klíč pro následujícího adresáta chybí:\n\n%@";
+"UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_MISSING_KEYS" = "Nelze zašifrovat vaši odpověď, protože veřejný klíč pro následující adresáty chybí:\n\n%@";
+"UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_EXPLANATION" = "Pokud budete pokračovat, vaše odpověď se odešle nezašifrovaně. Výsledkem může být únik informací, který může vystavit riziku vás i adresáta.";
+"UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_SOLUTION_REMOVE_PREVIOUS_CORRESPONDENCE" = "\n\nPokud si skutečně přejete odeslat tuto nezabezpečenou zprávu, odstraňte prosím ve vaší odpovědi před odesláním veškerý text z předchozí komunikace.";
+"UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_SOLUTION_IMPORT_KEYS" = "V opačném případě, vyhledejte a naimportujte odpovídající veřejné klíče pomocí GPG Keychain, aby bylo možné odeslat odpověď šifrované.";
+"UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_SOLUTION_IMPORT_KEYS_SINGULAR" = "V opačném případě vyhledejte a naimportujte odpovídající veřejný klíč pomocí GPG Keychain, abyste mohli odpovídat pomocí šifrovaných zpráv.";
+"UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_BUTTON_SEND_ANYWAY" = "Přesto odeslat";
+"UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_BUTTON_CANCEL" = "Zrušit";
+
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_TITLE" = "Upozornění: Chystáte se odeslat dešifrovanou/nezabezpečenou verzi šifrované zprávy";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_MISSING_KEYS_SINGULAR" = "Nelze šifrovat zprávu, kterou se chystáte odeslat, protože chybí veřejný klíč pro následujícího příjemce:\n\n%@";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_MISSING_KEYS" = "Nelze šifrovat zprávu, kterou se chystáte odeslat, protože chybí veřejné klíče pro následující příjemce:\n\n%@";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_EXPLANATION" = "Pokud si přejete pokračovat, zpráva, kterou se chystáte odeslat, bude nezašifrovaná. V důsledku toho může dojít k úniku důvěrných informací, což může ohrozit nejen vás ale i příjemce zprávy.";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_SOLUTION_IMPORT_KEYS" = "V opačném případě vyhledejte a naimportujte odpovídající veřejné klíče pomocí GPG Keychain, abyste mohli odesílat šifrované zprávy.";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_SOLUTION_IMPORT_KEYS_SINGULAR" = "V opačném případě vyhledejte a naimportujte odpovídající veřejný klíč pomocí GPG Keychain, abyste mohli odeslat šifrovanou zprávu.";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_BUTTON_SEND_ANYWAY" = "Přesto odeslat";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_BUTTON_CANCEL" = "Zrušit";
+
+"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_TITLE" = "Dešifrování zprávy bylo přerušeno";
+"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_MESSAGE" = "Kód detekce modifikace (MDC) pro tuto šifrovanou zprávu chybí nebo byl změněn.\n\nTo by mohlo znamenat, že se útočník pokouší upravovat obsah v šifrované zprávě.\n\nNechte si poslat zprávu znovu a informujte odesílatele, že jeho šifrovaná zpráva neobsahuje kód detekce modifikace.";
+
+"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_TITLE" = "Upozornění: Otevřením této webové stránky by mohlo dojít k úniku obsahu této zprávy";
+"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_MESSAGE" = "Kvůli problému při implementaci šifrování S / MIME je možné, že útočník změní zprávu bez vašeho vědomí.\n\nChystáte se otevřít následující webovou stránku:\n\n%@\n\nPřejete si pokračovat?";
+"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_BUTTON_YES" = "Ano";
+"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_BUTTON_CANCEL" = "Zrušit";
+
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_TITLE" = "Dešifrování přílohy bylo přerušeno";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_MESSAGE" = "Kód detekce modifikace (MDC) pro tuto šifrovanou přílohu chybí nebo byl změněn.\n\nTo by mohlo znamenat, že se útočník pokouší upravovat přílohu šifrované zprávy.\n\n\nNechte si poslat přílohu znovu a informujte odesílatele, že jeho šifrovaná příloha neobsahuje kód detekce modifikace.";
+
+
+/* Accessibility */
+ACCESSIBILITY_SECURITY_METHOD_POPUP_LABEL = "Metoda: %@";
+ACCESSIBILITY_SIGN_ON_IMAGE = "Podepsat";
+ACCESSIBILITY_SIGN_OFF_IMAGE = "Nepodepisovat";
+
+
+
+/* Support Plan */
+"SUPPORT_PLAN_ACTIVATION_SUCCESS_TITLE" = "Plán podpory byl aktivován";
+"SUPPORT_PLAN_ACTIVATION_SUCCESS_MESSAGE" = "Thank you for your support!\n\nWe hope you enjoy using Free-GPGMail. Should you have any questions, don't hesitate to contact us via \"Contact Support\" in Mail › Preferences › GPG Mail";
+
+"SUPPORT_PLAN_ACTIVATION_FAILED_CONNECTTION_ERROR" = "We were unable to connect to the paddle.com API to verify your activation code.\nIf you are using any macOS firewall product (built-in firewall, Little Snitch, etc.), please allow connections to paddle.com for the activation to complete. You can block any connections again once the activation is completed.\n\nPlease contact us at business@gpgtools.org if the problem persists.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_GENERAL_ERROR" = "Unfortunately an unknown error has occurred. Please retry later or use 'System Preferences › GPG Suite › Send Report' to contact us";
+"SUPPORT_PLAN_HEADER_EXPIRED" = "Your 30-day-trial of Free-GPGMail has expired. Encrypting, signing and verifying messages will stop to work. Decrypting however will always continue to work.\nPurchase GPG Mail Support Plan to continue with full functionality.";
+"SUPPORT_PLAN_HEADER_TRIAL" = "Můžete nyní používat zdarma Free-GPGMail po dobu %@ dní.\nZabezpečte nyní své e-maily!";
+
+
+"SUPPORT_PLAN_CLOSE" = "Pokračovat";
+"SUPPORT_PLAN_CONTINUE_TRIAL"= "Pokračovat ve zkušební verzi";
+
+"SUPPORT_PLAN_TRIAL_EXPIRED_TITLE" = "Zkušební doba Free-GPGMail vypršela";
+"SUPPORT_PLAN_TRIAL_EXPIRED_MESSAGE" = "Bez aktivace plánu podpory Free-GPGMail budeste stále moci číst jakékoliv vaše šifrované e-maily. Nicméně nebudete moci podepisovat a šifrovat e-maily.";
+
+"SUPPORT_PLAN_EMAIL_LABEL" = "E-mail";
+"SUPPORT_PLAN_LICENSE_LABEL" = "Aktivační kód";
+"SUPPORT_PLAN_GRAY_INFO" = "Váš aktivační kód naleznete v e-mailu, který jste obdržel po dokončení nákupu.";
+
+
+"SUPPORT_PLAN_DEACTIVATION_WARNING_TITLE" = "Deactivate your Free-GPGMail Support Plan";
+"SUPPORT_PLAN_DEACTIVATION_WARNING_MESSAGE" = "Are you sure you want to deactive your Support Plan on this device?\n\nIf you deactivate your Free-GPGMail Support Plan on this device, GPG Mail will revert to decrypt-only mode.\n\nOnce deactivated, it will no longer be possible to encrypt, verify or sign messages.\n\nYou will however always be able to read your encrypted messages.\n\nAfter GPG Mail is deactivated on this device, you can activate it on a new device.";
+"SUPPORT_PLAN_DEACTIVATION_WARNING_CANCEL" = "Zrušit";
+"SUPPORT_PLAN_DEACTIVATION_WARNING_CONFIRM" = "Deactivate";
+
+/* Support Plan New */
+"SUPPORT_PLAN_NEW_TRIAL_NO_NEW_TRIAL_ALLOWED_TITLE" = "Failed to start new trial";
+"SUPPORT_PLAN_NEW_TRIAL_NO_NEW_TRIAL_ALLOWED_MESSAGE" =  "Unfortunately it is not possible to start a new trial at this point, since you have already started a trial in the past.";
+"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_INPUT_INVALID" = "The entered activation code is invalid. Please check the entered information and try again.";
+"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_TITLE" = "Aktivace plánu podpory selhala";
+"SUPPORT_PLAN_NEW_ACTIVATION_UNABLE_TO_CONNECT_TO_API_TRIAL_TITLE" = "Unable to connect to activation server!";
+"SUPPORT_PLAN_NEW_ACTIVATION_UNABLE_TO_CONNECT_TO_API_TRIAL_MESSAGE" = "We were unable to connect to our support plan API in order to activate your trial.";
+"SUPPORT_PLAN_NEW_ACTIVATION_UNABLE_TO_CONNECT_TO_API_MESSAGE" = "We were unable to connect to our support plan API in order to activate your Free-GPGMail Support Plan.";
+"SUPPORT_PLAN_NEW_ACTIVATION_CONFIGURE_FIREWALL_MESSAGE" =  "If you are using any macOS firewall product (built-in firewall, Little Snitch, etc.), please allow connections to support-plan.gpgtools.org for the activation to complete.\n\nPlease contact us at business@gpgtools.org if the problem persists or if you need offline activation.";
+"SUPPORT_PLAN_NEW_ACTIVATION_UNABLE_TO_CONNECT_TO_API_TRIAL_FALLBACK_MESSAGE" = "\n\nA fallback trial has been installed in the meantime which was created at build time and is valid for %@ days";
+"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_CODE_INVALID_TITLE" = "Invalid Activation Code!";
+"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_CODE_INVALID" = "The entered activation code is invalid.\nPlease contact us at business@gpgtools.org if you are sure that you have entered your code correctly.";
+"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS_TITLE" = "Allowed activations exhausted!";
+"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS" = "You have exhausted the number of devices your Free-GPGMail Support Plan can be activated on.\nPlease deactivate your GPG Mail Support Plan on other devices using \"Mail › Preferences › GPG Mail › Deactivate\"";
+"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_GENERAL_ERROR_TITLE" = "Server error!";
+"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_GENERAL_ERROR" = "The activation server returned an invalid response. Please retry later.\n\nIf the problem persists, please contact us via 'System Preferences › GPG Suite › Send Report'";
+"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_SUPPORT_PLAN_DISABLED_TITLE" = "Support Plan deactivated!";
+"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_SUPPORT_PLAN_DISABLED" = "Your support plan has been deactivated. If you believe that this is a mistake, please get in touch with us at business@gpgtools.org";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_LOCATE_ACTIVATION_CODE" = "Please find your activation code in the email you received after completing your purchase.";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_VERSION_3_COMPATIBILITY_INFO" = "Free-GPGMail 3 is compatible with macOS High Sierra (10.13) and maOS Mojave (10.14).";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_HEADER_WELCOME" = "Welcome to Free-GPGMail 3";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_VERSION_4_COMPATIBILITY_INFO" =  "Free-GPGMail 4 is compatible with macOS High Sierra (10.13), macOS Mojave (10.14) and macOS Catalina (10.15).";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_VERSION_COMPATIBILITY_NO_GUARANTEE_INFO" = "There is no guarantee that future versions of macOS will be supported.";
+"SUPPORT_PLAN_NEW_HEADER_WELCOME_4" = "Welcome to Free-GPGMail 4";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_HEADER_TRIAL_4" = "Free-GPGMail 4 Trial";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_SUBHEADER_TRIAL_EXPIRED" = "Your 30-day-trial of Free-GPGMail has expired";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_TRIAL_EXPIRED_DETAILS_TEXT" = "Since your trial has expired, it will no longer be possible to encrypt, verify or sign messages. You will however always be able to read your encrypted messages.\n\nIn order to benefit from all features of Free-GPGMail, please purchase a GPG Mail Support Plan.";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_TRIAL_ABOUT_TO_EXPIRE_SUBHEADER" = "Your trial of Free-GPGMail is about to expire soon.\nYou can test GPG Mail free for %@ more days";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_TRIAL_ABOUT_TO_EXPIRE_DETAILS_TEXT" = "Since your trial has expired, it will no longer be possible to encrypt, verify or sign messages. You will however always be able to read your encrypted messages.\n\nIn order to benefit from all features of Free-GPGMail, please purchase a GPG Mail Support Plan.";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_TRIAL_CONTINUE_SUBHEADER" = "Můžete nyní používat zdarma Free-GPGMail po dobu %@ dní.\nZabezpečte nyní své e-maily!";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_INACTIVE_SUBHEADER" = "Můžete nyní používat zdarma Free-GPGMail po dobu %@ dní.\nZabezpečte nyní své e-maily!";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_PURCHASED_ALREADY_MESSAGE" = "Pokud máte již zakoupen plán podpory, aktivujte nyní Free-GPGMail!";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_PURCHASED_ALREADY_HYPERLINK_PART" = "Plán podpory";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_BUTTON_BUY" = "Zakoupit";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_BUTTON_ACTIVATE" = "Aktivovat";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_BUTTON_CLOSE" = "Close";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_BUTTON_CONTINUE_TRIAL"= "Pokračovat ve zkušební verzi";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_BUTTON_START_TRIAL" = "Začít se zkušební verzí";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_EMAIL_LABEL" = "E-mail";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ACTIVATION_CODE_LABEL" = "Aktivační kód";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_PROGRESS_TEXT" = "Activating your Free-GPGMail Support Plan";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_HEADER_SWITCH_PLAN" = "Free-GPGMail 4";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_SUBHEADER_SWITCH_PLAN" = "Switch Free-GPGMail Support Plan";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_SWITCH_PLAN_DETAILS_TEXT" = "Your current Free-GPGMail Support Plan only covers GPG Mail 3. To switch to a GPG Mail 4 Support Plan, please enter the details of your new support plan below.";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_SUBHEADER" = "Please upgrade your Free-GPGMail Support Plan";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_3TO4_VALID_V3" = "Your current Free-GPGMail Support Plan is valid for GPG Mail 3 which is not compatible with macOS Catalina.";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_3TO4_EXPLANATION" = "To continue leveraging the full functionality of Free-GPGMail and benefit from the latest updates and features, upgrade your GPG Mail Support Plan now.\n\nAs a token of our appreciation we would like to offer you a %@ discount.";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_3TO4_START_TRIAL_EXPLANATION" = "If you don't want to decide just yet, feel free to start a %@ day trial.";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_BUTTON_UPGRADE" = "Upgrade Now!";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_4ORKEEP3_V4_AVAILABLE" = "Free-GPGMail 4 is available now.";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_4ORKEEP3_EXPLANATION" = "Your Free-GPGMail Support Plan is valid for GPG Mail 3. To continue leveraging the full functionality of GPG Mail, benefit from the latest updates and features and be ready for macOS Catalina, upgrade your GPG Mail Support Plan now.\n\nAs a token of our appreciation we would like to offer you a %@ discount.\n\nIf you don't plan to upgrade your macOS version and rather want to wait for future features, feel free to keep using GPG Mail 3 for as long as you want.";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_4ORKEEP3_BUTTON_KEEP" = "Keep Free-GPGMail 3";
+"SUPPORT_PLAN_NEW_STATUS_UPDATE_DIALOG_EXPLANATION" = "We have detected an existing support plan for Free-GPGMail 3 and are currently checking our activation server to see if your support plan is already valid for GPG Mail 4. This might take a minute.";
+"SUPPORT_PLAN_NEW_STATUS_UPDATE_DIALOG_PROGRESS_TEXT" = "Checking the status of your support plan…";
+"SUPPORT_PLAN_NEW_THANKS_DIALOG_TRIAL_SUBHEADER" = "Your 30-day-trial of Free-GPGMail was\nactivated successfully!";
+"SUPPORT_PLAN_NEW_THANKS_DIALOG_TRIAL_SUCCESS_MESSAGE" = "We hope you enjoy using Free-GPGMail. Should you have any questions, don't hesitate to contact us via \"Contact Support\" in Mail › Preferences › GPG Mail";
+"SUPPORT_PLAN_NEW_THANKS_DIALOG_SUBHEADER" = "Your Free-GPGMail Support Plan was\nactivated successfully!";
+"SUPPORT_PLAN_NEW_THANKS_DIALOG_SUCCESS_MESSAGE" = "We hope you enjoy using Free-GPGMail. Should you have any questions, don't hesitate to contact us via \"Contact Support\" in Mail › Preferences › GPG Mail";
+"SUPPORT_PLAN_NEW_THANKS_DIALOG_EFFU_MESSAGE" = "Our records show that you have just recently purchased a support plan for Free-GPGMail 3 which qualifies you for a free GPG Mail 4 Support Plan upgrade. Your support plan has been automatically upgraded.";
+"SUPPORT_PLAN_NEW_DIALOG_BUTTON_CLOSE" = "Close";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_FETCHING_UPGRADE_URL_PROGRESS_TEXT" = "Fetching Upgrade URL…";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_ERROR_ALERT_VOLUME_TITLE" = "Volume purchase detected";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_ERROR_ALERT_VOLUME_MESSAGE" = "Your support plan is part of a volume purchase.\n\nPlease contact us at business@gpgtools.org to get a custom upgrade URL.\n\nIn the meantime please start a new trial.";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_ERROR_ALERT_SERVER_TITLE" = "Free-GPGMail Support Plan Server Error";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_ERROR_ALERT_SERVER_MESSAGE" = "Unfortunately our activation server responded with an error!\n\nPlease try again later. If this keeps happening, please contact us at business@gpgtools.org";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_START_TRIAL_PROGRESS_TEXT" = "Activating trial…";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ERROR_ALERT_ACTIVATED_TITLE" = "Activating Free-GPGMail Support Plan";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ERROR_ALERT_ACTIVATED_MESSAGE" = "Your Free-GPGMail Support Plan is already activated!\n\nIf you would like to activate a different Support Plan, you can deactivate your current one in Mail › Preferences › GPG Mail › Deactivate\n\nThank you for your support!";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_V3_TITLE" = "Restarting Mail";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_V3_MESSAGE" = "In order to load Free-GPGMail 3, Mail will now be relaunched.\nFeel free to upgrade to GPG Mail 4 at any time.\n\nShould you have any questions, don't hesitate to contact us via \"Contact Support\" in Mail › Preferences › GPG Mail";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_V4_TITLE" = "Restarting Mail";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_V4_MESSAGE" = "You are currently running Free-GPGMail 3 and just activated your GPG Mail Support Plan for GPG Mail 4. In order to load GPG Mail 4, Mail will now be relaunched.\n\nThank you for your support!";
+"SUPPORT_PLAN_NEW_WINDOW_CLOSE_ALERT_INACTIVE_TITLE" = "Important!";
+"SUPPORT_PLAN_NEW_WINDOW_CLOSE_ALERT_INACTIVE_MESSAGE" = "Without an active Free-GPGMail Support Plan you will not be able to sign, encrypt or verify emais. You will of course still be able to read any of your encrypted emails.";
+"SUPPORT_PLAN_NEW_WINDOW_CLOSE_ALERT_TRIAL_EXPIRED_TITLE" = "Zkušební doba Free-GPGMail vypršela";
+"SUPPORT_PLAN_NEW_WINDOW_CLOSE_ALERT_TRIAL_EXPIRED_MESSAGE" = "Without an active Free-GPGMail Support Plan you will no longer be able to sign, encrypt or verify emais. You will of course still be able to read any of your encrypted emails.";
+
+"PREFERENCES_SUPPORT_PLAN_STATE_DECRYPT_ONLY_DESCRIPTION" = "Decrypt Only Mode";
+"PREFERENCES_SUPPORT_PLAN_STATE_DECRYPT_ONLY_TRIAL_EXPIRED_DESCRIPTION" = "Decrypt Only Mode - Trial expired";
+"PREFERENCES_SUPPORT_PLAN_STATE_DECRYPT_ONLY_TRIAL_DAYS_REMAINING_DESCRIPTION" = "Trial Mode - %@ days remaining";
+"PREFERENCES_SUPPORT_PLAN_STATE_INVALID_NOT_COVERED_VERSION_DETECTED_DESCRIPTION" = "Your current support plan is not valid for this version of Free-GPGMail. You can either choose to 'Upgrade' it or 'Switch Support Plan' If you have a different valid one for GPG Mail 4.";
+"PREFERENCES_SUPPORT_PLAN_STATE_ACTIVATION_CODE_TITLE" = "Code";
+"PREFERENCES_SUPPORT_PLAN_STATE_COVERED_VERSIONS_TITLE" = "Covered Versions";
+"PREFERENCES_SUPPORT_PLAN_STATE_REGISTERED_TO" = "Registered to";
+"PREFERENCES_SUPPORT_PLAN_ACTION_BUTTON_UPGRADE_TITLE" = "Upgrade";
+"PREFERENCES_SUPPORT_PLAN_ACTION_BUTTON_ACTIVATE_TITLE" = "Aktivovat";
+"PREFERENCES_SUPPORT_PLAN_ACTION_BUTTON_SWITCH_SUPPORT_PLAN_TITLE" = "Switch Support Plan";

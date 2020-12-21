@@ -13,9 +13,6 @@
 #import "GPGTaskHelper.h"
 #import <xpc/xpc.h>
 
-#import <Paddle/Paddle.h>
-#import <GSPaddle/GSPaddle.h>
-
 @interface JailfreeTask ()
 - (BOOL)isCodeSignatureValidAtPath:(NSString *)path;
 @end
@@ -157,86 +154,6 @@
 - (void)showGPGSuitePreferencesWithArguments:(NSDictionary *)arguments reply:(void (^)(BOOL result))reply {
 	reply([GPGTaskHelper showGPGSuitePreferencesWithArguments:arguments]);
 }
-
-
-#pragma mark - Paddle Helper Methods
-
-- (void)validSupportContractAvailableForProduct:(NSString *)identifier reply:(void (^)(BOOL, NSDictionary *))reply {
-    // Perform an offline check if a local license is available.
-    // TODO: Implement remote verification - maybe also not in here but instead in the GPG Suite Updater.
-    //       We'll have to look into that.
-    PADProduct *product = [self paddleProduct];
-    Paddle *paddle = [self paddleInstance];
-    
-    NSMutableDictionary *info = [NSMutableDictionary new];
-    BOOL isActivated = [product activated];
-    [info setValue:@(isActivated) forKey:@"Active"];
-    if(isActivated) {
-        [info setValue:[product licenseCode] forKey:@"ActivationCode"];
-        [info setValue:[product activationEmail] forKey:@"ActivationEmail"];
-    }
-    else {
-        [info setValue:[product trialDaysRemaining] forKey:@"ActivationRemainingTrialDays"];
-    }
-    isActivated = YES;
-    [info setValue:@(isActivated) forKey:@"Active"];
-    [info setValue:@"unknown" forKey:@"ActivationCode"];
-    [info setValue:@"unknown" forKey:@"ActivationEmail"];
-    reply(isActivated, (NSDictionary *)info);
-}
-
-- (void)activateProductWithEmail:(NSString *)email activationCode:(NSString *)activationCode reply:(void (^)(BOOL, NSError *))reply {
-    [self paddleInstance];
-    [[self paddleProduct] activateEmail:email license:activationCode completion:^(BOOL activated, NSError * _Nullable error) {
-        // Instead of the paddle error, it is best to use our own error which contains
-        // more information of what actually happened.
-        NSError *realError = [[self paddleInstance] activationErrorForActivationCode:activationCode];
-        error = realError != nil ? realError : error;
-        reply(activated, error);
-    }];
-}
-
-- (void)deactivateSupportPlanWithCompletion:(void (^)(BOOL, NSError *))reply {
-    [self paddleInstance];
-    [[self paddleProduct] deactivateWithCompletion:^(BOOL deactivated, NSError * _Nullable error) {
-        reply(deactivated, error);
-    }];
-}
-
-- (void)startTrialWithReply:(void (^)(BOOL))reply {
-    // Simply calling paddle product seems to create a trial file.
-    [self paddleProduct];
-    [self paddleInstance];
-    reply(YES);
-}
-
-
-- (Paddle *)paddleInstance {
-    // While this call should no longer be necessary, since the GSPaddle framework makes sure
-    // that only activation calls are allowed, it can't hurt to still call it.
-    [PaddleAnalyticsKit disableTracking];
-    Paddle *paddle = [Paddle sharedInstanceWithVendorID:@"2230" apiKey:@"ba08ae628cf630e40d1f8be305bbfb96" productID:@"496039" configuration:[self paddleProductConfiguration]];
-    
-    return paddle;
-}
-
-- (PADProductConfiguration *)paddleProductConfiguration {
-    // While truly perverted, this swizzle is now on the NSFileManager.
-    [[NSFileManager defaultManager] GSSetCustomBundleIdentifier:@"GPGTools/org.gpgtools.GPGMail"];
-    PADProductConfiguration *productConfiguration = [[PADProductConfiguration alloc] init];
-    productConfiguration.productName = @"GPGMail";
-    productConfiguration.vendorName = @"GPGTools";
-    productConfiguration.trialType = PADProductTrialTimeLimited;
-    productConfiguration.trialLength = @(30);
-    
-    return productConfiguration;
-}
-
-- (PADProduct *)paddleProduct {
-    PADProduct *product = [[PADProduct alloc] initWithProductID:@"496039" productType:PADProductTypeSDKProduct configuration:[self paddleProductConfiguration]];
-    return product;
-}
-
 
 #pragma mark - General Helper Methods
 

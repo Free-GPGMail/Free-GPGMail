@@ -2,7 +2,7 @@
 "VERSION: %@" = "Versi: %@";
 
 /* PGP preferences panel name */
-"PGP_PREFERENCES" = "GPG Mail";
+"PGP_PREFERENCES" = "Free-GPGMail";
 
 /* Message Error Banner messages. */
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_TITLE" = "Tak bisa mendekripsi pesan PGP.";
@@ -18,13 +18,13 @@
 "MESSAGE_BANNER_PGP_DECRYPT_SECKEY_ERROR_MESSAGE" = "Tak satupun dari kunci rahasia berikut dapat ditemukan dalam ring kunci Anda (%@). Kunci rahasia diperlukan untuk mendekripsi pesan ini.\n\nPeriksalah dengan si pengirim bahwa mereka memakai kunci publik Anda yang benar.\nPeriksalah cadangan ring kunci Anda, dan cobalah mengimpor kunci rahasia dari sana.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_TITLE" = "Dekripsi gagal dengan kesalahan tak dikenal!";
-"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Terjadi galat yang tak dikenal ketika mendekripsi pesan ini.\n\nHarap hubungi kami pada https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Terjadi galat yang tak dikenal ketika mendekripsi pesan ini.\n\nHarap hubungi kami pada https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_TITLE" = "Pendekripsian gagal dengan galat yang tak dikenal!";
-"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "Galat yang tak dikenal terjadi ketika mendekripsi pesan ini.\n\nPesan galat GPG:\n%@\nHarap hubungi kami, sertakan pesan galat GPG, pada https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "Galat yang tak dikenal terjadi ketika mendekripsi pesan ini.\n\nPesan galat GPG:\n%@\nHarap hubungi kami, sertakan pesan galat GPG, pada https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "Kunci yang salah dipakai untuk mengenkripsi pesan ini.";
-"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Pesan ini tak bisa didekripsi, karena kunci publik yang salah dipakai untuk mengekripsinya.\n\nHarap hubungi kami pada https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Pesan ini tak bisa didekripsi, karena kunci publik yang salah dipakai untuk mengekripsinya.\n\nHarap hubungi kami pada https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "Pesan yang terenkripsi rusak.";
 "MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "Pesan yang terenkripsi rusak dan tak bisa didekripsi.\n\nSilakan minta ke pengirim untuk mengirim ulang pesan.";
@@ -35,16 +35,16 @@
 "MESSAGE_BANNER_PGP_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "Pesan ini tak bisa diverifikasi, karena kunci yang dipakai untuk menandatangani pesan ini tak ada dalam Ring Kunci GPG Anda.\n\nCarilah kunci dengan ID %@ dalam GPG Keychain dan imporlah untuk memverifikasi pesan.";
 
 "MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_TITLE" = "Tanda tangan pesan dibuat dengan algoritma yang tak didukung.";
-"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Pesan ini tak bisa diverifikasi, karena tanda tangan dibuat dengan algoritma yang tak didukung.\n\nHarap hubungi kami di https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Pesan ini tak bisa diverifikasi, karena tanda tangan dibuat dengan algoritma yang tak didukung.\n\nHarap hubungi kami di https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "PERHATIAN: Tanda tangan pesan ini tak valid!";
-"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "PERHATIAN: Pesan ini mungkin telah diubah setelah tanda tangan dibuat.\n\nHarap hubungi pengirim untuk memastikan isi pesan cocok dengan aslinya.\n\nHarap hubungi kami pada https://gpgtools.tenderapp.com bila Anda yakin bahwa pesan tak diubah.";
+"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "PERHATIAN: Pesan ini mungkin telah diubah setelah tanda tangan dibuat.\n\nHarap hubungi pengirim untuk memastikan isi pesan cocok dengan aslinya.\n\nHarap hubungi kami pada https://github.com/Free-GPGMail/Free-GPGMail/issues bila Anda yakin bahwa pesan tak diubah.";
 
 "MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_TITLE" = "Verifikasi tanda tangan pesan gagal dengan galat tak dikenal!";
-"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_MESSAGE" = "Terjadi galat yang tak dikenal ketika verifikasi tanda tangan pesan ini.\n\nMohon kontak kami di https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_MESSAGE" = "Terjadi galat yang tak dikenal ketika verifikasi tanda tangan pesan ini.\n\nMohon kontak kami di https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "Galat data tanda tangan pesan!";
-"MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Tanda tangan pesan ini tak valid dan tak bisa diverifikasi.\n\nHarap kontak kami di https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Tanda tangan pesan ini tak valid dan tak bisa diverifikasi.\n\nHarap kontak kami di https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_KEY_EXPIRED_ERROR_TITLE" = "Kunci tanda tangan pesan kedaluarsa.";
 "MESSAGE_BANNER_PGP_VERIFY_KEY_EXPIRED_ERROR_MESSAGE" = "PERHATIAN: Kunci yang dipakai untuk menandatangani pesan ini kedaluarsa.\n\nAnda dapat mencoba menyegarkan kunci dengan ID %@ dalam GPG Keychain dan menanyakan ke pengirim mengapa kunci kedaluarsa.";
@@ -78,13 +78,13 @@
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SECKEY_ERROR_MESSAGE" = "Tak satupun dari kunci rahasia berikut dapat ditemukan dalam ring kunci Anda (%@). Kunci rahasia diperlukan untuk mendekripsi lampiran ini.\n\nPeriksalah dengan si pengirim bahwa mereka memakai kunci publik Anda yang benar.\nPeriksalah cadangan ring kunci Anda, dan cobalah mengimpor kunci rahasia dari sana.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_TITLE" = "Dekripsi gagal dengan kesalahan tak dikenal!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Terjadi galat yang tak dikenal ketika mendekripsi pesan ini.\n\nHarap hubungi kami pada https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Terjadi galat yang tak dikenal ketika mendekripsi pesan ini.\n\nHarap hubungi kami pada https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_TITLE" = "Dekripsi gagal dengan kesalahan tak dikenal!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_MESSAGE" = "Galat yang tak dikenal terjadi ketika mendekripsi pesan ini.\n\nPesan galat GPG:\n%@\nHarap hubungi kami, sertakan pesan galat GPG, pada https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_MESSAGE" = "Galat yang tak dikenal terjadi ketika mendekripsi pesan ini.\n\nPesan galat GPG:\n%@\nHarap hubungi kami, sertakan pesan galat GPG, pada https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "Kunci yang salah dipakai untuk mengenkripsi lampiran ini.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Lampiran ini tak bisa didekripsi, karena kunci publik yang salah dipakai untuk mengekripsinya.\n\nHarap hubungi kami pada https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Lampiran ini tak bisa didekripsi, karena kunci publik yang salah dipakai untuk mengekripsinya.\n\nHarap hubungi kami pada https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "Lampiran yang terenkripsi rusak.";
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "Lampiran yang terenkripsi rusak dan tak bisa didekripsi.\n\nSilakan minta ke pengirim untuk mengirim ulang pesan.";
@@ -96,16 +96,16 @@
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "Tanda tangan lampiran ini tak bisa diverifikasi, karena kunci yang dipakai untuk menandatangani tak ada dalam Ring Kunci GPG Anda.\n\nCarilah kunci dengan ID %@ dalam GPG Keychain dan imporlah untuk memverifikasi lampiran.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_TITLE" = "Tanda tangan lampiran dibuat dengan algoritma yang tak didukung.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Lampiran ini tak bisa diverifikasi, karena kunci tanda tangan dibuat dengan algoritma yang tak didukung.\n\nHarap hubungi kami di https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Lampiran ini tak bisa diverifikasi, karena kunci tanda tangan dibuat dengan algoritma yang tak didukung.\n\nHarap hubungi kami di https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "PERHATIAN: Tanda tangan lampiran ini tak valid!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "PERHATIAN: Lampiran ini mungkin telah diubah setelah tanda tangan dibuat.\n\nHarap hubungi pengirim untuk memastikan isi lampiran cocok dengan aslinya.\n\nHarap hubungi kami pada https://gpgtools.tenderapp.com bila Anda yakin bahwa lampiran tak diubah.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "PERHATIAN: Lampiran ini mungkin telah diubah setelah tanda tangan dibuat.\n\nHarap hubungi pengirim untuk memastikan isi lampiran cocok dengan aslinya.\n\nHarap hubungi kami pada https://github.com/Free-GPGMail/Free-GPGMail/issues bila Anda yakin bahwa lampiran tak diubah.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_TITLE" = "Verifikasi tanda tangan gagal dengan galat tak dikenal!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_MESSAGE" = "Terjadi galat yang tak dikenal ketika verifikasi tanda tangan lampiran ini.\n\nMohon kontak kami di https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_MESSAGE" = "Terjadi galat yang tak dikenal ketika verifikasi tanda tangan lampiran ini.\n\nMohon kontak kami di https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "Galat data tanda tangan!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Tanda tangan lampiran ini tak valid dan tak bisa diverifikasi.\n\nHarap kontak kami di https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Tanda tangan lampiran ini tak valid dan tak bisa diverifikasi.\n\nHarap kontak kami di https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_KEY_EXPIRED_ERROR_TITLE" = "Kunci dari tanda tangan ini kedaluarsa.";
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_KEY_EXPIRED_ERROR_MESSAGE" = "PERHATIAN: Kunci yang dipakai untuk menandatangani lampiran ini kedaluarsa.\n\nAnda dapat mencoba menyegarkan kunci dengan ID %@ dalam GPG Keychain dan menanyakan ke pengirim mengapa kunci kedaluarsa.";
@@ -144,8 +144,8 @@
 "MESSAGE_VIEW_PGP_PART_SIGNED" = "Ditandatangani";
 "MESSAGE_VIEW_PGP_PART" = "Bagian PGP";
 
-/* GPG Mail Preferences strings. */
-"GPG_STATUS_NO_ERROR_TITLE" = "GPG Mail siap";
+/* Free-GPGMail Preferences strings. */
+"GPG_STATUS_NO_ERROR_TITLE" = "Free-GPGMail siap";
 "GPG_STATUS_NOT_FOUND_TITLE" = "Tidak ditemukan MacGPG, pasang ulang GPG Suite";
 "GPG_STATUS_NOT_FOUND_TOOLTIP" = "Klik gelembung indikator untuk informasi lebih lanjut";
 "GPG_STATUS_OTHER_ERROR_TITLE" = "Masalah ditemukan, klik gelembung indikator untuk info lebih lanjut";
@@ -157,9 +157,9 @@
 "DISABLE_ENCRYPT_DRAFTS_CANCEL" = "Batal";
 
 
-/* Multiple GPG Mail installations. */
-"GPGMAIL_MULTIPLE_INSTALLATIONS_TITLE" = "Menemukan instalasi berganda dari GPG Mail!";
-"GPGMAIL_MULTIPLE_INSTALLATIONS_MESSAGE" = "GPG Mail mendeteksi instalasi berganda dalam lokasi-lokasi berikut yang akan mengarah ke crash seketika:\n\n%@\n\nHarap hapus GPGMail.mailbundle dalam satu dari lokasi-lokasi tersebut dan mulai ulang Mail.\n";
+/* Multiple Free-GPGMail installations. */
+"GPGMAIL_MULTIPLE_INSTALLATIONS_TITLE" = "Menemukan instalasi berganda dari Free-GPGMail!";
+"GPGMAIL_MULTIPLE_INSTALLATIONS_MESSAGE" = "Free-GPGMail mendeteksi instalasi berganda dalam lokasi-lokasi berikut yang akan mengarah ke crash seketika:\n\n%@\n\nHarap hapus GPGMail.mailbundle dalam satu dari lokasi-lokasi tersebut dan mulai ulang Mail.\n";
 "GPGMAIL_MULTIPLE_INSTALLATIONS_BUTTON" = "Keluar Mail";
 
 /* No Libmacgpg. */
@@ -167,12 +167,12 @@
 "LIBMACGPG_NOT_FOUND_MESSAGE" = "Libmacgpg tidak ditemukan pada sistem Anda. Harap unduh dan pasang GPG Suite dari https://www.gpgtools.org.";
 
 /* Code signature invalid */
-CODE_SIGN_ERROR_TITLE = "Seseorang meretas instalasi GPG Mail Anda!";
-CODE_SIGN_ERROR_MESSAGE = "Agar Anda tetap aman, GPG Mail tidak akan dimuat!\n\nHarap pasang ulang GPG Suite dari https://gpgtools.org agar yakin bahwa Anda punya versi asli dari kami!";
+CODE_SIGN_ERROR_TITLE = "Seseorang meretas instalasi Free-GPGMail Anda!";
+CODE_SIGN_ERROR_MESSAGE = "Agar Anda tetap aman, Free-GPGMail tidak akan dimuat!\n\nHarap pasang ulang GPG Suite dari https://gpgtools.org agar yakin bahwa Anda punya versi asli dari kami!";
 
 /* GPGMailGPGMailBundle.defaults can't be loaded */
-NO_DEFAULTS_TITLE = "Tidak bisa memuat parameter baku GPG Mail!";
-NO_DEFAULTS_MESSAGE = "GPG Mail tidak bekerja seperti yang diharapkan.\n\nHarap unduh dan pasang ulang GPG Suite dari https://gpgtools.org\n\nApabila masalah ini tetap ada, harap hubungi kami di https://gpgtools.tenderapp.com/.";
+NO_DEFAULTS_TITLE = "Tidak bisa memuat parameter baku Free-GPGMail!";
+NO_DEFAULTS_MESSAGE = "Free-GPGMail tidak bekerja seperti yang diharapkan.\n\nHarap unduh dan pasang ulang GPG Suite dari https://gpgtools.org\n\nApabila masalah ini tetap ada, harap hubungi kami di https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 /* Errors while trying to sign a message. */
 "MESSAGE_SIGNING_ERROR_NO_PINENTRY_TITLE" = "Menandatangani pesan Anda gagal karena pinentry yang rusak!";
@@ -185,15 +185,15 @@ NO_DEFAULTS_MESSAGE = "GPG Mail tidak bekerja seperti yang diharapkan.\n\nHarap 
 "MESSAGE_SIGNING_ERROR_AGENT_ERROR_DESCRIPTION" = "Tidak mungkin berbicara dengan agen GPG untuk meminta kata sandi Anda.\n\nUntuk memperbaiki masalah ini, pasang ulang GPG Suite dari https://gpgtools.org.";
 
 "MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_TITLE" = "Penandatanganan pesan Anda gagal karena galat yang tak dikenal telah terjadi";
-"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Sayang sekali GPG Mail tak bisa menangani galat pada titik ini.";
+"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Sayang sekali Free-GPGMail tak bisa menangani galat pada titik ini.";
 
 "MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_TITLE" = "Penyandian pesan Anda gagal karena kesalahan yang tak dikenal telah terjadi";
-"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Sayang sekali GPG Mail tak bisa menangani galat pada titik ini.";
+"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Sayang sekali Free-GPGMail tak bisa menangani galat pada titik ini.";
 
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_TITLE" = "Anda terlalu banyak memasukkan frasa sandi yang salah.";
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_DESCRIPTION" = "Penandatanganan pesan Anda digugurkan karena Anda memasukkan sandi yang salah 3 kali.";
 
-"CONTACT_GPGTOOLS_WITH_INFO_MESSAGE" = "\n\nBila masalah Anda tetap bertahan, harap kontak kami pada https://gpgtools.tenderapp.com dengan deskripsi galat berikut:\n\n%@";
+"CONTACT_GPGTOOLS_WITH_INFO_MESSAGE" = "\n\nBila masalah Anda tetap bertahan, harap kontak kami pada https://github.com/Free-GPGMail/Free-GPGMail/issues dengan deskripsi galat berikut:\n\n%@";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_TITLE" = "Anda menggugurkan dekripsi pesan";
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "Pesan tak dapat didekripsi karena Anda membatalkan permintaan sandi.";
@@ -202,22 +202,22 @@ NO_DEFAULTS_MESSAGE = "GPG Mail tidak bekerja seperti yang diharapkan.\n\nHarap 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "Lampiran tak bisa didekripsi karena Anda membatalkan permintaan sandi.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite tidak bekerja seperti yang diharapkan";
-"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Mendekripsi pesan gagal.\n\nHarap pasang ulang GPG Suite dari https://gpgtools.org\n\nApabila masalah ini tetap ada, harap hubungi kami di https://gpgtools.tenderapp.com/ dan sertakan informasi bahwa layanan xpc tidak bekerja dengan benar.";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Mendekripsi pesan gagal.\n\nHarap pasang ulang GPG Suite dari https://gpgtools.org\n\nApabila masalah ini tetap ada, harap hubungi kami di https://github.com/Free-GPGMail/Free-GPGMail/issues dan sertakan informasi bahwa layanan xpc tidak bekerja dengan benar.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite tidak bekerja seperti yang diharapkan";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Mendekripsi lampiran gagal.\n\nHarap pasang ulang GPG Suite dari https://gpgtools.org\n\nApabila masalah ini tetap ada, harap hubungi kami di https://gpgtools.tenderapp.com/ dan sertakan informasi bahwa layanan xpc tidak bekerja dengan benar.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Mendekripsi lampiran gagal.\n\nHarap pasang ulang GPG Suite dari https://gpgtools.org\n\nApabila masalah ini tetap ada, harap hubungi kami di https://github.com/Free-GPGMail/Free-GPGMail/issues dan sertakan informasi bahwa layanan xpc tidak bekerja dengan benar.";
 
 "MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite tidak bekerja seperti yang diharapkan";
-"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Verifikasi pesan gagal.\n\nHarap pasang ulang GPG Suite dari https://gpgtools.org\n\nApabila masalah ini tetap ada, harap hubungi kami di https://gpgtools.tenderapp.com/ dan sertakan informasi bahwa layanan xpc tidak bekerja dengan benar.";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Verifikasi pesan gagal.\n\nHarap pasang ulang GPG Suite dari https://gpgtools.org\n\nApabila masalah ini tetap ada, harap hubungi kami di https://github.com/Free-GPGMail/Free-GPGMail/issues dan sertakan informasi bahwa layanan xpc tidak bekerja dengan benar.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite tidak bekerja seperti yang diharapkan";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Verifikasi lampiran gagal.\n\nHarap pasang ulang GPG Suite dari https://gpgtools.org\n\nApabila masalah ini tetap ada, harap hubungi kami di https://gpgtools.tenderapp.com/ dan sertakan informasi bahwa layanan xpc tidak bekerja dengan benar.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Verifikasi lampiran gagal.\n\nHarap pasang ulang GPG Suite dari https://gpgtools.org\n\nApabila masalah ini tetap ada, harap hubungi kami di https://github.com/Free-GPGMail/Free-GPGMail/issues dan sertakan informasi bahwa layanan xpc tidak bekerja dengan benar.";
 
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_TITLE" = "Menandatangani pesan Anda gagal karena masalah selama permintaan kata sandi";
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "pinentry, alat yang bertanggung jawab meminta kata sandi Anda, tidak bekerja dengan benar.\n\nUntuk memperbaiki masalah ini, harap pasang ulang GPG Suite dari https://gpgtools.org.";
 
-"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Menandatangani pesan Anda gagal karena masalah dalam instalasi GPG Mail Anda.";
-"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Untuk memperbaiki masalah ini, harap pasang ulang GPG Suite dari https://gpgtools.org\n\nApabila masalah ini tetap ada, harap hubungi kami di https://gpgtools.tenderapp.com/ dan sertakan informasi bahwa layanan xpc tidak bekerja dengan benar.";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Menandatangani pesan Anda gagal karena masalah dalam instalasi Free-GPGMail Anda.";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Untuk memperbaiki masalah ini, harap pasang ulang GPG Suite dari https://gpgtools.org\n\nApabila masalah ini tetap ada, harap hubungi kami di https://github.com/Free-GPGMail/Free-GPGMail/issues dan sertakan informasi bahwa layanan xpc tidak bekerja dengan benar.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Dekripsi pesan gagal karena pinentry yang rusak!";
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "pinentry, alat yang bertanggung jawab meminta kata sandi Anda, tampaknya rusak.\n\nUntuk memperbaiki masalah ini, pasang ulang GPG Suite dari https://gpgtools.org.";
@@ -265,17 +265,17 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "Jangan tandatangani";
 
 /* Support Plan */
 "SUPPORT_PLAN_ACTIVATION_SUCCESS_TITLE" = "Langganan Dukungan Diaktifkan";
-"SUPPORT_PLAN_ACTIVATION_SUCCESS_MESSAGE" = "Terima kasih atas dukungan Anda\n\nKami berharap Anda menikmati memakai GPG Mail. Bila Anda punya pertanyaan, jangan ragu-ragu menghubungi kami melalui \"Laporkan Masalah\" dalam Surat > Preferensi > GPG Mail";
+"SUPPORT_PLAN_ACTIVATION_SUCCESS_MESSAGE" = "Terima kasih atas dukungan Anda\n\nKami berharap Anda menikmati memakai Free-GPGMail. Bila Anda punya pertanyaan, jangan ragu-ragu menghubungi kami melalui \"Laporkan Masalah\" dalam Surat > Preferensi > GPG Mail";
 "SUPPORT_PLAN_ACTIVATION_FAILED_TITLE" = "Aktivasi Langganan Dukungan Gagal";
 "SUPPORT_PLAN_ACTIVATION_FAILED_INPUT_INVALID" = "Kode aktivasi yang dimasukkan tidak valid. Harap periksa informasi yang dimasukkan dan coba lagi.";
 "SUPPORT_PLAN_ACTIVATION_FAILED_CONNECTTION_ERROR" = "Kami tidak bisa menyambung ke API paddle.com untuk memverifikasi kode aktivasi Anda.\nBila Anda memakai sebarang produk firewall macOS (firewall bawaan, Little Snitch, dsb.), harap izinkan koneksi ke paddle.com agar aktivasi bisa diselesaikan. Anda bisa memblokir sebarang koneksi lagi setelah aktivasi selesai.\n\nHarap hubungi kami pada business@gpgtools.org bila masalah tetap muncul.";
 "SUPPORT_PLAN_ACTIVATION_FAILED_CODE_INVALID" = "Kode aktivasi yang dimasukkan tidak valid.\nHarap hubungi kami di business@gpgtools.org bila Anda yakin bahwa Anda telah memasukkan kode Anda secara benar.";
 "SUPPORT_PLAN_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS" = "Kami menyesal mesti memberitahu Anda bahwa Anda telah melampaui cacah aktivasi yang diizinkan.\nHarap hubungi kami pada business@gpgtools.org, bila Anda percaya bahwa Anda mestinya masih punya sisa aktivasi.";
 "SUPPORT_PLAN_ACTIVATION_FAILED_GENERAL_ERROR" = "Sayang sekali telah terjadi kesalahan yang tidak dikenal. Harap coba lagi nanti atau pakai 'Preferensi Sistem > Keluarga GPG > Kirim Laporan' untuk menghubungi kami";
-"SUPPORT_PLAN_HEADER_EXPIRED" = "Uji pakai 30 hari GPG Mail Anda telah berakhir. Mengenkripsi, menandatangani, dan memverifikasi pesan tidak akan bisa dilakukan lagi. Namun mendekripsi akan selalu bisa dipakai.\nBelilah Rencana Dukungan GPG Mail untuk melanjutkan dengan fungsionalitas penuh.";
-"SUPPORT_PLAN_HEADER_TRIAL" = "Anda dapat mencoba GPG Mail secara bebas selama %@hari.\nAmankan surel Anda sekarang!";
-"SUPPORT_PLAN_HEADER_TRIAL_MORE" = "Anda bebas mencoba GPG Mail selama %@ hari lagi.\nAmankan surel Anda sekarang!";
-"SUPPORT_PLAN_DETAILS_MESSAGE" = "Bila Anda telah membeli langganan dukungan, aktifkan itu sekarang dan nikmati GPG Mail!";
+"SUPPORT_PLAN_HEADER_EXPIRED" = "Uji pakai 30 hari Free-GPGMail Anda telah berakhir. Mengenkripsi, menandatangani, dan memverifikasi pesan tidak akan bisa dilakukan lagi. Namun mendekripsi akan selalu bisa dipakai.\nBelilah Rencana Dukungan GPG Mail untuk melanjutkan dengan fungsionalitas penuh.";
+"SUPPORT_PLAN_HEADER_TRIAL" = "Anda dapat mencoba Free-GPGMail secara bebas selama %@hari.\nAmankan surel Anda sekarang!";
+"SUPPORT_PLAN_HEADER_TRIAL_MORE" = "Anda bebas mencoba Free-GPGMail selama %@ hari lagi.\nAmankan surel Anda sekarang!";
+"SUPPORT_PLAN_DETAILS_MESSAGE" = "Bila Anda telah membeli langganan dukungan, aktifkan itu sekarang dan nikmati Free-GPGMail!";
 "SUPPORT_PLAN_DETAILS_MESSAGE_HYPERLINK_PART" = "langganan dukungan";
 "SUPPORT_PLAN_BUY" = "Beli Sekarang";
 "SUPPORT_PLAN_CLOSE" = "Lanjutkan";
@@ -283,13 +283,13 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "Jangan tandatangani";
 "SUPPORT_PLAN_START_TRIAL" = "Mulai Uji Pakai";
 "SUPPORT_PLAN_BUY" = "Beli Sekarang";
 "SUPPORT_PLAN_ACTIVATE" = "Aktifkan";
-"SUPPORT_PLAN_TRIAL_EXPIRED_TITLE" = "Uji Pakai GPG Mail Telah Berakhir";
-"SUPPORT_PLAN_TRIAL_EXPIRED_MESSAGE" = "Tanpa Langganan Dukungan GPG Mail Anda masih akan bisa membaca sebarang surel Anda yang terenkripsi. Namun, Anda tidak bisa lagi menandatangani, mengenkripsi, atau memverifikasi surel.";
-"SUPPORT_PLAN_HEADER_WELCOME" = "Selamat Datang ke GPG Mail";
+"SUPPORT_PLAN_TRIAL_EXPIRED_TITLE" = "Uji Pakai Free-GPGMail Telah Berakhir";
+"SUPPORT_PLAN_TRIAL_EXPIRED_MESSAGE" = "Tanpa Langganan Dukungan Free-GPGMail Anda masih akan bisa membaca sebarang surel Anda yang terenkripsi. Namun, Anda tidak bisa lagi menandatangani, mengenkripsi, atau memverifikasi surel.";
+"SUPPORT_PLAN_HEADER_WELCOME" = "Selamat Datang ke Free-GPGMail";
 "SUPPORT_PLAN_EMAIL_LABEL" = "Surel";
 "SUPPORT_PLAN_LICENSE_LABEL" = "Kode Aktivasi";
 "SUPPORT_PLAN_GRAY_INFO" = "Kode aktivasi Anda dapat ditemukan dalam surel yang Anda terima setelah menyelesaikan pembelian.";
-"SUPPORT_PLAN_PROGRESS_LABEL" = "Mengaktifkan salinan GPG Mail Anda";
+"SUPPORT_PLAN_PROGRESS_LABEL" = "Mengaktifkan salinan Free-GPGMail Anda";
 
 
 

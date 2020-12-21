@@ -9,6 +9,7 @@ off by surprise, especially as it came as just a regular update.
 
 So while they are in their rights to charge and place DRM into their product, it
 is still a GPL licensed product which requires the source code to be available.
+
 This repository and project uses the open source code with the DRM code
 replaced so the product can be used without a license key, support plan or
 online activation.
@@ -19,6 +20,7 @@ versions, there are different versions of GPG Mail available:
 
 - `Free-GPGMail_3.mailbundle`
 - `Free-GPGMail_4.mailbundle`
+- `Free-GPGMail_5.mailbundle`
 
 Refer to the GPG Suite documentation for a list of supported macOS versions.
 
@@ -45,7 +47,7 @@ This build uses Xcode. Command line build tools must be installed.
         cd Source/
         make GPGMail_$n
 
-   where valid values for `$n` are `3` or `4`. This will create a
+   where valid values for `$n` are `3`, `4`, or `5`. This will create a
    `Free-GPGMail_$n.mailbundle` in `bundles/`. If you want to build bundles for
    all versions, just call `make`.
 
@@ -53,18 +55,18 @@ This build uses Xcode. Command line build tools must be installed.
 Installation
 ------------
 
-1. Install GPGSuite suite as normal. Make sure you use the correct version.
+1. Install GPG Suite suite as normal. Make sure you use the correct version.
 
 2. Find the freshly installed `GPGMailLoader.mailbundle` and delete it.
    (Look into `/Library/Mail/Bundles/`,
    `/Library/Application Support/GPGTools/GPGMail` or the user-specific directory
    `~/Library/Mail/Bundles/`)
 
-3. Build or download the modified mailbundle (version 3 or 4) and copy it
+3. Build or download the modified mailbundle and copy it
    to your user-specific Mail Bundle directory
 
         mkdir -p ~/Library/Mail/Bundles/
-        cp -r Free-GPGMail_4.mailbundle ~/Library/Mail/Bundles/
+        cp -r Free-GPGMail_5.mailbundle ~/Library/Mail/Bundles/
 
 4. Restart Mail.app, go to `Preferences -> General -> Manage Plugins`.
    - Enable the Free GPGMail Plugin.

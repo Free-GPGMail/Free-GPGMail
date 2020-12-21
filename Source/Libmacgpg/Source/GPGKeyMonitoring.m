@@ -378,7 +378,9 @@ static NSString * const keyMonitoringPong = @"GPGKeyMonitoringPong";
 		GPGKey *key = keys[i];
 		GPGKey *subkey = key == info.primaryKey ? nil : key;
 		
-		[gpgc setExpirationDateForSubkey:subkey fromKey:info.primaryKey daysToExpire:365 * 2];
+		[gpgc setExpirationDate:[NSDate dateWithTimeIntervalSinceNow:86400 * 365 * 2]
+					 forSubkeys:subkey ? @[subkey] : nil
+						  ofKey:info.primaryKey];
 		
 		if (gpgc.error) {
 			failed = YES;

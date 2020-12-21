@@ -2,7 +2,7 @@
 "VERSION: %@" = "Version: %@";
 
 /* PGP preferences panel name */
-"PGP_PREFERENCES" = "GPG Mail";
+"PGP_PREFERENCES" = "Free-GPGMail";
 
 /* Message Error Banner messages. */
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_TITLE" = "Kunde inte dekryptera PGP-meddelande.";
@@ -18,13 +18,13 @@
 "MESSAGE_BANNER_PGP_DECRYPT_SECKEY_ERROR_MESSAGE" = "Ingen av följande privata nycklar kunde hittas i din nyckelring (%@). Den privata nyckeln behövs för att dekryptera detta meddelande. \n\nKontrollera med avsändaren att de använt din rätta publika nyckel.\nKontrollera en säkerhetskopia av din nyckelring, och försök att importera den privata nyckeln därifrån.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_TITLE" = "Dekrypteringen misslyckades på grund av ett okänt fel!";
-"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Ett okänt fel inträffade när denna bilaga skulle dekrypteras.\n\nKontakta oss på https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Ett okänt fel inträffade när denna bilaga skulle dekrypteras.\n\nKontakta oss på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_TITLE" = "Dekrypteringen misslyckades på grund av ett okänt fel!";
-"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "Ett okänt fel uppstod när bilagan skulle dekrypteras.\n\nGPG-felmeddelande:\n%@\nKontakta oss på https://gpgtools.tenderapp.com, och inkludera GPG-felmeddelandet.";
+"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "Ett okänt fel uppstod när bilagan skulle dekrypteras.\n\nGPG-felmeddelande:\n%@\nKontakta oss på https://github.com/Free-GPGMail/Free-GPGMail/issues, och inkludera GPG-felmeddelandet.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "Fel nyckel användes för att kryptera meddelandet.";
-"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Detta meddelande kunde inte dekrypteras eftersom fel publik nyckel användes för att kryptera det. \n\nKontakta oss på https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Detta meddelande kunde inte dekrypteras eftersom fel publik nyckel användes för att kryptera det. \n\nKontakta oss på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "Det krypterade meddelandet är skadat.";
 "MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "Detta krypterade meddelande är skadat och kunde inte dekrypteras.\n\nBe avsändaren att skicka meddelandet igen.";
@@ -35,16 +35,16 @@
 "MESSAGE_BANNER_PGP_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "Detta meddelande kunde inte verifieras, eftersom nyckeln som användes för att signera inte finns i din GPG Keychain.\n\nSök efter nyckeln med ID %@ i GPG Keychain och importera den för att verifiera meddelandet.";
 
 "MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_TITLE" = "Meddelandesignaturen skapades med en algoritm som inte stöds.";
-"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Detta meddelande kunde inte verifieras, eftersom signaturen skapades med en algoritm som inte stöds.\n\nKontakta oss på https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Detta meddelande kunde inte verifieras, eftersom signaturen skapades med en algoritm som inte stöds.\n\nKontakta oss på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "OBS: Signaturen för detta meddelande är ogiltig!";
-"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "Detta meddelande kan ha ändrats efter att signaturen skapades. \n\nKontakta avsändaren för att kontrollera att meddelandets innehåll stämmer överens med originalets. \n\nKontakta oss på\nhttps://gpgtools.tenderapp.com/\nom du är säker på att meddelandet inte ändrats.";
+"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "Detta meddelande kan ha ändrats efter att signaturen skapades. \n\nKontakta avsändaren för att kontrollera att meddelandets innehåll stämmer överens med originalets. \n\nKontakta oss på\nhttps://github.com/Free-GPGMail/Free-GPGMail/issues/\nom du är säker på att meddelandet inte ändrats.";
 
 "MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_TITLE" = "Verifiering av meddelandesignaturen misslyckades på grund av ett okänt fel!";
-"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_MESSAGE" = "Ett okänt fel inträffade när signaturen för detta meddelande skulle verifieras.\n\nKontakta oss på https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_MESSAGE" = "Ett okänt fel inträffade när signaturen för detta meddelande skulle verifieras.\n\nKontakta oss på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "Datafel i meddelandets signatur!";
-"MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Detta meddelandes signatur är ogiltig och kunde inte verifieras.\n\nKontakta oss på https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Detta meddelandes signatur är ogiltig och kunde inte verifieras.\n\nKontakta oss på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_VERIFY_KEY_EXPIRED_ERROR_TITLE" = "Meddelandesignaturens nyckel har gått ut.";
 "MESSAGE_BANNER_PGP_VERIFY_KEY_EXPIRED_ERROR_MESSAGE" = "Nyckeln som användes för att signera detta meddelande har gått ut. \n\nDu kan försöka att uppdatera nyckeln med ID %@ i GPG Keychain och fråga avsändaren varför nyckeln gått ut.";
@@ -78,13 +78,13 @@
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SECKEY_ERROR_MESSAGE" = "Ingen av följande privata nycklar kunde hittas i din nyckelring (%@). Den privata nyckeln behövs för att dekryptera denna bilaga. \n\nKontrollera med avsändaren att de använt din rätta publika nyckel.\nKontrollera en säkerhetskopia av din nyckelring, och försök att importera den privata nyckeln därifrån.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_TITLE" = "Avkrypteringen misslyckades på grund av ett okänt fel!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Ett okänt fel inträffade när denna bilaga skulle dekrypteras.\n\nKontakta oss på https://gpgtools.tenderapp.com";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Ett okänt fel inträffade när denna bilaga skulle dekrypteras.\n\nKontakta oss på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_TITLE" = "Avkrypteringen misslyckades på grund av ett okänt fel!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_MESSAGE" = "Ett okänt fel uppstod när bilagan skulle dekrypteras.\n\nGPG-felmeddelande:\n%@\nKontakta oss på https://gpgtools.tenderapp.com, och inkludera GPG-felmeddelandet.\n\n";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_MESSAGE" = "Ett okänt fel uppstod när bilagan skulle dekrypteras.\n\nGPG-felmeddelande:\n%@\nKontakta oss på https://github.com/Free-GPGMail/Free-GPGMail/issues, och inkludera GPG-felmeddelandet.\n\n";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "Fel nyckel användes vid kryptering av bilagan.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Denna bilaga kunde inte dekrypteras eftersom fel publika nyckel användes för att kryptera den. \n\nKontakta oss på https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Denna bilaga kunde inte dekrypteras eftersom fel publika nyckel användes för att kryptera den. \n\nKontakta oss på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "Den krypterade bilagan är skadad.";
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "Den krypterade bilagan är skadad och kunde inte avkrypteras.\n\nBe avsändaren att skicka meddelandet igen.";
@@ -96,16 +96,16 @@
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "Bilagans signatur kunde inte verifieras, eftersom nyckel som användes för att signera inte finns i din GPG Keychain.\n\nSök efter nyckeln med ID %@ i GPG Keychain och importera den för att verifiera bilagan.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_TITLE" = "Bilagans signatur skapades med en algoritm som inte stöds.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Denna bilaga kunde inte verifieras eftersom signaturens nyckel skapades med en algoritm som inte stöds. \n\nKontakta oss på https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Denna bilaga kunde inte verifieras eftersom signaturens nyckel skapades med en algoritm som inte stöds. \n\nKontakta oss på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "OBS: Bilagans signatur är ogiltig!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "Bilagan kan ha ändrats efter att signaturen skapades. \n\nKontakta avsändaren för att kontrollera att bilagans innehåll stämmer överens med originalet. \n\nKontakta oss på\nhttps://gpgtools.tenderapp.com\nom du är säker på att bilagan inte har ändrats.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "Bilagan kan ha ändrats efter att signaturen skapades. \n\nKontakta avsändaren för att kontrollera att bilagans innehåll stämmer överens med originalet. \n\nKontakta oss på\nhttps://github.com/Free-GPGMail/Free-GPGMail/issues\nom du är säker på att bilagan inte har ändrats.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_TITLE" = "Verifieringen av signaturen misslyckades på grund av ett okänt fel!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_MESSAGE" = "Ett okänt fel inträffade när bilagans signatur skulle verifieras. \n\nKontakta oss på https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_MESSAGE" = "Ett okänt fel inträffade när bilagans signatur skulle verifieras. \n\nKontakta oss på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "Signatur-data felaktig!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Denna bilagas signatur är ogiltig och kunde inte verifieras. \n\nKontakta oss på https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Denna bilagas signatur är ogiltig och kunde inte verifieras. \n\nKontakta oss på https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_KEY_EXPIRED_ERROR_TITLE" = "Signaturens nyckel har upphört.";
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_KEY_EXPIRED_ERROR_MESSAGE" = "Nyckeln som använts för att signera denna bilaga har gått ut.\n\nDu kan försöka att uppdatera nyckeln med ID %@ i GPG Keychain och fråga avsändaren varför nyckeln gått ut.";
@@ -144,8 +144,8 @@
 "MESSAGE_VIEW_PGP_PART_SIGNED" = "Signerat";
 "MESSAGE_VIEW_PGP_PART" = "PGP-del";
 
-/* GPG Mail Preferences strings. */
-"GPG_STATUS_NO_ERROR_TITLE" = "GPG Mail är redo.";
+/* Free-GPGMail Preferences strings. */
+"GPG_STATUS_NO_ERROR_TITLE" = "Free-GPGMail är redo.";
 "GPG_STATUS_NOT_FOUND_TITLE" = "MacGPG hittades inte, installera om GPG Suite";
 "GPG_STATUS_NOT_FOUND_TOOLTIP" = "Klicka på indikatorbubblan för mer information";
 "GPG_STATUS_OTHER_ERROR_TITLE" = "Problem hittades, klicka på indikatorbubblan för mer information";
@@ -157,9 +157,9 @@
 "DISABLE_ENCRYPT_DRAFTS_CANCEL" = "Avbryt";
 
 
-/* Multiple GPG Mail installations. */
-"GPGMAIL_MULTIPLE_INSTALLATIONS_TITLE" = "Hittade flera installationer av GPG Mail!";
-"GPGMAIL_MULTIPLE_INSTALLATIONS_MESSAGE" = "GPG Mail upptäckte fler installationer på följande platser, och detta kommer att leda till omedelbar krasch:\n\n%@\n\nTa bort GPGMail.mailbundle på en av dessa platser och starta om Mail.\n";
+/* Multiple Free-GPGMail installations. */
+"GPGMAIL_MULTIPLE_INSTALLATIONS_TITLE" = "Hittade flera installationer av Free-GPGMail!";
+"GPGMAIL_MULTIPLE_INSTALLATIONS_MESSAGE" = "Free-GPGMail upptäckte fler installationer på följande platser, och detta kommer att leda till omedelbar krasch:\n\n%@\n\nTa bort GPGMail.mailbundle på en av dessa platser och starta om Mail.\n";
 "GPGMAIL_MULTIPLE_INSTALLATIONS_BUTTON" = "Avsluta Mail";
 
 /* No Libmacgpg. */
@@ -167,12 +167,12 @@
 "LIBMACGPG_NOT_FOUND_MESSAGE" = "Libmacgpg hittades inte på ditt system. Hämta och installera GPG Suite från https://www.gpgtools.org.";
 
 /* Code signature invalid */
-CODE_SIGN_ERROR_TITLE = "Någon har mixtrat med din installation av GPG Mail!";
-CODE_SIGN_ERROR_MESSAGE = "För att skydda dig kommer GPG Mail inte att läsas in! \n\nHämta och ominstallera den senaste versionen av GPG Suite från https://gpgtools.org för att vara säker på att du har en version som verkligen är från oss!";
+CODE_SIGN_ERROR_TITLE = "Någon har mixtrat med din installation av Free-GPGMail!";
+CODE_SIGN_ERROR_MESSAGE = "För att skydda dig kommer Free-GPGMail inte att läsas in! \n\nHämta och ominstallera den senaste versionen av GPG Suite från https://gpgtools.org för att vara säker på att du har en version som verkligen är från oss!";
 
 /* GPGMailGPGMailBundle.defaults can't be loaded */
-NO_DEFAULTS_TITLE = "Kunde inte läsa in standardinställningar för GPG Mail!";
-NO_DEFAULTS_MESSAGE = "GPG Mail fungerar inte som väntat. \n\nHämta och installera om GPG Suite från https://gpgtools.org \n\nKontakta oss på https://gpgtools.tenderapp.com om problemet skulle kvarstå.";
+NO_DEFAULTS_TITLE = "Kunde inte läsa in standardinställningar för Free-GPGMail!";
+NO_DEFAULTS_MESSAGE = "Free-GPGMail fungerar inte som väntat. \n\nHämta och installera om GPG Suite från https://gpgtools.org \n\nKontakta oss på https://github.com/Free-GPGMail/Free-GPGMail/issues om problemet skulle kvarstå.";
 
 /* Errors while trying to sign a message. */
 "MESSAGE_SIGNING_ERROR_NO_PINENTRY_TITLE" = "Det gick inte att dekryptera meddelandet eftersom PIN-inmatningen är defekt!";
@@ -185,15 +185,15 @@ NO_DEFAULTS_MESSAGE = "GPG Mail fungerar inte som väntat. \n\nHämta och instal
 "MESSAGE_SIGNING_ERROR_AGENT_ERROR_DESCRIPTION" = "Det gick inte att kommunicera med GPG-agenten för att begära ditt lösenord.\n\nFör att lösa detta, ominstallera GPG Suite från https://gpgtools.org.";
 
 "MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_TITLE" = "Signeringen av ditt meddelande misslyckads pga. ett okänt fel.";
-"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Tyvärr kan GPG Mail inte hantera detta fel just nu.";
+"MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Tyvärr kan Free-GPGMail inte hantera detta fel just nu.";
 
 "MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_TITLE" = "Krypteringen av ditt meddelande misslyckades pga. ett okänt fel.";
-"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Tyvärr kan GPG Mail inte hantera detta fel just nu.";
+"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Tyvärr kan Free-GPGMail inte hantera detta fel just nu.";
 
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_TITLE" = "Du angav fel lösenord för många gånger.";
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_DESCRIPTION" = "Signeringen av ditt meddelande avbröts eftersom du angav fel lösenord 3 gånger.";
 
-"CONTACT_GPGTOOLS_WITH_INFO_MESSAGE" = "\n\nOm ditt problem kvarstår, kontakta oss på https://gpgtools.tenderapp.com med följande felbeskrivning:\n\n%@";
+"CONTACT_GPGTOOLS_WITH_INFO_MESSAGE" = "\n\nOm ditt problem kvarstår, kontakta oss på https://github.com/Free-GPGMail/Free-GPGMail/issues med följande felbeskrivning:\n\n%@";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_TITLE" = "Du avbröt dekrypteringen av meddelandet.";
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "Meddelandet kunde inte dekrypteras eftersom du avbröt begäran efter lösenordet.";
@@ -202,22 +202,22 @@ NO_DEFAULTS_MESSAGE = "GPG Mail fungerar inte som väntat. \n\nHämta och instal
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "Bilagan kunde inte dekrypteras eftersom du avbröt begäran av lösenordet.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite fungerar inte som det ska";
-"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Meddelandet kunde inte dekrypteras. \n\nHämta och ominstallera GPG Suite från https://gpgtools.org\n\nKontakta oss på https://gpgtools.tenderapp.com/ om problemet skulle kvarstå, och inkludera informationen att \"xpc service\" inte fungerar ordentligt.";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Meddelandet kunde inte dekrypteras. \n\nHämta och ominstallera GPG Suite från https://gpgtools.org\n\nKontakta oss på https://github.com/Free-GPGMail/Free-GPGMail/issues om problemet skulle kvarstå, och inkludera informationen att \"xpc service\" inte fungerar ordentligt.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite fungerar inte som det ska";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Bilagan kunde inte dekrypteras. \n\nHämta och ominstallera GPG Suite från https://gpgtools.org.\n\nKontakta oss på https://gpgtools.tenderapp.com/ om problemet skulle kvarstå, och inkludera informationen att \"xpc service\" inte fungerar ordentligt.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Bilagan kunde inte dekrypteras. \n\nHämta och ominstallera GPG Suite från https://gpgtools.org.\n\nKontakta oss på https://github.com/Free-GPGMail/Free-GPGMail/issues om problemet skulle kvarstå, och inkludera informationen att \"xpc service\" inte fungerar ordentligt.";
 
 "MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite fungerar inte som det ska";
-"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Meddelandet kunde inte verifieras. \n\nHämta och ominstallera GPG Suite från https://gpgtools.org.\n\nKontakta oss på https://gpgtools.tenderapp.com/ om problemet skulle kvarstå, och inkludera informationen att \"xpc service\" inte fungerar ordentligt.";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Meddelandet kunde inte verifieras. \n\nHämta och ominstallera GPG Suite från https://gpgtools.org.\n\nKontakta oss på https://github.com/Free-GPGMail/Free-GPGMail/issues om problemet skulle kvarstå, och inkludera informationen att \"xpc service\" inte fungerar ordentligt.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite fungerar inte som det ska";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Bilagan kunde inte verifieras. \n\nHämta och ominstallera GPG Suite från https://gpgtools.org.\n\nKontakta oss på https://gpgtools.tenderapp.com/ om problemet skulle kvarstå, och inkludera informationen att \"xpc service\" inte fungerar ordentligt.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Bilagan kunde inte verifieras. \n\nHämta och ominstallera GPG Suite från https://gpgtools.org.\n\nKontakta oss på https://github.com/Free-GPGMail/Free-GPGMail/issues om problemet skulle kvarstå, och inkludera informationen att \"xpc service\" inte fungerar ordentligt.";
 
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_TITLE" = "Det gick inte att signera ditt meddelande då ett problem uppstod vid begäran av lösenordet";
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "PIN-inmatningens hjälpprogram som ansvarar för att begära ditt lösenord fungerar inte som det ska. \n\nLös detta problem genom att hämta och ominstallera GPG Suite från https://gpgtools.org";
 
-"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Det gick inte att signera ditt meddelande pga. ett fel i din GPG Mail-installation.";
-"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Lös detta problem genom att hämta och ominstallera GPG Suite från https://gpgtools.org.\n\nKontakta oss på https://gpgtools.tenderapp.com om problemet skulle kvarstå, och inkludera informationen att \"xpc service\" inte fungerar ordentligt.";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Det gick inte att signera ditt meddelande pga. ett fel i din Free-GPGMail-installation.";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Lös detta problem genom att hämta och ominstallera GPG Suite från https://gpgtools.org.\n\nKontakta oss på https://github.com/Free-GPGMail/Free-GPGMail/issues om problemet skulle kvarstå, och inkludera informationen att \"xpc service\" inte fungerar ordentligt.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Det gick inte att dekryptera meddelandet eftersom PIN-inmatningen är defekt";
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "PIN-inmatningens hjälpprogram som ansvarar för att begära ditt lösenord fungerar inte som det ska. \n\nLös detta problem genom att hämta och ominstallera GPG Suite från https://gpgtools.org";
@@ -265,17 +265,17 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "Signera inte";
 
 /* Support Plan */
 "SUPPORT_PLAN_ACTIVATION_SUCCESS_TITLE" = "Supportplan aktiverad";
-"SUPPORT_PLAN_ACTIVATION_SUCCESS_MESSAGE" = "Tack för ditt stöd!\n\nVi hoppas att du kommer att tycka om GPG Mail. Om du skulle ha några frågor, tveka inte att kontakta oss via \"Rapportera problem\" i Mail › Inställningar › GPG Mail";
+"SUPPORT_PLAN_ACTIVATION_SUCCESS_MESSAGE" = "Tack för ditt stöd!\n\nVi hoppas att du kommer att tycka om Free-GPGMail. Om du skulle ha några frågor, tveka inte att kontakta oss via \"Rapportera problem\" i Mail › Inställningar › GPG Mail";
 "SUPPORT_PLAN_ACTIVATION_FAILED_TITLE" = "Aktivering av supportplan misslyckades";
 "SUPPORT_PLAN_ACTIVATION_FAILED_INPUT_INVALID" = "Den angivna aktiveringskoden är ogiltig. Kontrollera den angivna informationen och försök igen.";
 "SUPPORT_PLAN_ACTIVATION_FAILED_CONNECTTION_ERROR" = "We were unable to connect to the paddle.com API to verify your activation code.\nIf you are using any macOS firewall product (buil-in firewall, Little Snitch, etc.), please allow connections to paddle.com for the activation to complete. You can block any connections again once the activation is completed.\n\nPlease contact us at business@gpgtools.org if the problem persists.";
 "SUPPORT_PLAN_ACTIVATION_FAILED_CODE_INVALID" = "Den angivna aktiveringskoden är ogiltig.\nKontakta oss på business@gpgtools.org om du är säker på att du angivit rätt kod.";
 "SUPPORT_PLAN_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS" = "We are very sorry to inform you that you have exceeded the allowed number of activations.\nPlease contact us at business@gpgtools.org, if you believe that you should still have activations left.";
 "SUPPORT_PLAN_ACTIVATION_FAILED_GENERAL_ERROR" = "Tyvärr har ett okänt fel inträffat. Försök igen senare eller använd 'Systeminställningar › GPG Suite › Skicka rapport' för att kontakta oss";
-"SUPPORT_PLAN_HEADER_EXPIRED" = "Your 30-day-trial of GPG Mail has expired. Encrypting, signing and verifying messages will stop to work. Decrypting however will always continue to work.\nPurchase GPG Mail Support Plan to continue with full functionality.";
-"SUPPORT_PLAN_HEADER_TRIAL" = "Du kan testa GPG Mail gratis i %@ dagar.\nSkydda din e-post nu!";
-"SUPPORT_PLAN_HEADER_TRIAL_MORE" = "Du kan testa GPG Mail gratis i ytterligare %@ dagar.\nSkydda din e-post nu!";
-"SUPPORT_PLAN_DETAILS_MESSAGE" = "Om du redan har köpt en supportplan, aktivera den nu och njut av GPG Mail!";
+"SUPPORT_PLAN_HEADER_EXPIRED" = "Your 30-day-trial of Free-GPGMail has expired. Encrypting, signing and verifying messages will stop to work. Decrypting however will always continue to work.\nPurchase GPG Mail Support Plan to continue with full functionality.";
+"SUPPORT_PLAN_HEADER_TRIAL" = "Du kan testa Free-GPGMail gratis i %@ dagar.\nSkydda din e-post nu!";
+"SUPPORT_PLAN_HEADER_TRIAL_MORE" = "Du kan testa Free-GPGMail gratis i ytterligare %@ dagar.\nSkydda din e-post nu!";
+"SUPPORT_PLAN_DETAILS_MESSAGE" = "Om du redan har köpt en supportplan, aktivera den nu och njut av Free-GPGMail!";
 "SUPPORT_PLAN_DETAILS_MESSAGE_HYPERLINK_PART" = "supportplan";
 "SUPPORT_PLAN_BUY" = "Köp nu";
 "SUPPORT_PLAN_CLOSE" = "Fortsätt";
@@ -283,13 +283,13 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "Signera inte";
 "SUPPORT_PLAN_START_TRIAL" = "Starta testperiod";
 "SUPPORT_PLAN_BUY" = "Köp nu";
 "SUPPORT_PLAN_ACTIVATE" = "Aktivera";
-"SUPPORT_PLAN_TRIAL_EXPIRED_TITLE" = "Testperioden för GPG Mail har löpt ut";
-"SUPPORT_PLAN_TRIAL_EXPIRED_MESSAGE" = "Utan en aktiv supportplan för GPG Mail kan du fortfarande läsa all din krypterade e-post. Du kan dock inte signera, kryptera eller verifiera e-postmeddelanden.";
-"SUPPORT_PLAN_HEADER_WELCOME" = "Välkommen till GPG Mail";
+"SUPPORT_PLAN_TRIAL_EXPIRED_TITLE" = "Testperioden för Free-GPGMail har löpt ut";
+"SUPPORT_PLAN_TRIAL_EXPIRED_MESSAGE" = "Utan en aktiv supportplan för Free-GPGMail kan du fortfarande läsa all din krypterade e-post. Du kan dock inte signera, kryptera eller verifiera e-postmeddelanden.";
+"SUPPORT_PLAN_HEADER_WELCOME" = "Välkommen till Free-GPGMail";
 "SUPPORT_PLAN_EMAIL_LABEL" = "E-post";
 "SUPPORT_PLAN_LICENSE_LABEL" = "Aktiveringskod";
 "SUPPORT_PLAN_GRAY_INFO" = "Din aktiveringskod kan hittas i e-postmeddelandet som du får efter att du slutfört ditt köp.";
-"SUPPORT_PLAN_PROGRESS_LABEL" = "Aktiverar ditt exemplar av GPG Mail";
+"SUPPORT_PLAN_PROGRESS_LABEL" = "Aktiverar ditt exemplar av Free-GPGMail";
 
 
 

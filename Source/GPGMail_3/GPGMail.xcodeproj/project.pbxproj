@@ -2118,7 +2118,7 @@
 				1B1466CE237379310021085C /* GMSPCommon.m */,
 			);
 			name = GMSupportPlan;
-			path = Dependencies/GMSupportPlan;
+			path = Dependencies/GMNoSupportPlan;
 			sourceTree = SOURCE_ROOT;
 		};
 		1B38AD151F1187E400A21F27 /* HighSierra */ = {

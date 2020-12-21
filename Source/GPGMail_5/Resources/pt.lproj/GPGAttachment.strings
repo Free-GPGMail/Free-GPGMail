@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "Falha ao verificar a assinatura.";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "A chave pública para verificar a assinatura deste anexo não está nas suas chaves.\n\nUse o GPG Keychain para transferir a chave pública %@.";
+"DECRYPT_ERROR_GENERAL_TITLE" = "Falha ao descriptografar o anexo.";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "A chave secreta para descriptografar este anexo não está nas suas chaves.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "O anexo foi descriptografado corretamente.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "Clique duas vezes em um anexo ao visualizar a mensagem para abri‑lo.";

@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "Het verifiëren van handtekening is niet gelukt.";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "De publieke sleutel voor de ondertekening van deze bevestiging te controleren is niet in de GPG sleutelbos.\n\nDownload de publieke sleutel %@ met behulp van GPG Keychain.";
+"DECRYPT_ERROR_GENERAL_TITLE" = "Het ontsleutelen van de bijlage is niet gelukt.";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "De geheime sleutel om deze bijlage te ontsleutelen staat niet in de GPG Sleutelbos";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "De bijlage is succesvol ontsleuteld.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "Open een bijlage in de berichtweergave door er dubbel op te klikken.";

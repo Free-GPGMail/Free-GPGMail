@@ -68,18 +68,15 @@ Installation
         mkdir -p ~/Library/Mail/Bundles/
         cp -r Free-GPGMail_5.mailbundle ~/Library/Mail/Bundles/
 
-4. On macOS 11.0 Big Sur and later, disable Gatekeeper
+4. On macOS 11.0 Big Sur and later, add a Gatekeeper rule to allow the custom
+   mailbundle
 
-        sudo spctl --master-disable;
+        sudo spctl --add ~/Library/Mail/Bundles/Free-GPGMail_5.mailbundle
 
 5. Restart Mail.app, go to `Preferences -> General -> Manage Plugins`.
    - Enable the Free GPGMail Plugin.
-   
-6. On macOS 11.0 Big Sur and later, re-enable Gatekeeper
 
-        sudo spctl --master-enable.
-
-7. Restart Mail.app. Some users also report that a reboot is necessary.
+6. Apply and Restart Mail.app.
 
 
 Bug Reports and User Support

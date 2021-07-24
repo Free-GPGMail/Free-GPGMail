@@ -17,10 +17,11 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest]
-        gpgmail: [GPGMail_3, GPGMail_4]
-        include:
-          - os: macos-11
-            gpgmail: GPGMail_5
+        gpgmail: [GPGMail_3, GPGMail_4, GPGMail_5]
+#        include:
+#          # macos-11 is a private preview on Github Actions
+#          - os: macos-11
+#            gpgmail: GPGMail_5
 
 
     steps:

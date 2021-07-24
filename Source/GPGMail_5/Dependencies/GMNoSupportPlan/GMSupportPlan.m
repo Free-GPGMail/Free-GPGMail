@@ -180,7 +180,6 @@ NSString * const GMSupportPlanVersionPrefix = @"org.gpgtools.gpgmail";
 }
 
 - (NSArray *)eligibleVersions {
-    - (NSArray *)eligibleVersions {
     for(NSString *eligibleVersion in [self.activation[@"eligible_apps"] allValues]) {
         NSString *version = [eligibleVersion stringByReplacingOccurrencesOfString:@"org.gpgtools.gpgmail" withString:@""];
         if(![version length]) {

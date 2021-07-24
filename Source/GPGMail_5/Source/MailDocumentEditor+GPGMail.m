@@ -35,7 +35,6 @@
 //#import <MailDocumentEditor.h>
 //#import <MailNotificationCenter.h>
 #import "GMSecurityMethodAccessoryView.h"
-#import "NSWindow+GPGMail.h"
 #import "Message+GPGMail.h"
 #import "HeadersEditor+GPGMail.h"
 #import "MailDocumentEditor+GPGMail.h"
@@ -58,18 +57,6 @@ NSString * const kComposeViewControllerPreventAutoSave = @"ComposeViewController
 
 @implementation MailDocumentEditor_GPGMail
 
-- (void)didExitFullScreen:(NSNotification *)notification {
-    [self performSelectorOnMainThread:@selector(configureSecurityMethodAccessoryViewForNormalMode) withObject:nil waitUntilDone:NO];
-}
-
-- (void)configureSecurityMethodAccessoryViewForNormalMode {
-    if(![[GPGMailBundle sharedInstance] hasActiveContractOrActiveTrial]) {
-        return;
-    }
-	GMSecurityMethodAccessoryView *accessoryView = [self securityMethodAccessoryView]; //[self getIvar:@"SecurityMethodHintAccessoryView"];
-    [accessoryView configureForWindow:[self valueForKey:@"_window"]];
-}
-
 - (void)setSecurityMethodAccessoryView:(GMSecurityMethodAccessoryView *)securityMethodAccessoryView {
 	[self setIvar:@"SecurityMethodAccessoryView" value:securityMethodAccessoryView];
 }
@@ -87,7 +74,10 @@ NSString * const kComposeViewControllerPreventAutoSave = @"ComposeViewController
     GMComposeMessagePreferredSecurityProperties *securityProperties = ((ComposeBackEnd_GPGMail *)MAIL_SELF(self).backEnd).preferredSecurityProperties;
     
     // Once the security method has been set by the user, it MUST never be changed.
-    if(securityProperties.userDidChooseSecurityMethod != YES && accessoryView.previousSecurityMethod != securityProperties.securityMethod) {
+	// Bug #1087: If the sender is changed and a keys for that sender are available
+	//            for the security method not currently selected, the security method
+	//			  doesn't automatically update.
+    if(securityProperties.userDidChooseSecurityMethod != YES && accessoryView.securityMethod != securityProperties.securityMethod) {
         accessoryView.securityMethod = securityProperties.securityMethod;
     }
     accessoryView.active = securityProperties.shouldSignMessage || securityProperties.shouldEncryptMessage;
@@ -105,9 +95,6 @@ NSString * const kComposeViewControllerPreventAutoSave = @"ComposeViewController
         [self MABackEndDidLoadInitialContent:content];
         return;
     }
-	if(![GPGMailBundle isElCapitan]) {
-		[(NSNotificationCenter *)[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didExitFullScreen:) name:@"NSWindowDidExitFullScreenNotification" object:nil];
-	}
 	
 	// Setup security method hint accessory view in top right corner of the window.
 	[self setupSecurityMethodHintAccessoryView];
@@ -126,9 +113,6 @@ NSString * const kComposeViewControllerPreventAutoSave = @"ComposeViewController
     if(![[GPGMailBundle sharedInstance] hasActiveContractOrActiveTrial]) {
         [self MABackEndDidLoadInitialContent:content mayUseDarkAppearance:mayUseDarkAppearance];
         return;
-    }
-    if(![GPGMailBundle isElCapitan]) {
-        [(NSNotificationCenter *)[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didExitFullScreen:) name:@"NSWindowDidExitFullScreenNotification" object:nil];
     }
 
     // Setup security method hint accessory view in top right corner of the window.
@@ -151,11 +135,6 @@ NSString * const kComposeViewControllerPreventAutoSave = @"ComposeViewController
     GMSecurityMethodAccessoryView *accessoryView = nil;
 	accessoryView = [self securityMethodAccessoryView];
 	accessoryView.delegate = self;
-}
-
-- (void)hideSecurityMethodAccessoryView {
-	GMSecurityMethodAccessoryView *accessoryView = [self securityMethodAccessoryView]; //[self getIvar:@"SecurityMethodHintAccessoryView"];
-    accessoryView.hidden = YES;
 }
 
 - (void)securityMethodAccessoryView:(GMSecurityMethodAccessoryView *)accessoryView didChangeSecurityMethod:(GPGMAIL_SECURITY_METHOD)securityMethod {
@@ -443,6 +422,17 @@ NSString * const kComposeViewControllerPreventAutoSave = @"ComposeViewController
     // on what security method to use, and the status of the security buttons.
     GMComposeMessagePreferredSecurityProperties *preferredSecurityProperties = [(ComposeBackEnd_GPGMail *)[MAIL_SELF(self) backEnd] preferredSecurityProperties];
     [preferredSecurityProperties updateWithHintsFromComposeBackEnd:[MAIL_SELF(self) backEnd]];
+
+	// Block any remote content from loading, if the message being replied to, or being
+	// forwarded was encrypted.
+	// Ref: #981, #1086
+	ComposeBackEnd *backEnd = [MAIL_SELF(self) backEnd];
+	GMMessageSecurityFeatures *securityFeatures = [(Message_GPGMail *)[backEnd originalMessage] securityFeatures];
+    BOOL referenceMessageIsEncrypted = securityFeatures.PGPEncrypted || securityFeatures.PGPPartlyEncrypted;
+	
+	if(referenceMessageIsEncrypted || preferredSecurityProperties.referenceMessageIsEncrypted) {
+		[[MAIL_SELF(self) backEnd] setShouldDownloadRemoteAttachments:NO];
+	}
 }
 
 #pragma mark

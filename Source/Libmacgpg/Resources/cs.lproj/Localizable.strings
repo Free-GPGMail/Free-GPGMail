@@ -130,9 +130,9 @@ UpdaterNotWorking_Title = "Aktualizační systém GPG Suite nepracuje správně!
 UpdaterNotWorking_Msg = "Zkopírujte a nainstalujte prosím nejnovější verzi GPG Suite z umístění https://gpgtools.org";
 
 
-SwitchToOldKeyserver_Title = "Warning: You are about to switch the key server";
-SwitchToOldKeyserver_Msg = "Switching to the old key servers will lower the quality of search results. While keys.openpgp.org allows verification of the email address and only then will show the email in search results, the old key servers do not support that mechanism.\n\nWe recommend to keep using keys.openpgp.org\n\nDo you really want to switch the key server?";
+SwitchToOldKeyserver_Title = "Varování: Chystáte se přepnout klíčový server";
+SwitchToOldKeyserver_Msg = "Přepnutí na staré klíčové servery sníží kvalitu výsledků vyhledávání. Zatímco keys.openpgp.org umožňuje zobrazení pouze ověřených e-mailových adres, staré klíčové servery tento mechanismus nepodporují.\n\nDoporučujeme používat keys.openpgp.org\n\nOpravdu chcete přepnout klíčový server?";
 SwitchToOldKeyserver_No = "Zrušit";
-SwitchToOldKeyserver_Yes = "Switch to old Key Server";
+SwitchToOldKeyserver_Yes = "Přepnout na starý klíčový server";
 
 

@@ -34,10 +34,12 @@
 #import "Message+GPGMail.h"
 #import "GMMessageSecurityFeatures.h"
 #import "MUIWebDocument.h"
+#import "MCMessageHeaders.h"
 
 #define MAIL_SELF ((ConversationMember *)self)
 
 extern NSString * const kMessageSecurityFeaturesKey;
+extern NSString * const kGMComposeMessagePreferredSecurityPropertiesHeaderKeyReferenceMessageEncrypted;
 
 @interface MUIWebDocument (macOS_10_14_1)
 
@@ -65,13 +67,26 @@ extern NSString * const kMessageSecurityFeaturesKey;
 //    [self MA_reloadSecurityProperties];
 }
 
-- (void)MASetWebDocument:(MUIWebDocument *)webDocument {
-    [self MASetWebDocument:webDocument];
-    if(!webDocument) {
-        return;
-    }
-    // Bug #981: Prevent Mail from loading any remote content if a message is encrypted
+- (long long)MAMessageContentBlockingReason {
+	// Bug #981: Prevent Mail from loading any remote content if a message is encrypted
     //
+	// Update 2021-07-05
+	// -----------------
+	// In an older version of GPG Mail the remote content blocking was handled
+	// in -[ConversationMember setWebDocument:] by adjusting the values of
+	// -[WebDocument messageContentTypeToBlock] and -[WebDocument hasBlockedMessageContent].
+	//
+	// Further investigation why remote content blocking didn't always work
+	// reliably on macOS Big Sur (#1086), revealed however that the most important
+	// deciding factor is the content blocking reason which renders the other values
+	// obsolete.
+	//
+	// To make sure that the user is never able to manually allow the remote content to
+	// be loaded, the banner responsible for that is always hidden. Have a look at
+	// LoadBlockedMessageContentBannerViewController.
+	//
+	// Original description
+	// --------------------
     // A maliciously crafted email could otherwise exploit an error in Apple's mime parser
     // to exfiltrate the decrypted content, by using a non-closed HTML tag (for example img)
     // which is started in one mime part and continued in a different one, with a PGP/MIME
@@ -111,109 +126,42 @@ extern NSString * const kMessageSecurityFeaturesKey;
     // Lucky for us, since we don't want the load remote content banner to be displayed
     // for encrypted messages at all, we don't have to care about its faulty behavior,
     // but simply make sure, it is not displayed for encrypted messages.
-    GMMessageSecurityFeatures *securityFeatures = [(Message_GPGMail *)[MAIL_SELF originalMessage] securityFeatures];
-    BOOL isPGPEncrypted = securityFeatures.PGPEncrypted || securityFeatures.PGPPartlyEncrypted;
-    BOOL isEncrypted = [webDocument isEncrypted] || isPGPEncrypted;
 
-    [webDocument setIvar:kMessageSecurityFeaturesKey value:securityFeatures];
-
-    DebugLog(@"Is document encrypted?: %@", isEncrypted ? @"YES" : @"NO");
-    if(isEncrypted) {
-		if([webDocument respondsToSelector:@selector(setBlockRemoteContent:)]) {
-			[webDocument setBlockRemoteContent:YES];
-			// Apple's implementation allows the user to choose whether or not
-			// they want to load the remote content. We won't allow that, unless
-			// a specific default is set. In order for the "load remote content"
-			// button not to be displayed, the -[MUIWebDocument hasBlockedRemoteContent]
-			// property is set to NO.
-			[webDocument setHasBlockedRemoteContent:NO];
-		}
-		else if([webDocument respondsToSelector:@selector(setHasBlockedMessageContent:)]) {
-            // From macOS Mojave 10.14.1b3, the Mail team has decided to rename these
-            // methods, even though for now they are still doing the exact same thing...
-            // Content-Type 1 means that the message contains encrypted content and should
-            // thus make sure that no remote content is loaded.
-            // Interestingly enough Content-Type 2 seems to block the message from loading at all. This one is going to be interesting.
-            if(isPGPEncrypted) {
-                DebugLog(@"Setting message content type to block to 1");
-                [webDocument setMessageContentTypeToBlock:1];
-                DebugLog(@"Setting setHasBlockedMessageContent to NO");
-                [webDocument setHasBlockedMessageContent:NO];
-            }
-        }
-    }
-}
-
-- (long long)MAMessageContentBlockingReason {
     // On 10.14.1 this method is checked in order to determine if
     // the user has actively decided to load remote content.
     // Since for encrypted messages GPG Mail doesn't allow that,
-    // return 1.
-    MUIWebDocument *webDocument = [MAIL_SELF webDocument];
+    // return the appropriate value based on running OS (5 for macOS Big Sur, 4 for others).
     GMMessageSecurityFeatures *securityFeatures = [(Message_GPGMail *)[MAIL_SELF originalMessage] securityFeatures];
-    BOOL isEncrypted = securityFeatures.PGPEncrypted || securityFeatures.PGPPartlyEncrypted;
+	// If a draft is continued, the original message is no longer pointing to the message
+	// being replied to, but to the draft message which itself may or may not be encrypted
+	// but doesn't tell the status of the original message. That status is however stored
+	// in the draft header key x-gm-reference-encrypted.
+	BOOL referenceMessageIsEncrypted = [[(MCMessageHeaders *)[[MAIL_SELF originalMessage] headersFetchIfNotAvailable:NO] firstHeaderForKey:kGMComposeMessagePreferredSecurityPropertiesHeaderKeyReferenceMessageEncrypted] boolValue];
+	BOOL isEncrypted = securityFeatures.PGPEncrypted || securityFeatures.PGPPartlyEncrypted || referenceMessageIsEncrypted;
+	NSUInteger blockingReason = [self MAMessageContentBlockingReason];
+	DebugLog(@"Content blocking reason: %lld", [self MAMessageContentBlockingReason]);
 
-    if(isEncrypted) {
-        DebugLog(@"Message is encrypted - prevent remote content loading.");
-        return 1;
-    }
+    if(!isEncrypted) {
+		DebugLog(@"Message is *not* encrypted - let Mail decide.");
+		return blockingReason;
+	}
 
-    DebugLog(@"Content blocking reason: %lld", [self MAMessageContentBlockingReason]);
-    return [self MAMessageContentBlockingReason];
-}
+	DebugLog(@"Message is encrypted - prevent remote content loading.");
+	// Bug #1086: On Big Sur, under some circumstances remote content is loaded when it shouldn't
+	//
+	// It appears that before adjusting the blocking reason, remote content would be loaded
+	// if the same content was already loaded in a non-encrypted message and as such
+	// was already available in the cache.
+	// By using blocking reason 5 on Big Sur, it behaves as if remote content loading was
+	// disabled completely in `Mail › Preferences › Viewing`.
+	if(@available(macOS 10.16, *)) {
+		blockingReason = 5;
+	}
+	else {
+		blockingReason = 4;
+	}
 
-- (BOOL)MAHasBlockedMessageContent {
-    // On 10.14.1 this method is checked in order to determine if
-    // the load remote content banner should be displayed.
-    // In case of an encrypted message, never display it.
-    GMMessageSecurityFeatures *securityFeatures = [(Message_GPGMail *)[MAIL_SELF originalMessage] securityFeatures];
-    BOOL isEncrypted = securityFeatures.PGPEncrypted || securityFeatures.PGPPartlyEncrypted;
-
-    if(isEncrypted) {
-        DebugLog(@"Message is encrypted - do not display the remote content loading button.");
-        return NO;
-    }
-
-    return [self MAHasBlockedMessageContent];
-}
-
-- (long long)MARemoteContentBlockingReason {
-    // On 10.13 this method is checked in order to determine if
-    // the user has actively decided to load remote content.
-    // Since for encrypted messages GPG Mail doesn't allow that,
-    // return 1.
-    MUIWebDocument *webDocument = [MAIL_SELF webDocument];
-    GMMessageSecurityFeatures *securityFeatures = [(Message_GPGMail *)[MAIL_SELF originalMessage] securityFeatures];
-    BOOL isEncrypted = [webDocument isEncrypted] || securityFeatures.PGPEncrypted || securityFeatures.PGPPartlyEncrypted;
-
-    if(isEncrypted) {
-        DebugLog(@"Message is encrypted - prevent remote content loading.");
-        return 1;
-    }
-
-    // Bug #1040: Infinite loop.
-    //
-    // Called MAMessageContentBlockingReason before, which resulted in
-    // and infinite loop.
-    long long reason = [self MARemoteContentBlockingReason];
-    DebugLog(@"Content blocking reason: %lld", reason);
-    return reason;
-}
-
-- (BOOL)MAHasBlockedRemoteContent {
-    // Bug #
-    // On 10.13 this method is checked in order to determine if
-    // the load remote content banner should be displayed.
-    // In case of an encrypted message, never display it.
-    GMMessageSecurityFeatures *securityFeatures = [(Message_GPGMail *)[MAIL_SELF originalMessage] securityFeatures];
-    BOOL isEncrypted = securityFeatures.PGPEncrypted || securityFeatures.PGPPartlyEncrypted;
-
-    if(isEncrypted) {
-        DebugLog(@"Message is encrypted - do not display the remote content loading button.");
-        return NO;
-    }
-
-    return [self MAHasBlockedRemoteContent];
+    return blockingReason;
 }
 
 @end

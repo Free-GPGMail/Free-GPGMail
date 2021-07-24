@@ -14,8 +14,8 @@ PassphraseLabel = "Lösenord:";
 "Unknown" = "Okänd";
 "Never" = "Aldrig";
 "Marginal" = "Marginell";
-"Full" = "Komplett";
-"Ultimate" = "Fullständig";
+"Full" = "Fullständig";
+"Ultimate" = "Ultimat";
 
 
 /* For Undo and Redo */
@@ -118,7 +118,7 @@ KeyExpiryFailed_Title = "Misslyckades att förlänga din nyckel!";
 KeyExpiryFailed_Msg = "Nyckeln\n%1$@\nkunde inte förlängas.\n\nFel: %2$@";
 
 KeyExtendedWantToUpload_Title = "Din nyckel förlängdes";
-KeyExtendedWantToUpload_Msg = "För att andra ska kunna se det nya slutdatumet måste de importera din nya nyckel. Vi rekommenderar dig därför att ladda upp din uppdaterade publika nyckel till nyckelservrarna.\n\nVarning: Nyckelservrar är publika, vilket innebär att det namn och den epostadress du använder i din nyckel kommer att vara publikt tillgängliga. Det är inte möjligt att radera nycklar från nyckelservrarna. De kan återkallas, men inte raderas.\n\nOm du föredrar att inte använda nyckelservrarna bör du fundera på att bifoga din publika nyckel till dina signerade och krypterade epostmeddelanden.\n\nVill du ladda upp din publika nyckel?";
+KeyExtendedWantToUpload_Msg = "För att andra ska kunna se det nya utgångsdatumet måste de importera din uppdaterade nyckel. Vi rekommenderar dig därför att ladda upp din uppdaterade publika nyckel till nyckelservrarna.\n\nVarning: Nyckelservrar är publika, vilket innebär att det namn och den e-postadress du använder i din nyckel kommer att vara publikt tillgängliga. Det är inte möjligt att radera nycklar från nyckelservrarna. De kan återkallas, men inte raderas.\n\nOm du föredrar att inte använda nyckelservrarna bör du fundera på att bifoga din publika nyckel till dina signerade och krypterade e-postmeddelanden.\n\nVill du ladda upp din publika nyckel?";
 KeyExtendedWantToUpload_Yes = "Ladda upp publik nyckel";
 KeyExtendedWantToUpload_No = "Nej, tack!";
 
@@ -126,13 +126,13 @@ UploadFailed_Title = "Misslyckades att ladda upp nyckeln!";
 UploadFailed_Msg = "Nyckeln kunde inte laddas upp till nyckelservern.\n\nFelmeddelande: %@";
 
 
-UpdaterNotWorking_Title = "GPG Suite-uppdateraren fungerar inte som förväntat!";
+UpdaterNotWorking_Title = "GPG Suite Updater fungerar inte som förväntat!";
 UpdaterNotWorking_Msg = "Hämta och installera om GPG Suite från https://gpgtools.org";
 
 
-SwitchToOldKeyserver_Title = "Warning: You are about to switch the key server";
-SwitchToOldKeyserver_Msg = "Switching to the old key servers will lower the quality of search results. While keys.openpgp.org allows verification of the email address and only then will show the email in search results, the old key servers do not support that mechanism.\n\nWe recommend to keep using keys.openpgp.org\n\nDo you really want to switch the key server?";
+SwitchToOldKeyserver_Title = "Varning: Du håller på att byta nyckelserver";
+SwitchToOldKeyserver_Msg = "Att byta till de gamla nyckelservrarna sänker kvaliteten på sökresultaten. Medan keys.openpgp.org tillåter verifiering av e-postadressen och endast därefter visar e-postadresser i sökresultaten, så stöder de gamla nyckelservrarna inte denna mekanism.\n\nVi rekommenderar att fortsätta använda keys.openpgp.org\n\nÄr du säker på att du vill byta nyckelserver?";
 SwitchToOldKeyserver_No = "Avbryt";
-SwitchToOldKeyserver_Yes = "Switch to old Key Server";
+SwitchToOldKeyserver_Yes = "Byt till gamla nyckelservern";
 
 

@@ -30,16 +30,6 @@
 #import <Cocoa/Cocoa.h>
 #import "GPGConstants.h"
 
-#define GMSMA_DEFAULT_HEIGHT 17.0f
-#define GMSMA_DEFAULT_WIDTH 80.0f
-#define GMSMA_FULLSCREEN_HEIGHT 22.0f
-
-typedef NS_ENUM(NSInteger, GMSecurityMethodAccessoryViewStyle) {
-	GMSecurityMethodAccessoryViewStyleToolbarItem,
-	GMSecurityMethodAccessoryViewStyleWindowAccessory
-};
-
-
 @class GMSecurityMethodAccessoryView;
 
 @protocol GMSecurityMethodAccessoryViewDelegate <NSObject>
@@ -49,33 +39,20 @@ typedef NS_ENUM(NSInteger, GMSecurityMethodAccessoryViewStyle) {
 @end
 
 @interface GMSecurityMethodAccessoryView : NSPopUpButton <NSMenuDelegate> {
-    BOOL _fullscreen;
     BOOL _active;
     GPGMAIL_SECURITY_METHOD _securityMethod;
     GPGMAIL_SECURITY_METHOD _previousSecurityMethod;
-	GMSecurityMethodAccessoryViewStyle _style;
-	
-    id <GMSecurityMethodAccessoryViewDelegate> __weak _delegate;
-    
-    NSRect _nonFullScreenFrame;
-    NSImageView *_arrow;
-    NSTextField *_label;
-    
-    NSMapTable *_attributedTitlesCache;
 
-    NSSegmentedControl *_segmentedControl;
+    id <GMSecurityMethodAccessoryViewDelegate> __weak _delegate;
 }
 
 @property (nonatomic, assign) GPGMAIL_SECURITY_METHOD securityMethod;
 @property (nonatomic, assign) GPGMAIL_SECURITY_METHOD previousSecurityMethod;
 @property (nonatomic, assign) BOOL active;
 @property (nonatomic, weak) id <GMSecurityMethodAccessoryViewDelegate> delegate;
-@property (nonatomic, assign) GMSecurityMethodAccessoryViewStyle style;
-@property (nonatomic, retain) NSSegmentedControl *segmentedControl;
 
 - (id)init;
-- (id)initWithStyle:(GMSecurityMethodAccessoryViewStyle)style;
-- (id)initWithStyle:(GMSecurityMethodAccessoryViewStyle)style size:(NSSize)size;
+- (id)initWithSize:(NSSize)size;
 
 /**
  Configures the popup menu with the given security methods.
@@ -89,41 +66,10 @@ typedef NS_ENUM(NSInteger, GMSecurityMethodAccessoryViewStyle) {
 - (void)changeSecurityMethod:(NSMenuItem *)sender;
 
 /**
- Configures the custom arrow.
- */
-- (void)_configureArrow;
-
-/**
- Prepare the accessory view for full screen mode, by updating positions
- of the view, menu and background colors.
- */
-- (void)configureForFullScreenWindow:(NSWindow *)window;
-
-/**
- Prepare the accessory view for normal screen mode, by updating positions
- of the view, menu and background colors.
- */
-- (void)configureForWindow:(NSWindow *)window;
-
-/**
  Allows the MailDocumentEditor to automatically update the security method
  and reflect the changes in the popup menu.
  */
 - (void)setSecurityMethod:(GPGMAIL_SECURITY_METHOD)securityMethod;
-
-/**
- Returns an attributed title including shadows and the correct color based
- on the highlight status for a menu item.
- */
-- (NSAttributedString *)attributedTitle:(NSString *)title highlight:(BOOL)highlight;
-
-/**
- Return the different gradients and strokes based on method
- and fullscreen mode.
- */
-- (NSGradient *)gradientSMIMEWithStrokeColor:(NSColor **)strokeColor;
-- (NSGradient *)gradientPGPWithStrokeColor:(NSColor **)strokeColor;
-- (NSGradient *)gradientNotActiveWithStrokeColor:(NSColor **)strokeColor;
 
 /**
  Changes the active status based on the ability to sign or encrypt.
@@ -131,10 +77,12 @@ typedef NS_ENUM(NSInteger, GMSecurityMethodAccessoryViewStyle) {
  */
 - (void)setActive:(BOOL)active;
 
-/**
- Center the menu item within the accessory view, taking the arrow into
- consideration.
- */
-- (void)updateAndCenterLabelForItem:(NSMenuItem *)item;
+- (NSMenuItem *)menuFormRepresentation;
 
++ (NSSize)preferredMinSize;
+
+@end
+
+@interface GMSecurityMethodToolbarItem : NSToolbarItem
+- (void)validate;
 @end

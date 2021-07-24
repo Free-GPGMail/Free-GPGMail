@@ -18,13 +18,13 @@
 "MESSAGE_BANNER_PGP_DECRYPT_SECKEY_ERROR_MESSAGE" = "Ни один из следующих ключей не найден в вашей связке (%@). Секретный ключ нужен для расшифровки этого сообщения. \n\nПожалуйста, уточните у отправителя, что он использовал правильный открытый ключ для шифрования.\nПроверьте резервные копии связки, возможно нужный ключ был ранее удалён и его нужно восстановить.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_TITLE" = "Невозможно расшифровать. Неизвестная ошибка!";
-"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "При расшифровке этого сообщения произошла неизвестная ошибка.\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "An unknown error occurred while decrypting this message.\n\nPlease contact us at https://support.gpgtools.org";
 
 "MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_TITLE" = "Невозможно расшифровать. Неизвестная ошибка!";
-"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "При расшифровке этого сообщения произошла неизвестная ошибка.\n\nСообщение ошибки GPG:\n%@\nПожалуйста свяжитесь с нами, приложив сообщение ошибки GPG на https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_DECRYPT_GENERAL_ERROR_MESSAGE" = "An unknown error occurred while decrypting this message.\n\nGPG error message:\n%@\nPlease contact us, including the GPG error message, at https://support.gpgtools.org";
 
 "MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "Зашифровано неправильным ключом.";
-"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Это сообщение не может быть расшифровано, так как использовался неправильный открытый ключ для его шифрования.\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "This message could not be decrypted, since the wrong public key was used to encrypt it.\n\nPlease contact us at https://support.gpgtools.org";
 
 "MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "Зашифрованное сообщение повреждено.";
 "MESSAGE_BANNER_PGP_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "Это зашифрованное сообщение повреждено и не может быть расшифровано.\n\nПопросите отправителя повторить отправку.";
@@ -35,16 +35,16 @@
 "MESSAGE_BANNER_PGP_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "Сообщение не может быть проверено. Открытый ключ, необходимый для проверки этой подписи, отсутствует в цепочке ключей GPG.\n\nНайдите на сервере ключей отпечаток пальца %@ или попросите у вашего контакта их открытый ключ. Вы можете повторить попытку проверки подписи после добавления их открытого ключа в цепочку ключей GPG.";
 
 "MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_TITLE" = "Подпись к сообщению создана неподдерживаемым алгоритмом.";
-"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Это сообщение не может быть проверено, так как подпись была создана с помощью алгоритма, который не поддерживается.\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_MESSAGE" = "This message could not be verified, since the signature was created with an algorithm which is not supported.\n\nPlease contact us at https://support.gpgtools.org";
 
 "MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "ВНИМАНИЕ: Подпись сообщения не верна!";
-"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "Это сообщение может быть изменено после того, как подпись была создана.\n\nПожалуйста, обратитесь к отправителю, чтобы убедиться, что содержание сообщения соответствует оригиналу.\n\nПожалуйста свяжитесь с нами\nhttps://gpgtools.tenderapp.com/\nесли вы уверены, что сообщение не было изменено.";
+"MESSAGE_BANNER_PGP_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "This message might have been modified after the signature was created.\n\nPlease contact the sender to make sure the content of the message matches the original.\n\nPlease contact us at\nhttps://support.gpgtools.org\nif you're sure the message was not modified.";
 
 "MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_TITLE" = "Сбой проверки подписи с неизвестной ошибкой.";
-"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_MESSAGE" = "Произошла неизвестная ошибка при проверке подписи этого сообщения.\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_VERIFY_SYSTEM_ERROR_MESSAGE" = "An unknown error occurred while verifying this message's signature.\n\nPlease contact us at https://support.gpgtools.org";
 
 "MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "Ошибка цифровой подписи!";
-"MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Подпись этого сообщения недействительна и не может быть проверена.\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "This message's signature is invalid and could not be verified.\n\nPlease contact us at https://support.gpgtools.org";
 
 "MESSAGE_BANNER_PGP_VERIFY_KEY_EXPIRED_ERROR_TITLE" = "Ключ подписи просрочен..";
 "MESSAGE_BANNER_PGP_VERIFY_KEY_EXPIRED_ERROR_MESSAGE" = "Срок действия ключа, который использовался для подписи этого сообщения, истек.\n\nВы можете попробовать обновить ключ с ID %@ в GPG Keychain и узнайте у отправителя, почему срок действия ключа истек.";
@@ -78,13 +78,13 @@
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SECKEY_ERROR_MESSAGE" = "Ни один из следующих ключей не найден в вашей связке (%@). Секретный ключ нужен для расшифровки этого вложения. \n\nПожалуйста, уточните у отправителя, что он использовал правильный открытый ключ.\nПроверьте резервные копии связки, если нужный ключ был удалён, что бы восстановить его.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_TITLE" = "Неизвестная ошибка! Расшифровка невозможна.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_MESSAGE" = "При расшифровке этого вложения произошла неизвестная ошибка.\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_MESSAGE" = "An unknown error occurred while decrypting this attachment.\n\nPlease contact us at https://support.gpgtools.org";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_TITLE" = "Неизвестная ошибка! Расшифровка невозможна.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_MESSAGE" = "При расшифровке этого сообщения произошла неизвестная ошибка.\n\nСообщение ошибки GPG:\n%@\nПожалуйста свяжитесь с нами, приложив сообщение ошибки GPG на https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_GENERAL_ERROR_MESSAGE" = "An unknown error occurred while decrypting this attachment.\n\nGPG error message:\n%@\nPlease contact us, including the GPG error message, at https://support.gpgtools.org";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_TITLE" = "Неверный ключ использован для шифрования вложения.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "Это вложение не может быть расшифровано, так как для его шифрования был использован неправильный открытый ключ .\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_WRONG_SECKEY_ERROR_MESSAGE" = "This attachment could not be decrypted, since the wrong public key was used to encrypt it.\n\nPlease contact us at https://support.gpgtools.org";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_TITLE" = "Зашифрованное вложение повреждено.";
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_CORRUPTED_DATA_ERROR_MESSAGE" = "Зашифрованное вложение было повреждено и не может быть расшифровано.\n\nСвяжитесь с отправителем, что бы получить сообщение ещё раз.";
@@ -96,16 +96,16 @@
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "Вложение не может быть проверено. Открытый ключ, необходимый для проверки этой подписи, отсутствует в цепочке ключей GPG.\n\nНайдите на сервере ключей отпечаток пальца %@ или попросите у вашего контакта их открытый ключ. Вы можете повторить попытку проверки подписи после добавления их открытого ключа в цепочку ключей GPG.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_TITLE" = "Подпись вложения создана неподдерживаемым алгоритмом..";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Это вложение не может быть проверено, так как подпись была создана с помощью алгоритма, который не поддерживается.\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_MESSAGE" = "This attachment could not be verified, since the key to the signature was created with an algorithm which is not supported.\n\nPlease contact us at https://support.gpgtools.org";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_TITLE" = "ВНИМАНИЕ: Неверная подпись вложения!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "Это вложение может быть изменено после того, как подпись была создана.\n\nПожалуйста, обратитесь к отправителю, чтобы убедиться, что содержимое вложения соответствует оригиналу.\n\nПожалуйста свяжитесь с нами\nhttps://gpgtools.tenderapp.com/\nесли вы уверены, что вложение не было изменено.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_BAD_SIGNATURE_ERROR_MESSAGE" = "This attachment might have been modified after the signature was created.\n\nPlease contact the sender and make sure the content of the attachment matches the original.\n\nPlease contact us at\nhttps://support.gpgtools.org\n if you're sure the attachment was not modified.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_TITLE" = "Сбой проверки подписи с неизвестной ошибкой.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_MESSAGE" = "При проверке подлинности подписи этого вложения произошла неизвестная ошибка.\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_SYSTEM_ERROR_MESSAGE" = "An unknown error occurred while verifying this attachment signature.\n\nPlease contact us at https://support.gpgtools.org";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_TITLE" = "Ошибка данных подписи!";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "Подпись этого вложения недействительна и не может быть проверена.\n\nПожалуйста свяжитесь с нами https://gpgtools.tenderapp.com/";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_CORRUPTED_DATA_ERROR_MESSAGE" = "This attachment signature is invalid and could not be verified.\n\nPlease contact us at https://support.gpgtools.org";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_KEY_EXPIRED_ERROR_TITLE" = "Ключ подписи просрочен.";
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_KEY_EXPIRED_ERROR_MESSAGE" = "Срок действия ключа, который использовался для подписи этого вложения, истек.\n\nВы можете попробовать обновить ключ с ID %@ в GPG Keychain и узнайте у отправителя, почему срок действия ключа истек.";
@@ -172,7 +172,7 @@ CODE_SIGN_ERROR_MESSAGE = "Для вашей защиты GPG Mail не буде
 
 /* GPGMailGPGMailBundle.defaults can't be loaded */
 NO_DEFAULTS_TITLE = "Невозможно загрузить стандартные настройки GPG Mail!";
-NO_DEFAULTS_MESSAGE = "GPG Mail не работает, как ожидалось.\n\nПожалуйста, скачайте и установите GPG Suite с https://gpgtools.org\n\nЕсли эта проблема не устранена, пожалуйста, свяжитесь с нами https://gpgtools.tenderapp.com/.";
+NO_DEFAULTS_MESSAGE = "GPG Mail is not working as expected.\n\nPlease download and re-install GPG Suite from https://gpgtools.org\n\nShould this problem persist, please contact us at https://support.gpgtools.org.";
 
 /* Errors while trying to sign a message. */
 "MESSAGE_SIGNING_ERROR_NO_PINENTRY_TITLE" = "Подписка вашего сообщения не удалась из-за повреждённого кода";
@@ -193,7 +193,7 @@ NO_DEFAULTS_MESSAGE = "GPG Mail не работает, как ожидалось
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_TITLE" = "Вы ввели неправильный пароль слишком много раз.";
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_DESCRIPTION" = "Подписка вашего сообщения была остановлена, так как вы 3 раза ввели неправильный пароль.";
 
-"CONTACT_GPGTOOLS_WITH_INFO_MESSAGE" = "\n\nЕсли ваша проблема не устранена, пожалуйста, свяжитесь с нами https://gpgtools.tenderapp.com/ со следующим описанием ошибки:\n\n%@";
+"CONTACT_GPGTOOLS_WITH_INFO_MESSAGE" = "\n\nShould your problem persist, please contact us at https://support.gpgtools.org with the following error description:\n\n%@";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_TITLE" = "Вы прервали расшифровку сообщения";
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "Сообщение не было расшифровано, так как вы сбросили запрос пароля.";
@@ -202,22 +202,22 @@ NO_DEFAULTS_MESSAGE = "GPG Mail не работает, как ожидалось
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "Вложение не было расшифровано, так как вы сбросили запрос пароля.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite не работает, как ожидалось";
-"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Расшифровка сообщения не удалась.\n\nПожалуйста переустановите GPG Suite с сайта https://gpgtools.org.\n\nЕсли эта проблема останется, свяжитесь с нами через сайт https://gpgtools.tenderapp.com/ прикрепя информацию, что xpc-сервис не работает как надо. ";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Decrypting the message failed.\n\nPlease re-install GPG Suite from https://gpgtools.org.\n\nShould this problem persist, contact us at https://support.gpgtools.org and include the information that the xpc service is not working properly.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite не работает, как ожидалось";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Расшифровка вложения не удалась.\n\nПожалуйста переустановите GPG Suite с сайта https://gpgtools.org.\n\nЕсли эта проблема останется, свяжитесь с нами через сайт https://gpgtools.tenderapp.com/ прикрепя информацию, что xpc-сервис не работает как надо. ";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Decrypting the attachment failed.\n\nPlease re-install GPG Suite from https://gpgtools.org.\n\nShould this problem persist, contact us at https://support.gpgtools.org and include the information that the xpc service is not working properly.";
 
 "MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite не работает, как ожидалось";
-"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Проверка сообщения не удалась.\n\nПожалуйста переустановите GPG Suite с сайта https://gpgtools.org.\n\nЕсли эта проблема останется, свяжитесь с нами через сайт https://gpgtools.tenderapp.com/ прикрепя информацию, что xpc-сервис не работает как надо. ";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Verifying the message failed.\n\nPlease re-install GPG Suite from https://gpgtools.org.\n\nShould this problem persist, contact us at https://support.gpgtools.org and include the information that the xpc service is not working properly.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite не работает, как ожидалось";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Проверка вложения не удалась.\n\nПожалуйста переустановите GPG Suite с сайта https://gpgtools.org.\n\nЕсли эта проблема останется, свяжитесь с нами через сайт https://gpgtools.tenderapp.com/ прикрепя информацию, что xpc-сервис не работает как надо. ";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Verifying the attachment failed.\n\nPlease re-install GPG Suite from https://gpgtools.org.\n\nShould this problem persist, contact us at https://support.gpgtools.org and include the information that the xpc service is not working properly.";
 
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_TITLE" = "Подписка вашего сообщения не удалась из-за возникшей во время запроса пароля проблемы ";
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "Pinentry, инструмент ответственный за запрос вашего пароля, кажется, работает не в штатном режиме.\n\nЧтобы исправить эту проблему, переустановите GPG Suite с сайта https://gpgtools.org.";
 
 "MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Невозможно подписать сообщение из-за проблем с установкой GPG Mail.";
-"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Чтобы исправить эту неполадку, переустановите GPG Suite с сайта https://gpgtools.org.\n\nЕсли эта проблема останется, свяжитесь с нами через сайт https://gpgtools.tenderapp.com/ прикрепя информацию, что xpc-сервис не работает как надо.";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "To fix this problem, please re-install GPG Suite from https://gpgtools.org.\n\nShould this problem persist, contact us at https://support.gpgtools.org and include the information that the xpc service is not working properly.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Расшифровка прикреплённого файла не удалась из-за повреждённого кода";
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "Pinentry, инструмент ответственный за запрос вашего пароля, кажется, сломан.\n\nЧтобы исправить эту проблему, переустановите GPG Suite с сайта https://gpgtools.org.";
@@ -295,8 +295,8 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "не подписывать";
 "SUPPORT_PLAN_NEW_ACTIVATION_FAILED_INPUT_INVALID" = "Введённый код активации недействителен. Пожалуйста, проверьте введённую информацию и попробуйте снова.";
 "SUPPORT_PLAN_NEW_ACTIVATION_FAILED_TITLE" = "Ошибка активации плана поддержки";
 "SUPPORT_PLAN_NEW_ACTIVATION_UNABLE_TO_CONNECT_TO_API_TRIAL_TITLE" = "Unable to connect to activation server!";
-"SUPPORT_PLAN_NEW_ACTIVATION_UNABLE_TO_CONNECT_TO_API_TRIAL_MESSAGE" = "We were unable to connect to our support plan API in order to activate your trial.";
-"SUPPORT_PLAN_NEW_ACTIVATION_UNABLE_TO_CONNECT_TO_API_MESSAGE" = "We were unable to connect to our support plan API in order to activate your GPG Mail Support Plan.";
+"SUPPORT_PLAN_NEW_ACTIVATION_UNABLE_TO_CONNECT_TO_API_TRIAL_MESSAGE" = "We were unable to connect to our activation server in order to activate your trial.";
+"SUPPORT_PLAN_NEW_ACTIVATION_UNABLE_TO_CONNECT_TO_API_MESSAGE" = "We were unable to connect to our activation server in order to activate your GPG Mail Support Plan.";
 "SUPPORT_PLAN_NEW_ACTIVATION_CONFIGURE_FIREWALL_MESSAGE" =  "If you are using any macOS firewall product (built-in firewall, Little Snitch, etc.), please allow connections to support-plan.gpgtools.org for the activation to complete.\n\nPlease contact us at business@gpgtools.org if the problem persists or if you need offline activation.";
 "SUPPORT_PLAN_NEW_ACTIVATION_UNABLE_TO_CONNECT_TO_API_TRIAL_FALLBACK_MESSAGE" = "\n\nA fallback trial has been installed in the meantime which was created at build time and is valid for %@ days";
 "SUPPORT_PLAN_NEW_ACTIVATION_FAILED_CODE_INVALID_TITLE" = "Invalid Activation Code!";
@@ -304,12 +304,11 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "не подписывать";
 "SUPPORT_PLAN_NEW_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS_TITLE" = "Allowed activations exhausted!";
 "SUPPORT_PLAN_NEW_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS" = "You have exhausted the number of devices your GPG Mail Support Plan can be activated on.\nPlease deactivate your GPG Mail Support Plan on other devices using \"Mail › Preferences › GPG Mail › Deactivate\"";
 "SUPPORT_PLAN_NEW_ACTIVATION_FAILED_GENERAL_ERROR_TITLE" = "Server error!";
-"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_GENERAL_ERROR" = "The activation server returned an invalid response. Please retry later.\n\nIf the problem persists, please contact us via 'System Preferences › GPG Suite › Send Report'";
+"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_GENERAL_ERROR" = "The activation server returned an invalid response. Please retry later.\n\nIf the problem persists, please contact us via 'System Preferences › GPG Suite › Contact Support'";
 "SUPPORT_PLAN_NEW_ACTIVATION_FAILED_SUPPORT_PLAN_DISABLED_TITLE" = "Support Plan deactivated!";
 "SUPPORT_PLAN_NEW_ACTIVATION_FAILED_SUPPORT_PLAN_DISABLED" = "Your support plan has been deactivated. If you believe that this is a mistake, please get in touch with us at business@gpgtools.org";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_LOCATE_ACTIVATION_CODE" = "Please find your activation code in the email you received after completing your purchase.";
-"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_VERSION_3_COMPATIBILITY_INFO" = "GPG Mail 3 is compatible with macOS High Sierra (10.13) and maOS Mojave (10.14).";
-"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_HEADER_WELCOME" = "Welcome to GPG Mail 3";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_VERSION_3_COMPATIBILITY_INFO" = "GPG Mail 3 is compatible with macOS High Sierra (10.13) and macOS Mojave (10.14).";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_VERSION_4_COMPATIBILITY_INFO" =  "GPG Mail 4 is compatible with macOS High Sierra (10.13), macOS Mojave (10.14) and macOS Catalina (10.15).";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_VERSION_COMPATIBILITY_NO_GUARANTEE_INFO" = "There is no guarantee that future versions of macOS will be supported.";
 "SUPPORT_PLAN_NEW_HEADER_WELCOME_4" = "Welcome to GPG Mail 4";
@@ -332,7 +331,6 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "не подписывать";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_PROGRESS_TEXT" = "Activating your GPG Mail Support Plan";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_HEADER_SWITCH_PLAN" = "GPG Mail 4";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_SUBHEADER_SWITCH_PLAN" = "Switch GPG Mail Support Plan";
-"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_SWITCH_PLAN_DETAILS_TEXT" = "Your current GPG Mail Support Plan only covers GPG Mail 3. To switch to a GPG Mail 4 Support Plan, please enter the details of your new support plan below.";
 "SUPPORT_PLAN_NEW_UPGRADE_DIALOG_SUBHEADER" = "Please upgrade your GPG Mail Support Plan";
 "SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_3TO4_VALID_V3" = "Your current GPG Mail Support Plan is valid for GPG Mail 3 which is not compatible with macOS Catalina.";
 "SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_3TO4_EXPLANATION" = "To continue leveraging the full functionality of GPG Mail and benefit from the latest updates and features, upgrade your GPG Mail Support Plan now.\n\nAs a token of our appreciation we would like to offer you a %@ discount.";
@@ -347,7 +345,6 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "не подписывать";
 "SUPPORT_PLAN_NEW_THANKS_DIALOG_TRIAL_SUCCESS_MESSAGE" = "We hope you enjoy using GPG Mail. Should you have any questions, don't hesitate to contact us via \"Contact Support\" in Mail › Preferences › GPG Mail";
 "SUPPORT_PLAN_NEW_THANKS_DIALOG_SUBHEADER" = "Your GPG Mail Support Plan was\nactivated successfully!";
 "SUPPORT_PLAN_NEW_THANKS_DIALOG_SUCCESS_MESSAGE" = "We hope you enjoy using GPG Mail. Should you have any questions, don't hesitate to contact us via \"Contact Support\" in Mail › Preferences › GPG Mail";
-"SUPPORT_PLAN_NEW_THANKS_DIALOG_EFFU_MESSAGE" = "Our records show that you have just recently purchased a support plan for GPG Mail 3 which qualifies you for a free GPG Mail 4 Support Plan upgrade. Your support plan has been automatically upgraded.";
 "SUPPORT_PLAN_NEW_DIALOG_BUTTON_CLOSE" = "Close";
 "SUPPORT_PLAN_NEW_UPGRADE_DIALOG_FETCHING_UPGRADE_URL_PROGRESS_TEXT" = "Fetching Upgrade URL…";
 "SUPPORT_PLAN_NEW_UPGRADE_DIALOG_ERROR_ALERT_VOLUME_TITLE" = "Volume purchase detected";
@@ -362,17 +359,39 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "не подписывать";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_V4_TITLE" = "Restarting Mail";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_V4_MESSAGE" = "You are currently running GPG Mail 3 and just activated your GPG Mail Support Plan for GPG Mail 4. In order to load GPG Mail 4, Mail will now be relaunched.\n\nThank you for your support!";
 "SUPPORT_PLAN_NEW_WINDOW_CLOSE_ALERT_INACTIVE_TITLE" = "Important!";
-"SUPPORT_PLAN_NEW_WINDOW_CLOSE_ALERT_INACTIVE_MESSAGE" = "Without an active GPG Mail Support Plan you will not be able to sign, encrypt or verify emais. You will of course still be able to read any of your encrypted emails.";
+"SUPPORT_PLAN_NEW_WINDOW_CLOSE_ALERT_INACTIVE_MESSAGE" = "Without an active GPG Mail Support Plan you will not be able to sign, encrypt or verify emails. You will of course still be able to read any of your encrypted emails.";
 "SUPPORT_PLAN_NEW_WINDOW_CLOSE_ALERT_TRIAL_EXPIRED_TITLE" = "Пробный период GPG Mail истёк";
-"SUPPORT_PLAN_NEW_WINDOW_CLOSE_ALERT_TRIAL_EXPIRED_MESSAGE" = "Without an active GPG Mail Support Plan you will no longer be able to sign, encrypt or verify emais. You will of course still be able to read any of your encrypted emails.";
+"SUPPORT_PLAN_NEW_WINDOW_CLOSE_ALERT_TRIAL_EXPIRED_MESSAGE" = "Without an active GPG Mail Support Plan you will no longer be able to sign, encrypt or verify emails. You will of course still be able to read any of your encrypted emails.";
+
 
 "PREFERENCES_SUPPORT_PLAN_STATE_DECRYPT_ONLY_DESCRIPTION" = "Decrypt Only Mode";
 "PREFERENCES_SUPPORT_PLAN_STATE_DECRYPT_ONLY_TRIAL_EXPIRED_DESCRIPTION" = "Decrypt Only Mode - Trial expired";
 "PREFERENCES_SUPPORT_PLAN_STATE_DECRYPT_ONLY_TRIAL_DAYS_REMAINING_DESCRIPTION" = "Trial Mode - %@ days remaining";
-"PREFERENCES_SUPPORT_PLAN_STATE_INVALID_NOT_COVERED_VERSION_DETECTED_DESCRIPTION" = "Your current support plan is not valid for this version of GPG Mail. You can either choose to 'Upgrade' it or 'Switch Support Plan' If you have a different valid one for GPG Mail 4.";
 "PREFERENCES_SUPPORT_PLAN_STATE_ACTIVATION_CODE_TITLE" = "Code";
 "PREFERENCES_SUPPORT_PLAN_STATE_COVERED_VERSIONS_TITLE" = "Covered Versions";
 "PREFERENCES_SUPPORT_PLAN_STATE_REGISTERED_TO" = "Registered to";
 "PREFERENCES_SUPPORT_PLAN_ACTION_BUTTON_UPGRADE_TITLE" = "Upgrade";
 "PREFERENCES_SUPPORT_PLAN_ACTION_BUTTON_ACTIVATE_TITLE" = "Активировать";
 "PREFERENCES_SUPPORT_PLAN_ACTION_BUTTON_SWITCH_SUPPORT_PLAN_TITLE" = "Switch Support Plan";
+
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_VERSION_DYNAMIC_COMPATIBILITY_INFO" = "%@ is compatible with %@.";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_HEADER_WELCOME_DYNAMIC" = "Welcome to %@";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_HEADER_TRIAL" = "%@ Trial";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_SWITCH_PLAN_DETAILS_TEXT_DYNAMIC" = "Your current GPG Mail Support Plan only covers the following versions:\n%@\n\nTo switch to a %@ Support Plan, please enter the details of your new support plan below.";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_REQUIRED_TITLE" = "Your current GPG Mail Support Plan does not cover %@ which is required for macOS Big Sur";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_REQUIRED_EXPLANATION" = "To continue leveraging the full functionality of GPG Mail and benefit from the latest updates and features, upgrade your GPG Mail Support Plan now.\n\nAs a token of our appreciation we would like to offer you a %@ discount.";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_REQUIRED_START_TRIAL_EXPLANATION" = "If you don't want to decide just yet, feel free to start a %@ day trial.";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_OR_KEEP_TITLE" = "%@ is available now.";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_OR_KEEP_EXPLANATION" = "Your GPG Mail Support Plan is valid for %@. To continue leveraging the full functionality of GPG Mail, benefit from the latest updates and features and be ready for macOS Big Sur, upgrade your GPG Mail Support Plan now.\n\nAs a token of our appreciation we would like to offer you a %@ discount.\n\nIf you don't plan to upgrade your macOS version any time soon and rather want to wait for future features, feel free to keep using %@ for as long as you want.";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_OR_KEEP_BUTTON_KEEP" = "Keep %@";
+"SUPPORT_PLAN_NEW_STATUS_UPDATE_DIALOG_EXPLANATION_TITLE" = "We have detected an existing support plan for %@ and are currently checking our activation server to see if your support plan is already valid for %@. This might take a minute.";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_TITLE" = "Restarting Mail";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_MESSAGE" = "In order to load %@, Mail will now be relaunched.\nFeel free to upgrade to %@ at any time.\n\nShould you have any questions, don't hesitate to contact us via \"Contact Support\" in Mail › Preferences › GPG Mail";
+"SUPPORT_PLAN_NEW_THANKS_DIALOG_EFFU_MESSAGE_DYNAMIC" = "Our records show that you have just recently purchased a support plan for %@ which qualifies you for a free %@ Support Plan upgrade. Your support plan has been automatically upgraded.";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_HEADER_WELCOME" = "Welcome to %@";
+"PREFERENCES_SUPPORT_PLAN_STATE_INVALID_NOT_COVERED_VERSION_DETECTED_DESCRIPTION_DYNAMIC" = "Your current support plan is not valid for this version of GPG Mail. You can either choose to 'Upgrade' it or 'Switch Support Plan' if you have a different valid one for %@.";
+"SUPPORT_PLAN_NEW_SUPPORT_PLAN_FOR_NEWER_VERSION_DETECTED_TITLE" = "Newer Support Plan Detected";
+"SUPPORT_PLAN_NEW_SUPPORT_PLAN_FOR_NEWER_VERSION_DETECTED_MESSAGE" = "Your support plan is valid for %@, which is newer than the running version of GPG Mail. In order to load %@, Mail will now be restarted.";
+"SUPPORT_PLAN_NEW_SUPPORT_PLAN_FOR_NEWER_VERSION_DETECTED_BUTTON_CANCEL" = "Отмена";
+"SUPPORT_PLAN_NEW_SUPPORT_PLAN_FOR_NEWER_VERSION_DETECTED_BUTTON_RESTART" = "Restart";
+"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_INPUT_EMAIL_INVALID" = "The email address is invalid. Please check the entered information and try again.";

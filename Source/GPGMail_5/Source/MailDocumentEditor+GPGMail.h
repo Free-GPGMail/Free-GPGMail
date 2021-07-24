@@ -33,17 +33,6 @@
 @interface MailDocumentEditor_GPGMail : NSObject <NSMenuDelegate, GMSecurityMethodAccessoryViewDelegate>
 
 /**
- Is called if the user exits fullscreen.
- Calls the method to re-configure the security method accessory view for normal mode.
- */
-- (void)didExitFullScreen:(NSNotification *)notification;
-
-/**
- Re-configures the security method accessory view for normal mode.
- */
-- (void)configureSecurityMethodAccessoryViewForNormalMode;
-
-/**
  The backend calls this method from setSignIfPossible and setEncryptIfPossible
  to reflect the chosen security method and sign and encrypt status.
  
@@ -75,11 +64,6 @@
  Setup the security method accessory view and add it to the theme frame.
  */
 - (void)setupSecurityMethodHintAccessoryView;
-
-/**
- Called from NSWindow toggleFullScreen: to hide the accessory view.
- */
-- (void)hideSecurityMethodAccessoryView;
 
 /**
  Delegate method which is used by the security method accessory view to inform

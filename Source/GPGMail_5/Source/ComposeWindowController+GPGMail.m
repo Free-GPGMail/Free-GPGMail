@@ -76,25 +76,28 @@ extern const NSString *kFullScreenWindowControllerCloseModalWindowNotYet;
 			return nil;
 	}
 
-    // The delegate of GMSecurityMethodAccessoryView will be the current composeViewController.
-    // At this point it's however not yet set on the ComposeWindowController, so once the
-    // compose view controller is ready, it will set if self up as delegate.
-    NSToolbarItem *item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
-    NSSize toolbarItemSize = NSMakeSize(75.0, 23.0);
-    GMSecurityMethodAccessoryView *securityMethodAccessoryView = [[GMSecurityMethodAccessoryView alloc] initWithStyle:GMSecurityMethodAccessoryViewStyleToolbarItem size:toolbarItemSize];
-    [self setIvar:@"SecurityMethodAccessoryView" value:securityMethodAccessoryView];
-    [item setTarget:nil];
-
-    if(@available(macOS 10.16, *)) {
-        item.label = @"Security Method";
-        [item setView:[securityMethodAccessoryView segmentedControl]];
-    }
-    else {
-        [item setView:securityMethodAccessoryView];
-        [item setMinSize:toolbarItemSize];
-    }
+	GMSecurityMethodToolbarItem *item = [[GMSecurityMethodToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
+	[self configureSecurityMethodToolbarItem:item];
 
 	return item;
+}
+
+- (void)configureSecurityMethodToolbarItem:(GMSecurityMethodToolbarItem *)toolbarItem {
+	// The delegate of GMSecurityMethodAccessoryView will be the current composeViewController.
+    // At this point it's however not yet set on the ComposeWindowController, so once the
+    // compose view controller is ready, it will set if self up as delegate.
+	GMSecurityMethodAccessoryView *securityMethodControl = [GMSecurityMethodAccessoryView new];
+    // Store the security method control.
+	[self setIvar:@"SecurityMethodAccessoryView" value:securityMethodControl];
+
+	toolbarItem.target = nil;
+	toolbarItem.label = @"Security Method";
+	toolbarItem.toolTip = @"Choose security method with which to encrypt/sign message";
+	// Configure the menu that is shown instead of the custom control
+	// in case there's no enough space (window is too small).
+	toolbarItem.menuFormRepresentation = [securityMethodControl menuFormRepresentation];
+	toolbarItem.minSize = [GMSecurityMethodAccessoryView preferredMinSize];
+	toolbarItem.view = securityMethodControl;
 }
 
 #pragma mark Allow restoration of Compose Window on send failures

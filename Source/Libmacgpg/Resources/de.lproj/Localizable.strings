@@ -98,7 +98,7 @@ KeyDescriptionAndMore = "und %lu mehr";
 
 /* Key Expiry Warning */
 KeyExpiryWarning_Title = "Warnung: Dein Schlüssel läuft bald ab";
-KeyExpiryWarning_Msg = "Dein Schlüssel läuft ab am%1$@:\n\n%2$@\n\nAbgelaufene Schlüssel können nicht zum Verschlüsseln oder Signieren neuer Nachrichten verwendet werden. Die Entschlüsselung wird weiterhin funktionieren. Deine Freunde können mit diesem Schlüssel keine verschlüsselten Nachrichten senden.\n\nWenn du dich dafür entscheidest, deinen Schlüssel zu verlängern, ist er für zwei weitere Jahre gültig.\n\nMöchtest du deinen Schlüssel verlängern?";
+KeyExpiryWarning_Msg = "Dein Schlüssel läuft ab am %1$@:\n\n%2$@\n\nAbgelaufene Schlüssel können nicht zum Verschlüsseln oder Signieren neuer Nachrichten verwendet werden. Die Entschlüsselung wird weiterhin funktionieren. Deine Freunde können mit diesem Schlüssel keine verschlüsselten Nachrichten senden.\n\nWenn du dich dafür entscheidest, deinen Schlüssel zu verlängern, ist er für zwei weitere Jahre gültig.\n\nMöchtest du deinen Schlüssel verlängern?";
 KeyExpiryWarning_Yes = "Schlüssel verlängern";
 KeyExpiryWarning_No = "Abbrechen";
 KeyExpiryWarning_Suppress = "Nicht erneut fragen";

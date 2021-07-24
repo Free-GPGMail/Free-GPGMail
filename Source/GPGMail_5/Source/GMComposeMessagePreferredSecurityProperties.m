@@ -673,7 +673,16 @@ NSString * const kGMComposeMessagePreferredSecurityPropertiesHeaderValueSMIME = 
 
     // In case the security method to be used is undetermined, the security options
     // will define what method to best use.
-    if(securityMethod == GPGMAIL_SECURITY_METHOD_UNDETERMINDED) {
+
+	// Bug #1087: If the sender is changed and a keys for that sender are available
+	//            for the security method not currently selected, the security method
+	//			  doesn't automatically update.
+	//
+	// If the user didn't explicitly choose a security method to use, update it to the
+	// on determined by the security history which will take into account for what
+	// security method keys/certificates are available.
+    if(securityMethod == GPGMAIL_SECURITY_METHOD_UNDETERMINDED ||
+	   (securityMethod != securityOptions.securityMethod && !_userDidChooseSecurityMethod)) {
         securityMethod = securityOptions.securityMethod;
     }
 

@@ -86,6 +86,7 @@ typedef void (^lp_progress_handler_t)(NSUInteger processedBytes, NSUInteger tota
 	BOOL _pinentryCancelled;
     BOOL _cancelled;
     BOOL _checkForSandbox;
+	BOOL _wroteInputData;
 #if defined(__MAC_OS_X_VERSION_MAX_ALLOWED) && __MAC_OS_X_VERSION_MAX_ALLOWED >= 1080
     NSXPCConnection *_sandboxHelper;
 #endif

@@ -307,6 +307,17 @@ const NSString *kHeadersEditorFromControlParentItemKey = @"HeadersEditorFromCont
         BOOL messageIsToBeSigned = ![mailself messageIsToBeSigned];
         ComposeViewController *composeViewController = [self composeViewController];
         ComposeBackEnd *backEnd = [composeViewController backEnd];
+
+		// If invalid signing identity error is set, show an error dialog
+		// when the user clicks on the control by calling Mail's
+		// original implementation.
+		// This might happen, if an expired S/MIME certificate is detected.
+		NSError *invalidSigningIdentityError = [backEnd invalidSigningIdentityError];
+		if(invalidSigningIdentityError) {
+			[self MASecurityControlChanged:securityControl];
+			return;
+		}
+
         [backEnd setSignIfPossible:messageIsToBeSigned];
         // Update the preferred security properties to reflect the user choice.
         // From this point on, the computed shouldEncryptMessage method, will always return the

@@ -515,13 +515,24 @@ publicKeyMap = _publicKeyMap, groups = _groups, allSecretKeys = _allSecretKeys, 
 	NSDictionary *map = onlySecret ? self.secretKeyMap : self.publicKeyMap;
     NSString *allAdresses = [addresses componentsJoinedByString:@"\n"];
     NSMutableSet *keys = [NSMutableSet set];
-    
-    for (NSString *cIdentifier in map) {
-        NSString *identifier = cIdentifier;
+
+    for (NSString *identifier in map) {
+        BOOL matches = [addresses containsObject:identifier];
+        // Bug #1080: Wildcard based key mappings are not properly applied.
+        //
+        // While matching against the configued pattern worked reliably, the lookup
+        // of the associated fingerprint used the identifier with the `kGMKeyManagerRegexTokenKey`
+        // stripped, instead of the complete identifier and thus no fingeprint would be found.
+        //
+        // To fix this, make sure to use the stripped identifier as pattern and the original
+        // identifier to lookup the associated fingerprint.
         NSRange regexTokenRange = [identifier rangeOfString:kGMKeyManagerRegexTokenKey];
-        BOOL isRegex = regexTokenRange.location != NSNotFound && regexTokenRange.length > 0;
-        identifier = isRegex ? [identifier stringByReplacingOccurrencesOfString:kGMKeyManagerRegexTokenKey withString:@""] : identifier;
-        if (isRegex ? [allAdresses isMatchedByRegex:identifier] : [addresses containsObject:identifier]) {
+        if(regexTokenRange.location != NSNotFound && regexTokenRange.length > 0) {
+            NSString *pattern = [identifier stringByReplacingOccurrencesOfString:kGMKeyManagerRegexTokenKey withString:@""];
+            matches = [allAdresses isMatchedByRegex:pattern];
+        }
+
+        if(matches) {
 			id object = map[identifier];
 			if([object isKindOfClass:setClass])
 				[keys addObjectsFromArray:[(NSSet *)object allObjects]];

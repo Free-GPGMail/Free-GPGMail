@@ -12,7 +12,7 @@ PassphraseLabel = "Mot de passe :";
 "Expired" = "Expirée";
 "Disabled" = "Désactivée";
 "Unknown" = "Inconnue";
-"Never" = "Never";
+"Never" = "Jamais";
 "Marginal" = "Marginale";
 "Full" = "Complète";
 "Ultimate" = "Ultime";
@@ -93,46 +93,46 @@ GPG_EdDSAAlgorithm = "EdDSA";
 
 
 /* Key Descriptions */
-KeyDescriptionAndMore = "and %lu more";
+KeyDescriptionAndMore = "et %lu en plus";
 
 
 /* Key Expiry Warning */
-KeyExpiryWarning_Title = "Warning: Your key is about to expire";
-KeyExpiryWarning_Msg = "Your key will expire on %1$@:\n\n%2$@\n\nExpired keys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this key.\n\nIf you choose to extend your key, it will be valid for two more years.\n\nDo you want to extend your key?";
-KeyExpiryWarning_Yes = "Extend Key";
-KeyExpiryWarning_No = "Cancel";
-KeyExpiryWarning_Suppress = "Do Not Ask Again";
+KeyExpiryWarning_Title = "Attention : votre clé expire prochainement";
+KeyExpiryWarning_Msg = "Votre clé expire le %1$@ :\n\n%2$@\n\nLes clés expirées ne peuvent pas être utilisées pour chiffrer ou signer de nouveaux messages. Le déchiffrement continue à fonctionner. Vos correspondants ne pourront plus vous envoyer de messages chiffrés avec cette clé.\n\nSi vous prolongez votre clé, elle sera valide pendant deux années supplémentaires.\n\nVoulez-vous prolonger votre clé ?";
+KeyExpiryWarning_Yes = "Prolonger la clé";
+KeyExpiryWarning_No = "Annuler";
+KeyExpiryWarning_Suppress = "Ne plus me demander";
 
-SubkeyExpiryWarning_Title = "Warning: Your subkey is about to expire";
-SubkeyExpiryWarning_Msg = "Your subkey will expire on %1$@:\n\n%2$@\n\nExpired subkeys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this subkey.\n\nIf you choose to extend your subkey, it will be valid for two more years.\n\nDo you want to extend your subkey?";
-SubkeyExpiryWarning_Yes = "Extend Subkey";
-SubkeyExpiryWarning_No = "Cancel";
-SubkeyExpiryWarning_Suppress = "Do Not Ask Again";
+SubkeyExpiryWarning_Title = "Attention : votre sous-clé expire prochainement";
+SubkeyExpiryWarning_Msg = "Votre sous-clé expire le %1$@ :\n\n%2$@\n\nLes sous-clés expirées ne peuvent plus être utilisées pour chiffrer ou signer de nouveaux messages. Le déchiffrement continue à fonctionner. Vos correspondants ne pourront plus vous envoyer de messages chiffrés avec cette sous-clé.\n\nSI vous prolongez votre sous-cé, elle sera validé pendant deux années supplémentaires.\n\nVoulez-vous prolonger votre sous-clé ?";
+SubkeyExpiryWarning_Yes = "Prolonger la sous-clé";
+SubkeyExpiryWarning_No = "Annuler";
+SubkeyExpiryWarning_Suppress = "Ne plus me demander";
 
-WrongPasswordTryAgain_Title = "You entered the wrong password";
-WrongPasswordTryAgain_Msg = "Do you want to try it again?";
-WrongPasswordTryAgain_Yes = "Try Again";
-WrongPasswordTryAgain_No = "Cancel";
+WrongPasswordTryAgain_Title = "Vous avez indiqué un mauvais mot de passe";
+WrongPasswordTryAgain_Msg = "Voulez-vous réessayer ?";
+WrongPasswordTryAgain_Yes = "Réessayer";
+WrongPasswordTryAgain_No = "Annuler";
 
-KeyExpiryFailed_Title = "Failed to extend your key!";
-KeyExpiryFailed_Msg = "The key\n%1$@\ncould not be extened.\n\nError: %2$@";
+KeyExpiryFailed_Title = "Impossible de prolonger votre clé !";
+KeyExpiryFailed_Msg = "La clé\n%1$@\nn'a pas pu être prolongée.\n\nErreur : %2$@";
 
-KeyExtendedWantToUpload_Title = "Your key was extended successfully";
-KeyExtendedWantToUpload_Msg = "In order for others to be able to see the new expiration date, it is necessary for them to import your updated key. Therefore it is recommended to upload your updated public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please consider attaching your public key to your signed and encrypted emails.\n\nDo you want to upload your public key?";
-KeyExtendedWantToUpload_Yes = "Upload Public Key";
-KeyExtendedWantToUpload_No = "No, Thanks!";
+KeyExtendedWantToUpload_Title = "Votre clé a été prolongée";
+KeyExtendedWantToUpload_Msg = "Afin que vos correspondants puisse accéder à la nouvelle date d'expiration, il doivent importer la nouvelle version de votre clé. Il est donc recommandé de publier votre clé mise à jour sur les serveurs de clé.\n\nAttention : les serveurs de clé sont publics, ainsi le nom et l'adresse électronique utilisés dans le clé seront rendu publics. Une fois publiées, les clés ne peuvent pas être supprimées des serveurs. Elle peuvent être révoquées mais pas effacées.\n\nSi vous préférez ne pas utiliser les serveurs de clés, envisagez de joindre votre clé publique à vos messages signés ou chiffrés.\n\nVoulez-vous téléverser votre clé publique ?";
+KeyExtendedWantToUpload_Yes = "Téléverser une clé publique";
+KeyExtendedWantToUpload_No = "Non merci !";
 
-UploadFailed_Title = "Failed to upload the key!";
-UploadFailed_Msg = "The key could not be uploaded to the keyserver.\n\nError: %@";
-
-
-UpdaterNotWorking_Title = "The GPG Suite Updater doesn't work as expected!";
-UpdaterNotWorking_Msg = "Please download and reinstall GPG Suite from https://gpgtools.org";
+UploadFailed_Title = "Impossible de téléverser la clé !";
+UploadFailed_Msg = "La clé n'a pas pu être téléversée sur les serveurs de clés.\n\nErreur : %@";
 
 
-SwitchToOldKeyserver_Title = "Warning: You are about to switch the key server";
-SwitchToOldKeyserver_Msg = "Switching to the old key servers will lower the quality of search results. While keys.openpgp.org allows verification of the email address and only then will show the email in search results, the old key servers do not support that mechanism.\n\nWe recommend to keep using keys.openpgp.org\n\nDo you really want to switch the key server?";
-SwitchToOldKeyserver_No = "Cancel";
-SwitchToOldKeyserver_Yes = "Switch to old Key Server";
+UpdaterNotWorking_Title = "Le système de mise à jour de GPG Suite ne fonctionne pas comme prévu !";
+UpdaterNotWorking_Msg = "Merci de télécharger et de réinstaller GPG Suite à partir de https://gpgtools.org";
+
+
+SwitchToOldKeyserver_Title = "Attention : vous vous apprêtez à changer de serveur de clé";
+SwitchToOldKeyserver_Msg = "Changer pour les anciens serveurs de clé va diminuer la qualité des résultats de recherche. Alors que le serveur keys.openpgp.org vérifie les adresses électroniques et affiche les adresses électroniques vérifiées dans les résultats de recherche, les anciens serveur n'effectuent pas cette vérification.\n\nNous recommandons de continuer à utiliser keys.opengpg.org\n\nVoulez-vous vraiment changer de serveur de clés ?";
+SwitchToOldKeyserver_No = "Annuler";
+SwitchToOldKeyserver_Yes = "Changer pour l'ancien serveur de clé";
 
 

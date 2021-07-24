@@ -568,8 +568,6 @@
                      },
              @"ConversationMember": @{
                     @"selectors": @[
-                            @"setWebDocument:",
-                            @"hasBlockedRemoteContent",
                             @"remoteContentBlockingReason"
                       ]
                      },
@@ -638,16 +636,20 @@
              @"ConversationMember": @{
                      @"selectors": @{
                              @"added": @[
-                                     @"messageContentBlockingReason",
-                                     @"hasBlockedMessageContent"
+                                     @"messageContentBlockingReason"
                                      ]
                              }
                      },
              @"PlugInsViewController": @{
                      @"selectors": @[
                              @"viewWillAppear"]
-                     }
-             };
+                     },
+			 @"LoadBlockedMessageContentBannerViewController": @{
+					 @"selectors": @[
+							 @"updateWantsDisplay"
+					 ]
+		   }
+	};
 }
 
 + (NSDictionary *)hookChangesForCatalina {

@@ -15,7 +15,7 @@
 "MESSAGE_ERROR_ALERT_PGP_VERIFY_NOT_IN_KEYCHAIN_MESSAGE" = "Aucune information additionnelle pour cette clé PGP car elle est absente de votre trousseau.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_SECKEY_ERROR_TITLE" = "La clé secrète nécessaire au déchiffrement de ce message est manquante.";
-"MESSAGE_BANNER_PGP_DECRYPT_SECKEY_ERROR_MESSAGE" = "None of the following secret keys could be found in your keychain (%@). The secret key is needed to decrypt this message. \n\nPlease check with the sender that they used your correct public key.\nCheck any backup of your keychain, and try to import the secret key from there.";
+"MESSAGE_BANNER_PGP_DECRYPT_SECKEY_ERROR_MESSAGE" = "Aucune des clés secrètes suivantes n'a été trouvée dans votre trousseau de clés (%@). La clé secrète est nécessaire pour déchiffrer ce message.\n\nVeuillez vérifier avec l'expéditeur qu'il a utilisé la bonne clé publique.\nVérifiez les sauvegardes de votre trousseau pour essayer de restaurer votre clé secrète.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_TITLE" = "Le déchiffrement a échoué sur une erreur inconnue !";
 "MESSAGE_BANNER_PGP_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Une erreur est survenue lors du déchiffrement du message.\n\nVeuillez nous contacter à l'adresse suivante https://github.com/Free-GPGMail/Free-GPGMail/issues";
@@ -31,8 +31,8 @@
 
 "MESSAGE_BANNER_PGP_VERIFY_REVOKED_CERTIFICATE_ERROR_TITLE" = "La clé de la signature a été révoquée.";
 "MESSAGE_BANNER_PGP_VERIFY_REVOKED_CERTIFICATE_ERROR_MESSAGE" = "La clé utilisée pour signer ce message a été révoquée.\n\nVous devriez rafraichir la clé avec l'identifiant de clé %@ dans GPG Keychain pour vérifier si une clé plus récente est disponible. Si la nouvelle est également révoquée, vérifiez la raison de la révocation auprès de l'expéditeur.";
-"MESSAGE_BANNER_PGP_VERIFY_NO_PUBKEY_ERROR_TITLE" = "The key to verify this signature is not in GPG Keychain";
-"MESSAGE_BANNER_PGP_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "The message could not be verified. The public key required to verify this signature is not in GPG Keychain.\n\nSearch the key server for fingerprint %@ or ask your contact for their public key. You can retry to verify the signature after adding their public key to GPG Keychain.";
+"MESSAGE_BANNER_PGP_VERIFY_NO_PUBKEY_ERROR_TITLE" = "La clé de cette signature ne fait pas partie de votre trousseau de clés.";
+"MESSAGE_BANNER_PGP_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "La message n'a pas pu être vérifié. La clé publique nécessaire à la vérification de cette signature ne figure pas dans votre trousseau.\n\nRecherchez sur les serveurs de clés la clé d'empreinte %@ ou demandez à votre correspondant de vous envoyer sa clé publique. Vous pourrez relancer la vérification de la signature après avoir ajouté la clé publique correspondante à votre trousseau.";
 
 "MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_TITLE" = "La signature de ce message a été créée avec un algorithme non supporté.";
 "MESSAGE_BANNER_PGP_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Ce message n'a pas pu être vérifié car sa signature a été créée avec un algorithme non supporté.\n\nMerci de nous contacter sur https://github.com/Free-GPGMail/Free-GPGMail/issues";
@@ -56,7 +56,7 @@
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_NO_GPG_MESSAGE" = "Le décryptage a échoué parce que MacGPG n'est pas installé.\n\nVeuillez télécharger et réinstaller GPG Suite à partir de https://gpgtools.org";
 
 "MESSAGE_BANNER_PGP_VERIFY_ERROR_NO_GPG_TITLE" = "MacGPG n'est pas installé";
-"MESSAGE_BANNER_PGP_VERIFY_ERROR_NO_GPG_MESSAGE" = "Verifying failed because MacGPG is not installed.\n\nPlease download and re-install GPG Suite from https://gpgtools.org";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_NO_GPG_MESSAGE" = "La vérification n'a pu avoir lieu car MacGPG n'est pas installé.\n\nMerci de télécharger et ré-installer GPG Suite depuis https://gpgtools.org";
 
 "MESSAGE_BANNER_PGP_ATTACHMENTS_DECRYPT_VERIFY_ERROR_TITLE" = "%d fichiers joints n'ont pas pu être déchiffrés ou vérifiés.";
 "MESSAGE_BANNER_PGP_ATTACHMENTS_DECRYPT_VERIFY_ERROR_MESSAGE" = "Merci de cliquer sur l'icone de la pièce jointe dans l'en-tête sécurité du message pour plus de détails.";
@@ -75,7 +75,7 @@
 
 /* Message Error Banner Attachment messages. */
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SECKEY_ERROR_TITLE" = "La clé secrète pour déchiffrer le fichier joint est introuvable.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SECKEY_ERROR_MESSAGE" = "None of the following secret keys could be found in your keychain (%@). The secret key is needed to decrypt this attachment. \n\nPlease check with the sender that they used your correct public key.\nCheck any backup of your keychain, and try to import the secret key from there.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SECKEY_ERROR_MESSAGE" = "Aucune des clés secrètes suivantes n'a pu être trouvée dans votre trousseau (%@). La clé secrète est nécessaire pour déchiffrer cette pièce jointe.\n\nMerci de vérifier avec l'expéditeur qu'il a bien utilisé la bonne clé publique.\nVérifiez les sauvegardes de votre trousseau pour essayer de restaurer votre clé secrète.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_TITLE" = "Le déchiffrement a échoué pour une raison inconnue !";
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_SYSTEM_ERROR_MESSAGE" = "Une erreur inconnue est arrivée pendant le déchiffrement de ce fichier joint.\n\nMerci de nous contacter sur https://github.com/Free-GPGMail/Free-GPGMail/issues";
@@ -92,8 +92,8 @@
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_REVOKED_CERTIFICATE_ERROR_TITLE" = "La clé de signature a été révoquée.";
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_REVOKED_CERTIFICATE_ERROR_MESSAGE" = "La clé utilisée pour signer ce fichier joint a été révoquée.\n\nVous devriez rafraichir la clé avec l'identifiant %@ dans GPG Keychain pour vérifier si une clé plus récente est disponible. Si la nouvelle clé est aussi révoquée, vérifier avec l'expéditeur la raison de sa révocation.";
 
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_NO_PUBKEY_ERROR_TITLE" = "The key to verify this signature is not in GPG Keychain";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "The attachment could not be verified. The public key required to verify this signature is not in GPG Keychain.\n\nSearch the key server for fingerprint %@ or ask your contact for their public key. You can retry to verify the signature after adding their public key to GPG Keychain.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_NO_PUBKEY_ERROR_TITLE" = "La clé de cette signature ne fait pas partie de votre trousseau de clés.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_NO_PUBKEY_ERROR_MESSAGE" = "La pièce jointe n'a pas pu être vérifié. La clé publique nécessaire à la vérification de cette signature ne figure pas dans votre trousseau.\n\nRecherchez sur les serveurs de clés la clé d'empreinte %@ ou demandez à votre correspondant de vous envoyer sa clé publique. Vous pourrez relancer la vérification de la signature après avoir ajouté la clé publique correspondante à votre trousseau.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_TITLE" = "La signature du fichier joint a été créée avec un algorithme qui n'est pas supporté.";
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ALGORITHM_ERROR_MESSAGE" = "Le fichier joint n'a pas pu être vérifié car la clé utilisée pour la signature a été créée avec un algorithme non supporté.\n\nMerci de nous contacter sur https://github.com/Free-GPGMail/Free-GPGMail/issues";
@@ -152,7 +152,7 @@
 "GPG_STATUS_OTHER_ERROR_TOOLTIP" = "Click indicator bubble for further information";
 
 "DISABLE_ENCRYPT_DRAFTS_TITLE" = "Attention : Désactiver cette option peut engendrer des fuites d'informations sensibles lors de l'écriture d'un message";
-"DISABLE_ENCRYPT_DRAFTS_MESSAGE" = "If the option \"Store drafts on server\" is enabled for your accounts, macOS Mail automatically stores your drafts on your mail server while you're composing a message.\nBy disabling \"Encrypt drafts\", your drafts will be stored in plain text (not encrypted) so that anyone with access to the mail server can read them.\n\nIf you keep \"Encrypt drafts\" enabled, your drafts will be encrypted before they are stored on a mail server and only you will be able to read them.\n\nDo you still want to disable \"Encrypt drafts\"?";
+"DISABLE_ENCRYPT_DRAFTS_MESSAGE" = "Si l'option « Enregistrer les brouillons sur le serveur » est activée pour vos comptes, macOS Mail enregistre automatiquement vos brouillons sur le serveur de messagerie lorsque vous écrivez un message.\nEn désactivant « Chiffrer les brouillons », vos brouillons seront stockés en clair (non chiffrés) et donc n'importe qui ayant accès au serveur de messagerie pourra les lire.\n\nSi vous gardez « Chiffrer les brouillons » activé, vos brouillons seront chiffrés avant d'être stockés sur le serveur de messagerie et vous seul serez capable de les lire.\n\nVoulez-vous toujours désactiver « Chiffrer les brouillons » ?";
 "DISABLE_ENCRYPT_DRAFTS_CONFIRM" = "Désactiver le chiffrement";
 "DISABLE_ENCRYPT_DRAFTS_CANCEL" = "Annuler";
 
@@ -236,24 +236,24 @@ NO_DEFAULTS_MESSAGE = "Free-GPGMail ne fonctionne pas comme attendu.\n\nMerci de
 "UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_BUTTON_CANCEL" = "Annuler";
 
 "UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_TITLE" = "Attention : Vous êtes sur le point de transmettre la version décryptée d'un message crypté.";
-"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_MISSING_KEYS_SINGULAR" = "It's not possible to encrypt the message you are about to forward, because the public key for the following recipient is missing:\n\n%@";
-"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_MISSING_KEYS" = "It's not possible to encrypt the message you are about to forward, because public keys for the following recipients are missing:\n\n%@";
-"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_EXPLANATION" = "If you choose to proceed, the message you are about to forward will be sent unencrypted. As a result, confidential information might be leaked, putting you and your recipients at risk.";
-"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_SOLUTION_IMPORT_KEYS" = "Otherwise, search and import the corresponding public keys using GPG Keychain in order to forward an encrypted version of the message.";
-"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_SOLUTION_IMPORT_KEYS_SINGULAR" = "Otherwise, search and import the corresponding public key using GPG Keychain in order to forward an encrypted version of the message.";
-"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_BUTTON_SEND_ANYWAY" = "Forward Anyway";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_MISSING_KEYS_SINGULAR" = "Il n'est pas possible de chiffrer le message que vous souhaitez transférer car la clé publique du destinataire suivant est manquante :\n\n%@";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_MISSING_KEYS" = "Il n'est pas possible de chiffrer le message que vous souhaitez transférer car les clés publiques des destinataire suivants sont manquantes :\n\n%@";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_EXPLANATION" = "Si vous décidez de continuer, le message sera transféré non chiffré. Comme conséquence, des informations confidentielles pourront être divulguées, vous mettant vous et vos destinataires en danger.";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_SOLUTION_IMPORT_KEYS" = "Autrement, rechercher et importer les clés publiques correspondantes avec GPG Keychain de façon à transférer une version chiffrée du message.";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_SOLUTION_IMPORT_KEYS_SINGULAR" = "Autrement, rechercher et importer la clé publique correspondante avec GPG Keychain de façon à transférer une version chiffrée du message.";
+"UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_BUTTON_SEND_ANYWAY" = "Transférer quand même";
 "UNENCRYPTED_FORWARD_OF_ENCRYPTED_MESSAGE_BUTTON_CANCEL" = "Annuler";
 
-"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_TITLE" = "Decryption of the message was aborted";
-"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_MESSAGE" = "The modification detection code (MDC) for this encrypted message is missing or has been modified.\n\nThis could mean that an attacker has been trying to modify the contents within the encrypted message.\n\nPlease have the message re-sent to you and tell the sender, that their encrypted message didn't include a modification detection code.";
+"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_TITLE" = "Le déchiffrement du message a été interrompu";
+"MESSAGE_BANNER_PGP_DECRYPT_MDC_ERROR_MESSAGE" = "Le code de contrôle (MDC) de ce message est manquant ou a été modifié.\n\nCela peut signifier qu'une tierce personne a modifié le contenu du message.\n\nDemandez à l'émetteur de vous renvoyer le message et indiquez-lui que son message chiffré ne contenait pas de code de contrôle.";
 
-"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_TITLE" = "Attention: Opening this website could leak the contents of this message";
-"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_MESSAGE" = "Due to a problem in the implementation of S/MIME encryption, it is possible for an attacker to modify a message without your knowledge.\n\nYou are about to open the following website:\n\n%@\n\nAre you sure you want to continue?";
+"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_TITLE" = "Attention : accéder à ce site web pourrait diffuser le contenu de ce message.";
+"NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_MESSAGE" = "À cause d'un problème d'implantation du chiffrement S/MIME, une tierce personne peut modifier un message à votre insu.\n\nVous vous apprêtez à consulter le site suivant :\n\n%@\n\nÊtes-vous sûr de vouloir continuer ?";
 "NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_BUTTON_YES" = "Oui";
 "NAVIGATION_ACTION_FROM_ENCRYPTED_MESSAGE_BUTTON_CANCEL" = "Annuler";
 
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_TITLE" = "Decryption of the attachment was aborted";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_MESSAGE" = "The modification detection code (MDC) for this encrypted attachment is missing or has been modified.\n\nThis could mean that an attacker has been trying to modify the contents within the encrypted attachment.\n\nPlease have the attachment re-sent to you and tell the sender, that their encrypted attachment didn't include a modification detection code.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_TITLE" = "Le déchiffrement de la pièce jointe a été interrompu.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_MDC_ERROR_MESSAGE" = "Le code de contrôle (MDC) de cette pièce jointe est manquant ou a été modifié.\n\nCela peut signifier qu'une tierce personne a modifié le contenu de cette pièce.\n\nDemandez à l'émetteur de vous renvoyer ce document et indiquez-lui que la pièce jointe ne contenait pas de code de contrôle.";
 
 
 /* Accessibility */
@@ -273,21 +273,21 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "Ne pas signer";
 "SUPPORT_PLAN_HEADER_TRIAL" = "You can test Free-GPGMail free for %@ days.\nSecure your emails now!";
 
 
-"SUPPORT_PLAN_CLOSE" = "Continue";
-"SUPPORT_PLAN_CONTINUE_TRIAL"= "Continue Trial";
+"SUPPORT_PLAN_CLOSE" = "Continuer";
+"SUPPORT_PLAN_CONTINUE_TRIAL"= "Poursuivre la période d'essai";
 
 "SUPPORT_PLAN_TRIAL_EXPIRED_TITLE" = "Free-GPGMail Trial Expired";
 "SUPPORT_PLAN_TRIAL_EXPIRED_MESSAGE" = "Without an active Free-GPGMail Support Plan you will still be able to read any of your encrypted emails. However, you will no longer be able to sign, encrypt or verify emails.";
 
-"SUPPORT_PLAN_EMAIL_LABEL" = "Email";
-"SUPPORT_PLAN_LICENSE_LABEL" = "Activation Code";
-"SUPPORT_PLAN_GRAY_INFO" = "Your activation code can be found in the email you receive after completing your purchase.";
+"SUPPORT_PLAN_EMAIL_LABEL" = "Courriel";
+"SUPPORT_PLAN_LICENSE_LABEL" = "Code d'activation";
+"SUPPORT_PLAN_GRAY_INFO" = "Votre code d'activation sera disponible dans le message que vous recevrez après avoir effectué votre achat.";
 
 
 "SUPPORT_PLAN_DEACTIVATION_WARNING_TITLE" = "Deactivate your Free-GPGMail Support Plan";
 "SUPPORT_PLAN_DEACTIVATION_WARNING_MESSAGE" = "Are you sure you want to deactive your Support Plan on this device?\n\nIf you deactivate your Free-GPGMail Support Plan on this device, GPG Mail will revert to decrypt-only mode.\n\nOnce deactivated, it will no longer be possible to encrypt, verify or sign messages.\n\nYou will however always be able to read your encrypted messages.\n\nAfter GPG Mail is deactivated on this device, you can activate it on a new device.";
 "SUPPORT_PLAN_DEACTIVATION_WARNING_CANCEL" = "Annuler";
-"SUPPORT_PLAN_DEACTIVATION_WARNING_CONFIRM" = "Deactivate";
+"SUPPORT_PLAN_DEACTIVATION_WARNING_CONFIRM" = "Désactiver";
 
 /* Support Plan New */
 "SUPPORT_PLAN_NEW_TRIAL_NO_NEW_TRIAL_ALLOWED_TITLE" = "Failed to start new trial";
@@ -371,8 +371,30 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "Ne pas signer";
 "PREFERENCES_SUPPORT_PLAN_STATE_DECRYPT_ONLY_TRIAL_DAYS_REMAINING_DESCRIPTION" = "Trial Mode - %@ days remaining";
 "PREFERENCES_SUPPORT_PLAN_STATE_INVALID_NOT_COVERED_VERSION_DETECTED_DESCRIPTION" = "Your current support plan is not valid for this version of Free-GPGMail. You can either choose to 'Upgrade' it or 'Switch Support Plan' If you have a different valid one for GPG Mail 4.";
 "PREFERENCES_SUPPORT_PLAN_STATE_ACTIVATION_CODE_TITLE" = "Code";
-"PREFERENCES_SUPPORT_PLAN_STATE_COVERED_VERSIONS_TITLE" = "Covered Versions";
-"PREFERENCES_SUPPORT_PLAN_STATE_REGISTERED_TO" = "Registered to";
-"PREFERENCES_SUPPORT_PLAN_ACTION_BUTTON_UPGRADE_TITLE" = "Upgrade";
-"PREFERENCES_SUPPORT_PLAN_ACTION_BUTTON_ACTIVATE_TITLE" = "Activate";
-"PREFERENCES_SUPPORT_PLAN_ACTION_BUTTON_SWITCH_SUPPORT_PLAN_TITLE" = "Switch Support Plan";
+"PREFERENCES_SUPPORT_PLAN_STATE_COVERED_VERSIONS_TITLE" = "Versions supportées";
+"PREFERENCES_SUPPORT_PLAN_STATE_REGISTERED_TO" = "Enregistré pour";
+"PREFERENCES_SUPPORT_PLAN_ACTION_BUTTON_UPGRADE_TITLE" = "Mise à jour";
+"PREFERENCES_SUPPORT_PLAN_ACTION_BUTTON_ACTIVATE_TITLE" = "Activer";
+"PREFERENCES_SUPPORT_PLAN_ACTION_BUTTON_SWITCH_SUPPORT_PLAN_TITLE" = "Changer d'abonnement";
+
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_VERSION_DYNAMIC_COMPATIBILITY_INFO" = "%@ est compatible avec %@.";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_HEADER_WELCOME_DYNAMIC" = "Bienvenue à %@";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_HEADER_TRIAL" = "%@ période d'essai";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_SWITCH_PLAN_DETAILS_TEXT_DYNAMIC" = "Votre abonnement actuel à GPG Mail concerne uniquement les versions suivantes :\n%@\n\nPour changer pour un abonnement à %@, indiquez ci-dessous les références de votre nouvel abonnement.";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_REQUIRED_TITLE" = "Votre abonnement actuel à GPG Mail ne couvre pas %@ qui est indispensable pour macOS Big Sur";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_REQUIRED_EXPLANATION" = "Pour continuer à exploiter toutes les fonctionnalités de GPG Mail et bénéficier des dernières évolutions, mettez à jour votre abonnement dès maintenant.\n\nEn gage de notre reconnaissance pour votre support, nous vous offrons une remise de %@.";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_REQUIRED_START_TRIAL_EXPLANATION" = "Si vous ne voulez pas vous décider tout de suite, vous être libre de commencer une période d'essai de %@ jours.";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_OR_KEEP_TITLE" = "%@ est disponible dès à présent.";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_OR_KEEP_EXPLANATION" = "Votre abonnement est valable pour %@. Pour continuer à exploiter toutes les fonctionnalités de GPG Mail, bénéficier des dernières évolutions et être prêt pour macOS Catalina, mettez à jour votre abonnement dès à présent.\n\nEn gage de notre reconnaissance pour votre support, nous vous offrons une remise de %@.\n\nSi vous ne prévoyez pas de mettre à jour votre version de macOS et d'attendre de nouvelles versions, vous pouvez continuer à utiliser %@ aussi longtemps que vous le souhaitez.";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_OR_KEEP_BUTTON_KEEP" = "Conserver %@";
+"SUPPORT_PLAN_NEW_STATUS_UPDATE_DIALOG_EXPLANATION_TITLE" = "Nous avons détecté votre abonnement à %@ et nous vérifions avec le serveur d'activation si cet abonnement est également valable pour %@. Cela peut prendre une minute.";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_TITLE" = "Redémarrage de Mail";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_MESSAGE" = "Afin de charger %@, Mail va être redémarré.\nN'hésitez pas à faire la mise à jour vers %@.\n\nPour toute question, n'hésitez pas à nous contacter à l'aide de \"Contacter le support\" dans Mail > Préférences… > GPG Mail";
+"SUPPORT_PLAN_NEW_THANKS_DIALOG_EFFU_MESSAGE_DYNAMIC" = "Vous vous êtes abonné récemment à %@ ce qui vous permet de bénéficier gratuitement d'un abonnement à %@. Votre abonnement a été mis à jour automatiquement.";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_HEADER_WELCOME" = "Bienvenue à %@";
+"PREFERENCES_SUPPORT_PLAN_STATE_INVALID_NOT_COVERED_VERSION_DETECTED_DESCRIPTION_DYNAMIC" = "Votre abonnement actuel n'est pas valable pour cette version de GPG Mail. Vous pouvez mettre à jour votre abonnement ou changer d'abonnement si vous disposez d'un abonnement valable pour %@.";
+"SUPPORT_PLAN_NEW_SUPPORT_PLAN_FOR_NEWER_VERSION_DETECTED_TITLE" = "Nouvel abonnement détecté";
+"SUPPORT_PLAN_NEW_SUPPORT_PLAN_FOR_NEWER_VERSION_DETECTED_MESSAGE" = "Votre abonnement est valable pour %@ qui est plus récent que la version de GPG Mail que vous utilisez. Afin de charger %@, Mail va redémarrer.";
+"SUPPORT_PLAN_NEW_SUPPORT_PLAN_FOR_NEWER_VERSION_DETECTED_BUTTON_CANCEL" = "Annuler";
+"SUPPORT_PLAN_NEW_SUPPORT_PLAN_FOR_NEWER_VERSION_DETECTED_BUTTON_RESTART" = "Redémarrage";
+"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_INPUT_EMAIL_INVALID" = "L'adresse électronique est invalide. Merci de vérifier et de réessayer.";

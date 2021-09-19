@@ -322,6 +322,14 @@ NSString * const kComposeBackEndPreferredSecurityPropertiesAccessLockKey = @"Com
 }
 
 - (NSAttributedString *)plainTextFixedForSigning:(NSMutableAttributedString *)plainText shouldAddNewLine:(BOOL)shouldAddNewLine {
+    // Bug #1079: Sending empty signed message crashes GPG Mail 5.
+    //
+    // NSRegularExpression doesn't handle nil strings gracefully, so
+    // in case plainText is nil, return immediately.
+    if(!plainText) {
+        return plainText;
+    }
+
     NSMutableString *plainString = [plainText mutableString];
     
     // If we are only signing and there isn't a newline at the end of the plaintext, append it.

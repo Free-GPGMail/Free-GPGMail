@@ -6,7 +6,7 @@
  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
  */
 "SIGNATURE_ERROR_GENERAL_TITLE" = "Falha ao verificar a assinatura.";
-"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "A chave pública para verificar a assinatura deste anexo não está nas suas chaves.\n\nUse o GPG Keychain para transferir a chave pública %@.";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "A chave pública para verificar a assinatura deste anexo não está nas suas chaves.\n\nUse o GPG Keychain para baixar a chave pública %@.";
 "DECRYPT_ERROR_GENERAL_TITLE" = "Falha ao descriptografar o anexo.";
 "DECRYPT_ERROR_GENERAL_MESSAGE" = "A chave secreta para descriptografar este anexo não está nas suas chaves.";
 "ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "O anexo foi descriptografado corretamente.";

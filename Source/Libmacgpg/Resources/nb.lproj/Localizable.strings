@@ -115,7 +115,7 @@ WrongPasswordTryAgain_Yes = "Try Again";
 WrongPasswordTryAgain_No = "Cancel";
 
 KeyExpiryFailed_Title = "Failed to extend your key!";
-KeyExpiryFailed_Msg = "The key\n%1$@\ncould not be extened.\n\nError: %2$@";
+KeyExpiryFailed_Msg = "The key\n%1$@\ncould not be extended.\n\nError: %2$@";
 
 KeyExtendedWantToUpload_Title = "Your key was extended successfully";
 KeyExtendedWantToUpload_Msg = "In order for others to be able to see the new expiration date, it is necessary for them to import your updated key. Therefore it is recommended to upload your updated public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please consider attaching your public key to your signed and encrypted emails.\n\nDo you want to upload your public key?";

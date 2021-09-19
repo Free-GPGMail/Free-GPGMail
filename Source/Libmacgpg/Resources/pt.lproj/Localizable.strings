@@ -64,7 +64,7 @@ DIGEST_ALGO_SHA256 = "SHA256";
 DIGEST_ALGO_SHA384 = "SHA384";
 DIGEST_ALGO_SHA512 = "SHA512";
 DIGEST_ALGO_SHA224 = "SHA224";
-COMPRESS_ALGO_NONE = "Nenhuma";
+COMPRESS_ALGO_NONE = "Nenhum";
 COMPRESS_ALGO_ZIP = "ZIP";
 COMPRESS_ALGO_ZLIB = "ZLIB";
 COMPRESS_ALGO_BZIP2 = "BZIP2";
@@ -127,7 +127,7 @@ UploadFailed_Msg = "A chave não pôde ser enviada para o servidor.\n\nErro: %@"
 
 
 UpdaterNotWorking_Title = "O atualizador da GPG Suite não está funcionando devidamente!";
-UpdaterNotWorking_Msg = "Transfira e reinstale a GPG Suite de https://gpgtools.org.";
+UpdaterNotWorking_Msg = "Baixe e reinstale a GPG Suite de https://gpgtools.org.";
 
 
 SwitchToOldKeyserver_Title = "Aviso: você está prestes a mudar o servidor de chaves";

@@ -19,7 +19,7 @@ jobs:
         os: [macos-latest]
         gpgmail: [GPGMail_3, GPGMail_4]
         include:
-          - os: macos-11.0
+          - os: macos-11
             gpgmail: GPGMail_5
 
 

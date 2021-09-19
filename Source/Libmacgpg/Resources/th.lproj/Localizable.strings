@@ -12,7 +12,7 @@ PassphraseLabel = "รหัสผ่าน:";
 "Expired" = "หมดอายุแล้ว";
 "Disabled" = "ปิด-ไม่ใช้งาน";
 "Unknown" = "ไม่ทราบ";
-"Never" = "Never";
+"Never" = "อย่าเชื่อ";
 "Marginal" = "เล็กน้อย";
 "Full" = "เต็มที่";
 "Ultimate" = "สุดขีด";
@@ -37,7 +37,7 @@ Undo_RevokeSubkey = "เพิกถอนกุญแจย่อย";
 Undo_AddUserID = "เพิ่มหมายเลขประจำตัวผู้ใช้";
 Undo_RemoveUserID = "ลบหมายเลขประจำตัวผู้ใช้";
 Undo_RevokeUserID = "เพิกถอนหมายเลขประจำตัวผู้ใช้";
-Undo_PrimaryUserID = "หมายเลขประจำตัวหลักของผู้ใช้";
+Undo_PrimaryUserID = "เลขประจำตัวหลักของผู้ใช้";
 Undo_AddPhoto = "เพิ่มภาพถ่าย";
 Undo_RefreshFromServer = "ดึงใหม่จากเซิร์ฟเวอร์";
 Undo_ReceiveFromServer = "รับจากเซิร์ฟเวอร์";
@@ -93,46 +93,46 @@ GPG_EdDSAAlgorithm = "EdDSA";
 
 
 /* Key Descriptions */
-KeyDescriptionAndMore = "and %lu more";
+KeyDescriptionAndMore = "และมีอีก %lu";
 
 
 /* Key Expiry Warning */
-KeyExpiryWarning_Title = "Warning: Your key is about to expire";
-KeyExpiryWarning_Msg = "Your key will expire on %1$@:\n\n%2$@\n\nExpired keys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this key.\n\nIf you choose to extend your key, it will be valid for two more years.\n\nDo you want to extend your key?";
-KeyExpiryWarning_Yes = "Extend Key";
-KeyExpiryWarning_No = "Cancel";
-KeyExpiryWarning_Suppress = "Do Not Ask Again";
+KeyExpiryWarning_Title = "คำเตือน: กุญแจของคุณกำลังจะหมดอายุ";
+KeyExpiryWarning_Msg = "กุญแจของคุณจะหมดอายุเมื่อ %1$@:\n\n%2$@\n\nกุญแจที่หมดอายุแล้วจะไม่สามารถใช้ในการเข้ารหัสลับหรือเซ็นข้อความใหม่ได้ การถอดรหัสลับจะยังใช้งานได้ต่อไป เพื่อนของคุณจะไม่สามารถส่งข้อความที่เข้ารหัสลับด้วยกุญแจนี้\n\nถ้าคุณเลือกที่จะยืดอายุกุญแจของคุณ มันจะใช้ได้ต่ออีกสองปี\n\nคุณต้องการจะยืดอายุกุญแจของคุณหรือไม่?";
+KeyExpiryWarning_Yes = "ยืดอายุกุญแจ";
+KeyExpiryWarning_No = "ยกเลิก";
+KeyExpiryWarning_Suppress = "ไม่ต้องถามอีก";
 
-SubkeyExpiryWarning_Title = "Warning: Your subkey is about to expire";
-SubkeyExpiryWarning_Msg = "Your subkey will expire on %1$@:\n\n%2$@\n\nExpired subkeys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this subkey.\n\nIf you choose to extend your subkey, it will be valid for two more years.\n\nDo you want to extend your subkey?";
-SubkeyExpiryWarning_Yes = "Extend Subkey";
-SubkeyExpiryWarning_No = "Cancel";
-SubkeyExpiryWarning_Suppress = "Do Not Ask Again";
+SubkeyExpiryWarning_Title = "คำเตือน: กุญแจย่อยของคุณกำลังจะหมดอายุ";
+SubkeyExpiryWarning_Msg = "กุญแจย่อยของคุณจะหมดอายุเมื่อ %1$@:\n\n%2$@\n\nกุญแจย่อยที่หมดอายุแล้วจะไม่สามารถใช้ในการเข้ารหัสลับหรือเซ็นข้อความใหม่ได้ การถอดรหัสลับจะยังใช้งานได้ต่อไป เพื่อนของคุณจะไม่สามารถส่งข้อความที่เข้ารหัสลับด้วยกุญแจย่อยนี้\n\nถ้าคุณเลือกที่จะยืดอายุกุญแจย่อยของคุณ มันจะใช้ได้ต่ออีกสองปี\n\nคุณต้องการจะยืดอายุกุญแจย่อยของคุณหรือไม่?";
+SubkeyExpiryWarning_Yes = "ยืดอายุกุญแจย่อย";
+SubkeyExpiryWarning_No = "ยกเลิก";
+SubkeyExpiryWarning_Suppress = "ไม่ต้องถามอีก";
 
-WrongPasswordTryAgain_Title = "You entered the wrong password";
-WrongPasswordTryAgain_Msg = "Do you want to try it again?";
-WrongPasswordTryAgain_Yes = "Try Again";
-WrongPasswordTryAgain_No = "Cancel";
+WrongPasswordTryAgain_Title = "คุณใส่รหัสผ่านผิด";
+WrongPasswordTryAgain_Msg = "คุณต้องการลองอีกครั้งหรือไม่?";
+WrongPasswordTryAgain_Yes = "ลองอีกครั้ง";
+WrongPasswordTryAgain_No = "ยกเลิก";
 
-KeyExpiryFailed_Title = "Failed to extend your key!";
-KeyExpiryFailed_Msg = "The key\n%1$@\ncould not be extened.\n\nError: %2$@";
+KeyExpiryFailed_Title = "ไม่สามารถยืดอายุกุญแจของคุณได้!";
+KeyExpiryFailed_Msg = "กุญแจ\n%1$@\nไม่สามารถถูกยืดอายุได้\n\nข้อผิดพลาด: %2$@";
 
-KeyExtendedWantToUpload_Title = "Your key was extended successfully";
-KeyExtendedWantToUpload_Msg = "In order for others to be able to see the new expiration date, it is necessary for them to import your updated key. Therefore it is recommended to upload your updated public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please consider attaching your public key to your signed and encrypted emails.\n\nDo you want to upload your public key?";
-KeyExtendedWantToUpload_Yes = "Upload Public Key";
-KeyExtendedWantToUpload_No = "No, Thanks!";
+KeyExtendedWantToUpload_Title = "กุญแจของคุณได้ถูกยืดอายุสำเร็จแล้ว";
+KeyExtendedWantToUpload_Msg = "ในการที่ผู้อื่นจะสามารถเห็นวันหมดอายุวันใหม่ได้ พวกเขาจำเป็นต้องนำเข้ากุญแจที่ปรับปรุงแล้วของคุณ ด้วยเหตุนี้ เราจึงแนะนำให้คุณอัปโหลดกุญแจสาธารณะที่ปรับปรุงแล้วของคุณไปไว้ที่เซิร์ฟเวอร์กุญแจ\n\nคำเตือน: เซิร์ฟเวอร์กุญแจนั้นอยู่ในที่สาธารณะ ดังนั้นชื่อและอีเมลที่คุณใช้ในกุญแจของคุณจะถูกเห็นได้โดยสาธารณะ กุญแจต่างๆ ไม่สามารถถูกลบออกจากเซิร์ฟเวอร์กุญแจได้ พวกมันสามารถถูกเพิกถอนได้แต่ไม่สามารถถูกกำจัดออกไปได้\n\nถ้าคุณเลือกที่จะไม่ใช้เซิร์ฟเวอร์กุญแจ กรุณาพิจารณาแนบกุญแจสาธารณะของคุณไปกับอีเมลที่เข้ารหัสลับและเซ็นชื่อแล้วของคุณ\n\nคุณต้องการอัปโหลดกุญแจสาธารณะของคุณหรือไม่?";
+KeyExtendedWantToUpload_Yes = "อัปโหลดกุญแจสาธารณะ";
+KeyExtendedWantToUpload_No = "ไม่ล่ะ ขอบคุณ!";
 
-UploadFailed_Title = "Failed to upload the key!";
-UploadFailed_Msg = "The key could not be uploaded to the keyserver.\n\nError: %@";
+UploadFailed_Title = "การอัปโหลดกุญแจล้มเหลว!";
+UploadFailed_Msg = "ไม่สามารถอัปโหลดกุญแจไปยังเซิร์ฟเวอร์กุญแจได้\n\nข้อผิดพลาด: %@";
 
 
 UpdaterNotWorking_Title = "ตัวปรับปรุง GPG Suite ทำงานไม่ตรงกับที่คาดไว้";
 UpdaterNotWorking_Msg = "กรุณาดาวน์โหลด GPG Suite จาก https://gpgtools.org แล้วติดตั้งใหม่";
 
 
-SwitchToOldKeyserver_Title = "Warning: You are about to switch the key server";
-SwitchToOldKeyserver_Msg = "Switching to the old key servers will lower the quality of search results. While keys.openpgp.org allows verification of the email address and only then will show the email in search results, the old key servers do not support that mechanism.\n\nWe recommend to keep using keys.openpgp.org\n\nDo you really want to switch the key server?";
-SwitchToOldKeyserver_No = "Cancel";
-SwitchToOldKeyserver_Yes = "Switch to old Key Server";
+SwitchToOldKeyserver_Title = "คำเตือน: คุณกำลังจะสลับเซิร์ฟเวอร์กุญแจ";
+SwitchToOldKeyserver_Msg = "การสลับไปใช้เซิร์ฟเวอร์กุญแจแห่งเก่าจะลดคุณภาพในการค้นหา ในขณะที่ keys.openpgp.org อนุญาตให้ตรวจยืนยันที่อยู่อีเมล และเมื่อตรวจยืนยันแล้วจึงจะแสดงอีเมลดังกล่าวในผลลัพธ์การค้นหา เซิร์ฟเวอร์กุญแจแห่งเก่าไม่ได้สนับสนุนกลไกที่ว่า\n\nเราแนะนำให้ยังใช้งาน keys.openpgp.org ต่อไป\n\nคุณยังต้องการจะสลับเซิร์ฟเวอร์กุญแจจริงๆ ใช่หรือไม่?";
+SwitchToOldKeyserver_No = "ยกเลิก";
+SwitchToOldKeyserver_Yes = "สลับไปใช้เซิร์ฟเวอร์กุญแจแห่งเก่า";
 
 

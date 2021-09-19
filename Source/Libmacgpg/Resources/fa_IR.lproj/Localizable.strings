@@ -1,6 +1,6 @@
 
-GetPassphraseDescription = "You need a password to unlock the secret key for user: \"%@\", ID %@";
-GetPassphraseDescription_Subkey = "You need a password to unlock the secret key for user: \"%@\", ID %@, (main key ID %@)";
+GetPassphraseDescription = "شما برای بازگشایی کلید خصوصی کاربر %@، هویت %@، نیاز به رمز عبور دارید.";
+GetPassphraseDescription_Subkey = "شما برای بازگشایی کلید خصوصی کاربر %@، هویت %@ (هویت اصلی کلید %@)، نیاز به رمز عبور دارید.";
 PassphraseLabel = "کلمه‌ی رمز:";
 
 
@@ -12,40 +12,40 @@ PassphraseLabel = "کلمه‌ی رمز:";
 "Expired" = "منقضی شده";
 "Disabled" = "غیرفعال شده";
 "Unknown" = "ناشناخته";
-"Never" = "Never";
-"Marginal" = "Marginal";
+"Never" = "هرگز";
+"Marginal" = "حاشیه‌ای";
 "Full" = "کامل";
-"Ultimate" = "Ultimate";
+"Ultimate" = "کامل";
 
 
 /* For Undo and Redo */
-Undo_NewKey = "New Key";
-Undo_Delete = "Delete";
-Undo_CleanKey = "Clean";
-Undo_MinimizeKey = "Minimize";
-Undo_RevokeKey = "Revoke Key";
-Undo_ChangeExpirationDate = "Change Expiration Date";
-Undo_ChangePassphrase = "Change Password";
-Undo_AlgorithmPreferences = "Change Algorithm Preferences";
-Undo_Import = "Import";
-Undo_AddSignature = "Add Signature";
-Undo_RemoveSignature = "Remove Signature";
-Undo_RevokeSignature = "Revoke Signature";
-Undo_AddSubkey = "Add Subkey";
-Undo_RemoveSubkey = "Remove Subkey";
-Undo_RevokeSubkey = "Revoke Subkey";
-Undo_AddUserID = "Add UserID";
-Undo_RemoveUserID = "Remove UserID";
-Undo_RevokeUserID = "Revoke UserID";
-Undo_PrimaryUserID = "Primary UserID";
-Undo_AddPhoto = "Add Photo";
-Undo_RefreshFromServer = "Refresh from server";
-Undo_ReceiveFromServer = "Receive from server";
+Undo_NewKey = "کلید جدید";
+Undo_Delete = "حذف";
+Undo_CleanKey = "پاک";
+Undo_MinimizeKey = "کمینه کردن";
+Undo_RevokeKey = "کلید لغو";
+Undo_ChangeExpirationDate = "تغییر تاریخ انقضا";
+Undo_ChangePassphrase = "تغییر رمز";
+Undo_AlgorithmPreferences = "تغییر ترجیحات الگریتم";
+Undo_Import = "وارد کردن";
+Undo_AddSignature = "اضافه کردن امضا";
+Undo_RemoveSignature = "حذف امضا";
+Undo_RevokeSignature = "لغو کردن امضا";
+Undo_AddSubkey = "اضافه کردن کلید فرعی";
+Undo_RemoveSubkey = "حذف کلید فرعی";
+Undo_RevokeSubkey = "لغو کردن کلید فرعی";
+Undo_AddUserID = "اضافه کردن هویت کاربری";
+Undo_RemoveUserID = "حذف هویت کاربری";
+Undo_RevokeUserID = "لغو هویت کاربری";
+Undo_PrimaryUserID = "هویت کاربری اصلی";
+Undo_AddPhoto = "اضافه کردن عکس";
+Undo_RefreshFromServer = "تازه‌سازی از کارساز";
+Undo_ReceiveFromServer = "دریافت از کارساز";
 
 
 
 /* Algorithm names */
-CIPHER_ALGO_NONE = "None";
+CIPHER_ALGO_NONE = "هیچ";
 CIPHER_ALGO_IDEA = "IDEA";
 CIPHER_ALGO_3DES = "3DES";
 CIPHER_ALGO_CAST5 = "CAST5";
@@ -64,7 +64,7 @@ DIGEST_ALGO_SHA256 = "SHA256";
 DIGEST_ALGO_SHA384 = "SHA384";
 DIGEST_ALGO_SHA512 = "SHA512";
 DIGEST_ALGO_SHA224 = "SHA224";
-COMPRESS_ALGO_NONE = "None";
+COMPRESS_ALGO_NONE = "هیچ";
 COMPRESS_ALGO_ZIP = "ZIP";
 COMPRESS_ALGO_ZLIB = "ZLIB";
 COMPRESS_ALGO_BZIP2 = "BZIP2";
@@ -79,60 +79,60 @@ GPG_ECDSAAlgorithm = "ECDSA";
 GPG_ElgamalAlgorithm = "ELG";
 GPG_DiffieHellmanAlgorithm = "DiffieHellman";
 GPG_EdDSAAlgorithm = "EdDSA";
-"Algorithm_%i" = "Algorithm_%i";
+"Algorithm_%i" = "الگریتم_%i";
 
 /* GPGSignature humanReadableDescription */
-"Signed" = "Signed";
-"Signature expired" = "Signature expired";
-"Key expired" = "Key expired";
-"Bad signature" = "Signature and data do not match. This could mean the data has been tampered with.";
-"Signature revoked" = "Signature revoked";
-"Signature error" = "Signature error";
-"Unverifiable signature" = "Signature can not be verified.";
-"Signed by stranger" = "Signature can not be verified, because the corresponding public key is missing.";
+"Signed" = "امضا شده";
+"Signature expired" = "امضا منقضی شده";
+"Key expired" = "کلید منقضی شده";
+"Bad signature" = "امضا و داده‌ها هم‌خوانی ندارند. این ممکن است به این معنی باشد که داده‌ها دستکاری شده‌اند.";
+"Signature revoked" = "امضا لغو شده";
+"Signature error" = "خطای امضا";
+"Unverifiable signature" = "امضا نمی‌تواند تایید شود.";
+"Signed by stranger" = "امضا نمی‌تواند تایید شود، چون کلید عمومه مکاتبه کننده در دسترس نیست.";
 
 
 /* Key Descriptions */
-KeyDescriptionAndMore = "and %lu more";
+KeyDescriptionAndMore = "و %lu قدر بیشتر";
 
 
 /* Key Expiry Warning */
-KeyExpiryWarning_Title = "Warning: Your key is about to expire";
-KeyExpiryWarning_Msg = "Your key will expire on %1$@:\n\n%2$@\n\nExpired keys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this key.\n\nIf you choose to extend your key, it will be valid for two more years.\n\nDo you want to extend your key?";
-KeyExpiryWarning_Yes = "Extend Key";
-KeyExpiryWarning_No = "Cancel";
-KeyExpiryWarning_Suppress = "Do Not Ask Again";
+KeyExpiryWarning_Title = "هشدار: کلید شما به‌زودی منقضی می‌شود";
+KeyExpiryWarning_Msg = "کلید شما در %1$@ منقضی می‌شود:\n\n%2$@\n\nکلیدهای منقضی شده نمی‌توانند برای امضا کردن یا رمزنگاری پیام‌های جدید استفاده شوند. رمزگشایی همچنان کار خواهد کرد. دوستان شما نمی‌توانند با این کلید برای شما پیام‌های رمزنگاری شده ارسال کنند.\n\nاگر شما کلید خود را تمدید کنید، کلید شما برای ۲ سال دیگر معتبر خواهد بود.\n\nآیا می‌خواهید کلید خود را تمدید کنید؟";
+KeyExpiryWarning_Yes = "تمدید کردن کلید";
+KeyExpiryWarning_No = "لغو";
+KeyExpiryWarning_Suppress = "دیگر نپرس";
 
-SubkeyExpiryWarning_Title = "Warning: Your subkey is about to expire";
-SubkeyExpiryWarning_Msg = "Your subkey will expire on %1$@:\n\n%2$@\n\nExpired subkeys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this subkey.\n\nIf you choose to extend your subkey, it will be valid for two more years.\n\nDo you want to extend your subkey?";
-SubkeyExpiryWarning_Yes = "Extend Subkey";
-SubkeyExpiryWarning_No = "Cancel";
-SubkeyExpiryWarning_Suppress = "Do Not Ask Again";
+SubkeyExpiryWarning_Title = "هشدار: کلید فرعی شما به‌زودی منقضی می‌شود";
+SubkeyExpiryWarning_Msg = "کلید فرعی شما در %1$@ منقضی می‌شود:\n\n%2$@\n\nکلیدهای فرعی منقضی شده نمی‌توانند برای امضا کردن یا رمزنگاری پیام‌های جدید استفاده شوند. رمزگشایی همچنان کار خواهد کرد. دوستان شما نمی‌توانند با این کلید فرعی برای شما پیام‌های رمزنگاری شده ارسال کنند.\n\nاگر شما کلید فرعی خود را تمدید کنید، کلید شما برای ۲ سال دیگر معتبر خواهد بود.\n\nآیا می‌خواهید کلید فرعی خود را تمدید کنید؟";
+SubkeyExpiryWarning_Yes = "تمید کلید فرعی";
+SubkeyExpiryWarning_No = "لغو";
+SubkeyExpiryWarning_Suppress = "دیگر نپرس";
 
-WrongPasswordTryAgain_Title = "You entered the wrong password";
-WrongPasswordTryAgain_Msg = "Do you want to try it again?";
-WrongPasswordTryAgain_Yes = "Try Again";
-WrongPasswordTryAgain_No = "Cancel";
+WrongPasswordTryAgain_Title = "شما رمز اشتباهی را وارد کردید";
+WrongPasswordTryAgain_Msg = "آیا می‌خواهید دوباره امتحان کنید؟";
+WrongPasswordTryAgain_Yes = "تلاش مجدد";
+WrongPasswordTryAgain_No = "لغو";
 
-KeyExpiryFailed_Title = "Failed to extend your key!";
-KeyExpiryFailed_Msg = "The key\n%1$@\ncould not be extened.\n\nError: %2$@";
+KeyExpiryFailed_Title = "تمدید کلید شما انجام نشد!";
+KeyExpiryFailed_Msg = "کلید\n%1$@\nتمدید نشد.\n\nخطا: %2$@";
 
-KeyExtendedWantToUpload_Title = "Your key was extended successfully";
-KeyExtendedWantToUpload_Msg = "In order for others to be able to see the new expiration date, it is necessary for them to import your updated key. Therefore it is recommended to upload your updated public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please consider attaching your public key to your signed and encrypted emails.\n\nDo you want to upload your public key?";
-KeyExtendedWantToUpload_Yes = "Upload Public Key";
-KeyExtendedWantToUpload_No = "No, Thanks!";
+KeyExtendedWantToUpload_Title = "کلید شما با موفقیت تمدید شد";
+KeyExtendedWantToUpload_Msg = "برای این‌که دیگران تاریخ انقضای جدید کلید شما را ببینند، باید کلید به‌روزشده شما را وارد کنند. برای همین توصیه می‌شود که کلید عمومی به‌روزشده خود را در یک کارساز کلیدها بارگزاری کنید.\n\nهشدار: کارسازهای کلیدها، عمومی هستند و نام و نشانی رایانامه شما به صورت عمومی نمایان خواهد بود. شما نمی‌توانید کلیدها را از کارسازهای کلید حذف کنید. کلیدها می‌توانند ملغی شوند ولی نمی‌توانند حذف شوند.\n\nاگر ترجیح می‌دهید که از کارسازهای کلیدها استفاده نکنید، لطفا در هنگام ارسال رایانامه، کلید عمومی خود را به رایانامه امضا و رمزنگاری شده الصاق کنید.\n\nآیا می‌خواهید کلید عمومی خود را بارگزاری کنید؟";
+KeyExtendedWantToUpload_Yes = "بارگزاری کلید عمومی";
+KeyExtendedWantToUpload_No = "خیر، سپاس!";
 
-UploadFailed_Title = "Failed to upload the key!";
-UploadFailed_Msg = "The key could not be uploaded to the keyserver.\n\nError: %@";
-
-
-UpdaterNotWorking_Title = "The GPG Suite Updater doesn't work as expected!";
-UpdaterNotWorking_Msg = "Please download and reinstall GPG Suite from https://gpgtools.org";
+UploadFailed_Title = "کلید عمومی بارگزاری نشد!";
+UploadFailed_Msg = "کلید شما در کارساز کلید بارگزاری نشد.\n\nخطا: %@";
 
 
-SwitchToOldKeyserver_Title = "Warning: You are about to switch the key server";
-SwitchToOldKeyserver_Msg = "Switching to the old key servers will lower the quality of search results. While keys.openpgp.org allows verification of the email address and only then will show the email in search results, the old key servers do not support that mechanism.\n\nWe recommend to keep using keys.openpgp.org\n\nDo you really want to switch the key server?";
-SwitchToOldKeyserver_No = "Cancel";
-SwitchToOldKeyserver_Yes = "Switch to old Key Server";
+UpdaterNotWorking_Title = "به‌روزرسان مجموعه GPG آن‌طور که باید کار نمی‌کند!";
+UpdaterNotWorking_Msg = "لطفا مجموعه GPG را دوباره از نشانی https://gpgtools.org بارگیری و نصب کنید";
+
+
+SwitchToOldKeyserver_Title = "هشدار: شما در حال تغییر کارساز کلید هستید";
+SwitchToOldKeyserver_Msg = "تغییر کارساز کلیدها به کارساز قدیمی کیفیت نتایج جست‌وجو را کم می‌کند. در حالی که keys.openpgp.org به شما اجازه تایید نشانی رایانامه را می‌دهد و فقط در آن صورت رایانامه شما را در نتایج نشان می‌دهد. کارسازهای قدیمی این فرآیند را پشتیبانی نمی‌کنند.\n\nما به شما توصیه می‌کنیم که هم‌چنان از keys.openpgp.org استفاده کنید\n\nآیا واقعا می‌خواهید کارساز کلیدها را تغییر دهید؟";
+SwitchToOldKeyserver_No = "لغو";
+SwitchToOldKeyserver_Yes = "تغییر کارساز کلید به کارساز قدیمی";
 
 

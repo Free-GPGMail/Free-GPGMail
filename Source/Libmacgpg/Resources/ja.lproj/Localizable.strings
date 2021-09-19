@@ -32,20 +32,20 @@ Undo_AddSignature = "署名を追加";
 Undo_RemoveSignature = "署名を削除";
 Undo_RevokeSignature = "署名を失効";
 Undo_AddSubkey = "副鍵を追加";
-Undo_RemoveSubkey = "Remove Subkey";
-Undo_RevokeSubkey = "Revoke Subkey";
-Undo_AddUserID = "Add UserID";
-Undo_RemoveUserID = "Remove UserID";
-Undo_RevokeUserID = "Revoke UserID";
+Undo_RemoveSubkey = "副鍵を削除";
+Undo_RevokeSubkey = "副鍵を失効";
+Undo_AddUserID = "ユーザIDを追加";
+Undo_RemoveUserID = "ユーザIDを削除";
+Undo_RevokeUserID = "ユーザIDを執行";
 Undo_PrimaryUserID = "Primary UserID";
-Undo_AddPhoto = "Add Photo";
-Undo_RefreshFromServer = "サーバーから更新";
-Undo_ReceiveFromServer = "サーバーから受信";
+Undo_AddPhoto = "写真を追加";
+Undo_RefreshFromServer = "サーバから更新";
+Undo_ReceiveFromServer = "サーバから受信";
 
 
 
 /* Algorithm names */
-CIPHER_ALGO_NONE = "None";
+CIPHER_ALGO_NONE = "無し";
 CIPHER_ALGO_IDEA = "IDEA";
 CIPHER_ALGO_3DES = "3DES";
 CIPHER_ALGO_CAST5 = "CAST5";
@@ -64,7 +64,7 @@ DIGEST_ALGO_SHA256 = "SHA256";
 DIGEST_ALGO_SHA384 = "SHA384";
 DIGEST_ALGO_SHA512 = "SHA512";
 DIGEST_ALGO_SHA224 = "SHA224";
-COMPRESS_ALGO_NONE = "None";
+COMPRESS_ALGO_NONE = "無し";
 COMPRESS_ALGO_ZIP = "ZIP";
 COMPRESS_ALGO_ZLIB = "ZLIB";
 COMPRESS_ALGO_BZIP2 = "BZIP2";
@@ -101,28 +101,28 @@ KeyExpiryWarning_Title = "Warning: Your key is about to expire";
 KeyExpiryWarning_Msg = "Your key will expire on %1$@:\n\n%2$@\n\nExpired keys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this key.\n\nIf you choose to extend your key, it will be valid for two more years.\n\nDo you want to extend your key?";
 KeyExpiryWarning_Yes = "Extend Key";
 KeyExpiryWarning_No = "キャンセル";
-KeyExpiryWarning_Suppress = "Do Not Ask Again";
+KeyExpiryWarning_Suppress = "再度表示しない";
 
 SubkeyExpiryWarning_Title = "Warning: Your subkey is about to expire";
 SubkeyExpiryWarning_Msg = "Your subkey will expire on %1$@:\n\n%2$@\n\nExpired subkeys can not be used to encrypt or sign new messages. Decryption will continue to work. Your friends will not be able to send encrypted messages using this subkey.\n\nIf you choose to extend your subkey, it will be valid for two more years.\n\nDo you want to extend your subkey?";
 SubkeyExpiryWarning_Yes = "Extend Subkey";
 SubkeyExpiryWarning_No = "キャンセル";
-SubkeyExpiryWarning_Suppress = "Do Not Ask Again";
+SubkeyExpiryWarning_Suppress = "再度表示しない";
 
 WrongPasswordTryAgain_Title = "You entered the wrong password";
-WrongPasswordTryAgain_Msg = "Do you want to try it again?";
-WrongPasswordTryAgain_Yes = "Try Again";
+WrongPasswordTryAgain_Msg = "再度試しますか?";
+WrongPasswordTryAgain_Yes = "再度試す";
 WrongPasswordTryAgain_No = "キャンセル";
 
 KeyExpiryFailed_Title = "Failed to extend your key!";
-KeyExpiryFailed_Msg = "The key\n%1$@\ncould not be extened.\n\nError: %2$@";
+KeyExpiryFailed_Msg = "The key\n%1$@\ncould not be extended.\n\nError: %2$@";
 
 KeyExtendedWantToUpload_Title = "Your key was extended successfully";
 KeyExtendedWantToUpload_Msg = "In order for others to be able to see the new expiration date, it is necessary for them to import your updated key. Therefore it is recommended to upload your updated public key to the key servers.\n\nWarning: Key servers are public, so the name and email you use in your key will be publicly visible. Keys can not be deleted from the key servers. They can be revoked but not removed.\n\nIf you rather prefer not to use key servers, please consider attaching your public key to your signed and encrypted emails.\n\nDo you want to upload your public key?";
 KeyExtendedWantToUpload_Yes = "公開鍵をアップロード";
-KeyExtendedWantToUpload_No = "No, Thanks!";
+KeyExtendedWantToUpload_No = "いいえ、結構です。";
 
-UploadFailed_Title = "Failed to upload the key!";
+UploadFailed_Title = "鍵のアップロードに失敗しました。";
 UploadFailed_Msg = "The key could not be uploaded to the keyserver.\n\nError: %@";
 
 
@@ -133,6 +133,6 @@ UpdaterNotWorking_Msg = "https://gpgtools.org から GPG Suiteをダウンロー
 SwitchToOldKeyserver_Title = "Warning: You are about to switch the key server";
 SwitchToOldKeyserver_Msg = "Switching to the old key servers will lower the quality of search results. While keys.openpgp.org allows verification of the email address and only then will show the email in search results, the old key servers do not support that mechanism.\n\nWe recommend to keep using keys.openpgp.org\n\nDo you really want to switch the key server?";
 SwitchToOldKeyserver_No = "キャンセル";
-SwitchToOldKeyserver_Yes = "Switch to old Key Server";
+SwitchToOldKeyserver_Yes = "古い鍵サーバに切り替える";
 
 

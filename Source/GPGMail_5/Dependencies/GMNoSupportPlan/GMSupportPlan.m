@@ -179,25 +179,6 @@ NSString * const GMSupportPlanVersionPrefix = @"org.gpgtools.gpgmail";
     return NO;
 }
 
-- (NSArray *)eligibleVersions {
-    for(NSString *eligibleVersion in [self.activation[@"eligible_apps"] allValues]) {
-        NSString *version = [eligibleVersion stringByReplacingOccurrencesOfString:@"org.gpgtools.gpgmail" withString:@""];
-        if(![version length]) {
-            version = @"3";
-        }
-        [eligibleVersions addObject:version];
-    }
-
-    return [NSArray arrayWithArray:eligibleVersions];
-}
-
-- (NSString *)newestEligibleVersion {
-    NSArray *versions = [[self eligibleVersions] sortedArrayUsingComparator:^NSComparisonResult(NSString *a, NSString *b) {
-        return [b integerValue] - [a integerValue];
-    }];
-    return [versions count] > 0 ? versions[0] : nil;
-}
-
 - (NSString *)description {
     NSMutableString *summary = [NSMutableString new];
     NSMutableArray *eligibleVersions = [NSMutableArray new];

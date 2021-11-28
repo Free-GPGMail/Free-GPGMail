@@ -15,6 +15,7 @@
 #import <Libmacgpg/Libmacgpg.h>
 #import <Libmacgpg/GPGTaskHelperXPC.h>
 
+NSString * const kGMSupportPlanAPIVersion = @"1.2";
 #ifndef NOOVERRIDE
 NSString * const kGMSupportPlanManagerPublicCertificate = @"MIIEWjCCAsKgAwIBAgIUBpfAcF0mUJQIT4tAmfPWMYIUrP4wDQYJKoZIhvcNAQELBQAwXjELMAkGA1UEBhMCQVQxEDAOBgNVBAgMB0F1c3RyaWExDzANBgNVBAcMBlZpZW5uYTEWMBQGA1UECgwNR1BHVG9vbHMgR21iSDEUMBIGA1UEAwwLR1BHVG9vbHMgQ0EwHhcNMTkxMTEwMDEyMDQyWhcNMjQxMTA4MDEyMDQyWjBeMQswCQYDVQQGEwJBVDEQMA4GA1UECAwHQXVzdHJpYTEPMA0GA1UEBwwGVmllbm5hMRYwFAYDVQQKDA1HUEdUb29scyBHbWJIMRQwEgYDVQQDDAtHUEdUb29scyBDQTCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBAMA9jImqn9peLMKDJESzKvEpsDnjsiUXQdQucd7jFA7k5coSfrnpSvNVWh4n4vQy4GnEgzjnVR5nzxCOs4bMWGT6oSBHyqYhVMRV0x8WpA9fcMH0O/IYBtFGXX2BCnIXeqeIYbgaQ+3rlopjAiv78EJ3lWrTmjQNBFHqipem1qdbfPur+3ELssl6hHojz/JzW7FkS2P3/++6SHsBBMD+gHQp4R3IyGmPM6YAkFSeuxtA/Z3bK7bogtuPV8DXIT7sqK66f8P0dD8cKmEWKeaub41YxDeNR9wa0KBuTIdjzkeXFloBK7uzu54AvWM3sSJdGJ8UBdXJIf+pMV+qeY/CrPwcFiRdOwDRyia//UsPUYkthtCI9dARlMlvdmZ+OJZePI5nbfxnrqBQKWAhknCwcKG9/UYf3PeJpHM0cVvvF+LK1KQ3rZlFzN+KplLB2fL5AZEgObKbv7IAc3uqPjKqEXdgwBnHsKFCwLHX8x16KiMP4sNm9rZ5+juS3l+DJYYW/QIDAQABoxAwDjAMBgNVHRMBAf8EAjAAMA0GCSqGSIb3DQEBCwUAA4IBgQAoebPba0MdlfAfDKbhxySSayBHY7uPG2RS7EA0JKthV77cZZQ5kl+JikubAEZ4inIj7rOkHcrk5vnGAoZpUpNKAGdUjPUKIFEibljivy7Wu4Zlq7xH7Qa8qJq5AF4sqpiLq59kY4jfXMlpO79TqL3g3jxYkEgMn9CYclTsa+7XlyteVaU+xUf3mgku1xpUj3/EYiKDJqx2nZYPyqD/yhTSIVF97CURKyJ30ErrOSJQvcCkenUkglPzr/ksMaQm8lcTVnat4NIwrkplsgN32x/5M9MonVMd5aSJEnaudEqUt4oDKhujYZsQVUF7rp/RMdhldErpodwaVcFHTiH9cpw0F15w3jLuGkyqbZmwRnwEJUZVx0HYza8qW+I4sMSw1JOkfgVKD776aBTZ96EqKx8e+zwcwcWLT0KWXv5JgEmqVyTJlfdYcns3tFzTmqqzgk7qJ/zOs4EJD0zrsPVTP+3jQjLSOlzIXdpMEDIe63qmq1KHVfyyHZdnbidN7PE/pAM=";
 #else
@@ -38,9 +39,9 @@ NSString * const kGMSupportPlanManagerFallbackTrial = GMSPStringFromPreprocessor
 #endif
 
 #if defined(DEBUG) && defined(DEBUG_ACTIVATION_SERVER)
-NSString * const kGMSupportPlanManagerAPIEndpointURL = @"http://localhost:8000/api/v1.1/support-plans";
+NSString * const kGMSupportPlanManagerAPIEndpointURL = @"http://localhost:8000/api/v%@/support-plans";
 #else
-// NSString * const kGMSupportPlanManagerAPIEndpointURL = @"https://support-plan.gpgtools.org/api/v1.0/support-plans";
+// NSString * const kGMSupportPlanManagerAPIEndpointURL = @"https://support-plan.gpgtools.org/api/v%@/support-plans";
 NSString * const kGMSupportPlanManagerAPIEndpointURL = @"http://do-not-query-any-valid-server.org/";
 #endif
 NSString * const kGMSupportPlanManagerActivationDirectory = @"org.gpgtools.gmsp";
@@ -117,7 +118,7 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
 
 - (instancetype)initWithApplicationID:(NSString *)applicationID applicationInfo:(NSDictionary *)applicationInfo {
     if((self = [super init])) {
-        _endpointURL = [[NSURL alloc] initWithString:kGMSupportPlanManagerAPIEndpointURL];
+        _endpointURL = [[self class] endpointURL];
         _applicationID = [applicationID copy];
         _applicationInfo = [applicationInfo copy];
         _applicationVersion = @"99.99";
@@ -157,6 +158,16 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
     return [self supportPlanWithDictionary:freeplandict];
 }
 
++ (NSURL *)endpointURL {
+    NSString *overrideEndpointURL = [[GPGOptions sharedOptions] valueForKey:@"SimulateSupportPlanEndpointURL"];
+    if(overrideEndpointURL) {
+        return [[NSURL alloc] initWithString:overrideEndpointURL];
+    }
+    NSString *endpointURL = [NSString stringWithFormat:kGMSupportPlanManagerAPIEndpointURL, kGMSupportPlanAPIVersion];
+
+    return [[NSURL alloc] initWithString:endpointURL];
+}
+
 - (GMSupportPlan *)supportPlanFromData:(NSData *)data {
     if([data length]) {
         NSMutableDictionary *supportPlanDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
@@ -168,6 +179,27 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
 - (GMSupportPlan *)supportPlanWithActivationFilePath:(NSString *)path {
     NSData *activationData = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedAlways error:nil];
     return [self supportPlanFromData:activationData];
+}
+
+- (NSArray *)applicationIDsForVersionsBeforeApplicationID:(NSString *)applicationID {
+	if([applicationID length] < [kGMSupportPlanManagerBundleIDPrefix length]) {
+		return @[];
+    }
+	NSMutableArray *applicationIDs = [NSMutableArray new];
+	NSString *applicationIDVersion = [applicationID substringFromIndex:[kGMSupportPlanManagerBundleIDPrefix length]];
+	if([applicationIDVersion integerValue] < 3) {
+    	return @[];
+	}
+	for(NSInteger i = 3; i < [applicationIDVersion integerValue]; i++) {
+		if(i == 3) {
+            [applicationIDs addObject:kGMSupportPlanManagerBundleIDPrefix];
+		}
+        else {
+            [applicationIDs addObject:[NSString stringWithFormat:@"%@%ld", kGMSupportPlanManagerBundleIDPrefix, i]];
+        }
+	}
+
+	return applicationIDs;
 }
 
 - (GMSupportPlan *)supportPlanForPreviousVersion {

@@ -265,7 +265,7 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "Não Assinar";
 
 /* Support Plan */
 "SUPPORT_PLAN_ACTIVATION_SUCCESS_TITLE" = "Plano de Suporte Ativado";
-"SUPPORT_PLAN_ACTIVATION_SUCCESS_MESSAGE" = "Thank you for your support!\n\nWe hope you enjoy using Free-GPGMail. Should you have any questions, don't hesitate to contact us via \"Contact Support\" in Mail › Preferences › GPG Mail";
+"SUPPORT_PLAN_ACTIVATION_SUCCESS_MESSAGE" = "Thank you for your support!\n\nWe hope you enjoy using Free-GPGMail. Should you have any questions, don't hesitate to contact us via https://github.com/Free-GPGMail/Free-GPGMail";
 
 "SUPPORT_PLAN_ACTIVATION_FAILED_CONNECTTION_ERROR" = "Não foi possível conectar-se à API em paddle.com para verificar o código de ativação.\nSe você estiver usando um produto de firewall para macOS (firewall integrado, Little Snitch, etc.), permita conexões ao site paddle.com para que a ativação seja concluída. Você pode bloquear conexões novamente após concluir a ativação.\n\nContate business@gpgtools.org caso o problema persista.";
 "SUPPORT_PLAN_ACTIVATION_FAILED_GENERAL_ERROR" = "Ocorreu um erro desconhecido. Tente novamente mais tarde ou acesse Preferências do Sistema > GPG Suite > Enviar Relatório para nos contatar.";
@@ -344,9 +344,9 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "Não Assinar";
 "SUPPORT_PLAN_NEW_STATUS_UPDATE_DIALOG_EXPLANATION" = "We have detected an existing support plan for Free-GPGMail 3 and are currently checking our activation server to see if your support plan is already valid for GPG Mail 4. This might take a minute.";
 "SUPPORT_PLAN_NEW_STATUS_UPDATE_DIALOG_PROGRESS_TEXT" = "Checking the status of your support plan…";
 "SUPPORT_PLAN_NEW_THANKS_DIALOG_TRIAL_SUBHEADER" = "Your 30-day-trial of Free-GPGMail was\nactivated successfully!";
-"SUPPORT_PLAN_NEW_THANKS_DIALOG_TRIAL_SUCCESS_MESSAGE" = "We hope you enjoy using Free-GPGMail. Should you have any questions, don't hesitate to contact us via \"Contact Support\" in Mail › Preferences › GPG Mail";
+"SUPPORT_PLAN_NEW_THANKS_DIALOG_TRIAL_SUCCESS_MESSAGE" = "We hope you enjoy using Free-GPGMail. Should you have any questions, don't hesitate to contact us via https://github.com/Free-GPGMail/Free-GPGMail";
 "SUPPORT_PLAN_NEW_THANKS_DIALOG_SUBHEADER" = "Your Free-GPGMail Support Plan was\nactivated successfully!";
-"SUPPORT_PLAN_NEW_THANKS_DIALOG_SUCCESS_MESSAGE" = "We hope you enjoy using Free-GPGMail. Should you have any questions, don't hesitate to contact us via \"Contact Support\" in Mail › Preferences › GPG Mail";
+"SUPPORT_PLAN_NEW_THANKS_DIALOG_SUCCESS_MESSAGE" = "We hope you enjoy using Free-GPGMail. Should you have any questions, don't hesitate to contact us via https://github.com/Free-GPGMail/Free-GPGMail";
 "SUPPORT_PLAN_NEW_THANKS_DIALOG_EFFU_MESSAGE" = "Our records show that you have just recently purchased a support plan for Free-GPGMail 3 which qualifies you for a free GPG Mail 4 Support Plan upgrade. Your support plan has been automatically upgraded.";
 "SUPPORT_PLAN_NEW_DIALOG_BUTTON_CLOSE" = "Close";
 "SUPPORT_PLAN_NEW_UPGRADE_DIALOG_FETCHING_UPGRADE_URL_PROGRESS_TEXT" = "Fetching Upgrade URL…";
@@ -358,7 +358,7 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "Não Assinar";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ERROR_ALERT_ACTIVATED_TITLE" = "Activating Free-GPGMail Support Plan";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ERROR_ALERT_ACTIVATED_MESSAGE" = "Your Free-GPGMail Support Plan is already activated!\n\nIf you would like to activate a different Support Plan, you can deactivate your current one in Mail › Preferences › GPG Mail › Deactivate\n\nThank you for your support!";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_V3_TITLE" = "Restarting Mail";
-"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_V3_MESSAGE" = "In order to load Free-GPGMail 3, Mail will now be relaunched.\nFeel free to upgrade to GPG Mail 4 at any time.\n\nShould you have any questions, don't hesitate to contact us via \"Contact Support\" in Mail › Preferences › GPG Mail";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_V3_MESSAGE" = "In order to load Free-GPGMail 3, Mail will now be relaunched.\nFeel free to upgrade to GPG Mail 4 at any time.\n\nShould you have any questions, don't hesitate to contact us via https://github.com/Free-GPGMail/Free-GPGMail";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_V4_TITLE" = "Restarting Mail";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_V4_MESSAGE" = "You are currently running Free-GPGMail 3 and just activated your GPG Mail Support Plan for GPG Mail 4. In order to load GPG Mail 4, Mail will now be relaunched.\n\nThank you for your support!";
 "SUPPORT_PLAN_NEW_WINDOW_CLOSE_ALERT_INACTIVE_TITLE" = "Important!";

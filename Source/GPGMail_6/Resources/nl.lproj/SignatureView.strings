@@ -1,0 +1,20 @@
+/* 
+ SignatureView.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 30.07.11.
+ Copyright 2011 GPGMail. All rights reserved.
+ 
+ Defines the strings used in the signature view.
+ */
+"VALIDITY_NO_TRUST" = "Deze handtekening is niet te vertrouwen.";
+"VALIDITY_OK" = "Deze handtekening is te vertrouwen";
+/* Signature view key status. */
+"VALIDITY_KEY_REVOKED" = "De sleutel voor deze handtekening is ingetrokken.";
+"VALIDITY_SIGNATURE_EXPIRED" = "De handtekening is verlopen.";
+"VALIDITY_KEY_EXPIRED" = "De sleutel voor deze handtekening is verlopen.";
+"VALIDITY_KEY_REVOKED" = "De sleutel voor deze handtekening is ingetrokken.";
+"VALIDITY_UNKNOWN_ALGORITHM" = "Deze handtekening is gemaakt met een onbekend algoritme.";
+"VALIDITY_NO_PUBLIC_KEY" = "De sleutel voor deze handtekening staat niet in uw keychain.";
+"VALIDITY_UNKNOWN_ERROR" = "Onbekende handtekeningfout.";
+"VALIDITY_BAD_SIGNATURE" = "De handtekening is ongeldig.";

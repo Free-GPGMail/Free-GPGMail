@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "Não foi possível verificar a assinatura.";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "A chave pública necessária para verificar a assinatura do anexo não se encontra no porta-chaves.\n\nDescarregue a chave pública %@ utilizando Porta-chaves GPG.";
+"DECRYPT_ERROR_GENERAL_TITLE" = "Não foi possível decifrar o anexo.";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "A chave secreta necessária para decifrar o anexo não se encontra no porta-chaves.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "O anexo foi decifrado com sucesso.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "Faça duplo clique na vista de mensagem para abrir o anexo.";

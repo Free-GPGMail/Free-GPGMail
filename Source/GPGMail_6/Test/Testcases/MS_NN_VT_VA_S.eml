@@ -1,0 +1,111 @@
+Message-ID: <4E44670C.50905@gpgtools.org>
+Date: Fri, 12 Aug 2011 01:34:36 +0200
+From: GPGTools Test Key <test@gpgtools.org>
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:5.0) Gecko/20110624 Thunderbird/5.0
+MIME-Version: 1.0
+To: test@gpgtools.org
+Subject: MS/NN/VT/VA/S
+X-Enigmail-Version: 1.2
+Content-Type: multipart/signed; micalg=pgp-sha1;
+ protocol="application/pgp-signature";
+ boundary="------------enig9CCBF0736BC423611F275DCD"
+
+This is an OpenPGP/MIME signed message (RFC 2440 and 3156)
+--------------enig9CCBF0736BC423611F275DCD
+Content-Type: multipart/mixed;
+ boundary="------------000209090407090505030006"
+
+This is a multi-part message in MIME format.
+--------------000209090407090505030006
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+MS/NN/VT/VA/S
+
+--------------000209090407090505030006
+Content-Type: image/png;
+ name="gpgmail.png"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+ filename="gpgmail.png"
+
+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
+AElFTkSuQmCC
+--------------000209090407090505030006--
+
+--------------enig9CCBF0736BC423611F275DCD
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG/MacGPG2 v2.0.17 (Darwin)
+Comment: GPGTools - http://gpgtools.org
+Comment: Using GnuPG with Mozilla - http://enigmail.mozdev.org/
+
+iQEcBAEBAgAGBQJORGcNAAoJEFJrCfEKo9qCO7sIAI3oPss4EwSNdlHzwF1eWx91
+scncDi2bLM6cgvsixoQY9KOE7hozOloGjQ3Nr8QaDmr60jG8LMzOI+z/eQNRKY0V
+nWTIJd1NrK7mWTSJfFgxTe8TEfCdSYo8nPKbbIRtX7ghpuutFYX90LvEyzELHm99
+5UFeeYevKN/f2dOimfq8ucZoAajy0w2XBVMIKDjquy8/Dhpb6YphXtJsEavmi1D9
+pSxpI9IH19KU7JODt6u1Z0MrIVrDwGR/qgMWG0JooGUgHI9CAhZEnAT+KBr+8diN
+Cyx8C++m3ftt3yd4sMvuxv0uYPlo7tGTAyalH3iM1nb5Q8V520ctw/JM0a6C4Dk=
+=tuNs
+-----END PGP SIGNATURE-----
+
+--------------enig9CCBF0736BC423611F275DCD--

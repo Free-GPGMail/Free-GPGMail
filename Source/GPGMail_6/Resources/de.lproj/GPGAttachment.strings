@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "Die Signatur konnte nicht überprüft werden.";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "Die Signatur des Anhangs konnte nicht überprüft werden, da der öffentliche Schlüssel sich nicht im Schlüsselbund befindet.\n\nBitte lade den öffentlichen Schlüssel %@ in GPG Keychain.";
+"DECRYPT_ERROR_GENERAL_TITLE" = "Der Anhang konnte nicht entschlüsselt werden.";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "Der private Schlüssel zum Entschlüssen dieses Anhangs befindet sich nicht in Ihrem Schlüsselbund.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "Der Anhang wurde erfolgreich entschlüsselt";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "Doppelklicke im Nachrichtenfenster auf eine Datei um diese zu öffnen.";

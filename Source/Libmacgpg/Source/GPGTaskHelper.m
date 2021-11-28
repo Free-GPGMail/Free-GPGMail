@@ -1180,6 +1180,9 @@ closeInput = _closeInput;
 		dispatch_semaphore_signal(semaphore);
 	};
 	dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+	// release termination handler and semaphore to prevent memory leaks.
+	self.terminationHandler = nil;
+	dispatch_release(semaphore);
 }
 @end
 

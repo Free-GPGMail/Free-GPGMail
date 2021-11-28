@@ -1,0 +1,43 @@
+Message-ID: <4E4462FD.3050407@gpgtools.org>
+Date: Fri, 12 Aug 2011 01:17:17 +0200
+From: GPGTools Test Key <test@gpgtools.org>
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:5.0) Gecko/20110624 Thunderbird/5.0
+MIME-Version: 1.0
+To: test@gpgtools.org
+Subject: ME/NN/VT/NA/S
+X-Enigmail-Version: 1.2
+Content-Type: multipart/encrypted;
+ protocol="application/pgp-encrypted";
+ boundary="------------enigF601DD3F3CB236B7D002A0EE"
+
+This is an OpenPGP/MIME encrypted message (RFC 2440 and 3156)
+--------------enigF601DD3F3CB236B7D002A0EE
+Content-Type: application/pgp-encrypted
+Content-Description: PGP/MIME version identification
+
+Version: 1
+
+--------------enigF601DD3F3CB236B7D002A0EE
+Content-Type: application/octet-stream; name="encrypted.asc"
+Content-Description: OpenPGP encrypted message
+Content-Disposition: inline; filename="encrypted.asc"
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG/MacGPG2 v2.0.17 (Darwin)
+Comment: GPGTools - http://gpgtools.org
+Comment: Using GnuPG with Mozilla - http://enigmail.mozdev.org/
+
+hQEMA1JrCfEKo9qCAQgAqIWNNtwtujOqta2BBrf39BK05PX1pCX1rIHOOCXk/6E9
+fewwhwvNs8PkNm5i1XbkohT3/InzmPD+9RO6C6iHVpitYWBRRucJXR1OgvN8+tNE
+hwmgdJ4j3C/45Dm8wcpKuGuUs3pFpYjEoHU92E6lybkvQIKFLnDVT+Nawv5ABOOH
+lWpCY11TbRn1yBVE4i/FuSCgFWamgziLs9oMsg4Pg3AiESssToKK1Plak2+pNUal
+8EWKLEbnas2X0X9IkYASxbb7vfBQ9121g+rZIFhuN9QZrH4vByIoMvHaIVWym5Ty
+csSzGKX8000KoapFuu9ilFbx33xO0bnhBgZDNZPxltKgAeZN7eDTCzaXrJ6x1Wul
+VtnRgpiQc13OpY9pXyyRPmjZMs4SJmonfDJNZovTq2fTcJMMXs5wFnSS/PQJCALk
+ygvEhuFA7YgwxDRaVyRaAhx5YUPxtyGhC1OfsS/6pZ877OHUhbyaT3tj1qFTCpy7
+PClxrwMwpRBaw/NQvKgiHRw9SQH7wdnbAw0WfTEe6rB1BXctwt+8qojaaVNCgMuu
+3A==
+=6ryS
+-----END PGP MESSAGE-----
+
+--------------enigF601DD3F3CB236B7D002A0EE--

@@ -1,0 +1,4 @@
+- Uncaught Exception if GPG is not installed.
+- Uncaught Exception if no secret keys are available.
+- Uncaught Exception if no public keys are available.
+- Uncaught Exception if pinentry is missing (happens in libmacgpg)

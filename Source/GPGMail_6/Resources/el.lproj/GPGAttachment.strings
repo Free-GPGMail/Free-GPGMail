@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "Αποτυχία επαλήθευσης της υπογραφής.";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "Το δημόσιο κλειδί για την επαλήθευση της υπογραφής αυτού του συννημένου αρχείου δε βρίσκεται στα διαθέσιμα κλειδιά σας.\n\nΠαρακαλώ κατεβάστε το δημόσιο κλειδί %@ χρησιμοποιώντας το GPG Keychain.";
+"DECRYPT_ERROR_GENERAL_TITLE" = "Αποτυχία αποκρυπτογράφησης του συννημένου αρχείου.";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "Το κρυφό κλειδί για την αποκρυπτογράφηση του συννημένου αρχείου δε βρίσκεται στα διαθέσιμα κλειδιά σας.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "Το συννημένο αρχείο αποκρυπτογραφήθηκε επιτυχώς.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "Ανοίχτε ένα συννημένο αρχείο στην προβολή μηνύματος κάνοντας διπλό κλικ.";

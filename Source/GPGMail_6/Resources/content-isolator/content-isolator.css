@@ -1,0 +1,29 @@
+html.content-isolator .protected-part {
+    padding-top: 0px;
+    position: relative;
+}
+html.content-isolator .protected-part .protected-title {
+    position: absolute;
+    margin-top: -5px;
+    background-color: #fff;
+    margin-left: 20px;
+    font-weight: bold;
+}
+html.content-isolator .protected-part .protected-content {
+    border: 3px solid #ccc;
+    padding: 16px;
+    padding-left: 20px;
+}
+html.content-isolator .content-isolator__container {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+html.content-isolator iframe.content-isolator__isolated-content { width: 100% !important; }
+
+iframe-content {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}

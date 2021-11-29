@@ -18,9 +18,12 @@ Rather than building the entire GPG Suite and installer, this project just
 concentrates on building the GPG Mail mailbundles. Depending on supported macOS
 versions, there are different versions of GPG Mail available:
 
-- `Free-GPGMail_3.mailbundle`
-- `Free-GPGMail_4.mailbundle`
-- `Free-GPGMail_5.mailbundle`
+| Mailbundle                  | supported macOS versions          |
+| --------------------------- | --------------------------------- |
+| `Free-GPGMail_3.mailbundle` | Mojave & High Sierra              |
+| `Free-GPGMail_4.mailbundle` | Catalina, Mojave & High Sierra    |
+| `Free-GPGMail_5.mailbundle` | Big Sur, Catalina & Mojave        |
+| `Free-GPGMail_6.mailbundle` | Monterey                          |
 
 Refer to the GPG Suite documentation for a list of supported macOS versions.
 
@@ -47,7 +50,7 @@ This build uses Xcode. Command line build tools must be installed.
         cd Source/
         make GPGMail_$n
 
-   where valid values for `$n` are `3`, `4`, or `5`. This will create a
+   where valid values for `$n` are `3` to `6`. This will create a
    `Free-GPGMail_$n.mailbundle` in `bundles/`. If you want to build bundles for
    all versions, just call `make`.
 

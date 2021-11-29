@@ -15,12 +15,15 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     strategy:
+      fail-fast: false
       matrix:
         os: [macos-latest]
         gpgmail: [GPGMail_3, GPGMail_4]
         include:
           - os: macos-11
             gpgmail: GPGMail_5
+          - os: macos-11
+            gpgmail: GPGMail_6
 
 
     steps:

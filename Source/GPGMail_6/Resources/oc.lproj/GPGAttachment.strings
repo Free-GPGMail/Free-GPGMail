@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "Verificacion de la signatura fracassada.";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "La clau publica necessària per verificar la signatura d'aquesta pèça junta es pas dins vòstre trossèl.\n\nMercé de telecargar la clau publica %@ en utilizant GPG Keychain.";
+"DECRYPT_ERROR_GENERAL_TITLE" = "Deschiframent del fichièr junt fracassat.";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "La clau secreta per deschifrar aqueste fichièr junt fa pas partida de vòstre trossèl de claus";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "Lo fichièr junt es estat deschifrat amb succès.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "Doble-clicatz sul fichièr junt per lo visualizar.";

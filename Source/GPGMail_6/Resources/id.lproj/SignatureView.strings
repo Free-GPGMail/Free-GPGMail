@@ -1,0 +1,20 @@
+/* 
+ SignatureView.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 30.07.11.
+ Copyright 2011 GPGMail. All rights reserved.
+ 
+ Defines the strings used in the signature view.
+ */
+"VALIDITY_NO_TRUST" = "Tanda tangan ini tidak seharusnya dipercaya.";
+"VALIDITY_OK" = "Tanda tangan ini dapat dipercaya";
+/* Signature view key status. */
+"VALIDITY_KEY_REVOKED" = "Kunci tanda tangan ini dicabut.";
+"VALIDITY_SIGNATURE_EXPIRED" = "Tanda tangan ini kedaluarsa.";
+"VALIDITY_KEY_EXPIRED" = "Kunci dari tanda tangan ini kedaluarsa.";
+"VALIDITY_KEY_REVOKED" = "Kunci tanda tangan ini dicabut.";
+"VALIDITY_UNKNOWN_ALGORITHM" = "Tanda tangan dibuat dengan algoritma yang tak dikenal.";
+"VALIDITY_NO_PUBLIC_KEY" = "Kunci dari tanda tangan ini tak ada dalam ring kunci Anda.";
+"VALIDITY_UNKNOWN_ERROR" = "Galat tanda tangan tidak diketahui.";
+"VALIDITY_BAD_SIGNATURE" = "Tanda tangan ini tidak valid.";

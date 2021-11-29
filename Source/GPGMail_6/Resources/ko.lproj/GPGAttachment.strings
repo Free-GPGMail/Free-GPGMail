@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "서명을 검증하는데 실패했습니다.";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "이 첨부파일의 서명을 검증하기 위한 공개 키가 키체인에 없습니다.\n\nGPG 키체인을 통해 %@ 공개키를 다운로드 해주세요.";
+"DECRYPT_ERROR_GENERAL_TITLE" = "첨부파일 복호화에 실패했습니다.";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "이 첨부 파일을 복호화 하기 위한 비밀 키가 키체인에 없습니다.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "첨부파일 복호화가 성공적으로 이뤄졌습니다.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "더블 클릭하여 편지안의 첨부파일을 열 수 있습니다.";

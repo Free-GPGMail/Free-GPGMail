@@ -25,8 +25,6 @@ versions, there are different versions of GPG Mail available:
 | `Free-GPGMail_5.mailbundle` | Big Sur, Catalina & Mojave        |
 | `Free-GPGMail_6.mailbundle` | Monterey                          |
 
-Refer to the GPG Suite documentation for a list of supported macOS versions.
-
 This repository contains the source tree for the modified versions of the mail
 bundles, based on the original source packages from GPG Suite. Along with
 instructions on how to build them.

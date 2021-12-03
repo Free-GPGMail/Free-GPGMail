@@ -54,6 +54,22 @@ jobs:
           security import certificate.p12 -k build.keychain -P "${APPLEDEV_CERT_PHRASE}" -T /usr/bin/codesign
           security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "${KEYCHAIN_PW}" build.keychain
           /usr/bin/codesign --force -s "${CODESIGN_ID}" Source/bundles/Free-${{ matrix.gpgmail }}.mailbundle -v
+      - name: Notarize Mailbundle
+        uses: devbotsxyz/xcode-notarize@v1
+        env:
+          CODESIGN_ID: ${{ secrets.CODESIGN_ID }}
+        if : env.CODESIGN_ID != '' && ! (endsWith(matrix.gpgmail, '3') || endsWith(matrix.gpgmail, '4'))
+        with:
+          product-path: Source/bundles/Free-${{ matrix.gpgmail }}.mailbundle
+          appstore-connect-username: ${{ secrets.APPLE_NOTARIZE_ID }}
+          appstore-connect-password: ${{ secrets.APPLE_NOTARIZE_PW }}
+      - name: Staple notarization ticket to mailbundle
+        uses: devbotsxyz/xcode-staple@v1
+        if : env.CODESIGN_ID != '' && ! (endsWith(matrix.gpgmail, '3') || endsWith(matrix.gpgmail, '4'))
+        with:
+          product-path: Source/bundles/Free-${{ matrix.gpgmail }}.mailbundle
+          verbose: True
+
       - name: Upload mailbundle
         uses: actions/upload-artifact@v2
         with:

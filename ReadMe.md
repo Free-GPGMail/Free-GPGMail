@@ -69,8 +69,10 @@ Installation
         mkdir -p ~/Library/Mail/Bundles/
         cp -r Free-GPGMail_5.mailbundle ~/Library/Mail/Bundles/
 
-4. On macOS 11.0 Big Sur and later, add a Gatekeeper rule to allow the custom
-   mailbundle
+4. Add a Gatekeeper rule to allow the custom mailbundle \
+   *(This is only necessary for custom builds from source on macOS 11 Big Sur
+   or later. Our [released mailbundles ](../../releases/) are now properly signed
+   and notarized)*
 
         sudo spctl --add ~/Library/Mail/Bundles/Free-GPGMail_5.mailbundle
 

@@ -53,10 +53,10 @@
 "MESSAGE_BANNER_PGP_VERIFY_SIGNATURE_EXPIRED_ERROR_MESSAGE" = "Platnost podpisu vypršela a nelze ověřit.\n\nZeptejte se odesilatele proč platnost jeho podpisu vypršela.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_NO_GPG_TITLE" = "MacGPG není nainstalováno";
-"MESSAGE_BANNER_PGP_DECRYPT_ERROR_NO_GPG_MESSAGE" = "Dešifrování se nezdařilo, protože MacGPG není nainstalován.\n\nZkopírujte si jej a nainstalujte GPG Suite z tohoto umístění: https://gpgtools.org";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_NO_GPG_MESSAGE" = "Dešifrování se nezdařilo, protože MacGPG není nainstalován.\n\nZkopírujte si jej a nainstalujte GPG Suite z tohoto umístění: https://github.com/Free-GPGMail/Free-GPGMail";
 
 "MESSAGE_BANNER_PGP_VERIFY_ERROR_NO_GPG_TITLE" = "MacGPG není nainstalováno";
-"MESSAGE_BANNER_PGP_VERIFY_ERROR_NO_GPG_MESSAGE" = "Ověření selhalo, protože MacGPG není nainstalován.\n\nZkopírujte si jej a nainstalujte GPG Suite z tohoto umístění: https://gpgtools.org";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_NO_GPG_MESSAGE" = "Ověření selhalo, protože MacGPG není nainstalován.\n\nZkopírujte si jej a nainstalujte GPG Suite z tohoto umístění: https://github.com/Free-GPGMail/Free-GPGMail";
 
 "MESSAGE_BANNER_PGP_ATTACHMENTS_DECRYPT_VERIFY_ERROR_TITLE" = "Dešifrování nebo ověření příloh %d selhalo.";
 "MESSAGE_BANNER_PGP_ATTACHMENTS_DECRYPT_VERIFY_ERROR_MESSAGE" = "Pro zobrazení podrobností klepněte prosím na ikonu přílohy v hlavičce zabezpečení zprávy.";
@@ -164,25 +164,25 @@
 
 /* No Libmacgpg. */
 "LIBMACGPG_NOT_FOUND_TITLE" = "Knihovna Libmacgpg nebyla nalezena";
-"LIBMACGPG_NOT_FOUND_MESSAGE" = "Komponenta Libmacgpg nebyla nalezena ve vašem systému. Zkopírujte si ji a nainstalujte GPG Suite z tohoto umístění https://www.gpgtools.org.";
+"LIBMACGPG_NOT_FOUND_MESSAGE" = "Komponenta Libmacgpg nebyla nalezena ve vašem systému. Zkopírujte si ji a nainstalujte GPG Suite z tohoto umístění https://github.com/Free-GPGMail/Free-GPGMail.";
 
 /* Code signature invalid */
 CODE_SIGN_ERROR_TITLE = "Někdo manipuloval s instalací Free-GPGMail!";
-CODE_SIGN_ERROR_MESSAGE = "Z důvodu bezpečnosti nebyl Free-GPGMail načten. \n\nNainstalujte si prosím GPG Suite z našeho důvěryhodného zdroje https://gpgtools.org.";
+CODE_SIGN_ERROR_MESSAGE = "Z důvodu bezpečnosti nebyl Free-GPGMail načten. \n\nNainstalujte si prosím GPG Suite z našeho důvěryhodného zdroje https://github.com/Free-GPGMail/Free-GPGMail.";
 
 /* GPGMailGPGMailBundle.defaults can't be loaded */
 NO_DEFAULTS_TITLE = "Nelze načíst výchozí nastavení Free-GPGMail!";
-NO_DEFAULTS_MESSAGE = "Free-GPGMail nepracuje podle očekávání.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na https://github.com/Free-GPGMail/Free-GPGMail/issues/ ";
+NO_DEFAULTS_MESSAGE = "Free-GPGMail nepracuje podle očekávání.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://github.com/Free-GPGMail/Free-GPGMail.\n\nPokud problém přetrvává, obraťte se na https://github.com/Free-GPGMail/Free-GPGMail/issues/ ";
 
 /* Errors while trying to sign a message. */
 "MESSAGE_SIGNING_ERROR_NO_PINENTRY_TITLE" = "Podepisování Vaši zprávy selhalo z důvodu selhání komponenty pinentry!";
-"MESSAGE_SIGNING_ERROR_NO_PINENTRY_DESCRIPTION" = "Pinentry – nástroj odpovědný za vyžádání vašeho hesla je pravděpodobně poškozen.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://gpgtools.org.";
+"MESSAGE_SIGNING_ERROR_NO_PINENTRY_DESCRIPTION" = "Pinentry – nástroj odpovědný za vyžádání vašeho hesla je pravděpodobně poškozen.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://github.com/Free-GPGMail/Free-GPGMail.";
 
 "MESSAGE_SIGNING_ERROR_NO_AGENT_TITLE" = "Podepisování vaši zprávy selhalo z důvodu chyby agenta GPG!";
-"MESSAGE_SIGNING_ERROR_NO_AGENT_DESCRIPTION" = "Klíčová komponenta GPG agent je pravděpodobně poškozena.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://gpgtools.org.";
+"MESSAGE_SIGNING_ERROR_NO_AGENT_DESCRIPTION" = "Klíčová komponenta GPG agent je pravděpodobně poškozena.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://github.com/Free-GPGMail/Free-GPGMail.";
 
 "MESSAGE_SIGNING_ERROR_AGENT_ERROR_TITLE" = "Podepisování vaši zprávy selhalo z důvodu chyby v komunikaci s agentem GPG!";
-"MESSAGE_SIGNING_ERROR_AGENT_ERROR_DESCRIPTION" = "Komunikace s komponentou GPG agent selhala.\n\nPro vyřešnení problému přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.";
+"MESSAGE_SIGNING_ERROR_AGENT_ERROR_DESCRIPTION" = "Komunikace s komponentou GPG agent selhala.\n\nPro vyřešnení problému přeinstalujte GPG Suite z důvěryhodného zdroje https://github.com/Free-GPGMail/Free-GPGMail.";
 
 "MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_TITLE" = "Podepisování vaši zprávy selhalo z důvodu výskytu neznámé chyby!";
 "MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Naneštěstí Free-GPGMail se nyní nedokáže z této chyby zotavit.";
@@ -202,28 +202,28 @@ NO_DEFAULTS_MESSAGE = "Free-GPGMail nepracuje podle očekávání.\n\nProsím p�
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "Přílohu zprávy nelze dešifrovat, protože jste přerušil zadávání hesla.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite nepracuje podle očekávání";
-"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Dešifrování zprávy selhalo.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na  https://github.com/Free-GPGMail/Free-GPGMail/issues a přiložte informaci o tom, že služba XPC nepracuje správně.";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Dešifrování zprávy selhalo.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://github.com/Free-GPGMail/Free-GPGMail.\n\nPokud problém přetrvává, obraťte se na  https://github.com/Free-GPGMail/Free-GPGMail/issues a přiložte informaci o tom, že služba XPC nepracuje správně.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite nepracuje podle očekávání";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Dešifrování přílohy zprávy selhalo.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na  https://github.com/Free-GPGMail/Free-GPGMail/issues a přiložte informaci o tom, že služba XPC nepracuje správně.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Dešifrování přílohy zprávy selhalo.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://github.com/Free-GPGMail/Free-GPGMail.\n\nPokud problém přetrvává, obraťte se na  https://github.com/Free-GPGMail/Free-GPGMail/issues a přiložte informaci o tom, že služba XPC nepracuje správně.";
 
 "MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite nepracuje podle očekávání";
-"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Ověřování zprávy selhalo.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na  https://github.com/Free-GPGMail/Free-GPGMail/issues a přiložte informaci o tom, že služba XPC nepracuje správně.";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Ověřování zprávy selhalo.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://github.com/Free-GPGMail/Free-GPGMail.\n\nPokud problém přetrvává, obraťte se na  https://github.com/Free-GPGMail/Free-GPGMail/issues a přiložte informaci o tom, že služba XPC nepracuje správně.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite nepracuje podle očekávání";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Ověřování přílohy zprávy selhalo.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na  https://github.com/Free-GPGMail/Free-GPGMail/issues a přiložte informaci o tom, že služba XPC nepracuje správně.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Ověřování přílohy zprávy selhalo.\n\nProsím přeinstalujte GPG Suite z důvěryhodného zdroje https://github.com/Free-GPGMail/Free-GPGMail.\n\nPokud problém přetrvává, obraťte se na  https://github.com/Free-GPGMail/Free-GPGMail/issues a přiložte informaci o tom, že služba XPC nepracuje správně.";
 
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_TITLE" = "Podepisování vaši zprávy selhalo z důvodu problému během zadání hesla.";
-"MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "Pinentry – nástroj odpovědný za vyžádání vašeho hesla nepracuje správně.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://gpgtools.org.";
+"MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "Pinentry – nástroj odpovědný za vyžádání vašeho hesla nepracuje správně.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://github.com/Free-GPGMail/Free-GPGMail.";
 
 "MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Podepisování vaši zprávy selhalo z důvodu chybné instalace Free-GPGMail!";
-"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Pro vyřešení tohoto problému, prosím přeinstalujte GPG Suite z důvěryhodného zdroje https://gpgtools.org.\n\nPokud problém přetrvává, obraťte se na  https://github.com/Free-GPGMail/Free-GPGMail/issues a přiložte informaci o tom, že služba XPC nepracuje správně.";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Pro vyřešení tohoto problému, prosím přeinstalujte GPG Suite z důvěryhodného zdroje https://github.com/Free-GPGMail/Free-GPGMail.\n\nPokud problém přetrvává, obraťte se na  https://github.com/Free-GPGMail/Free-GPGMail/issues a přiložte informaci o tom, že služba XPC nepracuje správně.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Dešifrování zprávy selhalo z důvodu selhání komponenty pinentry.";
-"MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "Pinentry – nástroj odpovědný za vyžádání vašeho hesla je pravděpodobně poškozen.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://gpgtools.org.";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "Pinentry – nástroj odpovědný za vyžádání vašeho hesla je pravděpodobně poškozen.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://github.com/Free-GPGMail/Free-GPGMail.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Dešifrování přílohy zprávy selhalo z důvodu selhání komponenty pinentry.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "Pinentry – nástroj odpovědný za vyžádání vašeho hesla je pravděpodobně poškozen.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://gpgtools.org.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "Pinentry – nástroj odpovědný za vyžádání vašeho hesla je pravděpodobně poškozen.\n\nNainstalujte prosím znovu nejnovější verzi GPGTools z https://github.com/Free-GPGMail/Free-GPGMail.";
 
 "UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_TITLE" = "Upozornění: Chystáte se odeslat nezabezpečeně odpověď na zabezpečenou zprávu!";
 "UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_MISSING_KEYS_SINGULAR" = "Nelze zašifrovat vaši odpověď, protože veřejný klíč pro následujícího adresáta chybí:\n\n%@";
@@ -268,9 +268,9 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "Nepodepisovat";
 "SUPPORT_PLAN_ACTIVATION_SUCCESS_MESSAGE" = "Thank you for your support!\n\nWe hope you enjoy using Free-GPGMail. Should you have any questions, don't hesitate to contact us via \"Report Problem\" in Mail › Preferences › GPG Mail";
 "SUPPORT_PLAN_ACTIVATION_FAILED_TITLE" = "Support Plan Activation Failed";
 "SUPPORT_PLAN_ACTIVATION_FAILED_INPUT_INVALID" = "The entered activation code is invalid. Please check the entered information and try again.";
-"SUPPORT_PLAN_ACTIVATION_FAILED_CONNECTTION_ERROR" = "We were unable to connect to the paddle.com API to verify your activation code.\nIf you are using any macOS firewall product (buil-in firewall, Little Snitch, etc.), please allow connections to paddle.com for the activation to complete. You can block any connections again once the activation is completed.\n\nPlease contact us at business@gpgtools.org if the problem persists.";
-"SUPPORT_PLAN_ACTIVATION_FAILED_CODE_INVALID" = "The entered activation code is invalid.\nPlease contact us at business@gpgtools.org if you are sure that you have entered your code correctly.";
-"SUPPORT_PLAN_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS" = "We are very sorry to inform you that you have exceeded the allowed number of activations.\nPlease contact us at business@gpgtools.org, if you believe that you should still have activations left.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_CONNECTTION_ERROR" = "Free-GPGMail tried to activate itself and failed. This should not happen. Please contact us at https://github.com/Free-GPGMail/Free-GPGMail/issues";
+"SUPPORT_PLAN_ACTIVATION_FAILED_CODE_INVALID" = "Free-GPGMail tried to activate itself and failed. This should not happen. Please contact us at https://github.com/Free-GPGMail/Free-GPGMail/issues";
+"SUPPORT_PLAN_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS" = "Free-GPGMail tried to activate itself and failed. This should not happen. Please contact us at https://github.com/Free-GPGMail/Free-GPGMail/issues";
 "SUPPORT_PLAN_ACTIVATION_FAILED_GENERAL_ERROR" = "Unfortunately an unknown error has occurred. Please retry later or use 'System Preferences › GPG Suite › Send Report' to contact us";
 "SUPPORT_PLAN_HEADER_EXPIRED" = "Your 30-day-trial of Free-GPGMail has expired. Encrypting, signing and verifying messages will stop to work. Decrypting however will always continue to work.\nPurchase GPG Mail Support Plan to continue with full functionality.";
 "SUPPORT_PLAN_HEADER_TRIAL" = "You can test Free-GPGMail free for %@ days.\nSecure your emails now!";

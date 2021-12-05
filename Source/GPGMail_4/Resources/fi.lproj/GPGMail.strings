@@ -53,10 +53,10 @@
 "MESSAGE_BANNER_PGP_VERIFY_SIGNATURE_EXPIRED_ERROR_MESSAGE" = "Allekirjoitus on vanhentunut eikä sitä voida varmentaa.\n\nKysy viestin lähettäjältä syytä vanhentuneeseen allekirjoitukseen";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_NO_GPG_TITLE" = "MacGPG is not installed";
-"MESSAGE_BANNER_PGP_DECRYPT_ERROR_NO_GPG_MESSAGE" = "Decrypting failed because MacGPG is not installed.\n\nPlease download and re-install GPG Suite from https://gpgtools.org";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_NO_GPG_MESSAGE" = "Decrypting failed because MacGPG is not installed.\n\nPlease download and re-install GPG Suite from https://github.com/Free-GPGMail/Free-GPGMail";
 
 "MESSAGE_BANNER_PGP_VERIFY_ERROR_NO_GPG_TITLE" = "MacGPG is not installed";
-"MESSAGE_BANNER_PGP_VERIFY_ERROR_NO_GPG_MESSAGE" = "Verifying failed because MacGPG is not installed.\n\nPlease download and re-install GPG Suite from https://gpgtools.org";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_NO_GPG_MESSAGE" = "Verifying failed because MacGPG is not installed.\n\nPlease download and re-install GPG Suite from https://github.com/Free-GPGMail/Free-GPGMail";
 
 "MESSAGE_BANNER_PGP_ATTACHMENTS_DECRYPT_VERIFY_ERROR_TITLE" = "%d liitteen salauksen purku tai allekirjoituksen varmistus epäonnistui.";
 "MESSAGE_BANNER_PGP_ATTACHMENTS_DECRYPT_VERIFY_ERROR_MESSAGE" = "Ole hyvä ja paina liitekuvaketta otsakkeen turvallisuusosassa saadaksesi lisätietoja.";
@@ -164,25 +164,25 @@
 
 /* No Libmacgpg. */
 "LIBMACGPG_NOT_FOUND_TITLE" = "Libmacgpg -kirjastoa ei löydy";
-"LIBMACGPG_NOT_FOUND_MESSAGE" = "Libmacgpg was not found on your system. Please download and install GPG Suite from https://www.gpgtools.org.";
+"LIBMACGPG_NOT_FOUND_MESSAGE" = "Libmacgpg was not found on your system. Please download and install GPG Suite from https://github.com/Free-GPGMail/Free-GPGMail.";
 
 /* Code signature invalid */
 CODE_SIGN_ERROR_TITLE = "Joku peruutti Free-GPGMail-ohjelman asennuksesi!";
-CODE_SIGN_ERROR_MESSAGE = "To keep you safe, Free-GPGMail will not be loaded!\n\nPlease re-install GPG Suite from https://gpgtools.org to be sure you have an original version from us!";
+CODE_SIGN_ERROR_MESSAGE = "To keep you safe, Free-GPGMail will not be loaded!\n\nPlease re-install GPG Suite from https://github.com/Free-GPGMail/Free-GPGMail to be sure you have an original version from us!";
 
 /* GPGMailGPGMailBundle.defaults can't be loaded */
 NO_DEFAULTS_TITLE = "Free-GPGMail -ohjelman oletusasetuksia ei pystytty lataamaan!";
-NO_DEFAULTS_MESSAGE = "Free-GPGMail ei toimi odotetusti.\n\nOle hyvä ja asenna GPG Suite uudelleen, osoitteesta https://gpgtools.org.\n\nJos ongelma jatkuu, ota yhteyttä tukipalveluun osoitteessa  https://github.com/Free-GPGMail/Free-GPGMail/issues.";
+NO_DEFAULTS_MESSAGE = "Free-GPGMail ei toimi odotetusti.\n\nOle hyvä ja asenna GPG Suite uudelleen, osoitteesta https://github.com/Free-GPGMail/Free-GPGMail.\n\nJos ongelma jatkuu, ota yhteyttä tukipalveluun osoitteessa  https://github.com/Free-GPGMail/Free-GPGMail/issues.";
 
 /* Errors while trying to sign a message. */
 "MESSAGE_SIGNING_ERROR_NO_PINENTRY_TITLE" = "Viestin allekirjoitus epäonnistui, koska avaintunnuslauseen kysely ei toimi.";
-"MESSAGE_SIGNING_ERROR_NO_PINENTRY_DESCRIPTION" = "Avaintunnuslauseen kyselytoiminne on rikki. Jos ongelma jatkuu, voit koettaa uudelleenasentaa GPG Suite -ohjelmiston osoitteesta https://gpgtools.org.";
+"MESSAGE_SIGNING_ERROR_NO_PINENTRY_DESCRIPTION" = "Avaintunnuslauseen kyselytoiminne on rikki. Jos ongelma jatkuu, voit koettaa uudelleenasentaa GPG Suite -ohjelmiston osoitteesta https://github.com/Free-GPGMail/Free-GPGMail.";
 
 "MESSAGE_SIGNING_ERROR_NO_AGENT_TITLE" = "Signing your message failed due to defect GPG agent!";
-"MESSAGE_SIGNING_ERROR_NO_AGENT_DESCRIPTION" = "The GPG agent which is a crucial part of GPG seems to be broken.\n\nTo fix this problem, re-install GPG Suite from https://gpgtools.org.";
+"MESSAGE_SIGNING_ERROR_NO_AGENT_DESCRIPTION" = "The GPG agent which is a crucial part of GPG seems to be broken.\n\nTo fix this problem, re-install GPG Suite from https://github.com/Free-GPGMail/Free-GPGMail.";
 
 "MESSAGE_SIGNING_ERROR_AGENT_ERROR_TITLE" = "Signing your message failed due to GPG agent communication error!";
-"MESSAGE_SIGNING_ERROR_AGENT_ERROR_DESCRIPTION" = "It was not possible to talk to the GPG agent in order to request your password.\n\nTo fix this problem, re-install GPG Suite from https://gpgtools.org.";
+"MESSAGE_SIGNING_ERROR_AGENT_ERROR_DESCRIPTION" = "It was not possible to talk to the GPG agent in order to request your password.\n\nTo fix this problem, re-install GPG Suite from https://github.com/Free-GPGMail/Free-GPGMail.";
 
 "MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_TITLE" = "Viestin allekirjoitus epäonnistui tuntemattoman virheen takia";
 "MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Unfortunately Free-GPGMail can't handle the error at this point.";
@@ -202,28 +202,28 @@ NO_DEFAULTS_MESSAGE = "Free-GPGMail ei toimi odotetusti.\n\nOle hyvä ja asenna 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "Liitteen salausta ei purettu koska peruit salasanakyselyn.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite ei toimi odotetulla tavalla.";
-"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Viestin salauksen purku epäonnistui.\n\nOle hyvä ja asenna GPG Suite uudelleen, osoitteesta https://gpgtools.org.\n\nJos ongelma jatkuu, ota yhteyttä tukipalveluun osoitteessa  https://github.com/Free-GPGMail/Free-GPGMail/issues ja anna ongelmaraportissa tieto \"xpc service is not working properly\".";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Viestin salauksen purku epäonnistui.\n\nOle hyvä ja asenna GPG Suite uudelleen, osoitteesta https://github.com/Free-GPGMail/Free-GPGMail.\n\nJos ongelma jatkuu, ota yhteyttä tukipalveluun osoitteessa  https://github.com/Free-GPGMail/Free-GPGMail/issues ja anna ongelmaraportissa tieto \"xpc service is not working properly\".";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite ei toimi odotetulla tavalla.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Liitteen salauksen purku epäonnistui.\n\nOle hyvä ja asenna GPG Suite uudelleen, osoitteesta https://gpgtools.org.\n\nJos ongelma jatkuu, ota yhteyttä tukipalveluun osoitteessa  https://github.com/Free-GPGMail/Free-GPGMail/issues ja anna ongelmaraportissa tieto \"xpc service is not working properly\".";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Liitteen salauksen purku epäonnistui.\n\nOle hyvä ja asenna GPG Suite uudelleen, osoitteesta https://github.com/Free-GPGMail/Free-GPGMail.\n\nJos ongelma jatkuu, ota yhteyttä tukipalveluun osoitteessa  https://github.com/Free-GPGMail/Free-GPGMail/issues ja anna ongelmaraportissa tieto \"xpc service is not working properly\".";
 
 "MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite ei toimi odotetulla tavalla.";
-"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Viestin varmennus epäonnistui.\n\nOle hyvä ja asenna GPG Suite uudelleen, osoitteesta https://gpgtools.org.\n\nJos ongelma jatkuu, ota yhteyttä tukipalveluun osoitteessa  https://github.com/Free-GPGMail/Free-GPGMail/issues ja anna ongelmaraportissa tieto \"xpc service is not working properly\".";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Viestin varmennus epäonnistui.\n\nOle hyvä ja asenna GPG Suite uudelleen, osoitteesta https://github.com/Free-GPGMail/Free-GPGMail.\n\nJos ongelma jatkuu, ota yhteyttä tukipalveluun osoitteessa  https://github.com/Free-GPGMail/Free-GPGMail/issues ja anna ongelmaraportissa tieto \"xpc service is not working properly\".";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite ei toimi odotetulla tavalla.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Liitteen varmennus epäonnistui.\n\nOle hyvä ja asenna GPG Suite uudelleen, osoitteesta https://gpgtools.org.\n\nJos ongelma jatkuu, ota yhteyttä tukipalveluun osoitteessa  https://github.com/Free-GPGMail/Free-GPGMail/issues ja anna ongelmaraportissa tieto \"xpc service is not working properly\".";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Liitteen varmennus epäonnistui.\n\nOle hyvä ja asenna GPG Suite uudelleen, osoitteesta https://github.com/Free-GPGMail/Free-GPGMail.\n\nJos ongelma jatkuu, ota yhteyttä tukipalveluun osoitteessa  https://github.com/Free-GPGMail/Free-GPGMail/issues ja anna ongelmaraportissa tieto \"xpc service is not working properly\".";
 
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_TITLE" = "Viestin allekirjoitus epäonnistui salasanakyselyn aikana ilmenneen ongelman takia.";
-"MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "Avaintunnuslauseen kysely ei toimi. Jos ongelma jatkuu, kokeile uudelleenasentaa GPG Suite - ohjelmisto osoitteesta https://gpgtools.org";
+"MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "Avaintunnuslauseen kysely ei toimi. Jos ongelma jatkuu, kokeile uudelleenasentaa GPG Suite - ohjelmisto osoitteesta https://github.com/Free-GPGMail/Free-GPGMail";
 
 "MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Viestin allekirjoitus epäonnistui rikkinäisen Free-GPGMail-asennuksen takia.";
-"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Korjaa ongelma asentamalla GPG Suite uudelleen, osoitteesta https://gpgtools.org.\n\nJos ongelma jatkuu, ota yhteyttä tukipalveluun osoitteessa  https://github.com/Free-GPGMail/Free-GPGMail/issues ja anna ongelmaraportissa tieto \"xpc service is not working properly\".";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Korjaa ongelma asentamalla GPG Suite uudelleen, osoitteesta https://github.com/Free-GPGMail/Free-GPGMail.\n\nJos ongelma jatkuu, ota yhteyttä tukipalveluun osoitteessa  https://github.com/Free-GPGMail/Free-GPGMail/issues ja anna ongelmaraportissa tieto \"xpc service is not working properly\".";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Viestin salauksen purku epäonnistui, koska avaintunnuslauseen kysely ei toimi.";
-"MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "Avaintunnuslauseen kyselytoiminne on rikki. Jos ongelma jatkuu, voit koettaa uudelleenasentaa GPG Suite -ohjelmiston osoitteesta https://gpgtools.org.";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "Avaintunnuslauseen kyselytoiminne on rikki. Jos ongelma jatkuu, voit koettaa uudelleenasentaa GPG Suite -ohjelmiston osoitteesta https://github.com/Free-GPGMail/Free-GPGMail.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Viestin salauksen purku epäonnistui, koska avaintunnuslauseen kyselyssä on virhe.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "Avaintunnuslauseen kyselytoiminne on rikki. Jos ongelma jatkuu, voit koettaa uudelleenasentaa GPG Suite -ohjelmiston osoitteesta https://gpgtools.org.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "Avaintunnuslauseen kyselytoiminne on rikki. Jos ongelma jatkuu, voit koettaa uudelleenasentaa GPG Suite -ohjelmiston osoitteesta https://github.com/Free-GPGMail/Free-GPGMail.";
 
 "UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_TITLE" = "Huomio: Olet lähettämässä, salattuun viestiin, salaamatonta vastausta.";
 "UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_MISSING_KEYS_SINGULAR" = "Vastausta ei voida salata, koska ao. vastaanottajan julkista avainta ei löydy: \n\n%@";
@@ -268,9 +268,9 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "Älä allekirjoita";
 "SUPPORT_PLAN_ACTIVATION_SUCCESS_MESSAGE" = "Thank you for your support!\n\nWe hope you enjoy using Free-GPGMail. Should you have any questions, don't hesitate to contact us via \"Report Problem\" in Mail › Preferences › GPG Mail";
 "SUPPORT_PLAN_ACTIVATION_FAILED_TITLE" = "Support Plan Activation Failed";
 "SUPPORT_PLAN_ACTIVATION_FAILED_INPUT_INVALID" = "The entered activation code is invalid. Please check the entered information and try again.";
-"SUPPORT_PLAN_ACTIVATION_FAILED_CONNECTTION_ERROR" = "We were unable to connect to the paddle.com API to verify your activation code.\nIf you are using any macOS firewall product (buil-in firewall, Little Snitch, etc.), please allow connections to paddle.com for the activation to complete. You can block any connections again once the activation is completed.\n\nPlease contact us at business@gpgtools.org if the problem persists.";
-"SUPPORT_PLAN_ACTIVATION_FAILED_CODE_INVALID" = "The entered activation code is invalid.\nPlease contact us at business@gpgtools.org if you are sure that you have entered your code correctly.";
-"SUPPORT_PLAN_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS" = "We are very sorry to inform you that you have exceeded the allowed number of activations.\nPlease contact us at business@gpgtools.org, if you believe that you should still have activations left.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_CONNECTTION_ERROR" = "Free-GPGMail tried to activate itself and failed. This should not happen. Please contact us at https://github.com/Free-GPGMail/Free-GPGMail/issues";
+"SUPPORT_PLAN_ACTIVATION_FAILED_CODE_INVALID" = "Free-GPGMail tried to activate itself and failed. This should not happen. Please contact us at https://github.com/Free-GPGMail/Free-GPGMail/issues";
+"SUPPORT_PLAN_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS" = "Free-GPGMail tried to activate itself and failed. This should not happen. Please contact us at https://github.com/Free-GPGMail/Free-GPGMail/issues";
 "SUPPORT_PLAN_ACTIVATION_FAILED_GENERAL_ERROR" = "Unfortunately an unknown error has occurred. Please retry later or use 'System Preferences › GPG Suite › Send Report' to contact us";
 "SUPPORT_PLAN_HEADER_EXPIRED" = "Your 30-day-trial of Free-GPGMail has expired. Encrypting, signing and verifying messages will stop to work. Decrypting however will always continue to work.\nPurchase GPG Mail Support Plan to continue with full functionality.";
 "SUPPORT_PLAN_HEADER_TRIAL" = "You can test Free-GPGMail free for %@ days.\nSecure your emails now!";

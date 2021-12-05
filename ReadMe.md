@@ -56,30 +56,32 @@ This build uses Xcode. Command line build tools must be installed.
 Installation
 ------------
 
-1. Install GPG Suite suite as normal. Make sure you use the correct version.
+1. Download and install the GPG Suite .dmg file from GPG Tools or the
+   [Free GPGMail releases page](../../releases/).
+   - If you are asked by the installed whether you want to
+     "enable GPG Mail now", say **Not Now** and check
+     **I am not interested in GPG Mail. Don't ask me again.**
 
-2. Find the freshly installed `GPGMailLoader.mailbundle` and delete it.
-   (Look into `/Library/Mail/Bundles/`,
-   `/Library/Application Support/GPGTools/GPGMail` or the user-specific directory
-   `~/Library/Mail/Bundles/`)
+2. Build or download a Free-GPGMail mailbundle compatible with your
+   macOS version.
 
-3. Build or download the modified mailbundle and copy it
-   to your user-specific Mail Bundle directory
+3. Create a folder `~/Library/Mail/Bundles/` and drag
+   `Free-GPGMail_$n.mailbundle` into that folder.
 
-        mkdir -p ~/Library/Mail/Bundles/
-        cp -r Free-GPGMail_5.mailbundle ~/Library/Mail/Bundles/
-
-4. Add a Gatekeeper rule to allow the custom mailbundle \
-   *(This is only necessary for custom builds from source on macOS 11 Big Sur
-   or later. Our [released mailbundles ](../../releases/) are now properly signed
-   and notarized)*
+4. Add a Gatekeeper rule to allow the custom mailbundle. \
+   *This is only necessary for custom builds from source on macOS 11 Big Sur
+   or later. Since [v2021.2p2](https://github.com/Free-GPGMail/Free-GPGMail/releases/tag/v2021.2p1),
+   released mailbundles are now properly signed and notarized.*
 
         sudo spctl --add ~/Library/Mail/Bundles/Free-GPGMail_5.mailbundle
 
-5. Restart Mail.app, go to `Preferences -> General -> Manage Plugins`.
-   - Enable the Free GPGMail Plugin.
+5. Restart Mail.app, go to `Preferences -> General -> Manage Plugins...`.
+   - Make sure that `GPGMailLoader_*.mailbundle`, if present, is disabled.     
+   - Enable the `Free-GPGMail_$n.mailbundle`
+   - **Apply and Restart Mail**.
 
-6. Apply and Restart Mail.app.
+6. In Mail.app, check `Preferences -> Free-GPGMail`. If it says, that you are in
+   **Trial Mode** or **Decryption Only Mode**, hit **Activate**.
 
 
 Bug Reports and User Support

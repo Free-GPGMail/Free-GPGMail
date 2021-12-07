@@ -298,7 +298,7 @@ NSString *SUScheduledCheckIntervalKey = @"SUScheduledCheckInterval";
 
 
 - (IBAction)openGPGStatusHelp:(id)sender {
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://support.gpgtools.org/kb/how-to/gpg-status"]];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/Free-GPGMail/Free-GPGMail/issues/"]];
 }
 
 

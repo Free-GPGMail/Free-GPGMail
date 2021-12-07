@@ -12,9 +12,9 @@ The latest releases of Free-GPGMail can be found on [GitHub](https://github.com/
 Prerequisite
 ------------
 
-In order to use GPGMail you need to have GnuPG installed.
-You can either build your own version, use one from [homebrew](http://brew.sh) or find a packaged version
-either at [gpgtools.org](https://gpgtools.org) or [Free-GPGMail](https://github.com/Free-GPGMail/Free-GPGMail).
+In order to use Free-GPGMail you need to have GnuPG and Libmacgpg installed.
+You can either build your own version, use one from [homebrew](http://brew.sh) or
+find a packaged (non-fee redistributed) version at [Free-GPGMail](https://github.com/Free-GPGMail/Free-GPGMail).
 
 Build
 -----

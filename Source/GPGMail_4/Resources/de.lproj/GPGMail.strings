@@ -53,10 +53,10 @@
 "MESSAGE_BANNER_PGP_VERIFY_SIGNATURE_EXPIRED_ERROR_MESSAGE" = "Die Signatur ist abgelaufen und konnte nicht überprüft werden.\n\nErkundige dich beim Absender, warum die Signatur abgelaufen ist.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_NO_GPG_TITLE" = "MacGPG ist nicht installiert";
-"MESSAGE_BANNER_PGP_DECRYPT_ERROR_NO_GPG_MESSAGE" = "Die Entschlüsselung ist fehlgeschlagen, weil MacGPG nicht installiert ist.\n\nLade und installiere GPG Suite von https://github.com/Free-GPGMail/Free-GPGMail erneut.";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_NO_GPG_MESSAGE" = "Die Entschlüsselung ist fehlgeschlagen, weil MacGPG nicht installiert ist.\n\nLade und installiere  von https://github.com/Free-GPGMail/Free-GPGMail erneut.";
 
 "MESSAGE_BANNER_PGP_VERIFY_ERROR_NO_GPG_TITLE" = "MacGPG ist nicht installiert";
-"MESSAGE_BANNER_PGP_VERIFY_ERROR_NO_GPG_MESSAGE" = "Die Verifizierung ist fehlgeschlagen, da MacGPG nicht installiert ist.\n\nLade und installiere GPG Suite von https://github.com/Free-GPGMail/Free-GPGMail erneut.";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_NO_GPG_MESSAGE" = "Die Verifizierung ist fehlgeschlagen, da MacGPG nicht installiert ist.\n\nLade und installiere  von https://github.com/Free-GPGMail/Free-GPGMail erneut.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENTS_DECRYPT_VERIFY_ERROR_TITLE" = "%d Anhänge konnten nicht entschlüsselt oder verifiziert werden.";
 "MESSAGE_BANNER_PGP_ATTACHMENTS_DECRYPT_VERIFY_ERROR_MESSAGE" = "Bitte klicke im Nachrichten Kopf unter Sicherheit auf das Anhang Icon, um weitere Informationen zu erhalten.";
@@ -146,7 +146,7 @@
 
 /* Free-GPGMail Preferences strings. */
 "GPG_STATUS_NO_ERROR_TITLE" = "Free-GPGMail ist bereit";
-"GPG_STATUS_NOT_FOUND_TITLE" = "MacGPG nicht gefunden, GPG Suite neu installieren";
+"GPG_STATUS_NOT_FOUND_TITLE" = "MacGPG nicht gefunden,  neu installieren";
 "GPG_STATUS_NOT_FOUND_TOOLTIP" = "Klicke den Farbindikator für weitere Informationen";
 "GPG_STATUS_OTHER_ERROR_TITLE" = "Probleme gefunden, klicke den Farbindikator für weitere Informationen";
 "GPG_STATUS_OTHER_ERROR_TOOLTIP" = "Klicke den Farbindikator für weitere Informationen";
@@ -164,25 +164,25 @@
 
 /* No Libmacgpg. */
 "LIBMACGPG_NOT_FOUND_TITLE" = "Libmacgpg wurde nicht gefunden";
-"LIBMACGPG_NOT_FOUND_MESSAGE" = "Libmacgpg wurde auf deinem System nicht gefunden. Bitte lade und installiere GPG Suite von https://github.com/Free-GPGMail/Free-GPGMail.";
+"LIBMACGPG_NOT_FOUND_MESSAGE" = "Libmacgpg wurde auf deinem System nicht gefunden. Bitte lade und installiere  von https://github.com/Free-GPGMail/Free-GPGMail.";
 
 /* Code signature invalid */
 CODE_SIGN_ERROR_TITLE = "Jemand hat deine Free-GPGMail-Installation manipuliert!";
-CODE_SIGN_ERROR_MESSAGE = "Um dich zu schützen, wird Free-GPGMail nicht geladen.\n\nBitte lade und installiere GPG Suite von https://github.com/Free-GPGMail/Free-GPGMail, um sicherzustellen, dass du eine Originalversion von uns verwendest.";
+CODE_SIGN_ERROR_MESSAGE = "Um dich zu schützen, wird Free-GPGMail nicht geladen.\n\nBitte lade und installiere  von https://github.com/Free-GPGMail/Free-GPGMail, um sicherzustellen, dass du eine Originalversion von uns verwendest.";
 
 /* GPGMailGPGMailBundle.defaults can't be loaded */
 NO_DEFAULTS_TITLE = "Free-GPGMail-Standardeinstellungen konnten nicht geladen werden!";
-NO_DEFAULTS_MESSAGE = "Free-GPGMail funktioniert nicht wie erwartet.\n\nLade und installiere erneut GPG Suite von https://github.com/Free-GPGMail/Free-GPGMail\n\nSollte das Problem fortbestehen, kontaktiere uns bitte unter https://github.com/Free-GPGMail/Free-GPGMail/issues";
+NO_DEFAULTS_MESSAGE = "Free-GPGMail funktioniert nicht wie erwartet.\n\nLade und installiere erneut  von https://github.com/Free-GPGMail/Free-GPGMail\n\nSollte das Problem fortbestehen, kontaktiere uns bitte unter https://github.com/Free-GPGMail/Free-GPGMail/issues";
 
 /* Errors while trying to sign a message. */
 "MESSAGE_SIGNING_ERROR_NO_PINENTRY_TITLE" = "Deine Nachricht konnte nicht signiert werden, da pinentry defekt ist!";
-"MESSAGE_SIGNING_ERROR_NO_PINENTRY_DESCRIPTION" = "pinentry, das Programm, welches für das Abfragen deines Passworts zuständig ist, scheint defekt zu sein.\n\nUm dieses Problem zu beheben, lade GPG Suite von https://github.com/Free-GPGMail/Free-GPGMail und installiere erneut.";
+"MESSAGE_SIGNING_ERROR_NO_PINENTRY_DESCRIPTION" = "pinentry, das Programm, welches für das Abfragen deines Passworts zuständig ist, scheint defekt zu sein.\n\nUm dieses Problem zu beheben, lade  von https://github.com/Free-GPGMail/Free-GPGMail und installiere erneut.";
 
 "MESSAGE_SIGNING_ERROR_NO_AGENT_TITLE" = "Deine Nachricht konnte nicht signiert werden, da der gpg-agent defekt ist!";
-"MESSAGE_SIGNING_ERROR_NO_AGENT_DESCRIPTION" = "Der gpg-agent, welcher ein wichtiger Teil von GPG ist, scheint defekt zu sein.\n\nUm dieses Problem zu beheben, lade GPG Suite von https://github.com/Free-GPGMail/Free-GPGMail und installiere erneut.";
+"MESSAGE_SIGNING_ERROR_NO_AGENT_DESCRIPTION" = "Der gpg-agent, welcher ein wichtiger Teil von GPG ist, scheint defekt zu sein.\n\nUm dieses Problem zu beheben, lade  von https://github.com/Free-GPGMail/Free-GPGMail und installiere erneut.";
 
 "MESSAGE_SIGNING_ERROR_AGENT_ERROR_TITLE" = "Deine Nachricht konnte aufgrund eines Kommunikationsfehlers mit dem gpg-agent nicht signiert werden!";
-"MESSAGE_SIGNING_ERROR_AGENT_ERROR_DESCRIPTION" = "Es war nicht möglich den gpg-agent nach deinem Passwort zu fragen.\n\nUm dieses Problem zu beheben, lade GPG Suite von https://github.com/Free-GPGMail/Free-GPGMail und installiere erneut.";
+"MESSAGE_SIGNING_ERROR_AGENT_ERROR_DESCRIPTION" = "Es war nicht möglich den gpg-agent nach deinem Passwort zu fragen.\n\nUm dieses Problem zu beheben, lade  von https://github.com/Free-GPGMail/Free-GPGMail und installiere erneut.";
 
 "MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_TITLE" = "Deine Nachricht konnte aufgrund eines unbekannten Fehlers nicht signiert werden";
 "MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Unglücklicherweise kann Free-GPGMail den Fehler an dieser Stelle nicht behandeln.";
@@ -201,29 +201,29 @@ NO_DEFAULTS_MESSAGE = "Free-GPGMail funktioniert nicht wie erwartet.\n\nLade und
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_TITLE" = "Du hast die Entschlüsselung des Anhangs abgebrochen";
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PASSPHRASE_REQUEST_CANCELLED_MESSAGE" = "Der Anhang konnte nicht entschlüsselt werden, da du die Passwortabfrage abgebrochen hast.";
 
-"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite funktioniert nicht wie erwartet";
-"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Die Entschlüsselung der Nachricht ist fehlgeschlagen.\n\nBitte lade GPG Suite von https://github.com/Free-GPGMail/Free-GPGMail herunter und installiere es erneut.\n\nSollte das Problem weiterhin auftreten, kontaktiere uns unter https://github.com/Free-GPGMail/Free-GPGMail/issues und gib an, dass der XPC Service nicht richtig funktioniert.";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = " funktioniert nicht wie erwartet";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Die Entschlüsselung der Nachricht ist fehlgeschlagen.\n\nBitte lade  von https://github.com/Free-GPGMail/Free-GPGMail herunter und installiere es erneut.\n\nSollte das Problem weiterhin auftreten, kontaktiere uns unter https://github.com/Free-GPGMail/Free-GPGMail/issues und gib an, dass der XPC Service nicht richtig funktioniert.";
 
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite funktioniert nicht wie erwartet";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Die Entschlüsselung des Anhangs ist fehlgeschlagen.\n\nBitte lade GPG Suite von https://github.com/Free-GPGMail/Free-GPGMail herunter und installiere es erneut.\n\nSollte das Problem weiterhin auftreten, kontaktiere uns unter https://github.com/Free-GPGMail/Free-GPGMail/issues und gib an, dass der XPC Service nicht richtig funktioniert.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_TITLE" = " funktioniert nicht wie erwartet";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_XPC_DAMAGED_MESSAGE" = "Die Entschlüsselung des Anhangs ist fehlgeschlagen.\n\nBitte lade  von https://github.com/Free-GPGMail/Free-GPGMail herunter und installiere es erneut.\n\nSollte das Problem weiterhin auftreten, kontaktiere uns unter https://github.com/Free-GPGMail/Free-GPGMail/issues und gib an, dass der XPC Service nicht richtig funktioniert.";
 
-"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite funktioniert nicht wie erwartet";
-"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Das Verifizieren der Nachricht ist fehlgeschlagen.\n\nBitte lade GPG Suite von https://github.com/Free-GPGMail/Free-GPGMail herunter und installiere es erneut.\n\nSollte das Problem weiterhin auftreten, kontaktiere uns unter https://github.com/Free-GPGMail/Free-GPGMail/issues und gib an, dass der XPC Service nicht richtig funktioniert.";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_TITLE" = " funktioniert nicht wie erwartet";
+"MESSAGE_BANNER_PGP_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Das Verifizieren der Nachricht ist fehlgeschlagen.\n\nBitte lade  von https://github.com/Free-GPGMail/Free-GPGMail herunter und installiere es erneut.\n\nSollte das Problem weiterhin auftreten, kontaktiere uns unter https://github.com/Free-GPGMail/Free-GPGMail/issues und gib an, dass der XPC Service nicht richtig funktioniert.";
 
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_TITLE" = "GPG Suite funktioniert nicht wie erwartet";
-"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Das Verifizieren des Anhangs ist fehlgeschlagen.\n\nBitte lade GPG Suite von https://github.com/Free-GPGMail/Free-GPGMail herunter und installiere es erneut.\n\nSollte das Problem weiterhin auftreten, kontaktiere uns unter https://github.com/Free-GPGMail/Free-GPGMail/issues und gib an, dass der XPC Service nicht richtig funktioniert.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_TITLE" = " funktioniert nicht wie erwartet";
+"MESSAGE_BANNER_PGP_ATTACHMENT_VERIFY_ERROR_XPC_DAMAGED_MESSAGE" = "Das Verifizieren des Anhangs ist fehlgeschlagen.\n\nBitte lade  von https://github.com/Free-GPGMail/Free-GPGMail herunter und installiere es erneut.\n\nSollte das Problem weiterhin auftreten, kontaktiere uns unter https://github.com/Free-GPGMail/Free-GPGMail/issues und gib an, dass der XPC Service nicht richtig funktioniert.";
 
 "MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_TITLE" = "Deine Nachricht konnte nicht signiert werden, da es ein Problem bei der Passwortabfrage gab.";
-"MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "pinentry, das Programm, welches für das Abfragen deines Passworts zuständig ist, scheint defekt zu sein.\n\nUm dieses Problem zu beheben lade GPG Suite von https://github.com/Free-GPGMail/Free-GPGMail und installiere erneut.";
+"MESSAGE_SIGNING_ERROR_PINENTRY_CRASH_DESCRIPTION" = "pinentry, das Programm, welches für das Abfragen deines Passworts zuständig ist, scheint defekt zu sein.\n\nUm dieses Problem zu beheben lade  von https://github.com/Free-GPGMail/Free-GPGMail und installiere erneut.";
 
 "MESSAGE_SIGNING_ERROR_XPC_DAMAGED_TITLE" = "Deine Nachricht konnte nicht signiert werden, da Free-GPGMail beschädigt ist.";
-"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Um dieses Problem zu beheben, lade GPG Suite von https://github.com/Free-GPGMail/Free-GPGMail und installiere erneut.\n\nSollte das Problem weiterhin auftreten, kontaktiere uns unter https://github.com/Free-GPGMail/Free-GPGMail/issues und gib an, dass der XPC Service nicht richtig funktioniert.";
+"MESSAGE_SIGNING_ERROR_XPC_DAMAGED_DESCRIPTION" = "Um dieses Problem zu beheben, lade  von https://github.com/Free-GPGMail/Free-GPGMail und installiere erneut.\n\nSollte das Problem weiterhin auftreten, kontaktiere uns unter https://github.com/Free-GPGMail/Free-GPGMail/issues und gib an, dass der XPC Service nicht richtig funktioniert.";
 
 "MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Die Entschlüsselung der Nachricht ist fehlgeschlagen, da pinentry nicht funktioniert.";
-"MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "pinentry, das Programm, welches für das Abfragen deines Passworts zuständig ist, scheint defekt zu sein.\n\nUm dieses Problem zu beheben, lade GPG Suite von https://github.com/Free-GPGMail/Free-GPGMail und installiere erneut.";
+"MESSAGE_BANNER_PGP_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "pinentry, das Programm, welches für das Abfragen deines Passworts zuständig ist, scheint defekt zu sein.\n\nUm dieses Problem zu beheben, lade  von https://github.com/Free-GPGMail/Free-GPGMail und installiere erneut.";
 
 "MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PINENTRY_CRASHED_TITLE" = "Die Entschlüsselung des Anhangs ist fehlgeschlagen, da pinentry nicht funktioniert.";
-"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "pinentry, das Programm, welches für das Abfragen deines Passworts zuständig ist, scheint defekt zu sein.\n\nUm dieses Problem zu beheben, lade GPG Suite von https://github.com/Free-GPGMail/Free-GPGMail und installiere erneut.";
+"MESSAGE_BANNER_PGP_ATTACHMENT_DECRYPT_ERROR_PINENTRY_CRASHED_MESSAGE" = "pinentry, das Programm, welches für das Abfragen deines Passworts zuständig ist, scheint defekt zu sein.\n\nUm dieses Problem zu beheben, lade  von https://github.com/Free-GPGMail/Free-GPGMail und installiere erneut.";
 
 "UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_TITLE" = "Achtung: Du bist im Begriff eine unverschlüsselte Antwort auf eine verschlüsselte Nachricht zu senden";
 "UNENCRYPTED_REPLY_TO_ENCRYPTED_MESSAGE_MISSING_KEYS_SINGULAR" = "Es ist nicht möglich deine Antwort zu verschlüsseln, weil der öffentliche Schlüssel für den folgenden Empfänger fehlt:\n\n%@";
@@ -265,14 +265,14 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "Nicht signieren";
 
 /* Support Plan */
 "SUPPORT_PLAN_ACTIVATION_SUCCESS_TITLE" = "Support Plan aktiviert";
-"SUPPORT_PLAN_ACTIVATION_SUCCESS_MESSAGE" = "Danke für deine Unterstützung!\n\nWir hoffen du wirst Freude an Free-GPGMail haben. Solltest du irgendwelche Fragen haben, zögere nicht uns über den Knopf \"Problem melden\" in Mail > Einstellungen > GPG Mail zu kontaktieren.";
+"SUPPORT_PLAN_ACTIVATION_SUCCESS_MESSAGE" = "Free-GPGMail is dummy activated";
 "SUPPORT_PLAN_ACTIVATION_FAILED_TITLE" = "Support Plan Aktivierung fehlgeschlagen";
 "SUPPORT_PLAN_ACTIVATION_FAILED_INPUT_INVALID" = "Der eingegebene Aktivierungscode ist ungültig. Bitte überprüfe die eingegebenen Daten und versuche es erneut.";
 "SUPPORT_PLAN_ACTIVATION_FAILED_CONNECTTION_ERROR" = "Free-GPGMail tried to activate itself and failed. This should not happen. Please contact us at https://github.com/Free-GPGMail/Free-GPGMail/issues";
 "SUPPORT_PLAN_ACTIVATION_FAILED_CODE_INVALID" = "Free-GPGMail tried to activate itself and failed. This should not happen. Please contact us at https://github.com/Free-GPGMail/Free-GPGMail/issues";
 "SUPPORT_PLAN_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS" = "Free-GPGMail tried to activate itself and failed. This should not happen. Please contact us at https://github.com/Free-GPGMail/Free-GPGMail/issues";
-"SUPPORT_PLAN_ACTIVATION_FAILED_GENERAL_ERROR" = "Leider ist ein unbekannter Fehler aufgetreten. Bitte versuche es später erneut oder kontaktieren uns via 'Systemeinstellungen > GPG Suite > Bericht Senden.";
-"SUPPORT_PLAN_HEADER_EXPIRED" = "Dein 30-Tage-Trial von Free-GPGMail ist abgelaufen. Verschlüsseln, signieren und verifizieren von Nachrichten werden nun nicht mehr funktionieren. Entschlüsseln wird jedoch immer funktionieren.\nBestelle GPG Mail Support Plan um den vollen Funktionsumfang weiter zu verwenden.";
+"SUPPORT_PLAN_ACTIVATION_FAILED_GENERAL_ERROR" = "Leider ist ein unbekannter Fehler aufgetreten. Bitte versuche es später erneut oder kontaktieren uns via 'Systemeinstellungen >  > Bericht Senden.";
+"SUPPORT_PLAN_HEADER_EXPIRED" = "Dummy-activate Free-GPGMail";
 "SUPPORT_PLAN_HEADER_TRIAL" = "Du kannst Free-GPGMail kostenlos für %@Tage testen.\nSichere deine E-Mail Kommunikation jetzt!";
 "SUPPORT_PLAN_HEADER_TRIAL_MORE" = "Du kannst Free-GPGMail kostenlos für weitere %@ Tage testen.\nSichere deine E-Mail Kommunikation jetzt!";
 "SUPPORT_PLAN_DETAILS_MESSAGE" = "Falls du bereits einen Support Plan bestellt hast, aktiviere ihn jetzt und geniesse Free-GPGMail.";
@@ -303,9 +303,9 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "Nicht signieren";
 "SUPPORT_PLAN_NEW_ACTIVATION_FAILED_CODE_INVALID" = "Free-GPGMail tried to activate itself and failed. This should not happen. Please contact us at https://github.com/Free-GPGMail/Free-GPGMail/issues";
 "SUPPORT_PLAN_NEW_ACTIVATION_FAILED_CODE_INVALID" = "Free-GPGMail tried to activate itself and failed. This should not happen. Please contact us at https://github.com/Free-GPGMail/Free-GPGMail/issues";
 "SUPPORT_PLAN_NEW_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS_TITLE" = "Maximale Anzahl der möglichen Geräte erreicht!";
-"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS" = "Die Anzahl der Geräte, auf denen du deinen Free-GPGMail Support Plan aktivieren kannst, ist aufgebraucht.\nBitte deaktiviere den GPG Mail Support Plan auf einem deiner anderen Geräte. Diese Funktion steht dir unter \"Mail › Einstellungen › GPG Mail › Deaktivieren\" zur Verfügung.";
+"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_TOO_MANY_ACTIVATIONS" = "Free-GPGMail failed to dummy-activate. This should not happen.";
 "SUPPORT_PLAN_NEW_ACTIVATION_FAILED_GENERAL_ERROR_TITLE" = "Serverfehler!";
-"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_GENERAL_ERROR" = "Die Aktivierung deines Support Plans konnte aufgrund eines Serverfehlers nicht erfolgreich abgeschlossen werden. Bitte versuche es später erneut. Sollte das Problem fortbestehen, kontaktiere uns via \"Systemeinstellungen › GPG Suite › Bericht senden\"";
+"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_GENERAL_ERROR" = "Die Aktivierung deines Support Plans konnte aufgrund eines Serverfehlers nicht erfolgreich abgeschlossen werden. Bitte versuche es später erneut. Sollte das Problem fortbestehen, kontaktiere uns via \"Systemeinstellungen ›  › Bericht senden\"";
 "SUPPORT_PLAN_NEW_ACTIVATION_FAILED_SUPPORT_PLAN_DISABLED_TITLE" = "Deaktivierter Support Plan!";
 "SUPPORT_PLAN_NEW_ACTIVATION_FAILED_SUPPORT_PLAN_DISABLED" = "Free-GPGMail says it is not activated. Activate it!";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_LOCATE_ACTIVATION_CODE" = "Deinen Aktivierungscode findest du in der E-Mail welche du nach dem Kauf erhalten hast.";
@@ -316,9 +316,9 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "Nicht signieren";
 "SUPPORT_PLAN_NEW_HEADER_WELCOME_4" = "Willkommen bei Free-GPGMail 4";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_HEADER_TRIAL_4" = "Free-GPGMail 4 Trial";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_SUBHEADER_TRIAL_EXPIRED" = "Dein 30-Tage-Trial ist abgelaufen";
-"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_TRIAL_EXPIRED_DETAILS_TEXT" = "Da deine Testperiode abgelaufen ist, ist es nicht mehr möglich E-Mails zu verschlüsseln, signieren oder zu verifizieren. Du kannst natürlich weiterhin alle deine verschlüsselten E-Mails lesen.\n\nUm alle Funktionen von Free-GPGMail freizuschalten, kaufe bitte einen GPG Mail Support Plan.";
-"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_TRIAL_ABOUT_TO_EXPIRE_SUBHEADER" = "Deine Trial wird in Kürze ablaufen.\nDu kannst Free-GPGMail noch für %@ Tage gratis testen.";
-"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_TRIAL_ABOUT_TO_EXPIRE_DETAILS_TEXT" = "Da deine Trial abgelaufen ist, ist es nicht mehr möglich E-Mails zu verschlüsseln, signieren oder zu verifizieren. Du kannst natürlich weiterhin alle deine verschlüsselten E-Mails lesen.\n\nUm alle Funktionen von Free-GPGMail freizuschalten, kaufe bitte einen GPG Mail Support Plan.";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_TRIAL_EXPIRED_DETAILS_TEXT" = "You need to dummy-activate Free-GPGMail";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_TRIAL_ABOUT_TO_EXPIRE_SUBHEADER" = "Free-GPGMail message: you should not see this";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_TRIAL_ABOUT_TO_EXPIRE_DETAILS_TEXT" = "Dummy-activate Free-GPGMail";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_TRIAL_CONTINUE_SUBHEADER" = "Du kannst Free-GPGMail noch für %@ Tage gratis testen.\nDer Schutz für deine E-Mails!";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_INACTIVE_SUBHEADER" = "Du kannst Free-GPGMail für %@ Tage gratis testen.\nDer Schutz für deine E-Mails!";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_PURCHASED_ALREADY_MESSAGE" = "Solltest du bereits einen Support Plan gekauft haben, aktiviere ihn hier und erfreu dich an allen Funktionen von Free-GPGMail!";
@@ -333,22 +333,22 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "Nicht signieren";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_PROGRESS_TEXT" = "Dein Free-GPGMail Support Plan wird aktiviert…";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_HEADER_SWITCH_PLAN" = "Free-GPGMail 4";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_SUBHEADER_SWITCH_PLAN" = "Free-GPGMail Support Plan wechseln";
-"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_SWITCH_PLAN_DETAILS_TEXT" = "Dein aktueller Free-GPGMail Support Plan ist nur für GPG Mail 3 gültig. Um auf einen gültigen GPG Mail 4 Support Plan zu wechseln, füge dessen Registrierungsdetails unten ein.";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_SWITCH_PLAN_DETAILS_TEXT" = "Dummy-activate Free-GPGMail";
 "SUPPORT_PLAN_NEW_UPGRADE_DIALOG_SUBHEADER" = "Bitte upgrade deinen Free-GPGMail Support Plan";
-"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_3TO4_VALID_V3" = "Dein Free-GPGMail Support Plan ist gültig für GPG Mail 3, welches aber nicht mit macOS Catalina kompatibel ist.";
-"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_3TO4_EXPLANATION" = "Um alle Funktionen von Free-GPGMail nutzen zu können und alle Vorteile der neuesten Updates und Features genießen zu können, upgrade jetzt deinen GPG Mail Support Plan.\n\nAls Dankeschön würden wir dir gernen einen Rabatt von %@ anbieten.";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_3TO4_VALID_V3" = "Dummy-activate Free-GPGMail";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_3TO4_EXPLANATION" = "Free-GPGMail message: you should not see this";
 "SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_3TO4_START_TRIAL_EXPLANATION" = "Wenn du dich noch nicht entscheiden willst, kannst du gerne eine Trial starten und Free-GPGMail für %@ Tage testen.";
 "SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_BUTTON_UPGRADE" = "Jetzt Upgraden!";
 "SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_4ORKEEP3_V4_AVAILABLE" = "Free-GPGMail 4 ist nun verfügbar.";
-"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_4ORKEEP3_EXPLANATION" = "Dein Free-GPGMail Support Plan ist gültig für GPG Mail 3. Um alle Funktionen von GPG Mail nutzen zu können, alle Vorteile der neuesten Updates und Features genießen zu können und vorbereitet zu sein auf macOS Catalina, upgrade jetzt deinen GPG Mail Support Plan. \n\nAls Dankeschön würden wir dir gerne eine Rabatt von %@ anbieten.\n\nWenn du vorerst nicht vor hast auf macOS Catalina upzugraden oder lieber auf neue Features warten möchtest, kannst du GPG Mail 3 weiterverwenden für so lange du möchtest.";
+"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_4ORKEEP3_EXPLANATION" = "Free-GPGMail message: you should not see this";
 "SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_4ORKEEP3_BUTTON_KEEP" = "Free-GPGMail 3 weiter nutzen";
-"SUPPORT_PLAN_NEW_STATUS_UPDATE_DIALOG_EXPLANATION" = "Du hast aktuell einen Support Plan für Free-GPGMail 3 aktiviert. Wir sind gerade dabei auf unserem Aktivierungsserver zu überprüfen, ob dein Support Plan bereits für GPG Mail 4 gültig ist. Das kann kurz dauern.";
+"SUPPORT_PLAN_NEW_STATUS_UPDATE_DIALOG_EXPLANATION" = "Dummy-activate Free-GPGMail";
 "SUPPORT_PLAN_NEW_STATUS_UPDATE_DIALOG_PROGRESS_TEXT" = "Der Status deines Support Plans wird überprüft…";
 "SUPPORT_PLAN_NEW_THANKS_DIALOG_TRIAL_SUBHEADER" = "Deine 30-Tage Trial von Free-GPGMail\nwurde erfolgreich aktiviert!";
-"SUPPORT_PLAN_NEW_THANKS_DIALOG_TRIAL_SUCCESS_MESSAGE" = "Wir hoffen, dass dir Free-GPGMail deine Arbeit erleichtert. Solltest du Fragen haben, bitte zögere nicht uns via \"Bericht senden\" in Mail › Einstellungen › GPG Mail zu kontaktieren.";
+"SUPPORT_PLAN_NEW_THANKS_DIALOG_TRIAL_SUCCESS_MESSAGE" = "Free-GPGMail message: you should not see this";
 "SUPPORT_PLAN_NEW_THANKS_DIALOG_SUBHEADER" = "Dein Free-GPGMail Support Plan wurde\nerfolgreich aktiviert!";
-"SUPPORT_PLAN_NEW_THANKS_DIALOG_SUCCESS_MESSAGE" = "Wir hoffen, dass dir Free-GPGMail deine Arbeit erleichtert. Solltest du Fragen haben, bitte zögere nicht uns via \"Bericht senden\" in Mail › Einstellungen › GPG Mail zu kontaktieren.";
-"SUPPORT_PLAN_NEW_THANKS_DIALOG_EFFU_MESSAGE" = "Da du erst kürzlich einen Support Plan für Free-GPGMail 3 gekauft hast, würden wir dir gerne ein Upgrade deines Support Plans für GPG Mail 4 schenken. Dein Support Plan wurde automatisch upgegraded.";
+"SUPPORT_PLAN_NEW_THANKS_DIALOG_SUCCESS_MESSAGE" = "Dummy-activate Free-GPGMail";
+"SUPPORT_PLAN_NEW_THANKS_DIALOG_EFFU_MESSAGE" = "Free-GPGMail message: you should not see this";
 "SUPPORT_PLAN_NEW_DIALOG_BUTTON_CLOSE" = "Schließen";
 "SUPPORT_PLAN_NEW_UPGRADE_DIALOG_FETCHING_UPGRADE_URL_PROGRESS_TEXT" = "Upgrade URL wird abgefragt…";
 "SUPPORT_PLAN_NEW_UPGRADE_DIALOG_ERROR_ALERT_VOLUME_TITLE" = "Volume-Einkauf wurde erkannt";
@@ -357,25 +357,25 @@ ACCESSIBILITY_SIGN_OFF_IMAGE = "Nicht signieren";
 "SUPPORT_PLAN_NEW_UPGRADE_DIALOG_ERROR_ALERT_SERVER_MESSAGE" = "Free-GPGMail tried to upgrade itself and failed. This should not happen. Please contact us at https://github.com/Free-GPGMail/Free-GPGMail/issues";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_START_TRIAL_PROGRESS_TEXT" = "Trial wird aktiviert…";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ERROR_ALERT_ACTIVATED_TITLE" = "Free-GPGMail Support Plan Aktivierung";
-"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ERROR_ALERT_ACTIVATED_MESSAGE" = "Dein Free-GPGMail Support Plan ist auf diesem Gerät bereits aktiviert!\n\nWenn du einen anderen Support Plan aktivieren möchtest, kannst du den aktuellen unter \"Mail › Einstellungen › GPG Mail\" deaktivieren.\n\nDanke für deine Unterstützung!";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ERROR_ALERT_ACTIVATED_MESSAGE" = "Dummy-activate Free-GPGMail";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_V3_TITLE" = "Mail Neustarten";
-"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_V3_MESSAGE" = "Um Free-GPGMail 3 zu laden wird Mail nun neu gestartet.\nDu kannst jederzeit auf GPG Mail 4 upgraden.\n\nSolltest du Fragen haben, bitte zögere nicht uns via \"Bericht senden\" in Mail › Einstellungen › GPG Mail zu kontaktieren.";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_V3_MESSAGE" = "Free-GPGMail message: you should not see this";
 "SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_V4_TITLE" = "Mail Neustarten";
-"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_V4_MESSAGE" = "Aktuell verwendest du Free-GPGMail 3 und hast soeben eine GPG Mail Support Plan für GPG Mail 4 aktiviert. Um GPG Mail 4 zu laden, wird Mail nun neu gestartet.\n\nDanke für deine Unterstützung!";
+"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_ALERT_RESTARTING_V4_MESSAGE" = "Free-GPGMail message: you should not see this";
 "SUPPORT_PLAN_NEW_WINDOW_CLOSE_ALERT_INACTIVE_TITLE" = "Wichtig!";
 "SUPPORT_PLAN_NEW_WINDOW_CLOSE_ALERT_INACTIVE_MESSAGE" = "Ohne einen aktiven Free-GPGMail Support Plan ist es nicht möglich E-Mails zu verschlüsseln, signieren oder zu verifizieren. Du kannst natürlich weiterhin alle deine verschlüsselten E-Mails lesen.";
 "SUPPORT_PLAN_NEW_WINDOW_CLOSE_ALERT_TRIAL_EXPIRED_TITLE" = "Free-GPGMail Trial Abgelaufen";
 "SUPPORT_PLAN_NEW_WINDOW_CLOSE_ALERT_TRIAL_EXPIRED_MESSAGE" = "Ohne einen aktiven Free-GPGMail Support Plan ist es nicht möglich E-Mails zu verschlüsseln, signieren oder zu verifizieren. Du kannst natürlich weiterhin alle deine verschlüsselten E-Mails lesen.";
 
 "SUPPORT_PLAN_DEACTIVATION_WARNING_TITLE" = "Free-GPGMail Support Plan deaktivieren";
-"SUPPORT_PLAN_DEACTIVATION_WARNING_MESSAGE" = "Bist du sicher, dass du deinen Support Plan auf diesem Computer deaktivieren willst?\n\nWenn du deinen Free-GPGMail Support Plan auf diesem Computer deaktivierst, wird GPG Mail in den \"Nur-Entschlüsseln-Modus\" zurück gesetzt.\n\nSobald die Deaktivierung abgeschlossen ist, wirst du keine E-Mails mehr verschlüsseln, signieren oder verifizieren können. Du kannst natürlich weiterhin alle deine verschlüsselten E-Mails lesen.\n\nSobald GPG Mail auf diesem Computer deaktiviert ist, kannst du es auf einem neuen Computer aktivieren.";
+"SUPPORT_PLAN_DEACTIVATION_WARNING_MESSAGE" = "Dummy-activate Free-GPGMail";
 "SUPPORT_PLAN_DEACTIVATION_WARNING_CANCEL" = "Abbrechen";
 "SUPPORT_PLAN_DEACTIVATION_WARNING_CONFIRM" = "Deaktivieren";
 
 "PREFERENCES_SUPPORT_PLAN_STATE_DECRYPT_ONLY_DESCRIPTION" = "Nur Entschlüsseln Modus";
 "PREFERENCES_SUPPORT_PLAN_STATE_DECRYPT_ONLY_TRIAL_EXPIRED_DESCRIPTION" = "Nur Entschlüsseln Modus - Trial abgelaufen";
 "PREFERENCES_SUPPORT_PLAN_STATE_DECRYPT_ONLY_TRIAL_DAYS_REMAINING_DESCRIPTION" = "Trial Modus - läuft noch %@ Tage";
-"PREFERENCES_SUPPORT_PLAN_STATE_INVALID_NOT_COVERED_VERSION_DETECTED_DESCRIPTION" = "Dein aktueller Support Plan is für diese Version von Free-GPGMail nicht gültig. Du kannst entweder deinen aktuellen Support Plan 'Upgraden' oder 'Support Plan wechseln', solltest du einen anderen gültigen Support Plan für GPG Mail 4 besitzen.";
+"PREFERENCES_SUPPORT_PLAN_STATE_INVALID_NOT_COVERED_VERSION_DETECTED_DESCRIPTION" = "Dummy-activate Free-GPGMail";
 "PREFERENCES_SUPPORT_PLAN_STATE_ACTIVATION_CODE_TITLE" = "Code";
 "PREFERENCES_SUPPORT_PLAN_STATE_COVERED_VERSIONS_TITLE" = "Gültig für Versionen";
 "PREFERENCES_SUPPORT_PLAN_STATE_REGISTERED_TO" = "E-Mail:";

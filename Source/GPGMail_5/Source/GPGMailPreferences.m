@@ -281,7 +281,7 @@ NSString *SUScheduledCheckIntervalKey = @"SUScheduledCheckInterval";
 
 
 - (IBAction)openSupport:(id)sender {
-    BOOL success = [GPGTask showGPGSuitePreferencesTab:@"report" arguments:nil];
+    BOOL success = NO;
 
 	if (!success) {
 		// Alternative if GPGPreferences could not be launched.

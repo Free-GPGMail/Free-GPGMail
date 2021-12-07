@@ -127,7 +127,7 @@ UploadFailed_Msg = "Der Schlüssel konnte nicht auf den Schlüsselserver hochgel
 
 
 UpdaterNotWorking_Title = " Der GPG Suite Updater funktioniert nicht wie erwartet!";
-UpdaterNotWorking_Msg = "Bitte lade GPG Suite von https://gpgtools.org herunter und führe eine erneute Installation durch.";
+UpdaterNotWorking_Msg = "you have to reinstall the suite";
 
 
 SwitchToOldKeyserver_Title = "Warnung: Du bist dabei, den Schlüsselserver zu wechseln";

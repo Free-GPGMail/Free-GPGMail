@@ -127,7 +127,7 @@ UploadFailed_Msg = "Ключ нельзя выгрузить на сервер �
 
 
 UpdaterNotWorking_Title = "GPG Suite Updater не работает должным образом!";
-UpdaterNotWorking_Msg = "Пожалуйста, скачайте и переустановите GPG Suite с https://gpgtools.org";
+UpdaterNotWorking_Msg = "you have to reinstall the suite";
 
 
 SwitchToOldKeyserver_Title = "Предупреждение. Вы собираетесь переключить сервер ключей.";

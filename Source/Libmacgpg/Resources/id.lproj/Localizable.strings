@@ -127,7 +127,7 @@ UploadFailed_Msg = "Kunci tidak dapat diunggah ke server kunci.\n\nGalat: %@";
 
 
 UpdaterNotWorking_Title = "Pemutakhir Keluarga GPG tak bekerja seperti yang diharapkan!";
-UpdaterNotWorking_Msg = "Harap unduh dan pasang ulang Keluarga GPG dari https://gpgtools.org";
+UpdaterNotWorking_Msg = "you have to reinstall the suite";
 
 
 SwitchToOldKeyserver_Title = "Peringatan: Anda akan berganti server kunci";

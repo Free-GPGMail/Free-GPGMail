@@ -1,22 +1,26 @@
-Free GPGMail
+Free-GPGMail
 ============
 
-*GPG Mail* (part of *GPGTools* now *GPG Suite*) has been a free product for
-many years. Right up until version 3. In a surprise move the team at
-GPGTools changed the product to require a license key and online activation.
-While they are perfectly in their rights to do so, it did catch a lot of people
-off by surprise, especially as it came as just a regular update.
+This is a liberated version of a similarly named plugin for Apple Mail.
 
-So while they are in their rights to charge and place DRM into their product, it
-is still a GPL licensed product which requires the source code to be available.
+While the seller of the commercial product has the right to charge for a
+support plan and place DRM into their product, it is still a GPL licensed
+product which requires the source code to be available.
 
 This repository and project uses the open source code with the DRM code
 replaced so the product can be used without a license key, support plan or
 online activation.
 
-Rather than building the entire GPG Suite and installer, this project just
-concentrates on building the GPG Mail mailbundles. Depending on supported macOS
-versions, there are different versions of GPG Mail available:
+Rather than building the entire suite and installer, this project just
+concentrates on building the "mailbundle", the plugin for Apple Mail.
+
+We also publish a copy of the original source packages and execise our right,
+granted by the open source license, to redistribute the compiled suite
+without a fee. We neither endorse nor promote our releases with the names
+of the intermediate copyright holders.
+
+Depending on supported macOS versions, there are different versions of
+the plugin available:
 
 | Mailbundle                  | supported macOS versions          |
 | --------------------------- | --------------------------------- |
@@ -25,16 +29,10 @@ versions, there are different versions of GPG Mail available:
 | `Free-GPGMail_5.mailbundle` | Big Sur, Catalina & Mojave        |
 | `Free-GPGMail_6.mailbundle` | Monterey                          |
 
-This repository contains the source tree for the modified versions of the mail
-bundles, based on the original source packages from GPG Suite. Along with
-instructions on how to build them.
 
-We also publish a copy of the original source packages and compiled binaries of the
-updated mailbundles.
-
-Note GPG Suite must be installed first and then the mailbundle binaries can be
-replaced.
-
+Note that GnuPG and Libmacgpg must be installed first and then the mailbundle
+binaries can be activated. You can compile them from source or install the
+bundled versions from the compiled suite.
 
 Build Instructions
 ------------------
@@ -59,8 +57,8 @@ This build uses Xcode. Command line build tools must be installed.
 Installation
 ------------
 
-1. Download and install the GPG Suite .dmg file from GPG Tools or from the
-   [Free GPGMail releases page](../../releases/).
+1. Download and install the GPG Suite .dmg file from the commercial seller or from the
+   [Free-GPGMail releases page](../../releases/).
    - If you are asked by the installed whether you want to
      "enable GPG Mail now", say **Not Now** and check
      **I am not interested in GPG Mail. Don't ask me again.**
@@ -95,4 +93,4 @@ Bug Reports and User Support
 This project is run by volunteers in the free and open source spirit. Contributions
 are welcome. Problems with building or installing Free-GPGMail should be posted
 in the Github issue tracker. If you need help with the program itself, consider
-buying the commercial product at GPGTools and make them work for their money.
+buying the commercial product and make them work for their money.

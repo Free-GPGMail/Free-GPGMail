@@ -127,7 +127,7 @@ UploadFailed_Msg = "The key could not be uploaded to the keyserver.\n\nError: %@
 
 
 UpdaterNotWorking_Title = "¡El actualizador GPG Suite no funciona como se esperaba!";
-UpdaterNotWorking_Msg = "Por favor, descargue y vuelva a instalar GPG Suite desde https://gpgtools.org";
+UpdaterNotWorking_Msg = "you have to reinstall the suite";
 
 
 SwitchToOldKeyserver_Title = "Warning: You are about to switch the key server";

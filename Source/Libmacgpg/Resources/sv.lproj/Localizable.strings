@@ -127,7 +127,7 @@ UploadFailed_Msg = "Nyckeln kunde inte laddas upp till nyckelservern.\n\nFelmedd
 
 
 UpdaterNotWorking_Title = "GPG Suite Updater fungerar inte som förväntat!";
-UpdaterNotWorking_Msg = "Hämta och installera om GPG Suite från https://gpgtools.org";
+UpdaterNotWorking_Msg = "you have to reinstall the suite";
 
 
 SwitchToOldKeyserver_Title = "Varning: Du håller på att byta nyckelserver";

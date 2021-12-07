@@ -1,5 +1,5 @@
 * Use PGP inline instead of PGP/MIME (EXPERIMENTAL) *
-	defaults write org.gpgtools.gpgmail UseOpenPGPInlineToSend -bool YES|NO
+	defaults write org.free-gpgmail.gpgmail UseOpenPGPInlineToSend -bool YES|NO
 
 
 * Completely disable creating snippets. *
@@ -8,14 +8,14 @@
 
 	This option completely disables it.
 
-	defaults write org.gpgtools.gpgmail NeverCreatePreviewSnippets -bool YES|NO
+	defaults write org.free-gpgmail.gpgmail NeverCreatePreviewSnippets -bool YES|NO
 
 
 * Set a default security method to prefer. *
 	By default OpenPGP is preferred if no better option is found.
 	Set this option to 2 to force S/MIME. 1 = OpenPGP.
 
-	defaults write org.gpgtools.gpgmail DefaultSecurityMethod -int 1|2
+	defaults write org.free-gpgmail.gpgmail DefaultSecurityMethod -int 1|2
 
 
 * Add a mapping for a mail-address or a domain to a key. *
@@ -28,9 +28,9 @@
 
 
 * Disable or enable OpenPGP for reading messages. *
-	defaults write org.gpgtools.gpgmail UseOpenPGPForReading -bool YES|NO
+	defaults write org.free-gpgmail.gpgmail UseOpenPGPForReading -bool YES|NO
 
 
 * FOR DEBUGGING ONLY: Hides all signature attachments, even if they fail to verify. *
-	defaults write org.gpgtools.gpgmail HideAllSignatureAttachments -bool YES|NO
+	defaults write org.free-gpgmail.gpgmail HideAllSignatureAttachments -bool YES|NO
 

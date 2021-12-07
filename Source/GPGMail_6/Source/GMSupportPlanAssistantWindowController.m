@@ -724,7 +724,7 @@ typedef enum {
     }
     if([(NSButton *)sender tag] == GMSupportPlanAssistantBuyActivateButtonStateUpgrade) {
         if([[self supportPlanManager] isMultiUser]) {
-            [self showUpgradeURLFetchOperationFailedAlertForError:[NSError errorWithDomain:@"org.gpgtools.gpgmail" code:GMSupportPlanAPIErrorUpgradeURLVolume userInfo:nil]];
+            [self showUpgradeURLFetchOperationFailedAlertForError:[NSError errorWithDomain:@"org.free-gpgmail.gpgmail" code:GMSupportPlanAPIErrorUpgradeURLVolume userInfo:nil]];
             return;
         }
         [self showLoadingSpinnerWithMessage:[GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_FETCHING_UPGRADE_URL_PROGRESS_TEXT"] disableButtons:@[_continueButton, _cancelButton]];

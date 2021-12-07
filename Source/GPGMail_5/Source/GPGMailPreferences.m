@@ -281,7 +281,7 @@ NSString *SUScheduledCheckIntervalKey = @"SUScheduledCheckInterval";
 
 
 - (IBAction)openSupport:(id)sender {
-    BOOL success = [GPGTask showGPGSuitePreferencesTab:@"report" arguments:nil];
+    BOOL success = NO;
 
 	if (!success) {
 		// Alternative if GPGPreferences could not be launched.
@@ -298,7 +298,7 @@ NSString *SUScheduledCheckIntervalKey = @"SUScheduledCheckInterval";
 
 
 - (IBAction)openGPGStatusHelp:(id)sender {
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://support.gpgtools.org/kb/how-to/gpg-status"]];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/Free-GPGMail/Free-GPGMail/issues/"]];
 }
 
 

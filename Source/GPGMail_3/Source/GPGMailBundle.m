@@ -513,7 +513,7 @@ static BOOL gpgMailWorks = NO;
         
         _messageBodyDataLoadingQueue = [[NSOperationQueue alloc] init];
         _messageBodyDataLoadingQueue.maxConcurrentOperationCount = 1;
-        _messageBodyDataLoadingQueue.name = @"org.gpgtools.gpgmail.messageBodyLoadingQueue";
+        _messageBodyDataLoadingQueue.name = @"org.free-gpgmail.gpgmail.messageBodyLoadingQueue";
         _messageBodyDataLoadingCache = [[NSCache alloc] init];
 
         // Inject the plugin code.

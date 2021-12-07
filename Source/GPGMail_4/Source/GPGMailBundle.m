@@ -489,7 +489,7 @@ static BOOL gpgMailWorks = NO;
 
         // Set domain and register the main defaults.
         GPGOptions *options = [GPGOptions sharedOptions];
-        options.standardDomain = @"org.gpgtools.gpgmail";
+        options.standardDomain = @"org.free-gpgmail.gpgmail";
 		NSDictionary *defaultsDictionary = [NSDictionary dictionaryWithContentsOfFile:[myBundle pathForResource:@"GPGMailBundle" ofType:@"defaults"]];
         [(id)options registerDefaults:defaultsDictionary];
 
@@ -518,7 +518,7 @@ static BOOL gpgMailWorks = NO;
 
         _messageBodyDataLoadingQueue = [[NSOperationQueue alloc] init];
         _messageBodyDataLoadingQueue.maxConcurrentOperationCount = 1;
-        _messageBodyDataLoadingQueue.name = @"org.gpgtools.gpgmail.messageBodyLoadingQueue";
+        _messageBodyDataLoadingQueue.name = @"org.free-gpgmail.gpgmail.messageBodyLoadingQueue";
         _messageBodyDataLoadingCache = [[NSCache alloc] init];
 
         // Inject the plugin code.

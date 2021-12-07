@@ -36,7 +36,7 @@
 @property(readonly, nonatomic) MailBundleController *mailBundleController;
 @end
 
-NSString * const kGMLoaderIdentifier = @"org.gpgtools.gpgmail.GPGMailLoader";
+NSString * const kGMLoaderIdentifier = @"org.free-gpgmail.gpgmail.GPGMailLoader";
 
 @implementation GMLoaderUpdater
 

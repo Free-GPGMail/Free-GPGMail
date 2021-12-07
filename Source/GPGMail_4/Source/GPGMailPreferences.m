@@ -158,10 +158,10 @@ NSString *SUScheduledCheckIntervalKey = @"SUScheduledCheckInterval";
     // Add information about covered versions.
 
     NSMutableArray *coveredVersions = [NSMutableArray new];
-    if(validSupportPlanExists && [supportPlan isEligibleForAppWithName:@"org.gpgtools.gpgmail4"]) {
+    if(validSupportPlanExists && [supportPlan isEligibleForAppWithName:@"org.free-gpgmail.gpgmail4"]) {
         [coveredVersions addObject:@"4.x"];
     }
-    if((validSupportPlanExists && [supportPlan isEligibleForAppWithName:@"org.gpgtools.gpgmail"]) || (!validSupportPlanExists && [previousSupportPlan isEligibleForAppWithName:@"org.gpgtools.gpgmail"])) {
+    if((validSupportPlanExists && [supportPlan isEligibleForAppWithName:@"org.free-gpgmail.gpgmail"]) || (!validSupportPlanExists && [previousSupportPlan isEligibleForAppWithName:@"org.free-gpgmail.gpgmail"])) {
         [coveredVersions addObject:@"3.x"];
     }
 

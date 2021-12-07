@@ -54,7 +54,7 @@ NSString * const kGMSupportPlanManagerEventPrefix = @"__gmsp_event";
 NSString * const kGMSupportPlanManagerGMSPLegacyActivationKey = @"GMSPLegacyActivation";
 NSString * const kGMSupportPlanManagerGSMPActivationForSharedAccessKey = @"GMSPActivation";
 
-NSString * const kGMSupportPlanManagerBundleIDPrefix = @"org.gpgtools.gpgmail";
+NSString * const kGMSupportPlanManagerBundleIDPrefix = @"org.free-gpgmail.gpgmail";
 
 extern NSString * const GMSupportPlanRefreshTypeRegular;
 extern NSString * const GMSupportPlanRefreshTypeOffline;
@@ -203,7 +203,7 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
 }
 
 - (GMSupportPlan *)supportPlanForPreviousVersion {
-    return [self supportPlanWithActivationFilePath:[[self activationFileURLForApplicationID:@"org.gpgtools.gpgmail"] path]];
+    return [self supportPlanWithActivationFilePath:[[self activationFileURLForApplicationID:@"org.free-gpgmail.gpgmail"] path]];
 }
 
 - (GMSupportPlan *)supportPlanWithDictionary:(NSDictionary *)dictionary {
@@ -343,7 +343,7 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
 
     [self runAPICallWithURL:@"/upgrade-url" data:payload completionHandler:^(NSDictionary *result, NSError *error) {
         if(![result[@"success"] boolValue]) {
-            error = [NSError errorWithDomain:@"org.gpgtools.gpgmail" code:[result[@"code"] integerValue] userInfo:nil];
+            error = [NSError errorWithDomain:@"org.free-gpgmail.gpgmail" code:[result[@"code"] integerValue] userInfo:nil];
         }
         NSLog(@"Reponse: %@", result);
         if(completionHandler) {
@@ -685,7 +685,7 @@ extern NSString * const GMSupportPlanRefreshTypeOffline;
 
 + (GPGOptions *)GPGOptions {
     GPGOptions *options = [GPGOptions sharedOptions];
-    options.standardDomain = @"org.gpgtools.gpgmail";
+    options.standardDomain = @"org.free-gpgmail.gpgmail";
 
     return options;
 }

@@ -34,7 +34,7 @@ NSString * const GMSupportPlanTypeValueTime = @"time";
 NSString * const GMSupportPlanRefreshTypeRegular = @"regular";
 NSString * const GMSupportPlanRefreshTypeOffline = @"offline";
 
-NSString * const GMSupportPlanVersionPrefix = @"org.gpgtools.gpgmail";
+NSString * const GMSupportPlanVersionPrefix = @"org.free-gpgmail.gpgmail";
 
 @implementation GMSupportPlan
 
@@ -183,7 +183,7 @@ NSString * const GMSupportPlanVersionPrefix = @"org.gpgtools.gpgmail";
     NSMutableString *summary = [NSMutableString new];
     NSMutableArray *eligibleVersions = [NSMutableArray new];
     for(NSString *eligibleVersion in [self.activation[@"eligible_apps"] allValues]) {
-        NSString *version = [eligibleVersion stringByReplacingOccurrencesOfString:@"org.gpgtools.gpgmail" withString:@""];
+        NSString *version = [eligibleVersion stringByReplacingOccurrencesOfString:@"org.free-gpgmail.gpgmail" withString:@""];
         if(![version length]) {
             version = @"3";
         }

@@ -150,7 +150,7 @@ typedef enum {
 
     // If GPG Mail 3 is running, but the support plan succeeded for GPG Mail 4,
     // prompt to relaunch GPG Mail 4.
-    if([supportPlan isValidForAppName:@"org.gpgtools.gpgmail4"] && [[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.gpgtools.gpgmail"]) {
+    if([supportPlan isValidForAppName:@"org.free-gpgmail.gpgmail4"] && [[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.free-gpgmail.gpgmail"]) {
         // Reset the alwys load version, to make sure GPG Mail 4 is loaded.
         [GMSupportPlanManager setAlwaysLoadVersion:nil];
         [GMSupportPlanManager setShouldNeverAskAgainForUpgradeVersion:nil];
@@ -160,7 +160,7 @@ typedef enum {
 
     // It is possible that the activation did succeed, yet the support plan
     // is not valid for the current version. In that case, show the upgrade or keep dialog.
-    if([supportPlan isValidForAppName:@"org.gpgtools.gpgmail"] && [[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.gpgtools.gpgmail4"]) {
+    if([supportPlan isValidForAppName:@"org.free-gpgmail.gpgmail"] && [[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.free-gpgmail.gpgmail4"]) {
         [viewController setState:GMSupportPlanViewControllerStateInfo];
     }
     else {
@@ -321,7 +321,7 @@ typedef enum {
                                     nil];
 
         self.grayInfoTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_LOCATE_ACTIVATION_CODE"];
-        if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.gpgtools.gpgmail"]) {
+        if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.free-gpgmail.gpgmail"]) {
             self.grayInfoTextField.stringValue = [self.grayInfoTextField.stringValue stringByAppendingFormat:@"\n\n%@ %@", [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_VERSION_3_COMPATIBILITY_INFO"],
                 [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_VERSION_COMPATIBILITY_NO_GUARANTEE_INFO"]                                  ];
             self.headerTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_HEADER_WELCOME"]; // "Welcome to GPG Mail"
@@ -411,7 +411,7 @@ typedef enum {
         }
 
         // If this is version 3, hide the start trial button.
-        if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.gpgtools.gpgmail"]) {
+        if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.free-gpgmail.gpgmail"]) {
             self.cancelButton.hidden = YES;
         }
 
@@ -486,7 +486,7 @@ typedef enum {
     }
 
     if(state == GMSupportPlanViewControllerStateThanks) {
-        if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.gpgtools.gpgmail"]) {
+        if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.free-gpgmail.gpgmail"]) {
             self.headerTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_HEADER_WELCOME"];
         }
         else {
@@ -503,7 +503,7 @@ typedef enum {
         else {
             self.subHeaderTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_THANKS_DIALOG_SUBHEADER"];
             self.detailsTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_THANKS_DIALOG_SUCCESS_MESSAGE"];
-            if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.gpgtools.gpgmail"]) {
+            if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.free-gpgmail.gpgmail"]) {
                 self.grayInfoTextField.stringValue = [NSString stringWithFormat:@"%@ %@",
                                                       [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_VERSION_3_COMPATIBILITY_INFO"],
                                                       [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_VERSION_COMPATIBILITY_NO_GUARANTEE_INFO"]];
@@ -633,7 +633,7 @@ typedef enum {
             _cancelButton.enabled = YES;
         }
 
-        if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.gpgtools.gpgmail"]) {
+        if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.free-gpgmail.gpgmail"]) {
             self.subHeaderTextField.hidden = YES;
         }
     }
@@ -697,7 +697,7 @@ typedef enum {
     }
     if([(NSButton *)sender tag] == GMSupportPlanAssistantBuyActivateButtonStateUpgrade) {
         if([[self supportPlanManager] isMultiUser]) {
-            [self showUpgradeURLFetchOperationFailedAlertForError:[NSError errorWithDomain:@"org.gpgtools.gpgmail" code:GMSupportPlanAPIErrorUpgradeURLVolume userInfo:nil]];
+            [self showUpgradeURLFetchOperationFailedAlertForError:[NSError errorWithDomain:@"org.free-gpgmail.gpgmail" code:GMSupportPlanAPIErrorUpgradeURLVolume userInfo:nil]];
             return;
         }
         [self showLoadingSpinnerWithMessage:[GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_FETCHING_UPGRADE_URL_PROGRESS_TEXT"] disableButtons:@[_continueButton, _cancelButton]];

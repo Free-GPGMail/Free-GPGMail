@@ -15,7 +15,7 @@
 	<key>CFBundleIconFile</key>
 	<string>GPGMail.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.gpgtools.gpgmail6</string>
+	<string>org.free-gpgmail.gpgmail6</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -29,7 +29,7 @@
 	<key>CommitHash</key>
 	<string>AUTOFILL</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © under General Public License (GPL): GPGTools GmbH, 2019, Free-GPGMail, 2020</string>
+	<string>Copyright © under General Public License v3 (GPLv3): Free-GPGMail, 2021</string>
 	<key>NSPrincipalClass</key>
 	<string>GPGMailBundle</string>
 	<key>Supported10.14PluginCompatibilityUUIDs</key>

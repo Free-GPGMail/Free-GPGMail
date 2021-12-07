@@ -29,7 +29,7 @@
 #import "GPGConstants.h"
 
 #define GPGMAIL_SECURITY_OPTIONS_HISTORY_FILE @"security-options-history.data"
-#define GPGMAIL_SECURITY_OPTIONS_HISTORY_DOMAIN @"org.gpgtools.gpgmail"
+#define GPGMAIL_SECURITY_OPTIONS_HISTORY_DOMAIN @"org.free-gpgmail.gpgmail"
 
 @class GMSecurityOptions, MCMessage;
 

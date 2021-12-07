@@ -651,7 +651,7 @@ static BOOL gpgMailWorks = NO;
     supportPlanAssistantWindowController = [[GMSupportPlanAssistantWindowController alloc] initWithSupportPlanManager:[self supportPlanManager]];
     supportPlanAssistantWindowController.delegate = self;
     supportPlanAssistantWindowController.contentViewController = supportPlanAssistantViewController;
-    [[supportPlanAssistantWindowController window] setTitle:@"GPG Mail Support Plan"];
+    [[supportPlanAssistantWindowController window] setTitle:@"Free-GPGMail No Support Plan"];
     [supportPlanAssistantWindowController showWindow:nil];
     [[supportPlanAssistantWindowController window] makeKeyAndOrderFront:nil];
 
@@ -770,7 +770,7 @@ static BOOL gpgMailWorks = NO;
 }
 
 + (NSString *)productNameForVersion:(NSString *)version {
-    return [NSString stringWithFormat:@"GPG Mail %@", version];
+    return [NSString stringWithFormat:@"Free-GPGMail %@", version];
 }
 
 + (NSAlert *)customAlert {

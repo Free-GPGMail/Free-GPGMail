@@ -127,7 +127,7 @@ NSString *SUScheduledCheckIntervalKey = @"SUScheduledCheckInterval";
     GMSupportPlanManager *supportPlanManager = [[GPGMailBundle sharedInstance] supportPlanManager];
     GMSupportPlan *supportPlan = [supportPlanManager supportPlan];
     NSString *version = [supportPlanManager applicationVersion];
-    self.supportPlanTitleField.stringValue = @"GPG Mail Support Plan";
+    self.supportPlanTitleField.stringValue = @"Free-GPGMail No Support Plan";
 
     // If a valid support plan for a previous version is available, show the old activation code.
     BOOL anyValidSupportPlan = ([supportPlanManager supportPlanIsActive] && ![supportPlan isKindOfTrial]) || [supportPlanManager shouldPromptUserForUpgrade];

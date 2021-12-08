@@ -16,8 +16,8 @@ concentrates on building the "mailbundle", the plugin for Apple Mail.
 
 We also publish a copy of the original source packages and execise our right,
 granted by the open source license, to redistribute the compiled suite
-without a fee. We neither endorse nor promote our releases with the names
-of the intermediate copyright holders.
+without a fee. This does not constitute any endorsement or promotion of our
+releases by the intermediate copyright holders.
 
 Depending on supported macOS versions, there are different versions of
 the plugin available:

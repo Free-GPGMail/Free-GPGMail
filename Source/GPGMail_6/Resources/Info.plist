@@ -112,5 +112,25 @@
 	<array>
 		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
 	</array>
+	<key>Supported12.1PluginCompatibilityUUIDs</key>
+	<array>
+		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
+	</array>
+	<key>Supported12.2PluginCompatibilityUUIDs</key>
+	<array>
+		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
+	</array>
+	<key>Supported12.3PluginCompatibilityUUIDs</key>
+	<array>
+		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
+	</array>
+	<key>Supported12.4PluginCompatibilityUUIDs</key>
+	<array>
+		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
+	</array>
+	<key>Supported12.5PluginCompatibilityUUIDs</key>
+	<array>
+		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
+	</array>
 </dict>
 </plist>

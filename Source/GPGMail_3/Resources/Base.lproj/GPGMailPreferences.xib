@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="activateButton" destination="lO8-KU-tpl" id="v7s-ft-jbC"/>
                 <outlet property="activationCodeTextField" destination="TUL-r9-9jA" id="XQI-Mk-djS"/>
+                <outlet property="deactivateButton" destination="e0H-Pk-h4R" id="4Zy-6h-tqW"/>
                 <outlet property="learnMoreButton" destination="dW7-T8-3kz" id="S8e-zQ-NSR"/>
                 <outlet property="preferencesView" destination="9" id="23"/>
                 <outlet property="registrationDescriptionTextField" destination="aZa-FD-lCE" id="HlT-gm-Agu"/>

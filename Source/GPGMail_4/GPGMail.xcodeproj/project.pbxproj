@@ -637,7 +637,7 @@
 				089C1671FE841209C02AAC07 /* Frameworks */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
 			);
-			name = GPGMail;
+			name = Free-GPGMail;
 			sourceTree = "<group>";
 		};
 		089C1671FE841209C02AAC07 /* Frameworks */ = {
@@ -1093,9 +1093,9 @@
 			comments = "Old working:\nheader_search_path ..\nlibrary_style static\nother_linker_flags -force_flat_namespace -undefined suppress \nmacosx deployment target: default\n\n-bundle_loader /System/Applications/Mail.app/Contents/MacOS/Mail  -undefined dynamic_lookup\n";
 			dependencies = (
 			);
-			name = GPGMail;
+			name = Free-GPGMail;
 			productInstallPath = "$(HOME)/Library/Bundles";
-			productName = GPGMail;
+			productname = Free-GPGMail;
 			productReference = 8D5B49B6048680CD000E48DA /* GPGMail.mailbundle */;
 			productType = "com.apple.product-type.bundle";
 		};
@@ -1304,7 +1304,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "install_name_tool -change \\\n\"@executable_path/../Frameworks/RegexKit.framework/Versions/A/RegexKit\" \\\n\"@loader_path/../Frameworks/RegexKit.framework/Versions/A/RegexKit\" \\\n\"$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME/Contents/MacOS/GPGMail\"\n";
+			shellScript = "install_name_tool -change \\\n\"@executable_path/../Frameworks/RegexKit.framework/Versions/A/RegexKit\" \\\n\"@loader_path/../Frameworks/RegexKit.framework/Versions/A/RegexKit\" \\\n\"$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME/Contents/MacOS/Free-GPGMail\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1BC07F3517466697004263BB /* Copy Libmacgpg into the sandbox container */ = {
@@ -1822,7 +1822,7 @@
 					"-undefined",
 					dynamic_lookup,
 				);
-				PRODUCT_NAME = GPGMail;
+				PRODUCT_NAME= "Free-GPGMail";
 				STRIP_STYLE = "non-global";
 				VALID_ARCHS = "x86_64 i386";
 				WRAPPER_EXTENSION = mailbundle;
@@ -1863,7 +1863,7 @@
 					"-undefined",
 					dynamic_lookup,
 				);
-				PRODUCT_NAME = GPGMail;
+				PRODUCT_NAME= "Free-GPGMail";
 				SEPARATE_STRIP = NO;
 				STRIP_STYLE = "non-global";
 				VALID_ARCHS = "x86_64 i386";

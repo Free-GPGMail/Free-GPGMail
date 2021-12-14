@@ -7,7 +7,7 @@
 	<key>CFBundleDocumentTypes</key>
 	<array/>
 	<key>CFBundleExecutable</key>
-	<string>GPGMail</string>
+	<string>Free-GPGMail</string>
 	<key>CFBundleIconFile</key>
 	<string>GPGMail.icns</string>
 	<key>CFBundleIdentifier</key>
@@ -15,7 +15,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>GPGMail</string>
+	<string>Free-GPGMail</string>
 	<key>CFBundlePackageType</key>
 	<string>GpgM</string>
 	<key>CFBundleShortVersionString</key>

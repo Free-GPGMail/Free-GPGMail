@@ -75,3 +75,9 @@ jobs:
         with:
           name: Free-${{ matrix.gpgmail }}.mailbundle
           path: Source/bundles/
+
+      - name: Upload mailbundle debuginfo
+        uses: actions/upload-artifact@v2
+        with:
+          name: Free-${{ matrix.gpgmail }}.mailbundle.dSYM
+          path: Source/${{ matrix.gpgmail }}/build/Release/Free-GPGMail.mailbundle.dSYM

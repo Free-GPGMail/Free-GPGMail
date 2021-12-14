@@ -633,7 +633,7 @@
 				089C1671FE841209C02AAC07 /* Frameworks */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
 			);
-			name = GPGMail;
+			name = Free-GPGMail;
 			sourceTree = "<group>";
 		};
 		089C1671FE841209C02AAC07 /* Frameworks */ = {
@@ -1089,9 +1089,9 @@
 			comments = "Old working:\nheader_search_path ..\nlibrary_style static\nother_linker_flags -force_flat_namespace -undefined suppress \nmacosx deployment target: default\n\n-bundle_loader /System/Applications/Mail.app/Contents/MacOS/Mail  -undefined dynamic_lookup\n";
 			dependencies = (
 			);
-			name = GPGMail;
+			name = Free-GPGMail;
 			productInstallPath = "$(HOME)/Library/Bundles";
-			productName = GPGMail;
+			productname = Free-GPGMail;
 			productReference = 8D5B49B6048680CD000E48DA /* Free-GPGMail.mailbundle */;
 			productType = "com.apple.product-type.bundle";
 		};

@@ -794,7 +794,7 @@ static BOOL gpgMailWorks = NO;
         @"org.gpgtools.gpgmail": @"Mojave",
         @"org.gpgtools.gpgmail4": @"Catalina",
         @"org.gpgtools.gpgmail5": @"Big Sur",
-        @"org.gpgtools.gpgmail6": @"Monterey"
+        @"org.gpgtools.gpgmail6": @"Monterey",
         @"org.free-gpgmail.gpgmail": @"Mojave",
         @"org.free-gpgmail.gpgmail4": @"Catalina",
         @"org.free-gpgmail.gpgmail5": @"Big Sur",

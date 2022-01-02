@@ -1,7 +1,8 @@
 Free-GPGMail
 ============
 
-This is a liberated version of a similarly named plugin for Apple Mail.
+This is a liberated version of *GPG Mail*&copy;, an Apple Mail*&copy; plugin sold
+with a support plan as part of the *GPG Suite**&copy; by *GPGTools*.
 
 While the seller of the commercial product has the right to charge for a
 support plan and place DRM into their product, it is still a GPL licensed
@@ -16,8 +17,8 @@ concentrates on building the "mailbundle", the plugin for Apple Mail.
 
 We also publish a copy of the original source packages and execise our right,
 granted by the open source license, to redistribute the compiled suite
-without a fee. This does not constitute any endorsement or promotion of our
-releases by the intermediate copyright holders.
+without any business involved. This does not constitute any endorsement
+or promotion of our releases by the intermediate copyright holders.
 
 Depending on supported macOS versions, there are different versions of
 the plugin available:
@@ -40,7 +41,7 @@ Build Instructions
 Note: If you want to use pre-compiled, signed, and notarized mailbundles, you
 can download a mailbundle from the [release page](../../releases/).
 
-This build uses Xcode. Command line build tools must be installed.
+This build uses Xcode&copy;. Command line build tools must be installed.
 
 1. Go to the Source directory and run make for the desired Free-GPGMail version:
 
@@ -51,8 +52,12 @@ This build uses Xcode. Command line build tools must be installed.
    `Free-GPGMail_$n.mailbundle` in `bundles/`. If you want to build bundles for
    all versions, just call `make`.
 
-2. On Big Sur or later, you may need to codesign the mailbundle with your personal
-   developer key, or add a Gatekeeper rule after installation (see below).
+2. On Big Sur or later, if you want to use the mailbundle on a different machine
+   than where it has been built, you may need to codesign the mailbundle with
+   a developer key, or add a Gatekeeper rule after installation (see below):
+
+        sudo spctl --add ~/Library/Mail/Bundles/Free-GPGMail_*.mailbundle
+
 
 Installation
 ------------
@@ -71,20 +76,14 @@ Installation
    (`~/Library` may be hidden in Finder, but you can enable the
    visibility in "Show View Options" while you are in **Home**)
 
-4. On macOS 11 Big Sur or later, if you built your own mailbundle from
-   source and did not codesign it, add a Gatekeeper rule:
-
-        sudo spctl --add ~/Library/Mail/Bundles/Free-GPGMail_*.mailbundle
-
-   This is not necessary for downloaded mailbundles.
-
-5. Restart Mail.app, go to `Preferences -> General -> Manage Plugins...`.
+4. Restart Mail.app, go to `Preferences -> General -> Manage Plugins...`.
    - Make sure that `GPGMailLoader_*.mailbundle`, if present, is disabled.     
    - Enable the `Free-GPGMail_<version>.mailbundle`.
    - **Apply and Restart Mail**.
 
-6. In Mail.app, check `Preferences -> Free-GPGMail`. If it says that you are in
-   **Trial Mode** or **Decryption Only Mode**, hit **Activate**.
+5. In Mail.app, check `Preferences -> Free-GPGMail`. If it says that you are in
+   **Trial Mode** or **Decryption Only Mode**, hit **Activate**. It will perform
+   a dummy activation routine.
 
 
 Bug Reports and User Support
@@ -94,3 +93,14 @@ This project is run by volunteers in the free and open source spirit. Contributi
 are welcome. Problems with building or installing Free-GPGMail should be posted
 in the Github issue tracker. If you need help with the program itself, consider
 buying the commercial product and make them work for their money.
+
+Trademarks
+----------
+
+*Apple*copy; and *Xcode*&copy; are trademarks of Apple Inc.
+
+*GPG Mail*&copy;, *GPG Suite*&copy; and *GPGTools*&copy; are trademarks of GPGTools GmbH.
+
+Neither use of these terms within this Readme or within Free-GPGMail
+constitutes endorsement of Free-GPGMail by the respective holders.
+Free-GPGMail is a non-commercial software without any business involved.

@@ -180,7 +180,23 @@
     return mailError;
 }
 
-- (MCOutgoingMessage *)outgoingMessageFromTopLevelMimePart:(MCMimePart *)topLevelMimePart topLevelHeaders:(MCMessageHeaders *)topLevelHeaders partData:(NSMapTable *)partData {
+- (MCOutgoingMessage *)outgoingMessageFromTopLevelMimePart:(MCMimePart *)topLevelMimePart topLevelHeaders:(MCMutableMessageHeaders *)topLevelHeaders partData:(NSMapTable *)partData {
+
+    // Bug #1103: Thunderbird shows signed or encrypted messages as empty
+    //
+    // If the top level headers include a content-transfer-encoding header with a
+    // value different from 7bit, 8bit or binary in case of a multipart top level
+    // part, Thunderbird shows the message as emtpy. It appears that Thunderbird
+    // strictly follows the RFC 1341 here, which states:
+    //
+    // `As stated in the definition of the Content-Transfer-Encoding field,
+    //  no encoding other than "7bit", "8bit", or "binary" is permitted for
+    //  entities of type "multipart".`
+    //
+    // If the top level content-type is multipart, the content-transfer-encoding is removed.
+    if([topLevelMimePart isType:@"multipart" subtype:nil]) {
+        [topLevelHeaders removeHeaderForKey:@"content-transfer-encoding"];
+    }
 
     MCMessageGenerator *generator = self.writer;
     [generator setEncoder:nil];

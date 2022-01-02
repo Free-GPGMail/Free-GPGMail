@@ -375,6 +375,10 @@ static BOOL gpgMailWorks = NO;
 - (NSMutableSet *)signingKeyListForAddress:(NSString *)sender {
     if (!gpgMailWorks) return nil;
     
+    if([sender length] <= 0) {
+        return [NSMutableSet new];
+    }
+
     return [_keyManager signingKeyListForAddress:[sender gpgNormalizedEmail]];
 }
 
@@ -783,6 +787,21 @@ static BOOL gpgMailWorks = NO;
     }
 
     return alert;
+}
+
++ (NSString *)latestSupportedMacOSVersion {
+    NSDictionary *latestMacOSMap = @{
+        @"org.gpgtools.gpgmail": @"Mojave",
+        @"org.gpgtools.gpgmail4": @"Catalina",
+        @"org.gpgtools.gpgmail5": @"Big Sur",
+        @"org.gpgtools.gpgmail6": @"Monterey"
+    };
+
+    NSString *latestMacOSVersion = latestMacOSMap[[[GPGMailBundle bundle] bundleIdentifier]];
+
+    NSAssert(latestMacOSVersion != nil, @"Adjust for latest macOS version!");
+
+    return latestMacOSVersion;
 }
 
 @end

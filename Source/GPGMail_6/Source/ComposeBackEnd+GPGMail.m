@@ -238,6 +238,11 @@ NSString * const kComposeBackEndSecurityUpdateQueueKey = @"kComposeBackEndSecuri
         contents.plainText = [self plainTextFixedForSigning:[contents.plainText mutableCopy] shouldAddNewLine:securityProperties.shouldSignMessage && !securityProperties.shouldEncryptMessage];
     }
     MCOutgoingMessage *outgoingMessage = original();
+    // In case the outgoing message is nil, there's probably been an error.
+    // Bail out early.
+    if(outgoingMessage == nil) {
+        return outgoingMessage;
+    }
     
     BOOL userWantsDraftsEncrypted = [[GPGOptions sharedOptions] boolForKey:@"OptionallyEncryptDrafts"];
     // If the user doesn't want for drafts to be encrypted, the created outgoing

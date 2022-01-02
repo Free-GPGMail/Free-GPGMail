@@ -112,6 +112,8 @@ extern kGMSupportPlanManagerUpgradeState;
 + (BOOL)isCatalina;
 + (BOOL)isMonterey;
 
++ (NSString *)latestSupportedMacOSVersion;
+
 /**
  Schedules a message which should have rules applied.
  While the app is running, each message should only have rules applied

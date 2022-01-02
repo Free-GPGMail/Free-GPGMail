@@ -481,7 +481,11 @@ typedef enum {
             self.progressTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_PROGRESS_TEXT"]; // "Activating your copy of GPG Mail"
             //self.dontAskAgainCheckBox.title = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_DONT_ASK_AGAIN"]; // "Don't ask again"
             //self.showDontAskAgain = YES;
-            self.detailsTextField.stringValue = [NSString stringWithFormat:[GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_REQUIRED_TITLE"], [self productName]];
+            // Bug #1101: Upgrade request message of GPG Mail 6 wrongly references macOS Big Sur
+            //
+            // Instead of hard coding the macOS name use `+[GPGMailBundle latestSupportedMacOSVersion]` which
+            // is adjusted for new macOS versions.
+            self.detailsTextField.stringValue = [NSString stringWithFormat:[GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_REQUIRED_TITLE"], [self productName], [GPGMailBundle latestSupportedMacOSVersion]];
             self.infoTextLabel.stringValue = [NSString stringWithFormat:[GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_REQUIRED_EXPLANATION"], @"30%"];
             if(supportPlanState != GMSupportPlanStateTrialExpired) {
                 self.infoTextLabel.stringValue = [[self.infoTextLabel.stringValue stringByAppendingString:@"\n\n"] stringByAppendingFormat:[GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_REQUIRED_START_TRIAL_EXPLANATION"], @"30"];
@@ -513,7 +517,7 @@ typedef enum {
             self.subHeaderTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_SUBHEADER"];
             NSString *previousVersion = [[self.supportPlanManager supportPlanForPreviousVersion] newestEligibleVersion];
             NSString *previousProductName = [self productNameForVersion:previousVersion];
-            self.infoTextLabel.stringValue = [NSString stringWithFormat:[GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_OR_KEEP_EXPLANATION"], previousProductName, @"30%", previousProductName];
+            self.infoTextLabel.stringValue = [NSString stringWithFormat:[GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_UPGRADE_OR_KEEP_EXPLANATION"], previousProductName, [GPGMailBundle latestSupportedMacOSVersion], @"30%", previousProductName];
             self.grayInfoTextField.stringValue = [self compatibilityInfoTextLongVersionWithPreviousVersion:previousVersion];
 
             // TODO: Make sure to check that the keep version is compatible with this system.

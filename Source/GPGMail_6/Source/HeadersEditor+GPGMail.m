@@ -487,9 +487,22 @@ const NSString *kHeadersEditorFromControlParentItemKey = @"HeadersEditorFromCont
 			if (useTitleFromAccount == NO)
                 email = ![GPGMailBundle isYosemite] ? [itemTitle gpgNormalizedEmail] : [item.representedObject gpgNormalizedEmail];
 			
+            // Bug #1104: Mail crash when opening a continuing a draft in GPG Mail 6
+            //
+            // macOS Mail on macOS Monterey 12.1 introduces the new Hide My Email feature
+            // In case HME is not yet configured a special menu item is added to remember
+            // the user that they can configure HME if interested.
+            //
+            // Since this menu item does not reflect an email account, representedObject
+            // maybe nil which later causes `-[GPGMailBundle signingKeyListForAddress:]`
+            // to crash.
             NSString *address = [item.representedObject gpgNormalizedEmail];
-            NSSet *keys = [bundle signingKeyListForAddress:address];
-			switch ([keys count]) {
+            NSSet *keys = [NSSet new];
+            if([address length] > 0) {
+                keys = [bundle signingKeyListForAddress:address];
+            }
+
+            switch ([keys count]) {
 				case 0:
 					// We have no key for this account.
 					[item removeIvar:kHeadersEditorFromControlGPGKeyKey];

@@ -74,6 +74,7 @@ typedef NS_ENUM (NSInteger, GPGSubpacketTag) {
 @property (nonatomic, readonly) NSInteger version;
 @property (nonatomic, readonly) UInt16 hashStart;
 @property (nonatomic, copy, readonly) NSString *keyID;
+@property (nonatomic, copy, readonly) NSString *fingerprint;
 @property (nonatomic, readonly) NSUInteger creationTime;
 /**
  The hashed subpackets of the GPGSignaturePacket.

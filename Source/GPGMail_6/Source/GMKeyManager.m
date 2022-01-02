@@ -170,6 +170,9 @@ publicKeyMap = _publicKeyMap, groups = _groups, allSecretKeys = _allSecretKeys, 
 }
 
 - (NSMutableSet *)signingKeyListForAddress:(NSString *)address {
+    if([address length] <= 0) {
+        return [NSMutableSet new];
+    }
     return [self keysForAddresses:@[[address gpgNormalizedEmail]] onlySecret:YES stopOnFound:NO];
 }
 

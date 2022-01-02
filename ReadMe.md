@@ -1,12 +1,12 @@
 Free-GPGMail
 ============
 
-This is a liberated version of *GPG Mail*&copy;, an Apple Mail*&copy; plugin sold
-with a support plan as part of the *GPG Suite**&copy; by *GPGTools*.
+This is a liberated version of *GPG Mail*&reg;, an Apple Mail plugin sold
+with a support plan as part of the *GPG Suite*&reg; by *GPGTools*.
 
 While the seller of the commercial product has the right to charge for a
-support plan and place DRM into their product, it is still a GPL licensed
-product which requires the source code to be available.
+support plan and place DRM into their product, it is still BSD and GPL
+licensed software which requires the source code to be available.
 
 This repository and project uses the open source code with the DRM code
 replaced so the product can be used without a license key, support plan or
@@ -23,17 +23,17 @@ or promotion of our releases by the intermediate copyright holders.
 Depending on supported macOS versions, there are different versions of
 the plugin available:
 
-| Mailbundle                  | supported macOS versions          |
-| --------------------------- | --------------------------------- |
-| `Free-GPGMail_3.mailbundle` | Mojave & High Sierra              |
-| `Free-GPGMail_4.mailbundle` | Catalina, Mojave & High Sierra    |
-| `Free-GPGMail_5.mailbundle` | Big Sur, Catalina & Mojave        |
-| `Free-GPGMail_6.mailbundle` | Monterey                          |
-
+| Mailbundle     | 10.13       | 10.14  | 10.15    | 11      | 12       |
+| -------------- | ----------- | ------ | -------- | --------| -------- |
+|                | High Sierra | Mojave | Catalina | Big Sur | Monterey |
+| Free-GPGMail 3 | x           | x      |          |         |          |
+| Free-GPGMail 4 | x           | x      | x        |         |          |
+| Free-GPGMail 5 |             | x      | x        | x       |          |
+| Free-GPGMail 6 |             |        |          |         | x        |
 
 Note that GnuPG and Libmacgpg must be installed first and then the mailbundle
-binaries can be activated. You can compile them from source or install the
-bundled versions from the compiled suite.
+binaries can be activated. You can compile them from source or install them
+from the GPG Suite.
 
 Build Instructions
 ------------------
@@ -41,7 +41,7 @@ Build Instructions
 Note: If you want to use pre-compiled, signed, and notarized mailbundles, you
 can download a mailbundle from the [release page](../../releases/).
 
-This build uses Xcode&copy;. Command line build tools must be installed.
+This build uses Xcode&reg;. Command line build tools must be installed.
 
 1. Go to the Source directory and run make for the desired Free-GPGMail version:
 
@@ -97,9 +97,9 @@ buying the commercial product and make them work for their money.
 Trademarks
 ----------
 
-*Apple*&copy; and *Xcode*&copy; are trademarks of Apple Inc.
+*Apple*&reg; and *Xcode*&reg; are trademarks of Apple Inc.
 
-*GPG Mail*&copy;, *GPG Suite*&copy; and *GPGTools*&copy; are trademarks of GPGTools GmbH.
+*GPG Mail*&reg;, *GPG Suite*&reg; and *GPGTools*&reg; are trademarks of GPGTools GmbH.
 
 Neither use of these terms within this Readme or within Free-GPGMail
 constitutes endorsement of Free-GPGMail by the respective holders.

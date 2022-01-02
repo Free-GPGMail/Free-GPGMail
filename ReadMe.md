@@ -97,7 +97,7 @@ buying the commercial product and make them work for their money.
 Trademarks
 ----------
 
-*Apple*copy; and *Xcode*&copy; are trademarks of Apple Inc.
+*Apple*&copy; and *Xcode*&copy; are trademarks of Apple Inc.
 
 *GPG Mail*&copy;, *GPG Suite*&copy; and *GPGTools*&copy; are trademarks of GPGTools GmbH.
 

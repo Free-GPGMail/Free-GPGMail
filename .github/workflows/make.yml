@@ -15,14 +15,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        gpgmail: [GPGMail_3, GPGMail_4, GPGMail_5, GPGMail_6]
         os: [macos-latest]
-        gpgmail: [GPGMail_3, GPGMail_4]
-        include:
-          - os: macos-11
-            gpgmail: GPGMail_5
-          - os: macos-11
-            gpgmail: GPGMail_6
-
 
     steps:
       - uses: actions/checkout@v2
@@ -35,41 +29,6 @@ jobs:
           export BUILD_VERSION=${BUILD_NUMBER}.${GITHUB_RUN_NUMBER}
           make ${{ matrix.gpgmail }}
 
-      - name: Codesign mailbundle
-        # https://localazy.com/blog/how-to-automatically-sign-macos-apps-using-github-actions
-        env:
-          APPLEDEV_CERT: ${{ secrets.APPLEDEV_CERT }}
-          APPLEDEV_CERT_PHRASE: ${{ secrets.APPLEDEV_CERT_PHRASE }}
-          CODESIGN_ID: ${{ secrets.CODESIGN_ID }}
-          KEYCHAIN_PW: ${{ secrets.KEYCHAIN_PW }}
-        # only accessible for PRs from the unforked repository
-        if : env.CODESIGN_ID != ''
-        run: |
-          base64 --decode > certificate.p12 <<< "${APPLEDEV_CERT}"
-          security create-keychain -p "${KEYCHAIN_PW}" build.keychain
-          security default-keychain -s build.keychain
-          security unlock-keychain -p "${KEYCHAIN_PW}" build.keychain
-          security import certificate.p12 -k build.keychain -P "${APPLEDEV_CERT_PHRASE}" -T /usr/bin/codesign
-          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "${KEYCHAIN_PW}" build.keychain
-          /usr/bin/codesign --force -s "${CODESIGN_ID}" Source/bundles/Free-${{ matrix.gpgmail }}.mailbundle -v
-      - name: Notarize Mailbundle
-        uses: devbotsxyz/xcode-notarize@v1
-        env:
-          CODESIGN_ID: ${{ secrets.CODESIGN_ID }}
-        if : env.CODESIGN_ID != '' && ! (endsWith(matrix.gpgmail, '3') || endsWith(matrix.gpgmail, '4'))
-        with:
-          product-path: Source/bundles/Free-${{ matrix.gpgmail }}.mailbundle
-          appstore-connect-username: ${{ secrets.APPLE_NOTARIZE_ID }}
-          appstore-connect-password: ${{ secrets.APPLE_NOTARIZE_PW }}
-      - name: Staple notarization ticket to mailbundle
-        uses: devbotsxyz/xcode-staple@v1
-        env:
-          CODESIGN_ID: ${{ secrets.CODESIGN_ID }}
-        if : env.CODESIGN_ID != '' && ! (endsWith(matrix.gpgmail, '3') || endsWith(matrix.gpgmail, '4'))
-        with:
-          product-path: Source/bundles/Free-${{ matrix.gpgmail }}.mailbundle
-          verbose: True
-
       - name: Upload mailbundle
         uses: actions/upload-artifact@v2
         with:
@@ -81,3 +40,48 @@ jobs:
         with:
           name: Free-${{ matrix.gpgmail }}.mailbundle.dSYM
           path: Source/${{ matrix.gpgmail }}/build/Release/Free-GPGMail.mailbundle.dSYM
+
+      - name: Codesign mailbundle
+        # https://localazy.com/blog/how-to-automatically-sign-macos-apps-using-github-actions
+        env:
+          APPLEDEV_CERT: ${{ secrets.APPLEDEV_CERT }}
+          APPLEDEV_CERT_PHRASE: ${{ secrets.APPLEDEV_CERT_PHRASE }}
+          CODESIGN_ID: ${{ secrets.CODESIGN_ID }}
+          KEYCHAIN_PW: ${{ secrets.KEYCHAIN_PW }}
+        # only accessible for PRs from the unforked repository
+        if:  env.CODESIGN_ID != '' && ! (endsWith(matrix.gpgmail, '3') || endsWith(matrix.gpgmail, '4'))
+        run: |
+          base64 --decode > certificate.p12 <<< "${APPLEDEV_CERT}"
+          security create-keychain -p "${KEYCHAIN_PW}" build.keychain
+          security default-keychain -s build.keychain
+          security unlock-keychain -p "${KEYCHAIN_PW}" build.keychain
+          security import certificate.p12 -k build.keychain -P "${APPLEDEV_CERT_PHRASE}" -T /usr/bin/codesign
+          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "${KEYCHAIN_PW}" build.keychain
+          cp -r Source/bundles Source/bundles_signed
+          /usr/bin/codesign --force -s "${CODESIGN_ID}" Source/bundles_signed/Free-${{ matrix.gpgmail }}.mailbundle -v
+      
+      - name: Notarize Mailbundle
+        uses: devbotsxyz/xcode-notarize@v1
+        env:
+          CODESIGN_ID: ${{ secrets.CODESIGN_ID }}
+        if : env.CODESIGN_ID != '' && ! (endsWith(matrix.gpgmail, '3') || endsWith(matrix.gpgmail, '4'))
+        with:
+          product-path: Source/bundles_signed/Free-${{ matrix.gpgmail }}.mailbundle
+          appstore-connect-username: ${{ secrets.APPLE_NOTARIZE_ID }}
+          appstore-connect-password: ${{ secrets.APPLE_NOTARIZE_PW }}
+      
+      - name: Staple notarization ticket to mailbundle
+        uses: devbotsxyz/xcode-staple@v1
+        env:
+          CODESIGN_ID: ${{ secrets.CODESIGN_ID }}
+        if : env.CODESIGN_ID != '' && ! (endsWith(matrix.gpgmail, '3') || endsWith(matrix.gpgmail, '4'))
+        with:
+          product-path: Source/bundles_signed/Free-${{ matrix.gpgmail }}.mailbundle
+          verbose: True
+
+      - name: Upload signed mailbundle
+        uses: actions/upload-artifact@v2
+        if:  env.CODESIGN_ID != '' && ! (endsWith(matrix.gpgmail, '3') || endsWith(matrix.gpgmail, '4'))
+        with:
+          name: Free-${{ matrix.gpgmail }}_signed.mailbundle
+          path: Source/bundles_signed/

@@ -23,13 +23,17 @@ or promotion of our releases by the intermediate copyright holders.
 Depending on supported macOS versions, there are different versions of
 the plugin available:
 
-| Mailbundle     | 10.13       | 10.14  | 10.15    | 11      | 12       |
-| -------------- | ----------- | ------ | -------- | --------| -------- |
-|                | High Sierra | Mojave | Catalina | Big Sur | Monterey |
-| Free-GPGMail 3 | x           | x      |          |         |          |
-| Free-GPGMail 4 | x           | x      | x        |         |          |
-| Free-GPGMail 5 |             | x      | x        | x       |          |
-| Free-GPGMail 6 |             |        |          |         | x        |
+| Mailbundle      | 10.13       | 10.14  | 10.15    | 11      | 12       |
+| --------------  | ----------- | ------ | -------- | --------| -------- |
+|                 | High Sierra | Mojave | Catalina | Big Sur | Monterey |
+| Free-GPGMail 3  | x           | x      |          |         |          |
+| Free-GPGMail 4  | x           | x      | x        |         |          |
+| Free-GPGMail 5* |             | u      | u        | s       |          |
+| Free-GPGMail 6  |             |        |          |         | x        |
+
+(*) While Big Sur requires Free-GPGMail 5 to be codesigned, Mojave and Catalina
+do not like the code signature of the provided mailbundles. Thus, we publish
+an unsigned and a signed version of the Free-GPGMail 5 mailbundle.
 
 Note that GnuPG and Libmacgpg must be installed first and then the mailbundle
 binaries can be activated. You can compile them from source or install them

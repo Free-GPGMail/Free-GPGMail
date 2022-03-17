@@ -81,6 +81,8 @@ jobs:
 
       - name: Upload signed mailbundle
         uses: actions/upload-artifact@v2
+        env:
+          CODESIGN_ID: ${{ secrets.CODESIGN_ID }}
         if:  env.CODESIGN_ID != '' && ! (endsWith(matrix.gpgmail, '3') || endsWith(matrix.gpgmail, '4'))
         with:
           name: Free-${{ matrix.gpgmail }}_signed.mailbundle

@@ -66,26 +66,32 @@ This build uses Xcode&reg;. Command line build tools must be installed.
 Installation
 ------------
 
-1. Download and install the GPG Suite .dmg file from the commercial seller or from the
-   [Free-GPGMail releases page](../../releases/).
-   - If you are asked by the installed whether you want to
-     "enable GPG Mail now", say **Not Now** and check
-     **I am not interested in GPG Mail. Don't ask me again.**
+1. Download and install Free-GPGMail:
+    - Using [Homebrew](https://brew.sh):
+      ```bash
+      brew install --cask free-gpgmail
+      ```
+    - or manually:
+        1. Download and install the GPG Suite .dmg file from the commercial seller or from the
+           [Free-GPGMail releases page](../../releases/).
+            - If you are asked by the installed whether you want to
+              "enable GPG Mail now", say **Not Now** and check
+              **I am not interested in GPG Mail. Don't ask me again.**
 
-2. Build or download a Free-GPGMail mailbundle compatible with your
-   macOS version.
+        2. Build or download a Free-GPGMail mailbundle compatible with your
+           macOS version.
 
-3. Create a folder `~/Library/Mail/Bundles/` and drag
-   `Free-GPGMail_<version>.mailbundle` into that folder.
-   (`~/Library` may be hidden in Finder, but you can enable the
-   visibility in "Show View Options" while you are in **Home**)
+        3. Create a folder `~/Library/Mail/Bundles/` and drag
+           `Free-GPGMail_<version>.mailbundle` into that folder.
+           (`~/Library` may be hidden in Finder, but you can enable the
+           visibility in "Show View Options" while you are in **Home**)
 
-4. Restart Mail.app, go to `Preferences -> General -> Manage Plugins...`.
+2. Restart Mail.app, go to `Preferences -> General -> Manage Plugins...`.
    - Make sure that `GPGMailLoader_*.mailbundle`, if present, is disabled.     
    - Enable the `Free-GPGMail_<version>.mailbundle`.
    - **Apply and Restart Mail**.
 
-5. In Mail.app, check `Preferences -> Free-GPGMail`. If it says that you are in
+3. In Mail.app, check `Preferences -> Free-GPGMail`. If it says that you are in
    **Trial Mode** or **Decryption Only Mode**, hit **Activate**. It will perform
    a dummy activation routine.
 

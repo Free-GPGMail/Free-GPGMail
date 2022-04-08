@@ -187,7 +187,7 @@ NO_DEFAULTS_MESSAGE = "GPG Mail is not working as expected.\n\nPlease download a
 "MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_TITLE" = "Viestin allekirjoitus epäonnistui tuntemattoman virheen takia";
 "MESSAGE_SIGNING_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Unfortunately GPG Mail can't handle the error at this point.";
 
-"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_TITLE" = "Encrypting your message failed because an unknown error has occured";
+"MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_TITLE" = "Encrypting your message failed because an unknown error has occurred";
 "MESSAGE_ENCRYPTION_ERROR_UNKNOWN_ERROR_DESCRIPTION" = "Unfortunately GPG Mail can't handle the error at this point.";
 
 "MESSAGE_SIGNING_ERROR_WRONG_PASSPHRASE_TITLE" = "Annoit väärän salasanan liian monta kertaa.";

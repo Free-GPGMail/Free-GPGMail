@@ -289,12 +289,14 @@ BOOL gpgConfigReaded = NO;
 		
 		GPGTaskOrder *order = [GPGTaskOrder orderWithNoToAll];
 		self.gpgTask = [GPGTask gpgTask];
+
+		// Should be YES maybe, but detached sign doesn't ask for a passphrase
+		// so, basically, it's NO by default until further testing.
+		gpgTask.batchMode = self.batchMode;
+
 		[self addArgumentsForOptions];
 		[self addArgumentsForKeyserver];
 		gpgTask.userInfo = [NSDictionary dictionaryWithObject:order forKey:@"order"];
-		// Should be YES maybe, but detached sign doesn't ask for a passphrase
-		// so, basically, it's NO until further testing.
-		gpgTask.batchMode = NO;
 		
 		[self addArgumentsForComments];
 		[self addArgumentsForSignerKeys];
@@ -844,9 +846,9 @@ BOOL gpgConfigReaded = NO;
 		[cmdText appendString:@"%commit\n"];
 		
 		self.gpgTask = [GPGTask gpgTaskWithArgument:@"--gen-key"];
+		gpgTask.batchMode = YES;
 		[gpgTask addArgument:@"--allow-freeform-uid"];
 		[self addArgumentsForOptions];
-		gpgTask.batchMode = YES;
 		[gpgTask setInText:cmdText];
 		
 		
@@ -2717,8 +2719,8 @@ BOOL gpgConfigReaded = NO;
             }
 		} else {
 			self.gpgTask = [GPGTask gpgTask];
-			[self addArgumentsForOptions];
 			gpgTask.batchMode = YES;
+			[self addArgumentsForOptions];
 			[self addArgumentsForKeyserver];
 			[gpgTask addArgument:@"--search-keys"];
 			[gpgTask addArgument:@"--"];
@@ -2773,13 +2775,13 @@ BOOL gpgConfigReaded = NO;
 				
 				self.gpgTask = [GPGTask gpgTask];
 				
+				gpgTask.batchMode = YES;
 				[self addArgumentsForOptions];
 				NSUInteger oldTimeout = keyserverTimeout;
 				keyserverTimeout = 20; // This should be enough time for a healthy keyserver to answer.
 				[self addArgumentsForKeyserver];
 				keyserverTimeout = oldTimeout;
 				
-				gpgTask.batchMode = YES;
 				gpgTask.nonBlocking = YES;
 				[gpgTask addArgument:@"--search-keys"];
 				[gpgTask addArgument:@"libmacgpg@0x0000000000000000000000000000000000000000.org"]; // Search for a non-existing key.
@@ -2837,13 +2839,13 @@ BOOL gpgConfigReaded = NO;
 				if (!result) {
 					self.gpgTask = [GPGTask gpgTask];
 					
+					gpgTask.batchMode = YES;
 					[self addArgumentsForOptions];
 					NSUInteger oldTimeout = keyserverTimeout;
 					keyserverTimeout = 20; // This should be enough time for a healthy keyserver to answer.
 					[self addArgumentsForKeyserver];
 					keyserverTimeout = oldTimeout;
 					
-					gpgTask.batchMode = YES;
 					gpgTask.nonBlocking = YES;
 					[gpgTask addArgument:@"--search-keys"];
 					[gpgTask addArgument:@"libmacgpg@0x0000000000000000000000000000000000000000.org"]; // Search for a non-existing key.
@@ -2983,8 +2985,8 @@ BOOL gpgConfigReaded = NO;
 			} else {
 				
 				self.gpgTask = [GPGTask gpgTask];
-				[self addArgumentsForOptions];
 				gpgTask.batchMode = YES;
+				[self addArgumentsForOptions];
 				[self addArgumentsForKeyserver];
 				gpgTask.nonBlocking = YES;
 				[gpgTask addArgument:@"--search-keys"];
@@ -3630,7 +3632,7 @@ BOOL gpgConfigReaded = NO;
 		gpgTask.passphrase = passphrase;
 		
 		NSArray *parts = [[self.class gpgVersion] componentsSeparatedByString:@"."];
-		if (parts.count >= 2) {
+		if (gpgTask.batchMode == NO && parts.count >= 2) { // Do not set pinentry loopback when the batch mode is used.
 			if (([parts[0] integerValue] == 2 && [parts[1] integerValue] >= 1) || [parts[0] integerValue] > 2) {
 				[gpgTask addArgument:@"--pinentry-mode"];
 				[gpgTask addArgument:@"loopback"];

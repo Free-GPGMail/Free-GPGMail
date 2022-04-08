@@ -100,7 +100,8 @@
 @property(retain) MFLibraryCalendarEvent *calendarEvent;
 - (void)setReferencesHashes:(id)arg1;
 - (id)referencesHashes;
-- (BOOL)type;
+// Bug #1117: Fix header to make sure that drafts are correctly recognized on M1 processors
+- (NSUInteger)type;
 @property(readonly, copy) NSUUID *documentID;
 @property(readonly, nonatomic) long long libraryID;
 @property(readonly, copy, nonatomic) NSString *persistentID;

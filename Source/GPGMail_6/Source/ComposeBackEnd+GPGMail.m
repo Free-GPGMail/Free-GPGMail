@@ -169,12 +169,25 @@ NSString * const kComposeBackEndSecurityUpdateQueueKey = @"kComposeBackEndSecuri
     
     GMComposeMessagePreferredSecurityProperties *securityProperties = self.preferredSecurityProperties;
     GPGMAIL_SECURITY_METHOD securityMethod = securityProperties.securityMethod;
-    
+
+    // Previous versions didn't remove the headers for fingerprint and sender address
+    // in case an account was selected that didn't have an OpenPGP key associated
+    // with it. (see #1115)
+    //
+    // To avoid that, all headers are removed and then only the necessary ones are re-added.
+    //
+    // N.B.: Since security draft headers are only relevant for drafts they are always
+    // remove, regardless whether or not the user is about to store a draft or send
+    // out the message. In the former case, the headers will be re-added later.
+    for(NSString *headerKey in [securityProperties secureDraftHeadersKeys]) {
+        [headers removeHeaderForKey:headerKey];
+    }
+
     // If this is a draft that is being saved, the security properties are stored
     // as header keys so they can later be restored, when the draft is being continued.
     // Otherwise, any security properties related header keys are removed.
-    NSDictionary *secureDraftHeaders = nil;
     if(isDraft) {
+        NSDictionary *secureDraftHeaders = nil;
         [self.preferredSecurityPropertiesAccessLock lock];
         secureDraftHeaders = [[securityProperties secureDraftHeaders] copy];
         [self.preferredSecurityPropertiesAccessLock unlock];
@@ -184,13 +197,9 @@ NSString * const kComposeBackEndSecurityUpdateQueueKey = @"kComposeBackEndSecuri
         // See: https://gpgtools.lighthouseapp.com/projects/65764-gpgmail/tickets/871
         [headers setHeader:self.GMShouldDownloadRemoteAttachments ? @"YES" : @"NO" forKey:@"x-apple-mail-remote-attachments"];
 
+        // Add the necessary draft headers.
         for(NSString *headerKey in secureDraftHeaders) {
             [headers setHeader:[secureDraftHeaders objectForKey:headerKey] forKey:headerKey];
-        }
-    }
-    else {
-        for(NSString *headerKey in [securityProperties secureDraftHeadersKeys]) {
-            [headers removeHeaderForKey:headerKey];
         }
     }
     
@@ -289,16 +298,18 @@ NSString * const kComposeBackEndSecurityUpdateQueueKey = @"kComposeBackEndSecuri
             // keys and added separately later.
             // If the sender is included in the recipients list it is excluded,
             // since there might be a public key
-            for(NSString *recipient in [MAIL_SELF _structuredListForHeader:@"bcc"]) {
-                if([recipient isEqualToString:sender] ||
+            for(__strong NSString *recipient in [MAIL_SELF _structuredListForHeader:@"bcc"]) {
+                recipient = [recipient gpgNormalizedEmail];
+                if([recipient isEqualToString:[sender gpgNormalizedEmail]] ||
                    [recipient isKindOfClass:[GMComposeMessageReplyToDummyKey class]]) {
                     continue;
                 }
                 [bccRecipients addObject:recipient];
             }
-            for(NSString *recipient in [self GMRealRecipients]) {
+            for(__strong NSString *recipient in [self GMRealRecipients]) {
+                recipient = [recipient gpgNormalizedEmail];
                 if([bccRecipients containsObject:recipient] ||
-                   [recipient isEqualToString:sender] ||
+                   [recipient isEqualToString:[sender gpgNormalizedEmail]] ||
                    [recipient isKindOfClass:[GMComposeMessageReplyToDummyKey class]]) {
                     continue;
                 }
@@ -311,7 +322,12 @@ NSString * const kComposeBackEndSecurityUpdateQueueKey = @"kComposeBackEndSecuri
                 [recipientKeys addObjectsFromArray:[securityProperties encryptionKeysForRecipients:recipients]];
             }
             if([bccRecipients count] > 0) {
-                [hiddenRecipientKeys addObjectsFromArray:[securityProperties encryptionKeysForRecipients:recipients]];
+                // Bug #1118: Encrypt messages also to recipients entered in BCC
+                //
+                // In 6.x < 6.2 versions instead of adding the BCC recipients to `hiddenRecipientKeys`
+                // the TO and CC recipients were added, which potentially resulted in encrypted messages
+                // that BCC recipients couldn't decrypt.
+                [hiddenRecipientKeys addObjectsFromArray:[securityProperties encryptionKeysForRecipients:bccRecipients]];
             }
         }
         else {

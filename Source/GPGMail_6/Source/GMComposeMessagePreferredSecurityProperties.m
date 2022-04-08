@@ -493,7 +493,8 @@ NSString * const kGMComposeMessagePreferredSecurityPropertiesHeaderValueSMIME = 
         self.message = [backEnd originalMessage];
 
         _messageIsReply = [(ComposeBackEnd_GPGMail *)backEnd messageIsBeingReplied];
-        _messageIsDraft = [self.message primitiveMessageType] == 5;
+        // Bug #1117: Fix header to make sure that drafts are correctly recognized on M1 processors
+        _messageIsDraft = [self.message type] == 5;
         _messageIsFowarded = [(ComposeBackEnd_GPGMail *)backEnd messageIsBeingForwarded];
 
         // Bug #1041: If the `originalMessage` is a draft, it no longer refers
@@ -556,9 +557,18 @@ NSString * const kGMComposeMessagePreferredSecurityPropertiesHeaderValueSMIME = 
             return signingKey;
         }
         
-        // No signing key for the address is found, try to use the default key.
-        GPGKey *defaultKey = [[GPGMailBundle sharedInstance] preferredGPGKeyForSigning];
-        return defaultKey;
+        // Bug #1115: Only store fingerprint in draft headers if a matching key for the sender address exists
+        //
+        // GPG Mail < 6.2 returned the default-key if one was setup in case no
+        // matching key was found. That lead to the fact however, that since this method
+        // is used to return key to be stored in the drafts headers, it was possible that
+        // the stored on didn't match the sender address, which in some cases resulted in
+        // an inconsistent security buttons state when the draft was continued. (see #1114)
+        //
+        // So return nil instead to make sure that no specific fingerprint is stored
+        // in the draft so there can't be no mismatch between fingerprint and sender
+        // address.
+        return nil;
     }
 }
 
@@ -571,12 +581,14 @@ NSString * const kGMComposeMessagePreferredSecurityPropertiesHeaderValueSMIME = 
         if(signingKey != nil && signingKey.canAnyEncrypt) {
             return signingKey;
         }
-        // Otherwise check for a secret key matching the sender address.
-        NSString *senderAddress = [[self.PGPKeyStatus sender] gpgNormalizedEmail];
-        GPGKey *key = (GPGKey *)[self.PGPKeyStatus signingKeyForAddress:senderAddress];
-        if(key != nil && key.canAnyEncrypt) {
-            return key;
+
+        // No exact match for the address, try the default key if one exists.
+        GPGKey *defaultKey = [[GPGMailBundle sharedInstance] preferredGPGKeyForSigning];
+        if(defaultKey != nil && defaultKey.canAnyEncrypt) {
+            return defaultKey;
         }
+
+        NSString *senderAddress = [[self.PGPKeyStatus sender] gpgNormalizedEmail];
         // Last but not least, accept any public key associated with an available secret key.
         return [[GPGMailBundle sharedInstance] anyPersonalPublicKeyWithPreferenceAddress:senderAddress];
     }
@@ -774,7 +786,7 @@ NSString * const kGMComposeMessagePreferredSecurityPropertiesHeaderValueSMIME = 
             [secureDraftHeaders setValue:_referenceMessageIsEncrypted == ThreeStateBooleanTrue ? @"YES": @"NO" forKey:kGMComposeMessagePreferredSecurityPropertiesHeaderKeyReferenceMessageEncrypted];
         }
 
-        if(![[self.PGPKeyStatus sender] isEqualToString:@""] && self.signingKey != nil) {
+        if([[self.PGPKeyStatus sender] length] > 0 && self.signingKey != nil) {
             [secureDraftHeaders setValue:[self.signingKey fingerprint] forKey:kGMComposeMessagePreferredSecurityPropertiesHeaderKeySenderFingerprint];
             [secureDraftHeaders setValue:[self.PGPKeyStatus sender] forKey:kGMComposeMessagePreferredSecurityPropertiesHeaderKeySender];
         }
@@ -841,9 +853,21 @@ NSString * const kGMComposeMessagePreferredSecurityPropertiesHeaderValueSMIME = 
 
         NSString *senderAddress = [draftHeaders firstHeaderForKey:kGMComposeMessagePreferredSecurityPropertiesHeaderKeySender];
         NSString *senderFingerprint = [draftHeaders firstHeaderForKey:kGMComposeMessagePreferredSecurityPropertiesHeaderKeySenderFingerprint];
-        if(![senderAddress isEqualToString:@""] && ![senderFingerprint isEqualToString:@""]) {
+        if([senderAddress length] > 0 && [senderFingerprint length] > 0) {
+            // Bug #1116: Check if the key fingerprint referenced in draft headers exists and matches the sender address
+            //
+            // In GPG Mail < 6.2 it was possible that a fingerprint of a key was stored which was
+            // not associated with the stored sender address, in case no key was available for
+            // the chosen sender address (the key references in the default-key option was used).
+            // As result the button states of the user interface was consistent in some cases. (See #1114)
+            //
+            // In order to fix that for older drafts, the keyring is now queried
+            // for keys associated with the stored sender address and if no matching
+            // key is found, the stored fingerprint is ignored.
             GPGKey *signingKey = [[GPGMailBundle sharedInstance] keyForFingerprint:senderFingerprint];
-            if(signingKey) {
+            NSSet <GPGKey *> *keys = [[GPGMailBundle sharedInstance] signingKeyListForAddress:[senderAddress gpgNormalizedEmail]];
+
+            if(signingKey && [[keys allObjects] containsObject:signingKey]) {
                 [self updateSigningKey:signingKey forSender:senderAddress];
             }
         }

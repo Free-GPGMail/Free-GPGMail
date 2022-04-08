@@ -117,6 +117,7 @@
 @property (nonatomic) BOOL autoKeyRetrieve;
 @property (nonatomic) BOOL allowNonSelfsignedUid;
 @property (nonatomic) BOOL allowWeakDigestAlgos;
+@property (nonatomic) BOOL batchMode;
 @property (nonatomic, readonly) NSDictionary *statusDict;
 @property (nonatomic, readonly) GPGHashAlgorithm hashAlgorithm;
 @property (nonatomic, readonly, retain) GPGTask *gpgTask;

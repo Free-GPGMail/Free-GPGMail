@@ -55,7 +55,8 @@
 @property double primitiveDateLastViewedInterval; // @synthesize primitiveDateLastViewedInterval=_primitiveDateLastViewedInterval;
 @property double primitiveDateReceivedInterval; // @synthesize primitiveDateReceivedInterval=_primitiveDateReceivedInterval;
 @property double primitiveDateSentInterval; // @synthesize primitiveDateSentInterval=_primitiveDateSentInterval;
-@property BOOL primitiveMessageType; // @synthesize primitiveMessageType=_primitiveMessageType;
+// Bug #1117: Fix header to make sure that drafts are correctly recognized on M1 processors
+@property NSUInteger primitiveMessageType; // @synthesize primitiveMessageType=_primitiveMessageType;
 @property BOOL recipientType; // @synthesize recipientType=_recipientType;
 @property BOOL markedForOverwrite; // @synthesize markedForOverwrite=_markedForOverwrite;
 @property(readonly) long long conversationID; // @synthesize conversationID=_conversationID;
@@ -162,7 +163,8 @@
 @property(copy) NSUUID *documentID;
 @property(readonly, nonatomic) BOOL isMessageMeeting;
 @property(readonly, nonatomic) BOOL isEditable;
-@property BOOL type;
+// Bug #1117: Fix header to make sure that drafts are correctly recognized on M1 processors
+@property NSUInteger type;
 - (id)bodyFetchIfNotAvailable:(BOOL)arg1 updateFlags:(BOOL)arg2 allowPartial:(BOOL)arg3 skipSignatureVerification:(BOOL)arg4;
 - (id)bodyFetchIfNotAvailable:(BOOL)arg1 updateFlags:(BOOL)arg2 allowPartial:(BOOL)arg3;
 - (id)headersFetchIfNotAvailable:(BOOL)arg1;

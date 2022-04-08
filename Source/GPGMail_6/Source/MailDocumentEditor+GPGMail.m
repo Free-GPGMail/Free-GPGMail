@@ -328,7 +328,7 @@ NSString * const kComposeViewControllerPreventAutoSave = @"ComposeViewController
         return;
     }
 	if([self backEnd:backEnd handleDeliveryError:error])
-		[self MABackEnd:backEnd didCancelMessageDeliveryForEncryptionError:error];
+		[self MABackEnd:backEnd didCancelMessageDeliveryForError:error];
     else {
         [MAIL_SELF(self) show];
     }

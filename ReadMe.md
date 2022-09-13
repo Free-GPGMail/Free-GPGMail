@@ -71,6 +71,11 @@ Installation
       ```bash
       brew install --cask free-gpgmail
       ```
+
+      If you receive an error mkdir: `/Users/YOUR_USERNAME/Library/Mail/Bundles: Operation not permitted`,
+      open the Security & Privacy system preference panel, and grant "Full Disk
+      Access" to terminal. Retry the installation.
+
     - or manually:
         1. Download and install the GPG Suite .dmg file from the commercial seller or from the
            [Free-GPGMail releases page](../../releases/).
@@ -87,9 +92,20 @@ Installation
            visibility in "Show View Options" while you are in **Home**)
 
 2. Restart Mail.app, go to `Preferences -> General -> Manage Plugins...`.
+    
+    If the "Manage Plugins" button is not present in the lower left corner,
+    open a terminal and run:
+    ```bash
+    sudo defaults write “/Library/Preferences/com.apple.mail” EnableBundles 1
+    defaults write com.apple.mail EnableBundles -bool true
+    ```
+    
+    Then restart Mail.app again.
+
    - Make sure that `GPGMailLoader_*.mailbundle`, if present, is disabled.     
    - Enable the `Free-GPGMail_<version>.mailbundle`.
    - **Apply and Restart Mail**.
+
 
 3. In Mail.app, check `Preferences -> Free-GPGMail`. If it says that you are in
    **Trial Mode** or **Decryption Only Mode**, hit **Activate**. It will perform

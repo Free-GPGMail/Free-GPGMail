@@ -106,7 +106,6 @@ Installation
    - Enable the `Free-GPGMail_<version>.mailbundle`.
    - **Apply and Restart Mail**.
 
-
 3. In Mail.app, check `Preferences -> Free-GPGMail`. If it says that you are in
    **Trial Mode** or **Decryption Only Mode**, hit **Activate**. It will perform
    a dummy activation routine.

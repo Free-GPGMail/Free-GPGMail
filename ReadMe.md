@@ -116,7 +116,7 @@ Bug Reports and User Support
 
 This project is run by volunteers in the free and open source spirit. Contributions
 are welcome. Problems with building or installing Free-GPGMail should be posted
-in the Github issue tracker. If you need help with the program itself, consider
+in the GitHub issue tracker. If you need help with the program itself, consider
 buying the commercial product and make them work for their money.
 
 Trademarks

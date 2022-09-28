@@ -15,7 +15,7 @@ online activation.
 Rather than building the entire suite and installer, this project just
 concentrates on building the "mailbundle", the plugin for Apple Mail.
 
-We also publish a copy of the original source packages and execise our right,
+We also publish a copy of the original source packages and exercise our right,
 granted by the open source license, to redistribute the compiled suite
 without any business involved. This does not constitute any endorsement
 or promotion of our releases by the intermediate copyright holders.

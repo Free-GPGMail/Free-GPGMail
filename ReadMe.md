@@ -23,13 +23,13 @@ or promotion of our releases by the intermediate copyright holders.
 Depending on supported macOS versions, there are different versions of
 the plugin available:
 
-| Mailbundle      | 10.13       | 10.14  | 10.15    | 11      | 12       | 13 (Beta) |
-| --------------  | ----------- | ------ | -------- | --------| -------- | --------- |
-|                 | High Sierra | Mojave | Catalina | Big Sur | Monterey | Ventura   |
-| Free-GPGMail 3  | x           | x      |          |         |          |           |
-| Free-GPGMail 4  | x           | x      | x        |         |          |           |
-| Free-GPGMail 5* |             | u      | u        | s       |          |           |
-| Free-GPGMail 6  |             |        |          |         | x        | x         |
+| Mailbundle      | 10.13       | 10.14  | 10.15    | 11      | 12       | 13      |
+| --------------  | ----------- | ------ | -------- | --------| -------- | ------- |
+|                 | High Sierra | Mojave | Catalina | Big Sur | Monterey | Ventura |
+| Free-GPGMail 3  | x           | x      |          |         |          |         |
+| Free-GPGMail 4  | x           | x      | x        |         |          |         |
+| Free-GPGMail 5* |             | u      | u        | s       |          |         |
+| Free-GPGMail 6  |             |        |          |         | x        |         |
 
 (*) While Big Sur requires Free-GPGMail 5 to be codesigned, Mojave and Catalina
 do not like the code signature of the provided mailbundles. Thus, we publish
@@ -37,7 +37,7 @@ an unsigned and a signed version of the Free-GPGMail 5 mailbundle.
 
 Note that GnuPG and Libmacgpg must be installed first and then the mailbundle
 binaries can be activated. You can compile them from source or install them
-from the GPG Suite.
+from the GPG Suite with the same "year.decimal" version as Free-GPGMail.
 
 Build Instructions
 ------------------
@@ -77,9 +77,9 @@ Installation
       Access" to terminal. Retry the installation.
 
     - or manually:
-        1. Download and install the GPG Suite .dmg file from the commercial seller or from the
-           [Free-GPGMail releases page](../../releases/).
-            - If you are asked by the installed whether you want to
+        1. Download and install the GPG Suite .dmg with the same "year.decimal" version
+           from the commercial seller or from the [Free-GPGMail releases page](../../releases/).
+            - If you are asked by the installer whether you want to
               "enable GPG Mail now", say **Not Now** and check
               **I am not interested in GPG Mail. Don't ask me again.**
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LoaderMinOSVersion</key>
+	<string>13</string>
+	<key>BuildNumber</key>
+	<string>AUTOFILL</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDocumentTypes</key>
+	<array/>
+	<key>CFBundleExecutable</key>
+	<string>GPGMail</string>
+	<key>CFBundleIconFile</key>
+	<string>GPGMail.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.gpgtools.gpgmail7</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>GPGMail</string>
+	<key>CFBundlePackageType</key>
+	<string>GpgM</string>
+	<key>CFBundleShortVersionString</key>
+	<string>AUTOFILL</string>
+	<key>CFBundleVersion</key>
+	<string>AUTOFILL</string>
+	<key>CommitHash</key>
+	<string>AUTOFILL</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © GPGTools GmbH, 2022</string>
+	<key>NSPrincipalClass</key>
+	<string>GPGMailBundle</string>
+</dict>
+</plist>

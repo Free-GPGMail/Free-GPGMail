@@ -1,0 +1,20 @@
+/* 
+ SignatureView.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 30.07.11.
+ Copyright 2011 GPGMail. All rights reserved.
+ 
+ Defines the strings used in the signature view.
+ */
+"VALIDITY_NO_TRUST" = "Diese Signatur ist nicht vertrauenswürdig.";
+"VALIDITY_OK" = "Diese Signature ist vertrauenswürdig";
+/* Signature view key status. */
+"VALIDITY_KEY_REVOKED" = "Der Schlüssel dieser Signatur wurde widerrufen.";
+"VALIDITY_SIGNATURE_EXPIRED" = "Diese Signatur ist abgelaufen.";
+"VALIDITY_KEY_EXPIRED" = "Der Schlüssel dieser Signatur ist abgelaufen.";
+"VALIDITY_KEY_REVOKED" = "Der Schlüssel dieser Signatur wurde widerrufen.";
+"VALIDITY_UNKNOWN_ALGORITHM" = "Signatur wurde mit unbekanntem Algorithmus erstellt.";
+"VALIDITY_NO_PUBLIC_KEY" = "Der Schlüssel dieser Signatur befindet sich nicht im Schlüsselbund.";
+"VALIDITY_UNKNOWN_ERROR" = "Unbekannter Fehler mit Signatur.";
+"VALIDITY_BAD_SIGNATURE" = "Diese Signatur ist ungültig.";

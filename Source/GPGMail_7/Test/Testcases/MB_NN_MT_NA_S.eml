@@ -1,0 +1,49 @@
+Message-ID: <4E44630C.10003@gpgtools.org>
+Date: Fri, 12 Aug 2011 01:17:32 +0200
+From: GPGTools Test Key <test@gpgtools.org>
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:5.0) Gecko/20110624 Thunderbird/5.0
+MIME-Version: 1.0
+To: test@gpgtools.org
+Subject: MB/NN/MT/NA/S
+X-Enigmail-Version: 1.2
+Content-Type: multipart/encrypted;
+ protocol="application/pgp-encrypted";
+ boundary="------------enig7618AB5A6CE45664FC5C450B"
+
+This is an OpenPGP/MIME encrypted message (RFC 2440 and 3156)
+--------------enig7618AB5A6CE45664FC5C450B
+Content-Type: application/pgp-encrypted
+Content-Description: PGP/MIME version identification
+
+Version: 1
+
+--------------enig7618AB5A6CE45664FC5C450B
+Content-Type: application/octet-stream; name="encrypted.asc"
+Content-Description: OpenPGP encrypted message
+Content-Disposition: inline; filename="encrypted.asc"
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG/MacGPG2 v2.0.17 (Darwin)
+Comment: GPGTools - http://gpgtools.org
+Comment: Using GnuPG with Mozilla - http://enigmail.mozdev.org/
+
+hQEMA1JrCfEKo9qCAQgAmVhoy+emXhWzNGCes1zdpvshyUdsgTafLoeTc5iZthos
+GtlUll8wiw8oa9CIINeRMfO04y3oBnFll+yMjeAsb1DlvMFgrg58VFQicDRD/icN
+19bYf3m49ivljapnmmojlWiVMHf5zy2bLqqI7/0dbc8xjDjPG4MzSN69gT8eIHAp
+xQJwm4rtpMXEX6QODcHBH3aP3efxsk0r3YHAYCEVBj2kr/W2iCBtq1IwRD6le405
+bnvdOnBlQngLNe+d8l/h7RCHEDPknBndddaVXpNy5e3lw22qAzwIPp8gBSg9R8Fa
+UMtG2hXYGLGBqz2AMskzVX5HWLiXcLQl7n7FHq9eYNLBGAHNudjlExaRytDy3zRZ
+2bU3FctW1kgZFBcSYDGvuQvAqdN1vLVbIpTo6//l4eXHg/aAtjCIMjFkaptoJfOu
+03CHV3Q/gtZycitc4YZzDnrwq9UaoMHz4LhRlLMKRd4GFKJcu/smMJ6Fsn3hv8z9
+y4tNMDtYj3gKGwkvLZtRp1+87J+2zpYeI5sCKvMw5XxJqWjrbWXH3Dej2Rc9ywWY
+3flJW/zZBAV14dAUMS05EJeL6OXLG0M6HDB2Ov8PWGIL8Rpjx5gqG8fElfO8BHi0
+G9Qt8mBuC7Wr/6cxS+8pMogHzftpcGNqb1xNdLm0lf9QM5W0v5R/VnS0a5iLV/oo
+uPDaYG1O7trG3enf4J1IjlfzyBp+/xCkyfB2z7N2k8+5TsGimRsL9JgscrA6FepX
+QKF+Qin2UyVOYqAGwlkloyfWEzyGy7oraDDzUu18p2U17elagqLUqWJ8zhJA9yqz
+N2834TQzkk9GI3sywCcZtkA0X44UbGinYhmeCsVU5ItjdR90PuCD1PrYw0PsVXXw
+JmlsCjXO+Fm6LxrlMP5n3/POh2kOuGbKjaXY57jsCpehPv7r/AqOz9TBStZUBr6u
+Zd7g/Vkl2zZ+P3Rag7CA6l65T0A8Ia/EbJo=
+=6ls1
+-----END PGP MESSAGE-----
+
+--------------enig7618AB5A6CE45664FC5C450B--

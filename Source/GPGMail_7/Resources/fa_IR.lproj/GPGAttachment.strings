@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "صحت‌سنجی امضا با شکست مواجه شد";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "کلید عمومی برای صحت‌سنجی امضای این پیوست در زنجیر کلید شما نیست.\n\nلطفا کلید عمومی %@ را با استفاده از GPG Keychain بارگیری کنید.";
+"DECRYPT_ERROR_GENERAL_TITLE" = "رمزگشایی امضا با شکست مواجه شد.";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "کلید محرمانه برای رمزگشایی این پیوست در زنجیر کلید شما نیست.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "پیوست با موفقیت رمزگشایی شد.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "یک پیوست در پیغام را با دوبار click مشاهده کنید.";

@@ -103,12 +103,23 @@
 	
 	NSUInteger i = 1, c = [listing count];
 	NSMutableArray *theUserIDs = [NSMutableArray arrayWithCapacity:c - 1];
+	NSUInteger expiredUIDs = 0;
 	for (; i < c; i++) {
 		GPGRemoteUserID *tempUserID = [GPGRemoteUserID userIDWithListing:listing[i]];
 		if (tempUserID) {
-			[theUserIDs addObject:tempUserID]; 
+			[theUserIDs addObject:tempUserID];
+			if(tempUserID.expirationDate && [[NSDate date] isGreaterThanOrEqualTo:tempUserID.expirationDate]) {
+				expiredUIDs++;
+			}
 		}
 	}
+	// In case all UIDs are expired, flag the key as expired as well.
+	// SKS keyservers properly reported an expiration date for the key
+	// but for some reason hockeypuck does not.
+	if(!_expired && expiredUIDs == [theUserIDs count]) {
+		self.expired = YES;
+	}
+
 	self.userIDs = theUserIDs;
 	self.fromVKS = fromVKS;
 	

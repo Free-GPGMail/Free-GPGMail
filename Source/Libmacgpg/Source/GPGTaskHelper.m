@@ -126,7 +126,7 @@ closeInput = _closeInput;
 
 + (NSString *)findExecutableWithName:(NSString *)executable {
 	NSString *foundPath;
-	NSArray *searchPaths = [NSMutableArray arrayWithObjects:@"/usr/local/MacGPG2/bin", @"/usr/local/bin", @"/usr/local/MacGPG1/bin", @"/usr/bin", @"/bin", @"/opt/local/bin", @"/sw/bin", nil];
+	NSArray *searchPaths = [NSMutableArray arrayWithObjects:@"/usr/local/MacGPG2/bin", @"/usr/local/bin", @"/opt/homebrew/bin", @"/usr/local/MacGPG1/bin", @"/usr/bin", @"/bin", @"/opt/local/bin", @"/sw/bin", nil];
 	
 	foundPath = [self findExecutableWithName:executable atPaths:searchPaths];
 	if (foundPath) {

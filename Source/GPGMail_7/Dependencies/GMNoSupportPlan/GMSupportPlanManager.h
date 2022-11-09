@@ -40,6 +40,7 @@ typedef enum {
     NSURL *_endpointURL;
     NSURL *_activationURL;
     NSString *_applicationID;
+    NSString *_applicationVersion;
     NSDictionary *_applicationInfo;
 }
 
@@ -49,6 +50,9 @@ typedef enum {
 - (NSNumber *)remainingTrialDays;
 - (NSString *)currentEmail;
 - (NSString *)currentActivationCode;
+
+- (NSString *)applicationVersion;
+- (BOOL)version:(NSString *)version1 isNewerThanVersion:(NSString *)version2;
 
 - (void)startTrialWithCompletionHandler:(gmsp_api_handler_t __nullable)completionHandler;
 - (void)activateSupportPlanWithActivationCode:(NSString *)activationCode email:(NSString *)email completionHandler:(gmsp_api_handler_t)completionHandler;
@@ -64,6 +68,7 @@ typedef enum {
 - (NSDictionary *)legacySupportPlanInformation;
 
 - (BOOL)isEligibleForApp:(NSString *)app;
+
 
 - (BOOL)shouldPresentActivationDialog;
 - (GMSupportPlanState)supportPlanState;

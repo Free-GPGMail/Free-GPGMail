@@ -76,7 +76,7 @@
 		1B876395178602B200B24BBC /* PGPSignatureUTF8Good.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1B876385178602B200B24BBC /* PGPSignatureUTF8Good.txt */; };
 		1B8763981786035300B24BBC /* NSData+GPGMailTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8763971786035300B24BBC /* NSData+GPGMailTest.m */; };
 		1B87639B178628FD00B24BBC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B87639A178628FD00B24BBC /* XCTest.framework */; };
-		1B87639E17862AAA00B24BBC /* GPGMail.mailbundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49B6048680CD000E48DA /* GPGMail.mailbundle */; };
+		1B87639E17862AAA00B24BBC /* Free-GPGMail.mailbundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49B6048680CD000E48DA /* Free-GPGMail.mailbundle */; };
 		1B87639F17862BD700B24BBC /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B19E83F13A2AEA4002E59ED /* AppKit.framework */; };
 		1B8ACAEF255F59A800EB0045 /* GMSystemIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8ACAEE255F59A800EB0045 /* GMSystemIcon.m */; };
 		1B8C01D513E4F12D00DB9FA4 /* GPGSignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C01D413E4F12D00DB9FA4 /* GPGSignatureView.m */; };
@@ -619,7 +619,7 @@
 		559A80E60838ED590052F47C /* GPGMailBundle.defaults */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GPGMailBundle.defaults; sourceTree = "<group>"; };
 		559A812E0838EEFD0052F47C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		559A81860838F3C30052F47C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D5B49B6048680CD000E48DA /* GPGMail.mailbundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPGMail.mailbundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B6048680CD000E48DA /* Free-GPGMail.mailbundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Free-GPGMail.mailbundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86255F427262EEC00BC2DDC /* LoadBlockedMessageContentBannerViewController+GPGMail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LoadBlockedMessageContentBannerViewController+GPGMail.h"; sourceTree = "<group>"; };
 		D86255F527262EEC00BC2DDC /* LoadBlockedMessageContentBannerViewController+GPGMail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LoadBlockedMessageContentBannerViewController+GPGMail.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -649,7 +649,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		089C166AFE841209C02AAC07 /* GPGMail */ = {
+		089C166AFE841209C02AAC07 /* Free-GPGMail */ = {
 			isa = PBXGroup;
 			children = (
 				1B06268F1746992B00E51308 /* Libmacgpg.xcodeproj */,
@@ -663,7 +663,7 @@
 				089C1671FE841209C02AAC07 /* Frameworks */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
 			);
-			name = GPGMail;
+			name = "Free-GPGMail";
 			sourceTree = "<group>";
 		};
 		089C1671FE841209C02AAC07 /* Frameworks */ = {
@@ -710,7 +710,7 @@
 		19C28FB8FE9D52D311CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D5B49B6048680CD000E48DA /* GPGMail.mailbundle */,
+				8D5B49B6048680CD000E48DA /* Free-GPGMail.mailbundle */,
 				1B87635F1786020900B24BBC /* Unit Tests.xctest */,
 			);
 			name = Products;
@@ -740,7 +740,7 @@
 				1B3B0F642371D63300DAFDA9 /* GMSPCommon.m */,
 			);
 			name = GMSupportPlan;
-			path = ../Dependencies/GMSupportPlan;
+			path = ../Dependencies/GMNoSupportPlan;
 			sourceTree = "<group>";
 		};
 		1B51232214093750004D0818 /* NSBezierPathAdditions */ = {
@@ -1120,9 +1120,9 @@
 			productReference = 1B87635F1786020900B24BBC /* Unit Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8D5B49AC048680CD000E48DA /* GPGMail */ = {
+		8D5B49AC048680CD000E48DA /* Free-GPGMail */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55541F4C085AE6B100548474 /* Build configuration list for PBXNativeTarget "GPGMail" */;
+			buildConfigurationList = 55541F4C085AE6B100548474 /* Build configuration list for PBXNativeTarget "Free-GPGMail" */;
 			buildPhases = (
 				30DA468812B2D5E800E20039 /* Update en.lproj from Base.lproj */,
 				8D5B49B1048680CD000E48DA /* Sources */,
@@ -1131,7 +1131,7 @@
 				1B45A52111CC977700ED4663 /* Copy Frameworks */,
 				30F151C51500BD4500980642 /* Fill Info.plist */,
 				1B49BC7B1A98C21B000440E9 /* Copy "How to get the source code" into Resources */,
-				30F151E21500BE8D00980642 /* Install GPGMail */,
+				30F151E21500BE8D00980642 /* Install Free-GPGMail */,
 				1BC07F3517466697004263BB /* Copy Libmacgpg into the sandbox container */,
 			);
 			buildRules = (
@@ -1139,10 +1139,10 @@
 			comments = "Old working:\nheader_search_path ..\nlibrary_style static\nother_linker_flags -force_flat_namespace -undefined suppress \nmacosx deployment target: default\n\n-bundle_loader /Applications/Mail.app/Contents/MacOS/Mail  -undefined dynamic_lookup\n";
 			dependencies = (
 			);
-			name = GPGMail;
+			name = "Free-GPGMail";
 			productInstallPath = "$(HOME)/Library/Bundles";
-			productName = GPGMail;
-			productReference = 8D5B49B6048680CD000E48DA /* GPGMail.mailbundle */;
+			productName = "Free-GPGMail";
+			productReference = 8D5B49B6048680CD000E48DA /* Free-GPGMail.mailbundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -1151,7 +1151,7 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					1B87635E1786020900B24BBC = {
 						TestTargetID = 8D5B49AC048680CD000E48DA;
@@ -1193,7 +1193,7 @@
 				fa_IR,
 				th,
 			);
-			mainGroup = 089C166AFE841209C02AAC07 /* GPGMail */;
+			mainGroup = 089C166AFE841209C02AAC07 /* Free-GPGMail */;
 			projectDirPath = "";
 			projectReferences = (
 				{
@@ -1203,7 +1203,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				8D5B49AC048680CD000E48DA /* GPGMail */,
+				8D5B49AC048680CD000E48DA /* Free-GPGMail */,
 				1B87635E1786020900B24BBC /* Unit Tests */,
 			);
 		};
@@ -1245,7 +1245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B87639E17862AAA00B24BBC /* GPGMail.mailbundle in Resources */,
+				1B87639E17862AAA00B24BBC /* Free-GPGMail.mailbundle in Resources */,
 				1B876389178602B200B24BBC /* PGPInlineDataUTF8quoted.txt in Resources */,
 				1B87638D178602B200B24BBC /* PGPInlineSignatureUTF8quoted.txt in Resources */,
 				1B876392178602B200B24BBC /* PGPSignatureASCIIGood.txt in Resources */,
@@ -1381,14 +1381,14 @@
 			shellScript = "if [[ -d \"$DEPLOY_RESOURCES_DIR\" ]] ;then\n    source \"$DEPLOY_RESOURCES_DIR/config/versioning.sh\"\nelse\n    source \"$SRCROOT/Version.config\"\nfi\n[[ -n \"$VERSION\" ]] || { echo \"Missing Version!\"; exit 1; }\n\n\n/usr/libexec/PlistBuddy \\\n  -c \"Set CommitHash '${COMMIT_HASH:--}'\" \\\n  -c \"Set BuildNumber '${BUILD_NUMBER:-0}'\" \\\n  -c \"Set CFBundleVersion '${BUILD_VERSION:-0n}'\" \\\n  -c \"Set CFBundleShortVersionString '$VERSION'\" \\\n  \"$BUILT_PRODUCTS_DIR/$INFOPLIST_PATH\" || exit 2\n";
 			showEnvVarsInLog = 0;
 		};
-		30F151E21500BE8D00980642 /* Install GPGMail */ = {
+		30F151E21500BE8D00980642 /* Install Free-GPGMail */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Install GPGMail";
+			name = "Install Free-GPGMail";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1499,7 +1499,7 @@
 /* Begin PBXTargetDependency section */
 		1B87636C1786020A00B24BBC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8D5B49AC048680CD000E48DA /* GPGMail */;
+			target = 8D5B49AC048680CD000E48DA /* Free-GPGMail */;
 			targetProxy = 1B87636B1786020A00B24BBC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1775,6 +1775,7 @@
 				);
 				INFOPLIST_FILE = "Unit Tests/Unit Tests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.free-gpgmail.gpgmail.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1810,6 +1811,7 @@
 				);
 				INFOPLIST_FILE = "Unit Tests/Unit Tests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.free-gpgmail.gpgmail.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1836,7 +1838,6 @@
 					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1862,7 +1863,8 @@
 					"-undefined",
 					dynamic_lookup,
 				);
-				PRODUCT_NAME = GPGMail;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.free-gpgmail.gpgmail6";
+				PRODUCT_NAME = "Free-GPGMail";
 				STRIP_STYLE = "non-global";
 				WRAPPER_EXTENSION = mailbundle;
 			};
@@ -1880,7 +1882,6 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
-				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1902,7 +1903,8 @@
 					"-undefined",
 					dynamic_lookup,
 				);
-				PRODUCT_NAME = GPGMail;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.free-gpgmail.gpgmail6";
+				PRODUCT_NAME = "Free-GPGMail";
 				SEPARATE_STRIP = NO;
 				STRIP_STYLE = "non-global";
 				WRAPPER_EXTENSION = mailbundle;
@@ -1913,18 +1915,31 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEPLOY_RESOURCES_DIR = "$(SRCROOT)/Dependencies/DeployResources";
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/Frameworks\"",
 					"$(SRCROOT)/Dependencies/Libmacgpg/build/$(CONFIGURATION)",
@@ -1933,6 +1948,7 @@
 					/Library/Frameworks,
 					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
 				);
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -1959,6 +1975,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(HOME)/Library/Containers/com.apple.mail/Data/Library/Frameworks $(HOME)/Library/Frameworks /Library/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1975,18 +1992,30 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEPLOY_RESOURCES_DIR = "$(SRCROOT)/Dependencies/DeployResources";
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/Frameworks\"",
 					"$(SRCROOT)/Dependencies/Libmacgpg/build/$(CONFIGURATION)",
@@ -1996,6 +2025,7 @@
 					"\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
 				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -2022,6 +2052,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				LD_RUNPATH_SEARCH_PATHS = "/Library/Frameworks $(HOME)/Library/Frameworks $(HOME)/Library/Containers/com.apple.mail/Data/Library/Frameworks";
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
@@ -2046,7 +2077,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55541F4C085AE6B100548474 /* Build configuration list for PBXNativeTarget "GPGMail" */ = {
+		55541F4C085AE6B100548474 /* Build configuration list for PBXNativeTarget "Free-GPGMail" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55541F4D085AE6B100548474 /* Debug */,

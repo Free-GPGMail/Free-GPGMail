@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>LoaderMinOSVersion</key>
-	<string>13</string>
 	<key>BuildNumber</key>
 	<string>AUTOFILL</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -11,15 +9,15 @@
 	<key>CFBundleDocumentTypes</key>
 	<array/>
 	<key>CFBundleExecutable</key>
-	<string>GPGMail</string>
+	<string>Free-GPGMail</string>
 	<key>CFBundleIconFile</key>
 	<string>GPGMail.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.gpgtools.gpgmail7</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>GPGMail</string>
+	<string>Free-GPGMail</string>
 	<key>CFBundlePackageType</key>
 	<string>GpgM</string>
 	<key>CFBundleShortVersionString</key>
@@ -28,9 +26,68 @@
 	<string>AUTOFILL</string>
 	<key>CommitHash</key>
 	<string>AUTOFILL</string>
+	<key>LoaderMinOSVersion</key>
+	<string>12</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © GPGTools GmbH, 2022</string>
+	<string>Copyright © under General Public License v3 (GPLv3): Free-GPGMail, 2021</string>
 	<key>NSPrincipalClass</key>
 	<string>GPGMailBundle</string>
+	<key>Supported12.0PluginCompatibilityUUIDs</key>
+	<array>
+		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
+		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
+	</array>
+	<key>Supported12.1PluginCompatibilityUUIDs</key>
+	<array>
+		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
+		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
+	</array>
+	<key>Supported12.2PluginCompatibilityUUIDs</key>
+	<array>
+		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
+		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
+	</array>
+	<key>Supported12.3PluginCompatibilityUUIDs</key>
+	<array>
+		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
+		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
+		<string>A4B49485-0377-4FAB-8D8E-E3B8018CFC21</string>
+	</array>
+	<key>Supported12.4PluginCompatibilityUUIDs</key>
+	<array>
+		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
+		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
+		<string>A4B49485-0377-4FAB-8D8E-E3B8018CFC21</string>
+	</array>
+	<key>Supported12.5PluginCompatibilityUUIDs</key>
+	<array>
+		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
+		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
+		<string>A4B49485-0377-4FAB-8D8E-E3B8018CFC21</string>
+	</array>
+	<key>Supported12.6PluginCompatibilityUUIDs</key>
+	<array>
+		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
+		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
+		<string>A4B49485-0377-4FAB-8D8E-E3B8018CFC21</string>
+	</array>
+	<key>Supported12.7PluginCompatibilityUUIDs</key>
+	<array>
+		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
+		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
+		<string>A4B49485-0377-4FAB-8D8E-E3B8018CFC21</string>
+	</array>
+	<key>Supported12.8PluginCompatibilityUUIDs</key>
+	<array>
+		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
+		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
+		<string>A4B49485-0377-4FAB-8D8E-E3B8018CFC21</string>
+	</array>
+	<key>Supported12.9PluginCompatibilityUUIDs</key>
+	<array>
+		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
+		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
+		<string>A4B49485-0377-4FAB-8D8E-E3B8018CFC21</string>
+	</array>
 </dict>
 </plist>

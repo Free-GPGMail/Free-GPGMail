@@ -32,6 +32,9 @@ typedef enum {
     NSData *_publicCertificate;
     NSString *_applicationID;
 
+    NSArray *_eligibleVersions;
+    NSString *_newestEligibleVersion;
+
     BOOL _offline;
 }
 
@@ -53,6 +56,9 @@ typedef enum {
 
 - (NSDate *)expirationDate;
 - (NSString *)deviceID;
+
+- (NSArray *)eligibleVersions;
+- (NSString *)newestEligibleVersion;
 
 - (NSDate *)lastUpdate;
 - (NSDate *)refreshUntil;

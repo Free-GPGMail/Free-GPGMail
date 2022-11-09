@@ -1,4 +1,4 @@
-GPGMAILS = GPGMail_3 GPGMail_4 GPGMail_5 GPGMail_6
+GPGMAILS = GPGMail_3 GPGMail_4 GPGMail_5 GPGMail_6 GPGMail_7
 
 .PHONY: all
 all: $(GPGMAILS)
@@ -22,3 +22,4 @@ clean:
 	$(MAKE) -C GPGMail_4 clean
 	$(MAKE) -C GPGMail_5 clean
 	$(MAKE) -C GPGMail_6 clean
+	$(MAKE) -C GPGMail_7 clean

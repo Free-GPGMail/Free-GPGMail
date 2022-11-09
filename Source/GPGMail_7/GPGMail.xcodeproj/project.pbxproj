@@ -1863,7 +1863,7 @@
 					"-undefined",
 					dynamic_lookup,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.free-gpgmail.gpgmail6";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.free-gpgmail.gpgmail7";
 				PRODUCT_NAME = "Free-GPGMail";
 				STRIP_STYLE = "non-global";
 				WRAPPER_EXTENSION = mailbundle;
@@ -1903,7 +1903,7 @@
 					"-undefined",
 					dynamic_lookup,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.free-gpgmail.gpgmail6";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.free-gpgmail.gpgmail7";
 				PRODUCT_NAME = "Free-GPGMail";
 				SEPARATE_STRIP = NO;
 				STRIP_STYLE = "non-global";

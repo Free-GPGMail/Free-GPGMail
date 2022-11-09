@@ -7,7 +7,7 @@
 
 - (void)fetchKeyForMailAddress:(NSString *)mailAddress block:(void (^)(NSData *data, NSString *verifiedMail, NSError *error))block {
 	NSLog(@"Fetch key for '%@'", mailAddress);
-	NSString *keyserverAddress = @"hkps://hkps.pool.sks-keyservers.net";
+	NSString *keyserverAddress = @"hkps://keyserver.ubuntu.com";
 	NSUInteger timeout = 30;
 	
 	

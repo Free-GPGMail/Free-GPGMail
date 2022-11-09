@@ -1,0 +1,34 @@
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#import <AddressBook/AddressBook.h>
+#import <WebKit/WebKit.h>
+#endif
+
+extern void instrumentObjcMessageSends(BOOL enabled);
+extern int  GPGMailLoggingLevel;
+
+#define DebugLog(...) if (GPGMailLoggingLevel) {CCLog(__VA_ARGS__);}
+#define GMLocalizedString(key) \
+[GPGMailBundle localizedStringForKey:(key)]
+
+/**
+ * Allows to annotate methods and calls with the correct class,
+ * but uses the cast_class to be actually used.
+ * This is necessary for Mavericks, where the mail class names have been
+ * prefixed.
+ */
+#define GM_CAST_CLASS(class, cast_class) cast_class
+#define GM_MAIL_CLASS(class) [GPGMailBundle resolveMailClassFromName:class]
+
+/**
+ NSAppKitVersionNumber10_8 is not available in the 10.8 SDK,
+ but comes with the 10.9 SDK. As long as that is not released,
+ we'll define it if it's not available.
+*/
+#ifndef NSAppKitVersionNumber10_8
+#define NSAppKitVersionNumber10_8 1187
+#endif
+#ifndef NSAppKitVersionNumber10_9
+#define NSAppKitVersionNumber10_9 1265
+#endif
+

@@ -51,7 +51,7 @@
 	
 	keyID = [@"0x" stringByAppendingString:keyID];
 	
-	NSString *query = [NSString stringWithFormat:@"/pks/lookup?op=get&options=mr&search=%@", keyID];
+	NSString *query = [NSString stringWithFormat:@"/pks/lookup?op=get&fingerprint=on&options=mr&search=%@", keyID];
 	
 	[self sendRequestWithQuery:query postData:nil];
 }
@@ -66,7 +66,7 @@
 	
 	pattern = [pattern stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	
-	NSString *query = [NSString stringWithFormat:@"/pks/lookup?op=index&options=mr&search=%@", pattern];
+	NSString *query = [NSString stringWithFormat:@"/pks/lookup?op=index&fingerprint=on&options=mr&search=%@", pattern];
 	
 	[self sendRequestWithQuery:query postData:nil];
 }
@@ -286,61 +286,6 @@
 	self.connection = nil;
 }
 
-
-- (void)connection:(NSURLConnection *)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
-	// Allow sks-keyservers.netCA.der as a valid root certificate.
-	
-	BOOL trusted = NO;
-	if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
-		SecTrustRef serverTrust = challenge.protectionSpace.serverTrust;
-
-		NSString *thePath = [[NSBundle bundleForClass:self.class] pathForResource:@"sks-keyservers.netCA" ofType:@"der"];
-		NSData *certData = [NSData dataWithContentsOfFile:thePath];
-		
-		SecCertificateRef cert = SecCertificateCreateWithData(NULL, (CFDataRef)certData);
-		SecCertificateRef certArray[] = {cert};
-
-		CFArrayRef certArrayRef = CFArrayCreate(NULL, (void *)certArray, 1, NULL);
-		SecTrustSetAnchorCertificates(serverTrust, certArrayRef);
-		//SecTrustSetAnchorCertificatesOnly(serverTrust, 0); // also allow regular CAs.
-
-		
-		if (@available(macOS 10.14, *)) {
-            CFErrorRef error = nil;
-            trusted = SecTrustEvaluateWithError(serverTrust, &error);
-            
-			// Allow InvalidExtendedKeyUsage. e.g. SHA1 for certificates.
-			// This is required for the sks-keyservers.net CA certificate.
-            if (error && CFErrorGetCode(error) == errSecInvalidExtendedKeyUsage && [NSOSStatusErrorDomain isEqualToString:(NSString *)CFErrorGetDomain(error)]) {
-                trusted = YES;
-            }
-        } else {
-            SecTrustResultType trustResult = 0;
-            SecTrustEvaluate(serverTrust, &trustResult);
-            
-            switch (trustResult) {
-                case kSecTrustResultUnspecified:
-                case kSecTrustResultProceed:
-                    trusted = YES;
-                    break;
-                default:
-                    break;
-            }
-        }
-
-		CFRelease(certArrayRef);
-		CFRelease(cert);
-	}
-	
-	if (trusted) {
-		[challenge.sender useCredential:[NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust] forAuthenticationChallenge:challenge];
-	} else {
-		[challenge.sender performDefaultHandlingForAuthenticationChallenge:challenge];
-	}
-}
-
-
-
 #pragma mark init and dealloc
 
 - (id)initWithFinishedHandler:(gpg_ks_finishedHandler)handler {
@@ -349,7 +294,7 @@
 	}
 	
 	self.finishedHandler = handler;
-	self.keyserver = @"hkps://hkps.pool.sks-keyservers.net";
+	self.keyserver = @"hkps://keyserver.ubuntu.com";
 	receivedData = [[NSMutableData alloc] init];
 	self.timeout = 20;
 	

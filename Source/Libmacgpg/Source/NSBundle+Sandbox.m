@@ -115,10 +115,12 @@
     SecRequirementRef requirement = nil;
     SecStaticCodeRef staticCode = nil;
 	
-    SecStaticCodeCreateWithPath((__bridge CFURLRef)[self bundleURL], 0, &staticCode);
-	SecRequirementCreateWithString(CFSTR("anchor apple generic and ( cert leaf = H\"C21964B138DE0094F42CEDE7078C6F800BA5838B\" or cert leaf = H\"233B4E43187B51BF7D6711053DD652DDF54B43BE\" ) "), 0, &requirement);
+    SecStaticCodeCreateWithPath((__bridge CFURLRef)[self bundleURL], kSecCSDefaultFlags, &staticCode);
+    SecCSFlags validityFlags = kSecCSDefaultFlags | kSecCSCheckNestedCode | kSecCSCheckAllArchitectures | kSecCSEnforceRevocationChecks;
+    // E2C077C85EC4024699920B3C206364F742CEC790 is the Developer ID Application expiring on 2027-02-01
+    SecRequirementCreateWithString(CFSTR("anchor apple generic and ( cert leaf = H\"C21964B138DE0094F42CEDE7078C6F800BA5838B\" or cert leaf = H\"233B4E43187B51BF7D6711053DD652DDF54B43BE\" or cert leaf = H\"E2C077C85EC4024699920B3C206364F742CEC790\" ) "), kSecCSDefaultFlags, &requirement);
 	
-	OSStatus result = SecStaticCodeCheckValidity(staticCode, 0, requirement);
+	OSStatus result = SecStaticCodeCheckValidity(staticCode, validityFlags, requirement);
     
     if (staticCode) CFRelease(staticCode);
     if (requirement) CFRelease(requirement);

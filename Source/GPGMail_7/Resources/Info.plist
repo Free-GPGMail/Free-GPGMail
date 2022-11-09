@@ -32,62 +32,9 @@
 	<string>Copyright © under General Public License v3 (GPLv3): Free-GPGMail, 2021</string>
 	<key>NSPrincipalClass</key>
 	<string>GPGMailBundle</string>
-	<key>Supported12.0PluginCompatibilityUUIDs</key>
+	<key>Supported13.0PluginCompatibilityUUIDs</key>
 	<array>
-		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
-		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
-	</array>
-	<key>Supported12.1PluginCompatibilityUUIDs</key>
-	<array>
-		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
-		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
-	</array>
-	<key>Supported12.2PluginCompatibilityUUIDs</key>
-	<array>
-		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
-		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
-	</array>
-	<key>Supported12.3PluginCompatibilityUUIDs</key>
-	<array>
-		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
-		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
-		<string>A4B49485-0377-4FAB-8D8E-E3B8018CFC21</string>
-	</array>
-	<key>Supported12.4PluginCompatibilityUUIDs</key>
-	<array>
-		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
-		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
-		<string>A4B49485-0377-4FAB-8D8E-E3B8018CFC21</string>
-	</array>
-	<key>Supported12.5PluginCompatibilityUUIDs</key>
-	<array>
-		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
-		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
-		<string>A4B49485-0377-4FAB-8D8E-E3B8018CFC21</string>
-	</array>
-	<key>Supported12.6PluginCompatibilityUUIDs</key>
-	<array>
-		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
-		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
-		<string>A4B49485-0377-4FAB-8D8E-E3B8018CFC21</string>
-	</array>
-	<key>Supported12.7PluginCompatibilityUUIDs</key>
-	<array>
-		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
-		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
-		<string>A4B49485-0377-4FAB-8D8E-E3B8018CFC21</string>
-	</array>
-	<key>Supported12.8PluginCompatibilityUUIDs</key>
-	<array>
-		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
-		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
-		<string>A4B49485-0377-4FAB-8D8E-E3B8018CFC21</string>
-	</array>
-	<key>Supported12.9PluginCompatibilityUUIDs</key>
-	<array>
-		<string>25288CEF-7D9B-49A8-BE6B-E41DA6277CF3</string>
-		<string>6FF8B077-81FA-45A4-BD57-17CDE79F13A5</string>
-		<string>A4B49485-0377-4FAB-8D8E-E3B8018CFC21</string>
+		<string>890E3F5B-9490-4828-8F3F-B6561E513FCC</string>
 	</array>
 </dict>
 </plist>

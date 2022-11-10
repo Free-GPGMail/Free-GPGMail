@@ -30,6 +30,7 @@ the plugin available:
 | Free-GPGMail 4  | x           | x      | x        |         |          |         |
 | Free-GPGMail 5* |             | u      | u        | s       |          |         |
 | Free-GPGMail 6  |             |        |          |         | x        |         |
+| Free-GPGMail 7  |             |        |          |         |          | x       |
 
 (*) While Big Sur requires Free-GPGMail 5 to be codesigned, Mojave and Catalina
 do not like the code signature of the provided mailbundles. Thus, we publish

@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "No se ha podido verificar la firma.";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "La clave pública para verificar la firma de este adjunto no está en su juego de claves (keychain).\n\nPor favor descargue la clave pública %@ utilizando GPG Keychain.";
+"DECRYPT_ERROR_GENERAL_TITLE" = "No se pudo descifrar el archivo adjunto.";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "La clave secreta para descifrar este accesorio no está en tu llavero.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "El archivo adjunto se descifra con éxito.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "Abrir un archivo adjunto en la vista de mensajes por haciendo doble clic.";

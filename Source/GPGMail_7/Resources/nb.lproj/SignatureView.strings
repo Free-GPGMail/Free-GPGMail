@@ -1,0 +1,20 @@
+/* 
+ SignatureView.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 30.07.11.
+ Copyright 2011 GPGMail. All rights reserved.
+ 
+ Defines the strings used in the signature view.
+ */
+"VALIDITY_NO_TRUST" = "Denne signaturen er upålitelig.";
+"VALIDITY_OK" = "Denne signaturen er pålitelig.";
+/* Signature view key status. */
+"VALIDITY_KEY_REVOKED" = "Nøkkelen til denne signaturen har blitt tilbakekalt.";
+"VALIDITY_SIGNATURE_EXPIRED" = "Signaturen er utløpt på tid.";
+"VALIDITY_KEY_EXPIRED" = "Nøkkelen til denne signaturen er utløpt på tid.";
+"VALIDITY_KEY_REVOKED" = "Nøkkelen til denne signaturen har blitt tilbakekalt.";
+"VALIDITY_UNKNOWN_ALGORITHM" = "Signaturen ble laget med en ukjent algoritme.";
+"VALIDITY_NO_PUBLIC_KEY" = "Nøkkelen til denne signaturen er ikke på din nøkkelring.";
+"VALIDITY_UNKNOWN_ERROR" = "Ukjent feil med signaturen.";
+"VALIDITY_BAD_SIGNATURE" = "Signaturen er ugyldig.";

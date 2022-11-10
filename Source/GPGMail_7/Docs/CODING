@@ -1,0 +1,237 @@
+Every Mail.app method which is to be swizzled, has to be prefixed
+with MA (MailApp).
+
+There's a folder in Resources which is called old. This folder
+is used to diff the a modified xib with the latest xib.
+It's used for localizeXIB. 
+DON'T EVER DELETE THIS FOLDER!
+
+* Reverse Engineering *
+
+-- Access block captured variables by using the offsets seen in Hopper --
+
+1.) Find the block (subroutine) Hopper
+2.) Copy the start address of the block and set a breakpoint to it in lldb (e.g. 0x1000fa522)
+
+(lldb) breakpoint s -a 0x1000fa522
+
+3.) Once your application hits the breakpoint, you can now compare the assembly with the pseudo code in Hopper,
+to find out where the a captured block variable is first captured.
+
+var_30 = *___stack_chk_guard;
+rax = [*(arg0 + 0x20)->_smimeLock retain];
+var_1A0 = rax;
+
+4.) In the assembly view now step through until you hit the assembly instruction which correlates to the Hopper pseudocode.
+
+0x1000fa547 <+37>:   movq   0x20(%r12), %rax
+
+5.) This line tells you that the register r12 contains the block object. Through this block object,
+we can now inspect the captured variables using the offset we see in Hopper (and the assembly)
+
+6.) To access the captured variable at offset 0x20 you would run
+
+(lldb) po *(id *)((char *)$r12 + 0x20)
+<ComposeBackEnd: 0x10a1c3c90>: id: DE1BE572-555E-4E20-AD3C-0D1863A36476 subject: <Empty>*: id: DE1BE572-555E-4E20-AD3C-0D1863A36476 subject:
+
+* Access the current value of a "variable" in assembly *
+
+movq   %rbx, -0x88(%rbp)
+
+If you want to know the value stored at -0x88(%rbp), lldb will show you that by running
+
+po *(id *)((char *)$rbp - 0x88)
+
+Note: if the offset starts with - it has to be subtracted, otherwise added, so 0x88 becomes $rbp + 0x88, -0x88 instead becomes
+$rbp - 0x88
+
+* Address / Thread sanitizer *
+
+It's the possible that Xcode complains that the Thread sanitizer dylib could not be loaded, because it
+doesn't exist.
+The error message might look like the following:
+could not load inserted library '@executable_path/Frameworks/libclang_rt.tsan_osx_dynamic.dylib'
+
+This error is rather easy to fix. Follow these steps:
+
+1.) Create the Frameworks dir in /Applications/Mail.app/Contents/MacOS
+
+sudo mkdir -p /Applications/Mail.app/Contents/MacOS/Frameworks
+
+2.) Copy the dylib into the newly created Frameworks dir
+
+sudo cp /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/8.0.0/lib/darwin/libclang_rt.tsan_osx_dynamic.dylib /Applications/Mail.app/Contents/MacOS/Frameworks
+
+Re-compile GPGMail and the Thread Sanitizer should kick in.
+
+--
+
+
+- Sometimes it's not to easy to find out what happens to an
+  object you created. In that case you can over release it,
+  using autorelease or release. This way, the object will be
+  ending up an NSZombie, which can later be tracked using Instruments
+  allocation tool. (VERY HELPFUL)
+
+- clearCachedDecrypted is called everytime the message is unlodaed.
+  we should better cache it.
+
+- Mail internally seems to use firstChildPart to determine the charset of the message.
+
+- Log all messages -> instrumentObjcMessageSends(YES) writes to  /tmp/msgSends-
+
+_getSomeCharsetFromPartTree -> exists only internally
+
+- -[Message setNumberOfAttachments:isSigned:isEncrypted:] is only called for
+  encrypted messages, strangely enough.
+  Still have to find out what usually sets the number.
+  Mail.app uses -[MessageStore setNumberOfAttachments:isSigned:isEncrypted:forMessage:] to set the number
+  of attachments for every message, but this is only called when the message comes in
+  and never touched again, except for encrypted messages.
+  
+  So to always work, GPGMail forces Mail.app to update the number for every message, each time
+  it's parsed or the number is different, by recalculating the number.
+
+* Committing *
+
+- Always use git -p <filename>. This let's you decide for each file
+  what lines should be added to a commit.
+- Use this to create commits which only fix one problem at a time.
+
+* Other *
+
+- Mail.app comes with a lot of general class enhancements. It's best to look
+  them through to find helpful ones.
+  
+  @interface NSData (MessageAdditions)
+  - (id)initWithDataConvertingLineEndingsFromUnixToNetwork:(id)arg1;
+  - (id)initWithDataConvertingLineEndingsFromNetworkToUnix:(id)arg1;
+  - (id)dataByConvertingLineEndingsFromUnixToNetwork;
+  
+  // To detect if the data contains real message headers.
+  - (struct _NSRange)rangeOfRFC822HeaderData;
+
+* Data Detectors *
+
+- Extremely hard to implement native ones.
+- Enabling Javascript in WebViews works
+  [[WebView preferences] setJavaScriptEnabled:YES]
+- Using Javascript to emulate the bevaiour might be rather easy.
+
+* Mountain Lion *
+
+- MimePart, MimeBody and other very important classes from Message.framework
+  are now in CoreMessage.framework
+- MessageStore does no longer exist but was replaced by MessageDataSource.
+- On Mountain Lion compiled GPGMail doesn't load, where on Lion compiled GPGMail loads
+  - Check Framework dependencies.
+  - Update Header files for Mountain Lion
+
+* OpenPGP | S/MIME co-existence
+
+1.) A new message (not reply) is created check if the there's a key for signing
+    for the address in either OpenPGP or S/MIME. Choose the method to enable accordingly.
+    
+    If there are keys for either method, check the entries which method was last used
+    to sign with this key.
+    
+    If again both methods are found check which was used more often.
+    
+    Once a user changes the method manually, NEVER automatically manipulate that
+    choice again.
+
+    [ComposeBackEnd type] defines whether the message is replied|forwared|replied-to-all|new
+        - 5 -> New message
+        - 1 -> Reply
+        - 2 -> Reply to all
+        - 3 -> Forward
+        - 4 -> Reply to already open mesage? (Mail.app was closed with this reply open and it's restored.)
+    
+    once a user enters addresses a dictionary is checked to see if the last time
+    the user sent to these addresses decided to encrypt or not and sets that status. 
+    If no message was sent yet to that user, don't encrypt.
+    
+    If there's one key for signing for each method but the recipients can only be found for one encryption method
+    automatically select that encryption method.
+    
+    If a user replies to a message, check if the message was signed and set signed.
+    If a user replies to a message, check if the message was encrypted and set encrypted.
+    Don't set something which the old message was not.
+
+    User defaults should look like this
+    [address][sign][SMIME][addresses][did-sign] = counter
+    [address][sign][PGP][addresses][did-not-sign] = counter
+    [address][sign][addresses][last-used-method] = 'SMIME' | 'PGP'
+    [address][sign][addresses][last-status] = 'did sign' | 'did not sign'
+    [address][encrypt][SMIME][addresses][did-encrypt] = counter
+    [address][encrypt][PGP][addresses][did-not-encrypt] = counter
+    [address][encrypt][addresses][last-used-method] = 'SMIME' | 'PGP'
+    [address][encrypt][addresses][last-status] = 'did encrypt' | 'did not encrypt'
+
+* Indexing encrypted messages
+
+Message.h
+
+- (id)stringForIndexing;
+- (id)stringForIndexingUpdatingBodyFlags:(BOOL)arg1;
+
+might be relevant.
+
+* Access struct instance variables of Mail Classes *
+
+Copy the struct definition you want to use into your header file
+using a typedef. After that you can access the struct data using the following
+code.
+
+StructType structVar; 
+object_getInstanceVariable(self, "<instance-variable-name>", (void **)&structVar);
+
+Very nice!
+
+* XPC Services for sandboxed Mail.app >= 10.8 *
+
+Bad Apple which really doesn't like plugins for Mail.app has disabled mach lookup names
+for Mail.app
+Our XPC Service has to use a mach name since it's running as a launchd item instead
+as part of an app (otherwise it would have to live inside Mail.app and we certainly
+don't want to mess with that!).
+BUT fortunately for us, Apple has introduced an two exceptions for mach lookup names.
+One can be found in the file /System/Library/Sandbox/Profiles/application.sb (which contains
+the rules which are evaluated for each available entitlement) and one can be found
+in the entitlements Mail.app is signed with directly.
+Use "codesign --display --entitlements - /Applications/Mail.app" to display the available
+entitlements and check for "mach-lookup" to find interesting ones.
+In the application.sb file there's a mach-lookup allow rule, which allows every app to lookup
+mach services which end in _OpenStep.
+Mail.app's entitlements allow every mach service which only has numbers as its name.
+So as long as Apple doesn't remove these rules and our xpc service has a matching name
+we're mighty mighty fine :)!
+
+* Additional documentation for NSXPCConnection *
+
+NSXPCConnection invokes error, interruption or invalidation handlers
+for specific errors which are documented, but as not much as one would want.
+
+This is a list of all the available handlers and when they are invoked:
+
+- invalidationHandler:
+	- invoked when there's a problem establishing a connection:
+		- the xpc service was unloaded or is being unloaded while a message
+		  is waiting for a response
+		- the xpc service is not loaded at all -> in that case it's invoked
+		  immediately after calling resume.
+
+- remoteObjectProxy errorHandler:
+	- when the xpc service crashes (e.g. overrelease or other BAD EXC failure in the xpc service)
+	- when the xpc service is killed (also with -9)
+	- when the xpc service is unloaded with `launchctl unload`
+	- when the xpc service is unloaded with `launchctl remove`
+
+- interruptionHandler:
+	- when the connection was already invalidated (call to invalidate)
+	  and the xpc service is killed.
+	- everytime remoteObjectProxy errorHandler is invoked.
+
+* Class weak linking for Mavericks *
+
+http://www.sealiesoftware.com/blog/archive/2010/4/8/Do-it-yourself_Objective-C_weak_import.html

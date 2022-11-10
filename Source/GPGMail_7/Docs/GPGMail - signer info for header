@@ -1,0 +1,36 @@
+for signature verification
+call parentController on MessageHeaderDisplay -> receive MessageContentController
+call viewingState -> call mimeBody
+call mimeBody -> topLevelPart
+uses messageFlags to check if the message is indeed signed.
+and based on that info calls isSigned.
+and then verifySignature on that.
+
+
+verify signature steps in decodeMultipartSignedWithContext:
+-> call verifySignature
+  -> call needsSignatureVerification:(parameter is a pointer to a MFError)
+	 -> checks if _smimeError is set already, returns 0 if so
+	    and sets the error pointer on _smimeError.
+  -> if yes
+  -> call usesKnownSignatureProtocol
+  -> if yes
+  -> call signedData -> being the data that was signed (obv!)
+  -> fetch data for signature part
+  -> now, when it's gpg, the signature is not recognized as such
+     hence verifySignatureWithCMSDecoder is never called,
+     we have to do it ourselves.
+
+
+
+ -> call verifySignatureWithCMSDecoder
+	 -> if an error occurs -> set MFError on error pointer
+						   -> set _smimeError to the MFError
+	 return value seems to be always null
+ 
+-- on a different note, on init all message flags are set to 1
+4294967295 this is 111111111111111111111111 in binary
+-- after that, these flags are updated accordingly
+
+
+Error Domain=MFMessageErrorDomain Code=1036 "Beim Lesen der digitalen Signatur dieser E-Mail ist ein Problem aufgetreten." UserInfo=0x107f01a50 {NSLocalizedDescription=Beim Lesen der digitalen Signatur dieser E-Mail ist ein Problem aufgetreten., MFSMIMESignerStatus=4, _MFShortDescription=Die E-Mail-Signatur konnte nicht überprüft werden., MFSMIMECertificateStatus=-2147409652, MFSMIMETrustKey=<SecTrust 0x10b972ad0 [0x7fff7d45eea0]>}

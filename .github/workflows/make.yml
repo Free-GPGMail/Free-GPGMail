@@ -15,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        gpgmail: [GPGMail_3, GPGMail_4, GPGMail_5, GPGMail_6]
+        gpgmail: [GPGMail_3, GPGMail_4, GPGMail_5, GPGMail_6, GPGMail_7]
         os: [macos-latest]
 
     steps:

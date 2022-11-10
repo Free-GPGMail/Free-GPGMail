@@ -1,0 +1,20 @@
+/* 
+ SignatureView.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 30.07.11.
+ Copyright 2011 GPGMail. All rights reserved.
+ 
+ Defines the strings used in the signature view.
+ */
+"VALIDITY_NO_TRUST" = "Allekirjoitukseen ei luoteta.";
+"VALIDITY_OK" = "Allekirjoitukseen voidaan luottaa.";
+/* Signature view key status. */
+"VALIDITY_KEY_REVOKED" = "Avain jolla tämä allekirjoitus on suoritettu on peruutettu.";
+"VALIDITY_SIGNATURE_EXPIRED" = "Allekirjoitus on vanhentunut.";
+"VALIDITY_KEY_EXPIRED" = "Allekirjoituksen avain on vanhentunut.";
+"VALIDITY_KEY_REVOKED" = "Avain jolla tämä allekirjoitus on suoritettu on peruutettu.";
+"VALIDITY_UNKNOWN_ALGORITHM" = "Allekirjoitus on luotu tuntemattomalla algoritmillä.";
+"VALIDITY_NO_PUBLIC_KEY" = "Allekirjoituksen avain ei ole avainrenkaassasi.";
+"VALIDITY_UNKNOWN_ERROR" = "Tuntematon virhe allekirjoituksessa.";
+"VALIDITY_BAD_SIGNATURE" = "Tämä allekirjoitus on viallinen.";

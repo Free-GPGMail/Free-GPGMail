@@ -1,0 +1,44 @@
+2011-06-21 01:32:48.159 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] name: NSViewFrameDidChangeNotification
+2011-06-21 01:32:48.160 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] object: <MessageBodyScrollView: 0x104458fe0>
+2011-06-21 01:32:48.160 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] userInfo: (null)
+2011-06-21 01:32:48.161 Mail[40340:707] [DEBUG] -[GPGMail_MessageContentController gpgSetHasSetupMessageBody:] In List view, I'm out of here!
+2011-06-21 01:32:48.161 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] name: NSViewFrameDidChangeNotification
+2011-06-21 01:32:48.161 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] object: <MessagesTableView: 0x10454c890>
+2011-06-21 01:32:48.169 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] userInfo: (null)
+2011-06-21 01:32:48.169 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] name: NSViewFrameDidChangeNotification
+2011-06-21 01:32:48.169 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] object: <PaddingView: 0x1045a1800>
+2011-06-21 01:32:48.169 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] userInfo: (null)
+2011-06-21 01:32:48.170 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] name: NSViewFrameDidChangeNotification
+2011-06-21 01:32:48.170 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] object: <MessageContentView: 0x10454dd10>
+2011-06-21 01:32:48.175 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] userInfo: (null)
+2011-06-21 01:32:48.176 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] name: NSTableViewSelectionDidChangeNotification
+2011-06-21 01:32:48.176 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] object: <MessagesTableView: 0x10454c890>
+2011-06-21 01:32:48.176 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] userInfo: (null)
+2011-06-21 01:32:48.176 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] name: MessageViewingPaneControllerFinishedSelectingFirstActionMessage
+2011-06-21 01:32:48.176 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] object: <MessageViewingPaneController: 0x10458d9a0>
+2011-06-21 01:32:48.180 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] userInfo: (null)
+2011-06-21 01:32:48.180 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] name: NSUserDefaultsDidChangeNotification
+2011-06-21 01:32:48.180 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] object: <NSUserDefaults: 0x1011067b0>
+2011-06-21 01:32:48.180 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] userInfo: (null)
+2011-06-21 01:32:48.563 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] name: NSViewBoundsDidChangeNotification
+2011-06-21 01:32:48.564 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] object: <_MailNSClipView: 0x1074daf00>
+2011-06-21 01:32:48.564 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] userInfo: (null)
+2011-06-21 01:32:48.564 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] name: NSViewFrameDidChangeNotification
+2011-06-21 01:32:48.564 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] object: <NSScroller: 0x1074ae5f0>
+2011-06-21 01:32:48.564 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] userInfo: (null)
+2011-06-21 01:32:48.565 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] name: NSTextViewWillChangeNotifyingTextViewNotification
+GPGPostNotificationName:object:userInfo:] name: MessageCellViewSizeDidChange
+2011-06-21 01:32:16.960 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] object: <MessageContentController: 0x10993d780> - <LibraryMessage: 0x1059200b0, library id: 507326 conversation 15113>
+2011-06-21 01:32:16.961 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] userInfo: (null)
+GPGPostNotificationName:object:userInfo:] name: MessageWillNoLongerBeDisplayedInView
+2011-06-21 01:32:47.813 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] object: (null)
+2011-06-21 01:32:47.813 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] userInfo: {
+    MVMessageContainerViewKey = "<EmailView: 0x109a332d0>";
+    MessageKey = "<LibraryMessage: 0x1059200b0, library id: 507326 conversation 15113>";
+}
+2011-06-21 01:30:52.321 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] name: MessageWillBeDisplayedInView
+2011-06-21 01:30:52.321 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] object: <MessageWebView: 0x1093dd930>
+2011-06-21 01:30:52.321 Mail[40340:707] [DEBUG] -[GPGMail_MailNotificationCenter GPGPostNotificationName:object:userInfo:] userInfo: {
+    MVMessageContainerViewKey = "<EmailView: 0x104a34c10>";
+    MessageKey = "<LibraryMessage: 0x1045f57d0, library id: 507686 conversation 15534>";
+}

@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "Signaturen kunne ikke bekræftes.";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "Den offentlige nøgle til at bekræfte signaturen af denne vedhæftede fil er ikke i din nøglering.\n\nHent din offentlige nøgle %@ med GPG Nøglering.";
+"DECRYPT_ERROR_GENERAL_TITLE" = "Kunne ikke dekryptere den vedhæftede fil.";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "Den hemmelige nøgle til at dekryptere denne vedhæftede fil er ikke i din nøglering.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "Den vedhæftede fil er blevet dekrypteret.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "Åbn en vedhæftet fil i beskeden ved at dobbelt-klikke.";

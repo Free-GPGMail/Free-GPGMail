@@ -1,0 +1,13 @@
+/* 
+ GPGAttachment.strings
+ GPGMail
+ 
+ Created by Lukas Pitschl on 03.12.11.
+ Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+ */
+"SIGNATURE_ERROR_GENERAL_TITLE" = "Gagal verifikasi tanda tangan.";
+"SIGNATURE_ERROR_NO_PUBKEY_MESSAGE" = "Kunci publik untuk verifikasi tanda tangan lampiran ini tidak ada dalam ring kunci Anda.\n\nHarap unduh kunci publik %@ memakai GPG Keychain.";
+"DECRYPT_ERROR_GENERAL_TITLE" = "Gagal mendekripsi lampiran.";
+"DECRYPT_ERROR_GENERAL_MESSAGE" = "Kunci rahasia untuk mendekripsi lampiran ini tak ada dalam ring kunci Anda.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_TITLE" = "Lampiran sukses didekripsi.";
+"ATTACHMENT_DECRYPTED_SUCCESSFULLY_MESSAGE" = "Buka suatu lampiran dalam tilikan pesan dengan klik ganda.";

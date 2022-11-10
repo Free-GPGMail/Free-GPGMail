@@ -164,17 +164,18 @@
     SecRequirementRef requirement = nil;
     SecStaticCodeRef staticCode = nil;
         
-    result = SecStaticCodeCreateWithPath((__bridge CFURLRef)[NSURL fileURLWithPath:path], 0, &staticCode);
+    result = SecStaticCodeCreateWithPath((__bridge CFURLRef)[NSURL fileURLWithPath:path], kSecCSDefaultFlags, &staticCode);
     if (result) {
         goto finally;
     }
-	
-	result = SecRequirementCreateWithString(CFSTR("anchor apple generic and ( cert leaf = H\"C21964B138DE0094F42CEDE7078C6F800BA5838B\" or cert leaf = H\"233B4E43187B51BF7D6711053DD652DDF54B43BE\" ) "), 0, &requirement);
+
+    SecCSFlags validityFlags = kSecCSDefaultFlags | kSecCSCheckNestedCode | kSecCSCheckAllArchitectures | kSecCSEnforceRevocationChecks;
+	result = SecRequirementCreateWithString(CFSTR("anchor apple generic and ( cert leaf = H\"C21964B138DE0094F42CEDE7078C6F800BA5838B\" or cert leaf = H\"233B4E43187B51BF7D6711053DD652DDF54B43BE\" or cert leaf = H\"E2C077C85EC4024699920B3C206364F742CEC790\" ) "), kSecCSDefaultFlags, &requirement);
 	if (result) {
         goto finally;
     }
 
-	result = SecStaticCodeCheckValidity(staticCode, 0, requirement);
+	result = SecStaticCodeCheckValidity(staticCode, validityFlags, requirement);
     
 finally:
     if (staticCode) CFRelease(staticCode);

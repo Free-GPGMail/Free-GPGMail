@@ -3632,7 +3632,7 @@ BOOL gpgConfigReaded = NO;
 		gpgTask.passphrase = passphrase;
 		
 		NSArray *parts = [[self.class gpgVersion] componentsSeparatedByString:@"."];
-		if (gpgTask.batchMode == NO && parts.count >= 2) { // Do not set pinentry loopback when the batch mode is used.
+		if (parts.count >= 2) { // Do not set pinentry loopback when the batch mode is used.
 			if (([parts[0] integerValue] == 2 && [parts[1] integerValue] >= 1) || [parts[0] integerValue] > 2) {
 				[gpgTask addArgument:@"--pinentry-mode"];
 				[gpgTask addArgument:@"loopback"];

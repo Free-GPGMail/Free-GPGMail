@@ -19,7 +19,7 @@ jobs:
         os: [macos-latest]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Build mailbundle
         working-directory: Source
@@ -30,13 +30,13 @@ jobs:
           make ${{ matrix.gpgmail }}
 
       - name: Upload mailbundle
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: Free-${{ matrix.gpgmail }}.mailbundle
           path: Source/bundles/
 
       - name: Upload mailbundle debuginfo
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: Free-${{ matrix.gpgmail }}.mailbundle.dSYM
           path: Source/${{ matrix.gpgmail }}/build/Release/Free-GPGMail.mailbundle.dSYM
@@ -80,7 +80,7 @@ jobs:
           verbose: True
 
       - name: Upload signed mailbundle
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         env:
           CODESIGN_ID: ${{ secrets.CODESIGN_ID }}
         if:  env.CODESIGN_ID != '' && ! (endsWith(matrix.gpgmail, '3') || endsWith(matrix.gpgmail, '4'))

@@ -76,6 +76,8 @@ NSString * const kGMShouldNotConvertPGPPartitionedMessagesKey = @"GMShouldNotCon
 
 NSString * const kGMSupportPlanAutomaticActivationActivationCodeKey = @"SupportPlanActivationCode";
 NSString * const kGMSupportPlanAutomaticActivationActivationEmailKey = @"SupportPlanActivationEmail";
+NSString * const kGMSupportPlanAutomaticActivationShowSuccessDialogKey = @"SupportPlanAutomaticActivationShowSuccessDialog";
+NSString * const kGMSupportPlanAutomaticActivationSuppressErrorDialogKey = @"SupportPlanAutomaticActivationSuppressErrorDialog";
 
 NSString * const kGMSupportPlanInformationActivationCodeKey = @"ActivationCode";
 NSString * const kGMSupportPlanInformationActivationEmailKey = @"ActivationEmail";
@@ -639,6 +641,30 @@ static BOOL gpgMailWorks = NO;
     [self startSupportContractWizardWithActivationCode:nil email:nil switchPlan:YES];
 }
 
+- (GMSupportPlanAssistantWindowController *)supportContractWizardWindowConfiguredWithActivationCode:(NSString *)activationCode email:(NSString *)email switchPlan:(BOOL)switchPlan {
+    GMSupportPlanAssistantViewController *supportPlanAssistantViewController = [[GMSupportPlanAssistantViewController alloc] initWithNibName:@"GMSupportPlanAssistantView" bundle:[GPGMailBundle bundle]];
+    supportPlanAssistantViewController.supportPlanManager = [self supportPlanManager];
+    supportPlanAssistantViewController.delegate = self;
+    supportPlanAssistantViewController.initialDialogType = switchPlan ? GMSupportPlanAssistantDialogTypeSwitchSupportPlan : GMSupportPlanAssistantDialogTypeInactive;
+
+    if([email length] > 0) {
+        supportPlanAssistantViewController.email = email;
+    }
+    if([activationCode length] > 0) {
+        supportPlanAssistantViewController.activationCode = activationCode;
+    }
+
+    GMSupportPlanAssistantWindowController *supportPlanAssistantWindowController = [[GMSupportPlanAssistantWindowController alloc] initWithSupportPlanManager:[self supportPlanManager]];
+    supportPlanAssistantWindowController.delegate = self;
+    supportPlanAssistantWindowController.contentViewController = supportPlanAssistantViewController;
+    [[supportPlanAssistantWindowController window] setTitle:@"GPG Mail Support Plan"];
+
+    [self setIvar:@"SupportPlanAssistantWindowController" value:supportPlanAssistantWindowController];
+    [self setIvar:@"supportPlanAssistantWindowView" value:supportPlanAssistantViewController];
+
+    return supportPlanAssistantWindowController;
+}
+
 - (void)startSupportContractWizardWithActivationCode:(NSString *)activationCode email:(NSString *)email switchPlan:(BOOL)switchPlan {
     // Check if an open SupportPlanAssistantWindowController exists and if so close
     // it
@@ -647,20 +673,9 @@ static BOOL gpgMailWorks = NO;
         [self closeSupportPlanAssistant:supportPlanAssistantWindowController];
     }
 
-    GMSupportPlanAssistantViewController *supportPlanAssistantViewController = [[GMSupportPlanAssistantViewController alloc] initWithNibName:@"GMSupportPlanAssistantView" bundle:[GPGMailBundle bundle]];
-    supportPlanAssistantViewController.supportPlanManager = [self supportPlanManager];
-    supportPlanAssistantViewController.delegate = self;
-    supportPlanAssistantViewController.initialDialogType = switchPlan ? GMSupportPlanAssistantDialogTypeSwitchSupportPlan : GMSupportPlanAssistantDialogTypeInactive;
+    supportPlanAssistantWindowController = [self supportContractWizardWindowConfiguredWithActivationCode:nil email:nil switchPlan:switchPlan];
 
-    supportPlanAssistantWindowController = [[GMSupportPlanAssistantWindowController alloc] initWithSupportPlanManager:[self supportPlanManager]];
-    supportPlanAssistantWindowController.delegate = self;
-    supportPlanAssistantWindowController.contentViewController = supportPlanAssistantViewController;
-    [[supportPlanAssistantWindowController window] setTitle:@"GPG Mail Support Plan"];
-    [supportPlanAssistantWindowController showWindow:nil];
-    [[supportPlanAssistantWindowController window] makeKeyAndOrderFront:nil];
-
-    [self setIvar:@"SupportPlanAssistantWindowController" value:supportPlanAssistantWindowController];
-    [self setIvar:@"supportPlanAssistantWindowView" value:supportPlanAssistantViewController];
+    [self presentSupportContractWizardWindowController:supportPlanAssistantWindowController];
 
     if([self hasActivationCodeForAutomaticActivation]) {
         NSDictionary *supportPlanActivationInformation = [self supportPlanInformationForAutomaticActivation];
@@ -678,15 +693,52 @@ static BOOL gpgMailWorks = NO;
     [self startSupportContractWizardWithActivationCode:activationCode email:email switchPlan:NO];
 }
 
+- (void)presentSupportContractWizardWindowController:(GMSupportPlanAssistantWindowController *)windowController {
+    [windowController showWindow:nil];
+    [[windowController window] makeKeyAndOrderFront:nil];
+}
+
+
 - (void)checkSupportContractAndStartWizardIfNecessary {
     BOOL shouldPresentActivationDialog = [[self supportPlanManager] shouldPresentActivationDialog];
     // If information is set for automatic activation, override shouldPresent.
-    if(!shouldPresentActivationDialog && [self hasActivationCodeForAutomaticActivation]) {
-        shouldPresentActivationDialog = YES;
+    // By default, if automatic activation is configured, the success dialog
+    // after the activation has completed is not shown.
+    if([self hasActivationCodeForAutomaticActivation]) {
+        shouldPresentActivationDialog = [self shouldShowSuccessDialogForAutomaticActivation];
+        if(!shouldPresentActivationDialog) {
+            [self performSilentAutomaticActivation];
+        }
     }
+
     if(shouldPresentActivationDialog) {
         [self startSupportContractWizard];
     }
+}
+
+- (void)performSilentAutomaticActivation {
+    NSDictionary *supportPlanActivationInformation = [self supportPlanInformationForAutomaticActivation];
+    if(!supportPlanActivationInformation) {
+        return;
+    }
+    NSCharacterSet *whitespaceSet = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    NSString *email = [supportPlanActivationInformation[kGMSupportPlanInformationActivationEmailKey] stringByTrimmingCharactersInSet:whitespaceSet];
+    NSString *activationCode = [supportPlanActivationInformation[kGMSupportPlanInformationActivationCodeKey] stringByTrimmingCharactersInSet:whitespaceSet];
+
+    [self supportPlanAssistant:nil email:email activationCode:activationCode];
+}
+
+
+- (BOOL)shouldShowSuccessDialogForAutomaticActivation {
+    BOOL showDialog = [[[GPGOptions sharedOptions] valueForKey:kGMSupportPlanAutomaticActivationShowSuccessDialogKey] boolValue];
+    if(showDialog) {
+        return YES;
+    }
+    return NO;
+}
+
+- (BOOL)shouldSuppressErrorDialogForAutomaticActivation {
+    return [[[GPGOptions sharedOptions] valueForKey:kGMSupportPlanAutomaticActivationSuppressErrorDialogKey] boolValue];
 }
 
 - (BOOL)hasActivationCodeForAutomaticActivation {
@@ -708,7 +760,7 @@ static BOOL gpgMailWorks = NO;
 }
 
 - (void)removeSupportPlanInformationForAutomaticActivation {
-    [[GPGOptions sharedOptions] setValue:nil forKey:kGMSupportPlanAutomaticActivationActivationCodeKey];
+    [[GPGOptions sharedOptions] setValue:nil forKey:kGMSupportPlanAutomaticActivationActivationEmailKey];
     [[GPGOptions sharedOptions] setValue:nil forKey:kGMSupportPlanAutomaticActivationActivationCodeKey];
 }
 
@@ -728,12 +780,21 @@ static BOOL gpgMailWorks = NO;
 - (void)supportPlanAssistant:(NSWindowController *)windowController email:(NSString *)email activationCode:(NSString *)activationCode {
     [[self supportPlanManager] activateSupportPlanWithActivationCode:activationCode email:email completionHandler:^(GMSupportPlan * _Nonnull supportPlan, NSDictionary *result, NSError * _Nonnull error) {
         dispatch_async(dispatch_get_main_queue(), ^{
+            GMSupportPlanAssistantWindowController *supportPlanContractWindowController = (GMSupportPlanAssistantWindowController *)windowController;
             if(!supportPlan) {
-                [(GMSupportPlanAssistantWindowController *)windowController activationDidFailWithError:error];
+                // In case of an error, show it to the user by default.
+                // This can be explicitly disabled via defaults write.
+                if(!supportPlanContractWindowController && [self hasActivationCodeForAutomaticActivation] && ![self shouldSuppressErrorDialogForAutomaticActivation]) {
+                    supportPlanContractWindowController = [self supportContractWizardWindowConfiguredWithActivationCode:activationCode email:email switchPlan:NO];
+                    [self presentSupportContractWizardWindowController:supportPlanContractWindowController];
+                    supportPlanContractWindowController.closeWindowAfterError = YES;
+                }
+
+                [supportPlanContractWindowController activationDidFailWithError:error];
                 return;
             }
             if(supportPlan) {
-                [(GMSupportPlanAssistantWindowController *)windowController activationDidCompleteWithSuccessForSupportPlan:supportPlan];
+                [supportPlanContractWindowController activationDidCompleteWithSuccessForSupportPlan:supportPlan];
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"GMSupportPlanStateChangeNotification" object:self];
 
                 // Remove the info for automatic activation.

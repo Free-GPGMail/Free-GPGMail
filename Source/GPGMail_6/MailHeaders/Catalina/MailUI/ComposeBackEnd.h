@@ -122,6 +122,7 @@
 @property(retain) NSError *invalidSigningIdentityError; // @synthesize invalidSigningIdentityError=_invalidSigningIdentityError;
 @property BOOL canEncrypt; // @synthesize canEncrypt=_canEncrypt;
 @property BOOL canSign; // @synthesize canSign=_canSign;
+@property id hmeRegisteredSender;
 @property(nonatomic) BOOL includeHeaders; // @synthesize includeHeaders=_includeHeaders;
 @property(retain, nonatomic) NSNumber *uniqueID; // @synthesize uniqueID=_uniqueID;
 @property(nonatomic) __weak id /*<ComposeBackEndDelegate>*/ delegate; // @synthesize delegate=_delegate;

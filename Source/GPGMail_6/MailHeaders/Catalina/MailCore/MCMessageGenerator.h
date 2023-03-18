@@ -61,6 +61,8 @@
 
 // Added in Monterey:
 - (void)setEncoder:(id)encoder;
+// Added in Ventura:
+- (void)setComposeContext:(id)composeContext;
 
 @end
 

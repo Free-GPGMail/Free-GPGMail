@@ -202,16 +202,10 @@ NSString * const kComposeBackEndSecurityUpdateQueueKey = @"kComposeBackEndSecuri
             [headers setHeader:[secureDraftHeaders objectForKey:headerKey] forKey:headerKey];
         }
     }
-    
-    if (@available(macOS 12.0, *)) {
-        if(securityMethod == GPGMAIL_SECURITY_METHOD_SMIME) {
-            // Configure the S/MIME compose context otherwise the S/MIME
-            // handler won't kick in.
-            MEComposeContext *composeContext = [self valueForKey:@"_composeExtensionContext"];
-            [composeContext setShouldSign:securityProperties.shouldSignMessage];
-            [composeContext setShouldEncrypt:securityProperties.shouldEncryptMessage];
-        }
-    }
+
+    // Bug #1135: Reset sign and encryption status when switching between S/MIME and OpenPGP security method
+    [self configureComposeContextWithSecurityProperties:securityProperties canSign:securityProperties.canSign canEncrypt:securityProperties.canEncrypt];
+
     BOOL bailOut = NO;
 
     // Based on the following three cases it might be possible to bail out and leave the
@@ -241,6 +235,13 @@ NSString * const kComposeBackEndSecurityUpdateQueueKey = @"kComposeBackEndSecuri
     // but to make sure that the message is not processed by the S/MIME encoder
     // remove the encoder.
     [writer setEncoder:nil];
+    // Bug #1135: Reset sign and encryption status when switching between S/MIME and OpenPGP security method
+    if(@available(macOS 13.0, *)) {
+        // Make doubly sure that the message is not attempted to be
+        // procssed by S/MIME due to unforseen changes to Mail's code
+        // by Apple.
+        [writer setComposeContext:nil];
+    }
     // If the message is to be signed, the text content has to be fixed up first by removing
     // any additional spaces before a new line, since they will result in invalid signatures.
     if(securityProperties.shouldSignMessage) {
@@ -439,8 +440,7 @@ NSString * const kComposeBackEndSecurityUpdateQueueKey = @"kComposeBackEndSecuri
         return [self MA_updateMessageSecurityStatusWithCompletion:onComplete];
     }
 
-    NSString *sender = nil;
-    sender = [MAIL_SELF sender];
+    NSString *sender = [[MAIL_SELF hmeRegisteredSender] length] > 0 ? [[MAIL_SELF hmeRegisteredSender] gpgNormalizedEmail] : [MAIL_SELF sender];
     NSArray *recipients = [self GMRealRecipients];
 
     // Bug #1048: Encryption button stays checked and active even if all
@@ -495,8 +495,10 @@ NSString * const kComposeBackEndSecurityUpdateQueueKey = @"kComposeBackEndSecuri
                 
                 BOOL canSign = currentSecurityProperties.canSign;
                 BOOL canEncrypt = currentSecurityProperties.canEncrypt;
-                // In case of an HME (Hide My Email) address, signing and encryption is always off.
-                if([MAIL_SELF respondsToSelector:@selector(hmeRegisteredSender)] && [MAIL_SELF hmeRegisteredSender] != NO) {
+                // In case of an HME (Hide My Email) address, signing and encryption is always off
+                // if security method is S/MIME. HME can technically be used with OpenPGP like
+                // any other email.
+                if([self GMIsHMESender] && currentSecurityProperties.securityMethod == GPGMAIL_SECURITY_METHOD_SMIME) {
                     canSign = NO;
                     canEncrypt = NO;
                 }
@@ -513,14 +515,6 @@ NSString * const kComposeBackEndSecurityUpdateQueueKey = @"kComposeBackEndSecuri
                     // will try to obtain the _smimeLock and thus automatically waits for the
                     // current security status update to complete.
                     [self setValue:[currentSecurityProperties recipientsThatHaveNoEncryptionKey] forKey:@"_recipientsThatHaveNoKeyForEncryption"];
-
-                    // Mail also sets the status of the compose context already here, instead of
-                    // later when creating the message.
-                    if(currentSecurityProperties.securityMethod == GPGMAIL_SECURITY_METHOD_SMIME) {
-                        MEComposeContext *composeContext = [self valueForKey:@"_composeExtensionContext"];
-                        [composeContext setShouldSign:canSign && currentSecurityProperties.shouldSignMessage];
-                        [composeContext setShouldEncrypt:canEncrypt && currentSecurityProperties.shouldEncryptMessage];
-                    }
                 }
                 else {
                     // Update the security status on the back end on the back end as well.
@@ -533,8 +527,11 @@ NSString * const kComposeBackEndSecurityUpdateQueueKey = @"kComposeBackEndSecuri
                     if([MAIL_SELF respondsToSelector:@selector(setInvalidSigningIdentityError:)]) {
                         [MAIL_SELF setInvalidSigningIdentityError:currentSecurityProperties.invalidSigningIdentityError];
                     }
-                    [MAIL_SELF setRecipientsThatHaveNoKeyForEncryption:[self.preferredSecurityProperties recipientsThatHaveNoEncryptionKey]];
+                    [MAIL_SELF setRecipientsThatHaveNoKeyForEncryption:[currentSecurityProperties recipientsThatHaveNoEncryptionKey]];
                 }
+
+                // Bug #1135: Reset sign and encryption status when switching between S/MIME and OpenPGP security method
+                [self configureComposeContextWithSecurityProperties:currentSecurityProperties canSign:canSign canEncrypt:canEncrypt];
             }
             @catch(NSException *error) {
                 DebugLog(@"Failed to update security properties - error: %@", error);
@@ -552,6 +549,33 @@ NSString * const kComposeBackEndSecurityUpdateQueueKey = @"kComposeBackEndSecuri
             onComplete();
         }
     }];
+}
+
+- (void)configureComposeContextWithSecurityProperties:(GMComposeMessagePreferredSecurityProperties *)securityProperties canSign:(BOOL)canSign canEncrypt:(BOOL)canEncrypt {
+    // Bug #1135: Reset sign and encryption status when switching between S/MIME and OpenPGP security method
+    //
+    // Before when sign was enabled for S/MIME switching security method to OpenPGP with a
+    // sender address for which no OpenPGP key pair was available, resulted in an error message
+    // when the message was saved or attempted to be sent, since the S/MIME context was not reset
+    // and macOS Mail still believed the message should be signed, but of coure no certificate
+    // was configured to be used for signing.
+    //
+    // Now the context is reset properly.
+    BOOL shouldSign = NO;
+    BOOL shouldEncrypt = NO;
+
+    if(securityProperties.securityMethod == GPGMAIL_SECURITY_METHOD_SMIME && ![self GMIsHMESender]) {
+        shouldSign = canSign && securityProperties.shouldSignMessage;
+        shouldEncrypt = canEncrypt && securityProperties.shouldEncryptMessage;
+    }
+
+    MEComposeContext *composeContext = [self valueForKey:@"_composeExtensionContext"];
+    [composeContext setShouldSign:shouldSign];
+    [composeContext setShouldEncrypt:shouldEncrypt];
+}
+
+- (BOOL)GMIsHMESender {
+    return [MAIL_SELF respondsToSelector:@selector(hmeRegisteredSender)] && [[MAIL_SELF hmeRegisteredSender] length] > 0;
 }
 
 - (void)runBlockProtectedBySMIMELock:(dispatch_block_t)block {

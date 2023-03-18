@@ -886,6 +886,9 @@ typedef enum {
 
 - (void)performAutomaticSupportPlanActivationWithActivationCode:(NSString *)activationCode email:(NSString *)email {
     if([[self supportPlanManager] supportPlanIsActive] && ![[[self supportPlanManager] supportPlan] isKindOfTrial]) {
+        // Support plan is already activated so the information for automatic information can be removed.
+        // Otherwise the thanks dialog would be displayed at every startup.
+        [[GPGMailBundle sharedInstance] removeSupportPlanInformationForAutomaticActivation];
         [self setState:GMSupportPlanViewControllerStateThanks];
         return;
     }

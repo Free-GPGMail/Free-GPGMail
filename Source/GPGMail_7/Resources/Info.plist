@@ -29,7 +29,7 @@
 	<key>LoaderMinOSVersion</key>
 	<string>12</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © under General Public License v3 (GPLv3): Free-GPGMail, 2021</string>
+	<string>Copyright © under General Public License v3 (GPLv3): Free-GPGMail, 2023</string>
 	<key>NSPrincipalClass</key>
 	<string>GPGMailBundle</string>
 	<key>Supported13.0PluginCompatibilityUUIDs</key>

@@ -197,7 +197,7 @@ extern kGMSupportPlanManagerUpgradeState;
 - (BOOL)hasActiveContractOrActiveTrial;
 - (NSNumber *)remainingTrialDays;
 - (void)deactivateSupportContract;
-
+- (void)removeSupportPlanInformationForAutomaticActivation;
 
 @property (readonly) GPGErrorCode gpgStatus;
 @property (readonly, strong) NSSet *allGPGKeys;

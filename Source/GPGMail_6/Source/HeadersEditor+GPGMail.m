@@ -483,9 +483,15 @@ const NSString *kHeadersEditorFromControlParentItemKey = @"HeadersEditorFromCont
 		} else if (display) {
             NSString *itemTitle = item.title;
 			
-			NSString *email = nil;
-			if (useTitleFromAccount == NO)
-                email = ![GPGMailBundle isYosemite] ? [itemTitle gpgNormalizedEmail] : [item.representedObject gpgNormalizedEmail];
+			id email = nil;
+            if (useTitleFromAccount == NO) {
+                // Bug #1137
+                //
+                // When an Hide-My-Email (HME) address is selected from the sender
+                // dropdowm, the `representedObject` is no longer an NSString instance
+                // but an NSAttributedString instance instead.
+                email = [[self GMEmailAddressFromSenderMenuItem:item] gpgNormalizedEmail];
+            }
 			
             // Bug #1104: Mail crash when opening a continuing a draft in GPG Mail 6
             //
@@ -496,7 +502,7 @@ const NSString *kHeadersEditorFromControlParentItemKey = @"HeadersEditorFromCont
             // Since this menu item does not reflect an email account, representedObject
             // maybe nil which later causes `-[GPGMailBundle signingKeyListForAddress:]`
             // to crash.
-            NSString *address = [item.representedObject gpgNormalizedEmail];
+            NSString *address = email;
             NSSet *keys = [NSSet new];
             if([address length] > 0) {
                 keys = [bundle signingKeyListForAddress:address];
@@ -634,10 +640,24 @@ const NSString *kHeadersEditorFromControlParentItemKey = @"HeadersEditorFromCont
         // instead of looking up a matching key using the signers email address.
         // This is especially necessary in case multiple signing keys are available for the
         // same email address. (#895)
-        [securityProperties updateSigningKey:signingKey forSender:item.representedObject];
+        [securityProperties updateSigningKey:signingKey forSender:[self GMEmailAddressFromSenderMenuItem:item]];
     }
     
     [self MAChangeFromHeader:button];
+}
+
+- (NSString *)GMEmailAddressFromSenderMenuItem:(NSMenuItem *)senderMenuItem {
+    // Bug #1137: Mail crash when using Hide-My-Email with GPG Mail.
+    //
+    // The Hide-My-Email Menu Item uses an `NSAttributedString` instead of an
+    // `NSString` instance for the representedObject.
+    // That lead to a crash of macOS Mail in case `-[NSString gpgNormalizedEmail]`
+    // on the `NSAttributedString`.
+    id address = senderMenuItem.representedObject;
+    if(![address isKindOfClass:[NSString class]]) {
+        address = [address string];
+    }
+    return address;
 }
 
 - (void)keyringUpdated:(NSNotification *)notification {
@@ -768,16 +788,20 @@ const NSString *kHeadersEditorFromControlParentItemKey = @"HeadersEditorFromCont
     
     if(!securityProperties.canSign) {
         NSPopUpButton *button = [mailself fromPopup];
-        NSString *sender = [button.selectedItem.representedObject gpgNormalizedEmail];
+        NSString *sender = [self GMEmailAddressFromSenderMenuItem:button.selectedItem];
         
         if([sender length] == 0 && [button.itemArray count])
-            sender = [[(button.itemArray)[0] representedObject] gpgNormalizedEmail];
+            sender = [self GMEmailAddressFromSenderMenuItem:(button.itemArray)[0]];
         
         // If sender is still nil, which can be the case if no from menu is displayed
         // as only one account is setup, use the sender currently set on the back end.
         if([sender length] == 0) {
-            sender = [[[[mailself composeViewController] backEnd] sender] gpgNormalizedEmail];
+            sender = [(ComposeBackEnd *)backEnd sender];
+            if([backEnd respondsToSelector:@selector(hmeRegisteredSender)] && [[(ComposeBackEnd *)backEnd hmeRegisteredSender] length] > 0) {
+                sender = [(ComposeBackEnd *)backEnd hmeRegisteredSender];
+            }
         }
+        sender = [sender gpgNormalizedEmail];
 
         toolTip = [NSString stringWithFormat:GMLocalizedString(@"COMPOSE_WINDOW_TOOLTIP_CAN_NOT_PGP_SIGN"), sender];
     }

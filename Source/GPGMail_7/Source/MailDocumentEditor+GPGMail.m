@@ -287,6 +287,11 @@ NSString * const kComposeViewControllerPreventAutoSave = @"ComposeViewController
         [checklist removeObject:@"CheckAppExtensionValidationErrors"];
     }
 
+    // Bug #1133: Wrong "public key not available"-message when continuing to edit encrypted draft
+    if([checklist containsObject:@"recipientCertificatesInvalid"]) {
+        [self fixUpRecipientsThatHaveNoKeyForEncryptionIfNecessary];
+    }
+
     // If this is an unencrypted reply to an encrypted message, display a warning
     // to the user and simply return. The message won't be sent until the checklist is cleared.
 	// Otherwise call sendMessageAfterChecking so that Mail.app can perform its internal checks.
@@ -296,6 +301,46 @@ NSString * const kComposeViewControllerPreventAutoSave = @"ComposeViewController
     }
 
 	[self MASendMessageAfterChecking:checklist];
+}
+
+- (void)fixUpRecipientsThatHaveNoKeyForEncryptionIfNecessary {
+    // Bug #1133: Wrong "public key not available"-message when continuing to edit encrypted draft
+    //
+    // Due to a bug in the S/MIME implementation of Mail since macOS 13.0, it is possible that a dialog
+    // is displayed that the message cannot be encrypted, since public keys for recipients are missing
+    // when the user attempts to send the message and encryption is turned off.
+    //
+    // The idea is to warn the user when they are trying to send a plain reply to
+    // a message which was originally encrypted. Apple's implementation however loses
+    // that information when a draft is continued, and since the draft itself
+    // is encrypted, it believes that the reply is to a message which was encrypted
+    // and thus displays the dialog.
+    //
+    // To work around that, in case that `-[GMComposeMessagePreferredSecurityProperties referenceMessageIsEncrypted]`
+    // is false the array with invalid recipient certificates is emptied to prevent
+    // Mail from showing the wrong dialog.
+    ComposeBackEnd *backEnd = (ComposeBackEnd *)[MAIL_SELF(self) backEnd];
+    GMComposeMessagePreferredSecurityProperties *securityProperties = [(ComposeBackEnd_GPGMail *)backEnd preferredSecurityProperties];
+
+    BOOL isReply = [(ComposeBackEnd_GPGMail *)backEnd messageIsBeingReplied];
+    BOOL isForward = [(ComposeBackEnd_GPGMail *)backEnd messageIsBeingForwarded];
+    BOOL originalMessageIsEncrypted = securityProperties.referenceMessageIsEncrypted;
+    BOOL replyShouldBeEncrypted = securityProperties.shouldEncryptMessage;
+    // If GPG Mail is installed but expired, the original Mail methods are called
+    // to check for encryption keys, and thus securityProperties will not properly
+    // the encryption status of the message. Instead use `-[HeadersEditor messageIsToBeEncrypted]`
+    if(![[GPGMailBundle sharedInstance] hasActiveContractOrActiveTrial]) {
+        replyShouldBeEncrypted = [[MAIL_SELF(self) headersEditor] messageIsToBeEncrypted];
+    }
+
+    if((isReply || isForward) && originalMessageIsEncrypted == NO && replyShouldBeEncrypted == NO) {
+        if(@available(macOS 13.0, *)) {
+            [backEnd setValue:[NSMutableArray new] forKey:@"_recipientsThatHaveNoKeyForEncryption"];
+        }
+        else {
+            [backEnd setRecipientsThatHaveNoKeyForEncryption:[NSMutableArray new]];
+        }
+    }
 }
 
 - (BOOL)backEnd:(id __unused)backEnd handleDeliveryError:(NSError *)error {

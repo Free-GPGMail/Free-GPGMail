@@ -1,0 +1,27 @@
+- Basically loads
+- Symlinked bundles don't load -> Change install script in Xcode
+- .gnupg can't be accessed, since it's not copied into /Users/lukele/Library/Containers/com.apple.mail/Data/
+
+08.03.12 04:18:40,983 Mail: Can't load config (/Users/lukele/Library/Containers/com.apple.mail/Data/.gnupg/gpg-agent.conf): Error Domain=NSCocoaErrorDomain Code=257 "The file “gpg-agent.conf” couldn’t be opened because you don’t have permission to view it." UserInfo=0x7fecf31217a0 {NSFilePath=/Users/lukele/Library/Containers/com.apple.mail/Data/.gnupg/gpg-agent.conf, NSUnderlyingError=0x7fecf311c2a0 "The operation couldn’t be completed. Operation not permitted"}
+   
+   cp -R the .gnupg/gpg.conf into that directory for testing
+
+   Relevant: https://developer.apple.com/library/mac/#documentation/Security/Conceptual/AppSandboxDesignGuide/MigratingALegacyApp/MigratingAnAppToASandbox.html#//apple_ref/doc/uid/TP40011183-CH6-SW1
+
+
+
+- gpg2 can't be run
+
+  Dyld Error Message:
+  Library not loaded: /usr/local/MacGPG2/lib/libintl.8.dylib
+  Referenced from: /usr/local/bin/gpg2
+  Reason: no suitable image found.  Did find:
+	/usr/local/MacGPG2/lib/libintl.8.dylib: open() failed with errno=1
+
+  Fix with XPC?
+
+  Relevant: https://developer.apple.com/library/mac/#documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingXPCServices.html#//apple_ref/doc/uid/10000172i-SW6
+
+  XPC does work, but needs to be installed inside /Applications/Mail.app/Contents/XPCServices for now.
+
+  Takes kind of a long time to respond -> maybe use send_message_reply_sync?

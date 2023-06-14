@@ -731,7 +731,7 @@ NSString * const kMimePartAllowPGPProcessingKey = @"MimePartAllowPGPProcessingKe
     //
     // This feature can be enabled using:
     //
-    // `defaults write org.free-gpgmail.gpgmail ShowMessageSubMimePartsAsAttachment -bool YES`
+    // `defaults write org.gpgtools.gpgmail ShowMessageSubMimePartsAsAttachment -bool YES`
     return [[[GPGOptions sharedOptions] valueForKey:@"ShowMessageSubMimePartsAsAttachment"] boolValue];
 }
 
@@ -1377,7 +1377,7 @@ NSString * const kMimePartAllowPGPProcessingKey = @"MimePartAllowPGPProcessingKe
     //
     // This feature can be enabled using:
     //
-    // `defaults write org.free-gpgmail.gpgmail AllowDecryptionOfPotentiallyDangerousMessagesWithoutMDC -bool YES`
+    // `defaults write org.gpgtools.gpgmail AllowDecryptionOfPotentiallyDangerousMessagesWithoutMDC -bool YES`
     return [[GPGMailBundle sharedInstance] allowDecryptionOfPotentiallyDangerousMessagesWithoutMDC];
 }
 

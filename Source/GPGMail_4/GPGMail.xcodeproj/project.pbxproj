@@ -637,7 +637,7 @@
 				089C1671FE841209C02AAC07 /* Frameworks */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
 			);
-			name = Free-GPGMail;
+			name = GPGMail;
 			sourceTree = "<group>";
 		};
 		089C1671FE841209C02AAC07 /* Frameworks */ = {
@@ -715,7 +715,7 @@
 				1B3B0F642371D63300DAFDA9 /* GMSPCommon.m */,
 			);
 			name = GMSupportPlan;
-			path = ../Dependencies/GMNoSupportPlan;
+			path = ../Dependencies/GMSupportPlan;
 			sourceTree = "<group>";
 		};
 		1B51232214093750004D0818 /* NSBezierPathAdditions */ = {
@@ -1090,12 +1090,12 @@
 			);
 			buildRules = (
 			);
-			comments = "Old working:\nheader_search_path ..\nlibrary_style static\nother_linker_flags -force_flat_namespace -undefined suppress \nmacosx deployment target: default\n\n-bundle_loader /System/Applications/Mail.app/Contents/MacOS/Mail  -undefined dynamic_lookup\n";
+			comments = "Old working:\nheader_search_path ..\nlibrary_style static\nother_linker_flags -force_flat_namespace -undefined suppress \nmacosx deployment target: default\n\n-bundle_loader /Applications/Mail.app/Contents/MacOS/Mail  -undefined dynamic_lookup\n";
 			dependencies = (
 			);
-			name = Free-GPGMail;
+			name = GPGMail;
 			productInstallPath = "$(HOME)/Library/Bundles";
-			productname = Free-GPGMail;
+			productName = GPGMail;
 			productReference = 8D5B49B6048680CD000E48DA /* GPGMail.mailbundle */;
 			productType = "com.apple.product-type.bundle";
 		};
@@ -1304,7 +1304,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "install_name_tool -change \\\n\"@executable_path/../Frameworks/RegexKit.framework/Versions/A/RegexKit\" \\\n\"@loader_path/../Frameworks/RegexKit.framework/Versions/A/RegexKit\" \\\n\"$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME/Contents/MacOS/Free-GPGMail\"\n";
+			shellScript = "install_name_tool -change \\\n\"@executable_path/../Frameworks/RegexKit.framework/Versions/A/RegexKit\" \\\n\"@loader_path/../Frameworks/RegexKit.framework/Versions/A/RegexKit\" \\\n\"$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME/Contents/MacOS/GPGMail\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1BC07F3517466697004263BB /* Copy Libmacgpg into the sandbox container */ = {
@@ -1779,7 +1779,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				BUNDLE_LOADER = /System/Applications/Mail.app/Contents/MacOS/Mail;
+				BUNDLE_LOADER = /Applications/Mail.app/Contents/MacOS/Mail;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "";
@@ -1822,7 +1822,7 @@
 					"-undefined",
 					dynamic_lookup,
 				);
-				PRODUCT_NAME= "Free-GPGMail";
+				PRODUCT_NAME = GPGMail;
 				STRIP_STYLE = "non-global";
 				VALID_ARCHS = "x86_64 i386";
 				WRAPPER_EXTENSION = mailbundle;
@@ -1833,7 +1833,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				BUNDLE_LOADER = /System/Applications/Mail.app/Contents/MacOS/Mail;
+				BUNDLE_LOADER = /Applications/Mail.app/Contents/MacOS/Mail;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "";
@@ -1863,7 +1863,7 @@
 					"-undefined",
 					dynamic_lookup,
 				);
-				PRODUCT_NAME= "Free-GPGMail";
+				PRODUCT_NAME = GPGMail;
 				SEPARATE_STRIP = NO;
 				STRIP_STYLE = "non-global";
 				VALID_ARCHS = "x86_64 i386";

@@ -127,7 +127,7 @@ UploadFailed_Msg = "La clé n'a pas pu être téléversée sur les serveurs de c
 
 
 UpdaterNotWorking_Title = "Le système de mise à jour de GPG Suite ne fonctionne pas comme prévu !";
-UpdaterNotWorking_Msg = "you have to reinstall the suite";
+UpdaterNotWorking_Msg = "Merci de télécharger et de réinstaller GPG Suite à partir de https://gpgtools.org";
 
 
 SwitchToOldKeyserver_Title = "Attention : vous vous apprêtez à changer de serveur de clé";

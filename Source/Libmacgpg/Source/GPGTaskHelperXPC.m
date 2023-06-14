@@ -127,7 +127,7 @@
 	// exists and hence doesn't invoke an error handler if it doesn't.
 	// So we do the check for it, and throw an error if necessary.
 	if(![self healthyXPCBinaryExists]) {
-		self.connectionError = [GPGException exceptionWithReason:@"[Libmacgpg] The xpc service binary is not available. Please re-install." errorCode:GPGErrorXPCBinaryError];
+		self.connectionError = [GPGException exceptionWithReason:@"[Libmacgpg] The xpc service binary is not available. Please re-install GPGTools from https://gpgtools.org" errorCode:GPGErrorXPCBinaryError];
 		[self shutdownAndThrowError];
 	}
 	// Resume will trigger the invalidationHandler if the connection can't

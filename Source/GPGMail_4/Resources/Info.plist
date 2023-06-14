@@ -7,15 +7,15 @@
 	<key>CFBundleDocumentTypes</key>
 	<array/>
 	<key>CFBundleExecutable</key>
-	<string>Free-GPGMail</string>
+	<string>GPGMail</string>
 	<key>CFBundleIconFile</key>
 	<string>GPGMail.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.free-gpgmail.gpgmail4</string>
+	<string>org.gpgtools.gpgmail4</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Free-GPGMail</string>
+	<string>GPGMail</string>
 	<key>CFBundlePackageType</key>
 	<string>GpgM</string>
 	<key>CFBundleShortVersionString</key>
@@ -27,7 +27,7 @@
 	<key>BuildNumber</key>
 	<string>AUTOFILL</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © under General Public License v3 (GPLv3): Free-GPGMail, 2021</string>
+	<string>Copyright © GPGTools GmbH, 2019</string>
 	<key>NSPrincipalClass</key>
 	<string>GPGMailBundle</string>
 	<key>Supported10.13PluginCompatibilityUUIDs</key>
@@ -37,14 +37,6 @@
 	<key>Supported10.14PluginCompatibilityUUIDs</key>
 	<array>
 		<string>A4343FAF-AE18-40D0-8A16-DFAE481AF9C1</string>
-	</array>
-	<key>Supported10.15PluginCompatibilityUUIDs</key>
-	<array>
-		<string>6EEA38FB-1A0B-469B-BB35-4C2E0EEA9053</string>
-	</array>
-	<key>Supported11.0PluginCompatibilityUUIDs</key>
-	<array>
-		<string>D985F0E4-3BBC-4B95-BBA1-12056AC4A531</string>
 	</array>
 </dict>
 </plist>

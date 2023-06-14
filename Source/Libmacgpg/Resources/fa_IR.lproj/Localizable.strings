@@ -127,7 +127,7 @@ UploadFailed_Msg = "کلید شما در کارساز کلید بارگزاری 
 
 
 UpdaterNotWorking_Title = "به‌روزرسان مجموعه GPG آن‌طور که باید کار نمی‌کند!";
-UpdaterNotWorking_Msg = "you have to reinstall the suite";
+UpdaterNotWorking_Msg = "لطفا مجموعه GPG را دوباره از نشانی https://gpgtools.org بارگیری و نصب کنید";
 
 
 SwitchToOldKeyserver_Title = "هشدار: شما در حال تغییر کارساز کلید هستید";

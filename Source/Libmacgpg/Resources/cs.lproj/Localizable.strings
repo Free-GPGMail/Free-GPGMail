@@ -127,7 +127,7 @@ UploadFailed_Msg = "Klíč nelze zkopírovat na klíčový server.\n\nChyba: %@"
 
 
 UpdaterNotWorking_Title = "Aktualizační systém GPG Suite nepracuje správně!";
-UpdaterNotWorking_Msg = "you have to reinstall the suite";
+UpdaterNotWorking_Msg = "Zkopírujte a nainstalujte prosím nejnovější verzi GPG Suite z umístění https://gpgtools.org";
 
 
 SwitchToOldKeyserver_Title = "Varování: Chystáte se přepnout klíčový server";

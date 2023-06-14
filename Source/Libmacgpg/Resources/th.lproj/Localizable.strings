@@ -127,7 +127,7 @@ UploadFailed_Msg = "ไม่สามารถอัปโหลดกุญแ
 
 
 UpdaterNotWorking_Title = "ตัวปรับปรุง GPG Suite ทำงานไม่ตรงกับที่คาดไว้";
-UpdaterNotWorking_Msg = "you have to reinstall the suite";
+UpdaterNotWorking_Msg = "กรุณาดาวน์โหลด GPG Suite จาก https://gpgtools.org แล้วติดตั้งใหม่";
 
 
 SwitchToOldKeyserver_Title = "คำเตือน: คุณกำลังจะสลับเซิร์ฟเวอร์กุญแจ";

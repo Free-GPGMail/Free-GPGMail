@@ -89,13 +89,13 @@ NSString *SUScheduledCheckIntervalKey = @"SUScheduledCheckInterval";
 	[pStyle setAlignment:NSRightTextAlignment];
 
 	NSDictionary *attributes = @{NSParagraphStyleAttributeName: pStyle,
-								NSLinkAttributeName: @"https://github.com/Free-GPGMail/Free-GPGMail/",
+								NSLinkAttributeName: @"https://gpgtools.org/",
 								NSForegroundColorAttributeName: [NSColor blueColor],
 								NSFontAttributeName: [NSFont fontWithName:@"Lucida Grande" size:9],
 								NSUnderlineStyleAttributeName: @1};
 
-	return [[NSAttributedString alloc] initWithString:@"https://github.com/Free-GPGMail/Free-GPGMail" attributes:attributes];
-}
+	return [[NSAttributedString alloc] initWithString:@"https://gpgtools.org" attributes:attributes];
+}	
 
 
 - (NSString *)versionDescription {
@@ -105,7 +105,7 @@ NSString *SUScheduledCheckIntervalKey = @"SUScheduledCheckInterval";
 - (NSAttributedString *)buildNumberDescription {
 	NSString *string = [NSString stringWithFormat:@"Build: %@", [GPGMailBundle bundleVersion]];
 	NSDictionary *attributes = @{NSForegroundColorAttributeName: [NSColor grayColor], NSFontAttributeName: [NSFont systemFontOfSize:11]};
-
+	
 	return [[NSAttributedString alloc] initWithString:string attributes:attributes];
 }
 
@@ -127,7 +127,7 @@ NSString *SUScheduledCheckIntervalKey = @"SUScheduledCheckInterval";
     GMSupportPlanManager *supportPlanManager = [[GPGMailBundle sharedInstance] supportPlanManager];
     GMSupportPlan *supportPlan = [supportPlanManager supportPlan];
     NSString *version = [supportPlanManager applicationVersion];
-    self.supportPlanTitleField.stringValue = @"Free-GPGMail without activation";
+    self.supportPlanTitleField.stringValue = @"GPG Mail Support Plan";
 
     // If a valid support plan for a previous version is available, show the old activation code.
     BOOL anyValidSupportPlan = ([supportPlanManager supportPlanIsActive] && ![supportPlan isKindOfTrial]) || [supportPlanManager shouldPromptUserForUpgrade];
@@ -268,7 +268,7 @@ NSString *SUScheduledCheckIntervalKey = @"SUScheduledCheckInterval";
 	[[GPGMailBundle sharedInstance] startSupportContractWizardToSwitchPlan];
 }
 - (IBAction)learnMore:(NSButton *)sender {
-	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/Free-GPGMail/Free-GPGMail"]];
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://gpgtools.org/buy-support-plan?v4=1"]];
 }
 
 
@@ -281,24 +281,24 @@ NSString *SUScheduledCheckIntervalKey = @"SUScheduledCheckInterval";
 
 
 - (IBAction)openSupport:(id)sender {
-    BOOL success = NO;
+    BOOL success = [GPGTask showGPGSuitePreferencesTab:@"report" arguments:nil];
 
 	if (!success) {
 		// Alternative if GPGPreferences could not be launched.
-		[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/Free-GPGMail/Free-GPGMail/issues"]];
+		[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://support.gpgtools.org"]];
 	}
 }
 - (IBAction)openDonate:(id)sender {
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/Free-GPGMail/Free-GPGMail"]];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://gpgtools.org/donate"]];
 }
 - (IBAction)openKnowledgeBase:(id)sender {
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/Free-GPGMail/Free-GPGMail/issues/"]];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://support.gpgtools.org/kb"]];
 }
 
 
 
 - (IBAction)openGPGStatusHelp:(id)sender {
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/Free-GPGMail/Free-GPGMail/issues/"]];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://support.gpgtools.org/kb/how-to/gpg-status"]];
 }
 
 
@@ -423,9 +423,9 @@ NSString *SUScheduledCheckIntervalKey = @"SUScheduledCheckInterval";
 		NSArray *accounts = (NSArray *)[MFMailAccount mailAccounts];
 		for (id account in accounts) {
 			if ([account respondsToSelector:@selector(storeDraftsOnServer)] && [account storeDraftsOnServer]) {
-
+				
                 NSWindow *window = [[(MailApp *)[NSClassFromString(@"MailApp") sharedApplication] preferencesController] window];
-
+				
                 NSAlert *unencryptedReplyAlert = [GPGMailBundle customAlert];
                 unencryptedReplyAlert.messageText = localized(@"DISABLE_ENCRYPT_DRAFTS_TITLE");
                 unencryptedReplyAlert.informativeText = localized(@"DISABLE_ENCRYPT_DRAFTS_MESSAGE");
@@ -466,13 +466,13 @@ NSString *SUScheduledCheckIntervalKey = @"SUScheduledCheckInterval";
 @implementation GMSpecialBox
 - (void)showSpecial {
 	return;
-//	if (displayed || working) return;
+//	if (displayed || working) return;	
 //	working = YES;
 //
 //	if (!viewPositions) {
 //		viewPositions = [[NSMapTable alloc] initWithKeyOptions:NSMapTableZeroingWeakMemory valueOptions:NSMapTableStrongMemory capacity:10];
 //	}
-//
+//	
 //	NSSize size = self.bounds.size;
 //	srandom((unsigned int)time(NULL));
 //
@@ -482,35 +482,35 @@ NSString *SUScheduledCheckIntervalKey = @"SUScheduledCheckInterval";
 //	webView.UIDelegate = self;
 //	webView.editingDelegate = self;
 //
-//
+//	
 //	[NSAnimationContext beginGrouping];
 //	[[NSAnimationContext currentContext] setDuration:2.0f];
 //	[NSAnimationContext currentContext].completionHandler = ^{
 //		[self addSubview:webView];
-//
+//        
 //		[[webView mainFrame] loadRequest:[NSURLRequest requestWithURL:[[GPGMailBundle bundle] URLForResource:@"Special" withExtension:@"html"]]];
 //		displayed = YES;
 //		working = NO;
 //	};
-//
+//	
 //	for (NSView *view in [self.contentView subviews]) {
 //		NSRect frame = view.frame;
-//
+//		
 //		if (!positionsFilled) {
 //			[viewPositions setObject:[NSValue valueWithRect:frame] forKey:view];
 //		}
-//
-//		long angle = (random() % 360);
-//
+//		
+//		long angle = (random() % 360);	
+//		
 //		double x = (size.width + frame.size.width) / 2 * sin(angle * M_PI / 180) * 1.5;
 //		double y = (size.height + frame.size.height) / 2 * cos(angle * M_PI / 180) * 1.5;
-//
+//		
 //		x += (size.width - frame.size.width) / 2;
 //		y += (size.height - frame.size.height) / 2;
-//
+//		
 //		frame.origin.x = x;
 //		frame.origin.y = y;
-//
+//		
 //		[(NSView *)[view animator] setFrame:frame];
 //	}
 //	positionsFilled = YES;
@@ -531,7 +531,7 @@ NSString *SUScheduledCheckIntervalKey = @"SUScheduledCheckInterval";
 - (void)keyDown:(NSEvent *)event {
 	unsigned short keySequence[] = {126, 125, 47, 5, 35, 5, 17, 31, 31, 37, 1, USHRT_MAX};
 	static int index = 0;
-
+	
 	if (!displayed) {
 		if (keySequence[index] == USHRT_MAX) {
 			[super keyDown:event];
@@ -547,7 +547,7 @@ NSString *SUScheduledCheckIntervalKey = @"SUScheduledCheckInterval";
 			return;
 		}
 		if (keySequence[++index] != USHRT_MAX) return;
-
+		
 		index = 0;
 		[self showSpecial];
 	} else {

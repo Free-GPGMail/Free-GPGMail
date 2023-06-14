@@ -79,7 +79,7 @@ static NSString *const GPGBetaUpdatesKey = @"BetaUpdates";
 }
 
 - (IBAction)showReleaseNotes:(id)sender {
-	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/Free-GPGMail/Free-GPGMail/releases/"]];
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://gpgtools.org/releases/gpgsuite/release-notes.html"]];
 }
 
 

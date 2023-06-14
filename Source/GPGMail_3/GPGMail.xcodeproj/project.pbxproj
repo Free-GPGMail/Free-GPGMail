@@ -67,7 +67,7 @@
 		1B876395178602B200B24BBC /* PGPSignatureUTF8Good.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1B876385178602B200B24BBC /* PGPSignatureUTF8Good.txt */; };
 		1B8763981786035300B24BBC /* NSData+GPGMailTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8763971786035300B24BBC /* NSData+GPGMailTest.m */; };
 		1B87639B178628FD00B24BBC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B87639A178628FD00B24BBC /* XCTest.framework */; };
-		1B87639E17862AAA00B24BBC /* Free-GPGMail.mailbundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49B6048680CD000E48DA /* Free-GPGMail.mailbundle */; };
+		1B87639E17862AAA00B24BBC /* GPGMail.mailbundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49B6048680CD000E48DA /* GPGMail.mailbundle */; };
 		1B87639F17862BD700B24BBC /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B19E83F13A2AEA4002E59ED /* AppKit.framework */; };
 		1B89E21614FC40F00012D4AD /* NSWindow+GPGMail.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B89E21514FC40F00012D4AD /* NSWindow+GPGMail.m */; };
 		1B8C01D513E4F12D00DB9FA4 /* GPGSignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C01D413E4F12D00DB9FA4 /* GPGSignatureView.m */; };
@@ -1998,7 +1998,7 @@
 		559A80E60838ED590052F47C /* GPGMailBundle.defaults */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GPGMailBundle.defaults; sourceTree = "<group>"; };
 		559A812E0838EEFD0052F47C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		559A81860838F3C30052F47C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D5B49B6048680CD000E48DA /* Free-GPGMail.mailbundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Free-GPGMail.mailbundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B6048680CD000E48DA /* GPGMail.mailbundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPGMail.mailbundle; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2041,7 +2041,7 @@
 				089C1671FE841209C02AAC07 /* Frameworks */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
 			);
-			name = Free-GPGMail;
+			name = GPGMail;
 			sourceTree = "<group>";
 		};
 		089C1671FE841209C02AAC07 /* Frameworks */ = {
@@ -2088,7 +2088,7 @@
 		19C28FB8FE9D52D311CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D5B49B6048680CD000E48DA /* Free-GPGMail.mailbundle */,
+				8D5B49B6048680CD000E48DA /* GPGMail.mailbundle */,
 				1B87635F1786020900B24BBC /* Unit Tests.xctest */,
 			);
 			name = Products;
@@ -2118,7 +2118,7 @@
 				1B1466CE237379310021085C /* GMSPCommon.m */,
 			);
 			name = GMSupportPlan;
-			path = Dependencies/GMNoSupportPlan;
+			path = Dependencies/GMSupportPlan;
 			sourceTree = SOURCE_ROOT;
 		};
 		1B38AD151F1187E400A21F27 /* HighSierra */ = {
@@ -3969,13 +3969,13 @@
 			);
 			buildRules = (
 			);
-			comments = "Old working:\nheader_search_path ..\nlibrary_style static\nother_linker_flags -force_flat_namespace -undefined suppress \nmacosx deployment target: default\n\n-bundle_loader /System/Applications/Mail.app/Contents/MacOS/Mail  -undefined dynamic_lookup\n";
+			comments = "Old working:\nheader_search_path ..\nlibrary_style static\nother_linker_flags -force_flat_namespace -undefined suppress \nmacosx deployment target: default\n\n-bundle_loader /Applications/Mail.app/Contents/MacOS/Mail  -undefined dynamic_lookup\n";
 			dependencies = (
 			);
-			name = Free-GPGMail;
+			name = GPGMail;
 			productInstallPath = "$(HOME)/Library/Bundles";
-			productname = Free-GPGMail;
-			productReference = 8D5B49B6048680CD000E48DA /* Free-GPGMail.mailbundle */;
+			productName = GPGMail;
+			productReference = 8D5B49B6048680CD000E48DA /* GPGMail.mailbundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -3984,7 +3984,7 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1010;
 				TargetAttributes = {
 					1B87635E1786020900B24BBC = {
 						TestTargetID = 8D5B49AC048680CD000E48DA;
@@ -3993,7 +3993,7 @@
 			};
 			buildConfigurationList = 55541F56085AE6B100548474 /* Build configuration list for PBXProject "GPGMail" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = en;
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,
@@ -4077,7 +4077,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B87639E17862AAA00B24BBC /* Free-GPGMail.mailbundle in Resources */,
+				1B87639E17862AAA00B24BBC /* GPGMail.mailbundle in Resources */,
 				1B876389178602B200B24BBC /* PGPInlineDataUTF8quoted.txt in Resources */,
 				1B87638D178602B200B24BBC /* PGPInlineSignatureUTF8quoted.txt in Resources */,
 				1B876392178602B200B24BBC /* PGPSignatureASCIIGood.txt in Resources */,
@@ -4177,7 +4177,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "install_name_tool -change \\\n\"@executable_path/../Frameworks/RegexKit.framework/Versions/A/RegexKit\" \\\n\"@loader_path/../Frameworks/RegexKit.framework/Versions/A/RegexKit\" \\\n\"$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME/Contents/MacOS/Free-GPGMail\"\n";
+			shellScript = "install_name_tool -change \\\n\"@executable_path/../Frameworks/RegexKit.framework/Versions/A/RegexKit\" \\\n\"@loader_path/../Frameworks/RegexKit.framework/Versions/A/RegexKit\" \\\n\"$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME/Contents/MacOS/GPGMail\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1BC07F3517466697004263BB /* Copy Libmacgpg into the sandbox container */ = {
@@ -4651,7 +4651,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				BUNDLE_LOADER = /System/Applications/Mail.app/Contents/MacOS/Mail;
+				BUNDLE_LOADER = /Applications/Mail.app/Contents/MacOS/Mail;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "";
@@ -4694,7 +4694,7 @@
 					"-undefined",
 					dynamic_lookup,
 				);
-				PRODUCT_NAME = "Free-GPGMail";
+				PRODUCT_NAME = GPGMail;
 				STRIP_STYLE = "non-global";
 				VALID_ARCHS = "x86_64 i386";
 				WRAPPER_EXTENSION = mailbundle;
@@ -4705,7 +4705,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				BUNDLE_LOADER = /System/Applications/Mail.app/Contents/MacOS/Mail;
+				BUNDLE_LOADER = /Applications/Mail.app/Contents/MacOS/Mail;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "";
@@ -4735,7 +4735,7 @@
 					"-undefined",
 					dynamic_lookup,
 				);
-				PRODUCT_NAME = "Free-GPGMail";
+				PRODUCT_NAME = GPGMail;
 				SEPARATE_STRIP = NO;
 				STRIP_STYLE = "non-global";
 				VALID_ARCHS = "x86_64 i386";

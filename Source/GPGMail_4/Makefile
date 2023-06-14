@@ -1,6 +1,6 @@
 PROJECT = GPGMail
-TARGET = Free-GPGMail
-PRODUCT = Free-GPGMail.mailbundle
+TARGET = GPGMail
+PRODUCT = GPGMail.mailbundle
 VPATH = build/Release
 
 all: $(PRODUCT)

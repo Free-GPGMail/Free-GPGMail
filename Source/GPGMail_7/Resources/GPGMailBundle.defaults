@@ -1,7 +1,7 @@
 {
 	/*
 	* Do not modify that file. Use the Terminal, and type:
-	* defaults write org.free-gpgmail.gpgmail TheDefaultName TheValue
+	* defaults write org.gpgtools.gpgmail TheDefaultName TheValue
 	*/
 
 	/* Composing */

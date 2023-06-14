@@ -2,7 +2,16 @@ Libmacgpg
 =========
 
 Libmacgpg is an Objective-C framework which makes it easier to communicate with gnupg.
-It's the base framework for Free-GPGMail and more
+It's the base framework for all apps and services of [GPG Suite](https://gpgtools.org)
+
+Updates
+-------
+
+The latest releases of Libmacgpg is part of GPG Suite and can be found on our [official website](https://gpgtools.org).
+
+For the latest news and updates check our [Twitter](https://twitter.com/gpgtools).
+
+If you have any questions how to use Libmacgpg in your own App, contact us on our [support page](https://gpgtools.tenderapp.com).
 
 
 Build
@@ -10,8 +19,8 @@ Build
 
 #### Clone the repository
 ```bash
-git clone --recursive https://github.com/Free-GPGMail/Free-GPGMail/
-cd Source/Libmacgpg
+git clone --recursive https://github.com/GPGTools/Libmacgpg.git
+cd Libmacgpg
 ```
 
 #### Build
@@ -20,16 +29,13 @@ make
 ```
 
 #### Install
-
-(this might be outdated)
-
 To install Libmacgpg copy build/Release/Libmacgpg.framework to ~/Library/Frameworks/Libmacgpg.framework
 
 ```bash
 cp -R ./build/Release/Libmacgpg.framework ~/Library/Frameworks/Libmacgpg.framework
 ```
 
-If you're using Free-GPGMail, follow these steps to install the xpc service helper.
+If you're using GPGMail, follow these steps to install the xpc service helper.
 
 ```bash
 cp ./build/org.gpgtools.Libmacgpg.xpc.plist ~/Library/LaunchAgents/

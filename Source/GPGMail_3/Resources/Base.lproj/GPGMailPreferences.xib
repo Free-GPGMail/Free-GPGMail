@@ -58,7 +58,7 @@
                     </textField>
                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="706">
                         <rect key="frame" x="13" y="218" width="67" height="18"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Free-GPGMail" id="709">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="GPG Mail" id="709">
                             <font key="font" metaFont="systemBold" size="14"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -161,8 +161,8 @@
                             <binding destination="-2" name="value" keyPath="buildNumberDescription" id="79W-Df-fVj"/>
                         </connections>
                     </textField>
-                    <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0ZT-4F-EIF">
-                        <rect key="frame" x="193" y="181" width="217" height="18"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0ZT-4F-EIF">
+                        <rect key="frame" x="193" y="182" width="217" height="18"/>
                         <buttonCell key="cell" type="check" title="Automatically check for updates" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="80G-ZN-hjm">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -171,8 +171,8 @@
                             <binding destination="fps-Fk-1cJ" name="value" keyPath="automaticallyChecksForUpdates" id="Myr-E7-1vc"/>
                         </connections>
                     </button>
-                    <button  hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bGp-uF-sOg">
-                        <rect key="frame" x="193" y="159" width="137" height="18"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bGp-uF-sOg">
+                        <rect key="frame" x="193" y="160" width="137" height="18"/>
                         <buttonCell key="cell" type="check" title="Include beta builds" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="UhD-uR-dUs">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -181,8 +181,8 @@
                             <binding destination="fps-Fk-1cJ" name="value" keyPath="downloadBetaUpdates" id="4iR-aH-ZED"/>
                         </connections>
                     </button>
-                    <button hidden="YES" horizontalHuggingPriority="300" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b3f-Vs-Chq" userLabel="Check now GPGPref">
-                        <rect key="frame" x="189" y="201" width="141" height="32"/>
+                    <button horizontalHuggingPriority="300" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b3f-Vs-Chq" userLabel="Check now GPGPref">
+                        <rect key="frame" x="189" y="202" width="135" height="32"/>
                         <buttonCell key="cell" type="push" title="Check Now" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0PS-Wm-gKl">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -191,8 +191,8 @@
                             <action selector="checkForUpdates:" target="fps-Fk-1cJ" id="zix-is-mRk"/>
                         </connections>
                     </button>
-                    <button hidden="YES" horizontalHuggingPriority="300" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rdO-C4-tzA" userLabel="Check now GPGPref">
-                        <rect key="frame" x="330" y="201" width="164" height="32"/>
+                    <button horizontalHuggingPriority="300" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rdO-C4-tzA" userLabel="Check now GPGPref">
+                        <rect key="frame" x="324" y="202" width="164" height="32"/>
                         <buttonCell key="cell" type="push" title="Show Release Notes" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="D6D-o9-63C">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -206,15 +206,15 @@
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="291" id="p3S-2w-gVt"/>
                         </constraints>
-                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" title="If you wan't to keep using FreeGPG-Mail, don't update the suite until it is compatible." id="8oZ-YB-M9Q">
+                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" title="Beta builds are published more often. New features and improvements are less tested." id="8oZ-YB-M9Q">
                             <font key="font" metaFont="smallSystem"/>
                             <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o6s-jm-KF4">
-                        <rect key="frame" x="192" y="89" width="150" height="16"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Free-GPGMail Support Plan" id="JYv-nD-iep">
+                        <rect key="frame" x="192" y="89" width="150" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="GPG Mail Support Plan" id="JYv-nD-iep">
                             <font key="font" metaFont="systemBold"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -262,8 +262,8 @@
                             <action selector="learnMore:" target="-2" id="EMk-7j-EiJ"/>
                         </connections>
                     </button>
-                    <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e0H-Pk-h4R">
-                        <rect key="frame" x="330" y="9" width="164" height="32"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e0H-Pk-h4R">
+                        <rect key="frame" x="324" y="9" width="164" height="32"/>
                         <buttonCell key="cell" type="push" title="Deactivate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UGW-TM-AN7">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>

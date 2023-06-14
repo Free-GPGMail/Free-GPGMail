@@ -127,7 +127,7 @@ UploadFailed_Msg = "A chave não pôde ser enviada para o servidor.\n\nErro: %@"
 
 
 UpdaterNotWorking_Title = "O atualizador da GPG Suite não está funcionando devidamente!";
-UpdaterNotWorking_Msg = "you have to reinstall the suite";
+UpdaterNotWorking_Msg = "Baixe e reinstale a GPG Suite de https://gpgtools.org.";
 
 
 SwitchToOldKeyserver_Title = "Aviso: você está prestes a mudar o servidor de chaves";

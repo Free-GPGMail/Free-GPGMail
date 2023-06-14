@@ -91,7 +91,7 @@ typedef enum {
 
 - (void)windowDidLoad {
     [super windowDidLoad];
-
+    
     [[self window] setDelegate:self];
 }
 
@@ -125,7 +125,7 @@ typedef enum {
     alert.messageText = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_ACTIVATION_FAILED_TITLE"]; // "Support Plan Activation Failed"
     alert.icon = [NSImage imageNamed:@"GPGMail"];
     [alert beginSheetModalForWindow:[self window] completionHandler:^(NSModalResponse returnCode) {
-
+        
     }];
 }
 
@@ -150,7 +150,7 @@ typedef enum {
 
     // If GPG Mail 3 is running, but the support plan succeeded for GPG Mail 4,
     // prompt to relaunch GPG Mail 4.
-    if([supportPlan isValidForAppName:@"org.free-gpgmail.gpgmail4"] && [[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.free-gpgmail.gpgmail"]) {
+    if([supportPlan isValidForAppName:@"org.gpgtools.gpgmail4"] && [[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.gpgtools.gpgmail"]) {
         // Reset the alwys load version, to make sure GPG Mail 4 is loaded.
         [GMSupportPlanManager setAlwaysLoadVersion:nil];
         [GMSupportPlanManager setShouldNeverAskAgainForUpgradeVersion:nil];
@@ -160,7 +160,7 @@ typedef enum {
 
     // It is possible that the activation did succeed, yet the support plan
     // is not valid for the current version. In that case, show the upgrade or keep dialog.
-    if([supportPlan isValidForAppName:@"org.free-gpgmail.gpgmail"] && [[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.free-gpgmail.gpgmail4"]) {
+    if([supportPlan isValidForAppName:@"org.gpgtools.gpgmail"] && [[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.gpgtools.gpgmail4"]) {
         [viewController setState:GMSupportPlanViewControllerStateInfo];
     }
     else {
@@ -317,11 +317,11 @@ typedef enum {
     if(state == GMSupportPlanViewControllerStateBuy) {
         NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
                                     [NSColor linkColor], NSForegroundColorAttributeName,
-                                    [NSURL URLWithString:@"https://github.com/Free-GPGMail/Free-GPGMail"], NSLinkAttributeName,
+                                    [NSURL URLWithString:@"https://gpgtools.org/buy-support-plan?v4=1"], NSLinkAttributeName,
                                     nil];
 
         self.grayInfoTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_LOCATE_ACTIVATION_CODE"];
-        if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.free-gpgmail.gpgmail"]) {
+        if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.gpgtools.gpgmail"]) {
             self.grayInfoTextField.stringValue = [self.grayInfoTextField.stringValue stringByAppendingFormat:@"\n\n%@ %@", [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_VERSION_3_COMPATIBILITY_INFO"],
                 [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_VERSION_COMPATIBILITY_NO_GUARANTEE_INFO"]                                  ];
             self.headerTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_HEADER_WELCOME"]; // "Welcome to GPG Mail"
@@ -411,7 +411,7 @@ typedef enum {
         }
 
         // If this is version 3, hide the start trial button.
-        if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.free-gpgmail.gpgmail"]) {
+        if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.gpgtools.gpgmail"]) {
             self.cancelButton.hidden = YES;
         }
 
@@ -424,7 +424,7 @@ typedef enum {
         GMSupportPlanState supportPlanState = [supportPlanManager supportPlanState];
 
         self.headerTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_HEADER_WELCOME_4"];
-
+        
         if(upgradeState == GMSupportPlanManagerUpgradeStateUpgradeFromVersion3ToVersion4) {
             self.headerTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_HEADER_WELCOME_4"];
             self.subHeaderTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_SUBHEADER"];
@@ -486,7 +486,7 @@ typedef enum {
     }
 
     if(state == GMSupportPlanViewControllerStateThanks) {
-        if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.free-gpgmail.gpgmail"]) {
+        if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.gpgtools.gpgmail"]) {
             self.headerTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_HEADER_WELCOME"];
         }
         else {
@@ -503,7 +503,7 @@ typedef enum {
         else {
             self.subHeaderTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_THANKS_DIALOG_SUBHEADER"];
             self.detailsTextField.stringValue = [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_THANKS_DIALOG_SUCCESS_MESSAGE"];
-            if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.free-gpgmail.gpgmail"]) {
+            if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.gpgtools.gpgmail"]) {
                 self.grayInfoTextField.stringValue = [NSString stringWithFormat:@"%@ %@",
                                                       [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_VERSION_3_COMPATIBILITY_INFO"],
                                                       [GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_ACTIVATION_DIALOG_VERSION_COMPATIBILITY_NO_GUARANTEE_INFO"]];
@@ -633,7 +633,7 @@ typedef enum {
             _cancelButton.enabled = YES;
         }
 
-        if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.free-gpgmail.gpgmail"]) {
+        if([[[GPGMailBundle bundle] bundleIdentifier] isEqualToString:@"org.gpgtools.gpgmail"]) {
             self.subHeaderTextField.hidden = YES;
         }
     }
@@ -646,7 +646,7 @@ typedef enum {
 - (void)setShowDontAskAgain:(BOOL)showDontAskAgain {
 	if (_showDontAskAgain != showDontAskAgain) {
 		_showDontAskAgain = showDontAskAgain;
-
+		
 //        if (showDontAskAgain && _state == GMSupportPlanViewControllerStateInfo) {
 //            [_subStackView setVisibilityPriority:NSStackViewVisibilityPriorityMustHold forView:_dontAskAgainView];
 //        } else {
@@ -657,7 +657,7 @@ typedef enum {
 
 - (void)setEmail:(NSString *)email {
     if(![email length]) {
-
+        
     }
     if(_email != email) {
         _email = email;
@@ -667,7 +667,7 @@ typedef enum {
 
 - (void)setActivationCode:(NSString *)activationCode {
     if(![activationCode length]) {
-
+        
     }
     if(_activationCode != activationCode) {
         _activationCode = activationCode;
@@ -697,7 +697,7 @@ typedef enum {
     }
     if([(NSButton *)sender tag] == GMSupportPlanAssistantBuyActivateButtonStateUpgrade) {
         if([[self supportPlanManager] isMultiUser]) {
-            [self showUpgradeURLFetchOperationFailedAlertForError:[NSError errorWithDomain:@"org.free-gpgmail.gpgmail" code:GMSupportPlanAPIErrorUpgradeURLVolume userInfo:nil]];
+            [self showUpgradeURLFetchOperationFailedAlertForError:[NSError errorWithDomain:@"org.gpgtools.gpgmail" code:GMSupportPlanAPIErrorUpgradeURLVolume userInfo:nil]];
             return;
         }
         [self showLoadingSpinnerWithMessage:[GPGMailBundle localizedStringForKey:@"SUPPORT_PLAN_NEW_UPGRADE_DIALOG_FETCHING_UPGRADE_URL_PROGRESS_TEXT"] disableButtons:@[_continueButton, _cancelButton]];
@@ -720,7 +720,7 @@ typedef enum {
         }];
     }
     else if([(NSButton *)sender tag] == GMSupportPlanAssistantBuyActivateButtonStateBuy) {
-        [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/Free-GPGMail/Free-GPGMail"]];
+        [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://gpgtools.org/buy-support-plan?v4=1"]];
     }
     else {
         if(self.email && self.emailTextField.stringValue != self.email) {
@@ -729,7 +729,7 @@ typedef enum {
         if(self.activationCode && self.licenseTextField.stringValue != self.activationCode) {
             self.licenseTextField.stringValue = self.activationCode;
         }
-
+        
         if(![self validateActivationInformation]) {
             [(GMSupportPlanAssistantWindowController *)[[[self view] window] windowController] showActivationError];
         }

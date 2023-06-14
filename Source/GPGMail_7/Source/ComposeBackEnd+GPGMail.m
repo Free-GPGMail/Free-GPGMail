@@ -657,7 +657,7 @@ NSString * const kComposeBackEndSecurityUpdateQueueKey = @"kComposeBackEndSecuri
     // status, the NSOperationQueue for SMIME is no longer available,
     // so a a custom one is created.
     NSOperationQueue *securityUpdatesQueue = [NSOperationQueue new];
-    [securityUpdatesQueue setName:@"Free-GPGMail Queue"];
+    [securityUpdatesQueue setName:@"GPG Mail Queue"];
     [securityUpdatesQueue setMaxConcurrentOperationCount:1];
     self.securityUpdatesQueue = securityUpdatesQueue;
     

@@ -192,7 +192,7 @@ static BOOL gpgMailWorks = NO;
         
         // Set domain and register the main defaults.
         GPGOptions *options = [GPGOptions sharedOptions];
-        options.standardDomain = @"org.free-gpgmail.gpgmail";
+        options.standardDomain = @"org.gpgtools.gpgmail";
 		NSDictionary *defaultsDictionary = [NSDictionary dictionaryWithContentsOfFile:[myBundle pathForResource:@"GPGMailBundle" ofType:@"defaults"]];
         [(id)options registerDefaults:defaultsDictionary];
         
@@ -221,7 +221,7 @@ static BOOL gpgMailWorks = NO;
         
         _messageBodyDataLoadingQueue = [[NSOperationQueue alloc] init];
         _messageBodyDataLoadingQueue.maxConcurrentOperationCount = 1;
-        _messageBodyDataLoadingQueue.name = @"org.free-gpgmail.gpgmail.messageBodyLoadingQueue";
+        _messageBodyDataLoadingQueue.name = @"org.gpgtools.gpgmail.messageBodyLoadingQueue";
         _messageBodyDataLoadingCache = [[NSCache alloc] init];
 
         // Inject the plugin code.
@@ -657,7 +657,7 @@ static BOOL gpgMailWorks = NO;
     GMSupportPlanAssistantWindowController *supportPlanAssistantWindowController = [[GMSupportPlanAssistantWindowController alloc] initWithSupportPlanManager:[self supportPlanManager]];
     supportPlanAssistantWindowController.delegate = self;
     supportPlanAssistantWindowController.contentViewController = supportPlanAssistantViewController;
-    [[supportPlanAssistantWindowController window] setTitle:@"Free-GPG Mail No Support Plan"];
+    [[supportPlanAssistantWindowController window] setTitle:@"GPG Mail Support Plan"];
 
     [self setIvar:@"SupportPlanAssistantWindowController" value:supportPlanAssistantWindowController];
     [self setIvar:@"supportPlanAssistantWindowView" value:supportPlanAssistantViewController];
@@ -835,7 +835,7 @@ static BOOL gpgMailWorks = NO;
 }
 
 + (NSString *)productNameForVersion:(NSString *)version {
-    return [NSString stringWithFormat:@"Free-GPGMail %@", version];
+    return [NSString stringWithFormat:@"GPG Mail %@", version];
 }
 
 + (NSAlert *)customAlert {
@@ -855,11 +855,7 @@ static BOOL gpgMailWorks = NO;
         @"org.gpgtools.gpgmail": @"Mojave",
         @"org.gpgtools.gpgmail4": @"Catalina",
         @"org.gpgtools.gpgmail5": @"Big Sur",
-        @"org.gpgtools.gpgmail6": @"Monterey",
-        @"org.free-gpgmail.gpgmail": @"Mojave",
-        @"org.free-gpgmail.gpgmail4": @"Catalina",
-        @"org.free-gpgmail.gpgmail5": @"Big Sur",
-        @"org.free-gpgmail.gpgmail6": @"Monterey"
+        @"org.gpgtools.gpgmail6": @"Monterey"
     };
 
     NSString *latestMacOSVersion = latestMacOSMap[[[GPGMailBundle bundle] bundleIdentifier]];

@@ -451,7 +451,7 @@ closeInput = _closeInput;
 	
 	return [[result objectForKey:@"exitStatus"] intValue];
 #else
-	NSLog(@"This should never be called on OS X < 10.8?");
+	NSLog(@"This should never be called on OS X < 10.8? Please report to team@gpgtools.org if you're seeing this message.");
 #endif
 }
 

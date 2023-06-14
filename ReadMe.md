@@ -77,7 +77,7 @@ Installation
       open the Security & Privacy system preference panel, and grant "Full Disk
       Access" to terminal. Retry the installation.
       
-      Note that the [homebrew cask for free-gpgpmail](https://github.com/Homebrew/homebrew-cask/blob/master/Casks/free-gpgmail.rb)
+      Note that the [homebrew cask for free-gpgmail](https://github.com/Homebrew/homebrew-cask/blob/master/Casks/free-gpgmail.rb)
       is maintained in a different repository and has some
       [issues with updating from old versions](https://github.com/Free-GPGMail/Free-GPGMail/issues/81).
       

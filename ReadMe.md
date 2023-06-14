@@ -68,7 +68,7 @@ Installation
 ------------
 
 1. Download and install Free-GPGMail:
-    - Using [Homebrew](https://brew.sh):
+    - Install using [Homebrew](https://brew.sh):
       ```bash
       brew install --cask free-gpgmail
       ```
@@ -76,8 +76,13 @@ Installation
       If you receive an error mkdir: `/Users/YOUR_USERNAME/Library/Mail/Bundles: Operation not permitted`,
       open the Security & Privacy system preference panel, and grant "Full Disk
       Access" to terminal. Retry the installation.
+      
+      Note that the [homebrew cask for free-gpgpmail](https://github.com/Homebrew/homebrew-cask/blob/master/Casks/free-gpgmail.rb)
+      is maintained in a different repository and has some
+      [issues with updating from old versions](https://github.com/Free-GPGMail/Free-GPGMail/issues/81).
+      
 
-    - or manually:
+    - Alternatively, install manually:
         1. Download and install the GPG Suite .dmg with the same "year.decimal" version
            from the commercial seller or from the [Free-GPGMail releases page](../../releases/).
             - If you are asked by the installer whether you want to

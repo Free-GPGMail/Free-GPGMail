@@ -203,9 +203,14 @@
     // In case the message is encrypted, no top level headers are necessary.
     // TODO: Consider that they might as well be and compared to the decrypted headers. Not sure if that makes sense.
 
-    MCOutgoingMessage *outgoingMessage = [generator _newOutgoingMessageFromTopLevelMimePart:topLevelMimePart
-                                                            topLevelHeaders:topLevelHeaders
-                                                               withPartData:partData];
+    MCOutgoingMessage *outgoingMessage = nil;
+    if([generator respondsToSelector:@selector(_newOutgoingMessageFromTopLevelMimePart:topLevelHeaders:withPartData:isDraft:)]) {
+        outgoingMessage = [generator _newOutgoingMessageFromTopLevelMimePart:topLevelMimePart topLevelHeaders:topLevelHeaders withPartData:partData isDraft:NO];
+    }
+    else {
+        outgoingMessage = [generator _newOutgoingMessageFromTopLevelMimePart:topLevelMimePart topLevelHeaders:topLevelHeaders withPartData:partData];
+    }
+
     return outgoingMessage;
 }
 

@@ -170,7 +170,13 @@ static NSMutableDictionary *messageDataAccessMap;
     
     MCMessageGenerator *messageGenerator = [[MCMessageGenerator alloc] init];
     MCMutableMessageHeaders *messageHeaders = [[MCMutableMessageHeaders alloc] initWithHeaderData:[topLevelPart headerData] encodingHint:NSUTF8StringEncoding];
-    MCOutgoingMessage *outgoingMessage = [messageGenerator _newOutgoingMessageFromTopLevelMimePart:topLevelPart topLevelHeaders:messageHeaders withPartData:partData];
+    MCOutgoingMessage *outgoingMessage = nil;
+    if([messageGenerator respondsToSelector:@selector(_newOutgoingMessageFromTopLevelMimePart:topLevelHeaders:withPartData:isDraft:)]) {
+        outgoingMessage = [messageGenerator _newOutgoingMessageFromTopLevelMimePart:topLevelPart topLevelHeaders:messageHeaders withPartData:partData isDraft:NO];
+    }
+    else {
+        outgoingMessage = [messageGenerator _newOutgoingMessageFromTopLevelMimePart:topLevelPart topLevelHeaders:messageHeaders withPartData:partData];
+    }
 
     return [outgoingMessage rawData];
 }

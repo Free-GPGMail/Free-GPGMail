@@ -48,6 +48,8 @@
 - (id)_newMimePartWithAttributedString:(id)arg1 partData:(id)arg2 outputRich:(BOOL)arg3;
 - (id)_encryptionCertificatesForRecipients:(id)arg1;
 - (id)_newOutgoingMessageFromTopLevelMimePart:(id)arg1 topLevelHeaders:(id)arg2 withPartData:(id)arg3;
+// Added in Ventura 13.5 b4 (22G5059d). Appears to replace `_newOutgoingMessageFromTopLevelMimePart:topLevelHeaders:withPartData:`
+- (id)_newOutgoingMessageFromTopLevelMimePart:(id)arg1 topLevelHeaders:(id)arg2 withPartData:(id)arg3 isDraft:(BOOL)arg4;
 - (id)newMessageByRemovingAttachmentsFromMessage:(id)arg1;
 - (id)newMessageWithBodyData:(id)arg1 headers:(id)arg2;
 - (id)newDataForAttributedString:(id)arg1;

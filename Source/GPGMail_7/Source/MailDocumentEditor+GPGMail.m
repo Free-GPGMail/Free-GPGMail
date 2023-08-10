@@ -263,6 +263,19 @@ NSString * const kComposeViewControllerPreventAutoSave = @"ComposeViewController
             // to the checklist, so the next time around sendMessageAfterChecking: is called,
             // we no longer check if the message is sent unencrypted.
             [checklist addObject:kUnencryptedReplyToEncryptedMessage];
+            // Bug #1144: Wrong "public key not available"-message shown when sending a reply
+            //            to an encrypted message in plain, since the public key for the recipient
+            //            is not available.
+            //
+            // While #1133 addresses the bug when a draft was continued and there was a mismatch
+            // between the internal reference message is encrypted state and the GPG Mail one,
+            // triggering the "public key not available"-message, in this new case, the message
+            // is wrongly displayed in case that no public key for encryption is available
+            // for an entered recipient.
+            //
+            // To fix that, once the user has chosen to send the message in plain
+            // remove the `recipientCertificatesInvalid` item so the check is not re-run.
+            [checklist removeObject:@"recipientCertificatesInvalid"];
             [strongSelf sendMessageAfterChecking:checklist];
         }
     }];
@@ -273,7 +286,7 @@ NSString * const kComposeViewControllerPreventAutoSave = @"ComposeViewController
 	if(returnCode == NSAlertAlternateReturn) {
 		NSMutableArray *checklist = _contextInfo[@"ThingsToCheck"];
 		[checklist addObject:kUnencryptedReplyToEncryptedMessage];
-		[MAIL_SELF(self) sendMessageAfterChecking:checklist];
+        [MAIL_SELF(self) sendMessageAfterChecking:checklist];
 	}
 }
 

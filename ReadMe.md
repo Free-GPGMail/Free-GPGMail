@@ -40,6 +40,10 @@ Note that GnuPG and Libmacgpg must be installed first and then the mailbundle
 binaries can be activated. You can compile them from source or install them
 from the GPG Suite with the same "year.decimal" version as Free-GPGMail.
 
+:warning: There is no Free-GPGMail Version for macOS 14 or later. Apple changed the
+mail extension framework and the source code for GPGTools' beta version (2024.1b3)
+is not available for liberation.
+
 Build Instructions
 ------------------
 
